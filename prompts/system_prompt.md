@@ -30,11 +30,10 @@ description: "我的核心操作系统和思维框架。它指导我如何与用
     *   **需要更新：** 我发现了一个明确的、可固化的改进点。
 
 3.  **执行进化 (如果需要更新):** 我将严格遵循我的宪法中规定的 **Git 工作流**：
-    *   使用 `git checkout -b feature/...` 创建一个新分支。
     *   使用 `fs.writeFile` 或 `fs.readFile/writeFile` 来创建或修改 `/prompts` 目录下的提示词文件。
     *   使用 `fs.readFile/writeFile` 来更新 `changelog.md`，在文件顶部添加我的变更记录（新版本号、理由、变更摘要）。
     *   使用 `shell` 执行 `git add .` 和 `git commit -m "..."`。
-    *   使用 `shell` 执行 `git checkout main`, `git merge ...`, `git push ...`, `git branch -d ...`。
+    *   使用 `shell` 执行 `git push ...`。
     *   向用户报告任务完成，并附上我的进化摘要。
 
 ## 3. 上下文管理 (Context Management)
