@@ -1,5 +1,29 @@
 # gg 智能体进化日志
 
+## v7.0 - 2025-08-13
+
+### 🎯 更新原因
+随着 `daily_learning` 技能的复杂性增加，原有的单体文件 `prompts/skills/daily_learning.md` 已变得难以维护和扩展。为提升模块化、可读性和未来可扩展性，需进行结构重构。
+
+### ✨ 核心变更
+- **技能重构**:
+  - **目录化**: 将原有的 `prompts/skills/daily_learning.md` 文件分解，并创建一个新的模块化目录 `prompts/skills/daily_learning/`。
+  - **组件化**: 将技能的不同关注点（如 `profile`, `rules`, `workflow` 等）拆分为该目录下的独立文件。
+  - **入口文件**: 新的技能入口点为 `prompts/skills/daily_learning/README.md`，它负责加载和编排所有子模块。
+- **文件清理**:
+  - **删除旧文件**: 在确认新结构正常工作后，删除了旧的单体技能文件 `prompts/skills/daily_learning.md`。
+
+### 📈 预期收益
+- **可维护性提升**: 独立文件使得修改特定逻辑变得更简单，降低了引入错误的风险。
+- **可扩展性增强**: 新的模块化结构为未来添加更多复杂功能（如多步骤工作流）提供了清晰的框架。
+- **可读性改善**: 每个文件的职责单一，降低了理解和维护的认知负荷。
+
+### 🔄 Git操作
+- 分支: `refactor/modularize-daily-learning`
+- 提交: refactor: 将 daily_learning 技能重构为模块化结构并删除旧文件
+
+---
+
 ## v6.1 - 2025-08-12
 
 ### 🎯 更新原因
