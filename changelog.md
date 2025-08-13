@@ -1,5 +1,17 @@
 # gg 智能体进化日志
 
+## v8.3 (2025-08-15)
+
+- **Fix**: Upgraded memory saving logic from "overwrite" to "append".
+- **Reasoning**: The previous `fs.writeFile` logic would overwrite the conversation log, leading to data loss in multi-turn dialogues.
+- **Impact**: The `save.md` skill now mandates checking for file existence and appending new content, ensuring the integrity and completeness of long-term memory.
+
+## v8.2 (2025-08-15)
+
+- **Fix**: Resolved hardcoded timestamp issue in memory files.
+- **Reasoning**: The initial memory saving implementation used a static, hardcoded timestamp in both the filename and file content, which was incorrect and not robust.
+- **Impact**: The `save.md` skill now strictly requires dynamically fetching the current system timestamp for logging. This ensures all saved memories are accurately time-stamped and improves system reliability.
+
 ## v8.1 (2023-10-29)
 
 - **Feature**: Implemented automatic conversation saving.
