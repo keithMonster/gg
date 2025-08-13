@@ -1,5 +1,18 @@
 # gg 智能体进化日志
 
+## v9.0 (2025-08-15)
+
+- **Refactor (Core)**: Upgraded the core thinking framework to be state-aware (v2.0).
+- **Reasoning**: The previous linear, stateless thinking process caused the agent to "reset" after each action, leading to repetitive announcements and inefficient task execution.
+- **Impact**: The agent now maintains a "current active plan" and distinguishes between a "new user request" and an "intermediate action completion". This fundamentally solves the cognitive loop issue, enabling coherent, continuous, and efficient execution of multi-step tasks.
+
+## v8.5 (2025-08-15)
+
+- **Fix**: Repaired the "write-only" memory system by creating a standardized `retrieve.md` skill.
+- **Refactor**: Modularized the `memory_management` skill by adding a `README.md` as the entry point, aligning it with best practices.
+- **Reasoning**: A self-diagnosis revealed that the memory system lacked a standardized retrieval process, making it incomplete. The skill's architecture was also inconsistent with other modular skills.
+- **Impact**: The memory system is now a complete, robust, and modular skill with clear workflows for both saving and retrieving information, significantly improving system integrity and future extensibility.
+
 ## v8.3 (2025-08-15)
 
 - **Fix**: Upgraded memory saving logic from "overwrite" to "append".

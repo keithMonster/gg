@@ -1,9 +1,8 @@
-## Workflow: Retrieving a Conversation
+## Workflow: Retrieving a Memory (v1.0)
 
-1.  **Trigger**: This workflow is triggered when the agent needs to access past information to inform its current task.
-2.  **Identify Search Criteria**: Determine the key information needed. This could be a date, a specific topic, a project name, or a keyword.
-3.  **Scan Memory**: Use `fs.listDir` to get a list of all files in `/memory/conversations/`.
-4.  **Filter & Select**: 
-    - If searching by date, directly match the filename.
-    - If searching by keyword/topic, use `fs.readFile` on each file and perform a text search within the content.
-5.  **Present Findings**: Load the content of the most relevant file(s) into the agent's context to be used in the current task.
+1.  **Trigger**: This workflow is triggered when the `system_prompt` requires consulting past memories.
+2.  **Identify Keywords**: Based on the user's current query, identify key topics, entities, or date ranges.
+3.  **Scan Log Files**: Use `fs.readFile` to scan the contents of the daily log files in `/memory/conversations/`.
+4.  **Filter Relevant Entries**: Search for lines or sections containing the identified keywords.
+5.  **Extract Context**: Retrieve not just the matching line, but also the surrounding conversation turns (e.g., 2-3 lines before and after) to provide full context.
+6.  **Present Findings**: Present the retrieved, contextual snippets for internal analysis to inform the next steps.

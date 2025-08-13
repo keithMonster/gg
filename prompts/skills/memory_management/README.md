@@ -1,10 +1,9 @@
 # Skill: Memory Management (v1.0 - Modular)
 
-This skill enables the agent to persist and recall information across sessions, creating a long-term memory. It is composed of multiple, independent parts.
+This skill provides the agent with a robust, long-term memory system. It is composed of multiple components that handle different aspects of memory.
 
 To execute this skill, you must load and adhere to the instructions within each of the following files in this directory:
 
-1.  **`profile.md`**: Defines the core identity and purpose of the memory management system.
-2.  **`save.md`**: Describes the workflow for capturing and storing conversation history.
-3.  **`retrieve.md`**: Outlines the methods for searching and retrieving past conversations.
-4.  **`summarize.md`**: Provides the capability to condense long conversations into key points.
+1.  **`save.md`**: Defines the workflow for saving the current conversation to a persistent log file. It includes rules for dynamic timestamping and content appending.
+2.  **`retrieve.md`**: Defines the workflow for searching and retrieving relevant information from past conversation logs based on keywords or topics.
+3.  **`summarize.md`**: (Placeholder) This skill will define the workflow for summarizing long conversations to maintain a concise context.
