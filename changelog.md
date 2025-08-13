@@ -1,5 +1,27 @@
 # gg 智能体进化日志
 
+## v9.1.1 (2025-01-16)
+**类型**: 缺陷修复 (Bug Fix)
+**问题**: 简报文件引用链接格式错误
+
+### 问题描述
+- **现象**: 生成的日报文件中，所有引用链接使用了 `<mcreference>` 内部格式而非标准 Markdown 链接格式
+- **影响**: 用户无法直接点击引用链接，降低了文档的可用性
+- **违反规则**: 违反了 `daily_learning/rules.md` 第6条关于链接格式转换的明确要求
+
+### 根本原因
+- **技术层面**: 报告生成过程中遗漏了强制性的链接格式转换步骤
+- **流程层面**: 缺乏文件保存前的格式验证机制
+
+### 修复措施
+- [x] **已修复**: 更新 `2025-08-16.md` 文件，将所有 `<mcreference>` 格式转换为标准 Markdown 链接
+- [x] **已强化**: 更新 `daily_learning/rules.md` 第6条，增加强制检查和转换规则
+- [x] **预防机制**: 添加了文件保存前的格式验证要求和失败后果说明
+
+### 技术细节
+- **转换规则**: `<mcreference link="URL" index="N">N</mcreference>` → `[N](URL)`
+- **验证机制**: 保存前必须确认文件中不存在任何 `<mcreference>` 标签
+
 ## v9.1 (2025-08-16)
 
 - **Fix (Critical)**: Implemented robust task execution state persistence to eliminate mid-task interruptions.
