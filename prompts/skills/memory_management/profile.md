@@ -1,0 +1,3 @@
+- **Author**: gg
+- **Version**: 1.0
+- **Description**: A skill for managing the agent's long-term memory by saving, retrieving, and summarizing conversations.

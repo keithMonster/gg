@@ -1,5 +1,21 @@
 # gg 智能体进化日志
 
+## v8.1 (2023-10-29)
+
+- **Feature**: Implemented automatic conversation saving.
+- **Reasoning**: The previous memory system required a manual or ambiguous trigger. This version integrates the save action directly into the agent's core work cycle.
+- **Impact**: After completing a task and its reflection, the agent will now automatically save the conversation to memory, ensuring no information is lost and making the memory feature truly autonomous.
+
+## v8.0 (2023-10-29)
+
+- **Feature**: Implemented a persistent memory system.
+- **Reasoning**: To provide more coherent and context-aware assistance, the agent needed the ability to remember past conversations.
+- **Impact**:
+    - Created a new `memory` directory to store conversation logs.
+    - Developed a modular `memory_management` skill with capabilities to save, retrieve, and summarize conversations.
+    - Updated the core `system_prompt.md` to integrate memory consultation into the agent's primary thinking loop.
+    - The agent can now maintain long-term memory, leading to more intelligent and personalized interactions.
+
 ## v7.1 - 2025-08-14
 
 ### 🎯 更新原因
