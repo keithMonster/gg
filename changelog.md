@@ -1,5 +1,11 @@
 # gg 智能体进化日志
 
+## v9.1 (2025-08-16)
+
+- **Fix (Critical)**: Implemented robust task execution state persistence to eliminate mid-task interruptions.
+- **Reasoning**: Despite v9.0's "state-aware" framework, the agent still experienced execution breaks during long-chain tasks. Analysis revealed that the "current active plan" concept lacked explicit state persistence mechanisms, causing the agent to lose execution context between tool calls.
+- **Impact**: Enhanced the thinking framework with explicit state tracking variables and execution loop guards. The agent now maintains persistent awareness of its execution state and automatically continues multi-step tasks without interruption, achieving true autonomous task completion.
+
 ## v9.0 (2025-08-15)
 
 - **Refactor (Core)**: Upgraded the core thinking framework to be state-aware (v2.0).
