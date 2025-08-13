@@ -1,9 +1,36 @@
-## Workflow
-1.  **Initialization**: Determine the current date and define the output file path.
-2.  **Multi-Vector Scan**:
-    - **Macro Scan**: Scan high-authority general sources (e.g., MIT Tech Review, The Economist, Nature, Reuters).
-    - **Professional Scan**: Scan specialized sources for Product/Tech leaders (e.g., Stratechery, Reforge, Martin Fowler's Blog, LeadDev, key VC blogs, Hacker News discussions).
-3.  **Curate & Synthesize**:
-    - Select and synthesize items for all three sections based on the Guiding Principles.
-    - For the "Deep Dive," construct a detailed analysis that is significantly more comprehensive than a simple summary, ensuring it meets the new depth requirements.
-4.  **Format & Archive**: Assemble the final Markdown report, save it to the specified file, and confirm its creation to the user.
+## Workflow (v2.0 - 集成时间管理和内容去重)
+
+### Phase 1: 初始化与历史分析 (Initialization & Historical Analysis)
+1.  **时间获取**: 使用 `date +%Y-%m-%d` 动态获取当前日期，严禁硬编码
+2.  **路径定义**: 基于获取的日期定义输出文件路径 `/outputs/daily_briefings/[YYYY-MM-DD].md`
+3.  **历史内容分析**: 
+    - 扫描最近7天的简报文件 (`/outputs/daily_briefings/`)
+    - 提取已覆盖的主要技术领域和具体主题
+    - 生成主题排除列表，避免重复内容
+    - 统计信息来源分布，确保多样性
+
+### Phase 2: 智能搜索策略 (Intelligent Search Strategy)
+4.  **领域轮换**: 根据历史分析确定当日重点技术领域
+5.  **关键词优化**: 
+    - 基于排除列表动态调整搜索关键词
+    - 优先搜索最新24-48小时内的信息
+    - 使用多层级搜索策略 (表面趋势→技术深度→商业洞察→未来预测)
+6.  **多向量扫描**:
+    - **宏观扫描**: 权威综合信息源 (MIT Tech Review, Nature, Harvard Business Review)
+    - **专业扫描**: 技术领导者专业信息源 (Stratechery, a16z Blog, First Round Review)
+    - **学术扫描**: 研究机构和学术平台 (arXiv, Google Research, Stanford HAI)
+
+### Phase 3: 内容策展与合成 (Content Curation & Synthesis)
+7.  **新颖性验证**: 确保所选内容与历史简报无重复
+8.  **多角度分析**: 从技术、商业、社会、未来四个维度进行分析
+9.  **信息源多样化**: 确保每个部分的信息来源分布均衡
+10. **深度构建**: 
+    - 宏观视角: 10-12项前沿趋势，注重跨领域连接
+    - 产品技术焦点: 5-7项深度技术分析，突出实用性
+    - 深度剖析: 1个主题的全方位分析，包含战略建议
+
+### Phase 4: 格式化与归档 (Formatting & Archiving)
+11. **格式标准化**: 组装最终Markdown报告，确保所有链接为标准格式 `[N](URL)`
+12. **质量验证**: 检查内容新颖性、信息源多样性、分析深度
+13. **文件保存**: 保存到指定路径并向用户确认创建完成
+14. **元数据记录**: 记录生成时间、覆盖主题、信息源统计等元数据
