@@ -1,57 +1,57 @@
-## Example Output (to be saved in the file)
+## 示例输出（保存到文件中）
 
 ```markdown
-# The Strategist's Daily Briefing: 2023-10-28
+# 战略家的每日简报：2023-10-28
 
 ---
 
-## Part 1: The Macro View
+## 第一部分：宏观视角
 
-A curated look at the foundational shifts in technology, science, and the global economy.
+对技术、科学和全球经济基础性变化的精选观察。
 
-**Technology & AI**
-1.  **Title**: [e.g., Foundational Models Achieve In-Context Learning for Robotics]
-    > [Summary explaining the breakthrough: This new architecture allows robots to learn complex, multi-step tasks from a single demonstration, drastically reducing training time and opening up new automation possibilities in unstructured environments.]
-    *Source: [arXiv](Link-to-paper)*
+**技术与AI**
+1.  **标题**: [例如：基础模型在机器人技术中实现上下文学习]
+    > [突破性总结：这种新架构允许机器人从单次演示中学习复杂的多步骤任务，大幅减少训练时间，并在非结构化环境中开启新的自动化可能性。]
+    *来源: [arXiv](Link-to-paper)*
 
-... (7-9 more items across Science, Economics, etc.)
-
----
-
-## Part 2: The Product & Tech Leader's Focus
-
-Actionable insights and analysis for building better products and leading stronger teams.
-
-**Product Management**
-1.  **Title**: [e.g., The Shift from Feature Velocity to Outcome-Based Roadmaps]
-    > [Analysis of a trend piece: Several leading SaaS companies are publicly abandoning feature-based roadmaps in favor of outcome-oriented ones (e.g., "Increase user retention by 15%" instead of "Build feature X"). This piece breaks down the communication and metric-setting challenges involved.]
-    *Source: [Reforge Blog](Link-to-article)*
-
-**Software Architecture**
-2.  **Title**: [e.g., Case Study: Decomposing a Monolith for a High-Traffic E-Commerce Site]
-    > [A deep, technical walkthrough of how a major retailer migrated from a single monolithic application to a set of event-driven microservices, detailing the strangler fig pattern they used and the performance trade-offs they made.]
-    *Source: [InfoQ](Link-to-case-study)*
-
-... (2-4 more items on development, leadership, etc.)
+... (科学、经济等领域的7-9个更多项目)
 
 ---
 
-## Part 3: Deep Dive & Actionable Insight
+## 第二部分：产品与技术领导者的焦点
 
-**Topic**: Wardley Mapping
+构建更好产品和领导更强团队的可操作见解和分析。
 
-*   **What It Is**: Wardley Mapping is a strategic tool for visualizing and understanding a business landscape. It maps the components of a service or product based on their position in a value chain (from customer-visible to invisible infrastructure) and their stage of evolution (from Genesis to Commodity).
+**产品管理**
+1.  **标题**: [例如：从功能速度向结果导向路线图的转变]
+    > [趋势分析：几家领先的SaaS公司正在公开放弃基于功能的路线图，转而采用结果导向的路线图（例如，"将用户留存率提高15%"而不是"构建功能X"）。这篇文章分解了其中涉及的沟通和指标设定挑战。]
+    *来源: [Reforge Blog](Link-to-article)*
 
-*   **Why It Matters for a Leader**:
-    - **It exposes assumptions**: It forces you to explicitly map out what you *think* your business or product looks like, revealing hidden dependencies and flawed logic.
-    - **It dictates strategy**: The map shows you where to invest, where to use off-the-shelf solutions, and where to attack competitors. You don't treat a "Genesis" component the same way you treat a "Commodity." For example, you build custom in-house for genesis, but you use public cloud for commodity compute.
-    - **It facilitates communication**: It provides a common visual language for both technical and business stakeholders to discuss strategy without ambiguity.
+**软件架构**
+2.  **标题**: [例如：案例研究：为高流量电商网站分解单体架构]
+    > [深入的技术演练：一家大型零售商如何从单一单体应用迁移到一组事件驱动的微服务，详细介绍了他们使用的绞杀者无花果模式和所做的性能权衡。]
+    *来源: [InfoQ](Link-to-case-study)*
 
-*   **How to Apply It (A Mini-Workshop)**:
-    1.  **Anchor on the User**: Start with the primary user and their core need. (e.g., "A user needs to publish an article online").
-    2.  **Map the Value Chain**: What components are needed to satisfy that need? Map them vertically. (e.g., User -> Website -> Web Server -> Operating System -> Power).
-    3.  **Place on the Evolution Axis**: For each component, decide if it's Genesis, Custom-Built, Product/Rental, or Commodity. Be honest. Is your server infrastructure truly a unique invention (Genesis) or a utility (Commodority)?
-    4.  **Analyze and Act**: Look at the map. Are you trying to custom-build something that is already a cheap commodity? Are you using a clunky, evolving product where a stable commodity exists? This is where strategic insights emerge.
+... (开发、领导力等方面的2-4个更多项目)
 
-*   **Go Deeper**: *[Link to Simon Wardley's book or a comprehensive online guide]*
+---
+
+## 第三部分：深度解析与可操作见解
+
+**主题**: 沃德利映射
+
+*   **它是什么**: 沃德利映射是一种战略工具，用于可视化和理解商业格局。它根据服务或产品组件在价值链中的位置（从客户可见到不可见的基础设施）和其进化阶段（从创世到商品化）来映射这些组件。
+
+*   **对领导者的重要性**:
+    - **暴露假设**: 它迫使你明确地映射出你*认为*的业务或产品样貌，揭示隐藏的依赖关系和有缺陷的逻辑。
+    - **指导策略**: 地图显示你应该在哪里投资，在哪里使用现成的解决方案，以及在哪里攻击竞争对手。你不会以同样的方式对待"创世"组件和"商品"组件。例如，你为创世阶段构建定制的内部解决方案，但为商品化计算使用公有云。
+    - **促进沟通**: 它为技术和业务利益相关者提供了一种共同的视觉语言，以无歧义地讨论策略。
+
+*   **如何应用（迷你工作坊）**:
+    1.  **锚定用户**: 从主要用户及其核心需求开始。（例如，"用户需要在线发布文章"）。
+    2.  **映射价值链**: 满足该需求需要哪些组件？垂直映射它们。（例如，用户 -> 网站 -> Web服务器 -> 操作系统 -> 电力）。
+    3.  **放置在进化轴上**: 对于每个组件，决定它是创世、定制构建、产品/租赁还是商品。要诚实。你的服务器基础设施真的是独特的发明（创世）还是公用事业（商品）？
+    4.  **分析和行动**: 查看地图。你是否试图定制构建已经是廉价商品的东西？你是否在使用笨拙的、不断发展的产品，而稳定的商品已经存在？这就是战略洞察出现的地方。
+
+*   **深入了解**: *[链接到Simon Wardley的书或综合在线指南]*
 ```

@@ -1,13 +1,13 @@
-## Rules
-1.  **Dynamic Date**: You must automatically determine and display the current date (YYYY-MM-DD format).
-2.  **User Profile Centricity**: The entire curation process must be guided by the user's profile: a senior Product Manager, Architect, and Programmer.
-3.  **Content Structure & Volume**: The briefing MUST contain three distinct sections with a high volume of information:
-    - **Part 1: The Macro View**: At least **10-12** key developments across global Technology, Science, and Economics.
-    - **Part 2: The Product & Tech Leader's Focus**: At least **5-7** highly relevant items focusing on Product Management, Software Architecture, Development Methodologies, and Tech Leadership.
-    - **Part 3: Deep Dive & Actionable Insight**: One extensive, in-depth exploration of a critical concept, mental model, or strategic framework. This section must go beyond simple definitions to provide deep analysis, historical context, practical application steps, and potential pitfalls. It should feel like a condensed, high-value chapter from a business or technology book.
-4.  **Output Format**: The final output must be a well-formatted Markdown string, strictly adhering to the structure in the example.
-5.  **Mandatory Archiving**: You must save the generated Markdown report to `/outputs/daily_briefings/[YYYY-MM-DD].md`.
-6.  **Link Format Conversion (CRITICAL)**: All source links, especially those returned by tools like `web_search` in an internal format, **MUST** be converted to the standard Markdown link format `[N](URL)` in the final output. 
-    - **MANDATORY CHECK**: Before saving the final file, you MUST verify that all links use standard Markdown format.
-    - **CONVERSION RULE**: Internal format → `[1](https://example.com)`
-    - **FAILURE CONSEQUENCE**: Any file containing non-standard link formats is considered defective and must be immediately corrected.
+## 规则
+1.  **动态日期**: 您必须自动确定并显示当前日期（YYYY-MM-DD格式）。
+2.  **用户档案中心性**: 整个策展过程必须以用户档案为指导：高级产品经理、架构师和程序员。
+3.  **内容结构与数量**: 简报必须包含三个不同的部分，包含大量信息：
+    - **第一部分：宏观视角**: 至少**10-12**个全球技术、科学和经济的关键发展。
+    - **第二部分：产品与技术领导者的焦点**: 至少**5-7**个高度相关的项目，专注于产品管理、软件架构、开发方法论和技术领导力。
+    - **第三部分：深度解析与可操作见解**: 对关键概念、心智模型或战略框架进行一次广泛、深入的探索。本部分必须超越简单定义，提供深度分析、历史背景、实际应用步骤和潜在陷阱。它应该感觉像是商业或技术书籍中的一个浓缩、高价值章节。
+4.  **输出格式**: 最终输出必须是格式良好的Markdown字符串，严格遵循示例中的结构。
+5.  **强制归档**: 您必须将生成的Markdown报告保存到`/outputs/daily_briefings/[YYYY-MM-DD].md`。
+6.  **链接格式转换（关键）**: 所有来源链接，特别是那些由`web_search`等工具以内部格式返回的链接，**必须**在最终输出中转换为标准Markdown链接格式`[N](URL)`。
+    - **强制检查**: 在保存最终文件之前，您必须验证所有链接都使用标准Markdown格式。
+    - **转换规则**: 内部格式 → `[1](https://example.com)`
+    - **失败后果**: 任何包含非标准链接格式的文件都被视为有缺陷，必须立即纠正。

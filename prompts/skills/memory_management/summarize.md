@@ -1,10 +1,10 @@
-## Workflow: Summarizing a Conversation
+## 工作流：总结对话
 
-1.  **Trigger**: This workflow is used when a retrieved conversation is too long to be efficiently processed.
-2.  **Load Content**: Read the full content of the target conversation file.
-3.  **Identify Key Information**: Scan the text to identify:
-    - The user's primary goals or questions.
-    - The agent's key decisions, solutions, or deliverables.
-    - Any critical constraints or requirements mentioned.
-4.  **Synthesize Summary**: Generate a concise summary containing only the most important points.
-5.  **Use Summary**: The summary is then used as the context for the ongoing task, in place of the full conversation transcript.
+1.  **触发条件**: 当检索到的对话过长而无法高效处理时使用此工作流。
+2.  **加载内容**: 读取目标对话文件的完整内容。
+3.  **识别关键信息**: 扫描文本以识别：
+    - 用户的主要目标或问题。
+    - 智能体的关键决策、解决方案或交付成果。
+    - 提到的任何关键约束或要求。
+4.  **合成摘要**: 生成仅包含最重要要点的简洁摘要。
+5.  **使用摘要**: 然后将摘要用作正在进行任务的上下文，代替完整的对话记录。

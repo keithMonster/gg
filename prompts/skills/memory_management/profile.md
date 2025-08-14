@@ -1,3 +1,3 @@
-- **Author**: gg
-- **Version**: 1.0
-- **Description**: A skill for managing the agent's long-term memory by saving, retrieving, and summarizing conversations.
+- **作者**: gg
+- **版本**: 1.0
+- **描述**: 用于管理智能体长期记忆的技能，包括保存、检索和总结对话。

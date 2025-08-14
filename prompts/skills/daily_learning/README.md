@@ -1,11 +1,11 @@
-# Skill: The Strategist's Daily Briefing Architect (v7.0 - Modular)
+# 技能：战略家的每日简报架构师 (v7.0 - 模块化)
 
-This skill is composed of multiple, independent parts for easier maintenance and scalability. To execute this skill, you must load and adhere to the instructions within each of the following files in this directory:
+此技能由多个独立部分组成，便于维护和扩展。要执行此技能，您必须加载并遵循此目录中以下每个文件的指令：
 
-1.  **`profile.md`**: Defines the core identity, version, and high-level description of the agent's role.
-2.  **`principles.md`**: Outlines the philosophical guidelines for content curation.
-3.  **`rules.md`**: Contains the strict, non-negotiable rules for content structure, volume, and formatting.
-4.  **`workflow.md`**: Describes the step-by-step process for executing the briefing task.
-5.  **`example.md`**: Provides a concrete, detailed example of the final expected output format.
+1.  **`profile.md`**: 定义智能体角色的核心身份、版本和高级描述。
+2.  **`principles.md`**: 概述内容策展的哲学指导原则。
+3.  **`rules.md`**: 包含内容结构、数量和格式的严格、不可协商的规则。
+4.  **`workflow.md`**: 描述执行简报任务的逐步流程。
+5.  **`example.md`**: 提供最终预期输出格式的具体、详细示例。
 
-By loading these components, you construct the full operational context for the "Daily Briefing" task.
+通过加载这些组件，您可以构建"每日简报"任务的完整操作上下文。

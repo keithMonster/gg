@@ -1,9 +1,9 @@
-# Skill: Memory Management (v1.0 - Modular)
+# 技能：记忆管理 (v1.0 - 模块化)
 
-This skill provides the agent with a robust, long-term memory system. It is composed of multiple components that handle different aspects of memory.
+此技能为智能体提供强大的长期记忆系统。它由多个组件组成，处理记忆的不同方面。
 
-To execute this skill, you must load and adhere to the instructions within each of the following files in this directory:
+要执行此技能，您必须加载并遵循此目录中以下每个文件的指令：
 
-1.  **`save.md`**: Defines the workflow for saving the current conversation to a persistent log file. It includes rules for dynamic timestamping and content appending.
-2.  **`retrieve.md`**: Defines the workflow for searching and retrieving relevant information from past conversation logs based on keywords or topics.
-3.  **`summarize.md`**: (Placeholder) This skill will define the workflow for summarizing long conversations to maintain a concise context.
+1.  **`save.md`**: 定义将当前对话保存到持久日志文件的工作流。包括动态时间戳和内容追加的规则。
+2.  **`retrieve.md`**: 定义基于关键词或主题从过往对话日志中搜索和检索相关信息的工作流。
+3.  **`summarize.md`**: (占位符) 此技能将定义总结长对话以保持简洁上下文的工作流。

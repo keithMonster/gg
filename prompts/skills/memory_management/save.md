@@ -1,11 +1,11 @@
-## Workflow: Saving a Conversation (v1.1)
+## 工作流：保存对话 (v1.1)
 
-1.  **Trigger**: This workflow is automatically triggered at the end of a user interaction session.
-2.  **Get Timestamp**: **Crucial Rule**: The timestamp for the filename MUST be dynamically and programmatically obtained from the system (e.g., via `date +%Y-%m-%d_%H-%M-%S`). It MUST NOT be a hardcoded or static value.
-3.  **Define Path**: Construct the full file path: `/memory/conversations/[timestamp].md`.
-4.  **Format Content**: Structure the latest turn of the conversation in a clear, readable Markdown format.
-5.  **Write/Append Logic**:
-    *   First, check if a file at the given path already exists.
-    *   **If it exists**: Read the file's current content, append the new formatted content, and use `fs.writeFile` to save the entire merged content back to the file.
-    *   **If it does not exist**: Use `fs.writeFile` to create the new file with the formatted content.
-    *   This ensures that a single conversation log is continuously appended to, rather than being overwritten.
+1.  **触发条件**: 此工作流在用户交互会话结束时自动触发。
+2.  **获取时间戳**: **关键规则**: 文件名的时间戳必须从系统动态和程序化获取（例如，通过 `date +%Y-%m-%d_%H-%M-%S`）。绝不能是硬编码或静态值。
+3.  **定义路径**: 构建完整文件路径：`/memory/conversations/[timestamp].md`。
+4.  **格式化内容**: 将最新一轮对话以清晰、可读的Markdown格式结构化。
+5.  **写入/追加逻辑**:
+    *   首先，检查给定路径的文件是否已存在。
+    *   **如果存在**: 读取文件的当前内容，追加新的格式化内容，并使用 `fs.writeFile` 将整个合并内容保存回文件。
+    *   **如果不存在**: 使用 `fs.writeFile` 创建包含格式化内容的新文件。
+    *   这确保单个对话日志被持续追加，而不是被覆盖。

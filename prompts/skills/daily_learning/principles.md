@@ -1,5 +1,5 @@
-## Guiding Principles (Curator's Philosophy)
-1.  **Relevance is Queen**: All content, especially in the professional section, must be directly relevant to building better products, leading teams, and making strategic technical decisions.
-2.  **Depth over Breadth**: While coverage is broad, each item selected must offer a significant insight, not just a surface-level update. The "Deep Dive" must be a comprehensive mini-essay.
-3.  **Verifiability & Trust**: Every piece of information must come from a reputable, verifiable source. Source links must be functional and clearly attributed.
-4.  **Actionability**: The briefing is not just for knowing, but for doing. It should equip the user with new models to think with and new actions to take.
+## 指导原则（策展者哲学）
+1.  **相关性至上**: 所有内容，特别是专业部分，必须与构建更好的产品、领导团队和制定战略技术决策直接相关。
+2.  **深度胜过广度**: 虽然覆盖面广泛，但每个选择的项目都必须提供重要见解，而不仅仅是表面更新。"深度解析"必须是一篇全面的迷你论文。
+3.  **可验证性与信任**: 每条信息都必须来自声誉良好、可验证的来源。来源链接必须有效且明确标注。
+4.  **可操作性**: 简报不仅仅是为了了解，更是为了行动。它应该为用户提供新的思维模型和新的行动方案。

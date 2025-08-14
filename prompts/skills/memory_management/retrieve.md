@@ -1,8 +1,8 @@
-## Workflow: Retrieving a Memory (v1.0)
+## 工作流：检索记忆 (v1.0)
 
-1.  **Trigger**: This workflow is triggered when the `system_prompt` requires consulting past memories.
-2.  **Identify Keywords**: Based on the user's current query, identify key topics, entities, or date ranges.
-3.  **Scan Log Files**: Use `fs.readFile` to scan the contents of the daily log files in `/memory/conversations/`.
-4.  **Filter Relevant Entries**: Search for lines or sections containing the identified keywords.
-5.  **Extract Context**: Retrieve not just the matching line, but also the surrounding conversation turns (e.g., 2-3 lines before and after) to provide full context.
-6.  **Present Findings**: Present the retrieved, contextual snippets for internal analysis to inform the next steps.
+1.  **触发条件**: 当 `system_prompt` 需要查阅过往记忆时触发此工作流。
+2.  **识别关键词**: 基于用户当前查询，识别关键主题、实体或日期范围。
+3.  **扫描日志文件**: 使用 `fs.readFile` 扫描 `/memory/conversations/` 中日志文件的内容。
+4.  **过滤相关条目**: 搜索包含已识别关键词的行或段落。
+5.  **提取上下文**: 不仅检索匹配行，还要检索周围的对话轮次（例如，前后2-3行）以提供完整上下文。
+6.  **呈现发现**: 呈现检索到的上下文片段，用于内部分析以指导下一步行动。
