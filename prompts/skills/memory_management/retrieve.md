@@ -1,3 +1,14 @@
+---
+version: "1.0.0"
+author: "gg"
+description: "记忆检索工作流，从历史对话日志中搜索和提取相关信息"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["workflow", "memory_management", "retrieval"]
+---
+
+# 记忆检索工作流
+
 ## 工作流：检索记忆 (v1.0)
 
 1.  **触发条件**: 当 `system_prompt` 需要查阅过往记忆时触发此工作流。

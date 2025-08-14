@@ -1,3 +1,14 @@
+---
+version: "2.0.0"
+author: "gg"
+description: "每日学习系统的完整工作流程，集成时间管理和内容去重功能"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["workflow", "daily_learning", "time_management", "content_deduplication"]
+---
+
+# 每日学习工作流程
+
 ## 工作流程 (v2.0 - 集成时间管理和内容去重)
 
 ### 阶段1: 初始化与历史分析

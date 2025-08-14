@@ -1,3 +1,12 @@
+---
+version: "1.0.0"
+author: "gg"
+description: "智能体长期记忆管理系统，提供对话保存、检索和总结功能的模块化架构"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["readme", "memory_management", "modular_architecture"]
+---
+
 # 技能：记忆管理 (v1.0 - 模块化)
 
 此技能为智能体提供强大的长期记忆系统。它由多个组件组成，处理记忆的不同方面。

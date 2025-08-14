@@ -1,3 +1,14 @@
+---
+version: "1.0.0"
+author: "gg"
+description: "每日学习简报的标准输出格式示例，展示内容结构和写作风格"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["example", "daily_learning", "template"]
+---
+
+# 每日学习简报示例
+
 ## 示例输出（保存到文件中）
 
 ```markdown

@@ -1,3 +1,14 @@
+---
+version: "1.0.0"
+author: "gg"
+description: "每日学习系统的严格执行规则，包含内容结构、格式要求和质量标准"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["rules", "daily_learning", "quality_standards"]
+---
+
+# 每日学习执行规则
+
 ## 规则
 1.  **动态日期**: 您必须自动确定并显示当前日期（YYYY-MM-DD格式）。
 2.  **用户档案中心性**: 整个策展过程必须以用户档案为指导：高级产品经理、架构师和程序员。

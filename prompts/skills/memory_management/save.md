@@ -1,3 +1,14 @@
+---
+version: "1.1.0"
+author: "gg"
+description: "对话保存工作流，将当前会话内容持久化到记忆日志文件"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["workflow", "memory_management", "persistence"]
+---
+
+# 对话保存工作流
+
 ## 工作流：保存对话 (v1.1)
 
 1.  **触发条件**: 此工作流在用户交互会话结束时自动触发。

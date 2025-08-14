@@ -1,3 +1,14 @@
+---
+version: "1.0.0"
+author: "gg"
+description: "对话总结工作流，将长对话压缩为关键信息摘要以提高处理效率"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["workflow", "memory_management", "summarization"]
+---
+
+# 对话总结工作流
+
 ## 工作流：总结对话
 
 1.  **触发条件**: 当检索到的对话过长而无法高效处理时使用此工作流。

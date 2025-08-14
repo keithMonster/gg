@@ -1,3 +1,12 @@
+---
+version: "7.0.0"
+author: "gg"
+description: "战略家每日简报系统的模块化架构说明，定义各组件的作用和加载顺序"
+created: "2025-08-14"
+last_updated: "2025-08-14"
+tags: ["readme", "daily_learning", "modular_architecture"]
+---
+
 # 技能：战略家的每日简报架构师 (v7.0 - 模块化)
 
 此技能由多个独立部分组成，便于维护和扩展。要执行此技能，您必须加载并遵循此目录中以下每个文件的指令：
