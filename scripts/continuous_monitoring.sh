@@ -90,59 +90,88 @@ health_check() {
 
 # 质量指标收集
 collect_metrics() {
+    # 确保关闭调试模式，避免意外输出
+    set +x
     log_info "收集质量指标..."
-        # 模块统计
-    local total_modules=$(find "$MONITOR_DIR" -name "*.md" -type f | wc -l | tr -d ' ')
+    
+    # 模块统计 - 增强错误处理
+    local total_modules=0
+    if [ -d "$MONITOR_DIR" ]; then
+        total_modules=$(find "$MONITOR_DIR" -name "*.md" -type f 2>/dev/null | wc -l | tr -d ' ' || echo "0")
+    fi
+    # 确保是数字
+    total_modules=${total_modules:-0}
     log_metric "总模块数: $total_modules"
     
-    # 元数据完整性统计
+    # 元数据完整性统计 - 改进逻辑
     local modules_with_metadata=0
     local modules_without_metadata=0
     
-    while IFS= read -r file; do
-        if [ -f "$file" ] && head -20 "$file" 2>/dev/null | grep -q '^---$'; then
-            # 检查必需字段
-            local yaml_content=$(sed -n '/^---$/,/^---$/p' "$file" 2>/dev/null | head -n -1 | tail -n +2)
-            if echo "$yaml_content" | grep -q '^version:' && \
-               echo "$yaml_content" | grep -q '^author:' && \
-               echo "$yaml_content" | grep -q '^description:'; then
-                modules_with_metadata=$((modules_with_metadata + 1))
-            else
-                modules_without_metadata=$((modules_without_metadata + 1))
+    if [ "$total_modules" -gt 0 ]; then
+        while IFS= read -r file; do
+            if [ -f "$file" ]; then
+                # 安全地检查YAML前置内容
+                local has_yaml=false
+                if head -20 "$file" 2>/dev/null | grep -q '^---$'; then
+                    # 检查YAML元数据字段，避免变量赋值输出
+                    if awk '/^---$/{flag=!flag; if(!flag) exit} flag && !/^---$/' "$file" 2>/dev/null | \
+                       grep -q '^version:' && \
+                       awk '/^---$/{flag=!flag; if(!flag) exit} flag && !/^---$/' "$file" 2>/dev/null | \
+                       grep -q '^author:' && \
+                       awk '/^---$/{flag=!flag; if(!flag) exit} flag && !/^---$/' "$file" 2>/dev/null | \
+                       grep -q '^description:'; then
+                        modules_with_metadata=$((modules_with_metadata + 1))
+                        has_yaml=true
+                    fi
+                fi
+                
+                if [ "$has_yaml" = false ]; then
+                    modules_without_metadata=$((modules_without_metadata + 1))
+                fi
             fi
-        else
-            modules_without_metadata=$((modules_without_metadata + 1))
-        fi
-    done < <(find "$MONITOR_DIR" -name "*.md" -type f)
+        done < <(find "$MONITOR_DIR" -name "*.md" -type f 2>/dev/null || true)
+    fi
     
+    # 计算完整性百分比
     local metadata_completeness=0
     if [ "$total_modules" -gt 0 ]; then
         metadata_completeness=$((modules_with_metadata * 100 / total_modules))
     fi
     log_metric "元数据完整性: $metadata_completeness% ($modules_with_metadata/$total_modules)"
     
-    # 文件大小统计
-    local total_size=$(find "$MONITOR_DIR" -name "*.md" -type f -exec wc -c {} + 2>/dev/null | tail -1 | awk '{print $1}' || echo "0")
+    # 文件大小统计 - 改进计算方式
+    local total_size=0
     local avg_size=0
-    if [ "$total_modules" -gt 0 ] && [ "$total_size" -gt 0 ]; then
-        avg_size=$((total_size / total_modules))
+    if [ "$total_modules" -gt 0 ]; then
+        # 使用更安全的方式计算总大小
+        total_size=$(find "$MONITOR_DIR" -name "*.md" -type f -exec stat -f%z {} + 2>/dev/null | awk '{sum+=$1} END {print sum+0}' || echo "0")
+        if [ "$total_size" -gt 0 ]; then
+            avg_size=$((total_size / total_modules))
+        fi
     fi
     log_metric "平均文件大小: $avg_size 字节"
     
     # 最近更新统计
-    local recently_updated=$(find "$MONITOR_DIR" -name "*.md" -type f -mtime -7 2>/dev/null | wc -l | tr -d ' ')
+    local recently_updated=0
+    recently_updated=$(find "$MONITOR_DIR" -name "*.md" -type f -mtime -7 2>/dev/null | wc -l | tr -d ' ' || echo "0")
+    recently_updated=${recently_updated:-0}
     log_metric "最近7天更新的模块: $recently_updated"
     
-    # Git状态
+    # Git状态 - 增强错误处理
     local uncommitted_changes=0
-    if git rev-parse --git-dir > /dev/null 2>&1; then
-        uncommitted_changes=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
+    if git rev-parse --git-dir >/dev/null 2>&1; then
+        uncommitted_changes=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ' || echo "0")
+        uncommitted_changes=${uncommitted_changes:-0}
         local last_commit=$(git log -1 --format="%h %s" 2>/dev/null || echo "无提交记录")
         log_metric "未提交变更: $uncommitted_changes"
         log_metric "最后提交: $last_commit"
     fi
     
-    # 返回关键指标用于告警判断（确保都是数字）
+    # 返回关键指标用于告警判断（确保都是有效数字）
+    modules_without_metadata=${modules_without_metadata:-0}
+    metadata_completeness=${metadata_completeness:-0}
+    uncommitted_changes=${uncommitted_changes:-0}
+    
     echo "$modules_without_metadata $metadata_completeness $uncommitted_changes"
 }
 
@@ -182,30 +211,51 @@ run_quality_audit() {
 # 告警检查
 check_alerts() {
     local metrics_result="$1"
-    local modules_without_metadata=$(echo "$metrics_result" | cut -d' ' -f1)
-    local metadata_completeness=$(echo "$metrics_result" | cut -d' ' -f2)
-    local uncommitted_changes=$(echo "$metrics_result" | cut -d' ' -f3)
+    
+    # 安全地解析指标结果
+    local modules_without_metadata=$(echo "$metrics_result" | cut -d' ' -f1 2>/dev/null || echo "0")
+    local metadata_completeness=$(echo "$metrics_result" | cut -d' ' -f2 2>/dev/null || echo "0")
+    local uncommitted_changes=$(echo "$metrics_result" | cut -d' ' -f3 2>/dev/null || echo "0")
+    
+    # 确保所有变量都是有效数字
+    modules_without_metadata=${modules_without_metadata:-0}
+    metadata_completeness=${metadata_completeness:-0}
+    uncommitted_changes=${uncommitted_changes:-0}
+    
+    # 验证数字格式
+    if ! [[ "$modules_without_metadata" =~ ^[0-9]+$ ]]; then
+        modules_without_metadata=0
+    fi
+    if ! [[ "$metadata_completeness" =~ ^[0-9]+$ ]]; then
+        metadata_completeness=0
+    fi
+    if ! [[ "$uncommitted_changes" =~ ^[0-9]+$ ]]; then
+        uncommitted_changes=0
+    fi
     
     log_info "检查告警条件..."
+    log_info "指标值: 缺失元数据=$modules_without_metadata, 完整性=$metadata_completeness%, 未提交=$uncommitted_changes"
     
-    # 元数据完整性告警
-    if [ "$modules_without_metadata" -gt "$ALERT_THRESHOLD_ERRORS" ]; then
+    # 元数据完整性告警 - 增强数值验证
+    if [ "$modules_without_metadata" -gt "$ALERT_THRESHOLD_ERRORS" ] 2>/dev/null; then
         log_error "告警: 缺少元数据的模块过多 ($modules_without_metadata > $ALERT_THRESHOLD_ERRORS)"
-    elif [ "$modules_without_metadata" -gt "$ALERT_THRESHOLD_WARNINGS" ]; then
+    elif [ "$modules_without_metadata" -gt "$ALERT_THRESHOLD_WARNINGS" ] 2>/dev/null; then
         log_warning "警告: 缺少元数据的模块较多 ($modules_without_metadata > $ALERT_THRESHOLD_WARNINGS)"
     fi
     
-    # 元数据完整性百分比告警
-    if [ "$metadata_completeness" -lt 80 ]; then
+    # 元数据完整性百分比告警 - 增强数值验证
+    if [ "$metadata_completeness" -lt 80 ] 2>/dev/null; then
         log_error "告警: 元数据完整性过低 ($metadata_completeness% < 80%)"
-    elif [ "$metadata_completeness" -lt 90 ]; then
+    elif [ "$metadata_completeness" -lt 90 ] 2>/dev/null; then
         log_warning "警告: 元数据完整性偏低 ($metadata_completeness% < 90%)"
     fi
     
-    # 未提交变更告警
-    if [ "$uncommitted_changes" -gt 20 ]; then
+    # 未提交变更告警 - 增强数值验证
+    if [ "$uncommitted_changes" -gt 20 ] 2>/dev/null; then
         log_warning "警告: 未提交变更较多 ($uncommitted_changes > 20)"
     fi
+    
+    log_info "告警检查完成"
 }
 
 # 生成监控报告
@@ -213,6 +263,10 @@ generate_report() {
     local report_file="$REPORT_DIR/monitoring_report_$(date +%Y%m%d_%H%M%S).md"
     
     log_info "生成监控报告: $report_file"
+    
+    # 重新收集指标用于报告生成
+    local metrics_output
+    metrics_output=$(collect_metrics 2>/dev/null | grep "\[METRIC\]" | sed 's/.*\[METRIC\] /- /' || echo "- 指标收集失败")
     
     cat > "$report_file" << EOF
 # 提示词系统监控报告
@@ -223,7 +277,7 @@ generate_report() {
 
 ## 系统概览
 
-$(collect_metrics | grep "\[METRIC\]" | sed 's/.*\[METRIC\] /- /')
+$metrics_output
 
 ## 最近活动
 
@@ -281,7 +335,7 @@ main() {
             log_info "执行单次监控检查"
             if health_check; then
                 local metrics_result
-                metrics_result=$(collect_metrics)
+                metrics_result=$(collect_metrics 2>&1 | tail -1)
                 check_alerts "$metrics_result"
                 run_quality_audit
                 generate_report
@@ -297,7 +351,7 @@ main() {
             while true; do
                 if health_check; then
                     local metrics_result
-                    metrics_result=$(collect_metrics)
+                    metrics_result=$(collect_metrics 2>&1 | tail -1)
                     check_alerts "$metrics_result"
                     
                     # 每2小时运行一次完整审查
