@@ -1,0 +1,13 @@
+{
+  "sessionId": "SESSION_ID_PLACEHOLDER",
+  "userId": "user_001",
+  "conversationHistory": [],
+  "userPreferences": {
+    "language": "zh-CN",
+    "verbosity": "detailed",
+    "outputFormat": "markdown"
+  },
+  "contextData": {},
+  "createdAt": "TIMESTAMP_PLACEHOLDER",
+  "updatedAt": "TIMESTAMP_PLACEHOLDER"
+}

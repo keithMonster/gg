@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-08-21 15:32:16",
+  "overallHealth": "HEALTHY",
+  "checks": {
+    "stateIntegrity": "OK",
+    "diskUsage": "OK",
+    "diskUsagePercent": 65,
+    "memoryUsage": "OK",
+    "systemLoad": "OK"
+  },
+  "lastCheck": "2025-08-21 15:32:16"
+}

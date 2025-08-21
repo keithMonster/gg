@@ -1,0 +1,16 @@
+{
+  "taskId": "TASK_ID_PLACEHOLDER",
+  "executionState": "PLANNING",
+  "currentPlan": [],
+  "planProgress": 0,
+  "taskContext": {
+    "userRequest": "",
+    "priority": "medium",
+    "estimatedDuration": "",
+    "intermediateResults": {},
+    "errorHistory": []
+  },
+  "createdAt": "TIMESTAMP_PLACEHOLDER",
+  "updatedAt": "TIMESTAMP_PLACEHOLDER",
+  "completedAt": null
+}
