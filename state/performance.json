@@ -1,0 +1,23 @@
+{
+  "performance": {
+    "timestamp": "2024-12-20T15:49:00Z",
+    "metrics": {
+      "taskSuccessRate": 100.0,
+      "avgResponseTime": 0.0,
+      "systemLoad": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "disk": 0.0
+      },
+      "errorRate": 0.0,
+      "throughput": 0.0
+    },
+    "trends": {
+      "responseTimeTrend": "stable",
+      "errorRateTrend": "stable",
+      "throughputTrend": "stable"
+    },
+    "alerts": [],
+    "recommendations": []
+  }
+}

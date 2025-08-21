@@ -1,0 +1,45 @@
+{
+  "healthCheck": {
+    "timestamp": "2024-12-20T15:49:00Z",
+    "overallStatus": "HEALTHY",
+    "components": {
+      "fileSystem": {
+        "status": "HEALTHY",
+        "lastCheck": "2024-12-20T15:49:00Z",
+        "details": "所有关键文件可访问"
+      },
+      "configuration": {
+        "status": "HEALTHY",
+        "lastCheck": "2024-12-20T15:49:00Z",
+        "details": "配置文件格式正确"
+      },
+      "dependencies": {
+        "status": "HEALTHY",
+        "lastCheck": "2024-12-20T15:49:00Z",
+        "details": "所有依赖项可用"
+      },
+      "qualityAssurance": {
+        "status": "HEALTHY",
+        "lastCheck": "2024-12-20T15:49:00Z",
+        "details": "质量保证系统运行正常"
+      }
+    },
+    "checks": {
+      "diskSpace": {
+        "status": "OK",
+        "value": "充足",
+        "threshold": "85%"
+      },
+      "filePermissions": {
+        "status": "OK",
+        "value": "正常",
+        "threshold": "可读写"
+      },
+      "configIntegrity": {
+        "status": "OK",
+        "value": "完整",
+        "threshold": "无错误"
+      }
+    }
+  }
+}
