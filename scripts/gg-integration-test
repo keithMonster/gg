@@ -1,0 +1,363 @@
+#!/bin/bash
+
+# gg智能体系统集成测试脚本
+# 测试所有子系统的协同工作能力
+
+set -e
+
+# 颜色定义
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# 日志函数
+log_info() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
+
+log_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+log_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+log_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+# 获取脚本目录
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+# 切换到项目根目录
+cd "$PROJECT_ROOT"
+
+# 测试结果统计
+TOTAL_TESTS=0
+PASSED_TESTS=0
+FAILED_TESTS=0
+TEST_RESULTS=()
+
+# 记录测试结果
+record_test() {
+    local test_name="$1"
+    local result="$2"
+    local details="$3"
+    
+    TOTAL_TESTS=$((TOTAL_TESTS + 1))
+    
+    if [ "$result" = "PASS" ]; then
+        PASSED_TESTS=$((PASSED_TESTS + 1))
+        log_success "✓ $test_name"
+    else
+        FAILED_TESTS=$((FAILED_TESTS + 1))
+        log_error "✗ $test_name: $details"
+    fi
+    
+    TEST_RESULTS+=("$test_name: $result")
+}
+
+# 检查系统状态
+check_system_status() {
+    log_info "检查各子系统状态..."
+    
+    # 检查技能发现系统
+    if ./scripts/gg-skill-discovery status > /dev/null 2>&1; then
+        record_test "技能发现系统状态" "PASS"
+    else
+        record_test "技能发现系统状态" "FAIL" "系统状态异常"
+    fi
+    
+    # 检查性能监控系统
+    if ./scripts/gg-performance status > /dev/null 2>&1; then
+        record_test "性能监控系统状态" "PASS"
+    else
+        record_test "性能监控系统状态" "FAIL" "系统状态异常"
+    fi
+    
+    # 检查UX优化系统
+    if ./scripts/gg-ux status > /dev/null 2>&1; then
+        record_test "UX优化系统状态" "PASS"
+    else
+        record_test "UX优化系统状态" "FAIL" "系统状态异常"
+    fi
+    
+    # 检查安全管理系统
+    if ./scripts/gg-security status > /dev/null 2>&1; then
+        record_test "安全管理系统状态" "PASS"
+    else
+        record_test "安全管理系统状态" "FAIL" "系统状态异常"
+    fi
+    
+    # 检查知识图谱系统
+    if ./scripts/gg-knowledge status > /dev/null 2>&1; then
+        record_test "知识图谱系统状态" "PASS"
+    else
+        record_test "知识图谱系统状态" "FAIL" "系统状态异常"
+    fi
+}
+
+# 测试系统集成
+test_system_integration() {
+    log_info "测试系统集成功能..."
+    
+    # 创建测试文件
+    local test_file="outputs/integration_test_$(date +%Y%m%d_%H%M%S).py"
+    cat > "$test_file" << 'EOF'
+#!/usr/bin/env python3
+# 集成测试示例代码
+
+import json
+import time
+from datetime import datetime
+
+def test_function():
+    """测试函数"""
+    data = {
+        "timestamp": datetime.now().isoformat(),
+        "test_id": "integration_test_001",
+        "status": "running"
+    }
+    
+    # 模拟一些处理
+    time.sleep(0.1)
+    
+    result = json.dumps(data, indent=2)
+    print(f"Test result: {result}")
+    return result
+
+if __name__ == "__main__":
+    test_function()
+EOF
+    
+    # 测试技能发现系统能否识别新代码
+    if ./scripts/gg-skill-discovery analyze "$test_file" > /dev/null 2>&1; then
+        record_test "技能发现代码分析" "PASS"
+    else
+        record_test "技能发现代码分析" "FAIL" "无法分析代码文件"
+    fi
+    
+    # 测试性能监控
+    if ./scripts/gg-performance monitor "python3 $test_file" > /dev/null 2>&1; then
+        record_test "性能监控集成" "PASS"
+    else
+        record_test "性能监控集成" "FAIL" "无法监控执行"
+    fi
+    
+    # 测试安全验证
+    if ./scripts/gg-security validate user read "$test_file" > /dev/null 2>&1; then
+        record_test "安全验证集成" "PASS"
+    else
+        record_test "安全验证集成" "FAIL" "安全验证失败"
+    fi
+    
+    # 清理测试文件
+    rm -f "$test_file"
+}
+
+# 测试数据流
+test_data_flow() {
+    log_info "测试系统间数据流..."
+    
+    # 检查日志目录
+    if [ -d "logs" ] && [ "$(ls -A logs 2>/dev/null)" ]; then
+        record_test "日志数据流" "PASS"
+    else
+        record_test "日志数据流" "FAIL" "日志目录为空或不存在"
+    fi
+    
+    # 检查配置文件同步
+    local config_files=("config/performance_config.json" "config/ux_config.json" "config/security_config.json" "config/knowledge_config.json")
+    local config_ok=true
+    
+    for config_file in "${config_files[@]}"; do
+        if [ ! -f "$config_file" ]; then
+            config_ok=false
+            break
+        fi
+    done
+    
+    if [ "$config_ok" = true ]; then
+        record_test "配置文件同步" "PASS"
+    else
+        record_test "配置文件同步" "FAIL" "配置文件缺失"
+    fi
+    
+    # 检查数据目录结构
+    local data_dirs=("data/knowledge" "skills" "state" "quality")
+    local data_ok=true
+    
+    for data_dir in "${data_dirs[@]}"; do
+        if [ ! -d "$data_dir" ]; then
+            data_ok=false
+            break
+        fi
+    done
+    
+    if [ "$data_ok" = true ]; then
+        record_test "数据目录结构" "PASS"
+    else
+        record_test "数据目录结构" "FAIL" "数据目录缺失"
+    fi
+}
+
+# 测试API兼容性
+test_api_compatibility() {
+    log_info "测试API兼容性..."
+    
+    # 测试Python模块语法检查
+    local python_modules=("scripts/skill_discovery_engine.py" "scripts/performance_monitor.py" "scripts/ux_optimizer.py" "scripts/security_manager.py" "scripts/knowledge_graph.py")
+    local import_ok=true
+    
+    for module in "${python_modules[@]}"; do
+        if ! python3 -m py_compile "$module" > /dev/null 2>&1; then
+            import_ok=false
+            break
+        fi
+    done
+    
+    if [ "$import_ok" = true ]; then
+        record_test "Python模块兼容性" "PASS"
+    else
+        record_test "Python模块兼容性" "FAIL" "模块导入失败"
+    fi
+    
+    # 测试Shell脚本执行权限
+    local shell_scripts=("scripts/gg-skill-discovery" "scripts/gg-performance" "scripts/gg-ux" "scripts/gg-security" "scripts/gg-knowledge")
+    local exec_ok=true
+    
+    for script in "${shell_scripts[@]}"; do
+        if [ ! -x "$script" ]; then
+            exec_ok=false
+            break
+        fi
+    done
+    
+    if [ "$exec_ok" = true ]; then
+        record_test "Shell脚本执行权限" "PASS"
+    else
+        record_test "Shell脚本执行权限" "FAIL" "脚本缺少执行权限"
+    fi
+}
+
+# 生成集成测试报告
+generate_report() {
+    local report_file="outputs/integration_test_report_$(date +%Y%m%d_%H%M%S).md"
+    
+    cat > "$report_file" << EOF
+# gg智能体系统集成测试报告
+
+**测试时间**: $(date '+%Y-%m-%d %H:%M:%S')
+**测试版本**: $(git rev-parse --short HEAD 2>/dev/null || echo "未知")
+
+## 测试概览
+
+- **总测试数**: $TOTAL_TESTS
+- **通过测试**: $PASSED_TESTS
+- **失败测试**: $FAILED_TESTS
+- **成功率**: $(( PASSED_TESTS * 100 / TOTAL_TESTS ))%
+
+## 测试结果详情
+
+EOF
+    
+    for result in "${TEST_RESULTS[@]}"; do
+        echo "- $result" >> "$report_file"
+    done
+    
+    cat >> "$report_file" << EOF
+
+## 系统状态快照
+
+### 技能发现系统
+\`\`\`
+$(./scripts/gg-skill-discovery status 2>/dev/null || echo "系统异常")
+\`\`\`
+
+### 性能监控系统
+\`\`\`
+$(./scripts/gg-performance status 2>/dev/null || echo "系统异常")
+\`\`\`
+
+### UX优化系统
+\`\`\`
+$(./scripts/gg-ux status 2>/dev/null || echo "系统异常")
+\`\`\`
+
+### 安全管理系统
+\`\`\`
+$(./scripts/gg-security status 2>/dev/null || echo "系统异常")
+\`\`\`
+
+### 知识图谱系统
+\`\`\`
+$(./scripts/gg-knowledge status 2>/dev/null || echo "系统异常")
+\`\`\`
+
+## 建议
+
+EOF
+    
+    if [ $FAILED_TESTS -eq 0 ]; then
+        echo "✅ 所有测试通过，系统集成状态良好。" >> "$report_file"
+    else
+        echo "⚠️ 发现 $FAILED_TESTS 个问题，建议检查失败的测试项目。" >> "$report_file"
+    fi
+    
+    log_success "集成测试报告已生成: $report_file"
+}
+
+# 主函数
+main() {
+    case "${1:-test}" in
+        "test")
+            log_info "开始gg智能体系统集成测试..."
+            echo "==========================================="
+            
+            check_system_status
+            test_system_integration
+            test_data_flow
+            test_api_compatibility
+            
+            echo "==========================================="
+            log_info "集成测试完成"
+            log_info "总测试: $TOTAL_TESTS, 通过: $PASSED_TESTS, 失败: $FAILED_TESTS"
+            
+            generate_report
+            
+            if [ $FAILED_TESTS -eq 0 ]; then
+                log_success "🎉 所有集成测试通过！"
+                exit 0
+            else
+                log_error "❌ 集成测试发现问题，请检查报告"
+                exit 1
+            fi
+            ;;
+        "status")
+            log_info "gg智能体系统集成状态:"
+            check_system_status
+            ;;
+        "help")
+            echo "gg智能体系统集成测试工具"
+            echo ""
+            echo "用法: $0 <command>"
+            echo ""
+            echo "命令:"
+            echo "  test     运行完整集成测试"
+            echo "  status   检查系统集成状态"
+            echo "  help     显示此帮助信息"
+            ;;
+        *)
+            log_error "未知命令: $1"
+            echo "使用 '$0 help' 查看可用命令"
+            exit 1
+            ;;
+    esac
+}
+
+# 执行主函数
+main "$@"

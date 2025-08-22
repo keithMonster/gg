@@ -1,0 +1,52 @@
+{
+  "response_time_targets": {
+    "excellent": 1000,
+    "good": 3000,
+    "acceptable": 5000
+  },
+  "satisfaction_thresholds": {
+    "high": 4.0,
+    "medium": 3.0,
+    "low": 2.0
+  },
+  "interaction_patterns": {
+    "max_session_length_minutes": 60,
+    "ideal_interactions_per_session": 10,
+    "max_error_rate": 0.1
+  },
+  "personalization": {
+    "enable_adaptive_responses": true,
+    "track_user_preferences": true,
+    "customize_interaction_style": true
+  },
+  "analysis_intervals": {
+    "real_time_minutes": 5,
+    "daily_analysis": true,
+    "weekly_report": true
+  },
+  "ui_preferences": {
+    "default_language": "zh-CN",
+    "response_style": "friendly",
+    "detail_level": "medium",
+    "show_progress_indicators": true,
+    "enable_shortcuts": true
+  },
+  "feedback_collection": {
+    "auto_prompt_after_interactions": 5,
+    "satisfaction_survey_frequency_days": 7,
+    "enable_implicit_feedback": true,
+    "feedback_reminder_threshold": 3
+  },
+  "optimization_rules": {
+    "auto_adjust_thresholds": true,
+    "learning_rate": 0.1,
+    "min_data_points_for_analysis": 10,
+    "confidence_interval": 0.95
+  },
+  "alerts": {
+    "response_time_degradation_threshold": 1.5,
+    "satisfaction_drop_threshold": 0.5,
+    "error_rate_spike_threshold": 2.0,
+    "enable_real_time_alerts": true
+  }
+}

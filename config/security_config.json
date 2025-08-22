@@ -1,0 +1,54 @@
+{
+  "max_failed_attempts": 5,
+  "lockout_duration": 300,
+  "session_timeout": 3600,
+  "password_min_length": 8,
+  "require_2fa": false,
+  "audit_retention_days": 90,
+  "risk_thresholds": {
+    "low": 0.3,
+    "medium": 0.6,
+    "high": 0.8
+  },
+  "allowed_file_extensions": [
+    ".py", ".json", ".md", ".txt", ".yaml", ".yml", 
+    ".js", ".ts", ".html", ".css", ".svg", ".log"
+  ],
+  "restricted_paths": [
+    "/etc", "/usr/bin", "/system", "/root", "/var/log",
+    "/Library/System", "/System/Library"
+  ],
+  "max_file_size": 10485760,
+  "audit_log_path": "logs/security_audit.log",
+  "permissions_path": "config/permissions.json",
+  "policies_path": "config/security_policies.json",
+  "encryption": {
+    "algorithm": "AES-256-GCM",
+    "key_rotation_days": 30
+  },
+  "monitoring": {
+    "real_time_alerts": true,
+    "alert_thresholds": {
+      "failed_logins_per_hour": 10,
+      "permission_denials_per_hour": 50,
+      "high_risk_events_per_hour": 5
+    },
+    "notification_channels": [
+      "log", "console"
+    ]
+  },
+  "backup": {
+    "enabled": true,
+    "interval_hours": 24,
+    "retention_days": 30,
+    "backup_path": "backups/security"
+  },
+  "compliance": {
+    "gdpr_enabled": true,
+    "data_retention_policy": {
+      "user_data_days": 365,
+      "audit_logs_days": 2555,
+      "session_data_days": 30
+    }
+  }
+}

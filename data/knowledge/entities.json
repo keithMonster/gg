@@ -1,0 +1,167 @@
+[
+  {
+    "id": "ede42dd66ddf3e0c",
+    "name": "example_function",
+    "type": "function",
+    "properties": {
+      "pattern": "function_def",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.220476",
+    "updated_at": "2025-08-22T11:30:40.220484",
+    "source": "code_execution"
+  },
+  {
+    "id": "eccb1482ab1c6862",
+    "name": "json\n    from datetime import datetime\n    \n    data",
+    "type": "library",
+    "properties": {
+      "pattern": "import_stmt",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.221200",
+    "updated_at": "2025-08-22T11:30:40.221202",
+    "source": "code_execution"
+  },
+  {
+    "id": "1d6ebf8509cf8c4e",
+    "name": "data",
+    "type": "variable",
+    "properties": {
+      "pattern": "variable_assign",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.221629",
+    "updated_at": "2025-08-22T11:30:40.221631",
+    "source": "code_execution"
+  },
+  {
+    "id": "f73bbbad91c623c4",
+    "name": "result",
+    "type": "variable",
+    "properties": {
+      "pattern": "variable_assign",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.222208",
+    "updated_at": "2025-08-22T11:30:40.222211",
+    "source": "code_execution"
+  },
+  {
+    "id": "639d47c0b6383e90",
+    "name": "json",
+    "type": "method",
+    "properties": {
+      "pattern": "method_call",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.222792",
+    "updated_at": "2025-08-22T11:30:40.222795",
+    "source": "code_execution"
+  },
+  {
+    "id": "730f5341b65a8eb3",
+    "name": "dumps",
+    "type": "method",
+    "properties": {
+      "pattern": "method_call",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.223283",
+    "updated_at": "2025-08-22T11:30:40.223284",
+    "source": "code_execution"
+  },
+  {
+    "id": "56181e468dd553c9",
+    "name": "key",
+    "type": "configuration",
+    "properties": {
+      "pattern": "config_key",
+      "source_code": true
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.224210",
+    "updated_at": "2025-08-22T11:30:40.224242",
+    "source": "code_execution"
+  },
+  {
+    "id": "76a9660cd7b2f037",
+    "name": "ValueError",
+    "type": "error",
+    "properties": {
+      "source_error": true
+    },
+    "confidence": 0.9,
+    "created_at": "2025-08-22T11:30:40.225148",
+    "updated_at": "2025-08-22T11:30:40.225150",
+    "source": "error_tracking"
+  },
+  {
+    "id": "ac974e12852269cc",
+    "name": "file.py",
+    "type": "file",
+    "properties": {
+      "source_error": true,
+      "full_path": "/path/to/file.py"
+    },
+    "confidence": 0.8,
+    "created_at": "2025-08-22T11:30:40.225695",
+    "updated_at": "2025-08-22T11:30:40.225697",
+    "source": "error_tracking"
+  },
+  {
+    "id": "3afc966e37adc03a",
+    "name": "Create",
+    "type": "concept",
+    "properties": {
+      "source_text": true
+    },
+    "confidence": 0.6,
+    "created_at": "2025-08-22T11:30:40.226316",
+    "updated_at": "2025-08-22T11:30:40.226317",
+    "source": "user_interaction"
+  },
+  {
+    "id": "cc67de9a981a1ecb",
+    "name": "Python",
+    "type": "concept",
+    "properties": {
+      "source_text": true
+    },
+    "confidence": 0.6,
+    "created_at": "2025-08-22T11:30:40.226798",
+    "updated_at": "2025-08-22T11:30:40.226799",
+    "source": "user_interaction"
+  },
+  {
+    "id": "14638576f6de8818",
+    "name": "JSON",
+    "type": "concept",
+    "properties": {
+      "source_text": true
+    },
+    "confidence": 0.6,
+    "created_at": "2025-08-22T11:30:40.227297",
+    "updated_at": "2025-08-22T11:30:40.227298",
+    "source": "user_interaction"
+  },
+  {
+    "id": "6a959f9557aecdd4",
+    "name": "code_generation",
+    "type": "user_action",
+    "properties": {
+      "timestamp": "2025-08-22T11:30:40.226229",
+      "success": true
+    },
+    "confidence": 0.9,
+    "created_at": "2025-08-22T11:30:40.227881",
+    "updated_at": "2025-08-22T11:30:40.227882",
+    "source": "user_interaction"
+  }
+]

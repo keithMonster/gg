@@ -1,0 +1,27 @@
+{
+  "report_period": {
+    "start": "2025-08-20T16:55:03.826521",
+    "end": "2025-08-21T16:55:03.826521",
+    "days": 1
+  },
+  "task_summary": {
+    "total_tasks": 0
+  },
+  "system_metrics": {},
+  "performance_trends": {
+    "task_frequency": "stable",
+    "performance_trend": "stable",
+    "resource_usage": "normal"
+  },
+  "recommendations": [
+    "系统性能良好，继续保持"
+  ],
+  "current_stats": {
+    "total_tasks": 0,
+    "successful_tasks": 0,
+    "failed_tasks": 0,
+    "avg_duration": 0.0,
+    "avg_cpu_usage": 0.0,
+    "avg_memory_usage": 0.0
+  }
+}

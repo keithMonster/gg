@@ -1,0 +1,46 @@
+{
+  "period": "Last 7 days",
+  "generated_at": "2025-08-22T10:38:28.241162",
+  "summary": {
+    "total_events": 15,
+    "high_risk_events": 0,
+    "failed_authentications": 0,
+    "permission_denials": 3
+  },
+  "top_users": [
+    {
+      "user_id": "system",
+      "total_events": 9,
+      "high_risk_events": 0
+    },
+    {
+      "user_id": "test_user",
+      "total_events": 5,
+      "high_risk_events": 0
+    },
+    {
+      "user_id": "user",
+      "total_events": 1,
+      "high_risk_events": 0
+    }
+  ],
+  "risk_analysis": {
+    "risk_distribution": {
+      "low": 9,
+      "medium": 6,
+      "high": 0
+    },
+    "event_types": {
+      "authentication_success": 1,
+      "permission_denied": 3,
+      "operation_validation": 5,
+      "context_start": 1,
+      "context_end": 1,
+      "input_validation": 4
+    },
+    "risk_score": 0.26
+  },
+  "recommendations": [
+    "安全状况良好，继续保持当前安全策略"
+  ]
+}

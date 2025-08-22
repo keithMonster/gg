@@ -1,0 +1,66 @@
+{
+  "rules": [
+    {
+      "id": "web_development_rule",
+      "name": "Web开发技能规则",
+      "condition": {
+        "keywords": ["网站", "前端", "后端", "API", "数据库"],
+        "task_type": "development"
+      },
+      "recommendations": [
+        {
+          "skill_category": "web_development",
+          "confidence": 0.9,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "id": "data_analysis_rule",
+      "name": "数据分析技能规则",
+      "condition": {
+        "keywords": ["数据", "分析", "统计", "图表", "报告"],
+        "task_type": "analysis"
+      },
+      "recommendations": [
+        {
+          "skill_category": "data_analysis",
+          "confidence": 0.85,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "id": "automation_rule",
+      "name": "自动化技能规则",
+      "condition": {
+        "keywords": ["自动化", "脚本", "批处理", "定时任务"],
+        "task_type": "automation"
+      },
+      "recommendations": [
+        {
+          "skill_category": "automation",
+          "confidence": 0.8,
+          "priority": 1
+        }
+      ]
+    }
+  ],
+  "combination_rules": [
+    {
+      "id": "full_stack_combination",
+      "name": "全栈开发组合",
+      "condition": {
+        "keywords": ["全栈", "完整项目", "端到端"],
+        "complexity": "high"
+      },
+      "skill_combination": [
+        "frontend_development",
+        "backend_development",
+        "database_management",
+        "deployment"
+      ],
+      "synergy_score": 0.9
+    }
+  ]
+}

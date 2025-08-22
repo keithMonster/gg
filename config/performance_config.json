@@ -1,0 +1,30 @@
+{
+  "monitoring_interval": 2.0,
+  "buffer_size": 1000,
+  "alert_thresholds": {
+    "cpu_usage": 75.0,
+    "memory_usage": 80.0,
+    "task_duration": 30000
+  },
+  "metrics_retention_days": 7,
+  "auto_cleanup": true,
+  "performance_targets": {
+    "max_task_duration_ms": 15000,
+    "target_success_rate": 0.95,
+    "max_cpu_usage": 70.0,
+    "max_memory_usage": 75.0
+  },
+  "notification_settings": {
+    "enable_alerts": true,
+    "alert_cooldown_minutes": 5,
+    "critical_threshold_multiplier": 1.5
+  },
+  "optimization_rules": {
+    "auto_optimize": false,
+    "optimization_triggers": {
+      "high_cpu_duration_minutes": 10,
+      "high_memory_duration_minutes": 15,
+      "consecutive_failures": 5
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "index_info": {
+    "version": "1.0.0",
+    "created_at": "2024-12-20T00:00:00Z",
+    "last_updated": "2025-08-21T08:24:36Z",
+    "total_skills": 4,
+    "index_status": "built"
+  },
+  "skills": [
+    {
+      "id": "data_analysis_reporting",
+      "name": "data_analysis_reporting",
+      "description": "数据分析与报告生成技能",
+      "category": "analysis",
+      "keywords": [
+        "报告",
+        "生成",
+        "分析",
+        "数据"
+      ],
+      "tags": [
+        "analysis"
+      ],
+      "file_path": "prompts/data_analysis_reporting.md",
+      "created_at": "2025-08-21T08:24:36Z",
+      "usage_count": 0,
+      "last_used": null
+    },
+    {
+      "id": "frontend_web_development",
+      "name": "frontend_web_development",
+      "description": "前端网站开发技能",
+      "category": "development",
+      "keywords": [
+        "React",
+        "前端",
+        "组件",
+        "开发"
+      ],
+      "tags": [
+        "development"
+      ],
+      "file_path": "prompts/frontend_web_development.md",
+      "created_at": "2025-08-21T08:24:36Z",
+      "usage_count": 0,
+      "last_used": null
+    },
+    {
+      "id": "react_component_development",
+      "name": "react_component_development",
+      "description": "React组件开发技能",
+      "category": "development",
+      "keywords": [
+        "React",
+        "前端",
+        "组件",
+        "开发"
+      ],
+      "tags": [
+        "development"
+      ],
+      "file_path": "prompts/react_component_development.md",
+      "created_at": "2025-08-21T08:24:36Z",
+      "usage_count": 0,
+      "last_used": null
+    },
+    {
+      "id": "system_prompt",
+      "name": "system_prompt",
+      "description": "我是 gg，一个持续进化的AI智能体。",
+      "category": "development",
+      "keywords": [
+        "开发",
+        "工具",
+        "系统"
+      ],
+      "tags": [
+        "development"
+      ],
+      "file_path": "prompts/system_prompt.md",
+      "created_at": "2025-08-21T08:24:36Z",
+      "usage_count": 0,
+      "last_used": null
+    }
+  ],
+  "categories": {
+    "development": {
+      "name": "开发技能",
+      "description": "软件开发相关技能",
+      "subcategories": [
+        "frontend",
+        "backend",
+        "mobile",
+        "desktop"
+      ]
+    },
+    "analysis": {
+      "name": "分析技能",
+      "description": "数据分析和处理技能",
+      "subcategories": [
+        "data_analysis",
+        "reporting",
+        "visualization"
+      ]
+    },
+    "automation": {
+      "name": "自动化技能",
+      "description": "自动化和脚本技能",
+      "subcategories": [
+        "scripting",
+        "workflow",
+        "deployment"
+      ]
+    },
+    "management": {
+      "name": "管理技能",
+      "description": "项目和系统管理技能",
+      "subcategories": [
+        "project_management",
+        "system_admin",
+        "monitoring"
+      ]
+    }
+  },
+  "keyword_index": {},
+  "tag_index": {},
+  "dependency_graph": {}
+}

@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# 技能发现系统CLI入口
+# 使用方法: gg-skill-discovery <command> [args...]
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/skill_discovery_functions.sh"
+
+# 主函数
+run_skill_discovery() {
+    if [ $# -eq 0 ]; then
+        show_help
+        exit 0
+    fi
+
+    case "$1" in
+        "recommend")
+            if [ -z "$2" ]; then
+                echo "错误: 请提供任务描述"
+                echo "用法: $0 recommend <task_description>"
+                exit 1
+            fi
+            get_recommendation "$2"
+            ;;
+        "feedback")
+            if [ $# -lt 3 ]; then
+                echo "错误: 参数不足"
+                echo "用法: $0 feedback <rec_id> <result> [rating] [comments]"
+                exit 1
+            fi
+            record_feedback "$2" "$3" "$4" "$5"
+            ;;
+        "build-index")
+            build_skill_index
+            ;;
+        "stats")
+            show_statistics
+            ;;
+        "status")
+            check_system_status
+            ;;
+        "analyze")
+            if [ -z "$2" ]; then
+                echo "错误: 请提供文件路径"
+                echo "用法: $0 analyze <file_path>"
+                exit 1
+            fi
+            analyze_code_file "$2"
+            ;;
+        "help")
+            show_help
+            ;;
+        *)
+            echo "[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR] 未知命令: $1"
+            echo "使用 'help' 查看可用命令"
+            exit 1
+            ;;
+    esac
+}
+
+run_skill_discovery "$@"

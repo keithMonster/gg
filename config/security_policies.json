@@ -1,0 +1,204 @@
+[
+  {
+    "name": "file_extension_validation",
+    "description": "验证文件扩展名是否在允许列表中",
+    "enabled": true,
+    "priority": 1,
+    "rules": [
+      {
+        "condition": "file_operation",
+        "action": "check_extension",
+        "parameters": {
+          "allowed_extensions": [".py", ".json", ".md", ".txt", ".yaml", ".yml", ".js", ".ts", ".html", ".css", ".svg", ".log"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "path_access_control",
+    "description": "控制对敏感路径的访问",
+    "enabled": true,
+    "priority": 2,
+    "rules": [
+      {
+        "condition": "path_access",
+        "action": "deny_restricted_paths",
+        "parameters": {
+          "restricted_paths": ["/etc", "/usr/bin", "/system", "/root", "/var/log", "/Library/System", "/System/Library"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "operation_rate_limiting",
+    "description": "限制操作频率以防止滥用",
+    "enabled": true,
+    "priority": 3,
+    "rules": [
+      {
+        "condition": "operation_frequency",
+        "action": "rate_limit",
+        "parameters": {
+          "max_operations_per_minute": 60,
+          "max_file_operations_per_minute": 30,
+          "max_network_requests_per_minute": 20
+        }
+      }
+    ]
+  },
+  {
+    "name": "file_size_validation",
+    "description": "验证文件大小限制",
+    "enabled": true,
+    "priority": 4,
+    "rules": [
+      {
+        "condition": "file_size_check",
+        "action": "validate_size",
+        "parameters": {
+          "max_file_size": 10485760,
+          "max_total_size_per_session": 104857600
+        }
+      }
+    ]
+  },
+  {
+    "name": "content_security_scan",
+    "description": "扫描文件内容中的潜在安全威胁",
+    "enabled": true,
+    "priority": 5,
+    "rules": [
+      {
+        "condition": "content_analysis",
+        "action": "scan_malicious_patterns",
+        "parameters": {
+          "blocked_patterns": [
+            "rm -rf",
+            "sudo rm",
+            "format c:",
+            "del /f /s /q",
+            "eval\\(",
+            "exec\\(",
+            "__import__",
+            "subprocess.call",
+            "os.system"
+          ],
+          "suspicious_patterns": [
+            "password",
+            "secret",
+            "api_key",
+            "private_key",
+            "token"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "network_security",
+    "description": "网络访问安全控制",
+    "enabled": true,
+    "priority": 6,
+    "rules": [
+      {
+        "condition": "network_request",
+        "action": "validate_url",
+        "parameters": {
+          "allowed_domains": [
+            "github.com",
+            "api.github.com",
+            "pypi.org",
+            "npmjs.com",
+            "stackoverflow.com",
+            "docs.python.org",
+            "developer.mozilla.org"
+          ],
+          "blocked_domains": [
+            "malware-site.com",
+            "phishing-site.net"
+          ],
+          "require_https": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "time_based_access",
+    "description": "基于时间的访问控制",
+    "enabled": false,
+    "priority": 7,
+    "rules": [
+      {
+        "condition": "time_window",
+        "action": "enforce_business_hours",
+        "parameters": {
+          "allowed_hours": {
+            "start": "09:00",
+            "end": "18:00"
+          },
+          "allowed_days": [1, 2, 3, 4, 5],
+          "timezone": "Asia/Shanghai"
+        }
+      }
+    ]
+  },
+  {
+    "name": "data_loss_prevention",
+    "description": "防止敏感数据泄露",
+    "enabled": true,
+    "priority": 8,
+    "rules": [
+      {
+        "condition": "data_export",
+        "action": "scan_sensitive_data",
+        "parameters": {
+          "sensitive_patterns": [
+            "\\b\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}\\b",
+            "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b",
+            "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+            "BEGIN (RSA )?PRIVATE KEY",
+            "sk-[a-zA-Z0-9]{48}"
+          ],
+          "max_sensitive_items": 5
+        }
+      }
+    ]
+  },
+  {
+    "name": "session_security",
+    "description": "会话安全管理",
+    "enabled": true,
+    "priority": 9,
+    "rules": [
+      {
+        "condition": "session_validation",
+        "action": "enforce_session_limits",
+        "parameters": {
+          "max_concurrent_sessions": 3,
+          "session_timeout_minutes": 60,
+          "idle_timeout_minutes": 30,
+          "require_reauth_for_sensitive_ops": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "audit_compliance",
+    "description": "审计和合规性要求",
+    "enabled": true,
+    "priority": 10,
+    "rules": [
+      {
+        "condition": "audit_requirement",
+        "action": "ensure_audit_trail",
+        "parameters": {
+          "log_all_operations": true,
+          "include_user_context": true,
+          "include_system_context": true,
+          "retention_days": 90,
+          "encrypt_audit_logs": false
+        }
+      }
+    ]
+  }
+]

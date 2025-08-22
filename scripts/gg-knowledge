@@ -1,0 +1,452 @@
+#!/bin/bash
+
+# 知识图谱管理统一接口
+# 提供知识图谱的构建、查询、推理和管理功能
+
+set -e
+
+# 配置
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+LOG_FILE="$PROJECT_ROOT/logs/knowledge_manager.log"
+KNOWLEDGE_SCRIPT="$SCRIPT_DIR/knowledge_graph.py"
+INTEGRATION_SCRIPT="$SCRIPT_DIR/knowledge_integration.py"
+
+# 颜色定义
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# 日志函数
+log() {
+    local level=$1
+    shift
+    local message="$*"
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$level] $message" | tee -a "$LOG_FILE"
+}
+
+log_info() {
+    log "INFO" "$*"
+}
+
+log_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $*" | tee -a "$LOG_FILE"
+}
+
+log_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $*" | tee -a "$LOG_FILE"
+}
+
+log_error() {
+    echo -e "${RED}[ERROR]${NC} $*" | tee -a "$LOG_FILE"
+}
+
+# 检查依赖
+check_dependencies() {
+    log_info "检查依赖..."
+    
+    # 检查Python
+    if ! command -v python3 &> /dev/null; then
+        log_error "Python3 未安装"
+        exit 1
+    fi
+    
+    # 检查必要的Python模块
+    python3 -c "import json, os, sys, logging, re, hashlib" 2>/dev/null || {
+        log_error "缺少必要的Python模块"
+        exit 1
+    }
+    
+    # 检查脚本文件
+    if [[ ! -f "$KNOWLEDGE_SCRIPT" ]]; then
+        log_error "知识图谱脚本不存在: $KNOWLEDGE_SCRIPT"
+        exit 1
+    fi
+    
+    if [[ ! -f "$INTEGRATION_SCRIPT" ]]; then
+        log_error "知识集成脚本不存在: $INTEGRATION_SCRIPT"
+        exit 1
+    fi
+    
+    log_success "依赖检查通过"
+}
+
+# 初始化目录结构
+init_directories() {
+    log_info "初始化目录结构..."
+    
+    # 创建必要的目录
+    mkdir -p "$PROJECT_ROOT/data/knowledge"
+    mkdir -p "$PROJECT_ROOT/config"
+    mkdir -p "$PROJECT_ROOT/outputs/knowledge"
+    mkdir -p "$PROJECT_ROOT/logs"
+    mkdir -p "$PROJECT_ROOT/backups/knowledge"
+    
+    # 确保日志文件存在
+    touch "$LOG_FILE"
+    
+    log_success "目录结构初始化完成"
+}
+
+# 初始化知识图谱系统
+init_knowledge_system() {
+    log_info "初始化知识图谱系统..."
+    
+    check_dependencies
+    init_directories
+    
+    # 检查配置文件
+    local config_file="$PROJECT_ROOT/config/knowledge_config.json"
+    if [[ ! -f "$config_file" ]]; then
+        log_warning "配置文件不存在，将使用默认配置"
+    fi
+    
+    log_success "知识图谱系统初始化完成"
+}
+
+# 查看系统状态
+show_status() {
+    log_info "知识图谱系统状态:"
+    
+    # 检查配置文件
+    local config_file="$PROJECT_ROOT/config/knowledge_config.json"
+    if [[ -f "$config_file" ]]; then
+        echo "配置文件: ✓ 存在"
+    else
+        echo "配置文件: ✗ 不存在"
+    fi
+    
+    # 检查数据目录
+    local data_dir="$PROJECT_ROOT/data/knowledge"
+    if [[ -d "$data_dir" ]]; then
+        echo "数据目录: ✓ 存在"
+        local entity_count=$(find "$data_dir" -name "entities.json" -exec wc -l {} \; 2>/dev/null | awk '{sum+=$1} END {print sum}' || echo "0")
+        echo "数据文件: $(find "$data_dir" -name "*.json" | wc -l) 个"
+    else
+        echo "数据目录: ✗ 不存在"
+    fi
+    
+    # 检查脚本状态
+    if [[ -x "$KNOWLEDGE_SCRIPT" ]]; then
+        echo "知识图谱管理器: ✓ 正常"
+    else
+        echo "知识图谱管理器: ✗ 异常"
+    fi
+    
+    if [[ -x "$INTEGRATION_SCRIPT" ]]; then
+        echo "知识集成接口: ✓ 正常"
+    else
+        echo "知识集成接口: ✗ 异常"
+    fi
+}
+
+# 显示统计信息
+show_statistics() {
+    log_info "获取知识图谱统计信息..."
+    
+    cd "$PROJECT_ROOT"
+    python3 "$KNOWLEDGE_SCRIPT" stats
+}
+
+# 查询实体
+query_entities() {
+    local entity_type="$1"
+    local pattern="$2"
+    local confidence="$3"
+    
+    log_info "查询实体..."
+    
+    cd "$PROJECT_ROOT"
+    local cmd="python3 '$KNOWLEDGE_SCRIPT' entities"
+    
+    if [[ -n "$entity_type" ]]; then
+        cmd="$cmd --type '$entity_type'"
+    fi
+    
+    if [[ -n "$pattern" ]]; then
+        cmd="$cmd --pattern '$pattern'"
+    fi
+    
+    if [[ -n "$confidence" ]]; then
+        cmd="$cmd --confidence $confidence"
+    fi
+    
+    eval "$cmd"
+}
+
+# 查询关系
+query_relations() {
+    local source="$1"
+    local target="$2"
+    local relation_type="$3"
+    local confidence="$4"
+    
+    log_info "查询关系..."
+    
+    cd "$PROJECT_ROOT"
+    local cmd="python3 '$KNOWLEDGE_SCRIPT' relations"
+    
+    if [[ -n "$source" ]]; then
+        cmd="$cmd --source '$source'"
+    fi
+    
+    if [[ -n "$target" ]]; then
+        cmd="$cmd --target '$target'"
+    fi
+    
+    if [[ -n "$relation_type" ]]; then
+        cmd="$cmd --type '$relation_type'"
+    fi
+    
+    if [[ -n "$confidence" ]]; then
+        cmd="$cmd --confidence $confidence"
+    fi
+    
+    eval "$cmd"
+}
+
+# 查找路径
+find_path() {
+    local source="$1"
+    local target="$2"
+    local depth="$3"
+    
+    if [[ -z "$source" || -z "$target" ]]; then
+        log_error "路径查询需要指定源实体和目标实体"
+        echo "用法: $0 path <source_id> <target_id> [max_depth]"
+        exit 1
+    fi
+    
+    log_info "查找路径: $source -> $target"
+    
+    cd "$PROJECT_ROOT"
+    local cmd="python3 '$KNOWLEDGE_SCRIPT' path --source '$source' --target '$target'"
+    
+    if [[ -n "$depth" ]]; then
+        cmd="$cmd --depth $depth"
+    fi
+    
+    eval "$cmd"
+}
+
+# 分析模式
+analyze_patterns() {
+    log_info "分析知识模式..."
+    
+    cd "$PROJECT_ROOT"
+    python3 "$KNOWLEDGE_SCRIPT" analyze
+}
+
+# 运行集成测试
+run_integration_test() {
+    log_info "运行知识图谱集成测试..."
+    
+    cd "$PROJECT_ROOT"
+    python3 "$INTEGRATION_SCRIPT"
+}
+
+# 导出知识图谱
+export_graph() {
+    local format="$1"
+    
+    if [[ -z "$format" ]]; then
+        format="json"
+    fi
+    
+    log_info "导出知识图谱 (格式: $format)..."
+    
+    cd "$PROJECT_ROOT"
+    python3 "$KNOWLEDGE_SCRIPT" export --format "$format"
+}
+
+# 清理数据
+cleanup_data() {
+    local days="$1"
+    
+    if [[ -z "$days" ]]; then
+        days="365"
+    fi
+    
+    log_info "清理 $days 天前的数据..."
+    
+    cd "$PROJECT_ROOT"
+    python3 "$KNOWLEDGE_SCRIPT" cleanup --days "$days"
+}
+
+# 备份数据
+backup_data() {
+    log_info "备份知识图谱数据..."
+    
+    local timestamp=$(date '+%Y%m%d_%H%M%S')
+    local backup_dir="$PROJECT_ROOT/backups/knowledge/backup_$timestamp"
+    
+    mkdir -p "$backup_dir"
+    
+    # 备份数据文件
+    if [[ -d "$PROJECT_ROOT/data/knowledge" ]]; then
+        cp -r "$PROJECT_ROOT/data/knowledge" "$backup_dir/"
+    fi
+    
+    # 备份配置文件
+    if [[ -f "$PROJECT_ROOT/config/knowledge_config.json" ]]; then
+        cp "$PROJECT_ROOT/config/knowledge_config.json" "$backup_dir/"
+    fi
+    
+    # 创建备份信息文件
+    cat > "$backup_dir/backup_info.json" << EOF
+{
+  "timestamp": "$(date -Iseconds)",
+  "version": "1.0",
+  "backup_type": "manual",
+  "files_backed_up": [
+    "data/knowledge",
+    "config/knowledge_config.json"
+  ]
+}
+EOF
+    
+    log_success "数据已备份到: $backup_dir"
+}
+
+# 恢复数据
+restore_data() {
+    local backup_path="$1"
+    
+    if [[ -z "$backup_path" ]]; then
+        log_error "请指定备份路径"
+        echo "用法: $0 restore <backup_directory>"
+        exit 1
+    fi
+    
+    if [[ ! -d "$backup_path" ]]; then
+        log_error "备份目录不存在: $backup_path"
+        exit 1
+    fi
+    
+    log_info "从备份恢复数据: $backup_path"
+    
+    # 恢复数据文件
+    if [[ -d "$backup_path/knowledge" ]]; then
+        rm -rf "$PROJECT_ROOT/data/knowledge"
+        cp -r "$backup_path/knowledge" "$PROJECT_ROOT/data/"
+        log_success "数据文件已恢复"
+    fi
+    
+    # 恢复配置文件
+    if [[ -f "$backup_path/knowledge_config.json" ]]; then
+        cp "$backup_path/knowledge_config.json" "$PROJECT_ROOT/config/"
+        log_success "配置文件已恢复"
+    fi
+    
+    log_success "数据恢复完成"
+}
+
+# 显示配置
+show_config() {
+    local config_file="$PROJECT_ROOT/config/knowledge_config.json"
+    
+    if [[ -f "$config_file" ]]; then
+        log_info "知识图谱配置:"
+        cat "$config_file" | python3 -m json.tool
+    else
+        log_warning "配置文件不存在: $config_file"
+    fi
+}
+
+# 显示帮助
+show_help() {
+    cat << EOF
+知识图谱管理系统 - 统一管理接口
+
+用法: $0 <command> [options]
+
+命令:
+  init                    初始化知识图谱系统
+  status                  显示系统状态
+  stats                   显示统计信息
+  entities [type] [pattern] [confidence]  查询实体
+  relations [source] [target] [type] [confidence]  查询关系
+  path <source> <target> [depth]  查找实体间路径
+  analyze                 分析知识模式
+  test                    运行集成测试
+  export [format]         导出知识图谱 (json|graphml)
+  cleanup [days]          清理旧数据
+  backup                  备份数据
+  restore <path>          恢复数据
+  config                  显示配置
+  help                    显示此帮助信息
+
+示例:
+  $0 init                 # 初始化系统
+  $0 stats                # 查看统计信息
+  $0 entities function    # 查询所有函数实体
+  $0 relations --type uses  # 查询所有使用关系
+  $0 path entity1 entity2   # 查找实体间路径
+  $0 analyze              # 分析知识模式
+  $0 export json          # 导出为JSON格式
+  $0 cleanup 30           # 清理30天前的数据
+
+EOF
+}
+
+# 主函数
+main() {
+    # 确保日志目录存在
+    mkdir -p "$(dirname "$LOG_FILE")"
+    
+    case "${1:-help}" in
+        "init")
+            init_knowledge_system
+            ;;
+        "status")
+            show_status
+            ;;
+        "stats")
+            show_statistics
+            ;;
+        "entities")
+            query_entities "$2" "$3" "$4"
+            ;;
+        "relations")
+            query_relations "$2" "$3" "$4" "$5"
+            ;;
+        "path")
+            find_path "$2" "$3" "$4"
+            ;;
+        "analyze")
+            analyze_patterns
+            ;;
+        "test")
+            run_integration_test
+            ;;
+        "export")
+            export_graph "$2"
+            ;;
+        "cleanup")
+            cleanup_data "$2"
+            ;;
+        "backup")
+            backup_data
+            ;;
+        "restore")
+            restore_data "$2"
+            ;;
+        "config")
+            show_config
+            ;;
+        "help"|"--help"|"-h")
+            show_help
+            ;;
+        *)
+            log_error "未知命令: $1"
+            show_help
+            exit 1
+            ;;
+    esac
+}
+
+# 执行主函数
+main "$@"

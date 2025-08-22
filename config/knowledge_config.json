@@ -1,0 +1,89 @@
+{
+  "data_directory": "data/knowledge",
+  "entity_types": [
+    "concept",
+    "skill",
+    "tool",
+    "pattern",
+    "problem",
+    "solution",
+    "framework",
+    "library",
+    "method",
+    "technique"
+  ],
+  "relation_types": [
+    "uses",
+    "requires",
+    "implements",
+    "solves",
+    "related_to",
+    "part_of",
+    "depends_on",
+    "extends",
+    "contains",
+    "applies_to",
+    "similar_to",
+    "opposite_to"
+  ],
+  "confidence_threshold": 0.7,
+  "max_entities": 10000,
+  "max_relations": 50000,
+  "retention_days": 365,
+  "auto_extraction": {
+    "enabled": true,
+    "sources": [
+      "code_analysis",
+      "documentation",
+      "user_interactions",
+      "error_logs"
+    ],
+    "extraction_rules": {
+      "min_frequency": 3,
+      "min_confidence": 0.6,
+      "max_entities_per_session": 50
+    }
+  },
+  "reasoning": {
+    "enabled": true,
+    "max_inference_depth": 3,
+    "inference_confidence_decay": 0.8,
+    "reasoning_types": [
+      "transitive",
+      "similarity",
+      "composition",
+      "inheritance"
+    ]
+  },
+  "visualization": {
+    "default_layout": "force_directed",
+    "max_nodes_display": 100,
+    "node_size_by_degree": true,
+    "color_by_type": true,
+    "show_labels": true
+  },
+  "quality_metrics": {
+    "completeness_threshold": 0.8,
+    "consistency_threshold": 0.9,
+    "freshness_days": 30,
+    "coverage_threshold": 0.7
+  },
+  "integration": {
+    "skill_discovery": true,
+    "performance_monitoring": true,
+    "ux_optimization": true,
+    "security_management": true
+  },
+  "export_formats": [
+    "json",
+    "graphml",
+    "csv",
+    "rdf"
+  ],
+  "backup": {
+    "enabled": true,
+    "frequency": "daily",
+    "retention_count": 7,
+    "backup_directory": "backups/knowledge"
+  }
+}

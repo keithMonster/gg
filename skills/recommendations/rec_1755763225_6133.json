@@ -1,0 +1,14 @@
+{
+  "recommendation_id": "rec_1755763225_6133",
+  "task_description": "我需要分析用户数据并生成报告",
+  "timestamp": "2025-08-21T08:00:25Z",
+  "recommendations": [
+    {
+      "skill_id": "analysis",
+      "confidence": 0.7,
+      "reason": "包含分析相关关键词"
+    }
+  ],
+  "algorithm_used": "simple_keyword_matching",
+  "processing_time_ms": 100
+}

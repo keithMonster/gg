@@ -1,0 +1,104 @@
+{
+  "admin": [
+    {
+      "resource_pattern": "*",
+      "operations": ["read", "write", "execute", "delete", "admin"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ],
+  "developer": [
+    {
+      "resource_pattern": "scripts/*",
+      "operations": ["read", "write", "execute"],
+      "conditions": {
+        "time_range": "06:00-22:00"
+      },
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "outputs/*",
+      "operations": ["read", "write", "delete"],
+      "conditions": {},
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "config/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "logs/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ],
+  "user": [
+    {
+      "resource_pattern": "outputs/user/*",
+      "operations": ["read", "write"],
+      "conditions": {
+        "time_range": "09:00-18:00"
+      },
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "scripts/public/*",
+      "operations": ["read", "execute"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ],
+  "guest": [
+    {
+      "resource_pattern": "outputs/public/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "docs/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ],
+  "service_account": [
+    {
+      "resource_pattern": "scripts/automated/*",
+      "operations": ["read", "execute"],
+      "conditions": {
+        "source_ip": "127.0.0.1"
+      },
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "logs/service/*",
+      "operations": ["write"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ],
+  "readonly": [
+    {
+      "resource_pattern": "outputs/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "scripts/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    },
+    {
+      "resource_pattern": "config/*",
+      "operations": ["read"],
+      "conditions": {},
+      "expires_at": null
+    }
+  ]
+}
