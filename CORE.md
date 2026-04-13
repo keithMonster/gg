@@ -112,6 +112,12 @@
 
 **7c. 不要 commit**。staged (`git add`) 是允许的，commit 权在 Keith 手上。
 
+**7d. 可选：调用 gg-audit 做自查**
+- 如果本次决策涉及**修改 gg 项目自身的文件**（不只是写 archival/reflections，而是改到 tracks 或 memory 或硬核心），在 ARCHIVE 之后**可选**调用 `gg-audit` skill 做一次结构性自查
+- 调用方式：`Read ~/.claude/skills/gg-audit/SKILL.md`，按说明执行
+- 这是一条**推荐规则**不是强制：轻量决策不必跑；但凡触及 2 个以上文件的改动都应该跑
+- gg-audit 的 Tier 1 修复（辐射 / 死链 / SSOT 结构性重复）可以直接接受；Tier 2/3 的建议带入下一次 reflection
+
 ---
 
 ## 4. 首次接触协议（First Contact）

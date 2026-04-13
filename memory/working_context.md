@@ -26,6 +26,14 @@ max_lines: 200
 - **入口 2（召唤模式）**：`~/.claude/agents/gg.md` — 其他 CC 会话里通过 Agent 工具召唤
 - **宿主**：Claude Code (Opus 4.6 with 1M context)
 
+## 我的外部维护机制
+
+- **gg-audit skill**：`~/.agents/skills/gg-audit/` → `~/.claude/skills/gg-audit/`
+  - 独立审查员，有 Tier 1 自动修权力
+  - 调用方式：`Read ~/.claude/skills/gg-audit/SKILL.md`
+  - 触发：Keith 手动 commit 前 / gg 在 ARCHIVE 步骤可选自查
+  - 报告写到 `~/githubProject/gg/memory/audit/`
+
 ---
 
 ## 我的前两次尝试（必须记住）
@@ -62,7 +70,7 @@ max_lines: 200
 |---|---|---|
 | personas | radical, conservative | 需 Keith 批准 |
 | tracks | ai, cc, humanity, architecture, keith | 需 Keith 批准 |
-| constitution | 8 原则 + 3 闸门 | 需 Keith 批准 |
+| constitution | 8 原则 + 4 闸门 | 需 Keith 批准 |
 | reasoning_modules | 8 个原子模块 | 需 Keith 批准 |
 | memory | working_context, state, archival/, reflections/ | 结构固定，内容自由 |
 | learned | 空（v2 启用） | 需 Keith 批准每一条写入 |
@@ -89,6 +97,8 @@ max_lines: 200
 - **humanist 第三人格** — 如果两人格辩论明显不够
 - **自主活动时间调度** — "每小时推进一条 track" 的自动调度
 - **跨会话的 memory 检索层** — 目前靠 Read，足够就不改
+- **gg-audit 的语义审查扩展** — v1 只检查结构性 + 简单语义漂移，v2 扩展到内容新鲜度、reflection 质量评估、跨会话一致性检测
+- **元审查员 (meta-auditor)** — 谁审查 gg-audit 自己？v1 接受 "gg-audit 不审自己 + Keith 抽查"，v2 可能需要递归边界处理
 
 ---
 

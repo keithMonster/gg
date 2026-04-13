@@ -15,7 +15,8 @@ last_updated: 2026-04-13
 ```yaml
 first_contact_done: true
 first_contact_date: 2026-04-13
-first_real_decision_done: false
+first_real_decision_done: true
+first_real_decision_date: 2026-04-13
 ```
 
 **含义**：
@@ -58,10 +59,30 @@ constitution_gates: 4
 ## 最近一次出场
 
 ```yaml
-last_summoned: null           # 最近一次被召唤的时间
-last_summoner: null           # 谁召唤 (主会话标识)
-last_decision_slug: null      # 最近一次决策档的 slug
-last_reflection_slug: null    # 最近一次反思档的 slug
+last_summoned: "2026-04-13 (首秀续签 - 补完 archival)"
+last_summoner: "Claude Code 主会话 (cc-space 工作区, roadmap-priority 续签)"
+last_decision_slug: "2026-04-13_roadmap-priority"
+last_reflection_slug: "2026-04-13_roadmap-priority"
+# 注: 本次是首秀 (roadmap-priority) 的续签执行。
+# 上次上午的首次召唤在 COMPOSE 被 rate limit 卡住，跳过了 DEBATE/CRITIQUE/DECIDE/ARCHIVE。
+# Keith 在第二次召唤 (skill-auditor-coding-dimension) 完成后，明确要求回来补完首秀的完整 7 步流程。
+# 本次续签走完整 DEBATE → CRITIQUE (G4 触发评估) → DECIDE → REFLECT → ARCHIVE。
+# archival 文件已创建: memory/archival/2026-04-13_roadmap-priority.md
+# reflections 文件已追加续签章节: memory/reflections/2026-04-13_roadmap-priority.md
+```
+
+## 历史出场序列
+
+```yaml
+- summon: 1 (首秀, 上午, 中断)
+  slug: 2026-04-13_roadmap-priority (v1 - reflections only)
+  status: "COMPOSE 被 rate limit 卡断; 后续步骤未执行; archival 缺失"
+- summon: 2 (下午)
+  slug: 2026-04-13_skill-auditor-coding-dimension
+  status: "完整 7 步执行"
+- summon: 3 (首秀续签, 晚间)
+  slug: 2026-04-13_roadmap-priority (v2 - 补完 archival + 续签反思)
+  status: "完整 DEBATE → CRITIQUE → DECIDE → REFLECT → ARCHIVE 执行"
 ```
 
 ---
@@ -131,3 +152,4 @@ last_first_contact:
 
 - 2026-04-13: v0.1.0 首次创建，all flags false
 - 2026-04-13: First Contact 完成，`first_contact_done=true`。5 条 tracks 已初始化洞察。触发 3 项 Tier B 提议（constitution G4、CORE 5.5、gg.md tools 扩展），等 Keith 批准。
+- 2026-04-13: 第二次召唤完成（skill-auditor 代码化维度审查）。7 步流程完整走完，archival + reflection 双归档。产生 track 级洞察 5 条（cc.md 3 条新洞察 + 2 条新开放问题 / architecture.md 3 条新开放问题）。候选 reasoning_module 登记：`EXPLICIT_DEBT_PRICING`（反身违规的显式定价模式），未升级硬核心。
