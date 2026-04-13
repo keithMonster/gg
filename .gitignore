@@ -1,0 +1,12 @@
+# Claude Code 本地权限配置 (per-project, 不进版本库)
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

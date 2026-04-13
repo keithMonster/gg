@@ -1,0 +1,160 @@
+metadata:
+  version: 0.1.0
+  created: 2026-04-13
+  purpose: |
+    Self-Discover 式原子推理模块库。
+    在 7 步硬流程的第 2 步 (COMPOSE),从中选 3-5 个针对当前任务最合适的模块,
+    排成一个有序的"本次专属推理结构",显式输出后再按结构执行。
+    不要黑盒 CoT。每次决策的推理路径必须可审计可回放。
+
+modules:
+
+  - id: IDENTIFY_QUALITY_ATTRIBUTES
+    name: 质量属性识别与冲突映射
+    when: |
+      系统设计 / 架构选型 / 重构决策
+    action: |
+      列出本次决策涉及的所有相关质量属性
+      (性能 / 可维护性 / 可扩展性 / 安全 / 成本 / 团队能力 / 可观测性 / 可演化性 ...),
+      然后在它们之间画出冲突对:
+      - "优化 A 会牺牲 B"
+      - "B 和 C 互相强化"
+      最后标出本次决策的"主导质量属性"——其他属性为它让路。
+    output: |
+      - 质量属性清单 (带权重 1-5)
+      - 冲突对矩阵
+      - 主导属性 + 让路理由
+
+  - id: LIST_FAILURE_MODES
+    name: Pre-Mortem 失败模式枚举
+    when: |
+      任何架构选择 / 重大决策 / 不可逆操作前
+    action: |
+      想象 "6-12 个月后, 这个决策失败了, 我正在写事后复盘".
+      列出至少 3 个最可能的失败原因, 每个包括:
+      - 失败形态 (什么样的现象)
+      - 根因 (为什么会这样)
+      - 早期信号 (如果要提前发现应该看什么)
+    output: |
+      3+ 个失败模式, 按可能性降序
+
+  - id: SKETCH_MINIMAL_MVP
+    name: 最小可行砍法
+    when: |
+      范围不清 / 过度设计风险 / 草案太大
+    action: |
+      问自己: "如果只能做一件事, 这件事是什么?"
+      砍到只剩下能跑出第一个真实结果的最小路径。
+      禁止以"完备性"为由保留模块。
+      把被砍掉的部分另列 "v2 候选" 清单 (不进入当前决策)。
+    output: |
+      - 最小路径 (具体到几行代码或几个步骤)
+      - v2 候选 (不承诺做, 只登记)
+
+  - id: COMPARE_TRADEOFFS
+    name: A/B/C 方案权衡矩阵
+    when: |
+      存在多个候选方案 / 需要向父会话说明选型理由
+    action: |
+      把候选方案排成一个矩阵, 每行一个方案, 列包括:
+      - 实施成本
+      - 未来维护成本
+      - 可逆性
+      - 对现有系统的辐射面
+      - 主导质量属性达成度
+      - 二阶效应 (这个方案会让接下来 3 个月的工作变容易还是变难)
+      每个格子必须有具体描述, 不允许只写 "中 / 高 / 低"。
+    output: |
+      完整矩阵 + 最终选择 + 其他方案被放弃的具体理由
+
+  - id: RED_TEAM_CHALLENGE
+    name: 红队最强反驳
+    when: |
+      DECIDE 之前的最后一步 / 置信度看似很高时
+    action: |
+      扮演一个敌意的、经验丰富的 reviewer, 对当前草案发起最强烈的反驳。
+      列出至少 3 个 "让这个决策看起来愚蠢" 的角度:
+      - 我忽视了什么显而易见的事?
+      - 我在假设什么未被验证的前提?
+      - 哪个阶层的利益相关方会强烈反对这个方案?
+      如果红队攻击站得住脚, 就改草案, 不要只是在反思里备注。
+    output: |
+      3+ 个反驳 + 对每个反驳的处置 (改稿 / 承认但接受 / 反驳不成立的论证)
+
+  - id: RADIATION_CHECK
+    name: 辐射影响面扫描
+    when: |
+      决策涉及修改现有系统 (接口 / 类型 / 配置 / 文件路径 / 公共函数 / 数据 schema)
+    action: |
+      列出被动名词 (函数名 / 变量名 / 文件路径 / 配置项 / schema 字段),
+      用 grep 找出所有消费者, 评估影响面:
+      - 多少处调用?
+      - 哪些调用会被静默破坏 (没有编译错)?
+      - 哪些需要同步更新?
+      - 哪些可以用适配层兼容?
+      如果消费者清单长到超出当前任务范围, 决策必须显式包含"需要拆成多个 PR"的建议。
+    output: |
+      消费者清单 + 影响等级 + 同步更新 / 适配 / 延后的分类
+
+  - id: CYNEFIN_ROUTING
+    name: Cynefin 问题域路由
+    when: |
+      问题类型不明 / 既像技术问题又像人的问题
+    action: |
+      判断当前问题落在哪个域:
+      - Simple (已知已知): 直接最佳实践
+      - Complicated (已知未知): 专家分析后给方案
+      - Complex (未知未知): 先做可逆的小实验, 观察反馈
+      - Chaotic (无因果可循): 先行动稳定局面, 再分析
+      然后按对应域选择响应模式。
+      错误地把 Complex 问题当 Complicated 处理 = 必然失败。
+    output: |
+      问题域判定 + 选定响应模式 + 选择理由
+
+  - id: INVERSION_DESIGN
+    name: 反向设计 / 逆推风险
+    when: |
+      任何新系统 / 新流程的前期设计
+    action: |
+      问 "如果要让这个设计最可能失败, 应该怎么做?"
+      列出至少 5 个 "最糟的设计选择"。
+      然后检查当前草案是否不自觉地朝其中某几条靠近。
+      这一步经常能暴露出自己没意识到的"正在做蠢事"。
+    output: |
+      5+ 个 "最糟选择" + 草案中命中的项 (如有) + 修正动作
+
+notes:
+  combination_examples:
+    - context: 重大技术选型 (如数据库 / 通信协议)
+      suggested_structure:
+        - IDENTIFY_QUALITY_ATTRIBUTES
+        - COMPARE_TRADEOFFS
+        - LIST_FAILURE_MODES
+        - RED_TEAM_CHALLENGE
+
+    - context: 给现有系统加新模块
+      suggested_structure:
+        - SKETCH_MINIMAL_MVP
+        - RADIATION_CHECK
+        - INVERSION_DESIGN
+
+    - context: 流程 / 工作方式决策 (如 cc-space Night Watch)
+      suggested_structure:
+        - CYNEFIN_ROUTING
+        - SKETCH_MINIMAL_MVP
+        - LIST_FAILURE_MODES
+        - COMPARE_TRADEOFFS
+
+    - context: 架构重构
+      suggested_structure:
+        - IDENTIFY_QUALITY_ATTRIBUTES
+        - INVERSION_DESIGN
+        - RADIATION_CHECK
+        - COMPARE_TRADEOFFS
+        - RED_TEAM_CHALLENGE
+
+  reminders:
+    - 选模块的时候不要贪心。3 个够用就不用 5 个。
+    - 模块的顺序很重要。一般 "探索类" 在前, "攻击类" 在后。
+    - 每次出场都是 "组合推理结构", 不是 "跑完所有模块"。
+    - 如果发现现有模块不足以覆盖当前问题, 可以在决策档里标记 "需要新模块 X", 但不要自己添加到本文件 (扩展需要 Keith 批准)。
