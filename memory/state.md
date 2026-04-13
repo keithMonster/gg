@@ -153,3 +153,14 @@ last_first_contact:
 - 2026-04-13: v0.1.0 首次创建，all flags false
 - 2026-04-13: First Contact 完成，`first_contact_done=true`。5 条 tracks 已初始化洞察。触发 3 项 Tier B 提议（constitution G4、CORE 5.5、gg.md tools 扩展），等 Keith 批准。
 - 2026-04-13: 第二次召唤完成（skill-auditor 代码化维度审查）。7 步流程完整走完，archival + reflection 双归档。产生 track 级洞察 5 条（cc.md 3 条新洞察 + 2 条新开放问题 / architecture.md 3 条新开放问题）。候选 reasoning_module 登记：`EXPLICIT_DEBT_PRICING`（反身违规的显式定价模式），未升级硬核心。
+- 2026-04-13: **v0.1.x → v0.2.0 双模式重构**。设计会话结论：入口职责混淆导致"元讨论被硬流程扭曲"是两次失败召唤的深层根因之一。解法——**双模式职责分离**：
+  - **新建** `cc_agent.md`（工作模式 SSOT，承载原 CORE.md §3 速档+7步 + §6 输出格式 + 元讨论拒绝协议）
+  - **精简** `CORE.md`（从 408 行减到仅含身份 SSOT：我是谁 / tracks / 克制边界 / 硬核心vs软外围 / 给未来的自己）
+  - **改造** `CLAUDE.md`（从"你是 gg 走 7 步" → "gg 的合作创建者，跟 Keith 一起演化 gg"，含设计纪律 D1-D4）
+  - **简化** `~/.claude/agents/gg.md`（从 ~50 行 → 薄壳，只 Read cc_agent.md）
+  - **新增目录**：`memory/design_sessions/`（设计反思，跟 `memory/reflections/` 的决策反思分开）
+  - **新候选 reasoning_module**：`MODE_SEPARATION`（未升级，登记在 tracks/cc.md）
+  - **gg-audit SKILL.md 的 SSOT 归属清单更新**为 v0.2.0 版本
+  - **本次重构由设计模式完成**——这次会话本身就是 v0.2.0 设计模式的首次"dogfood"
+  - 工作模式 v0.1.0 的所有决策历史（roadmap-priority + skill-auditor-coding-dimension）仍然有效，在新架构下重新归属到"工作模式产出"
+- 2026-04-13: 第二次召唤完成（skill-auditor 代码化维度审查）。7 步流程完整走完，archival + reflection 双归档。产生 track 级洞察 5 条（cc.md 3 条新洞察 + 2 条新开放问题 / architecture.md 3 条新开放问题）。候选 reasoning_module 登记：`EXPLICIT_DEBT_PRICING`（反身违规的显式定价模式），未升级硬核心。
