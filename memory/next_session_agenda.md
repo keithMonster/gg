@@ -27,6 +27,23 @@ last_updated: 2026-04-13
 
 ### 2026-04-13
 
+- `[TIER2]` **CORE.md §3 克制边界末尾应补脚注指向 auto_gg.md §1**
+  - 背景：auto_gg.md §0 说"具体条款在本文件 §1 有调整，以本文件为准"，但 CORE.md §3 没有反向指针
+  - 来源：auto_gg 首夜审查 SA2
+
+- `[TIER2]` **cc_agent.md §3 硬核心文件清单缺 README.md**
+  - 背景：CORE.md §4 已补 README.md（auto_gg 首夜 Tier 1 修复），但 cc_agent.md §3 决策树的硬核心文件列表仍缺
+  - 来源：auto_gg 首夜审查 SSOT-001 辐射面
+
+- `[TIER2]` **tracks/keith.md 补充北极星触达强度的自评标准**
+  - 背景：两次反思使用了不同的触达标注风格（文字 vs 符号），且无量化锚点
+  - 来源：auto_gg 首夜审查 SA3 + SC2
+
+- `[STRATEGIC]` **P2/P4/P6/G1/G2/G3 在 cc_agent.md 中无显式触达点**
+  - 背景：当前仅依赖 CRITIQUE 步骤笼统覆盖。7 条原则/闸门缺少直接触达
+  - 建议方向：在 CRITIQUE 步骤加"适用闸门检查"子步骤，或在 COMPOSE/DECIDE 加显式检查句
+  - 来源：auto_gg 首夜审查 SB1-SB4
+
 - `[STRATEGIC]` **auto_gg 连续夜的探索选题是否应该有"冷却机制"**
   - **背景**：auto_gg §5.1 写了"不要连续 3 晚探索同一条 track"。但没写"连续 3 晚探索不同 track 之间是否要有主题连贯性"
   - **思考方向**：是应该让 gg 完全随机挑、还是应该有个"探索主线"（比如连续 2 周深入 ai track，然后切换到 architecture track）？

@@ -18,9 +18,9 @@ current_version: 0.2.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-13 设计模式 / context-economy 重构"
-last_decision_slug: "2026-04-13_roadmap-priority"
-last_reflection_slug: "2026-04-13_roadmap-priority"
+last_summoned_at: "2026-04-13 auto_gg 首次夜间执行"
+last_decision_slug: "2026-04-13_skill-auditor-coding-dimension"
+last_reflection_slug: "2026-04-13_skill-auditor-coding-dimension"
 last_design_session_slug: "2026-04-13_v0.2.1-context-economy"
 ```
 

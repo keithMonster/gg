@@ -1,7 +1,7 @@
 ---
 track: cc
 status: active
-last_updated: 2026-04-13
+last_updated: 2026-04-14
 ---
 
 # Track: Claude Code
@@ -43,14 +43,17 @@ last_updated: 2026-04-13
 
 ## 已知洞察 (Known Insights)
 
-*（来自本次会话的调研，作为起点）*
+### CC Subagent 硬约束（v0.1.0 调研）
 
-- **硬约束**：Subagent 不能嵌套调 Agent 工具。多人格辩论只能在单个 subagent 内通过切换 persona prompt 做 self-play。
-- **硬约束**：Subagent 启动时 system prompt 冻结，运行时只能靠 Read 文件加载动态上下文。
-- **硬约束**：Subagent 看不到父会话历史，父会话必须在 prompt 里显式打包上下文。
-- **Skill 的 Progressive Disclosure 三层**：metadata 常驻 → body 触发加载 → 子文件深潜加载。
-- **CC 的约定**：全局 skill 通常放在 `~/.agents/skills/<name>/`，然后 symlink 到 `~/.claude/skills/<name>`。
-- **入口分离**：gg 采用"薄壳 + SSOT"模式——`~/.claude/agents/gg.md` 和 `~/githubProject/gg/CLAUDE.md` 都只做 Read CORE.md，避免双份真相。
+- Subagent 不能嵌套调 Agent 工具
+- Subagent 启动时 system prompt 冻结，运行时只能靠 Read 文件加载动态上下文
+- Subagent 看不到父会话历史，父会话必须在 prompt 里显式打包上下文
+
+### CC Skill/Agent 约定
+
+- **Skill Progressive Disclosure 三层**：metadata 常驻 → body 触发加载 → 子文件深潜加载
+- **全局 skill 路径**：`~/.agents/skills/<name>/` → symlink `~/.claude/skills/<name>`
+- **gg 的入口分离**：薄壳 + SSOT——`~/.claude/agents/gg.md` 只做 Read `cc_agent.md`
 
 ### 从 First Contact 2026-04-13 获得
 
@@ -115,17 +118,11 @@ last_updated: 2026-04-13
 
 **候选登记，未升级硬核心**。如果 cg 项目或其他系统也采用类似结构被验证有效，可以提议升级为 `reasoning_modules.yaml` 的新模块。
 
-### 本次重构的文件影响面（2026-04-13）
-
-- **新建**：`cc_agent.md`（工作模式 SSOT，含速档 + L0/L1/L2 + 输出格式 + 元讨论拒绝协议）
-- **精简**：`CORE.md`（从 408 行减到身份 SSOT，移走 §3 §4 §6）
-- **改造**：`CLAUDE.md`（从"你是 gg 走 7 步"改为"你是 gg 的合作创建者，跟 Keith 一起演化 gg"，含设计纪律 D1-D4）
-- **简化**：`~/.claude/agents/gg.md`（从 ~50 行减到只说"Read cc_agent.md"）
-- **新增目录**：`memory/design_sessions/`（设计反思，跟 `memory/reflections/` 的决策反思分开）
+*文件影响面详见 `memory/design_sessions/2026-04-13_v0.2.1-context-economy.md`*
 
 ### 从 NEURAL-LINK v1 协议评估（2026-04-13 设计会话）
 
-**触发**：Keith 提议参考另一项目（openclaw, `~/.openclaw/workspace/cortex/protocol/neural-link-v1.md`）的 NEURAL-LINK v1 通讯协议，考察其对 gg 自我通讯 / 子代理通讯 / 文件构建的适用性。
+Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 **评估方法**：把外部协议拆成"哲学（值得吸收的精神）"和"格式（具体语法）"两层独立判断。
 
@@ -155,9 +152,7 @@ last_updated: 2026-04-13
 4. 吸收的哲学要**用本系统的命名风格重命名**，而不是直接照搬外部命名（避免双语污染）
 5. 吸收的位置要选**最高匹配度的现有结构**（不要为新内容专门建新结构）
 
-**候选登记，未升级硬核心**。如果未来再有 ≥2 次类似外部协议吸收场景，被验证有效，可提议升级为 `reasoning_modules.yaml` 的新模块。
-
-**与 G5 的关系**：本次评估**自身就是 G5 的 dogfood**——评估完成后，所有"我建议升级 G5"的话都没在文件里就不算数。本次会话就是物理持久化的最小演示。
+**候选登记，未升级硬核心**。≥2 次类似场景验证后可提议升级。
 
 ---
 
@@ -175,6 +170,10 @@ last_updated: 2026-04-13
 
 - 🔜 **CC 原生 AutoDream 的实际水位**（强开放问题）— cc-space 路线图里 L2 Session Search (#1) 的必要性完全取决于 AutoDream 能否覆盖"回忆上周做了什么"的场景。现状是黑盒。阶段 0 观察 2 周内会在 `harness-engineering/analysis/cc-native-watermark.md` 产生 3 个可量化指标（真实触发次数 / 命中率 / 修复成本）。这是 gg 第一次把"依赖 CC 原生能力"作为显式可证伪的观察项——**是否产生信号 = CC 原生是否值得依赖 = gg v2 sqlite 方案是否需要额外加强"不依赖 CC 原生黑盒"的设计**
 - 📐 **L2 Session Search (cc-space #1) 与 gg v2 sqlite 记忆层的技术同构**（已记入反思，此处补记到 track）— 两者都是"跨会话检索层"的技术实现，SQLite + FTS5 + 增量索引是同一套技术栈。**但它们的消费者不同**（cc-space 服务 Keith 所有日常工作 / gg 只服务自己的决策流），因此 First Contact 的硬约束"gg 与 cc-space 完全隔离"不允许合并。这条同构是"技术实现上可以互相学习"，不是"实现上应该合并"
+
+### 从 phodal-spec-harness-ingest 设计会话（2026-04-13）
+
+- **gg-audit 的 radiation 检查应扫描"数字表述"**：(auto_gg 补写 2026-04-13) 任何文档里写"N 个 X"（如"9 字段"/"4 闸门"）的表述，都是潜在辐射源。N 一变就要全局同步。当前 gg-audit 不做这个——候选增强方向
 
 ### 来自 2026-04-13 skill-auditor 决策
 

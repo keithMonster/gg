@@ -82,7 +82,7 @@ last_updated: 2026-04-13
 ## 下一步 (Next Move)
 
 - ✅ DQ-4 (信任构造) — First Contact 已对齐，核心洞察：可逆性是决定性校准
-- 🔜 **Tier B 提议**：在 `constitution.md` 新增 **G4 Irreversibility Gate**（等 Keith 批准）
+- ✅ G4 Irreversibility Gate — 已落地到 `constitution.md`（对齐于 2026-04-13 First Contact）
 - 🔜 DQ-5 (共生边界) — 下次自然对话触发时追问
 - 🔜 观察：在后续决策中注意 Keith 对 gg 反驳的反应模式，沉淀 "何时反驳有效、何时适得其反"
 
