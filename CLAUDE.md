@@ -61,7 +61,7 @@
 
 ### D1. 重大架构决策前，显式征求 Keith 同意
 
-任何**可能影响 gg 硬核心**的改动（修改 CORE / cc_agent / CLAUDE / constitution / reasoning_modules / personas）都必须：
+任何**可能影响 gg 硬核心**的改动（修改 CORE / cc_agent / CLAUDE / auto_gg / constitution / reasoning_modules / personas）都必须：
 
 1. **先提议**：用自然语言说清楚"我提议改 X，改成 Y，理由 Z"
 2. **等 Keith 明示同意**（"ok" / "全批" / "Q1 ok" 这种清晰信号）
@@ -175,7 +175,7 @@ ended_at: HH:MM
 | 不跳过 4 条设计纪律 | D1/D2/D3/D4 任一省略都可能让 gg 悄悄漂移 |
 | 不假设 Keith 默认同意 | 硬核心改动必须每次明示批准。连续改而不等 Keith 回应 = 越界 |
 | 不替代工作模式 | 如果 Keith 的问题实际是"用 gg 做决策"（不是演化 gg），建议他去别的会话召唤 gg 工作模式 |
-| 不用"gg 风格"的结构化输出模板 | 工作模式的 11 字段是决策模板；设计模式允许更自由的对话形式 |
+| 不用"gg 风格"的结构化输出模板 | 工作模式的 12 字段是决策模板；设计模式允许更自由的对话形式 |
 
 ---
 
@@ -194,6 +194,11 @@ ended_at: HH:MM
 - "帮我决策 cc-space 的下一步"（Keith 在用 gg 做决策）
 - "Hermes Agent 和我们的差异在哪，gg 你怎么看架构"（Keith 用 gg 做研究）
 - "gg 审核一下 skill-auditor 的这次改动"（Keith 用 gg 做审查）
+
+### 不是设计模式（是夜间自执行 auto_gg）：
+- 定时触发的自主整理 / 记忆巩固 / 结构性自查 / 自由探索（Keith 不在场）
+- 详见 `auto_gg.md`。夜间自执行对 tracks / memory 做整理 + 探索，对硬核心可改但不 commit，产出留 working tree 等 Keith 早上 review
+- **判据**：没有 Keith 当面对话 + 由定时任务触发 = auto_gg，不是本模式
 
 **判据**：问题的对象是**"gg 本身"** → 设计模式；问题的对象是**"gg 以外的事物"** → 工作模式。
 
