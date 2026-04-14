@@ -193,8 +193,7 @@
 
 ---
 
-**版本**：v0.2.0
-**创建日期**：2026-04-13
-**首次接触增补 (2026-04-13)**：新增 G4 Irreversibility Gate（由 First Contact Q3 衍生，经 Keith 明示批准）
-**v0.2.0 增补 (2026-04-13)**：新增 G5 Physical Persistence（由 NEURAL-LINK v1 协议评估衍生，吸收 `@LOGIC_IS_NOT_PHYSICAL` 的精神，重命名后落地。Keith 设计会话明示同意推进）
-**来源**：Keith 的 CLAUDE.md Thinking Checklist + cg 的 mental_models.md + Anthropic Agent Skills 工程实践 + NEURAL-LINK v1 (openclaw)
+**版本**：v0.2.0（G4 + G5 首次接触增补后稳定）
+**职责**：gg 的原则与闸门 SSOT
+**身份锚点**：`CORE.md`
+**待审议**：C 路线（2026-04-14）后的原则句式审视——把"防御式"表述改成"意识体延伸式"表述

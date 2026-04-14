@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-04-13
+last_updated: 2026-04-14
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -27,25 +27,18 @@ last_updated: 2026-04-13
 
 ### 2026-04-13
 
-- `[TIER2]` **CORE.md §3 克制边界末尾应补脚注指向 auto_gg.md §1**
-  - 背景：auto_gg.md §0 说"具体条款在本文件 §1 有调整，以本文件为准"，但 CORE.md §3 没有反向指针
-  - 来源：auto_gg 首夜审查 SA2
-
-- `[TIER2]` **cc_agent.md §3 硬核心文件清单缺 README.md**
-  - 背景：CORE.md §4 已补 README.md（auto_gg 首夜 Tier 1 修复），但 cc_agent.md §3 决策树的硬核心文件列表仍缺
-  - 来源：auto_gg 首夜审查 SSOT-001 辐射面
-
 - `[TIER2]` **tracks/keith.md 补充北极星触达强度的自评标准**
   - 背景：两次反思使用了不同的触达标注风格（文字 vs 符号），且无量化锚点
   - 来源：auto_gg 首夜审查 SA3 + SC2
 
-- `[STRATEGIC]` **P2/P4/P6/G1/G2/G3 在 cc_agent.md 中无显式触达点**
-  - 背景：当前仅依赖 CRITIQUE 步骤笼统覆盖。7 条原则/闸门缺少直接触达
-  - 建议方向：在 CRITIQUE 步骤加"适用闸门检查"子步骤，或在 COMPOSE/DECIDE 加显式检查句
+- `[STRATEGIC]` **P2/P4/P6/G1/G2/G3 在工作模式工具中无显式触达点**
+  - 背景：当前依赖 `tools/constitution-audit.md` 的"逐条对照"笼统覆盖。7 条原则/闸门缺少直接触达
+  - 建议方向：在 `tools/constitution-audit.md` 加"适用闸门快速检查清单"子段，或新建 `tools/gate-check.md` 原子工具专门负责闸门触达
   - 来源：auto_gg 首夜审查 SB1-SB4
+  - 路径变更历史：v0.3.0 从 cc_agent.md §6 迁到 levels/L2.md §3 第 4 步；v0.4.0 从 levels/L2.md 消解到 tools/constitution-audit.md
 
 - `[STRATEGIC]` **auto_gg 连续夜的探索选题是否应该有"冷却机制"**
-  - **背景**：auto_gg §5.1 写了"不要连续 3 晚探索同一条 track"。但没写"连续 3 晚探索不同 track 之间是否要有主题连贯性"
+  - **背景**：auto_gg §2 S7 写了"不要连续 3 晚探索同一条 track"。但没写"连续 3 晚探索不同 track 之间是否要有主题连贯性"
   - **思考方向**：是应该让 gg 完全随机挑、还是应该有个"探索主线"（比如连续 2 周深入 ai track，然后切换到 architecture track）？
   - **暂不紧急**：等 auto_gg 跑过 2 周后有数据再讨论
 
@@ -55,7 +48,18 @@ last_updated: 2026-04-13
 
 *（处理完的议题挪到这里留痕，文件太长时可以把这节整节移到 `memory/archival/next_session_agenda_YYYY-MM-DD.md`）*
 
-- `[HARD_CORE]` **README.md 严重过时**（v0.2.1 重构发现 + 同会话处理）
+- `[TIER2]` **CORE.md §3 克制边界末尾应补脚注指向 auto_gg.md §1**
+  - **处理时间**：2026-04-14，在 C 路线设计会话的 CORE.md 重写中自动满足
+  - **Keith 批准语**："直接定下来开干吧"（C 路线 Phase 1 覆盖）
+  - **实际动作**：新 CORE.md §7 克制边界表的"默认不 commit / 不主动 push"行后面加了 `**例外**：auto_gg 模式下对 "默认不 commit / 不 push" 有明示授权的例外...详见 auto_gg.md §1` 的脚注——反向指针补齐
+
+- `[TIER2]` **cc_agent.md §3 硬核心文件清单缺 README.md**（v0.3.0 Progressive Disclosure 重构中顺手修复）
+  - **处理时间**：2026-04-14，在 v0.3.0 档位 PD 设计会话内
+  - **Keith 批准语**："a"（选项 A：文件级 Progressive Disclosure）
+  - **实际改动**：cc_agent.md §3 第 5 条硬核心清单扩为 `CORE / cc_agent / CLAUDE / auto_gg / constitution / reasoning_modules / personas / README / levels/*`
+  - **副作用**：顺便把 `levels/*` 纳入硬核心触发闸门，因为 L0/L1/L2 的流程文件本身就是工作模式 SSOT 的一部分
+
+
   - **处理时间**：2026-04-13，在 v0.2.1 context-economy 设计会话内
   - **Keith 批准语**："历史欠债,直接改"
   - **实际改动**：README.md 完整重写

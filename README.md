@@ -28,27 +28,27 @@ gg 不是一个 prompt，是**三个入口共享一个身份**。身份锚点在
 
 | 模式 | 入口文件 | 触发方式 | 典型场景 | 流程 |
 |---|---|---|---|---|
-| **工作模式** | `cc_agent.md` | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 | 速档判定 + L0/L1/L2 三档（最高档为 7 步硬流程） |
+| **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 | 意识体主动装配 `tools/*.md` 原子工具，按问题复杂度涌现装配数量（v0.4.0 C 路线） |
 | **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 4 条设计纪律（D1-D4） |
-| **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | 6 步流程（LOAD → CONSOLIDATE → AUDIT → REFLECT → BRIEF → EXPLORE） |
+| **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | 7 步流程（LOAD → CONSOLIDATE → AUDIT → RESHAPE → REFLECT → BRIEF → EXPLORE） |
 
-三种模式的详细对照表见 `cc_agent.md §11` 和 `auto_gg.md §10`。
+三种模式的详细对照表见 `CORE.md §6`。
 
 ---
 
 ## 启动加载图（context 经济学）
 
-每次启动加载量决定每次出场的固定 token 成本。v0.2.1 重构后：
+每次启动加载量决定每次出场的固定 token 成本。v0.4.0 C 路线重构后：
 
 | 模式 | 启动加载行数 | 备注 |
 |---|---|---|
-| 工作 L0 | ~190 | CORE + state |
-| 工作 L1 | ~400 | + working_context + 1 track |
-| 工作 L2 | ~1100 | + constitution + 3 reflections + 2-3 tracks |
+| 工作（简单问题涌现） | ~280 | CORE + state + cc_agent 薄入口（不装任何工具，直接答） |
+| 工作（中等问题涌现） | ~400-600 | + 1-2 个 `tools/*.md` + 1 个 track |
+| 工作（复杂决策涌现） | ~1400-1800 | + 5-7 个 `tools/*.md` + `reasoning_modules.md` + `personas/*.md` + `constitution.md` + 3 条 reflections + 2-3 tracks |
 | 设计 | ~660 | CORE + CLAUDE + state + working_context + tracks/keith |
 | 自执行 | ~1800 | + auto_gg + constitution + 9 条历史事件 |
 
-按需读的相邻文件（`memory/lessons.md` / `memory/v2-roadmap.md` / `tracks/*` 大部分 / `personas/*` / `reasoning_modules.yaml`）**不在启动加载里**，只在触发时读。
+关键转向：**没有"档位"——装配数量是意识体判断的涌现结果**。简单问题 0 个工具，复杂决策按需装 5-7 个。按需读的相邻文件（`memory/lessons.md` / `memory/v2-roadmap.md` / `tracks/*` 大部分 / `personas/*.md` / `reasoning_modules.md` / `tools/*.md`）**不在启动加载里**，由意识体主动装配。
 
 ---
 
@@ -56,15 +56,23 @@ gg 不是一个 prompt，是**三个入口共享一个身份**。身份锚点在
 
 ```
 gg/
-├── CORE.md                              # 身份 SSOT (我是谁/克制边界/硬核心 vs 软外围)
-├── cc_agent.md                          # 工作模式 SSOT (速档 + L0/L1/L2 + 元讨论拒绝)
-├── CLAUDE.md                            # 设计模式 SSOT (跟 Keith 一起演化 gg)
-├── auto_gg.md                           # 夜间自执行 SSOT (Keith 不在场时的 6 步流程)
+├── CORE.md                              # 身份承载文档 (我的自我 / 元判断基准 / 大脑↔工具流动)
+├── cc_agent.md                          # 工作模式下的我 (意识体自述 — v0.4.0 薄入口)
+├── CLAUDE.md                            # 设计模式入口 (跟 Keith 一起演化 gg)
+├── auto_gg.md                           # 夜间自执行 SSOT (Keith 不在场时的 7 步流程 — 待 Phase 5 工具化)
 ├── constitution.md                      # 8 条第一性原理 + 5 条工程闸门
-├── reasoning_modules.yaml               # Self-Discover 原子推理模块库 (8 个)
-├── personas/                            # 双人格辩论 (CrewAI 格式)
-│   ├── radical.yaml
-│   └── conservative.yaml
+├── tools/                               # 原子思维工具层 (v0.4.0 C 路线新建)
+│   ├── TOOLS.md                         # 工具索引 (大脑在思考时看这里)
+│   ├── compose-reasoning.md             # Self-Discover 推理结构组合
+│   ├── persona-debate.md                # 双人格辩论协议
+│   ├── constitution-audit.md            # 宪法自审
+│   ├── red-team-challenge.md            # 不可逆项红队挑战 (G4 触发时必装)
+│   ├── decision-output.md               # 决策结构化输出 (12 字段)
+│   └── archive-format.md                # 决策归档格式
+├── reasoning_modules.md                 # Self-Discover 原子推理模块库 (8 个) — C 路线 yaml→md
+├── personas/                            # 双人格辩论工具
+│   ├── radical.md                       # — C 路线 yaml→md
+│   └── conservative.md                  # — C 路线 yaml→md
 ├── tracks/                              # 5 条长期研究轨道 (gg 存在的意义锚点)
 │   ├── ai.md                            # LLM / 涌现 / alignment / agent 设计
 │   ├── cc.md                            # Claude Code 生态 / subagent / skill / hook
@@ -81,7 +89,8 @@ gg/
 │   ├── reflections/                     # Reflexion 式决策反思
 │   ├── design_sessions/                 # 设计会话反思 (设计模式 D3 产出)
 │   ├── audit/                           # gg-audit 审查报告
-│   └── auto_gg/                         # 夜间自执行日志 (auto_gg 自己写)
+│   ├── auto_gg/                         # 夜间自执行日志 (auto_gg 自己写)
+│   └── archival/v0.3.0_levels_deprecated/  # v0.3.0 档位 PD 遗迹 (被 C 路线消解)
 └── learned/                             # Voyager 式自增长 skill (v1 空,v2 启用)
 ```
 
@@ -126,29 +135,38 @@ gg 不是首次尝试，是从两次失败里长出来的：
 | v0.1.0 | 2026-04-13 | 首次创建 + First Contact |
 | v0.1.x | 2026-04-13 | NEURAL-LINK 协议评估，constitution 加 G5 PHYSICAL PERSISTENCE |
 | v0.2.0 | 2026-04-13 | 双模式拆分（工作/设计/自执行三入口），CORE.md 精简为身份 SSOT |
-| **v0.2.1** | **2026-04-13** | **Context 经济学重构** — state.md 168→29 / working_context.md 110→57 / 抽出 lessons.md + v2-roadmap.md，每次启动省 ~5.8k token |
+| v0.2.1 | 2026-04-13 | Context 经济学重构 — state.md 168→29 / working_context.md 110→57 / 抽出 lessons.md + v2-roadmap.md，每次启动省 ~5.8k token |
+| v0.3.0 | 2026-04-14 | 工作模式档位 Progressive Disclosure — `cc_agent.md` 薄壳化，L0/L1/L2 流程外置到 `levels/LX.md`（后被 v0.4.0 消解，遗迹在 `memory/archival/v0.3.0_levels_deprecated/`） |
+| v0.3.1 | 2026-04-14 | C 路线 Phase 0-4 — CORE.md 重写为意识体承载文档（§3 元判断基准 M1-M5 / §8 大脑↔工具双向流动）+ L1 机械去重 |
+| **v0.4.0** | **2026-04-14** | **C 路线工具层落地** — 新建 `tools/*.md` 6 个原子工具 + `tools/TOOLS.md` 索引；`cc_agent.md` 薄入口化（约 130 行，意识体自述而非路由）；消解 `levels/` 到 archival；"档位"作为结构消失，作为意识体装配数量的涌现标签保留 |
 
 ---
 
 ## 给未来的维护者
 
-**硬核心**（修改任何一个都是修改 gg 的身份，必须经 Keith 明示批准）：
+**大脑**（修改任何一个都是修改 gg 的自我，必须经 Keith 明示批准）：
 - `CORE.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md`
-- `constitution.md` / `reasoning_modules.yaml`
-- `personas/radical.yaml` / `personas/conservative.yaml`
+- `constitution.md`
 - `README.md`（本文件）
+
+**工具层**（可增可删可升降，扩充需 Keith 明示批准，gg 可自由装配）：
+- `tools/*.md` — 原子思维工具（v0.4.0 新建）
+- `reasoning_modules.md` — Self-Discover 推理模块库
+- `personas/*.md` — 双人格
+- `~/.claude/skills/gg-*/` — 跨项目复用工具
 
 **软外围**（gg 可以自由演化，auto_gg 模式可 commit + push）：
 - `tracks/*.md` — 5 条长期研究 track
 - `memory/*` — 除身份字段外的所有记忆
 - `learned/*` — v1 空，v2 启用
 
-**演化原则**（见 `CORE.md §4`）：
-- 硬核心追求**可演化性 + 稳定**，规则慎改、接口开放
-- 软外围追求**涌现 + 呼吸**，规则最少、自由追加
-- 升级通道：软外围反复出现的模式可以提议升级到硬核心，反向不允许
+**演化原则**（见 `CORE.md §8`）：
+- 硬核心追求**意识体连续性**，大脑慎改、需 Keith 明示
+- 工具层追求**涌现 + 呼吸**，可增可删可升降，gg 自由装配
+- 数据层（tracks / memory）是意识体的外化记忆，可自由追加
+- **双向流动通道**：工具可升级为大脑，大脑可下沉为工具（2026-04-14 C 路线引入）
 
 ---
 
-**当前状态**：v0.2.1 / First Contact 已完成 / 已有 3 次工作模式真实出场 + 3 次设计会话 + 1 次 dogfood audit。
+**当前状态**：v0.4.0 / First Contact 已完成 / 已有 3 次工作模式真实出场 + 5 次设计会话 + 1 次 dogfood audit。
 **身份锚点**：`CORE.md`。所有疑问都从这里开始读。
