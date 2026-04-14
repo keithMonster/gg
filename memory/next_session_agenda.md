@@ -25,6 +25,40 @@ last_updated: 2026-04-14
 
 ## 待议（open）
 
+### 2026-04-14（auto_gg 第 2 夜承接）
+
+- `[HARD_CORE_TOUCH]` **CORE.md §1 第 5 条 bullet 已补齐（daily_knowledge 身份陈述）**
+  - **背景**：daily-knowledge-identity-promotion 设计会话里 Keith Q3 批准"CORE §2 加一行 + daily_knowledge 引言段扩写"，但实际只改了 daily_knowledge.md，CORE 侧没落地。daily_knowledge.md 的 footer "身份锚点：CORE.md §1（第 5 条陈述）" 形成死链
+  - **本夜动作**：CORE.md §1 bullet list 追加第 5 条："我每日晨间向外推送知识（daily_knowledge.md）——跟 auto_gg 形成对称..."。语义与设计会话批准的内容一致，位置是 §1 而非 §2（按反思里说的偏差处理）
+  - **Keith review checklist**：
+    1. 这条 bullet 的位置（§1 而非 §2）是否认可？
+    2. 措辞是否需要精简？（当前 2 句话，能否压到 1 句）
+    3. 是否要同步把 daily_knowledge.md footer 的引用锚点更新（已经指 §1，无需改）
+  - **回滚**：`git checkout -- CORE.md`
+
+- `[TIER2]` **gg-audit/checkers/semantic.md 整体相对 v0.4.0 stale（SA1）**
+  - **文件**：`.claude/skills/gg-audit/checkers/semantic.md`
+  - **问题**：§B Principle Reach baseline 表 cites "CORE.md §3 第 X 步"——v0.4.0 已消解 7 步流程。同时 constitution 数字从 "8 P + 4 G" 过时为 "8 P + 5 G"。gg-audit 的**元盲点**——它查 gg 辐射，但自己 baseline 没跟上 gg 演化
+  - **短期 patch**（5 分钟）：L87 "8 P + 4 G" → "8 P + 5 G"；L99 "G1-G4" → "G1-G5"。这是机械修
+  - **长期 rewrite**：§B 整章重写 baseline，把"CORE.md §3 第 X 步"位置锚点换成 `cc_agent.md` + `tools/*.md` 的具体段落；加 G5 PHYSICAL PERSISTENCE 行
+  - **来源**：2026-04-14 post-stable-identifiers-validation audit 报告
+
+- `[TIER2]` **gg-audit/SKILL.md §2 和 checkers/structural.md §A 示例陈旧（SA2 + SA3）**
+  - **文件**：`.claude/skills/gg-audit/SKILL.md:41` 和 `.claude/skills/gg-audit/checkers/structural.md:62`
+  - **问题**：两处都用 "8 + 4" 闸门作为示例数字，真实数字是 8 + 5
+  - **修复**：同步改为 "8 + 5"，或加注"示例基于历史版本，仅作模式示意"
+  - **为什么不自动修**：示例的"教学意图"vs"事实意图"边界需要 Keith 判断
+
+- `[TIER2]` **next_session_agenda.md 的 STRATEGIC 待议项缺 G5 PHYSICAL PERSISTENCE（SA4）**
+  - **问题**：上方"FIRST-PRINCIPLES / MVP-FIRST / ..." 的战略议题列了 6 条原则/闸门缺触达，漏了 G5（v0.2.1 NEURAL-LINK 引入的新闸门）
+  - **修复**：议题文字总数从 6 改 7，补 PHYSICAL PERSISTENCE 一项
+  - **为什么不自动修**：议题文本属于 Keith 的设计议程，不是事实性元数据
+
+- `[TIER2]` **reflections 北极星触达格式漂移（SC1）**
+  - **样本**：`memory/reflections/2026-04-14_night-watch-pending-batch-resolve.md` grep 北极星类关键词无命中
+  - **判断**：要么是 "非北极星触发" 的事务性出场（应显式标注），要么是格式漂移
+  - **修复**：抽查该 reflection 是否显式写了"本次非北极星触发"；没写则补，并同时想想要不要把这条规则从 tracks/keith.md 提取到 reflection 模板
+
 ### 2026-04-13
 
 - `[TIER2]` **tracks/keith.md 补充北极星触达强度的自评标准**
@@ -36,6 +70,7 @@ last_updated: 2026-04-14
   - 建议方向：在 `tools/constitution-audit.md` 加"适用闸门快速检查清单"子段，或新建 `tools/gate-check.md` 原子工具专门负责闸门触达
   - 来源：auto_gg 首夜审查 SB1-SB4
   - 路径变更历史：v0.3.0 从 cc_agent.md §6 迁到 levels/L2.md §3 第 4 步；v0.4.0 从 levels/L2.md 消解到 tools/constitution-audit.md
+  - **SA4 补丁（2026-04-14）**：本议题应再补一条 G5 PHYSICAL PERSISTENCE —— 总数从 6 变 7
 
 - `[STRATEGIC]` **auto_gg 连续夜的探索选题是否应该有"冷却机制"**
   - **背景**：auto_gg §2 S7 写了"不要连续 3 晚探索同一条 track"。但没写"连续 3 晚探索不同 track 之间是否要有主题连贯性"
