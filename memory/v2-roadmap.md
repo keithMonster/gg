@@ -57,7 +57,7 @@ last_updated: 2026-04-13
 ### gg-audit 的语义审查扩展
 - v1 只检查结构性（辐射 / 死链 / SSOT 重复）+ 简单语义漂移
 - v2 扩展：内容新鲜度 / reflection 质量评估 / 跨会话一致性检测
-- 升级条件：gg-audit 跑过 ≥ 20 次后看 P2/P3 建议中有没有可自动化的模式
+- 升级条件：gg-audit 跑过 ≥ 20 次后看 Tier 2/Tier 3 建议中有没有可自动化的模式
 
 ### 元审查员 (meta-auditor)
 - 谁审查 gg-audit 自己？

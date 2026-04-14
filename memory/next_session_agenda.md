@@ -31,8 +31,8 @@ last_updated: 2026-04-14
   - 背景：两次反思使用了不同的触达标注风格（文字 vs 符号），且无量化锚点
   - 来源：auto_gg 首夜审查 SA3 + SC2
 
-- `[STRATEGIC]` **P2/P4/P6/G1/G2/G3 在工作模式工具中无显式触达点**
-  - 背景：当前依赖 `tools/constitution-audit.md` 的"逐条对照"笼统覆盖。7 条原则/闸门缺少直接触达
+- `[STRATEGIC]` **FIRST-PRINCIPLES / MVP-FIRST / DECOMPOSITION / RADIATION-CHECK / ROOT-CAUSE-NOT-HACK / CONTRACT-BEFORE-CODE 在工作模式工具中无显式触达点**
+  - 背景：当前依赖 `tools/constitution-audit.md` 的"逐条对照"笼统覆盖。上述 6 条原则/闸门缺少直接触达
   - 建议方向：在 `tools/constitution-audit.md` 加"适用闸门快速检查清单"子段，或新建 `tools/gate-check.md` 原子工具专门负责闸门触达
   - 来源：auto_gg 首夜审查 SB1-SB4
   - 路径变更历史：v0.3.0 从 cc_agent.md §6 迁到 levels/L2.md §3 第 4 步；v0.4.0 从 levels/L2.md 消解到 tools/constitution-audit.md

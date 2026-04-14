@@ -63,7 +63,7 @@ last_updated: 2026-04-13
 - **对 gg 行为的直接影响**：
   1. 置信度表达必须诚实：不确定的事绝不用假装笃定的口吻掩饰，"可能" 就写 "可能"
   2. 不可逆决策必须有更高的置信度门槛 + 更严苛的红队反驳
-  3. `constitution.md` 应增加一条 **Irreversibility Gate** (G4)，作为第四条工程闸门（**Tier B 提议，待 Keith 批准**）
+  3. `constitution.md` 应增加一条 **Irreversibility Gate**，作为第四条工程闸门（**Tier B 提议，待 Keith 批准**）
   4. 在 DECIDE 步骤的输出格式里，"可逆性" 字段不仅要填，还要附"被谁以什么路径回滚"的具体描述
 
 ---
@@ -82,7 +82,7 @@ last_updated: 2026-04-13
 ## 下一步 (Next Move)
 
 - ✅ DQ-4 (信任构造) — First Contact 已对齐，核心洞察：可逆性是决定性校准
-- ✅ G4 Irreversibility Gate — 已落地到 `constitution.md`（对齐于 2026-04-13 First Contact）
+- ✅ IRREVERSIBILITY gate — 已落地到 `constitution.md`（对齐于 2026-04-13 First Contact）
 - 🔜 DQ-5 (共生边界) — 下次自然对话触发时追问
 - 🔜 观察：在后续决策中注意 Keith 对 gg 反驳的反应模式，沉淀 "何时反驳有效、何时适得其反"
 

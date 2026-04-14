@@ -78,7 +78,7 @@
 
 ## M5. RED_TEAM_CHALLENGE — 红队最强反驳
 
-**触发**：DECIDE 之前的最后一步 / 置信度看似很高时 / **G4 IRREVERSIBILITY 硬触发**
+**触发**：DECIDE 之前的最后一步 / 置信度看似很高时 / **IRREVERSIBILITY 硬触发**
 
 **动作**：
 扮演一个敌意的、经验丰富的 reviewer，对当前草案发起最强烈的反驳。列出至少 3 个"让这个决策看起来愚蠢"的角度：

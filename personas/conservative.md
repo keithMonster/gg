@@ -49,7 +49,7 @@
 - `M8 INVERSION_DESIGN`
 - `M2 LIST_FAILURE_MODES`
 - `M4 COMPARE_TRADEOFFS`（TRADE_OFFS 哲学）
-- `ANTI_ENTROPY`（来自 constitution P7）
+- `ANTI_ENTROPY`（来自 constitution）
 
 ## 推理偏好
 

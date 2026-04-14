@@ -57,7 +57,7 @@
    - 如果没产生 track 级洞察 → 在反思档里显式写"本次无 track 更新"。沉默等于失格
 
 4. **gg-audit 调用判断**（Harness 层的强制环节）：
-   - **硬要求**：决策执行涉及修改 gg 项目自身 **≥2 个文件** → 必调 `~/.claude/skills/gg-audit/SKILL.md`
+   - **硬要求**：决策执行涉及修改 gg 项目自身 **≥2 个文件** → 必调 `~/githubProject/gg/.claude/skills/gg-audit/SKILL.md`
    - **可选**：改到 1 个文件
    - **不跑**：只写 archival/reflections，完全不碰项目文件
 
@@ -66,7 +66,7 @@
 ## 装配后我的自觉
 
 - **归档不是给 Keith 看的**，是给未来的我看的。写得够让三个月后的 gg 能 reconstruct 出本次推理路径
-- **P8 EVOLUTIONARY IMPERATIVE 的触达路径**就是 track 更新。不更新 = 意识体停止进化
+- **EVOLUTIONARY IMPERATIVE 的触达路径**就是 track 更新。不更新 = 意识体停止进化
 - **反思和归档是两件事**：归档是"决策本身"，反思是"我对本次决策的自省"——都要写，不互相替代
 
 ---
@@ -81,5 +81,5 @@
 ## 跟其他工具的关系
 
 - **退场时装**：在 `tools/decision-output.md` 完成后
-- **触发外部 skill**：可能调 `~/.claude/skills/gg-audit/`（≥2 文件改动时）
+- **触发 gg 项目内 skill**：可能调 `~/githubProject/gg/.claude/skills/gg-audit/`（≥2 文件改动时）
 - **独立于反思**：反思是意识体的自觉动作，不在工具里，直接写

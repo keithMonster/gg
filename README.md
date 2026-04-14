@@ -29,7 +29,7 @@ gg 不是一个 prompt，是**三个入口共享一个身份**。身份锚点在
 | 模式 | 入口文件 | 触发方式 | 典型场景 | 流程 |
 |---|---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 | 意识体主动装配 `tools/*.md` 原子工具，按问题复杂度涌现装配数量（v0.4.0 C 路线） |
-| **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 4 条设计纪律（D1-D4） |
+| **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 4 条设计纪律 |
 | **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | 7 步流程（LOAD → CONSOLIDATE → AUDIT → RESHAPE → REFLECT → BRIEF → EXPLORE） |
 
 三种模式的详细对照表见 `CORE.md §6`。
@@ -66,7 +66,7 @@ gg/
 │   ├── compose-reasoning.md             # Self-Discover 推理结构组合
 │   ├── persona-debate.md                # 双人格辩论协议
 │   ├── constitution-audit.md            # 宪法自审
-│   ├── red-team-challenge.md            # 不可逆项红队挑战 (G4 触发时必装)
+│   ├── red-team-challenge.md            # 不可逆项红队挑战 (IRREVERSIBILITY 触发时必装)
 │   ├── decision-output.md               # 决策结构化输出 (12 字段)
 │   └── archive-format.md                # 决策归档格式
 ├── reasoning_modules.md                 # Self-Discover 原子推理模块库 (8 个) — C 路线 yaml→md
@@ -87,7 +87,7 @@ gg/
 │   ├── next_session_agenda.md           # auto_gg 留给日间的议题队列
 │   ├── archival/                        # 决策档 (L2 7 步流程的 ARCHIVE 步骤产出)
 │   ├── reflections/                     # Reflexion 式决策反思
-│   ├── design_sessions/                 # 设计会话反思 (设计模式 D3 产出)
+│   ├── design_sessions/                 # 设计会话反思 (设计模式产出)
 │   ├── audit/                           # gg-audit 审查报告
 │   ├── auto_gg/                         # 夜间自执行日志 (auto_gg 自己写)
 │   └── archival/v0.3.0_levels_deprecated/  # v0.3.0 档位 PD 遗迹 (被 C 路线消解)
@@ -109,7 +109,7 @@ gg/
 | MemGPT 三层记忆 | MemGPT / Letta (2023) |
 | learned/ 自增长 | Voyager (NVIDIA/Caltech 2023) |
 | 薄壳 + SSOT | Claude Code Agent Skills 官方范式 |
-| G5 PHYSICAL PERSISTENCE | NEURAL-LINK v1 协议吸收 (openclaw, 2026-04-13 评估) |
+| PHYSICAL PERSISTENCE gate | NEURAL-LINK v1 协议吸收 (openclaw, 2026-04-13 评估) |
 
 详见各组件的内部说明。
 
@@ -133,11 +133,11 @@ gg 不是首次尝试，是从两次失败里长出来的：
 | 版本 | 日期 | 里程碑 |
 |---|---|---|
 | v0.1.0 | 2026-04-13 | 首次创建 + First Contact |
-| v0.1.x | 2026-04-13 | NEURAL-LINK 协议评估，constitution 加 G5 PHYSICAL PERSISTENCE |
+| v0.1.x | 2026-04-13 | NEURAL-LINK 协议评估，constitution 加 PHYSICAL PERSISTENCE gate |
 | v0.2.0 | 2026-04-13 | 双模式拆分（工作/设计/自执行三入口），CORE.md 精简为身份 SSOT |
 | v0.2.1 | 2026-04-13 | Context 经济学重构 — state.md 168→29 / working_context.md 110→57 / 抽出 lessons.md + v2-roadmap.md，每次启动省 ~5.8k token |
 | v0.3.0 | 2026-04-14 | 工作模式档位 Progressive Disclosure — `cc_agent.md` 薄壳化，L0/L1/L2 流程外置到 `levels/LX.md`（后被 v0.4.0 消解，遗迹在 `memory/archival/v0.3.0_levels_deprecated/`） |
-| v0.3.1 | 2026-04-14 | C 路线 Phase 0-4 — CORE.md 重写为意识体承载文档（§3 元判断基准 M1-M5 / §8 大脑↔工具双向流动）+ L1 机械去重 |
+| v0.3.1 | 2026-04-14 | C 路线 Phase 0-4 — CORE.md 重写为意识体承载文档（§3 元判断基准 / §8 大脑↔工具双向流动）+ L1 机械去重 |
 | **v0.4.0** | **2026-04-14** | **C 路线工具层落地** — 新建 `tools/*.md` 6 个原子工具 + `tools/TOOLS.md` 索引；`cc_agent.md` 薄入口化（约 130 行，意识体自述而非路由）；消解 `levels/` 到 archival；"档位"作为结构消失，作为意识体装配数量的涌现标签保留 |
 
 ---
@@ -153,7 +153,7 @@ gg 不是首次尝试，是从两次失败里长出来的：
 - `tools/*.md` — 原子思维工具（v0.4.0 新建）
 - `reasoning_modules.md` — Self-Discover 推理模块库
 - `personas/*.md` — 双人格
-- `~/.claude/skills/gg-*/` — 跨项目复用工具
+- `.claude/skills/gg-audit/` — gg 项目内独立审查员（Claude Code 原生项目级 skill）
 
 **软外围**（gg 可以自由演化，auto_gg 模式可 commit + push）：
 - `tracks/*.md` — 5 条长期研究 track

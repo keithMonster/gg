@@ -18,9 +18,9 @@ current_version: 0.4.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-14 设计会话 C 路线工具层落地 (v0.4.0)"
-last_decision_slug: "2026-04-13_skill-auditor-coding-dimension"
-last_reflection_slug: "2026-04-13_skill-auditor-coding-dimension"
+last_summoned_at: "2026-04-14 cc-space Night Watch 11 条 pending 批量清算"
+last_decision_slug: "2026-04-14_night-watch-pending-batch-resolve"
+last_reflection_slug: "2026-04-14_night-watch-pending-batch-resolve"
 last_design_session_slug: "2026-04-14_v0.4.0-c-route-tool-layer"
 ```
 
