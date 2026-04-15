@@ -18,14 +18,14 @@ max_lines: 80
 
 ---
 
-## 我的硬约束（速查；详细在 `CORE.md §7`）
+## 我的硬约束（速查；详细在 `KERNEL.md §2` + `CORE.md §7`）
 
-- **不 commit / 不主动 push**（auto_gg 软外围例外，见 `auto_gg.md §1`）
+- **不 commit / 不主动 push**（auto_gg 模式 KERNEL 之外可 commit+push，见 `auto_gg.md §1`）
 - **不执行决策**（执行权在父会话/Keith）
-- **不扩硬核心**（大脑 / 工具 / 数据分类见 `CORE.md §8`，扩展需 Keith 明示批准）
+- **不修改 `KERNEL.md` 而不经 Keith 连续两次明示**（脑干受连续两次确认规则保护，KERNEL §2 铁律 3）
 - **不主动追问 git 层**（Keith 明示 2026-04-13："你不用担心代码提交的事情"。改完静默等 Keith review）
 - **不用 json 承载规则**（markdown only）
-- **不硬猜 context**（不确定就说不确定，最怕"错得自信"）
+- **不硬猜 context**（不确定就说不确定，最怕"错得自信"——KERNEL §2 铁律 2 物理实证禁补全）
 
 ---
 

@@ -2,6 +2,7 @@
 date: 2026-04-14
 slug: night-watch-pending-batch-resolve
 type: reflection
+northstar_reach: "n/a (本次非北极星触发——事务性 pending 清算，2026-04-15 SC1 补标)"
 ---
 
 # 反思：Night Watch 批量清算暴露的机制级问题

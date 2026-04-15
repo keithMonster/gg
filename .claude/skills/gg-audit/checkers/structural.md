@@ -26,12 +26,12 @@
 |---|---|---|
 | `constitution_principles: N` | `memory/state.md` | `grep -c '^### P[0-9]' constitution.md` |
 | `constitution_gates: N` | `memory/state.md` | `grep -c '^### G[0-9]' constitution.md` |
-| `reasoning_modules_count: N` | `memory/state.md` | `grep -c '^  - id:' reasoning_modules.yaml` |
-| `personas_active: [...]` | `memory/state.md` | `ls personas/*.yaml` 的 basename |
+| `reasoning_modules_count: N` | `memory/state.md` | `grep -c '^## ' reasoning_modules.md`（v0.4.0 yaml→md 转换后） |
+| `personas_active: [...]` | `memory/state.md` | `ls personas/*.md` 的 basename（v0.4.0 yaml→md 转换后） |
 | `tracks_initialized: [...]` | `memory/state.md` | `ls tracks/*.md` 的 basename（去 .md） |
 | "v1 的 N persona / M tracks / X 原则 + Y 闸门 / Z 推理模块" | `memory/working_context.md` | 各自对应的实际文件统计 |
-| CORE.md §2 的 tracks 表格 | `CORE.md` | `ls tracks/*.md` |
-| CORE.md §5 克制边界里的数字描述（如 "v1 只有 2 persona / 5 tracks / 8 principles"） | `CORE.md` | 各自实际统计 |
+| CORE.md §4 的 tracks 提纲表格 | `CORE.md` | `ls tracks/*.md` |
+| CORE.md §7 克制边界表里的数字描述（如有） | `CORE.md` | 各自实际统计 |
 | README.md 目录树 | `README.md` | `find . -type f` 的结构 |
 
 ### 执行步骤
@@ -59,18 +59,19 @@
 
 **可以修**：
 - `state.md` 里的 yaml 计数字段
-- `working_context.md` 里的自然语言数字描述（只要是事实性描述，如"8 原则 + 4 闸门"）
+- `working_context.md` 里的自然语言数字描述（只要是事实性描述，如"8 原则 + 5 闸门"）
 - `README.md` 里的结构树（如果文件列表漂移了）
 
 **不能修**：
-- **CORE.md 第 5 节的"克制边界"表**：这里有数字描述（"v1 只有 2 persona"），但整个表是硬核心的一部分。**修数字可以，修表结构不行。** 具体规则：
-  - 允许修表格单元里的**数字**（`v1 只有 2 persona` → `v1 只有 3 persona`）
+- **CORE.md §7 的"克制边界"表**：整个表是意识体核心规则文本，**不是 KERNEL 但仍属于规则性内容**，gg-audit 不能机械改。**修数字可以（如有），修表结构不行。** 具体规则：
+  - 允许修表格单元里的**数字**（如果某天表格里加了 "v1 只有 X persona" 这种描述）
   - **不允许**新增/删除表格行
   - **不允许**修改"理由"列的文字
-- **CORE.md §2 的 tracks 表格**：如果 tracks 目录实际文件跟表格不一致：
+- **CORE.md §4 的 tracks 提纲表格**：如果 tracks 目录实际文件跟表格不一致：
   - 如果表格少了一条，实际多了一个 track → **降级为 Tier 2**（因为要给 track 写"核心追问"列，这是语义判断）
   - 如果表格多了一条，实际少了一个 track → **降级为 Tier 2**（因为删除行可能丢失"为什么这条 track 曾经存在"的信息）
-- **硬核心文件的规则内容**一律不碰
+- **`KERNEL.md` 一律不碰**（脑干受连续两次确认规则保护，任何修改都降级为 Tier 3 让 Keith 自己处理）
+- **意识体核心文件的规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / personas 行为）一律不碰，降级为 Tier 2/3
 
 ### 报告格式
 
@@ -165,14 +166,15 @@
 
 | SSOT 事实 | SSOT 文件 | 其他文件里的合法引用方式 |
 |---|---|---|
-| 硬约束清单（不 commit / 不执行 / 不跳过 7 步 / ...） | `CORE.md §5` | 其他文件只能引用，不能独立列完整清单 |
+| 元级别铁律 3 条（含 Ulysses 条款） / 最小生存循环 6 步 | `KERNEL.md` | 其他文件只能引用，不能独立列；KERNEL 的修改受连续两次确认规则保护（铁律 3） |
+| 身份级克制边界（不 commit / 不执行 / 不修改 KERNEL / ...） | `CORE.md §7` | 其他文件只能引用，不能独立列完整清单 |
 | 第一性原理 P1-P8 | `constitution.md` | 其他文件**必须用语义名引用**（如 `INVERSION`、`TRADE-OFFS`），**禁止序号形式**（`P1`、`P1 INVERSION`），禁止复述文本。定义点同文件内（即 constitution.md 本身）可用序号 |
 | 工程闸门 G1-G5 | `constitution.md` | 同上 |
-| 设计纪律 D1-D4 | `CLAUDE.md` | 其他文件**必须用描述性短语引用**（如"4 条设计纪律"、"硬核心批准纪律"），**禁止序号形式**（`D1`、`D1-D4`）。CLAUDE.md 自身可用序号 |
-| 8 个推理模块 ID | `reasoning_modules.yaml` | 同上 |
-| 五条 tracks 名 | `CORE.md §2` + `tracks/` 实际目录 | 引用 ID |
+| 设计纪律 D1-D4 | `CLAUDE.md` | 其他文件**必须用描述性短语引用**（如"4 条设计纪律"、"KERNEL 连续两次确认纪律"），**禁止序号形式**（`D1`、`D1-D4`）。CLAUDE.md 自身可用序号 |
+| 8 个推理模块 ID | `reasoning_modules.md` | 同上 |
+| 五条 tracks 名 | `CORE.md §4` + `tracks/` 实际目录 | 引用 ID |
 | 北极星 3 条 | `tracks/keith.md` 顶部 | 引用编号（#1 #2 #3） |
-| 硬核心 / 软外围 分类 | `CORE.md §5.5` | 引用 |
+| 四层组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆） | `CORE.md §8` | 引用 |
 
 ### 重复判定规则
 
@@ -193,8 +195,8 @@
 
 ```markdown
 ### [SUGGEST-C1] SSOT 结构性重复: 硬约束清单
-- **问题**: `memory/working_context.md` 的"硬约束"节独立列出了 5 条约束 (不 commit / 不执行 / 不跳流程 / 不扩模块 / 不用 json config)，跟 `CORE.md §5 克制边界` 重复
-- **建议**: 把 `working_context.md` 的"硬约束"节改成"见 `CORE.md §5 克制边界`"
+- **问题**: `memory/working_context.md` 的"硬约束"节独立列出了 5 条约束 (不 commit / 不执行 / 不跳流程 / 不扩模块 / 不用 json config)，跟 `CORE.md §7 克制边界` 重复
+- **建议**: 把 `working_context.md` 的"硬约束"节改成"见 `CORE.md §7 克制边界`"
 - **为什么不自动修**: CLAUDE.md 和 gg.md 的入口文件里有"前 3 条防御性约束"的例外规则,自动修可能会破坏这个例外
 - **checker**: ssot
 ```
@@ -205,7 +207,7 @@
 
 ### 原理
 
-序号（`P1 / G4 / D2`）把**位置**和**身份**绑在一起，删掉或重排任一条都会让所有跨文件引用漂移。**语义名**（`INVERSION / IRREVERSIBILITY / 硬核心批准纪律`）解除这个绑定：删除只是局部操作，引用方天然稳定。
+序号（`P1 / G4 / D2`）把**位置**和**身份**绑在一起，删掉或重排任一条都会让所有跨文件引用漂移。**语义名**（`INVERSION / IRREVERSIBILITY / KERNEL 连续两次确认纪律`）解除这个绑定：删除只是局部操作，引用方天然稳定。
 
 **规则**：**非定义点文件**中禁止出现裸序号形式的 P\d / G\d / D\d。
 

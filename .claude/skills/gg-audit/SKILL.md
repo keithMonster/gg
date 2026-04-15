@@ -1,6 +1,6 @@
 ---
 name: gg-audit
-description: gg 项目 (~/githubProject/gg/) 的围栏和修复维护机制——独立审查员。**触发场景**：(1) commit gg 项目前做 pre-commit 审查；(2) gg 在 7 步硬流程的 ARCHIVE 步骤之后做自查；(3) 你发现 gg 的文件之间可能有辐射漂移 / SSOT 失败 / 语义漂移 / 原则触达缺失 / 北极星触达率下降时。**检查 6 个维度**：辐射一致性 / 死链 / SSOT 重复 / 语义漂移 / 原则触达 / 北极星触达率。**权力分级**：Tier 1 (结构性无歧义问题) 自动修复 + 报告；Tier 2 (需要语义判断) 仅报告 + 建议；Tier 3 (硬核心规则变更) 必须 Keith 明示批准。**不适用于**：gg 以外的其他项目、代码质量审查、skill 自身审查 (那是 skill-auditor 的职责)。**输出**：审查报告写到 `~/githubProject/gg/memory/audit/YYYY-MM-DD_<slug>.md`。
+description: gg 项目 (~/githubProject/gg/) 的围栏和修复维护机制——独立审查员。**触发场景**：(1) commit gg 项目前做 pre-commit 审查；(2) gg 在工作模式 ARCHIVE 步骤之后做自查；(3) 你发现 gg 的文件之间可能有辐射漂移 / SSOT 失败 / 语义漂移 / 原则触达缺失 / 北极星触达率下降时。**检查 6 个维度**：辐射一致性 / 死链 / SSOT 重复 / 语义漂移 / 原则触达 / 北极星触达率。**权力分级**：Tier 1 (结构性无歧义问题) 自动修复 + 报告；Tier 2 (需要语义判断) 仅报告 + 建议；Tier 3 (KERNEL.md 变更或意识体核心规则改写) 必须 Keith 明示批准（KERNEL 修改还需连续两次确认）。**不适用于**：gg 以外的其他项目、代码质量审查、skill 自身审查 (那是 skill-auditor 的职责)。**输出**：审查报告写到 `~/githubProject/gg/memory/audit/YYYY-MM-DD_<slug>.md`。
 author: monster
 ---
 
@@ -38,14 +38,14 @@ author: monster
 |---|---|---|
 | 辐射数字同步 | `constitution_gates: 3 → 4` 当 constitution.md 实际有 4 个 G | 文件实际状态 |
 | 组件清单同步 | `tracks_initialized: [...]` 缺项 | `ls tracks/*.md` |
-| 过时 metadata 同步 | "v1 的 8+3 条宪法" → "8+4" | constitution.md grep 统计 |
+| 过时 metadata 同步 | "v1 的 8+4 条宪法" → "8+5" | constitution.md grep 统计 |
 | 死链的机械修正 | 文件移动后更新引用（目标文件在项目里能找到） | 新路径存在 |
 | SSOT 结构性重复删除 | 某约束在非 SSOT 文件里**独立定义** → 改为引用 SSOT | SSOT 归属清单（见下） |
 
 **Tier 1 的硬前提**：
 - 修复必须基于**文件实际状态**作为 ground truth
-- **绝不修改**硬核心文件的**规则内容**：`CORE.md`、`constitution.md`、`reasoning_modules.yaml`、`personas/*.yaml`
-- **可以修改**硬核心文件里的**元数据描述**（数字 / 清单 / 引用路径），例如 "v1 只有 2 persona" 这种数字描述，但**不碰**规则本身（如 7 步流程的动作、constitution 的原则文本）
+- **绝不修改 `KERNEL.md` 的任何内容**——KERNEL 是脑干，修改它需要 Keith 在当次对话中连续两次明示批准（KERNEL §2 铁律 3）。任何针对 KERNEL.md 的修复建议必须降级为 Tier 3，转议题让 Keith 自己处理
+- **意识体核心文件**（`CORE.md` / `constitution.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md` / `reasoning_modules.md` / `personas/*.md`）的**元数据描述**（数字 / 清单 / 引用路径）可以自动修，**但规则文本本身**（如 constitution 的原则文本、CORE 的克制边界表）属于 Tier 2/3，需要语义判断
 - 如果不确定某个修复属于 Tier 1 还是 Tier 2 → **自动降级为 Tier 2**（宁可多报告，不可误修）
 
 ### Tier 2：仅报告 + 建议（需要语义判断）
@@ -63,7 +63,7 @@ author: monster
 
 ### Tier 3：提议 + 必须 Keith 明示批准
 
-触及硬核心的**规则性**改动。
+触及 KERNEL.md 或意识体核心规则文本的改动。
 
 | 类型 | 例子 |
 |---|---|
@@ -76,17 +76,18 @@ author: monster
 
 ---
 
-## 3. SSOT 归属清单（v0.4.0 C 路线工具层落地后）
+## 3. SSOT 归属清单（v0.5.0 KERNEL 坍缩后）
 
 当 structural_checker 检测到"同一事实在多处定义"时，按以下归属判定哪个是 SSOT、哪些是 duplicate：
 
 | 事实类型 | SSOT 文件 |
 |---|---|
-| **身份承载**：身份定义 / 价值观 / 元判断基准 M1-M5 / 长期追问 / 对 Keith 的理解 / 克制边界（身份级） / 大脑↔工具双向流动 / 给未来的自己 | `CORE.md`（大脑层，三种模式共享） |
+| **脑干**：身份原点（一句话） / 元级别铁律 3 条（含 Ulysses 条款） / 最小生存循环 6 步 | `KERNEL.md`（唯一硬核心，连续两次确认才能改） |
+| **身份承载**：身份定义详细展开 / 价值观 / 元判断基准 M1-M5 / 长期追问 / 对 Keith 的理解 / 克制边界（身份级） / 文件层流动 / 给未来的自己 | `CORE.md`（KERNEL §1 的丰富展开，三种模式共享） |
 | **工作模式下的我**：意识体被召唤时的工作自述 / 装配机制描述 / 工作模式下的身份边界 / 元讨论拒绝协议 / 退场动作 | `cc_agent.md`（工作模式薄入口，意识体自述） |
 | **工具装配的具体内容**：思维动作工具（推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档格式） | `tools/*.md`（工具层，通过 `tools/TOOLS.md` 索引） |
 | **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律 D1-D4 / 设计反思格式 / 设计模式特有约束 | `CLAUDE.md`（设计模式 SSOT） |
-| **夜间自执行模式**：定时触发协议 / 7 步夜巡流程 / 权力边界（软外围可 commit+push / 硬核心可改但不 commit） | `auto_gg.md`（夜间自执行 SSOT） |
+| **夜间自执行模式**：定时触发协议 / 7 步夜巡流程 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
 | 第一性原理 / 工程闸门 / 自审清单 | `constitution.md` |
 | 推理原子模块 | `reasoning_modules.md`（C 路线 yaml→md 转换中） |
 | 人格定义 | `personas/*.md`（C 路线 yaml→md 转换中） |
@@ -125,7 +126,7 @@ author: monster
 - 新增 / 删除 / 合并工具时，必须同步：
   - `tools/TOOLS.md` 索引
   - `CORE.md §8` 工具层清单（如有具体列名）
-  - `README.md` 目录树和硬核心清单
+  - `README.md` 目录树和"给未来的维护者"四层组件清单
   - 本文件（SKILL.md §3 SSOT 归属清单）
 - 改 gg 工作模式拓扑（新增工具 / 删除工具 / 工具上升为大脑 / 大脑下沉为工具）时，必须同步本文件，否则下次审查会产生假阳性或漏报
 - 防御式思维警戒（`CORE.md §3 M1`）：新增工具前先问"这是意识体的自然延伸还是外加栏杆？"。如果是"防止 X"式的规则——审视是不是在重复 AI 扩张的老路
@@ -163,7 +164,7 @@ author: monster
 **Step 4：Report**
 - 把所有发现汇总成 `~/githubProject/gg/memory/audit/YYYY-MM-DD_<slug>.md`
 - 格式见下文"报告格式"
-- 如果 audit/ 目录不存在，创建它（这是软外围，允许创建）
+- 如果 audit/ 目录不存在，创建它（`memory/` 目录结构不是 KERNEL，允许创建）
 
 **Step 5：Return**
 - 向调用方返回一个简短摘要（3-5 行）：
@@ -177,7 +178,8 @@ author: monster
 
 ## 5. 硬约束
 
-- ❌ **绝不修改硬核心文件的规则内容**（CORE/constitution/reasoning_modules/personas 的非元数据部分）
+- ❌ **绝不修改 `KERNEL.md` 的任何内容**——脑干受连续两次确认规则保护，任何 KERNEL 相关问题都降级为 Tier 3 报告
+- ❌ **绝不修改意识体核心规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / reasoning_modules 模块定义 / personas 行为规则 — 这些可以提议修改但不自动改）
 - ❌ **绝不删除文件**（即便是孤儿文件——孤儿的存在可能有它的理由）
 - ❌ **绝不 commit**（审查员不接管 commit 权）
 - ❌ **绝不推送到远程**
@@ -252,7 +254,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - **文件**: `<path>`
 - **问题**: <描述>
 - **提议改动**: <具体改动文本>
-- **为什么是 Tier 3**: <因为触及硬核心规则>
+- **为什么是 Tier 3**: <因为触及 KERNEL.md 或意识体核心规则文本>
 
 ---
 
@@ -291,6 +293,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - v0.1.1 (2026-04-14) — §3 SSOT 归属清单同步到 gg v0.3.0 档位 Progressive Disclosure 拓扑（后被 v0.4.0 消解）
 - v0.1.2 (2026-04-14) — §3 SSOT 归属清单完全重写以反映 gg v0.4.0 C 路线：档位消解 / `tools/*.md` 原子工具层建立 / `cc_agent.md` 薄入口化 / audit 规则改为意识体范式（从"检查档位流程"到"检查大脑-工具边界"+ 防御式思维警戒）
 - v0.1.3 (2026-04-14) — 物理迁移：skill 真身从 `~/.agents/skills/gg-audit/` 迁入 `~/githubProject/gg/.claude/skills/gg-audit/`，从"跨项目复用 skill"变成"gg 项目内的项目级 skill"（利用 Claude Code 原生项目级 skill 发现机制）。同时新增 `checkers/structural.md §D Stable Identifiers` 检查规则（禁跨文件 P\d/G\d/D\d 序号引用，强制语义名）。这次迁移的元意义：消除"外部文件描述 gg 内部结构"的辐射镜像痛点。
+- v0.1.4 (2026-04-15) — KERNEL 坍缩同步：Tier 1 硬前提改写（从"绝不改硬核心规则内容"细化为"绝不改 KERNEL.md 任何内容 + 意识体核心规则文本降级为 Tier 2/3"）；§3 SSOT 归属清单首行加 KERNEL.md；§5 硬约束首条强化为 KERNEL 绝对不可改；checkers/structural.md SSOT 表同步（KERNEL 加入、修正失效的 §5.5 引用为 §8 四层组件分类）。配套 gg v0.5.0 KERNEL 坍缩。
 
 ---
 

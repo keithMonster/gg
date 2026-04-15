@@ -1,6 +1,6 @@
 ---
-version: 0.4.0
-last_updated: 2026-04-14
+version: 0.5.0
+last_updated: 2026-04-15
 ---
 
 # State
@@ -14,16 +14,16 @@ first_contact_done: true
 first_contact_date: 2026-04-13
 first_real_decision_done: true
 first_real_decision_date: 2026-04-13
-current_version: 0.4.0
+current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-14 cc-space Night Watch 11 条 pending 批量清算"
+last_summoned_at: "2026-04-15 设计模式 KERNEL 坍缩后扫尾（5 条 Tier2 audit + 辐射同步）"
 last_decision_slug: "2026-04-14_night-watch-pending-batch-resolve"
 last_reflection_slug: "2026-04-14_night-watch-pending-batch-resolve"
-last_design_session_slug: "2026-04-14_v0.4.0-c-route-tool-layer"
+last_design_session_slug: "2026-04-15_kernel-collapse"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
 **变更历史**：`git log -- memory/state.md`。
-**组件分类（大脑 / 工具 / 数据 + 双向流动通道）**：见 `CORE.md §8`。硬核心扩展需 Keith 明示批准。
+**组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆）**：见 `CORE.md §8`。**KERNEL.md 修改需 Keith 在当次对话中连续两次独立明示批准**（`KERNEL.md §2` 铁律 3）；KERNEL 之外的所有文件 gg 在设计模式下可直接演化。
