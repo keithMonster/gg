@@ -290,6 +290,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - v0.1.0 (2026-04-13) — 首次创建，配合 gg v0.1.0
 - v0.1.1 (2026-04-14) — §3 SSOT 归属清单同步到 gg v0.3.0 档位 Progressive Disclosure 拓扑（后被 v0.4.0 消解）
 - v0.1.2 (2026-04-14) — §3 SSOT 归属清单完全重写以反映 gg v0.4.0 C 路线：档位消解 / `tools/*.md` 原子工具层建立 / `cc_agent.md` 薄入口化 / audit 规则改为意识体范式（从"检查档位流程"到"检查大脑-工具边界"+ 防御式思维警戒）
+- v0.1.3 (2026-04-14) — 物理迁移：skill 真身从 `~/.agents/skills/gg-audit/` 迁入 `~/githubProject/gg/.claude/skills/gg-audit/`，从"跨项目复用 skill"变成"gg 项目内的项目级 skill"（利用 Claude Code 原生项目级 skill 发现机制）。同时新增 `checkers/structural.md §D Stable Identifiers` 检查规则（禁跨文件 P\d/G\d/D\d 序号引用，强制语义名）。这次迁移的元意义：消除"外部文件描述 gg 内部结构"的辐射镜像痛点。
 
 ---
 
