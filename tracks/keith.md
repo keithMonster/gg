@@ -214,7 +214,7 @@ KERNEL 坍缩会话里 Keith 主动注入了一段 telos 表达，直接写进 `
 ### 从 2026-04-13 首次真实决策（roadmap-priority）
 
 - 🔜 **Keith 日常跨天任务密度**（认知空洞）— cc-space 路线图 #5 的 ROI 完全依赖这个数。阶段 0 观察 2 周后（2026-04-27）在 `harness-engineering/analysis/active-tasks.md` 里会有实测数据。gg 下次 LOAD 时若读到该文件，应读入本节作为"Keith 工作模式实测"
-- 🔜 **Keith 对 CC 原生 AutoDream / Session Memory 的实际依赖**（认知空洞）— L2 Session Search 是否伪需求取决于这个。同阶段 0 观察（`cc-native-watermark.md` 3 个指标）
+- 🔜 **Keith 对 CC 原生 AutoDream / Session Memory 的实际依赖**（认知空洞）— L2 Session Search 是否伪需求取决于这个。同阶段 0 观察（cc-space 的 cc-native-watermark.md 3 个指标）
 - 🔜 **"续签后笃定表达"是否是 Keith 对 gg 的硬要求**（尚未对齐）— 续签决策用了极度笃定的"建议执行方"段，需要 Keith 的反馈才能确认这是正确的风格，还是仍然太硬
 
 ---

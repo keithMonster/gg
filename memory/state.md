@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-15 设计模式 KERNEL 坍缩后扫尾（5 条 Tier2 audit + 辐射同步）"
+last_summoned_at: "2026-04-16 设计模式 推理增强——solution-space 工具 + G5 推理断言延伸 + essence 进启动 Read"
 last_decision_slug: "2026-04-14_night-watch-pending-batch-resolve"
 last_reflection_slug: "2026-04-14_night-watch-pending-batch-resolve"
-last_design_session_slug: "2026-04-15_kernel-collapse"
+last_design_session_slug: "2026-04-16_reasoning-enhancement"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

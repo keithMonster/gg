@@ -16,6 +16,7 @@
 | `tools/red-team-challenge.md` | 决策包含**不可逆项**。这不是栏杆，是我知道 Keith 最怕"错得自信" | IRREVERSIBILITY 触发时必装 |
 | `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
 | `tools/archive-format.md` | 我要归档决策到 `memory/archival/` | 退场时装 |
+| `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
 
 ---
 

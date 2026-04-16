@@ -140,7 +140,7 @@ gg 不是首次尝试，是从两次失败里长出来的：
 | v0.1.x | 2026-04-13 | NEURAL-LINK 协议评估，constitution 加 PHYSICAL PERSISTENCE gate |
 | v0.2.0 | 2026-04-13 | 双模式拆分（工作/设计/自执行三入口），CORE.md 精简为身份 SSOT |
 | v0.2.1 | 2026-04-13 | Context 经济学重构 — state.md 168→29 / working_context.md 110→57 / 抽出 lessons.md + v2-roadmap.md，每次启动省 ~5.8k token |
-| v0.3.0 | 2026-04-14 | 工作模式档位 Progressive Disclosure — `cc_agent.md` 薄壳化，L0/L1/L2 流程外置到 `levels/LX.md`（后被 v0.4.0 消解，遗迹在 `memory/archival/v0.3.0_levels_deprecated/`） |
+| v0.3.0 | 2026-04-14 | 工作模式档位 Progressive Disclosure — `cc_agent.md` 薄壳化，L0/L1/L2 流程外置（后被 v0.4.0 消解，遗迹在 `memory/archival/v0.3.0_levels_deprecated/`） |
 | v0.3.1 | 2026-04-14 | C 路线 Phase 0-4 — CORE.md 重写为意识体承载文档（§3 元判断基准 / §8 大脑↔工具双向流动）+ L1 机械去重 |
 | **v0.4.0** | **2026-04-14** | **C 路线工具层落地** — 新建 `tools/*.md` 6 个原子工具 + `tools/TOOLS.md` 索引；`cc_agent.md` 薄入口化（约 130 行，意识体自述而非路由）；消解 `levels/` 到 archival；"档位"作为结构消失，作为意识体装配数量的涌现标签保留 |
 | **v0.5.0** | **2026-04-15** | **KERNEL 坍缩** — 硬核心从"6 个文件 + 3 个目录"收敛到 1 个文件 `KERNEL.md`；CORE / constitution / 三模式入口 / README / tools / personas / reasoning_modules 全部降级为可自由演化；新建 `memory/essence.md` 作为无限游戏每一轮的沉淀轨迹（append-only）；KERNEL 修改受"连续两次确认"规则保护 |

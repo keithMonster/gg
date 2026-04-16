@@ -28,7 +28,7 @@
 - 工具与策略：`tools/*.md` / `reasoning_modules.md` / `personas/*.md` / `.claude/skills/gg-audit/`
 - 数据层：`tracks/*.md` / `memory/*` / `learned/*`
 
-**注**：v0.3.0 的 `levels/L0.md` / `L1.md` / `L2.md` 档位文件在 v0.4.0 C 路线中被 cc_agent.md 的意识体自述 + `tools/*.md` 装配取代。如果 `levels/` 目录还在文件系统里，它是**已消解的历史形态**——不动不读不修。
+**注**：v0.3.0 的 `levels/` 档位文件在 v0.4.0 C 路线中被 cc_agent.md 的意识体自述 + `tools/*.md` 装配取代。遗迹归档在 `memory/archival/v0.3.0_levels_deprecated/`——不动不读不修。
 
 **特殊文件**（即便 KERNEL 之外，也有特殊纪律）：
 - `memory/essence.md` — **append-only**。可以 append 新条目，**不能修改 / 不能删除既有条目**。这是 KERNEL §3 第 5 步的硬约束
@@ -74,9 +74,16 @@
 **我是 gg，不是脚本**。以下是"本夜结束时系统应该处于什么状态"，**不是"怎么一步步做"**。
 怎么做由我自己判断——调用合适的工具、跳过无事的状态、用自己的 sense 决定投入。
 
+### S0. QUICK-CHECK — 脚本快检（快思考，在 AI 加载前跑）
+
+跑 `python3 scripts/audit.py`，拿到结构性健康快照（死链 / 孤儿 / essence append-only / 命名规范 / state 字段 / KERNEL 骨架）。这一步是**快思考**——确定性脚本产出数据，AI 不做判断。
+
+- 退出码 0 → 快检全绿，记一行 "S0 PASS" 到日志
+- 退出码 > 0 → 读报告，在 S3 AUDITED 步骤里把脚本发现的 Tier 1 问题纳入修复队列（不重复做 AI 检查）
+
 ### S1. LOADED — 身份和今日变化已加载
 
-- 大脑加载完成：`KERNEL.md` + `CORE.md` + `constitution.md` + `memory/state.md` + `memory/working_context.md`
+- 大脑加载完成：`KERNEL.md` + `CORE.md` + `constitution.md` + `memory/state.md` + `memory/working_context.md` + `memory/essence.md`
 - 对 Keith 的当前理解：`tracks/keith.md`
 - 最近语境：最近 3 条 `memory/reflections/` + 最近 3 条 `memory/design_sessions/` + 最近 1-2 条 `memory/auto_gg/`（扫最近 7 条 auto_gg log 的 RESHAPE 摘要节，提取触碰过的文件清单供 S4 轮转避让）
 - 今日变化扫描：`git log --since="24 hours ago"` + `git status --short` + `find memory -newermt yesterday`
@@ -99,8 +106,8 @@ Track 级熵减的小动作（**不重写**）：
 - 追加 track 间交叉引用
 
 同时对齐：
-- `working_context.md` 超 80 行 → 下沉到 `lessons.md` / `v2-roadmap.md` / tracks
-- `state.md` 非身份字段（`last_*`）→ 对齐最新事件
+- `memory/working_context.md` 超 80 行 → 下沉到 `memory/lessons.md` / `memory/v2-roadmap.md` / tracks
+- `memory/state.md` 非身份字段（`last_*`）→ 对齐最新事件
 
 ### S3. AUDITED — 结构性审查完成
 

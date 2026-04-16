@@ -41,10 +41,10 @@ last_updated: 2026-04-13
 
 **规模**：四层协议 + 三级记忆 + 影子董事会 + 14+ skill
 
-**架构**：
-- 宪法 `AGENTS.md`
-- OS `system_prompt.md`（Ouroboros Kernel）
-- 注册表 `SELF_EVOLUTION.md`
+**架构**（cg 项目内文件，gg 不含）：
+- 宪法 AGENTS.md
+- OS system_prompt.md（Ouroboros Kernel）
+- 注册表 SELF_EVOLUTION.md
 - 懒加载 skill
 - 三级记忆：Session → Recent → Core
 - 影子董事会：radical / conservative / humanist 三人格辩论

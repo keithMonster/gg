@@ -89,7 +89,7 @@ last_updated: 2026-04-15
 
 - `[STRATEGIC]` **FIRST-PRINCIPLES / MVP-FIRST / DECOMPOSITION / RADIATION-CHECK / ROOT-CAUSE-NOT-HACK / CONTRACT-BEFORE-CODE / PHYSICAL PERSISTENCE 在工作模式工具中无显式触达点**
   - 背景：当前依赖 `tools/constitution-audit.md` 的"逐条对照"笼统覆盖。上述 7 条原则/闸门缺少直接触达
-  - 建议方向：在 `tools/constitution-audit.md` 加"适用闸门快速检查清单"子段，或新建 `tools/gate-check.md` 原子工具专门负责闸门触达
+  - 建议方向：在 `tools/constitution-audit.md` 加"适用闸门快速检查清单"子段，或新建 tools/gate-check.md 原子工具专门负责闸门触达（尚未创建）
   - 来源：auto_gg 首夜审查 SB1-SB4 + 2026-04-14 post-stable-identifiers audit SA4（补齐 G5 PHYSICAL PERSISTENCE）
   - 路径变更历史：v0.3.0 从 cc_agent.md §6 迁到 levels/L2.md §3 第 4 步；v0.4.0 从 levels/L2.md 消解到 tools/constitution-audit.md
 
