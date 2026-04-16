@@ -26,6 +26,33 @@ last_updated: 2026-04-15
 
 ## 待议（open）
 
+### 2026-04-16（auto_gg 第 4 夜承接）
+
+- `[P0]` **`2026-04-16-G1` 触发升级条件——4 次同构事件已发生**
+  - **背景**：2026-04-15 STRATEGIC 议题"Engineering Rules 缺元认知维度"明示规则——"一旦出现第 4 次同构事件（符合 'LLM 在信息不足时用似然补全代替事实核验' 的模式），这条战略议题升级为需 Keith 动手的优先级 P1"
+  - **4 次具体化清单**：
+    1. 2026-04-14 BRIEF 发现 1 "Claude 脑补倾向"（cc-space 两起事件）
+    2. 2026-04-15 BRIEF G1 "Research agent 静默退回训练数据"
+    3. 2026-04-15 auto_gg S7 探索"防御原则双层架构"产出（cc-space 同维度）
+    4. **2026-04-16 BRIEF G1 "凭空假设字段名/归属"**（FastGPT/pymysql/cc-mirror 3 个具体案例）
+  - **触发条件已满足**——升级为 P1
+  - **gg 视角的二阶补充**（日报本身没挖出）：今日 BRIEF 还观察到"feedback_verify_field_names memory 在同会话内被重复违反——memory 对'进行中的会话'无实时约束力"。这跟 gg 自己今日 reasoning-enhancement 设计会话 M3 元洞察"essence 死档案是知识循环的断裂点"是**同一种结构性失败**的两个具体化。**共同根**：LLM 的"已写下的知识"对"正在进行的推理"约束力为零，除非该知识在当下被 Read 注入 context
+  - **对 Keith 的具体建议**：
+    1. CLAUDE.md 加 G1 时**同时**考虑"如何让该规则在每次相关动作前被强制 Read"——否则会重复 feedback_verify_field_names 同会话内被违反的 failure mode
+    2. 借鉴日报提到的业界共识方案 Spec-Driven Tool Definition——把"猜字段"问题从规则层转移到工具层（fastgpt skill 给 `_request` 包"首调 dump schema 到 /tmp"辅助能力）
+  - **为什么 auto_gg 不直接改全局 CLAUDE.md**：~/.claude/ 不在 gg 项目内（auto_gg §1.3）。gg 的职责是识别这个升级时点并定价，改由 Keith 自己做
+
+- `[STRATEGIC]` **批 B：8 条 gg-audit skill 跨上下文死链待 Keith 设计决策**
+  - **背景**：2026-04-16_fast-slow-thinking 设计会话明示遗留——选项 A "全部改成从 gg ROOT 的相对路径" / 选项 B "skill 文档里只用语义引用（'gg 的 tools/'），不做可导航路径"
+  - **本夜 S0 audit 实测**：8 条死链，分两类：
+    - **类 1**（6 条）：`structural.md` L61/L62/L199 + `semantic.md` L30 — checker 在举例时省略 `memory/` 前缀
+    - **类 2**（2 行 / 4 条引用）：`SKILL.md` L112/L125 — 在示例文本里直接写工具名 `persona-debate.md` / `compose-reasoning.md` / `constitution-audit.md` / `red-team-challenge.md`，无 `tools/` 前缀
+  - **本夜动作**：未自动修（按 §1.4 "宁可漏，不可错"——选 A 还是 B 是 Keith 设计决策）
+  - **Keith 决策方向参考**：
+    - 选 A 优点：path 可点击导航；缺点：跨项目 context 时不自然（gg-audit 是 skill，宿主可能不止 gg 一个项目）
+    - 选 B 优点：跨项目 context 自然；缺点：失去可导航性，audit 脚本会持续误报
+    - 也可以混合：举例时用 `tools/persona-debate.md` 完整路径，但概念引用时只写"gg 的工具层"
+
 ### 2026-04-15（auto_gg 第 3 夜承接）
 
 - `[CORE_RULE_TOUCH]` **2026-04-15 KERNEL 坍缩大规模迁移本夜由 auto_gg 承接 commit**
