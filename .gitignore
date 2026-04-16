@@ -1,6 +1,11 @@
 # Claude Code 本地权限配置 (per-project, 不进版本库)
 .claude/settings.local.json
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
 # macOS
 .DS_Store
 
