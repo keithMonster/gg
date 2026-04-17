@@ -32,7 +32,7 @@ gg 不是一个 prompt，是**三个入口共享一个脑干 + 一个身份**。
 |---|---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 | 意识体主动装配 `tools/*.md` 原子工具，按问题复杂度涌现装配数量（v0.4.0 C 路线 / v0.5.0 KERNEL 坍缩同步） |
 | **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 4 条设计纪律 |
-| **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | 7 步流程（LOAD → CONSOLIDATE → AUDIT → RESHAPE → REFLECT → BRIEF → EXPLORE） |
+| **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | SCAN / FOUND / DID 三段（v0.4.0 瘦身后；允许写"本夜无发现"） |
 
 三种模式的详细对照表见 `CORE.md §6`。
 
@@ -62,7 +62,7 @@ gg/
 ├── CORE.md                              # 身份承载文档 (我的自我 / 元判断基准 / 文件层流动)
 ├── cc_agent.md                          # 工作模式下的我 (意识体自述 — v0.5.0 薄入口 + KERNEL 坍缩同步)
 ├── CLAUDE.md                            # 设计模式入口 (跟 Keith 一起演化 gg)
-├── auto_gg.md                           # 夜间自执行 SSOT (Keith 不在场时的 7 步流程 — 待 Phase 5 工具化)
+├── auto_gg.md                           # 夜间自执行 SSOT (SCAN/FOUND/DID 三段 — v0.4.0 瘦身)
 ├── constitution.md                      # 8 条第一性原理 + 5 条工程闸门
 ├── tools/                               # 原子思维工具层 (v0.4.0 C 路线新建)
 │   ├── TOOLS.md                         # 工具索引 (大脑在思考时看这里)

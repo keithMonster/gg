@@ -87,7 +87,7 @@ author: monster
 | **工作模式下的我**：意识体被召唤时的工作自述 / 装配机制描述 / 工作模式下的身份边界 / 元讨论拒绝协议 / 退场动作 | `cc_agent.md`（工作模式薄入口，意识体自述） |
 | **工具装配的具体内容**：思维动作工具（推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档格式） | `tools/*.md`（工具层，通过 `tools/TOOLS.md` 索引） |
 | **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律 D1-D4 / 设计反思格式 / 设计模式特有约束 | `CLAUDE.md`（设计模式 SSOT） |
-| **夜间自执行模式**：定时触发协议 / 7 步夜巡流程 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
+| **夜间自执行模式**：定时触发协议 / SCAN-FOUND-DID 三段契约 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
 | 第一性原理 / 工程闸门 / 自审清单 | `constitution.md` |
 | 推理原子模块 | `reasoning_modules.md`（C 路线 yaml→md 转换中） |
 | 人格定义 | `personas/*.md`（C 路线 yaml→md 转换中） |

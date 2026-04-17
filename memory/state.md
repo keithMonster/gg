@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-16 设计模式 推理增强——solution-space 工具 + G5 推理断言延伸 + essence 进启动 Read"
+last_summoned_at: "2026-04-17 设计模式 auto_gg 瘦身——7 步→SCAN/FOUND/DID 三段 + 日志 50 行上限 + 探索按需触发"
 last_decision_slug: "2026-04-14_night-watch-pending-batch-resolve"
 last_reflection_slug: "2026-04-14_night-watch-pending-batch-resolve"
-last_design_session_slug: "2026-04-16_reasoning-enhancement"
+last_design_session_slug: "2026-04-17_auto-gg-slimming"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
