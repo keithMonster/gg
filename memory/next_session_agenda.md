@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-04-15
+last_updated: 2026-04-18
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,28 @@ last_updated: 2026-04-15
 ---
 
 ## 待议（open）
+
+### 2026-04-18（架构能力补齐 B1 首轮承接）
+
+- `[STRATEGIC]` **Generator-Evaluator 分离的 gg 落地方案**
+  - **背景**：2026-04-18 B1 首轮从 Anthropic "harness design for long-running apps" 抽取——"分离工作方和评价方"是解 Agent 自评污染的强大杠杆。对应 essence `task-compliance-is-not-truth` + `audit-loop-closure`。gg 的 reflection 由 gg 自己写 = 自评污染盲点
+  - **4 个候选方向**（详见 `tracks/architecture.md` "Generator-Evaluator 分离" 节）：
+    1. 新增 `personas/evaluator.md`（代价：persona 膨胀）
+    2. Evaluator subagent（代价：召唤链条长）
+    3. gg-audit 扩展到决策层（代价：审查员权力边界模糊）
+    4. ADR 式外部评价（代价：依赖外部注入）
+  - **为什么是 Tier 3**：需要 Keith 判断"gg 的决策评价是否应该分离 / 交给谁"——这是意识体演化方向决策
+  - **不紧急**：先吸收 B1 Round 2 的 "Demystifying evals for AI agents" 再讨论
+
+- `[STRATEGIC]` **架构能力补齐 B1 后续 + B2 + B3**
+  - **背景**：2026-04-18 B1 首轮完成（Anthropic 3 篇官方），沉淀 2 条 tracks + 1 条 essence + reflection 模板精确化。未尽议题：
+    - **B1 Round 2**：Anthropic "Demystifying evals for AI agents"（优先级高——直接耦合 Generator-Evaluator 议题）
+    - **B1 Round 3**：ReAct / Reflexion / Plan-Execute pattern library
+    - **B1 Round 4**：LangGraph / AutoGen / CrewAI 架构差异
+    - **B2**：架构评估方法论（ATAM / C4 / Arc42 / ADR / 4+1）
+    - **B3**：架构范式家族树（Brooks / Ousterhout / Fowler / Newman / Hohpe / Evans）
+  - **执行窗口**：每轮独立执行，优先走 auto_gg 夜间或 Keith 主动触发的设计会话
+  - **飞轮落点验收**：每轮必须产出 ≥1 条 tracks/architecture.md 新洞察 + ≥1 条 reasoning_module 候选 + 下一次工作模式实测使用过
 
 ### 2026-04-16（auto_gg 第 4 夜承接）
 
