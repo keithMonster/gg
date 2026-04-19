@@ -4,3 +4,5 @@
 2026-04-15 | 聚焦 | 安全工程/航空事故分析 | 瑞士奶酪模型（Swiss Cheese Model） | 为 architecture.md "原则触达三层模型" + next_session_agenda 7 条原则缺显式触达点的 STRATEGIC 议题提供"层间独立性 > 单层完整性"的外部判据
 2026-04-16 | 聚焦 | 热力学/物理学基础 | 状态函数 vs 路径函数（State Function vs Path Function） | 为 essence.md 结晶标准 / CRYSTAL_VS_LOG_DISTINCTION 候选 module 提供"状态函数 = 可脱离路径独立成立"的硬判据
 2026-04-17 | 聚焦 | 情报分析/认知科学 | Analysis of Competing Hypotheses (ACH) | 为 P0 "4 次同构事件 / LLM 信息不足时脑补 + memory 对进行中会话约束力为零"议题提供"证伪矩阵 + 外部脚手架 > 依赖记得遵守规则"的跨域判据
+2026-04-18 | 聚焦 | 图书馆学/数字信息管理 | 持久标识符 (Persistent Identifiers / PID) | 为 STRATEGIC 批 B "8 条 gg-audit 死链 Option A vs B"提供"标识≠定位 + 薄注册表解析"的第三条路判据
+2026-04-19 | 聚焦 | 气象学/概率预测理论 | 预测评估中的校准与分辨力 (Calibration vs. Discrimination) | 为 STRATEGIC "Generator-Evaluator 分离 4 个候选方向"提供"校准(独立性) vs 分辨力(检查清单) 双维度"的定价框架

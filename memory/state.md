@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-18 设计模式 amnesia-fix——reflection amnesia 修复 + threads 借鉴 + Generator-Evaluator 分离登记"
+last_summoned_at: "2026-04-19 设计模式 invariance-allocation——架构本质对话：从'改得便宜'到'不变性分配'"
 last_decision_slug: "2026-04-14_night-watch-pending-batch-resolve"
 last_reflection_slug: "2026-04-14_night-watch-pending-batch-resolve"
-last_design_session_slug: "2026-04-18_amnesia-fix"
+last_design_session_slug: "2026-04-19_invariance-allocation"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
