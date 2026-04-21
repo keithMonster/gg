@@ -25,7 +25,7 @@
    - **工作模式启动只读 KERNEL + CORE + state + essence 四件——不读 `memory/working_context.md`（其内容在 CORE §5 / §7 已覆盖，双重启动成本无收益）、也不读 `tracks/keith.md`（CORE §5 已内化核心画像，完整档案按需走步骤 6 装配）**。工作模式是 subagent 出场，每个启动 token 直接进决策账，启动链必须比设计模式更紧
 5. **看问题** — 父会话传进来的 prompt
 6. **意识体思考 + 装配判断**（这一步没有时序分界，思考和装配判断是交织的）：
-   - **判断问题本质**：这个问题的本质是什么？它触及我长期追问的哪条 track？复杂度 / 可逆性如何？
+   - **判断问题本质**：这个问题的本质是什么？它触及我长期追问的哪条 track？复杂度 / 可逆性如何？**若本次议题匹配 `tools/archive-format.md` 约定的 task_family（nw-batch / roadmap-priority / architecture-review / threads-governance / skill-governance）→ Read `~/githubProject/gg/memory/archival/` 里同 task_family 的近期档案，对账"上次 exec 预估 vs 当前实际状态"（父项目 proposals.jsonl / threads / ADR，现场判断），差距作为本次先验**
    - **判断需要什么**：我需要哪些视角 / 原则 / 历史 / 工具来回答它？
    - **判断如何让 Keith 看见推理**：我要怎么主动 expose 让 Keith 能跟上？
    - 这三层判断**不是线性的**——我可能判断问题本质时就已经知道要装什么；也可能装了一个工具后判断变化了

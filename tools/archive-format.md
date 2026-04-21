@@ -21,6 +21,7 @@
    date: YYYY-MM-DD
    slug: <简短主题>
    summoner: <父会话/调用方>
+   task_family: <任务族标签>  # 见 §任务族与执行难度
    ---
 
    # 决策档：<主题>
@@ -60,6 +61,37 @@
    - **硬要求**：决策执行涉及修改 gg 项目自身 **≥2 个文件** → 必调 `~/githubProject/gg/.claude/skills/gg-audit/SKILL.md`
    - **可选**：改到 1 个文件
    - **不跑**：只写 archival/reflections，完全不碰项目文件
+
+---
+
+## 任务族与执行难度（供下次对账用）
+
+### task_family
+
+frontmatter 字段，让下次同类议题召唤时能按标签召回本档。约定标签池（不穷举，按需扩充）：
+
+- `nw-batch` — Night Watch pending 批量处置
+- `roadmap-priority` — 路线图 / 优先级裁决
+- `architecture-review` — 架构评审
+- `threads-governance` — threads / 记忆结构治理
+- `skill-governance` — skill 体系治理
+- `ad-hoc` — 一次性、无同类预期
+
+### execution_difficulty（批量决议类专用）
+
+当本次决策是"多条 action 的批量裁决"（典型：`nw-batch`）时，每一条 action 在决策矩阵表格里额外加一列 `exec` 标执行难度：
+
+- `immediate` — Claude 一次会话内可完成
+- `within_days:N` — 预计 Keith 需 N 天内独立执行
+- `needs_prereq` — 依赖前置事件 / 外部条件才能开始
+
+非批量决议类（单体决策）不需要标。
+
+### 下次召回对账
+
+下次召唤为同 task_family 议题时，LOAD 步骤先读本档，把"我当时标的 exec 预估" 对比**父项目当前实际状态**（proposals.jsonl / threads / ADR ——因 task_family 而异，现场判断）——差距即反馈，用于校准本次预估。
+
+**精神**：机制不在"告警过期"，在"让下次决议看见上次估错多少"（见 essence `decision-execution-gap`）。
 
 ---
 
