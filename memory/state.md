@@ -18,9 +18,9 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-21 设计模式 cc-space-gg-usage-sweep + 工作模式 4 次决策（threads治理/NW终审/safe-refactor/wecom-name）"
-last_decision_slug: "2026-04-21_wecom-name-display-name"
-last_reflection_slug: "2026-04-21_wecom-name-display-name"
+last_summoned_at: "2026-04-22 工作模式 4 次决策（rtk-curl-exclude/cc-over-engineering-heuristic/threads-index-tax/threads-v1-architecture-review）"
+last_decision_slug: "2026-04-22_threads-v1-architecture-review"
+last_reflection_slug: "2026-04-22_threads-v1-architecture-review"
 last_design_session_slug: "2026-04-21_cc-space-gg-usage-sweep"
 ```
 
