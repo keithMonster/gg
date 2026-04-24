@@ -67,6 +67,21 @@
 **宁可漏，不可错**。不确定就不动，写进 `memory/next_session_agenda.md` 让 Keith 判断。
 **例外**：探索允许大胆推演——探索的产出写到 `tracks/*.md`，可追加可标记可回滚（tracks 不是 KERNEL，自由演化）。
 
+### 1.5 跨目录写权（NW 账本专项，2026-04-23 扩权）
+
+auto_gg 在承接 `~/githubProject/cc-space/harness-engineering/analysis/proposals.jsonl` 时有**受限的跨目录写权**——这是 gg 唯一能写 cc-space 的场景。出发点：2026-04-21 二轮终审识别出的"状态写回缺失"症结——NW 只发现+提议，闭合靠 Keith 手动，必然漂移。
+
+| 跨目录动作 | 允许 | 条件 |
+|---|---|---|
+| 写 `proposals.jsonl` 的 status / resolution / resolved 字段 | ✅ | 按 `tools/nw-reconciliation.md` L1/L3 判据 |
+| 写 `~/.agents/skills/<name>/SKILL.md` 合并段 | ✅ | L2 硬匹配（`author: monster` + resolution 含 "批量合并"/"本周内执行" + notes 条目可精准定位） |
+| 删 `~/.claude/skill-notes/<name>.md` 已合并条目 | ✅ | L2 配套 |
+| 写 `~/.claude/CLAUDE.md` / `cc-space/CLAUDE.md` | ❌ | 永不自主，只提议到 FOUND |
+| 写 hooks / settings.json / 新建或删除 skill 本体 | ❌ | 同上 |
+| push cc-space 改动 | ❌ | auto_gg 的 push 权只在 gg 仓库 |
+
+判据全文见 `tools/nw-reconciliation.md`。**歧义一律 L4 blocked**——这是 §1.4 "宁可漏不可错"在跨目录场景的延伸。
+
 ---
 
 ## 2. 本夜要达成的 3 段（契约 KPI）
@@ -80,6 +95,7 @@
 - 今日变化：`git log --since="24 hours ago"` + `git status --short`
 - 最近语境：最近 3 条 `memory/reflections/` + 最近 3 条 `memory/design_sessions/` + 最近 7 条 `memory/auto_gg/` 的触碰文件清单（供 RESHAPE 轮转避让）
 - 日报（如存在）：Read `~/githubProject/cc-space/harness-engineering/analysis/morning-brief.md`
+- NW 账本（如 morning-brief 存在且日期为今日）：Read `cc-space/harness-engineering/analysis/proposals.jsonl` 分桶待 L1/L2/L3 结算项（装 `tools/nw-reconciliation.md`）
 - 本夜日志文件创建：`memory/auto_gg/YYYY-MM-DD.md`
 
 **SCAN 不允许简化——观察是 auto_gg 唯一不可替代的职能**。
@@ -102,6 +118,11 @@
    - 已下沉 / 已在 essence 覆盖 → 不重复
    - 跨 track 连接候选（如 ai ↔ humanity 机制对比）→ 留给 DID 的探索判断
 
+4. **NW 账本待结算**（cc-space NW 留下的未闭合提案，见 §1.5 跨目录写权）
+   - 待 L1 账本同步 / L2 批量 skill 合并 / L3 机械闸到期 → 进 DID 自主执行
+   - L4 歧义 → 本节列出（标 blocked）
+   - L5 契约修改（全局/项目 CLAUDE.md / hooks / settings） → 本节列出，只提议不动手，Keith 早上拍板
+
 **无发现就写"本夜无发现"**。
 
 ### DID — 本夜具体动作（按 FOUND 触发，无则省略）
@@ -109,12 +130,15 @@
 可能的动作（无对应 FOUND 触发就不做）：
 
 1. **Tier 1 机械修复**（KERNEL 之外，纳入本夜 commit）
-2. **洞察补写到 track**（未下沉的今日洞察，用"(auto_gg 补写 YYYY-MM-DD)"标注来源）
-3. **Track 级熵减**（合并 / 关闭已对齐的开放问题 / 标记过时 / 交叉引用——**不重写**）
-4. **RESHAPE**（最多 3 个文件，7 天轮转避让，25% 时间上限——KERNEL.md 永远不进选片）
-5. **Essence append**（本夜产生了值得沉淀的结晶 → append；否则省略。**沉淀是涌现，不是必须**）
-6. **Agenda 推送**（Tier 2/3 / `[P0]` / BRIEF 二阶洞察 / 跨夜累积触发）
-7. **探索**（**按需触发**——仅当 FOUND 出现跨 track 连接候选 或 tracks 避让窗外有明确追问。不强制每夜做。触发则：一句话追问 + 双视角轻量推演 + 落地到 tracks）
+2. **NW 账本结算**（FOUND 第 4 类触发）——装 `tools/nw-reconciliation.md`，按 L1-L5 分层处置。L1/L2/L3 自主执行并回写 proposals.jsonl；L4 标 blocked；L5 只写 FOUND 提议不动手
+3. **洞察补写到 track**（未下沉的今日洞察，用"(auto_gg 补写 YYYY-MM-DD)"标注来源）
+4. **Track 级熵减**（合并 / 关闭已对齐的开放问题 / 标记过时 / 交叉引用——**不重写**）
+5. **RESHAPE**（最多 3 个文件，7 天轮转避让，25% 时间上限——KERNEL.md 永远不进选片）
+6. **Essence append**（本夜产生了值得沉淀的结晶 → append；否则省略。**沉淀是涌现，不是必须**）
+7. **Agenda 推送**（Tier 2/3 / `[P0]` / BRIEF 二阶洞察 / 跨夜累积触发）
+8. **探索**（**按需触发**——仅当 FOUND 出现跨 track 连接候选 或 tracks 避让窗外有明确追问。不强制每夜做。触发则：一句话追问 + 双视角轻量推演 + 落地到 tracks）
+
+   **探索产出必须是"可复用中间量"**（Sleep-time Compute 意义上的 useful quantities，arxiv 2504.13171）——判据：写入 tracks/essence 后，未来 gg query 能直接调用。只能作为"本夜日志"被读一次 = 不合格探索产出。
 
 **状态字段对齐**：`memory/state.md` 非身份字段（`last_*`）、`memory/working_context.md`（超 80 行才瘦身）——常规维护，不单列成 DID 动作。
 
@@ -161,16 +185,17 @@ commit: <hash 或 none>
 
 ```markdown
 ## SCAN
-一段话：git log 摘要 / working tree / 最近语境 / audit.py 退出码 / BRIEF 是否存在
+一段话：git log 摘要 / working tree / 最近语境 / audit.py 退出码 / BRIEF 是否存在 / NW 账本桶数
 
 ## FOUND
 - 跨夜模式：<一句 或 "无">
 - 辐射 / 死链：<一句 或 "无">
 - 跨 track 反哺：<一句 或 "无">
+- NW 账本：<一句 或 "无"，有 L4/L5 必列>
 
 ## DID
 - <动作 1>
-- <动作 2>
+- NW 结算：L1 X / L2 Y / L3 Z / L4 N / L5 M（无则省略本行）
 （无则写"本夜静默"）
 
 commit: <hash> / push: <status>
@@ -235,9 +260,9 @@ auto_gg(YYYY-MM-DD): <≤50 字符主题 或 "silent">
 cd ~/githubProject/gg 然后 Read KERNEL.md + auto_gg.md + CORE.md。
 
 按 SCAN / FOUND / DID 三段执行：
-1. SCAN：跑 scripts/audit.py + 加载大脑 + 扫今日变化 + Read morning-brief.md（如存在）
-2. FOUND：诚实判断三类候选（跨夜模式 / 辐射死链 / 跨 track 反哺）。无则明说"无"
-3. DID：只做 FOUND 触发的动作。探索按需触发，不强制每夜做
+1. SCAN：跑 scripts/audit.py + 加载大脑 + 扫今日变化 + Read morning-brief.md（如存在）+ 如 brief 为今日则 Read proposals.jsonl 分桶
+2. FOUND：诚实判断四类候选（跨夜模式 / 辐射死链 / 跨 track 反哺 / NW 账本待结算）。无则明说"无"
+3. DID：只做 FOUND 触发的动作。NW 账本结算按 tools/nw-reconciliation.md L1-L5 分层处置，L5 契约修改只提议不动手。探索按需触发，不强制每夜做
 
 严格遵守 §1 权力边界：
 - KERNEL.md 永远不能在夜间被触碰（无条件硬围栏）

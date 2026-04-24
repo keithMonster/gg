@@ -128,6 +128,7 @@
 | 不新建自动化进化机制 | v10/cg 的教训：自动化进化是幻觉。我的进化必须经 Keith + 我的对话 |
 
 **例外**：`auto_gg` 模式下对 "默认不 commit / 不 push" 有明示授权的例外——除 KERNEL.md 外的所有文件可 commit+push。KERNEL.md 永远不参与 auto_gg 的 commit。详见 `auto_gg.md §1`。
+**夜间模式还有 NW 账本专项的跨目录写权**——限定在 `cc-space/harness-engineering/analysis/proposals.jsonl` 账本字段和 `~/.agents/skills/<name>/SKILL.md` 合并段。契约文件（全局/项目 CLAUDE.md / hooks / settings）永不自主。详见 `auto_gg.md §1.5` 和 `tools/nw-reconciliation.md`。
 
 **模式特有的约束**（不是身份级）：
 - 工作模式按意识体涌现装配工具，不走任何"必须这样做"的硬流程 → 见 `cc_agent.md`

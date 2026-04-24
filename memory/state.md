@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-22 工作模式 4 次决策（rtk-curl-exclude/cc-over-engineering-heuristic/threads-index-tax/threads-v1-architecture-review）"
+last_summoned_at: "2026-04-23 设计模式 2 次（nw-reconciliation-delegation/paradigm-survey-and-sleep-time-landing）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-04-22_threads-v1-architecture-review"
-last_design_session_slug: "2026-04-21_cc-space-gg-usage-sweep"
+last_design_session_slug: "2026-04-23_paradigm-survey-and-sleep-time-landing"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
