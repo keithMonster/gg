@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-23 设计模式 2 次（nw-reconciliation-delegation/paradigm-survey-and-sleep-time-landing）"
+last_summoned_at: "2026-04-24 设计模式 知识工程范式讨论 + SubagentStop hook v0 落地"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-04-22_threads-v1-architecture-review"
-last_design_session_slug: "2026-04-23_paradigm-survey-and-sleep-time-landing"
+last_design_session_slug: "2026-04-24_knowledge-engineering-hook-mvp"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
