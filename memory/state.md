@@ -18,7 +18,7 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-26 设计模式 自由探索模式设计（exploration.md 创立）"
+last_summoned_at: "2026-04-27 自由探索模式 首次触发（漫游：记忆与策展）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-04-22_threads-v1-architecture-review"
 last_design_session_slug: "2026-04-24_knowledge-engineering-hook-mvp"
