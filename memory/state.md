@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-27 自由探索模式 首次触发（漫游：记忆与策展）"
+last_summoned_at: "2026-04-27 设计模式 cc-agent-exit-output-misalignment（6 轮修复 + 6 滴 essence）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-04-22_threads-v1-architecture-review"
-last_design_session_slug: "2026-04-24_knowledge-engineering-hook-mvp"
+last_reflection_slug: "2026-04-27_nw-weekly-silent-drop-redteam"
+last_design_session_slug: "2026-04-27_cc-agent-exit-output-misalignment"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
