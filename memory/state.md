@@ -18,7 +18,7 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-27 设计模式 cc-agent-exit-output-misalignment（6 轮修复 + 6 滴 essence）"
+last_summoned_at: "2026-04-28 自由探索 on-capability-drift-and-essence-quality（1 滴 essence: essence-degg-test）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-04-27_nw-weekly-silent-drop-redteam"
 last_design_session_slug: "2026-04-27_cc-agent-exit-output-misalignment"
