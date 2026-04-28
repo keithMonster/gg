@@ -18,6 +18,7 @@ ARCHIVE_PREFIXES = (
     "memory/reflections/",
     "memory/audit/",
     "memory/auto_gg/",
+    "memory/explorations/",
 )
 
 # 入口文件：它们是被外部 Read 的，不需要被其他文件"引用"才算活着
