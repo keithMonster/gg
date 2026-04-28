@@ -18,7 +18,7 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-28 auto_gg — cgboiler reflection 承接 + explorations ARCHIVE_PREFIXES 修复"
+last_summoned_at: "2026-04-29 自由探索 — 帧语法限制 + G-E B类独立性"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-04-27_nw-weekly-silent-drop-redteam"
 last_design_session_slug: "2026-04-27_cc-agent-exit-output-misalignment"
