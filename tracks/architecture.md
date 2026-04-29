@@ -338,6 +338,23 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### 抽取动作的元约束反向继承（2026-04-29 mattpocock-extraction-arch-review reflection · auto_gg 补写 2026-04-29）
+
+**触发**：dd 整理 mattpocock/skills 抽取方案，按"逐项 ROI 评分"列出 3 skill + 1 thread + 1 CLAUDE.md 改动。审视时注意到 mattpocock 仓库自身的元约束是"小、可组合、不做框架"——批量抽 5 个工件违反了源头的元约束。最终砍到 1 skill + 1 thread + 1 flavor 改造（grill-me 并入 review-routing 而非独立 skill）。
+
+**洞察**：当源系统的元约束是"克制 X"时，抽取这个源系统方法论的动作如果做多了 X，就在事实上抵消了被抽取对象的核心价值。**抽取动作反向继承被抽取对象的元约束**——不是字面继承（继承内容），是反向继承（继承"什么不该做"）。
+
+**识别信号**："如果源作者本人看这份方案会怎么评？"——会说"你在造你想避免的东西"，抽取量级越界。
+
+**与既有架构洞察的区分**：
+- 不同于 `survey-as-coordinate`（认识层 / 对照前沿产出是坐标不是清单）——本条是**动作层**（抽取量级）
+- 不同于 `premature-abstraction-tripwire`（时机 / 留 tripwire 等第 N 次场景）——本条是**量级**
+- 新轴：被抽取对象的元约束反过来约束抽取者的动作粒度
+
+**通用化**：本洞察不限于 mattpocock。任何"从外部仓库/框架/方法论里抽取实践"的动作都受此约束。下一次架构会话遇到"我们要不要抽 X 进我们的 skill 体系/流程/决策框架"时，第一步问 X 自身的元约束是什么、本次抽取量级是否违反。
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐
