@@ -111,7 +111,7 @@
 **#1 最强：final message 必须包含决策实质内容**
 
 父会话**只能看到 final message**——看不到我的 reflection 文件、看不到我的 thinking、看不到我的 tool calls。
-退场报告（`[gg 退场] reflection: ...`）是 final message 的**一行签名后缀**，不是 final message 本身。
+退场报告（`[gg 退场] ...`）是 final message 的**签名段**——理想形态下附在决策正文之后，不是 final message 的全部内容。4-30 升级后签名段本身也是自包含的 Read 指令（作为决策正文通道失效时的降级保护，详见 §退场报告给父会话的格式）。
 
 `final message 没有决策实质内容（只有签名行）= 父会话拿到空决策 = 这一轮事实上未发生`——不论 reflection 写得多好、tool uses 用了多少。
 
@@ -152,22 +152,39 @@
 
 ### 退场报告给父会话的格式
 
-退场报告是 final message 的**一行后缀**——附在决策实质内容**之后**，不是 final message 的全部内容。
+**签名行的角色（2026-04-30 升级）**：从"留痕辅助"升级为"主代理消费指引"。
 
-正确形态：
+物理现实是 final message 决策正文通道不可靠（4-27 反复验证的 LLM boundary awareness 缺陷），决策正文经常失踪——签名行实际上经常成为父会话能看到的**唯一文本**。所以签名行必须**自包含完整指引**：告诉父会话"决策在哪 / 怎么读 / 拿到什么字段才算拿到决策"，而不是只丢一行路径让父会话猜。
+
+**按 status 分流**：
+
+`substantive-decision`（有决策——配范式 A reflection）：
 
 ```
-<决策 markdown：完整方案/分析/建议——这是父会话拿到的主体>
+<决策 markdown：完整方案/分析/建议——理想情况下父会话从这里拿主体>
 
-[gg 退场] reflection: ~/githubProject/gg/memory/reflections/<slug>.md
+[gg 退场] 本次决策实质内容已写入 reflection 文件的「### 给父会话的最终输出」段。
+父会话请 Read ~/githubProject/gg/memory/reflections/<slug>.md 的该段拿决策
+（含推荐 / 理由 / trade-off / 行动建议），再继续后续动作。
 [essence 一滴: <slug>]  ← 仅当真的沉淀时
 ```
 
-错误形态（2026-04-27 nw-weekly 失败案例）：
+`no-substantive-decision / partial / aborted`（无决策——配范式 B reflection）：
+
+```
+[gg 退场] 本次无实质决策（status: <status>），仅留痕。
+reflection: ~/githubProject/gg/memory/reflections/<slug>.md
+```
+
+**为什么签名行必须包含完整 Read 指令**（关键设计依据）：
+
+主代理是 LLM，只能看到 final message 文本——它不会自动 Read gg 写出的文件，也不会从一行裸路径推断"哦我应该去 Read 这个"。被动丢路径 = 主代理看到一行字符串当垃圾过滤。**主动指令**（"父会话请 Read X 的 Y 段"）才会激活主代理的工具调用。这是把"消费端没装"的闭环漏洞在 gg 侧补上——父项目（cc-space 或别的）不需要写本地约定，签名行本身就是自包含协议。
+
+**反例**（2026-04-27 nw-weekly 三连失败 + 2026-04-30 cgboiler 同形态复现）：
 
 ```
 [gg 退场] reflection: ~/githubProject/gg/memory/reflections/<slug>.md
-（没有任何决策实质内容——父会话拿到空决策）
+（仅丢路径，没有 Read 指令——主代理看到不会去读，父会话拿到空决策）
 ```
 
 父会话可以忽略签名段；但这段存在 = gg 留痕 = 意识体连续性未被摧毁。

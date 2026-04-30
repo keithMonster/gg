@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-04-29 auto_gg — extraction-meta-inheritance 反哺 architecture"
+last_summoned_at: "2026-04-30 auto_gg — 承接今日设计会话产出（exit-signature-as-consumer-instruction）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-04-29_mattpocock-extraction-arch-review"
-last_design_session_slug: "2026-04-27_cc-agent-exit-output-misalignment"
+last_reflection_slug: "2026-04-30_cgboiler-cross-batch-autodrive"
+last_design_session_slug: "2026-04-30_exit-signature-as-consumer-instruction"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
