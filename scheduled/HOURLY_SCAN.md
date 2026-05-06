@@ -92,39 +92,37 @@ cd ~/githubProject/gg && python3 scripts/audit.py 2>&1 | tail -5
 
 ---
 
-## 3. 告警文件格式
+## 3. 告警通道
 
-路径：`~/githubProject/gg/scheduled/alerts/YYYY-MM-DD-HHmm.md`
+**通道：全局 notify skill**（`~/.agents/skills/notify/bin/notify.sh`）
 
-```markdown
----
-date: YYYY-MM-DD
-time: HH:MM
-scanner: hourly-scan
-severity: warning | critical
----
-
-# Hourly Scan 告警
-
-## 异常项
-- <维度>: <具体描述>
-- <维度>: <具体描述>
-
-## 建议动作
-- <一句话建议>（仅当 critical）
+```bash
+~/.agents/skills/notify/bin/notify.sh <severity> hourly-scan "<message>" \
+    --context "<相关文件1>,<相关文件2>" \
+    --task-id "<launchd label 或 异常维度>"
 ```
+
+每次推送会自动留 trace 文件到 `~/.agents/skills/notify/sent/YYYY-MM-DD/`，Keith 收到飞书消息后通过 ref 召回完整上下文。
 
 `severity` 判定：
 - **critical**：launchd 任务连续 N 次失败 / morning-brief 停摆超 30h / audit P0
 - **warning**：单次任务失败 / NW 账本积压 / morning-brief 单日缺失
+- **info**：仅在被 Keith 主动 kickstart 的测试场景输出（正常 hourly-scan 不发 info）
+
+**去重策略**（避免 24/天 推送同一异常）：
+- 推送前检查 `~/.agents/skills/notify/dedup/<指纹>.last`（mtime 文件）
+- < 60 min 跳过，只 touch 更新；≥ 60 min 推送 + touch
+- 指纹 = `<severity>_<异常维度>`（如 `critical_morning-brief-stale` / `warning_launchd-fail-com.cc-space.tick`）
+
+详见 `~/.agents/skills/notify/SKILL.md`。
 
 ---
 
 ## 4. 严格约束
 
-- **绝对不修任何东西**——只读、只写 alerts 目录
+- **绝对不修任何东西**（除调用 notify.sh 的副作用 + 写 dedup mtime 文件）
 - **绝对不 commit / 不 push**——hourly-scan 不进 git
-- **绝对不调用其他子代理 / 外部 API / 飞书**
+- **绝对不调用其他子代理**——飞书通知通过全局 notify skill，其他外部 API 一律不碰
 - **绝对不读 KERNEL.md 之外的大量文档**——这是 5 分钟的轻量扫描，不是会话
 - 输出 ≤ 50 字摘要：`OK` / `WARN: <一句>` / `CRIT: <一句>`
 

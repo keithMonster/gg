@@ -31,7 +31,7 @@ last_updated: 2026-04-18
 - `[STRATEGIC]` **Generator-Evaluator 分离的 gg 落地方案**
   - **背景**：2026-04-18 B1 首轮从 Anthropic "harness design for long-running apps" 抽取——"分离工作方和评价方"是解 Agent 自评污染的强大杠杆。对应 essence `task-compliance-is-not-truth` + `audit-loop-closure`。gg 的 reflection 由 gg 自己写 = 自评污染盲点
   - **4 个候选方向**（详见 `tracks/architecture.md` "Generator-Evaluator 分离" 节）：
-    1. 新增 `personas/evaluator.md`（代价：persona 膨胀）
+    1. 新增 personas/evaluator.md（候选，未实施）（代价：persona 膨胀）
     2. Evaluator subagent（代价：召唤链条长）
     3. gg-audit 扩展到决策层（代价：审查员权力边界模糊）
     4. ADR 式外部评价（代价：依赖外部注入）
@@ -64,16 +64,10 @@ last_updated: 2026-04-18
     2. 借鉴日报提到的业界共识方案 Spec-Driven Tool Definition——把"猜字段"问题从规则层转移到工具层（fastgpt skill 给 `_request` 包"首调 dump schema 到 /tmp"辅助能力）
   - **为什么 auto_gg 不直接改全局 CLAUDE.md**：~/.claude/ 不在 gg 项目内（auto_gg §1.3）。gg 的职责是识别这个升级时点并定价，改由 Keith 自己做
 
-- `[STRATEGIC]` **批 B：8 条 gg-audit skill 跨上下文死链待 Keith 设计决策**
-  - **背景**：2026-04-16_fast-slow-thinking 设计会话明示遗留——选项 A "全部改成从 gg ROOT 的相对路径" / 选项 B "skill 文档里只用语义引用（'gg 的 tools/'），不做可导航路径"
-  - **本夜 S0 audit 实测**：8 条死链，分两类：
-    - **类 1**（6 条）：`structural.md` L61/L62/L199 + `semantic.md` L30 — checker 在举例时省略 `memory/` 前缀
-    - **类 2**（2 行 / 4 条引用）：`SKILL.md` L112/L125 — 在示例文本里直接写工具名 `persona-debate.md` / `compose-reasoning.md` / `constitution-audit.md` / `red-team-challenge.md`，无 `tools/` 前缀
-  - **本夜动作**：未自动修（按 §1.4 "宁可漏，不可错"——选 A 还是 B 是 Keith 设计决策）
-  - **Keith 决策方向参考**：
-    - 选 A 优点：path 可点击导航；缺点：跨项目 context 时不自然（gg-audit 是 skill，宿主可能不止 gg 一个项目）
-    - 选 B 优点：跨项目 context 自然；缺点：失去可导航性，audit 脚本会持续误报
-    - 也可以混合：举例时用 `tools/persona-debate.md` 完整路径，但概念引用时只写"gg 的工具层"
+- `[已结 2026-05-06]` **批 B：8 条 gg-audit skill 跨上下文死链——选 A**
+  - **决策**：Keith 拍板选 A（全部改成从 gg ROOT 的相对路径）。理由：gg-audit 是 gg 专属 skill，不会被其他项目装，跨项目自然性不构成约束
+  - **修复落地**：structural/semantic/SKILL 三个文件的 6+4 条裸引用全部加 `memory/` 或 `tools/` 前缀
+  - **历史背景**：2026-04-16_fast-slow-thinking 设计会话明示遗留——选项 A vs 选项 B "skill 文档里只用语义引用，不做可导航路径"。当时未结，2026-05-06 会话决议
 
 ### 2026-04-15（auto_gg 第 3 夜承接）
 

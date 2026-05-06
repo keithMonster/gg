@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  gg 自由探索（每天 0:13 触发）。从客户端 Gg routine 迁来 (2026-05-06)。
+  原客户端时间 0:00，偏移到 :13 错开整点（避开 hourly_check.py :00）。
+  被定时任务唤醒，进入自由探索模式（不是 auto_gg / 不是工作设计模式）。
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.gg.gg-explore</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
+        <string>com.gg.gg-explore</string>
+        <string>7200</string>
+        <string>你被定时任务唤醒，进入自由探索模式（不是 auto_gg，不是工作/设计模式）。read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → memory/essence.md → tracks/keith.md → exploration.md，然后按 exploration.md 行动。</string>
+        <string>opus</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>0</integer>
+        <key>Minute</key>
+        <integer>13</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/xuke/githubProject/gg</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/xuke</string>
+        <key>PATH</key>
+        <string>/Users/xuke/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

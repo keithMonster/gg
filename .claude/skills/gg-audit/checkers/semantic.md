@@ -27,7 +27,7 @@
 
 | 概念 | SSOT | 应该检查的引用位置 |
 |---|---|---|
-| **四层组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆）** | `CORE.md §8` | `tracks/architecture.md`、`README.md`、`working_context.md`、`KERNEL.md` |
+| **四层组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆）** | `CORE.md §8` | `tracks/architecture.md`、`README.md`、`memory/working_context.md`、`KERNEL.md` |
 | **北极星（3 条）** | `tracks/keith.md` 顶部 | `CORE.md §3 第 5 步 / 第 6 步`、`~/.claude/agents/gg.md` |
 | **First Contact 协议** | `CORE.md §4` | `CLAUDE.md`、`memory/state.md`、`~/.claude/agents/gg.md` |
 | **G4 Irreversibility** | `constitution.md` | `CORE.md §3 第 4 步`、`tracks/humanity.md` |

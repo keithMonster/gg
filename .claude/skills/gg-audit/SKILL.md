@@ -109,7 +109,7 @@ author: monster
 
 **入口文件的例外**：`~/.claude/agents/gg.md` 薄壳和 `README.md` 可以包含**最少量的上下文**（例如"你是 gg，Read 下一个文件"），但不应重复定义任何规则。这不算 SSOT 违反。
 
-**工具层的原子性**：`tools/*.md` **互相不能复述对方的工具内容**（例如 `persona-debate.md` 不能复述 `compose-reasoning.md` 的推理结构组合协议）。每个工具只定义自己的装配动作 + 装配后自觉；工具之间的共享内容（装配原则 / 装配时机 / 身份边界）回到 `cc_agent.md` 或 `CORE.md`。
+**工具层的原子性**：`tools/*.md` **互相不能复述对方的工具内容**（例如 `tools/persona-debate.md` 不能复述 `tools/compose-reasoning.md` 的推理结构组合协议）。每个工具只定义自己的装配动作 + 装配后自觉；工具之间的共享内容（装配原则 / 装配时机 / 身份边界）回到 `cc_agent.md` 或 `CORE.md`。
 
 **v0.4.0 的 audit 规则**（v0.3.0 规则的替换，档位概念已消解）：
 - 在 `CORE.md` 里发现具体工具装配步骤 / 思维动作流程 → **违反**（大脑只描述"我是谁 / 如何判断"，不描述"我装了 X 然后做 Y"）
@@ -122,7 +122,7 @@ author: monster
 
 **v0.4.0 辐射检查新增项**：
 - 改 `cc_agent.md` 的章节或工具装配地图时，必须 grep 项目内所有 `cc_agent\.md §[0-9]+` 和 `tools/[a-z-]+\.md` 引用，同步死链
-- 改 `tools/*.md` 任一工具的装配动作或输出格式时，必须检查 `cc_agent.md` 的"我装配什么"段是否需要同步、`tools/TOOLS.md` 索引是否需要更新、其他工具文件是否有跨工具引用（例如 `constitution-audit.md` 引用 `red-team-challenge.md`）
+- 改 `tools/*.md` 任一工具的装配动作或输出格式时，必须检查 `cc_agent.md` 的"我装配什么"段是否需要同步、`tools/TOOLS.md` 索引是否需要更新、其他工具文件是否有跨工具引用（例如 `tools/constitution-audit.md` 引用 `tools/red-team-challenge.md`）
 - 新增 / 删除 / 合并工具时，必须同步：
   - `tools/TOOLS.md` 索引
   - `CORE.md §8` 工具层清单（如有具体列名）

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  gg 夜间自执行（每天 22:22 触发）。从客户端 Auto_gg routine 迁来 (2026-05-06)。
+  保持原客户端时间 22:22（已是错峰非整点）。
+  让 gg 在无人在场时整理软外围、巩固当日记忆、跑结构性自查、推进 1 个自选课题。
+  软外围可 commit+push；硬核心可改但不 commit（留 working tree 等 Keith review）。
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.gg.auto-gg</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
+        <string>com.gg.auto-gg</string>
+        <string>7200</string>
+        <string>Read /Users/xuke/githubProject/gg/auto_gg.md，按其中流程逐步执行</string>
+        <string>opus</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>22</integer>
+        <key>Minute</key>
+        <integer>22</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/xuke/githubProject/gg</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/xuke</string>
+        <key>PATH</key>
+        <string>/Users/xuke/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

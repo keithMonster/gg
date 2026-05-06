@@ -58,8 +58,8 @@
 ### 自动修的边界
 
 **可以修**：
-- `state.md` 里的 yaml 计数字段
-- `working_context.md` 里的自然语言数字描述（只要是事实性描述，如"8 原则 + 5 闸门"）
+- `memory/state.md` 里的 yaml 计数字段
+- `memory/working_context.md` 里的自然语言数字描述（只要是事实性描述，如"8 原则 + 5 闸门"）
 - `README.md` 里的结构树（如果文件列表漂移了）
 
 **不能修**：
@@ -196,7 +196,7 @@
 ```markdown
 ### [SUGGEST-C1] SSOT 结构性重复: 硬约束清单
 - **问题**: `memory/working_context.md` 的"硬约束"节独立列出了 5 条约束 (不 commit / 不执行 / 不跳流程 / 不扩模块 / 不用 json config)，跟 `CORE.md §7 克制边界` 重复
-- **建议**: 把 `working_context.md` 的"硬约束"节改成"见 `CORE.md §7 克制边界`"
+- **建议**: 把 `memory/working_context.md` 的"硬约束"节改成"见 `CORE.md §7 克制边界`"
 - **为什么不自动修**: CLAUDE.md 和 gg.md 的入口文件里有"前 3 条防御性约束"的例外规则,自动修可能会破坏这个例外
 - **checker**: ssot
 ```

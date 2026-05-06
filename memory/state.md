@@ -21,7 +21,7 @@ created: 2026-04-13
 last_summoned_at: "2026-05-06 auto_gg — 承接 2026-05-02 last stroke + 本夜静默（3 夜 schedule 未 fire 后恢复，无新机械问题 / 无 NW 待结算）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-02_cc-copilot-mirror-merge-or-split"
-last_design_session_slug: "2026-05-06_system-admin-architecture"
+last_design_session_slug: "2026-05-06_audit-cleanup-nw-noise"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

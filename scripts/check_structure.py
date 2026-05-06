@@ -55,7 +55,7 @@ def check_naming():
                 continue
             if not fn.endswith(".md"):
                 continue
-            if fn == "README.md":
+            if fn == "README.md" or fn == ".template.md":
                 continue
             if not DATE_FILE_RE.match(fn):
                 bad.append(f"{d}/{fn}")

@@ -21,6 +21,18 @@
 
 ---
 
+## 通道工具（执行时调用，不参与思考装配）
+
+| 工具 | 我什么时候用它 | 颗粒 |
+|---|---|---|
+| `tools/notify.md` | 我需要主动外推消息给 Keith（hourly-scan 异常 / auto_gg P0 / 长跑产出完成） | 调一次 `bin/notify.sh`，不装 |
+
+通道工具跟思维工具的本质区别：
+- 思维工具 = 思考时**装配**到当前会话（Read 文件后变成上下文）
+- 通道工具 = 执行时**调用**外部副作用（HTTP 请求 / 文件写入），不进上下文
+
+---
+
 ## 不在这里的"工具"（它们在别处）
 
 - **`personas/radical.md` / `personas/conservative.md`** — 双人格。由 `tools/persona-debate.md` 触发装配，也可以独立装
