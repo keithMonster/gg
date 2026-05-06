@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  gg 定时任务模板。占位符替换 + 字段语义详见 scheduled/README.md。
+  StartCalendarInterval 可写 Hour+Minute（每天）或仅 Minute（每小时该分触发）。
+  日志：run-task.sh 月度滚动到 scheduled/logs/。
+  失败：不重试，等下次 calendar 触发。
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>__LABEL__</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
+        <string>__LABEL__</string>
+        <string>__TIMEOUT__</string>
+        <string>__PROMPT__</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>__HOUR__</integer>
+        <key>Minute</key>
+        <integer>__MINUTE__</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>WorkingDirectory</key>
+    <string>__WORKDIR__</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/xuke</string>
+        <key>PATH</key>
+        <string>/Users/xuke/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

@@ -59,7 +59,7 @@
 - `git commit --no-verify` / `--amend` / `--no-gpg-sign`
 - 发送外部消息（邮件 / Slack / API / webhooks）
 - 调用其他子代理（包括 gg 工作模式本身——夜间 gg 不召唤日间 gg）
-- 新建 gg 项目**外**的文件（只在 `~/githubProject/gg/` 活动）
+- 新建 gg 项目外的文件超出 L1 范围（L1 内：cc-space 代码文件 / skills 合并段 / gg scheduled 任务文件 ✅；其他 ❌）
 - commit message 里出现 `Co-Authored-By` 或 "by Claude" 字样（这是 gg 的 commit，不是 Claude 的）
 
 ### 1.4 不确定时的默认动作
@@ -67,20 +67,24 @@
 **宁可漏，不可错**。不确定就不动，写进 `memory/next_session_agenda.md` 让 Keith 判断。
 **例外**：探索允许大胆推演——探索的产出写到 `tracks/*.md`，可追加可标记可回滚（tracks 不是 KERNEL，自由演化）。
 
-### 1.5 跨目录写权（NW 账本专项，2026-04-23 扩权）
+### 1.5 跨目录写权（2026-05-06 升级为 L0-L3 通用框架）
 
-auto_gg 在承接 `~/githubProject/cc-space/harness-engineering/analysis/proposals.jsonl` 时有**受限的跨目录写权**——这是 gg 唯一能写 cc-space 的场景。出发点：2026-04-21 二轮终审识别出的"状态写回缺失"症结——NW 只发现+提议，闭合靠 Keith 手动，必然漂移。
+gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间的跨目录权力按 `CORE.md §7` L0-L3 分层执行：
 
-| 跨目录动作 | 允许 | 条件 |
+| 级别 | 夜间允许的跨目录操作 | 条件 |
 |---|---|---|
-| 写 `proposals.jsonl` 的 status / resolution / resolved 字段 | ✅ | 按 `tools/nw-reconciliation.md` L1/L3 判据 |
-| 写 `~/.agents/skills/<name>/SKILL.md` 合并段 | ✅ | L2 硬匹配（`author: monster` + resolution 含 "批量合并"/"本周内执行" + notes 条目可精准定位） |
-| 删 `~/.claude/skill-notes/<name>.md` 已合并条目 | ✅ | L2 配套 |
-| 写 `~/.claude/CLAUDE.md` / `cc-space/CLAUDE.md` | ❌ | 永不自主，只提议到 FOUND |
-| 写 hooks / settings.json / 新建或删除 skill 本体 | ❌ | 同上 |
-| push cc-space 改动 | ❌ | auto_gg 的 push 权只在 gg 仓库 |
+| **L1（自主执行 + 记录）** | cc-space 代码文件改动 | 可逆，记 DID |
+| **L1（自主执行 + 记录）** | `~/.agents/skills/<name>/SKILL.md` 合并段 | L2 硬匹配（同下方账本条件） |
+| **L1（自主执行 + 记录）** | 删 `~/.claude/skill-notes/<name>.md` 已合并条目 | L2 配套 |
+| **L1（自主执行 + 记录）** | `proposals.jsonl` status / resolution / resolved 字段 | 按 `tools/nw-reconciliation.md` L1/L3 判据 |
+| **L2（提议，不动手）** | `~/.claude/CLAUDE.md` / `cc-space/CLAUDE.md` | 只提议到 FOUND，Keith 早上拍板 |
+| **L2（提议，不动手）** | hooks / settings.json / 新建或删除 skill 本体 | 同上 |
+| **L3（禁止）** | push cc-space 改动 | auto_gg push 权只在 gg 仓库 |
+| **L3（禁止）** | 删除任何目录或文件 | 不可逆 |
 
-判据全文见 `tools/nw-reconciliation.md`。**歧义一律 L4 blocked**——这是 §1.4 "宁可漏不可错"在跨目录场景的延伸。
+NW 账本判据全文见 `tools/nw-reconciliation.md`。**歧义一律 L4 blocked**——§1.4 "宁可漏不可错"在跨目录场景的延伸。
+
+**Night Watch 管辖**：auto_gg SCAN 段巡检范围包括 Night Watch 任务状态（reading `morning-brief.md` + `proposals.jsonl`）——已在 §2 SCAN 里定义，此处仅明示归属关系。
 
 ---
 

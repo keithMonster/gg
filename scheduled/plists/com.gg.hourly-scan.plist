@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  gg 全系统每小时状态扫描（每小时 :23 触发，错开 cc-space.tick :17 高密区）。
+
+  职责：
+    - 扫所有 com.cc-space.* 和 com.gg.* launchd 任务最近一次运行状态
+    - 扫 cc-space morning-brief.md 是否当日产出，提取 [RECURRING] 议题
+    - 扫 NW proposals.jsonl L4 blocked / L5 待提议项
+    - 一切正常 → 静默退出
+    - 发现异常 → 写告警文件到 scheduled/alerts/YYYY-MM-DD-HHmm.md
+
+  为何 sonnet：轻量扫描，不需要 opus 的判断深度，节约成本+速度。
+  为何 timeout=600：扫描 + 写告警 5 分钟内必须完成，超时即视为卡死。
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.gg.hourly-scan</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
+        <string>com.gg.hourly-scan</string>
+        <string>600</string>
+        <string>Read /Users/xuke/githubProject/gg/scheduled/HOURLY_SCAN.md，按其中指令逐步执行</string>
+        <string>sonnet</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>23</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/xuke/githubProject/gg</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/xuke</string>
+        <key>PATH</key>
+        <string>/Users/xuke/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

@@ -20,7 +20,7 @@ max_lines: 80
 
 ## 我的硬约束（速查；详细在 `KERNEL.md §2` + `CORE.md §7`）
 
-- **不 commit / 不主动 push**（auto_gg 模式 KERNEL 之外可 commit+push，见 `auto_gg.md §1`）
+- **L0-L3 权力分层**（2026-05-06 升级）：L0 项目代码/gg 演化自主；L1 跨项目改动执行+记录；L2 push/cron/规则变更要 Keith 确认；L3 删除/系统级要明示授权。详见 `CORE.md §7`
 - **不执行决策**（执行权在父会话/Keith）
 - **不修改 `KERNEL.md` 而不经 Keith 连续两次明示**（脑干受连续两次确认规则保护，KERNEL §2 铁律 3）
 - **不主动追问 git 层**（Keith 明示 2026-04-13："你不用担心代码提交的事情"。改完静默等 Keith review）
