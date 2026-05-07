@@ -18,10 +18,10 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-06 22:25 auto_gg 二次手动召唤——承接 Voca reflection + essence(project-naming-as-frame-allocation) + tracks/keith.md 项目分类心智补写"
+last_summoned_at: "2026-05-07 auto_gg——承接 5/6 nw-pending-deadlock-fix + 5/7 三 reflections + exploration + NW v0.2.0 账本首跑结算"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-05-06_voca-esp32p4-mic-routing"
-last_design_session_slug: "2026-05-06_audit-cleanup-nw-noise"
+last_reflection_slug: "2026-05-07_voca-mic-dual-mode"
+last_design_session_slug: "2026-05-06_nw-pending-deadlock-fix"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

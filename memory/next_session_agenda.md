@@ -26,6 +26,22 @@ last_updated: 2026-04-18
 
 ## 待议（open）
 
+### 2026-05-06（NW pending 死锁修复后承接）
+
+- `[STRATEGIC]` **跨项目改动 transparency 缺口（出现 1 次——tripwire）**
+  - **背景**：2026-05-06 NW pending 死锁修复时 gg 改了 cc-space 的 `harness-engineering/prompts/nw-daily.md` 和 `proposals.jsonl`——Keith 没办法第一眼看到 diff，只能依赖 gg 文字描述
+  - **二阶风险**：CORE.md §7 L1 跨项目改动权常态化后，"gg 改了 cc-space 哪些文件"会成为 transparency 缺口源头
+  - **当前判断**：按 essence `premature-abstraction-tripwire`（04-21）—— 第 1 次场景出现不动手抽，记 tripwire。第 2 次场景再出现升级为工具化（汇总本轮跨项目改动 + diff 摘要）
+  - **触发升级条件**：下一次 gg 在某次召唤里改了 ≥1 个 gg 项目外的文件且未明示告知 Keith 时
+  - **不紧急**：本条本身是观察通道
+
+- `[Q]` **修复 2 的实际效果（今晚 22:00 NW 跑后观察）**
+  - **观察点**：NW 在新 prompt 下产 resolution_draft + confidence 的实际质量分布
+  - **关键指标**：confidence ≥ 0.95 占比（自动闭环率）/ confidence 0.7-0.95 占比（Keith 草稿审批） / null 占比（NW 写不出来）
+  - **若 confidence 普遍偏低**：修复 2 的"认知前移"假设在 NW 当前能力上不成立 → 退回到只用修复 1（接受 blocked 池存在，定期人工清）
+  - **若 confidence 异常偏高**：警觉 task-compliance（NW 为产出虚标置信度），查 resolution_origin 字段做事后审计
+  - **本议题在 2026-05-07 早晨 / 下次 Keith 召唤时自动触发**
+
 ### 2026-04-18（架构能力补齐 B1 首轮承接）
 
 - `[STRATEGIC]` **Generator-Evaluator 分离的 gg 落地方案**

@@ -18,6 +18,7 @@
 | `tools/archive-format.md` | 我要归档决策到 `memory/archival/` | 退场时装 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
 | `tools/nw-reconciliation.md` | 承接 cc-space NW proposals 账本结算（auto_gg 夜间专用） | 一次装，按 L1-L5 分层执行 |
+| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审之前——主动 cross-check `memory/essence.md` 避免 essence 静默缺席推理回路 | 一次装，grep + 显式比较即卸 |
 
 ---
 

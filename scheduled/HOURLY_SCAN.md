@@ -54,7 +54,9 @@ test -f ~/githubProject/cc-space/harness-engineering/analysis/proposals.jsonl &&
 import json
 with open('/Users/xuke/githubProject/cc-space/harness-engineering/analysis/proposals.jsonl') as f:
     items = [json.loads(l) for l in f if l.strip()]
-unresolved = [i for i in items if not i.get('resolved')]
+# 2026-05-07 契约同步：blocked / deferred / done / rejected 都是已显式处理的状态。
+# 只有 status=='pending' 才是真正"待处理"。引入 blocked 是 nw-reconciliation v0.2.0 的诚实标记。
+unresolved = [i for i in items if i.get('status') == 'pending']
 l4 = sum(1 for i in unresolved if i.get('status') == 'L4_blocked')
 l5 = sum(1 for i in unresolved if i.get('status') == 'L5_pending')
 print(f'unresolved={len(unresolved)} L4={l4} L5={l5}')
