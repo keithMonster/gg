@@ -18,9 +18,9 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-07 auto_gg——承接 5/6 nw-pending-deadlock-fix + 5/7 三 reflections + exploration + NW v0.2.0 账本首跑结算"
+last_summoned_at: "2026-05-08 auto_gg——承接 5/8 三 cc-space reflections + 5/8 凌晨 exploration（gg-self-default-bucket）+ NW 5/8 5 条新 pending 全 L4 + 阈值校准累积信号"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-05-07_voca-mic-dual-mode"
+last_reflection_slug: "2026-05-08_cc-space-design-asset-integration"
 last_design_session_slug: "2026-05-06_nw-pending-deadlock-fix"
 ```
 

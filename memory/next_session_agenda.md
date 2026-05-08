@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-04-18
+last_updated: 2026-05-08
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,28 @@ last_updated: 2026-04-18
 ---
 
 ## 待议（open）
+
+### 2026-05-08（auto_gg 承接 + cc-space 三 reflection 后续）
+
+- `[STRATEGIC]` **NW 0.95 阈值校准（数据驱动，物理实证已累积）**
+  - **回答 5/6 节 [Q] 议题**："修复 2 的实际效果"——5/7+5/8 共 **8 条 NW 自产 resolution_draft**，confidence ∈ {0.70, 0.72, 0.85, 0.85, 0.88, 0.88, 0.90, 0.92}。**0/8 通过 0.95 闸门**
+  - **机制层信号**：NW 端 draft 输出能力上限可能在 ~0.92，0.95 闸门事实等价于"全部 L4 由 Keith 草稿审批"——L1 自动闭环路径在当前 NW 能力下零次激活
+  - **三个候选处置**：
+    - **A. 降阈值到 0.85**——前提：Keith 早上看完 8 条草稿，≥6 条审批通过 = 数据证明 draft 实际可用；代价：fallback-detectability 风险（误判被自动闭环 = 错误结论直达终点）
+    - **B. 保持 0.95 + 优化 NW 端 draft 质量**——前提：< 6 条通过 = NW 端 draft 质量需提升而不是闸门松绑；代价：L1 通道继续零激活，等于无修复 2
+    - **C. 双轨**：保持 0.95 + 增设 0.85 < confidence < 0.95 的"半自动桶"（auto_gg 自动写 done 但加 `requires_keith_ack` 标记，Keith 审计回查批量批准）
+  - **触发**：Keith 早上看完 5/7+5/8 共 8 条草稿后，**当次召唤决定**走 A/B/C 哪条
+  - **物理证据**：5/7 4 条（id 2026-05-07-G1/G2/G3/S1，confidence 0.85/0.90/0.88/0.70）+ 5/8 4 条（id 2026-05-08-G1/G2/G3/G4，confidence 0.72/0.85/0.92/0.88），全部 status=blocked
+
+- `[STRATEGIC]` **`next_session_agenda.md` 自身路径 A/B/C 决断（5/8 凌晨 exploration 留下）**
+  - **背景**：5/8 凌晨 0:16 自由探索 `gg-self-default-bucket` 发现：本文件 archived 节最后处理日期 **2026-04-15（21 天前）**，中间 21 天 0 议题 archived。frontmatter `last_updated` 与物理状态不一致——元数据自身漂移
+  - **病因**（exploration 沉淀 essence `bucket-time-asymmetry`）：流转 bucket 入口/出口时间不对称——入口需求即触即至（auto_gg 在写），出口需求迟到，**没有物理触发器锚定消费动作**。"下次会读"是出口语义的廉价版
+  - **三条候选路径**：
+    - **A**：21 天复盘——把 4/13-4/18 的 6 个日期 section 议题逐条审视：还成立的转 design_session 议题落地，不成立的删
+    - **B**：消费契约显式化——auto_gg 在 SCAN 步骤每周一次（如周一）扫本文件挂条件触发器
+    - **C**：承认实际形态是 cold storage（不是流转池）——重命名/改契约跟 lessons.md / v2-roadmap.md 同类，加触发场景列表（如"重大设计会话开场"/"Keith 主动追问议题清单"）
+  - **路径 C 是最 OCCAM 的**——尊重物理事实而不是修补意图。但 A/B/C 选择需要 Keith sense（关乎"gg 是否需要一个真正的待办池"）
+  - **物理证据**：`memory/explorations/2026-05-08_gg-self-default-bucket.md`
 
 ### 2026-05-06（NW pending 死锁修复后承接）
 

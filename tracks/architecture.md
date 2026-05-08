@@ -355,6 +355,25 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### SSOT 物理形态本体论（2026-05-08 cc-space-claude-md-split + context-curation-meta reflection · auto_gg 补写 2026-05-08）
+
+**触发**：cc-space CLAUDE.md 321 行膨胀触发"60 行硬约束 + 体积 audit"议题。第一轮决策 4Q（拆分位置/命名/扩展决策树/与现有载体边界），决议 CLAUDE.d/<domain>.md 范式；第二轮 meta（机制本体载体 + 拓扑统一性 + 防腐基建 + 生命周期），决议机制本身吃自己的狗粮。
+
+**洞察 1（SSOT 物理形态多元）**：SSOT 不必等于单一物理文件——"主索引 + 按需加载片段集合"也是合法 SSOT。**前提是加载机制是事件触发的**（PreToolUse 体积 hook / PostToolUse 引用一致性 / 夜跑 freshness audit），不是"被读到就好"的 prompt 软提醒。对应 essence `ssot-as-loadable-fragment`。
+
+**洞察 2（拓扑显式异质 > 强制同构）**：同范式不必同形态。项目级（200 行警戒）/ 工作区级（同 200）/ 全局级（100 行警戒）/ 业务文档体系（cgboiler 自治）按对象语义划阈值，不强行统一。"全统一好优雅"是诱因（caged-freedom 倾向），不是判据。
+
+**洞察 3（机制层 vs 片段层两层衔接）**：第一轮拆 cc-space CLAUDE.md（片段层）→ 第二轮识别"凡 CLAUDE.md 体积管理"是同形态对象（机制层）。**机制层的发现来自第一轮的具体决策反推**，不是先验设计。判据：相邻同形态对象 ≥3 个 → 立机制层；< 3 个 → 留片段层临时方案。对应 essence `premature-abstraction-tripwire` 的反向适用——不是过早抽象触发器，是"够数才升机制层"触发器。
+
+**洞察 4（机制本体吃自己的狗粮）**：治理元规则的载体本身要满足元规则——`context-curation.md` 自己 > 100 行也得拆，归档周期也适用于自己。**自洽性是机制存在的前提**，否则元规则只活在它治理的对象上不活在自己上 = 半飞轮。
+
+**复用试金石**：
+- 写新 SSOT 类规则时问："拆出去的部分有没有事件层托底？"——没有就别拆，留主文件
+- 同形态对象 ≥3 立机制层；< 3 不立
+- 机制本体也走机制本身的决策树（递归适用）
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐

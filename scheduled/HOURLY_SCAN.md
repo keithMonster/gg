@@ -28,7 +28,17 @@ launchctl list | grep -E 'com\.(cc-space|gg)\.'
 launchctl print gui/$(id -u)/<label> 2>/dev/null | grep -E 'last exit code|state ='
 ```
 
-**异常信号**：
+**前置：新鲜度过滤**
+
+`launchctl print` 报的 `last exit code` 持续保留到下次执行覆盖——长间隔任务（inbox-incubator 4h / auto_gg / nw-daily 每日）一次失败会被反复看到。判异常前必须做新鲜度过滤：
+
+- 取任务 log 文件 mtime（路径：`com.cc-space.*` → `~/githubProject/cc-space/scheduled/logs/<label>.<YYYY-MM>.log`；`com.gg.*` → `~/githubProject/gg/scheduled/logs/<label>.<YYYY-MM>.log`）
+- 若 `last exit code != 0` **且** log mtime 距今 > 90 min → 视为"过时失败状态，已知等待下次执行"，**跳过**告警
+- 若 log mtime 距今 ≤ 90 min → 走下方异常信号判据
+
+设计动机：hourly-scan 每小时跑，长间隔任务的失败应当报一次（首次失败时 mtime 在最近 60min 内会触发），不该重复推送同一旧状态。任务连续失败时 log mtime 每次都会刷新——失败永远能被感知，只是旧失败不再骚扰。
+
+**异常信号**（新鲜度过滤通过后判定）：
 - `last exit code = -9`（被 kill）
 - `last exit code = 142 / 124`（timeout）
 - `last exit code = 127`（claude binary 找不到）
