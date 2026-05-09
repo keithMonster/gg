@@ -374,6 +374,28 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### Workload 异构判别——基础设施层 ≠ 单点容量约束（2026-05-09 cc-gateway-fastgpt-migration reflection · auto_gg 补写 2026-05-09）
+
+**触发**：Keith 给 cc-gateway 设计"两块功能并列在其上同时设计架构"框架——块 1 是 cron 调 LLM 类 M2M 短任务，块 2 是替代 FastGPT workflow 的 H2M 长会话。本以为同接 cc-gateway = 同基础设施。
+
+**洞察（异构 workload 同基设施 = 平均化错配）**：M2M 短任务和 H2M 长会话的容量模型 / 状态寿命 / 失败可见性**全不重叠**——把两类塞进同一个 MAX_CONCURRENCY=3 容器，= 用一组单点参数同时回答两类问题，必有一类被错配。
+
+**判别清单（写架构前过一遍）**：
+1. 并发模型：是请求/响应（M2M）还是会话粘连（H2M）？
+2. session 寿命：秒级（cron tick）还是周级/月级（员工日活）？
+3. 失败可见性：fail-fast 重试（M2M）还是用户感知断裂（H2M）？
+4. 状态持久要求：无状态 / sqlite / Redis / 长会话 jsonl？
+
+任一不齐 = 异构 workload，**强行同构 = 单点过载**。
+
+**叙事识别信号**："在 X 之上做两块功能"——介词 "之上" 把异构 workload 用一个介词伪装成同构。架构师听到 "之上" 框架时第一反应应是问"两块的并发/寿命/失败模式对齐吗"，不是顺着 "X 之上" 接下去。
+
+**对应 essence**：`m2m-vs-h2m-coupling-illusion` 是抽象规律层（任意两类异构 workload 都成立），本节是工程范式层（具体判别清单 + 叙事识别信号）。
+
+**复用域**：cc-gateway / morning-call / 任何"在某基础设施之上铺多块功能"的设计。同样适用于 v2+ 候选议题"给 gg 工作时段主动能力"——hook / 桌面通知 / 邮件 / IM bot 是 4 个异构通道，不能笼统讨论"主动通道"统一抽象。
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐

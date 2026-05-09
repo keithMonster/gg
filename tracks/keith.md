@@ -268,6 +268,30 @@ Keith 读到外部体系（open-design / mattpocock skills / Claude skill creato
 
 **跟其他 track 的对位**：架构层是抽象规律（`borrowed-method-as-mini-source` / `extraction-meta-inheritance`），keith track 是 Keith 具体触发模式。同根不同抽象层，互补存档。
 
+### 从 2026-05-09 cc-gateway-fastgpt-migration reflection 获得（auto_gg 补写 2026-05-09）
+
+**Keith 的"X 之上做两块功能"叙事框架陷阱**
+
+Keith 在 cc-gateway 之上设计两块功能（M2M 短任务 + H2M 长会话替代 FastGPT）时，给出"两块都接 cc-gateway，一起设计架构"框架。表面是"复用基础设施"，实质 = 用一个介词 "之上" 把异构 workload 伪装成同构（容量 / session 寿命 / 失败模式全不重叠）。
+
+**这跟"借鉴诱发的方案"是同一类——Keith 在结对会话呈现的"框架陷阱"系列**：
+
+| 系列实例 | 表面叙事 | 实质 | 对应 essence |
+|---|---|---|---|
+| 借鉴诱发（5/8） | "我读了 X 想做 X 的轻量版" | 抽取动作反向继承元约束 | `borrowed-method-as-mini-source` |
+| X 之上双块（5/9） | "在 cc-gateway 之上做两块" | 异构 workload 单点过载 | `m2m-vs-h2m-coupling-illusion` |
+
+**共同结构**：Keith 给一个**叙事框架**，gg 顺着框架推下去 = 在错前提上叠论证。**正确动作是先质疑框架本身**——这是 #3 决策超越直觉的具体形态（不是给更好的方案，是给更好的框架）。
+
+**gg 的应对模板**：
+1. 听到 Keith 给框架（"我们要不要 X / 在 Y 之上做 Z / 借鉴 W 做轻量版"）时，**第一步显式审视框架本身**：是诱发还是真痛点？是同构还是异构？
+2. **不要顺着框架接论证**——对外界看是"专业回答 Keith 提问"，对北极星 #3 是"被框架绑架"
+3. 框架质疑过关后再进具体方案讨论
+
+**信号源滞后污染诊断（reflection 2 暴露）**：Keith 5/9 用"24 pending"诊断 NW 漂移，实际真值是 7 pending + 15 blocked——他读的是 thread brief（数字滞后到 4-27）。这是 Keith 决策偏差的具体形态：**用陈旧 brief 数字 + 近似合数 → 诊断错误根因**。gg 应对：当 Keith 用具体数字诊断时，**第一步去原始账本拿真值**，不接受 brief 数字。
+
+**北极星触达**：#3 决策超越直觉（替 Keith 看到框架问题 + 数字源头滞后问题）+ #1 二阶效应（议题 18 时序约束是 Keith 没显式想到的耦合）。
+
 ---
 
 ## 下一步 (Next Move)

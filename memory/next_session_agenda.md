@@ -26,6 +26,26 @@ last_updated: 2026-05-08
 
 ## 待议（open）
 
+### 2026-05-09（auto_gg 承接 + cc-space 两条 reflection 后续）
+
+- `[STRATEGIC]` **nw-reconciliation v0.3.0 升级（L2 闸门跟 L1 对齐 + 覆盖 thread/code 文件类）**
+  - **背景**：5/9 NW 跑出 5 条新 pending，draft confidence ∈ {0.95, 0.95, 0.95, 0.95, 0.9}——v0.2.0 引入"L1 闸门接受 confidence ≥ 0.95 resolution_draft"修复了 silent pending 死锁，但 **L2 闸门第三条仍要求 resolution 含 "批量合并"/"本周内执行" 标识**——5/9 三条 S1/S2/S3（fastgpt/web-access/search-skill skill 合并）draft 内容明确 + author:monster + confidence 0.95 但缺该语义 → 只能 L4 blocked
+  - **附带缺口**：L 分层只覆盖 Skill SKILL.md 合并，**没覆盖 thread 文件 append（5/9-G1 voca-mic）+ code 文件修改（5/9-R1 hourly_check.py）**——这两类合规自主动作也只能 L4 blocked
+  - **L1 自动闭账的红线**：L1 仅改 jsonl status/resolution，**不动 SKILL.md/thread/code 文件本身**——如果 v0.2.0 L1 闸门用在 S 类提案上 = 谎报落地（账上 done 但实际未合并），触 fallback-detectability essence 红线。这是 v0.2.0 设计上的合理保守
+  - **三个候选升级**：
+    - **A. L2 闸门高置信度模式**：把"resolution 含批量合并/本周内执行"替换为"resolution_draft 完整 + confidence ≥ 0.95"——跟 L1 一致；保留 author:monster 和 notes 条目精准定位的硬匹配；额外要求"实际合并能机械执行"（draft 给出明确 SKILL.md 插入位置 + 删除点）
+    - **B. 增设 L2.5 thread/code 类**：L2 留 Skill 合并；新增 L2.5 覆盖 cc-space/threads/*.md append + 简单 py/json/md 修改，闸门：confidence ≥ 0.95 + draft 给出 sed/anchor 级精确动作
+    - **C. 双轨**：A + 增加"半自动桶" requires_keith_ack 标记（参 5/8 议题 NW 0.95 阈值校准 C 选项）
+  - **触发**：Keith 看 5/9 五条 blocked draft + reflection 2 / reflection 1 → 决定升级路径
+  - **物理证据**：proposals.jsonl 7 条 blocked（5/8 留 2 + 5/9 加 5），blocked_reason 字段已显式说明 v0.2.0 缺口
+  - **跟 5/8 NW 0.95 阈值校准议题的关系**：5/8 议题是"L1 闸门松不松"，本议题是"L2/L2.5 怎么覆盖更多动作类型"——两者并行处理，不互斥
+
+- `[STRATEGIC]` **blocked 池 cadence 健康观察（reflection 2 修复信号验证）**
+  - **背景**：5/9 reflection 2 提"修复信号识别：blocked 池条数月度均值持续上升 + Keith 审批批次 < 5/月 → M2 候选必须立刻启动"
+  - **5/9 物理实证（积极）**：5/9 白天 Keith 处理掉 8 条历史 blocked（reflection 2 时 15 → 我加 5/9 五条前 2 → 现 7）= 闸门日审批 cadence ≥ 8/日，远超月 5 条阈值。当前未触修复信号
+  - **持续观察**：blocked 池条数 + 月度审批吞吐——如未来 30 天均值 > 月 +10 条则 M2（auto_gg FOUND 单列 blocked 老化）启动
+  - **不紧急**：观察通道
+
 ### 2026-05-08（auto_gg 承接 + cc-space 三 reflection 后续）
 
 - `[STRATEGIC]` **NW 0.95 阈值校准（数据驱动，物理实证已累积）**
