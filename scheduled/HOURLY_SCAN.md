@@ -40,9 +40,26 @@ launchctl print gui/$(id -u)/<label> 2>/dev/null | grep -E 'last exit code|state
 
 **异常信号**（新鲜度过滤通过后判定）：
 - `last exit code = -9`（被 kill）
-- `last exit code = 142 / 124`（timeout）
+- `last exit code = 142 / 124`（perl alarm 硬超时 SIGALRM）
+- `last exit code = 143`（run-task.sh watchdog SIGTERM——session jsonl 静止 10min）
+- `last exit code = 137`（watchdog SIGTERM 后升级 SIGKILL）
 - `last exit code = 127`（claude binary 找不到）
 - `last exit code != 0` 且不是上述明确含义
+
+**业务真相重判（针对 exit ∈ {142, 143, 137}）**：
+
+claude binary 在 `-p` mode 下偶发 teardown hang——业务跑完最后一条 final assistant text 已写入 session jsonl，但进程不退出，被 perl alarm 或 watchdog kill。这种"业务成功 + 进程 hang"不是真异常，告警 = 噪音。判据：
+
+1. 找本次任务对应的 session jsonl：
+   - `com.cc-space.*` 任务 → `~/.claude/projects/-Users-xuke-githubProject-cc-space/*.jsonl`
+   - `com.gg.*` 任务 → `~/.claude/projects/-Users-xuke-githubProject-gg/*.jsonl`
+   - 过滤：mtime 落在任务 log start ~ end 时段
+2. python3 解析 jsonl，倒序找最后一条 `type == 'assistant'` 且 `message.content` 数组里含 `type == 'text'` 的 entry，取 text
+3. text 命中 `(tick|L2 回炉|nw daily|inbox|auto_gg|候选池|prepped).*(完成|done|绿)|^完成` 类终态正则 → **业务实际成功，进程 hang**
+4. 命中 → 告警降级：`severity=info`，task_id 用 `<原 task_id>_hung_business_ok` 区分 dedup
+5. 不命中 → 业务真断了，维持 `severity=warning`
+
+设计动机：业务产出已落地（git diff 可证），不该按"进程 exit 非零"硬判失败。根因是 claude binary 工程债——`cc-space/scheduled/bin/run-task.sh` 的 watchdog 已在 ~10 min 内主动释放 hang 槽位，hourly-scan 这一层只负责告警分类。
 
 ### 1.2 cc-space morning-brief 状态
 

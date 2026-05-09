@@ -90,7 +90,7 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 |---|---|---|---|
 | **A. thinking-time scaling** | 单 session 内的 reasoning budget（o1 / extended thinking） | 工作模式装配后的内部推理 | **深度**（一次想多深） |
 | **B. agent scaling** | 单 session 内的多视角协作（orchestrator-workers / personas） | personas / reasoning_modules / tools 装配 | **广度**（同时看几个角度） |
-| **C. crystal scaling** | 跨 session 的累积浓缩（append-only ledger） | `essence.md` | **时间深度**（多久前的洞察现在还在用） |
+| **C. crystal scaling** | 跨 session 的累积浓缩（append-only ledger） | `memory/essence.md` | **时间深度**（多久前的洞察现在还在用） |
 
 **关键判断**：三条轴正交，不互相替代。
 
