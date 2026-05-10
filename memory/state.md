@@ -18,7 +18,7 @@ current_version: 0.5.0
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-09 auto_gg——承接 5/9 两 cc-space reflections（cc-gateway-fastgpt-migration + nw-m1-real-problem）+ NW 5/9 5 条新 pending 全 L4 blocked + v0.2.0 L2/L2.5 升级缺口具象化 + Keith 5/9 闸门日清 8 条历史 blocked 物理证据"
+last_summoned_at: "2026-05-10 auto_gg——5/10 周报建议升 5-01-G1 P0（同根因第二次复现）+ NW 5/10-G1 thread append 类 L4 blocked（v0.2.0 缺口同 5/9-G1 形态第二票）+ 无 reflection / 跨 track 反哺 / essence 沉淀（exploration 5/10 自判 lens）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-09_nw-m1-already-landed-blocked-pool-real-problem"
 last_design_session_slug: "2026-05-06_nw-pending-deadlock-fix"

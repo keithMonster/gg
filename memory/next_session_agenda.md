@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-08
+last_updated: 2026-05-10
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,20 @@ last_updated: 2026-05-08
 ---
 
 ## 待议（open）
+
+### 2026-05-10（auto_gg 承接 + cc-space 周报）
+
+- `[P0]` **周报建议升 5-01-G1 为 P0（同根因第二次复现，事件层信号源是 cc-space）**
+  - **背景**：cc-space `morning-brief.md` 5-10 周报指出——5-10 session `55c7e746` 用户说"公众号链接默认走 web-access skill"作为偏好规则，Claude 立即 Write 到 `~/.claude/projects/-Users-xuke-githubProject-cc-space/memory/feedback_*.md`（已废止的 CC 原生 memory 子目录）。与 4-30 cc-space vs `~/.claude` 混淆事故同根因第二次复现
+  - **新加 5-10-G1**（confidence 0.95，thread append 类）：补 thread `cc-space-memory-decommission` timeline 漏洞条目——auto_gg 已结算到 blocked（v0.2.0 L 分层未覆盖 thread append；同 5/9-G1 形态）
+  - **5-01-G1 状态**：proposals.jsonl pending 7 条之一，layer:L5（路径相关），周报建议升 P0
+  - **gg 自主权边界**：升 P0 是 cc-space 周报的判断，auto_gg 不自主改 priority 字段，留给 Keith 闸门日处理
+  - **触发**：Keith 闸门日先看 5-01-G1 + 5-10-G1（已 blocked），周报建议优先级最高
+
+- `[STRATEGIC]` **v0.3.0 升级 thread append 类累积票（5/9-G1 + 5/10-G1）**
+  - **5/9 议题（v0.3.0 三个候选 A/B/C）**：thread/code 类未覆盖
+  - **5/10 物理实证累积**：thread append 类已 2 票 blocked（同形态），增加候选 B（增设 L2.5 thread/code 类）的紧急度信号
+  - **不紧急**：等 Keith 决定 v0.3.0 路径时本笔作为加权数据点
 
 ### 2026-05-09（auto_gg 承接 + cc-space 两条 reflection 后续）
 
