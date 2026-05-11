@@ -1,7 +1,7 @@
 # archive-format — 决策归档
 
 > 当决策输出完成，我要在退场前把它归档到 `memory/archival/` 时，我装这个工具。
-> 管辖：`CORE.md §8` 工具层
+> 管辖：`CORE.md §8`（身体 / tools 目录）
 
 ---
 

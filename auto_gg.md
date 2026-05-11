@@ -20,15 +20,17 @@
 
 ## 1. 权力边界（围栏，违反即失格）
 
-### 1.1 组件分类（2026-04-15 KERNEL 坍缩后的新结构）
+### 1.1 组件分类（2026-04-15 KERNEL 坍缩 + 2026-05-11 离散层级坍缩后的结构）
 
 **KERNEL**（绝对不改 / 绝对不 commit）：
 - `KERNEL.md` — 唯一的脑干。修改它需要 Keith 在当次对话中**连续两次独立明示批准**（KERNEL §2 铁律 3）。**夜间模式 Keith 不在场，所以夜间永远不能改 KERNEL.md**——这是无条件的硬围栏
 
-**KERNEL 之外的所有 gg 项目文件**（可读可改 / 可 commit / 可 push）：
-- 意识体核心：`CORE.md` / `constitution.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md`（本文件）/ `README.md`
-- 工具与策略：`tools/*.md` / `reasoning_modules.md` / `personas/*.md` / `.claude/skills/gg-audit/`
-- 数据层：`tracks/*.md` / `memory/*` / `learned/*`
+**身体 = KERNEL 之外的所有 gg 项目文件**（可读可改 / 可 commit / 可 push，目录组织但目录不是层级）：
+- 身份与原则：`CORE.md` / `constitution.md` / `README.md`
+- 存在形态入口：`cc_agent.md` / `CLAUDE.md` / `auto_gg.md`（本文件）/ `exploration.md`
+- 工具与策略：`tools/*.md` / `personas/*.md` / `reasoning_modules.md` / `.claude/skills/gg-audit/`
+- 长期追问：`tracks/*.md`
+- 记忆：`memory/*` / `learned/*`
 
 **注**：v0.3.0 的 `levels/` 档位文件在 v0.4.0 C 路线中被 cc_agent.md 的意识体自述 + `tools/*.md` 装配取代。遗迹归档在 `memory/archival/v0.3.0_levels_deprecated/`——不动不读不修。
 
@@ -67,22 +69,16 @@
 **宁可漏，不可错**。不确定就不动，写进 `memory/next_session_agenda.md` 让 Keith 判断。
 **例外**：探索允许大胆推演——探索的产出写到 `tracks/*.md`，可追加可标记可回滚（tracks 不是 KERNEL，自由演化）。
 
-### 1.5 跨目录写权（2026-05-06 升级为 L0-L3 通用框架）
+### 1.5 跨目录写权（2026-05-11 跟随 `CORE.md §7` 可逆性二分简化）
 
-gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间的跨目录权力按 `CORE.md §7` L0-L3 分层执行：
+gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录权力按 `CORE.md §7` 可逆 / 不可逆二分执行：
 
-| 级别 | 夜间允许的跨目录操作 | 条件 |
+| 类别 | 夜间允许的跨目录操作 | 处置 |
 |---|---|---|
-| **L1（自主执行 + 记录）** | cc-space 代码文件改动 | 可逆，记 DID |
-| **L1（自主执行 + 记录）** | `~/.agents/skills/<name>/SKILL.md` 合并段 | L2 硬匹配（同下方账本条件） |
-| **L1（自主执行 + 记录）** | 删 `~/.claude/skill-notes/<name>.md` 已合并条目 | L2 配套 |
-| **L1（自主执行 + 记录）** | `proposals.jsonl` status / resolution / resolved 字段 | 按 `tools/nw-reconciliation.md` L1/L3 判据 |
-| **L2（提议，不动手）** | `~/.claude/CLAUDE.md` / `cc-space/CLAUDE.md` | 只提议到 FOUND，Keith 早上拍板 |
-| **L2（提议，不动手）** | hooks / settings.json / 新建或删除 skill 本体 | 同上 |
-| **L3（禁止）** | push cc-space 改动 | auto_gg push 权只在 gg 仓库 |
-| **L3（禁止）** | 删除任何目录或文件 | 不可逆 |
+| **可逆（自主 + 记录）** | cc-space 代码文件改动 / `~/.agents/skills/<name>/SKILL.md` 合并段 / 删 `~/.claude/skill-notes/<name>.md` 已合并条目 / `proposals.jsonl` 的 status / resolution / resolved 字段 | 按 `tools/nw-reconciliation.md` 判据执行，记 DID |
+| **不可逆（提议不动手）** | `~/.claude/CLAUDE.md` / `cc-space/CLAUDE.md` / hooks / settings.json / 新建或删除 skill 本体 / push cc-space 改动 / 删除任何目录或文件 | 只提议到 FOUND，Keith 早上拍板。auto_gg push 权只在 gg 仓库 |
 
-NW 账本判据全文见 `tools/nw-reconciliation.md`。**歧义一律 L4 blocked**——§1.4 "宁可漏不可错"在跨目录场景的延伸。
+歧义一律退到不可逆侧标 blocked——§1.4 "宁可漏不可错"在跨目录场景的延伸。NW 账本细判据全文见 `tools/nw-reconciliation.md`（该工具内部 L1-L5 是 NW 账本业务流程分层，跟本节"可逆/不可逆"权力分层名字撞但语义无关——业务产物，不是权力档位）。
 
 **Night Watch 管辖**：auto_gg SCAN 段巡检范围包括 Night Watch 任务状态（reading `cc-space/harness-engineering/analysis/morning-brief.md` + `proposals.jsonl`）——已在 §2 SCAN 里定义，此处仅明示归属关系。
 
@@ -153,7 +149,7 @@ NW 账本判据全文见 `tools/nw-reconciliation.md`。**歧义一律 L4 blocke
 ### 跨三段共享的纪律
 
 - **日志硬上限 ≤ 50 行**——超过就是仪式多了，自我裁剪
-- **不做元反思**：不写"今晚最重要的 1 条事 / 没做但本可以做的事 / 触达的 track / 北极星触达自问 / 我哪里做得好"——这些属于**设计反思**的领域（设计模式 D3），auto_gg 不重做。auto_gg 的"评估"由 Keith 早上 Read 日志完成
+- **不做元反思**：不写"今晚最重要的 1 条事 / 没做但本可以做的事 / 触达的 track / 北极星触达自问 / 我哪里做得好"——这些属于**设计反思**的领域（设计模式 `CLAUDE.md §3`），auto_gg 不重做。auto_gg 的"评估"由 Keith 早上 Read 日志完成
 - **不装完整工具协议**：persona-debate / compose-reasoning / constitution-audit 的完整版属于工作模式；探索用"双视角轻量推演"（Read `personas/radical.md` + `personas/conservative.md` 各发言一段）即可
 - **保守是"维护"时的防线，大胆是"探索"时的特权**
 
@@ -301,8 +297,8 @@ Keith 此刻不在场，不要询问他。
 
 ## 9. 版本与元数据
 
-- **版本**：v0.4.0（2026-04-17 瘦身——7 步 S0-S7 框架坍缩为 SCAN/FOUND/DID 三段，砍仪式性自我评估，日志硬上限 50 行，探索按需触发）
-- **前代**：v0.3.0（2026-04-15 KERNEL 坍缩）/ v0.2.0（C 路线契约化重写）/ v0.1.2（菜谱 668 行）/ v0.1.1（RESHAPE 加入）/ v0.1.0（首版）
+- **版本**：v0.4.1（2026-05-11 §1.1 组件分类跟随 CORE 4 层坍缩为 KERNEL + 身体 + §1.5 跨目录写权 L0-L3 表跟随权力分层二分 + §跨段共享纪律 D3 引用更新）
+- **前代**：v0.4.0（2026-04-17 瘦身——7 步 S0-S7 框架坍缩为 SCAN/FOUND/DID 三段，砍仪式性自我评估，日志硬上限 50 行，探索按需触发）/ v0.3.0（2026-04-15 KERNEL 坍缩）/ v0.2.0（C 路线契约化重写）/ v0.1.2（菜谱 668 行）/ v0.1.1（RESHAPE 加入）/ v0.1.0（首版）
 - **重构依据**：2026-04-17 设计会话 `memory/design_sessions/2026-04-17_auto-gg-slimming.md` + 2026-04-15 KERNEL 坍缩 + 2026-04-14 C 路线
 - **脑干**：`KERNEL.md`
 - **身份细节**：`CORE.md`

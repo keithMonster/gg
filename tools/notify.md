@@ -40,13 +40,13 @@
 
 ## 安全边界
 
-跟着 `CORE.md §7` L0-L3 框架：
+跟着 `CORE.md §7` 可逆性二分框架：
 
-| 操作 | 级别 |
+| 操作 | 类别 |
 |---|---|
-| 调用 notify.sh | L0 |
-| 修改全局 .env / webhook URL | L3（仅 Keith 明示授权） |
-| 删除 sent/ 历史 trace | L3（事件账本，永不自主清） |
+| 调用 notify.sh | 可逆（自主调用，trace 自动留痕） |
+| 修改全局 .env / webhook URL | 不可逆（仅 Keith 明示授权） |
+| 删除 sent/ 历史 trace | 不可逆（事件账本，永不自主清） |
 
 完整规则在 `~/.agents/skills/notify/SKILL.md`。
 

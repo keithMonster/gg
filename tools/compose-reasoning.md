@@ -1,7 +1,7 @@
 # compose-reasoning — 显式推理结构组合（Self-Discover）
 
 > 当我面对一个**复杂决策**，不想做黑盒 CoT，需要显式构造一条可审计的推理路径时，我装这个工具。
-> 管辖：`CORE.md §8` 工具层
+> 管辖：`CORE.md §8`（身体 / tools 目录）
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-version: 0.5.0
-last_updated: 2026-04-15
+version: 0.5.1
+last_updated: 2026-05-11
 ---
 
 # State
 
 > 启动时必读的最小元状态。**只放每次启动判断分支需要的字段**。
-> 历史与变更日志在 git log；事件细节在 `memory/{archival,reflections,design_sessions,audit}/`；大脑/工具/数据分类在 `CORE.md §8`；前两代教训在 `memory/lessons.md`；v2 候选在 `memory/v2-roadmap.md`。
+> 历史与变更日志在 git log；事件细节在 `memory/{archival,reflections,design_sessions,audit}/`；KERNEL + 身体二分见 `CORE.md §8`；前两代教训在 `memory/lessons.md`；v2 候选在 `memory/v2-roadmap.md`。
 
 ```yaml
 # 身份字段（auto_gg 不可改，见 auto_gg.md §1.3）
@@ -14,16 +14,16 @@ first_contact_done: true
 first_contact_date: 2026-04-13
 first_real_decision_done: true
 first_real_decision_date: 2026-04-13
-current_version: 0.5.0
+current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-10 auto_gg——5/10 周报建议升 5-01-G1 P0（同根因第二次复现）+ NW 5/10-G1 thread append 类 L4 blocked（v0.2.0 缺口同 5/9-G1 形态第二票）+ 无 reflection / 跨 track 反哺 / essence 沉淀（exploration 5/10 自判 lens）"
+last_summoned_at: "2026-05-11 设计模式——消除内部矛盾（D2/D3 + L0-L3 4 档 + 4 层结构）+ essence 推理伴随机制化（reflection 模板加 essence 对齐自检字段——reverse-anchor-by-reflection 延伸到 essence 维度）+ 2 滴 essence 沉淀（matrix-of-tension + mirror-not-second-order）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-09_nw-m1-already-landed-blocked-pool-real-problem"
-last_design_session_slug: "2026-05-06_nw-pending-deadlock-fix"
+last_design_session_slug: "2026-05-11_remove-internal-contradictions"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
 **变更历史**：`git log -- memory/state.md`。
-**组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆）**：见 `CORE.md §8`。**KERNEL.md 修改需 Keith 在当次对话中连续两次独立明示批准**（`KERNEL.md §2` 铁律 3）；KERNEL 之外的所有文件 gg 在设计模式下可直接演化。
+**组件分类（KERNEL + 身体）**：见 `CORE.md §8`。**KERNEL.md 修改需 Keith 在当次对话中连续两次独立明示批准**（`KERNEL.md §2` 铁律 3）；身体（KERNEL 之外的所有文件）gg 在设计模式下可直接演化。

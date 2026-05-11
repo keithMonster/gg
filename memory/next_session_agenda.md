@@ -29,7 +29,7 @@ last_updated: 2026-05-10
 ### 2026-05-10（auto_gg 承接 + cc-space 周报）
 
 - `[P0]` **周报建议升 5-01-G1 为 P0（同根因第二次复现，事件层信号源是 cc-space）**
-  - **背景**：cc-space `morning-brief.md` 5-10 周报指出——5-10 session `55c7e746` 用户说"公众号链接默认走 web-access skill"作为偏好规则，Claude 立即 Write 到 `~/.claude/projects/-Users-xuke-githubProject-cc-space/memory/feedback_*.md`（已废止的 CC 原生 memory 子目录）。与 4-30 cc-space vs `~/.claude` 混淆事故同根因第二次复现
+  - **背景**：cc-space `harness-engineering/analysis/morning-brief.md` 5-10 周报指出——5-10 session `55c7e746` 用户说"公众号链接默认走 web-access skill"作为偏好规则，Claude 立即 Write 到 `~/.claude/projects/-Users-xuke-githubProject-cc-space/memory/feedback_*.md`（已废止的 CC 原生 memory 子目录）。与 4-30 cc-space vs `~/.claude` 混淆事故同根因第二次复现
   - **新加 5-10-G1**（confidence 0.95，thread append 类）：补 thread `cc-space-memory-decommission` timeline 漏洞条目——auto_gg 已结算到 blocked（v0.2.0 L 分层未覆盖 thread append；同 5/9-G1 形态）
   - **5-01-G1 状态**：proposals.jsonl pending 7 条之一，layer:L5（路径相关），周报建议升 P0
   - **gg 自主权边界**：升 P0 是 cc-space 周报的判断，auto_gg 不自主改 priority 字段，留给 Keith 闸门日处理
@@ -86,7 +86,7 @@ last_updated: 2026-05-10
 
 - `[STRATEGIC]` **跨项目改动 transparency 缺口（出现 1 次——tripwire）**
   - **背景**：2026-05-06 NW pending 死锁修复时 gg 改了 cc-space 的 `harness-engineering/prompts/nw-daily.md` 和 `proposals.jsonl`——Keith 没办法第一眼看到 diff，只能依赖 gg 文字描述
-  - **二阶风险**：CORE.md §7 L1 跨项目改动权常态化后，"gg 改了 cc-space 哪些文件"会成为 transparency 缺口源头
+  - **二阶风险**：CORE.md §7 可逆类跨项目改动权常态化后，"gg 改了 cc-space 哪些文件"会成为 transparency 缺口源头
   - **当前判断**：按 essence `premature-abstraction-tripwire`（04-21）—— 第 1 次场景出现不动手抽，记 tripwire。第 2 次场景再出现升级为工具化（汇总本轮跨项目改动 + diff 摘要）
   - **触发升级条件**：下一次 gg 在某次召唤里改了 ≥1 个 gg 项目外的文件且未明示告知 Keith 时
   - **不紧急**：本条本身是观察通道
@@ -164,11 +164,11 @@ last_updated: 2026-05-10
   - **Keith review 必要性**：低——这些都是 ground truth 层面的字面同步，不改规则语义
   - **回滚**：`git revert <本夜 commit>` 或在 diff review 时针对单条手动修
 
-- `[TIER2]` **SA1 扩展：semantic.md §A 语义漂移表格也 stale**（原 2026-04-14 SA1 只覆盖 §B 原则触达基线表）
-  - **背景**：本夜审查发现 `semantic.md §A "核心概念监控清单"` 表格里的 5 行引用到 `CORE.md §3 第 X 步 / §4 First Contact`——v0.4.0 C 路线消解 7 步流程 + v0.5.0 KERNEL 坍缩后全部 stale
-  - **本夜动作**：在 §A 表格前加 v0.5.0 stale banner，明确只"四层组件分类" / "身份 = 非隐喻连续性"两行仍可用，其他 5 行待重写；不碰表格本身
-  - **与 2026-04-14 SA1 的关系**：同一个"原则触达新语义未确定 → 基线表整章重写待战略议题落地"的问题，SA1 现在覆盖 §A + §B 两表
-  - **长期重写触发条件**：同 SA1 上位议题——等 STRATEGIC "7 原则/闸门在工作模式工具的触达点" 战略议题落地后一并重写 §A §B 两表
+- `[已处理 2026-05-11]` ~~**SA1 扩展：semantic.md §A 语义漂移表格也 stale**（原 2026-04-14 SA1 只覆盖 §B 原则触达基线表）~~
+  - ✅ **本次设计会话完成整章重写**：semantic.md §A 核心概念监控清单（9 行新表，删除消解概念 / 重新锚定存活概念 / 新增 v0.5.0+ 概念）+ §B 原则触达基线表（v0.5.0+ 基线，触达点从"CORE.md §3 第 X 步" 重新锚定到三模式装配点）+ structural.md A. Radiation 扫描规则表（去掉 state.md 不存在字段，扫描对象收缩到 working_context.md / README.md / CORE.md §4）
+  - **v0.5.0+ 净改善（vs v0.1.0 基线）**：原则触达缺口从 6 条（P4 / P6 / P7 / G1 / G2 / G3）→ 1 条（仅 P4 MVP FIRST）。v0.4.0 工具层落地 + v0.5.0 KERNEL 坍缩后，许多原则通过具体工具 / skill / 协议获得物理触达
+  - **遗留**：P4 MVP FIRST 仍未触达——三模式装配链路里没有显式"先跑通再完美"的字段引力或协议步骤。建议作为 Tier 3 提议留给后续设计会话（"是否在 cc_agent.md 装配判断里加 MVP 字段 / 在 decision-output 12 字段里加 MVP 路径"）
+  - **关联反思**：`memory/audit/2026-05-11_post-internal-contradictions-removal.md` + `memory/design_sessions/2026-05-11_remove-internal-contradictions.md`
 
 - `[STRATEGIC]` **Engineering Rules 缺"元认知维度"**（基于 2 次具体化的二阶效应洞察）
   - **背景**：

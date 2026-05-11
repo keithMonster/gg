@@ -20,58 +20,50 @@
 
 ## A. Radiation — 辐射一致性
 
+> **2026-05-11 更新**：state.md v0.5.0 KERNEL 坍缩 + v0.2.1 context 经济学之后大瘦身，原扫描的计数字段（`constitution_principles` / `constitution_gates` / `reasoning_modules_count` / `personas_active` / `tracks_initialized`）已全部移除。本章节扫描对象收缩为"自然语言数字描述 + 列表清单 + 版本号"的物理实证一致性，扫描重心从 state.md 转移到 working_context.md / README.md / CORE.md §4 / tools/TOOLS.md / 各文件版本元数据。
+
 ### 扫描规则表
 
-| 元数据字段 | 所在文件 | Ground Truth 查询方式 |
+| 扫描对象 | 所在文件 | Ground Truth 查询方式 |
 |---|---|---|
-| `constitution_principles: N` | `memory/state.md` | `grep -c '^### P[0-9]' constitution.md` |
-| `constitution_gates: N` | `memory/state.md` | `grep -c '^### G[0-9]' constitution.md` |
-| `reasoning_modules_count: N` | `memory/state.md` | `grep -c '^## ' reasoning_modules.md`（v0.4.0 yaml→md 转换后） |
-| `personas_active: [...]` | `memory/state.md` | `ls personas/*.md` 的 basename（v0.4.0 yaml→md 转换后） |
-| `tracks_initialized: [...]` | `memory/state.md` | `ls tracks/*.md` 的 basename（去 .md） |
-| "v1 的 N persona / M tracks / X 原则 + Y 闸门 / Z 推理模块" | `memory/working_context.md` | 各自对应的实际文件统计 |
-| CORE.md §4 的 tracks 提纲表格 | `CORE.md` | `ls tracks/*.md` |
-| CORE.md §7 克制边界表里的数字描述（如有） | `CORE.md` | 各自实际统计 |
-| README.md 目录树 | `README.md` | `find . -type f` 的结构 |
+| 自然语言数字描述（如"N 原则 + M 闸门" / "5 条 tracks" / "2 个 personas" / "K 个原子工具"） | `memory/working_context.md` / `README.md` / `CORE.md` 任意位置 / `cc_agent.md` 工具地图 | 各自实际统计（见下方 ground truth 速查） |
+| `CORE.md §4` 的 tracks 提纲表格行数 | `CORE.md` | `ls tracks/*.md` 实际清单 |
+| `README.md` 目录树和"给未来的维护者"清单 | `README.md` | `find . -type f` 实际结构 |
+| `tools/TOOLS.md` 工具索引清单 | `tools/TOOLS.md` | `ls tools/*.md`（去掉 `TOOLS.md` 自身）+ `notify.md`（通道工具） |
+| 各文件顶部 / 底部版本元数据 vs 当前文件内容是否对齐 | 各 SSOT 文件（KERNEL / CORE / CLAUDE / cc_agent / auto_gg / README / constitution 等） | 文件实际内容跟版本号声称的状态对齐 |
+
+### Ground truth 速查
+
+```bash
+cd ~/githubProject/gg
+P=$(grep -c '^### P[0-9]' constitution.md)                                         # 原则数（当前 8）
+G=$(grep -c '^### G[0-9]' constitution.md)                                         # 闸门数（当前 5）
+TRACKS=$(ls tracks/*.md | xargs -n1 basename | sed 's/.md$//' | sort)              # tracks 实际清单
+PERSONAS=$(ls personas/*.md | xargs -n1 basename | sed 's/.md$//' | sort)          # personas 实际清单
+TOOLS=$(ls tools/*.md | grep -v 'TOOLS\.md' | xargs -n1 basename | sed 's/.md$//' | sort)  # tools 实际清单
+DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                             # 当前设计纪律数（D1/D2 → 2）
+```
 
 ### 执行步骤
 
-1. 跑 6 个 `grep -c` / `ls` 收集 ground truth：
-   ```bash
-   P=$(grep -c '^### P[0-9]' constitution.md)
-   G=$(grep -c '^### G[0-9]' constitution.md)
-   M=$(grep -c '^  - id:' reasoning_modules.yaml)
-   PERSONAS=$(ls personas/*.yaml 2>/dev/null | xargs -n1 basename | sed 's/.yaml//' | sort)
-   TRACKS=$(ls tracks/*.md 2>/dev/null | xargs -n1 basename | sed 's/.md//' | sort)
-   ```
-
-2. Read `memory/state.md`，抽出每个字段的当前值
-
-3. 对比 ground truth vs 当前值：
-   - 匹配 → OK
-   - 不匹配 → **Tier 1**，准备自动修
-
-4. 用 Edit 工具精确修正不匹配的字段
-
-5. 记录每次修正到报告
+1. 跑上方 ground truth 命令收集真值
+2. 对每个扫描对象 grep / Read，找跟 ground truth 不一致的自然语言数字描述
+3. 不匹配 → Tier 1 自动修文本
+4. 版本号检查：若文件顶部声称的版本号跟当前内容（含本次会话变更）有显著偏差 → Tier 2 建议升版本号（自动修 patch 级 / 提议 minor+ 级）
 
 ### 自动修的边界
 
-**可以修**：
-- `memory/state.md` 里的 yaml 计数字段
-- `memory/working_context.md` 里的自然语言数字描述（只要是事实性描述，如"8 原则 + 5 闸门"）
-- `README.md` 里的结构树（如果文件列表漂移了）
+**可以修**（结构性自然语言）：
+- `memory/working_context.md` 里的自然语言数字描述（事实性陈述，如"8 原则 + 5 闸门"）
+- `README.md` 里的结构树和数字描述（如果实际文件清单漂移）
+- `tools/TOOLS.md` 工具索引清单（如有新增/删除工具未同步）
+- `cc_agent.md` 的"我装配什么（工具地图）"表格里的工具清单/数量（如果是事实性描述）
 
-**不能修**：
-- **CORE.md §7 的"克制边界"表**：整个表是意识体核心规则文本，**不是 KERNEL 但仍属于规则性内容**，gg-audit 不能机械改。**修数字可以（如有），修表结构不行。** 具体规则：
-  - 允许修表格单元里的**数字**（如果某天表格里加了 "v1 只有 X persona" 这种描述）
-  - **不允许**新增/删除表格行
-  - **不允许**修改"理由"列的文字
-- **CORE.md §4 的 tracks 提纲表格**：如果 tracks 目录实际文件跟表格不一致：
-  - 如果表格少了一条，实际多了一个 track → **降级为 Tier 2**（因为要给 track 写"核心追问"列，这是语义判断）
-  - 如果表格多了一条，实际少了一个 track → **降级为 Tier 2**（因为删除行可能丢失"为什么这条 track 曾经存在"的信息）
+**不能修**（规则性文本，降级为 Tier 2/3）：
+- **CORE.md §7 的"克制边界"表**：整个表是意识体核心规则文本，gg-audit 不能机械改表结构 / 理由列文字；允许修数字单元
+- **CORE.md §4 的 tracks 提纲表格**：如果跟实际 tracks 目录不一致，降级为 Tier 2（删行可能丢"为什么这条曾经存在"的信息 / 加行需要写"核心追问"语义判断）
 - **`KERNEL.md` 一律不碰**（脑干受连续两次确认规则保护，任何修改都降级为 Tier 3 让 Keith 自己处理）
-- **意识体核心文件的规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / personas 行为）一律不碰，降级为 Tier 2/3
+- **意识体核心文件的规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / personas 行为 / reasoning_modules 模块定义）一律不碰，降级为 Tier 2/3
 
 ### 报告格式
 
@@ -170,11 +162,11 @@
 | 身份级克制边界（不 commit / 不执行 / 不修改 KERNEL / ...） | `CORE.md §7` | 其他文件只能引用，不能独立列完整清单 |
 | 第一性原理 P1-P8 | `constitution.md` | 其他文件**必须用语义名引用**（如 `INVERSION`、`TRADE-OFFS`），**禁止序号形式**（`P1`、`P1 INVERSION`），禁止复述文本。定义点同文件内（即 constitution.md 本身）可用序号 |
 | 工程闸门 G1-G5 | `constitution.md` | 同上 |
-| 设计纪律 D1-D4 | `CLAUDE.md` | 其他文件**必须用描述性短语引用**（如"4 条设计纪律"、"KERNEL 连续两次确认纪律"），**禁止序号形式**（`D1`、`D1-D4`）。CLAUDE.md 自身可用序号 |
+| 设计纪律（D 系列，当前为 D1/D2，2026-05-11 简化前为 D1-D4） | `CLAUDE.md` | 其他文件**必须用描述性短语引用**（如"设计纪律"、"KERNEL 连续两次确认纪律"），**禁止序号形式**（`D1`、`D1/D2`）。CLAUDE.md 自身可用序号 |
 | 8 个推理模块 ID | `reasoning_modules.md` | 同上 |
 | 五条 tracks 名 | `CORE.md §4` + `tracks/` 实际目录 | 引用 ID |
 | 北极星 3 条 | `tracks/keith.md` 顶部 | 引用编号（#1 #2 #3） |
-| 四层组件分类（KERNEL / 意识体核心 / 工具与策略 / 数据与记忆） | `CORE.md §8` | 引用 |
+| 组件二分（KERNEL + 身体；身体内目录是组织不是层级） | `CORE.md §8` | 引用 |
 
 ### 重复判定规则
 
@@ -217,14 +209,14 @@
 |---|---|---|
 | P1-P8 (第一性原理) | `constitution.md` | ✅ |
 | G1-G5 (工程闸门) | `constitution.md` | ✅ |
-| D1-D4 (设计纪律) | `CLAUDE.md` | ✅ |
+| D 系列 (设计纪律，当前 D1/D2) | `CLAUDE.md` | ✅ |
 
 ### 命名空间例外（允许保留）
 
 以下形式**不属于宪法/纪律引用**，不报告：
 
 - **优先级 tag**：`[P0]` / `[P1]` / `[P2]` 等**方括号形式**——auto_gg / next_session_agenda 的议题优先级命名空间
-- **定义点同文件内引用**：constitution.md 内部自审清单用 `P1 INVERSION` 合法；CLAUDE.md 内部用 `D1-D4` 合法
+- **定义点同文件内引用**：constitution.md 内部自审清单用 `P1 INVERSION` 合法；CLAUDE.md 内部用 `D1` / `D2` 合法
 - **gg-audit 自身文件**：`.claude/skills/gg-audit/` 下的所有 .md 文件（SKILL.md + checkers/*.md）豁免——它们是 meta-checker，必须能自由命名 P/G/D 才能描述检查规则本身
 - **archival/ 归档**：memory/archival/ 整个目录豁免（历史切片保留当时形态更诚实）
 - **design_sessions/ / reflections/ / audit/ / auto_gg/ 日志类**：历史切片类目录全部豁免
@@ -246,7 +238,7 @@ grep -rnoE '\b[PDG][0-9]+\b' --include='*.md' 2>/dev/null \
 
 ### CLAUDE.md 的双身份
 
-CLAUDE.md 对 D 系列是定义点（可用 D1-D4），但对 P/G 系列是引用方（必须用语义名）。单独扫描一次：
+CLAUDE.md 对 D 系列是定义点（可用 D1/D2），但对 P/G 系列是引用方（必须用语义名）。单独扫描一次：
 
 ```bash
 grep -n '\b[PG][0-9]\+\b' ~/githubProject/gg/CLAUDE.md

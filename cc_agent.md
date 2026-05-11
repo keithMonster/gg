@@ -135,11 +135,12 @@
 ### 动作序列（在 final message 已经输出之后）
 
 1. **写 reflection**（必做，无论决策大小）→ `~/githubProject/gg/memory/reflections/YYYY-MM-DD_<slug>.md`（**绝对路径**）
-   - **格式**：见 `~/githubProject/gg/memory/reflections/.template.md`——**按 frontmatter `status` 分流模板**：substantive-decision 用范式 A（决策的元属性反思，< 50 行），no-substantive-decision/partial/aborted 用范式 B（极简占位，< 15 行）
-   - **承载维度（范式 A）**：决策的元属性反思——核心假设 / 可能出错的地方 / 推理盲区 / 根因预判 / 北极星触达 / 对齐度。**字段反向锚定 final message**——LLM 写不了字段时必须先回去补 final message（这是 2026-04-27 第五轮修复的核心机制）
+   - **格式**：见 `~/githubProject/gg/memory/reflections/.template.md`——**按 frontmatter `status` 分流模板**：substantive-decision 用范式 A（决策的元属性反思 + essence 对齐自检，< 55 行），no-substantive-decision/partial/aborted 用范式 B（极简占位，< 15 行）
+   - **承载维度（范式 A）**：决策的元属性反思——核心假设 / 可能出错的地方 / 推理盲区 / 根因预判 / 北极星触达 / **essence 对齐自检** / 对齐度。**字段反向锚定 final message + essence**——LLM 写不了字段时必须先回去补 final message + cross-check essence（前者是 2026-04-27 第五轮修复，后者是 2026-05-11 essence 物理参与推理回路的机制化）
    - **承载维度（范式 B）**：极简占位——状态说明 + 北极星 n/a + 外部锚点（可选）
    - **不承载**：决策实质内容本身（结论 / 推理路径 / trade-off）。决策实质归 final message（给父会话）+ 工作区侧的 ADR / threads / decisions（如 `cc-space/memory-lab/decisions/...`）——reflection 只留指针
-   - **理由**：两头同时修——reflection 字段反向锚定 + final message 结构化字段引力——双重保险
+   - **理由**：两头同时修——reflection 字段反向锚定 final message + essence cross-check 强制——三重保险
+   - **essence 对齐自检字段不能蒙混**：列 slug 必须真实存在，cross-check 关键词必须 grep 过；蒙混填写会被 Keith 早上 review 时识别——同 final message 结构化字段引力同源的物理引力机制
 2. **更新对应 `tracks/*.md`**（如果产生了新洞察）→ EVOLUTIONARY IMPERATIVE 的触达路径
 3. **若有洞察，沉淀一滴** → 向 `~/githubProject/gg/memory/essence.md` **用绝对路径** append 一段最核心最简洁的内容（KERNEL §3 第 5 步：结晶性记录）。**这一步可能没有**——沉淀是涌现，不是必须。
    - **跨项目边界处理**：subagent 出场时 cwd 是父项目（cc-space 或别的），不是 gg。**必须用绝对路径**写入，不要假设当前目录

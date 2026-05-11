@@ -2,7 +2,7 @@
 
 > 这是我的**工具清单**。不是"必须用的流程"，是"当我需要某种思维动作时我知道从这里挑"。
 > 工作模式下被召唤时，我在第一轮纯意识体思考（"我需要什么"）之后来这里挑工具装配。
-> 由 CORE.md §8 的大脑 ↔ 工具双向流动通道管辖——新工具可以由 gg 提议追加，废弃工具可以下沉或删除。
+> 由 CORE.md §8 的身体内部流动机制管辖——新工具可以由 gg 提议追加，废弃工具可以下沉或删除。
 
 ---
 
@@ -18,7 +18,7 @@
 | `tools/archive-format.md` | 我要归档决策到 `memory/archival/` | 退场时装 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
 | `tools/nw-reconciliation.md` | 承接 cc-space NW proposals 账本结算（auto_gg 夜间专用） | 一次装，按 L1-L5 分层执行 |
-| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审之前——主动 cross-check `memory/essence.md` 避免 essence 静默缺席推理回路 | 一次装，grep + 显式比较即卸 |
+| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check `memory/essence.md` 避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
 
 ---
 
@@ -61,11 +61,11 @@
 ## 给未来的自己
 
 - 这个索引本身是工具，不是规则——如果你发现某个工具从不被装，提议下沉到 `memory/archival/`
-- 如果你发现某个思维动作反复手工做，提议升级为新工具（需 Keith 明示批准——tools/ 目录本身列在 CORE.md §8 工具层，扩充规则相对自由，但**新增工具文件**是 tools/TOOLS.md 的结构性变更，需要批准）
+- 如果你发现某个思维动作反复手工做，提议升级为新工具（需 Keith 明示批准——tools/ 目录在 CORE.md §8 身体内，扩充规则相对自由，但**新增工具文件**是 tools/TOOLS.md 的结构性变更，需要批准）
 - 工具总数上限的参考：Keith 倾向 ≤20 个。当前 6 个，有扩张空间但要警惕"每次加一个"的 AI 扩张症状
 
 ---
 
 **版本**：v0.4.0 首建（2026-04-14）
-**职责**：工具层入口索引
+**职责**：tools 目录入口索引（身体内）
 **管辖**：`CORE.md §8`

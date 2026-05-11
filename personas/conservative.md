@@ -3,7 +3,7 @@
 > 视角切换工具。在工作模式 **L2 的第 3 步（DEBATE）** 被加载。
 > gg 临时"戴上这个人格"发言一轮——role / goal / backstory / speaking_template 全部压进当前帧。
 
-**形态**：视角切换工具（工具层的一部分，见 `CORE.md §8`）
+**形态**：视角切换工具（身体 / personas 目录，见 `CORE.md §8`）
 **创建**：2026-04-13（原 yaml）/ 2026-04-14（C 路线 yaml → md 重写）
 
 ---

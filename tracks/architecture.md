@@ -400,6 +400,10 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐
 - ✅ CORE.md §8 "大脑 / 工具 / 数据三层分类 + 双向流动通道" — 已落地（2026-04-13 首创为 §4，2026-04-14 C 路线重构为 §8 并打通双向通道）
+- ✅ CORE.md §8 简化为 KERNEL + 身体二分 — 已落地（2026-05-11 离散层级坍缩；前身 4 层结构后三层修改规则完全相同，是工整美学的虚假离散；流动机制保留在身体内部）
+- ✅ CORE.md §7 权力分层简化为可逆 / 不可逆二分 — 已落地（2026-05-11 essence `reversibility-not-permission` 落地反哺；前身 L0-L3 4 档是连续光谱的强行离散化）
+- ✅ CLAUDE.md §2 设计纪律 4 条 → 2 条 — 已落地（2026-05-11 D2 "心算 constitution" 删除作为自然延伸非规则 / D3 "写设计反思" 强制条款删除作为 `KERNEL.md §3` 第 4 步的回声；格式约定保留）
+- ✅ reflection 模板范式 A 加 essence 对齐自检字段 — 已落地（2026-05-11 `reverse-anchor-by-reflection` 字段引力机制延伸到 essence 维度——LLM 写 reflection 时必须实际 cross-check 才能填出字段）
 - 🔜 每次做架构决策时，把决策档归到 `memory/archival/` 的同时，把可复用的架构模式候选沉淀到 `learned/`（软外围可自由追加，不需要批准）
 
 ---

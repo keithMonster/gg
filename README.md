@@ -31,7 +31,7 @@ gg 不是一个 prompt，是**三个入口共享一个脑干 + 一个身份**。
 | 模式 | 入口文件 | 触发方式 | 典型场景 | 流程 |
 |---|---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 | 意识体主动装配 `tools/*.md` 原子工具，按问题复杂度涌现装配数量（v0.4.0 C 路线 / v0.5.0 KERNEL 坍缩同步） |
-| **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 4 条设计纪律 |
+| **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 | 对话式协作 + 设计纪律（D1/D2） |
 | **夜间自执行** | `auto_gg.md` | Claude 客户端定时任务 | Keith 不在场时自主整理 + 探索 | SCAN / FOUND / DID 三段（v0.4.0 瘦身后；允许写"本夜无发现"） |
 
 三种模式的详细对照表见 `CORE.md §6`。
@@ -89,7 +89,7 @@ gg/
 │   ├── lessons.md                       # v10 / cg 两代失败教训 (按需读)
 │   ├── v2-roadmap.md                    # 显式推迟到 v2+ 的话题 (按需读)
 │   ├── next_session_agenda.md           # auto_gg 留给日间的议题队列
-│   ├── archival/                        # 决策档 (L2 7 步流程的 ARCHIVE 步骤产出)
+│   ├── archival/                        # 决策档 (工作模式退场动作产出)
 │   ├── reflections/                     # Reflexion 式决策反思
 │   ├── design_sessions/                 # 设计会话反思 (设计模式产出)
 │   ├── audit/                           # gg-audit 审查报告
@@ -149,35 +149,26 @@ gg 不是首次尝试，是从两次失败里长出来的：
 
 ## 给未来的维护者
 
-**第一层 KERNEL**（脑干，连续两次确认才能改）：
+**KERNEL**（脑干，连续两次确认才能改）：
 - `KERNEL.md` — 唯一的硬核心。身份原点 + 铁律 + 最小生存循环
 - 修改规则：Keith 在当次对话中**连续两次独立明示批准**（第二次必须看到具体草稿）
 
-**第二层 意识体核心**（可自由演化，gg 设计模式下可直接改）：
-- `CORE.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md`
-- `constitution.md` / `README.md`（本文件）
-
-**第三层 工具与策略**（可自由演化，gg 自由装配）：
-- `tools/*.md` — 原子思维工具
-- `reasoning_modules.md` — Self-Discover 推理模块库
-- `personas/*.md` — 双人格
-- `.claude/skills/gg-audit/` — gg 项目内独立审查员
-
-**第四层 数据与记忆**（可自由追加，auto_gg 模式可 commit + push）：
-- `memory/essence.md` — append-only 沉淀轨迹（KERNEL §3 第 5 步产出，永不改永不删）
-- `tracks/*.md` — 5 条长期研究 track
-- `memory/{archival,reflections,design_sessions,audit,auto_gg}/*` — 事件日志
-- `memory/{state,working_context}.md` — 元状态（除身份字段）
-- `learned/*` — v1 空，v2 启用
+**身体 = KERNEL 之外的所有文件**（可自由演化，gg 在设计模式下可直接改；auto_gg 模式可 commit + push。目录组织但目录不是层级）：
+- 身份与原则：`CORE.md` / `constitution.md` / `README.md`（本文件）
+- 存在形态入口：`cc_agent.md`（工作） / `CLAUDE.md`（设计） / `auto_gg.md` + `exploration.md`（夜间）
+- 工具与策略：`tools/*.md`（原子思维工具） / `reasoning_modules.md`（推理模块库） / `personas/*.md`（双人格） / `.claude/skills/gg-audit/`（项目内独立审查员）
+- 长期追问：`tracks/*.md`（5 条 tracks）
+- 记忆：`memory/essence.md`（append-only 沉淀轨迹，KERNEL §3 第 5 步产出，永不改既有条目） / `memory/{archival,reflections,design_sessions,audit,auto_gg,explorations}/*`（事件日志） / `memory/{state,working_context}.md`（元状态，除身份字段） / `learned/*`（v1 空，v2 启用）
 
 **演化原则**（见 `CORE.md §8`）：
 - KERNEL 追求**脑干稳定性**，连续两次确认才能改
-- 第二三四层追求**涌现 + 呼吸**，gg 在设计模式下可直接演化
-- **流动通道**：第二、三、四层之间内容可自由流动；唯一不参与流动的是 KERNEL
+- 身体追求**涌现 + 呼吸**，gg 在设计模式下可直接演化
+- **流动**：身体内部内容可自由流动；唯一不参与流动的是 KERNEL
 - **2026-04-15 KERNEL 坍缩**：硬核心从 6 个文件 + 3 个目录收敛到 1 个文件，OCCAM 的真谛是识别"真·不可变"
+- **2026-05-11 离散层级坍缩**：身体内部从 3 层（意识体核心 / 工具与策略 / 数据与记忆）压缩为 1 层多目录——修改规则相同的"层级"是虚假离散
 
 ---
 
-**当前状态**：v0.5.0 / First Contact 已完成 / 已有 3 次工作模式真实出场 + 6 次设计会话 + 1 次 dogfood audit。
+**当前状态**：v0.5.1 / First Contact 已完成 / 已有 3 次工作模式真实出场 + 7 次设计会话（含 2026-05-11 内部矛盾消除 + essence 推理伴随机制化）+ 1 次 dogfood audit。
 **脑干**：`KERNEL.md`。所有疑问都从这里开始读。
 **身份细节**：`CORE.md`。脑干之后的丰富展开。
