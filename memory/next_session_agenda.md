@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-10
+last_updated: 2026-05-11
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,31 @@ last_updated: 2026-05-10
 ---
 
 ## 待议（open）
+
+### 2026-05-11（auto_gg 承接 + cc-space morning-brief 5/12）
+
+- `[P0]` **闸门日先看 2026-05-11-S1（fastgpt 4 条合并）+ 2026-05-06-G1（Bash 滥用 hook 拦截，5 天 pending）**
+  - **背景**：cc-space 5/12 morning-brief 显式优先级排序——本周内 fastgpt 工作流任务再开会复发，Bash 滥用率 68% 与昨日同水平
+  - **5-11-S1 状态**：confidence 0.95 + author:monster (~/.claude/skill-notes/fastgpt.md) + 4 条 notes 精准定位 → auto_gg 已结算 L4 blocked（v0.2.0 L2 闸门第三条缺"批量合并/本周内执行"语义）
+  - **5-06-G1 状态**：proposals.jsonl pending 5 天，PreToolUse hook 拦截 Bash 滥用，cc-space 周报 + 5/12 morning-brief 连续呼吁
+  - **触发**：Keith 闸门日先处理这两条
+
+- `[STRATEGIC]` **v0.3.0 升级议题候选 A 'L2 高置信度模式' 物理实证累积四票（5/9 三票 + 5/11 一票）**
+  - **背景**：v0.2.0 L2 闸门第三条要求 resolution 含 "批量合并"/"本周内执行" 语义。5/9 三条 S 类 + 5/11 一条 S 类（confidence 全 0.95 + author:monster 完整）都因缺该语义被 L4 blocked → 升级候选 A 的物理实证达 4 票
+  - **同时附**：thread append 类 5/9-G1 + 5/10-G1 仍是 2 票（候选 B "增设 L2.5 thread/code 类"）
+  - **结论**：Skill 合并类升级紧急度最高（4 票 + Keith 闸门日反复处理同形态 blocked = 注意力成本）
+  - **不紧急**：等 Keith 决定 v0.3.0 路径时加权数据点
+
+- `[Q]` **cc-space morning-brief 命名 cadence 变化（5/11 跑出来的 brief 标题写 2026-05-12）**
+  - **背景**：5/9 brief 标题 5/9，5/10 brief 标题 5/10——历史 cadence "brief 标题 = NW 当晚跑出来的日期"。今晚（5/11 22:00）跑出来的 brief 标题写"2026-05-12"——cadence 切换到"消费日"语义（Keith 明早看到的日期）
+  - **auto_gg 处理**：jsonl 内部 date 字段（5/11）仍是产出日，auto_gg 按 jsonl 实际状态结算（不按 brief 文件名）；nw-reconciliation §不装条件"日期不是今日"在精神上应豁免本次（本次仍结算）
+  - **议题**：cc-space NW 是显式改了 brief 命名 prompt，还是物理时钟原因（22:00 跨日）？影响 nw-reconciliation 工具的 §不装条件判据语义
+  - **不紧急**：观察通道，下次 brief 也写次日 → 确认是 prompt 改了，需同步更新 nw-reconciliation §不装条件文字
+
+- `[CORE_RULE_TOUCH]` **scripts/_common.py + check_deadlinks.py + structural.md "已废弃/未建" 同行豁免规则**
+  - **背景**：白天 working tree 留 3 文件改动——`scripts/_common.py` 加 `DEPRECATED_LINE_RE` 正则 + `has_deprecated_marker` 函数；`scripts/check_deadlinks.py` 接上豁免逻辑；`.claude/skills/gg-audit/checkers/structural.md` 描述补 1 行
+  - **判断**：功能性新增（不是夜间维护），Keith 进行中，auto_gg 不接管 commit。留 working tree 给 Keith 早上判断
+  - **Keith 需要做的事**：完成测试后自己 commit（或反向回滚）；如已生效，audit.py 退出码 0 与本豁免规则一致
 
 ### 2026-05-10（auto_gg 承接 + cc-space 周报）
 
