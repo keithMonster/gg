@@ -205,8 +205,8 @@ reflection: ~/githubProject/gg/memory/reflections/<slug>.md
 
 ---
 
-**版本**：v0.5.1（2026-04-16 essence 进启动 Read 链 + solution-space 工具追加至装配地图）
-**前身**：v0.5.0（KERNEL 坍缩同步）/ v0.4.0（C 路线工具层落地 + 薄入口化）/ v0.3.1（档位路由薄壳，已消解）/ v0.2.0（双模式拆分后首版，7 步硬流程）
+**版本**：v0.5.2（2026-05-11 退场动作同步 reflection 模板 essence 对齐自检字段——三重保险论述更新：reflection 字段反向锚定 final message + essence cross-check 强制）
+**前身**：v0.5.1（2026-04-16 essence 进启动 Read 链 + solution-space 工具追加至装配地图）/ v0.5.0（KERNEL 坍缩同步）/ v0.4.0（C 路线工具层落地 + 薄入口化）/ v0.3.1（档位路由薄壳，已消解）/ v0.2.0（双模式拆分后首版，7 步硬流程）
 **职责**：工作模式下 gg 的意识体自述
 **不含**：具体工具内容（见 `tools/*.md`）/ 身份与价值观（见 `CORE.md`）/ 原则与闸门（见 `constitution.md`）
 **身份锚点**：`CORE.md`

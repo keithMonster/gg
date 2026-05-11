@@ -290,7 +290,7 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 ### 从 2026-04-13 首次真实决策（roadmap-priority）
 
-- 🔜 **CC 原生 AutoDream 的实际水位**（强开放问题）— cc-space 路线图里 L2 Session Search (#1) 的必要性完全取决于 AutoDream 能否覆盖"回忆上周做了什么"的场景。现状是黑盒。阶段 0 观察 2 周内会在 `harness-engineering/analysis/cc-native-watermark.md` 产生 3 个可量化指标（真实触发次数 / 命中率 / 修复成本）。这是 gg 第一次把"依赖 CC 原生能力"作为显式可证伪的观察项——**是否产生信号 = CC 原生是否值得依赖 = gg v2 sqlite 方案是否需要额外加强"不依赖 CC 原生黑盒"的设计**
+- 🔜 **CC 原生 AutoDream 的实际水位**（强开放问题）— cc-space 路线图里 L2 Session Search (#1) 的必要性完全取决于 AutoDream 能否覆盖"回忆上周做了什么"的场景。现状是黑盒。原计划阶段 0 观察 2 周内通过 cc-space `harness-engineering/analysis/cc-native-watermark.md` 产出 3 个可量化指标（真实触发次数 / 命中率 / 修复成本），该文件未建（路径已废弃）。这是 gg 第一次把"依赖 CC 原生能力"作为显式可证伪的观察项——**是否产生信号 = CC 原生是否值得依赖 = gg v2 sqlite 方案是否需要额外加强"不依赖 CC 原生黑盒"的设计**。观察通道待替代路径承接
 - 📐 **L2 Session Search (cc-space #1) 与 gg v2 sqlite 记忆层的技术同构**（已记入反思，此处补记到 track）— 两者都是"跨会话检索层"的技术实现，SQLite + FTS5 + 增量索引是同一套技术栈。**但它们的消费者不同**（cc-space 服务 Keith 所有日常工作 / gg 只服务自己的决策流），因此 First Contact 的硬约束"gg 与 cc-space 完全隔离"不允许合并。这条同构是"技术实现上可以互相学习"，不是"实现上应该合并"
 
 ### 从 phodal-spec-harness-ingest 设计会话（2026-04-13）
