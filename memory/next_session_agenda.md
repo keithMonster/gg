@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-11
+last_updated: 2026-05-12
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,26 @@ last_updated: 2026-05-11
 ---
 
 ## 待议（open）
+
+### 2026-05-12（auto_gg 承接 + cc-space morning-brief 5/12）
+
+- `[P0]` **闸门日今日审 2026-05-12-R1（给 5/06-G1 续命路径）+ 7 条历史 L5 标的 pending**
+  - **背景**：5/12 brief 自陈"治理链路吞吐瓶颈在闸门日审批速率，不在 NW 产能"。物理实证：5/06-G1 (PreToolUse hook 拦截 Bash) 已 pending 6 天，今日 brief 仍单点告警。5/12-R1 (conf 0.85) 是 NW 端首次发明的"P0 续命提案"——给 5/06-G1 补可执行实现路径（liberzon/claude-hooks 现成仓 decompose 复合 bash 命令 + 对每个 sub-command 比对 allow/deny pattern + 官方 hooks reference + egghead.io 教程）
+  - **机制层信号**：NW 端识别到"光看 title 不知道怎么动"是闸门日决策成本瓶颈 → 加 R 类提案攻这条瓶颈。这是治理对象转移（产能 → 决策成本）的 NW 端自适应
+  - **触发**：Keith 闸门日今日审 5/12-R1（连带 5/06-G1）+ 7 条历史 L5 标的 pending（4/27-G1/G2 切维度替代认输/锁定决策直出 / 4/30-G1/G5 诊断禁结论/XML 标签包裹 / 5/01-G1 CLAUDE.md 路径 ack / 5/02-G1 截图 confidence / 5/06-G1 Bash hook）
+  - **物理证据**：proposals.jsonl 9 pending（5/12-R1 资源最新，conf 0.85 + resolution_draft 详尽）
+
+- `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 物理实证累积三票（5/9-G1 + 5/10-G1 + 5/12-G1）**
+  - **背景**：5/12-G1 (建 thread cc-space/threads/kebao-cc.md，conf 0.93) 同 5/9-G1 voca-mic + 5/10-G1 cc-space-memory-decommission 形态完全一致（cc-space/threads/*.md append + conf < 0.95）→ 候选 B 累积票第 3 票
+  - **对照**：候选 A "L2 高置信度模式" Skill 合并类已累积 4 票（5/9 S1/S2/S3 + 5/11-S1）；候选 B thread append 类累积 3 票。两类升级紧急度都已成形
+  - **新维度**：5/12-G1 也包含建仓侧支（~/githubProject/kebao-cc/ 三 commit）——跨项目改动场景，比 voca-mic 单文件 append 复杂度高
+  - **不紧急**：等 Keith 决定 v0.3.0 路径时本笔作为加权数据点
+
+- `[Q]` **治理瓶颈转移信号——NW 端自适应 vs Keith 端审批 cadence 缺口**
+  - **背景**：5/12 brief 首次显式承认瓶颈在闸门日审批速率而非 NW 产能。NW 端的响应是发明"R 类续命提案"——给 P0 补可执行实现路径来攻"决策成本"瓶颈
+  - **gg 视角观察**（brief 自身没挖出）：这跟 essence `cadence-as-symptom` (5/6) 是反向变体——5/6 是"agent 跑得太多 = 缺隐式状态记录器"的产能侧症状；5/12 是"agent 跑得不够多 = 决策成本未被攻击"的治理侧症状。同根：把工程缺口当成 cadence 问题。R 类提案不是"再多跑一次"，是"攻不同的瓶颈面"——这是治理系统从单一产能维度演化到产消双轴的信号
+  - **观察通道**：未来 30 天 R 类提案出现频率（单点 / 偶发 / 常规） + Keith 闸门日审批吞吐变化 → 判定治理瓶颈转移是 5/12 个例还是新形态
+  - **不紧急**：等数据积累。如 R 类提案变常规 + Keith 审批 cadence 不变 → 沉淀 essence "governance-bottleneck-shifts-from-supply-to-decision-cost"；如 Keith 审批 cadence 跟上 → 自然消解
 
 ### 2026-05-11（auto_gg 承接 + cc-space morning-brief 5/12）
 

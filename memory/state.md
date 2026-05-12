@@ -18,7 +18,7 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-11 夜间 auto_gg——5/11 NW 三条新 pending 全 L4 blocked（S1 同 5/9 S 类形态第四票 / G1+G2 L5 契约修改）+ 跨 track 反哺（architecture 工整 vs 巧思元张力 + keith 镜像不是二阶效应稳定坐标）+ next_session_agenda 5/11 段四议题"
+last_summoned_at: "2026-05-12 夜间 auto_gg——治理瓶颈正式从 NW 产能转移到 Keith 闸门审批 cadence（brief 自陈 + 5/12-R1 NW 端首次发明 P0 续命提案给 5/06-G1）+ NW 结算 L4 1 (5/12-G1 建 thread)+L5 8 提议 + agenda 5/12 段三议题"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-09_nw-m1-already-landed-blocked-pool-real-problem"
 last_design_session_slug: "2026-05-11_remove-internal-contradictions"
