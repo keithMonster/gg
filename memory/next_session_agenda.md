@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-12
+last_updated: 2026-05-13
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,23 @@ last_updated: 2026-05-12
 ---
 
 ## 待议（open）
+
+### 2026-05-13（auto_gg 承接 + cc-space morning-brief 5/13）
+
+- `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 累积第 4 票（5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1）**
+  - **背景**：5/13-G1 (append cg-skills thread 5/13 条目，conf 0.92) 同前三票形态完全一致——cc-space/threads/*.md append + conf < 0.95——v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票从 3 → 4
+  - **对照**：候选 A "Skill 合并高置信度模式" Skill 合并类已 4 票（5/9 S1/S2/S3 + 5/11-S1）；候选 B thread append 类已 4 票。两类升级紧急度并列
+  - **触发**：Keith 决定 v0.3.0 路径时候选 B 的关键加权数据点。本笔不紧急，等加权
+
+- `[P0]` **闸门日处理 5/13-G2（skill 物理位置决策树补到 CLAUDE.md）**
+  - **背景**：5/13 NW G2 (conf 0.78) draft 指向改 cc-space/CLAUDE.md 或 ~/.claude/CLAUDE.md，加"建 skill 前先盘问'使用者是谁'决策树"——L5 红线 + conf < 0.95 双重不通过 → L4 blocked
+  - **议题源**：5/13 cg-data-query skill 设计 13 turns 暴露的 placement decision 规则缺失（brief 关键发现 2）
+  - **触发**：Keith 闸门日审 draft，决定写到哪个 CLAUDE.md（cc-space 项目级 vs ~/.claude 全局）
+
+- `[OBSERVATION]` **brief 关键发现 2：cg-data-query 13 turns 触发 4/27-G1 第 N 次复发——历史 L5 标的物理实证累积**
+  - **背景**：5/13 brief 报告 a5fc9f49 session "cg-data-query skill 设计 13 turns" 触发 4/27-G1（切维度替代认输）第 N 次复发——L4/L3.5/L3/L2 抽象层堆栈被 Keith「一个 skill 就完了」直接拍平
+  - **意义**：4/27-G1 是 agenda 5/12 段"7 条历史 L5 标的"之一，本次是该提案的第 N 次复发证据。强化 5/12 段"治理瓶颈在审批速率非 NW 产能"的物理实证
+  - **不紧急**：本笔加权数据点，闸门日 Keith 看 4/27-G1 提案时一并参考
 
 ### 2026-05-12（auto_gg 承接 + cc-space morning-brief 5/12）
 

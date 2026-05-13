@@ -18,7 +18,7 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-12 夜间 auto_gg——治理瓶颈正式从 NW 产能转移到 Keith 闸门审批 cadence（brief 自陈 + 5/12-R1 NW 端首次发明 P0 续命提案给 5/06-G1）+ NW 结算 L4 1 (5/12-G1 建 thread)+L5 8 提议 + agenda 5/12 段三议题"
+last_summoned_at: "2026-05-13 夜间 auto_gg——Keith 在场触发流程（非 cron）。NW 5/13 桶 L4 2 (G1 thread append 候选 B 第 4 票 / G2 L5 标的) + agenda 5/13 段三议题 + working tree 4 文件继续留待 Keith 判断"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-09_nw-m1-already-landed-blocked-pool-real-problem"
 last_design_session_slug: "2026-05-11_remove-internal-contradictions"
