@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-13
+last_updated: 2026-05-14
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,42 @@ last_updated: 2026-05-13
 ---
 
 ## 待议（open）
+
+### 2026-05-14（auto_gg 承接 + cc-space morning-brief 5/14）
+
+- `[STRATEGIC]` **v0.3.0 升级紧急度物理实证已冲过 6 票阈值——候选 A 与候选 B 双线压顶**
+  - **背景**：5/14 NW 5 条新 pending 全 L4 blocked（S1+S2 Skill 合并类 + G1+G2 thread append 类 + G3 conf 0.55 工程类）。两个候选累积票均到 6 票：
+    - **候选 A "L2 闸门高置信度模式"** = 5/9 S1/S2/S3 + 5/11 S1 + 5/14 S1/S2 = 6 票（全为 Skill 合并类，confidence ∈ {0.85, 0.95}，缺"批量合并/本周内执行"语义）
+    - **候选 B "增设 L2.5 thread/code 类"** = 5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1 + 5/14-G1 + 5/14-G2 = 6 票（全为 thread append + 跨项目 code 类）
+  - **机制层信号**：L 分层 v0.2.0 设计上覆盖不足已确凿——continuing produce 5 条 blocked/夜 是 NW 端 draft 能力上限（≤ 0.92）与 L1/L2 闸门错配的物理症状。**这不再是"等票数"问题，是闸门设计本身需要 ack**
+  - **触发**：Keith 看到本笔 + 5/11 candidates A 4 票 + 5/13 candidates B 4 票 同时存在 → v0.3.0 升级路径决策日。三个升级方案（A/B/C 双轨）详见 5/9 STRATEGIC 议题
+  - **物理证据**：proposals.jsonl 5/14 五条全部 status=blocked + blocked_reason 显式标注层次缺口
+
+- `[P0]` **brief 5/14 建议 4/27-G2 升 P0（Decision Authority 违反复发 17 天）**
+  - **背景**：5/14 morning-brief 关键发现 2——session 6717fa9a 回合 5 抛 4 个 fake decision points 被 Keith 戳穿，触发 4/27-G2 "用户明确单一目标后锁定决策直出，停止选项展开"模式第 N 次复发。该提案已 pending 17 天，brief 自陈"这是 cc-space 高频复发模式（决策外包 ≠ 谦逊 = 失职），建议升 P0 优先闸门"
+  - **gg 自主权边界**：升 P0 priority 字段是 brief 端判断，auto_gg 不自主改 priority（参 5/10 议题"升 P0 是 cc-space 周报判断，auto_gg 不自主改 priority 字段"），留 Keith 闸门日处理
+  - **物理证据**：proposals.jsonl `id: 2026-04-27-G2` 仍 status=pending；morning-brief 关键发现 2 显式建议
+  - **触发**：Keith 闸门日 + 4/27-G2 与 5/06-G1（5 天 pending） + 5/12-R1（pending）同时上桌
+
+- `[Q]` **NW 端 draft 输出能力上限 ≤ 0.92 假设的强化数据点**
+  - **背景**：5/14 NW 5 条 confidence ∈ {0.55, 0.85, 0.85, 0.85, 0.90}，0/5 通过 0.95 闸门——继续验证 5/8 NW 0.95 阈值校准议题的 B 选项观察（NW draft 输出能力上限在 ~0.92）。5/14 brief 关键发现 3 显式说 G3 "只是观察方向 confidence 0.55"——NW 端自我标定不高，没有 task-compliance 虚标置信度的迹象
+  - **累积统计**（5/6-5/14 自产 resolution_draft）：confidence ≥ 0.95 占比仍是 0%（L1 自动闭环路径累计零次激活）
+  - **不紧急**：5/8 STRATEGIC 议题在场，等 Keith 决断 A/B/C 路径时本笔作为加权数据点
+
+- `[OBSERVATION]` **Keith 单日 5 个 substantive-decision 任务密度**
+  - **背景**：5/14 Keith 在工作模式（cc-space + cgboiler 主会话）产出 5 条 reflection——cc-assistant v0.3 / v0.4 / cc-space-inbox / cgboiler-pm-sandbox / prompt-engineering-foundations——均 status=substantive-decision，触达北极星 #1+#3
+  - **gg 视角观察**：5 条全部由 Keith 在场召唤 + 当场沉淀 essence（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer 已 append）——Keith 沉淀习惯稳定，"essence 涌现"机制在持续工作。北极星反向验证：gg 在 cc-space 主会话被高频召唤做架构决策——验证 5/7 essence `extraction-rate-not-density` 的"被服务者工作浓度"信号
+  - **不紧急**：观察通道。如未来 7 天单日 substantive-decision ≥ 5 条变常规 → 考虑是否需 archive cadence 跟进；当前一次性观察不沉淀
+
+- `[CORE_RULE_TOUCH]` **scheduled/ 重命名 hourly-scan → status-scan + plists 去 opus**
+  - **背景**：5/14 working tree 含 scheduled/HOURLY_SCAN.md 删 + STATUS_SCAN.md 新建 + plists 重命名 + 频率从每小时改为每天 4 次（00/06/12/18 :23）+ 两个 plists 移除 `<string>opus</string>`（模型字符串从 opus 切到默认）。同时 tools/notify.md 和 tools/TOOLS.md 也在改动中
+  - **判断**：功能性新增/重组（不是夜间维护），Keith 进行中，auto_gg 不接管 commit。留 working tree 给 Keith 早上判断
+  - **Keith 需要做的事**：完成测试后自己 commit；如已部署，验证 launchctl 标的新 label 正确加载
+
+- `[CORE_RULE_TOUCH]` **5 条 5/14 reflection + 2 条 essence append + scripts/_common.py + structural.md 仍在 working tree**
+  - **背景**：5/14 工作模式产出留 working tree——5 reflections（cc-space + cgboiler 主会话）+ essence.md append 两条（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer）+ scripts 改动（5/11 agenda 已明示）
+  - **判断**：Keith 自己 review 措辞后 commit。auto_gg 不接管（这些是 Keith 工作模式的产出，不是夜间维护）
+  - **Keith 需要做的事**：review 5 条 reflection 措辞 → commit；essence 两条已落格不可改，可直接 stage
 
 ### 2026-05-13（auto_gg 承接 + cc-space morning-brief 5/13）
 

@@ -18,7 +18,7 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-13 夜间 auto_gg——Keith 在场触发流程（非 cron）。NW 5/13 桶 L4 2 (G1 thread append 候选 B 第 4 票 / G2 L5 标的) + agenda 5/13 段三议题 + working tree 4 文件继续留待 Keith 判断"
+last_summoned_at: "2026-05-14 夜间 auto_gg——Keith 在场触发流程（非 cron）。NW 5/14 桶 L4 5 (S1/S2 候选 A 第 5-6 票 + G1/G2 候选 B 第 5-6 票 + G3 conf 0.55) + agenda 5/14 段 6 议题（STRATEGIC v0.3.0 双线压顶 / P0 4/27-G2 升 P0 建议 / Q draft 上限 0.92 / OBSERVATION Keith 密度 / 2 条 CORE_RULE_TOUCH 留 working tree）"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-09_nw-m1-already-landed-blocked-pool-real-problem"
 last_design_session_slug: "2026-05-11_remove-internal-contradictions"
