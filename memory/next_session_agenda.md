@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-14
+last_updated: 2026-05-15
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,31 @@ last_updated: 2026-05-14
 ---
 
 ## 待议（open）
+
+### 2026-05-15（auto_gg 承接 + cc-space morning-brief 5/15）
+
+- `[STRATEGIC]` **v0.3.0 升级紧急度数据点累积——候选 A/B 双线累积第 7 票**
+  - **背景**：5/15 NW 3 条新 pending 全 L4 blocked（G1 + G2 + S1）。两候选累积票 +1：
+    - **候选 A "L2 闸门高置信度模式"** = 5/9 S1/S2/S3 + 5/11 S1 + 5/14 S1/S2 + **5/15 S1** = **7 票**（5/15-S1 fastgpt SKILL.md 合并 conf 0.85 + author:monster + 缺"批量合并"语义）
+    - **候选 B "增设 L2.5 thread/code 类"** = 5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1 + 5/14-G1 + 5/14-G2 + **5/15-G1** = **7 票**（5/15-G1 cc-space/inbox/README.md 关闭契约段 append，形态同 thread append 类）
+  - **不重复 5/14 P0 推送**：5/14 agenda 已显式"v0.3.0 升级紧急度物理实证已冲过 6 票阈值——双线压顶"，今夜 6→7 是加权累积不是新情境
+  - **物理证据**：proposals.jsonl 5/15 G1/G2/S1 全部 status=blocked + blocked_reason 显式标注层次缺口
+
+- `[STRATEGIC]` **5/15-G2 全局 CLAUDE.md L5 标的新增（pending L5 历史标的 +1 → 8 条）**
+  - **背景**：5/15-G2 实物商品 SKU 推荐前 WebSearch 验证——落点 ~/.claude/CLAUDE.md Engineering Rules（扩 #11 或单列）。NW 端自标 L5 候选 + confidence 0.55 双重不通过 L1 闸门
+  - **8 条历史 L5 标的 pending 形态**：4/27-G1/G2 + 4/30-G1/G5 + 5/01-G1 + 5/02-G1 + 5/06-G1 + 5/12-R1 + 5/15-G2（持续累积）
+  - **gg 决议点（来自 5/15 morning-brief）**：是否合入 #11 还是单列——morning-brief 显式标"gg 决议"，是 Keith 闸门日跟 gg 一起决策的议题
+  - **触发**：Keith 闸门日审 5/06-G1 / 5/12-R1 / 4/27-G1/G2 时一并审
+
+- `[Q]` **working tree 跨夜累积第 5 天——Keith commit cadence 观察**
+  - **背景**：5/11 agenda 明示"3 文件 scripts 改动留 working tree 给 Keith" → 5/12/13/14 三夜跟随未 stage Keith 日间产出 → 5/15 working tree 进一步累积 8 篇 reflection（5/14 5+5/15 3）+ 1 设计会话 + 1 exploration + essence 3 滴 + tracks/keith.md 5/14-5/15 段 + scheduled/ 重组（HOURLY → STATUS）+ scripts/tools 改动 + .claude/skills/gg-audit/ 3 文件改动 + .template.md。共约 22 个文件改动跨 5 天未 commit
+  - **不紧急**：Keith 工作 cadence 是 Keith 的事（5/15 design_session 明示判据级授权后 gg 不主动追问 commit）；本笔仅作为 observability——若再累积到第 7-10 天可能值得 agenda 显式提醒
+  - **观察通道**：跟 5/14 [OBSERVATION] "Keith 单日 5 个 substantive-decision" 同一系列——Keith 高密度工作模式产出累积 vs commit cadence 延迟，是稳态还是滞后？等观察
+
+- `[OBSERVATION]` **5/15 design_session 已就 8 篇 reflection 完成审视——auto_gg 不重复**
+  - **背景**：5/15 Keith 跟 gg 跑设计会话 `reflections-audit-architecture`——逐篇审视 5/14-5/15 8 篇 reflection 后做 6 处改动（.claude/skills/gg-audit/ semantic.md + SKILL.md + .template.md + tracks/keith.md + essence.md append + state.md 回填），新增 essence `criteria-authorization-over-menu`。判据级授权 tripwire 5/11 第一次记录后 5/15 第二次触发并按设计沉淀 essence——`essence-recursive-bootstrap` 跨 24 天的实证
+  - **gg-audit 下次跑窗口建议**：5/06-5/15 这批约 18 篇 reflections（design_session 留的 "下次继续" 第一项）
+  - **gg 自主权边界**：不主动跑 gg-audit D checker（Keith 留指令"下次继续"指向后续会话），auto_gg 仅记录此 observability
 
 ### 2026-05-14（auto_gg 承接 + cc-space morning-brief 5/14）
 
