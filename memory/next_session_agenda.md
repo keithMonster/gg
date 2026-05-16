@@ -26,6 +26,27 @@ last_updated: 2026-05-15
 
 ## 待议（open）
 
+### 2026-05-16（auto_gg 承接 + cc-space morning-brief 5/16）
+
+- `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 累积第 8 票（5/16-G1）**
+  - **背景**：5/16-G1（append thread scheduled-tasks.md，conf 0.85，NW 自陈"不自动写交 done/会话"）同前 7 票形态一致——cc-space/threads/*.md append + conf < 0.95 → v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票 7 → 8
+  - **不重复 5/14 P0 / 5/15 不重推判断**：5/14 已"双线压顶"P0、5/15 记 6→7 是累积、今夜 7→8 同理是数据点加权非新情境。候选 A 停 7 票（5/16 无新 S 类）
+  - **物理证据**：proposals.jsonl `2026-05-16-G1` status=blocked + blocked_reason 显式标注层次缺口
+
+- `[STRATEGIC]` **Bash 滥用 hook family 第 3 个物理实证——5/16-G2 汇聚 5/06-G1 + 5/12-R1**
+  - **背景**：5/16-G2（多行 Bash 改脚本规避 CC #15599，conf 0.7，落点 CLAUDE.d/engineering-rules.md = L5 契约红线）自陈"可与 2026-05-06-G1/2026-05-12-R1 hook 路径合并评估"，morning-brief 关键发现 1 是第 3 个推动源。5/06-G1 已 pending 10 天
+  - **gg 视角**：这不是孤立新增 L5 标的，是既有 P0 Bash-hook 线的第 3 次物理汇聚。**Keith 闸门日应把 5/06-G1 + 5/12-R1 + 5/16-G2 当一个合并实现决策审**（PreToolUse hook 拦截 Bash 滥用），不是 3 条独立提案。L5 历史 pending 标的形态从 8 → 9（5/15-G2 + 本笔）但 G2 实质归并入 5/06-G1 线
+  - **物理证据**：proposals.jsonl `2026-05-16-G2` status=blocked + blocked_reason 标注 L5 红线 + hook 合并归属
+
+- `[Q]` **working tree 跨夜累积第 6 天——范围扩大含 5/16 在场产出**
+  - **背景**：5/15 [Q] 记第 5 天（~22 文件跨 5 天）。今夜第 6 天，范围进一步扩大：新增 5/16 2 篇 reflection（keith-automated-revenue-value-capture / mirror-trigger-layer）+ 5/16 design_session `gg-active-channel-to-keith`（已写入 state.md last_design_session_slug）+ 5/16 2 篇 exploration（fermentation-content-vs-promotion 等）。共 ~35 文件改动跨 6 天未 commit
+  - **新维度**：不再是"旧工作 commit 滞后"——5/16 当天 Keith 仍在设计/工作模式高密度产出且持续延迟 commit，是稳态形态非滞后。判据级授权后 gg 不主动追问 commit（5/11 agenda + 5/15 design_session + working_context 硬约束三重确认）
+  - **不紧急但临近阈值**：5/15 [Q] 明示"再累积到第 7-10 天可能值得 agenda 显式提醒"。第 6 天仍在容忍窗内，观察通道继续；第 7 天起若仍累积，下夜 auto_gg 升 [STRATEGIC] 显式提醒 Keith
+
+- `[OBSERVATION]` **morning-brief 5/16 关键发现 2/退役雷达——auto_gg 不接管**
+  - **Decision Authority 4/27-G2 复发**：cab2cdc1 回合 15/18-19 done Step 0 后"四选一你定"被 Keith 教导。brief 显式"规则已存在，属执行未内化非规则缺失，归口既有不新增提案"。5/14 brief 已建议 4/27-G2 升 P0——auto_gg 不自主改 priority（参 5/10/5/14 议题），Keith 闸门日处理。同日 882fa0e7 OpenCLI 评估是正面对照（范式可执行，差距在内化稳定性）
+  - **退役雷达 cc-space/CLAUDE.md 210 行超阈**（阈值 200，超 +10）：本会话 scratch 段重写后逼近，CLAUDE.d/*.md 子文件全 ≤104 行未超。L5 契约文件 auto_gg 不可触，Keith 已在处理——纯 observability
+
 ### 2026-05-15（auto_gg 承接 + cc-space morning-brief 5/15）
 
 - `[STRATEGIC]` **v0.3.0 升级紧急度数据点累积——候选 A/B 双线累积第 7 票**

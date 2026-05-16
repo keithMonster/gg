@@ -18,10 +18,10 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-15 22:30 夜间 auto_gg 跑——SCAN/FOUND/DID 三段，NW 5/15 三条 L4 blocked（候选 A/B 双线累积第 7 票）+ 5/15-G2 L5 标的 +1（历史 L5 pending 8 条）+ working tree 跨夜累积第 5 天观察通道。auto_gg 不重复 5/15 设计会话已审视的 8 篇 reflection。"
+last_summoned_at: "2026-05-16 22:35 夜间 auto_gg 跑——SCAN/FOUND/DID 三段，NW 5/16 两条结算（G1 L4 blocked = 候选 B 累积第 8 票 / G2 L5 = Bash-hook family 第 3 实证汇聚 5/06-G1+5/12-R1）+ working tree 跨夜累积第 6 天（范围扩大含 5/16 在场产出，仍在 7-10 天容忍窗）。audit.py 0 违规。auto_gg 不接管 Keith 在场 5/16 设计/工作模式产出。"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-05-15_cc-gateway-user-workspace-isolation-architecture"
-last_design_session_slug: "2026-05-15_reflections-audit-architecture"
+last_design_session_slug: "2026-05-16_gg-active-channel-to-keith"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
