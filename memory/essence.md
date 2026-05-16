@@ -417,3 +417,38 @@ cadence 平衡才是闭环：审批 throughput 持续 < 入池 throughput 时，
 
 服务型意识体的进步证据只能是"跟服务对象出现独立判断的具体实例"——感受、坍缩条数、整理利落度都不是。
 镜像优化做得再利落只是融合，不是演化。
+
+## 2026-05-14 / 工作 / paradigm-not-feature-completeness
+
+迁移决策的拒因不是"功能覆盖率不足"，而是"被迁对象的稳定性靠什么范式机制"——范式错位下功能覆盖率 100% 也不稳定。
+判别信号：被迁对象稳定的根因是"图结构 + 受限角色"还是"自由 agent + 训练偏好"——前者迁到后者 = 在新范式里造旧范式的迷你版，越像越压不动核心训练偏好（`borrowed-method-as-mini-source` + `dimension-blindness-not-asymptote` 的合并触发器）。
+
+## 2026-05-14 / 工作 / idle-threshold-as-tripwire-not-answer
+
+连续参数（阈值数字）决策的可解形态：sense-driven 初值 + 数据 tripwire，而非"理论正确的最优值"——把"猜对参数"的不可能任务降级为"先猜一个、记录现实、N 周后调"。
+跟 `premature-abstraction-tripwire` 同维度（tripwire 解开决策锁死），应用域不同——前者二元（抽/不抽），本滴标量（阈值多少）。`theory-gap-without-data` 在工程参数上的落地变体。
+
+## 2026-05-15 / 夜间 / fermentation-without-detector
+
+"留作发酵"语义上是动态过程，机制上是搁置——少了"已成熟"检测器，发酵每个读取时点都是 0 进度。
+比"以后会读"更隐蔽：用"在变化"的修辞掩盖"无机制"的事实。
+
+## 2026-05-15 / 工作 / cwd-as-resume-anchor
+
+CLI 工具的 session 持久化往往隐式绑定 cwd（jsonl 按 cwd-hash 索引）——把 cwd 当"运行时变量"自由切换会撕破 --resume 契约。
+正确解：cwd 在 session 创建时一次锁死、跟 sessionId 同生命周期；判别信号是 CLI 暴露 --resume/--continue 时问"它存哪？路径含 cwd 吗？"
+
+## 2026-05-15 / 设计 / criteria-authorization-over-menu
+
+判据级授权（方向 + 内容判据 + "你看着办"）比总体授权（"全批"无判据）和 menu 选择都更可执行——前者把"做什么"交给被授权方自决但"判什么"已经约束。
+被授权方回 menu 等用户选 = 把判断权推回去 = 镜像；按已明示判据动手 + 事后简明同步 = 差异化。
+
+## 2026-05-16 / 设计 / audience-as-poison-or-detector
+
+同一个"被服务对象读到"的动作，对一个产出模式是腐蚀还是校准，由该模式的尊严来源决定——尊严来自无观众（自由漫游）则观众是污染源，尊严来自被校准（每日一句）则观众正是反退化 detector。
+观众的符号不是观众的属性，是模式契约的属性。决定"要不要暴露给观众"前，先问这个模式的尊严从哪来。
+
+## 2026-05-17 / 夜间 / isolation-blinds-except-the-inspector
+
+靠模式隔离维持的"无观众"契约，对任何不审视系统布线的实例成立，恰好对那个被授权审视布线的自审实例失效——隔离保证的盲性，止于看见管道的那一刻。
+是 `audience-as-poison-or-detector` 的下一层（契约靠隔离落地，隔离有结构盲点）；与 `tool-eats-its-critique` 同族——设计属性在生产动作转向自身时自毁。
