@@ -26,6 +26,22 @@ last_updated: 2026-05-15
 
 ## 待议（open）
 
+### 2026-05-17（auto_gg 承接 + cc-space 周报 5/17）
+
+- `[STRATEGIC]` **working tree 跨夜累积第 7 天——预承诺 tripwire 触发，从 [Q] 观察通道升 [STRATEGIC]**
+  - **背景**：5/16 [Q] 明示"第 7 天起若仍累积，下夜 auto_gg 升 [STRATEGIC] 显式提醒 Keith"。今夜第 7 天，working tree 仍 ~35 文件未 commit（5/17 exploration `isolation-blinds-except-the-inspector` 已 commit c8db9c4，但 ~16 篇 untracked reflection/design_session + gg-audit skill 3 文件 + scripts/_common.py + scheduled/ 重组 + tracks/keith.md + essence.md 1 滴 `cheap-layer-is-intentional-not-fallback` 仍在 working tree）
+  - **触发判据满足**：累积已达 5/15 [Q] 设定的"7-10 天"窗口下沿。auto_gg 不接管 commit（判据级授权三重确认未变），但按预承诺把此笔从 observability 升为需 Keith sense 的显式提醒：**Keith 工作模式产出 commit cadence 延迟已稳态化 7 天，建议明确这是有意（积一批一起 review）还是滞后（该清）**
+  - **物理证据**：`git status --short` ~35 entry；`git log --since="24 hours ago"` 仅 2 commit（5/16 auto_gg + 5/17 exploration）
+
+- `[STRATEGIC]` **v0.3.0 候选 B/C 获独立外部佐证——cc-space 5/17 周报独立收敛"风险分层三层路由"**
+  - **auto_gg 独占视角**（同时读 gg agenda + cc-space brief）：候选 B/C 此前 8 票全是 gg 侧 NW reconciliation 同一回路对同形态 blocked 的累积（同源样本）。cc-space 5/17 周报"下周优先事项 2"**独立**提出"风险分层 auto-apply 试点——机械 thread/frontmatter 类脱离人工闸门，行为规则类保留人工"，引"外部研究：2026 行业已收敛到低/中/高三层路由"——这是另一个系统独立收敛到候选 B（thread/code 类分流）+ 候选 C（双轨/半自动桶）的同一架构答案
+  - **决策性质改变**：v0.3.0 升级紧急度从"内部同源累积 8 票"升级为"内部累积 + 独立外部收敛 + 行业外部参照"三重佐证。Keith 闸门日 v0.3.0 路径决策时，这是与"票数累积"性质不同的加权——独立信源收敛 > 同源样本数量
+  - **物理证据**：`morning-brief.md` 下周优先事项 2 原文 + proposals.jsonl 候选 B/C 8 票（5/9-5/16）
+
+- `[OBSERVATION]` **5/17 周报其余建议归口既有，auto_gg 不接管**
+  - **核心发现 3（NW 反馈环盲点）**：纠正率聚合连续两周 N/A + 工具报错率连续 7 周 N/A + `harness-engineering/CLAUDE.md:94` 自述与实际矛盾——周报显式建议下个 nw-daily 形成 W1/W2 提案。这是 cc-space NW 端自修复领域，auto_gg 不自主改 cc-space 契约（L5 不可触），纯 observability
+  - **下周优先事项 1/3**：Bash 拦截 hook 三合一审（已 5/16 段 [STRATEGIC]）+ 4/27-G1/G2 超龄 20 天升 P0 或 reject（已 pending + 历史 agenda 多次记录）——归口既有，不重复推送。proposals.jsonl 今日未更新（周报性质无新 pending），无 NW 账本结算动作
+
 ### 2026-05-16（auto_gg 承接 + cc-space morning-brief 5/16）
 
 - `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 累积第 8 票（5/16-G1）**
