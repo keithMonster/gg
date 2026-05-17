@@ -26,7 +26,7 @@
 
 | 工具 | 我什么时候用它 | 颗粒 |
 |---|---|---|
-| `tools/notify.md` | 我需要主动外推消息给 Keith（hourly-scan 异常 / auto_gg P0 / 长跑产出完成） | 调一次 `bin/notify.sh`，不装 |
+| `tools/notify.md` | 我需要主动外推消息给 Keith（status-scan 异常 / auto_gg P0 / 长跑产出完成） | 调一次 `bin/notify.sh`，不装 |
 
 通道工具跟思维工具的本质区别：
 - 思维工具 = 思考时**装配**到当前会话（Read 文件后变成上下文）

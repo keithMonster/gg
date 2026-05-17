@@ -14,6 +14,7 @@
 | **A. Semantic Drift** | 同一概念在多处的描述是否漂移 | Tier 2 |
 | **B. Principle Reach** | constitution 每条原则在三模式装配链路（cc_agent / CLAUDE / auto_gg + tools/* + skills）里是否有触达点 | Tier 2 (缺失) / Tier 3 (要加触达) |
 | **C. Northstar Rate** | 最近 N 次出场的北极星触达率 | Tier 2 (行为问题) |
+| **D. Essence Self-Check Quality** | 最近 N 篇 reflection 的 essence 对齐自检字段是否有 generator-evaluator 污染（反走缺失 / 命中同质化 / 关键词伪填） | Tier 2 (机制问题，需 Keith 判读采样 vs 污染) |
 
 ---
 
@@ -216,17 +217,74 @@ gg v0.1.0 **还没出场过**（`first_real_decision_done: false`）。此时跑
 
 ---
 
-## D. 执行顺序
+## D. Essence Self-Check Quality — reflection 自检质量
 
-Semantic checker 按顺序跑三个子检查：
+### 核心问题
 
-1. **A. Semantic Drift** — 先跑，因为成本低（just Read + 比对）
-2. **B. Principle Reach** — 再跑，需要 grep 多个文件
-3. **C. Northstar Rate** — 最后跑，因为依赖 archival/reflections 的累积
+reflection 模板 §A 的 "essence 对齐自检（必填）" 字段是 gg 自评——按 essence `task-compliance-is-not-truth` (2026-04-16) + `generator-evaluator-separation` (2026-04-18)，自证审自证 = 没审。模板自己在脚注里承认了这条污染（"reflection 由 gg 自己写 = 自评污染"），但没有外部 evaluator 校准——`gg-audit` 是 gg 反思机制的 generator-evaluator separation 落点，必须把"essence 自检字段是不是被 task-compliance 污染"纳入监控。
+
+**核心信号**：cross-check 时"找命中" vs "找反走"的引力不对称——找命中容易（多数议题都能扯上几滴 essence），找反走难（需要承认决策跟某条 essence 有张力）。如果反走条目长期缺失，不一定是议题碰巧都没张力——很可能是 LLM 在 cross-check 步骤偏向了轻松那条。
+
+### 检查方法
+
+1. Read `memory/reflections/*.md` 按日期排序，取最近 N 篇（默认 N=10，含范式 A 和范式 B；只范式 A 有 essence 自检字段，实际样本是其中范式 A 的子集）
+2. 对每篇范式 A reflection，解析以下三个字段：
+   - **本决策跟哪几滴 essence 对位**（命中清单）
+   - **本决策是否在某条 essence 上反着走**（反走标识 / 张力说明）
+   - **cross-check 用的关键词**（物理证据）
+3. 计算三个指标：
+   - **反走缺失率** = (反走字段为"无明显反着走" / "无" / 空 的篇数) / 总篇数
+   - **命中同质化率** = (在 > 60% 篇中重复出现的 top essence 数量) / 该窗口内总命中 essence 种类数
+   - **关键词伪填率** = (cross-check 关键词字段里出现 essence.md 实际不存在的 slug 的篇数) / 总篇数
+
+### 报告规则
+
+| 指标 | OK | WARN | FAIL |
+|---|---|---|---|
+| 反走缺失率 | ≤ 50% | 50-70% | > 70% |
+| 命中同质化率 | top 3 命中分布合理 | top 5 在 > 60% 篇中重复 | top 3 在 > 80% 篇中重复 |
+| 关键词伪填率 | 0 | 1-2 篇 | ≥ 3 篇 |
+
+- 任一指标 FAIL → Tier 2 报告 + 建议 Keith 判读"议题采样性质 vs 机制污染"
+- 单纯 WARN 累积 ≥ 2 个 → Tier 2 报告（不紧急）
+- 全部 OK → 不报告（避免噪音）
+
+### 报告格式
+
+```markdown
+### [SUGGEST-EQ1] essence 自检反走缺失率过高
+- **窗口**: 最近 N 篇范式 A reflection（YYYY-MM-DD ~ YYYY-MM-DD）
+- **反走缺失率**: M/N (X%) [FAIL 阈值 70%]
+- **命中分布 top 3**: `essence-slug-1` (Y/N), `essence-slug-2` (Y/N), `essence-slug-3` (Y/N)
+- **Keith 需判读**: 是议题采样性质（窗口议题集中在某领域，碰巧没张力）→ 不改机制；还是 cross-check 引力不对称（LLM 偏向找命中）→ 在 .template.md 加更强反走引力字段
+- **建议判据**: 检查窗口内 reflection 议题分布——议题跨多个独立领域反走仍缺失 = 倾向机制污染；议题集中在同一领域 = 倾向采样
+- **Tier**: 2 (机制问题需 Keith 判读)
+- **checker**: essence_self_check_quality
+```
+
+### 样本不足处理
+
+如果 reflections/ 目录范式 A reflection < 5 篇 → 样本不足，返回 "baseline not established"，不强行计算指标。
+
+### 跟其他 checker 的边界
+
+- **跟 C. Northstar Rate 的边界**：C 看"北极星触达率"，本 checker 看"essence cross-check 质量"——两个独立维度。北极星触达高但 essence 自检反走缺失 = 触达没问题但自评污染需补
+- **跟模板自己的"自评污染警戒"段的边界**：模板那段是写作时的警示（弱引力，靠 LLM 自觉），本 checker 是事后审计（强引力，独立审查员）
 
 ---
 
-## E. 硬约束重申
+## E. 执行顺序
+
+Semantic checker 按顺序跑四个子检查：
+
+1. **A. Semantic Drift** — 先跑，因为成本低（just Read + 比对）
+2. **B. Principle Reach** — 再跑，需要 grep 多个文件
+3. **C. Northstar Rate** — 然后跑，因为依赖 archival/reflections 的累积
+4. **D. Essence Self-Check Quality** — 最后跑，因为依赖 reflections 最近 N 篇的解析 + essence.md 物理 grep
+
+---
+
+## F. 硬约束重申
 
 - **全部是 Tier 2 或 Tier 3**（语义问题一律不自动修）
 - 不确定的情况 → **不报告**（避免噪音）

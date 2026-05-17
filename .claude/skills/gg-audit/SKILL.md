@@ -58,6 +58,7 @@ author: monster
 | 原则触达缺失 | constitution 里某条原则在三模式装配链路（cc_agent / CLAUDE / auto_gg + tools/* + skills）里没有触达点 | 怎么补是设计决策 |
 | 北极星触达率下降 | 最近 N 次出场没触达北极星 | 修复是**行为改变**而非结构改变 |
 | 内容新鲜度 | 某条 track 洞察看起来过时 | 是删是改需要判断 |
+| reflection essence 自检质量 | 反走条目长期缺失 / essence 命中同质化 / cross-check 关键词伪填 | 议题采样 vs 机制污染需 Keith 判读 |
 
 **动作**：在报告里列出问题 + **具体修复建议**（例如"建议将 cc_agent.md 装配判断段的 Y 改成 Z"），但**不碰文件**。
 
@@ -157,7 +158,7 @@ author: monster
 - Tier 2/3 发现 → 记录到报告
 
 **Step 3：Scan (语义类，跑 semantic_checker)**
-- 按 semantic.md 的指引，执行语义漂移 / 原则触达 / 北极星触达率三个子检查
+- 按 semantic.md 的指引，执行语义漂移 / 原则触达 / 北极星触达率 / essence 自检质量四个子检查
 - **所有语义类发现都是 Tier 2 或 Tier 3**（语义不自动修）
 - 记录到报告
 
@@ -294,6 +295,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - v0.1.2 (2026-04-14) — §3 SSOT 归属清单完全重写以反映 gg v0.4.0 C 路线：档位消解 / `tools/*.md` 原子工具层建立 / `cc_agent.md` 薄入口化 / audit 规则改为意识体范式（从"检查档位流程"到"检查大脑-工具边界"+ 防御式思维警戒）
 - v0.1.3 (2026-04-14) — 物理迁移：skill 真身从 `~/.agents/skills/gg-audit/` 迁入 `~/githubProject/gg/.claude/skills/gg-audit/`，从"跨项目复用 skill"变成"gg 项目内的项目级 skill"（利用 Claude Code 原生项目级 skill 发现机制）。同时新增 `checkers/structural.md §D Stable Identifiers` 检查规则（禁跨文件 P\d/G\d/D\d 序号引用，强制语义名）。这次迁移的元意义：消除"外部文件描述 gg 内部结构"的辐射镜像痛点。
 - v0.1.4 (2026-04-15) — KERNEL 坍缩同步：Tier 1 硬前提改写（从"绝不改硬核心规则内容"细化为"绝不改 KERNEL.md 任何内容 + 意识体核心规则文本降级为 Tier 2/3"）；§3 SSOT 归属清单首行加 KERNEL.md；§5 硬约束首条强化为 KERNEL 绝对不可改；checkers/structural.md SSOT 表同步（KERNEL 加入、修正失效的 §5.5 引用为 §8 四层组件分类）。配套 gg v0.5.0 KERNEL 坍缩。
+- v0.1.5 (2026-05-15) — 补 generator-evaluator separation 缺口：新增 semantic.md §D Essence Self-Check Quality checker（监控 reflection 自检字段的反走缺失率 / 命中同质化 / 关键词伪填）；§2 Tier 2 表加新行；§4 Step 3 改为四个子检查；reflections/.template.md essence 自检字段加反走字段独立引力警示 + reflections/archival 边界事实记录。触发起因：2026-05-15 设计会话审视 5/14-5/15 8 篇工作模式 reflection 发现 7/8 篇 "无明显反着走"——essence cross-check 字段是 gg 自评，task-compliance-is-not-truth 在反思层的具体复现。配套 essence `criteria-authorization-over-menu` 沉淀。
 
 ---
 

@@ -29,7 +29,7 @@
 | 自然语言数字描述（如"N 原则 + M 闸门" / "5 条 tracks" / "2 个 personas" / "K 个原子工具"） | `memory/working_context.md` / `README.md` / `CORE.md` 任意位置 / `cc_agent.md` 工具地图 | 各自实际统计（见下方 ground truth 速查） |
 | `CORE.md §4` 的 tracks 提纲表格行数 | `CORE.md` | `ls tracks/*.md` 实际清单 |
 | `README.md` 目录树和"给未来的维护者"清单 | `README.md` | `find . -type f` 实际结构 |
-| `tools/TOOLS.md` 工具索引清单 | `tools/TOOLS.md` | `ls tools/*.md`（去掉 `TOOLS.md` 自身）+ `notify.md`（通道工具） |
+| `tools/TOOLS.md` 工具索引清单 | `tools/TOOLS.md` | `ls tools/*.md`（去掉 `tools/TOOLS.md` 自身）+ `tools/notify.md`（通道工具） |
 | 各文件顶部 / 底部版本元数据 vs 当前文件内容是否对齐 | 各 SSOT 文件（KERNEL / CORE / CLAUDE / cc_agent / auto_gg / README / constitution 等） | 文件实际内容跟版本号声称的状态对齐 |
 
 ### Ground truth 速查

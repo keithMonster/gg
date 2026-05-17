@@ -1,7 +1,7 @@
 # notify — gg 主动外推通道
 
 > **物理实现已上提为全局 skill**：`~/.agents/skills/notify/`
-> 本文件是 gg 视角的薄壳，记录 gg 任务（hourly-scan / auto_gg / 被召唤的 gg）何时调用全局通道。
+> 本文件是 gg 视角的薄壳，记录 gg 任务（status-scan / auto_gg / 被召唤的 gg）何时调用全局通道。
 
 ---
 
@@ -19,7 +19,7 @@
 
 | 场景 | source | severity | 关联 |
 |---|---|---|---|
-| hourly-scan 异常 | `hourly-scan` | warning / critical | 出问题的文件路径 |
+| status-scan 异常 | `status-scan` | warning / critical | 出问题的文件路径 |
 | auto_gg 夜间 P0 | `auto_gg` | warning | 议题相关文件 |
 | 被召唤的 gg 在 Keith 离开后完成长跑 | `gg-summoned` | info | 决策档案 / 新写文件 |
 

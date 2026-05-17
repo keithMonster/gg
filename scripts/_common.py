@@ -39,6 +39,13 @@ CROSS_PROJECT_PREFIXES = (
 NOISE_CHARS = set("*?<>{}[]\\")
 NOISE_TOKENS = re.compile(r"\bYYYY\b|\bMM\b|\bDD\b|\bHN\b|\bpath/to\b|pattern-X")
 
+# 已弃用 / 未建 / 已废弃自然语言标记：同行命中时，整行的引用全部视为合法历史 mention
+# 对应 structural.md §B "特殊情况：展望性引用" 豁免规则
+DEPRECATED_LINE_RE = re.compile(
+    r"已废弃|路径已废弃|该文件未建|已删除|已弃用|已移除|已迁移|已不存在|deprecated",
+    re.IGNORECASE,
+)
+
 # 引用提取正则
 MD_LINK_RE = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
 BACKTICK_MD_RE = re.compile(r"`([^`\s]+\.md)`")
@@ -60,6 +67,11 @@ def is_noise_target(target: str) -> bool:
 
 def is_cross_project(target: str) -> bool:
     return any(target.startswith(p) for p in CROSS_PROJECT_PREFIXES)
+
+
+def has_deprecated_marker(line: str) -> bool:
+    """同行已显式标注'已废弃 / 未建 / deprecated'等——整行 ref 视为合法历史 mention"""
+    return bool(DEPRECATED_LINE_RE.search(line))
 
 
 def walk_md_files(root: Path = ROOT, include_archive: bool = True):

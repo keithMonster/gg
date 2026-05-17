@@ -16,7 +16,7 @@ import json
 from pathlib import Path
 from _common import (
     ROOT, walk_md_files, extract_refs, is_archive,
-    is_noise_target, is_cross_project,
+    is_noise_target, is_cross_project, has_deprecated_marker,
 )
 
 
@@ -32,6 +32,7 @@ def run():
         full = ROOT / rel
         with open(full, encoding="utf-8") as f:
             for lineno, line in enumerate(f, 1):
+                line_deprecated = has_deprecated_marker(line)
                 for kind, target in extract_refs(rel, line):
                     total_refs += 1
                     if is_noise_target(target):
@@ -39,6 +40,10 @@ def run():
                         continue
                     if is_cross_project(target):
                         cross_project_refs += 1
+                        continue
+                    if line_deprecated:
+                        # 同行已显式标 deprecated/已废弃/未建——豁免该 ref
+                        noise_refs += 1
                         continue
                     src_dir = full.parent
                     from_src = (src_dir / target).resolve()
