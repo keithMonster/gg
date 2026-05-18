@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）
-last_summoned_at: "2026-05-17 22:40 夜间 auto_gg 跑——SCAN/FOUND/DID 三段。morning-brief 周报性质 + proposals.jsonl 今日未更新，无 NW 账本结算。FOUND 两笔 [STRATEGIC]：working tree 第 7 天预承诺 tripwire 触发（升显式提醒）+ v0.3.0 候选 B/C 获 cc-space 周报独立外部佐证（决策性质从同源 8 票变为内部+独立外部+行业三重）。essence append 无（收敛洞察归 agenda + 避让 Keith 未提交 cheap-layer 滴）。audit.py 0 违规。auto_gg 不接管 Keith 在场产出。"
+last_summoned_at: "2026-05-18 22:25 夜间 auto_gg 跑——SCAN/FOUND/DID 三段。morning-brief 5/18 日报（高负载日 313 回合）+ proposals.jsonl 今日已更新。NW 结算：L4 1（2026-05-18-S1 conf0.90<0.95 标 blocked）/ L5 2（2026-05-18-G1 改 cc-space/CLAUDE.md + 2026-05-01-G1 CLAUDE.md guardrail pending 17 天，只提议不动手）。跨夜关键发现：Keith 今晨 07:53 commit b994165(msg=1) 闭环 7 天 working-tree tripwire——周期批量 commit 是有意稳态非滞后，agenda 5/16+5/17 STRATEGIC 系列标 RESOLVED。essence append 无（涌现不足+避让 Keith 未提交 4 滴）。audit.py 1 噪音（agenda L39 bare filename，非真实辐射）。auto_gg 不接管 Keith 在场产出（4 essence 滴+16 reflections+state pointer）。"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-05-15_cc-gateway-user-workspace-isolation-architecture"
+last_reflection_slug: "2026-05-18_global-claude-md-rule-budget-gate"
 last_design_session_slug: "2026-05-16_gg-active-channel-to-keith"
 ```
 
