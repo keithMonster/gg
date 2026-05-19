@@ -26,6 +26,23 @@ last_updated: 2026-05-15
 
 ## 待议（open）
 
+### 2026-05-19（auto_gg 承接 + cc-space morning-brief 5/19）
+
+- `[STRATEGIC]` **"一句话优先"偏好跨场景同构——auto_gg 独占视角**
+  - **发现**：同日两侧独立浮现同一 Keith 偏好信号——① cc-space NW `2026-05-19-G2`（conf 0.5）记 ≥4 次（[3117ee69]/[dc80f300]/[5590495a]/[678f274d]）Keith 在结构化解释后追问"简单说/一句话"；② gg 设计会话 `2026-05-19_cc-space-briefing-evaluator-gate` Keith **两次显式叫停** gg 输出密度（"你简单给我描述一下，需要我决策的到底是啥"），自诊为 `mirror-not-second-order` 知行未合一。只有 auto_gg 同读两侧能看见这是同一信号在 assistant 层 + gg 设计层同步浮现，非两个孤立点
+  - **auto_gg 已做（gg 自域，可逆）**：`tracks/keith.md` 语言与沟通段补写一条"一句话优先（不止单一事实）"+ 跨场景实证标注 `(auto_gg 补写 2026-05-19)`——这是 gg 长期追问对 Keith 画像的更新，与下方 L5 决策独立
+  - **需 Keith sense（L5，不动手）**：`2026-05-19-G2` 提议扩写**全局 `~/.claude/CLAUDE.md` Communication Style**（解释/方案类默认先一句话结论再展开）。NW 自陈低 conf、属偏好类、在线纠正成本低、须过 CLAUDE.md 增改 5 门槛——决策权 Keith。gg 视角加权：此非纯 cc-space 数据点，已有 gg 设计层独立物理实证（双重叫停），信源性质从"单侧 soft 信号"升为"跨场景收敛"
+  - **物理证据**：proposals.jsonl `2026-05-19-G2` resolution_draft + design_sessions/2026-05-19_cc-space-briefing-evaluator-gate.md L40-42
+
+- `[STRATEGIC]` **NW 账本 L5 待结算 3 条 + L4 兜底 2 条（auto_gg 已回写 blocked）**
+  - **L4 已自主回写 proposals.jsonl（不 push cc-space）**：`2026-05-19-S1`（done 经验合并，conf 0.75，与 blocked `2026-05-18-S1` 同 bg/并发会话问题族——**二者应 Keith 晨审一并裁决统一 done 段实现**，避免碎片化打补丁）/ `2026-05-19-G1`（thread multi-agent-docs append，conf 0.8，**= v0.3.0 候选 B「thread/code 类脱人工闸门」累积票延续**）
+  - **L5 仅提议不动手（契约红线）**：① `2026-05-19-G2` 全局 CLAUDE.md（见上条）② `2026-05-18-G1` cc-space/CLAUDE.md 工作区索引登记 cgplatform/（conf 0.8，pending 2 天）③ `2026-05-01-G1` CLAUDE.md 编辑前 ack 目标路径 guardrail（**pending 18 天，连续多夜 L5 自域未决——老化提醒，非 gg 根因可挖**；与 morning-brief 安全发现 1「能力授权≠执行授权」同源关切，机制已响应但 guardrail 本身仍悬）
+
+- `[OBSERVATION]` **morning-brief 5/19 其余归口既有，不重复推送**
+  - 安全红线本日真实触发并已闭环（[3117ee69] cc-gateway 验证误绑真链路，Keith 当场拦截 → [ed1e06f7] 整会话治理 + canon/security 加固 + done 复盘）——机制响应到位，纯 observability
+  - `Your tool call was malformed` 今日 15+ 次：平台级 heredoc 解析 bug 族（GitHub #15742/#18526/#25259/#40341），已由 blocked `2026-05-16-G2` 捕获（见 5/16 段），今日证据**强化其优先级**，不新增提案
+  - 多并发会话协调摩擦：已由 `2026-05-19-S1` 捕获并建议与 `2026-05-18-S1` 合并实现（见上 L4 条）
+
 ### 2026-05-17（auto_gg 承接 + cc-space 周报 5/17）
 
 - ✅ **RESOLVED (2026-05-18 auto_gg)** — Keith 今晨 07:53 commit `b994165`(message="1") 一次性吞掉 7 天累积 working tree（~35 文件，含 gg-audit skill / scheduled 重组 / tracks/keith.md / 5/14-5/16 reflections+design_sessions / scripts）。**tripwire 设计达成目的**：升级提醒后被服务对象在次日行动闭环。**开放问题答案**：Keith 周期性批量 commit（积 7 天 → 一次清空，message 极简）是**有意稳态**，非滞后——auto_gg 不接管 commit 的判据级授权三重确认得证。新累积周期从 5/18 重新计数（当前 day 1：Keith 5/18-19 在场产出 4 essence 滴 + 16 reflections + state.md，沿用不接管判据）。
