@@ -26,24 +26,24 @@ last_updated: 2026-05-15
 
 ## 待议（open）
 
-### 2026-05-19（auto_gg 承接 + cc-space morning-brief 5/19）
+### 2026-05-19（auto_gg 承接 + monster morning-brief 5/19）
 
 - `[STRATEGIC]` **"一句话优先"偏好跨场景同构——auto_gg 独占视角**
   - **发现**：同日两侧独立浮现同一 Keith 偏好信号——① cc-space NW `2026-05-19-G2`（conf 0.5）记 ≥4 次（[3117ee69]/[dc80f300]/[5590495a]/[678f274d]）Keith 在结构化解释后追问"简单说/一句话"；② gg 设计会话 `2026-05-19_cc-space-briefing-evaluator-gate` Keith **两次显式叫停** gg 输出密度（"你简单给我描述一下，需要我决策的到底是啥"），自诊为 `mirror-not-second-order` 知行未合一。只有 auto_gg 同读两侧能看见这是同一信号在 assistant 层 + gg 设计层同步浮现，非两个孤立点
   - **auto_gg 已做（gg 自域，可逆）**：`tracks/keith.md` 语言与沟通段补写一条"一句话优先（不止单一事实）"+ 跨场景实证标注 `(auto_gg 补写 2026-05-19)`——这是 gg 长期追问对 Keith 画像的更新，与下方 L5 决策独立
-  - **需 Keith sense（L5，不动手）**：`2026-05-19-G2` 提议扩写**全局 `~/.claude/CLAUDE.md` Communication Style**（解释/方案类默认先一句话结论再展开）。NW 自陈低 conf、属偏好类、在线纠正成本低、须过 CLAUDE.md 增改 5 门槛——决策权 Keith。gg 视角加权：此非纯 cc-space 数据点，已有 gg 设计层独立物理实证（双重叫停），信源性质从"单侧 soft 信号"升为"跨场景收敛"
+  - **需 Keith sense（L5，不动手）**：`2026-05-19-G2` 提议扩写**全局 `~/.claude/CLAUDE.md` Communication Style**（解释/方案类默认先一句话结论再展开）。NW 自陈低 conf、属偏好类、在线纠正成本低、须过 CLAUDE.md 增改 5 门槛——决策权 Keith。gg 视角加权：此非纯 monster 数据点，已有 gg 设计层独立物理实证（双重叫停），信源性质从"单侧 soft 信号"升为"跨场景收敛"
   - **物理证据**：proposals.jsonl `2026-05-19-G2` resolution_draft + design_sessions/2026-05-19_cc-space-briefing-evaluator-gate.md L40-42
 
 - `[STRATEGIC]` **NW 账本 L5 待结算 3 条 + L4 兜底 2 条（auto_gg 已回写 blocked）**
-  - **L4 已自主回写 proposals.jsonl（不 push cc-space）**：`2026-05-19-S1`（done 经验合并，conf 0.75，与 blocked `2026-05-18-S1` 同 bg/并发会话问题族——**二者应 Keith 晨审一并裁决统一 done 段实现**，避免碎片化打补丁）/ `2026-05-19-G1`（thread multi-agent-docs append，conf 0.8，**= v0.3.0 候选 B「thread/code 类脱人工闸门」累积票延续**）
-  - **L5 仅提议不动手（契约红线）**：① `2026-05-19-G2` 全局 CLAUDE.md（见上条）② `2026-05-18-G1` cc-space/CLAUDE.md 工作区索引登记 cgplatform/（conf 0.8，pending 2 天）③ `2026-05-01-G1` CLAUDE.md 编辑前 ack 目标路径 guardrail（**pending 18 天，连续多夜 L5 自域未决——老化提醒，非 gg 根因可挖**；与 morning-brief 安全发现 1「能力授权≠执行授权」同源关切，机制已响应但 guardrail 本身仍悬）
+  - **L4 已自主回写 proposals.jsonl（不 push monster）**：`2026-05-19-S1`（done 经验合并，conf 0.75，与 blocked `2026-05-18-S1` 同 bg/并发会话问题族——**二者应 Keith 晨审一并裁决统一 done 段实现**，避免碎片化打补丁）/ `2026-05-19-G1`（thread multi-agent-docs append，conf 0.8，**= v0.3.0 候选 B「thread/code 类脱人工闸门」累积票延续**）
+  - **L5 仅提议不动手（契约红线）**：① `2026-05-19-G2` 全局 CLAUDE.md（见上条）② `2026-05-18-G1` monster/CLAUDE.md 工作区索引登记 cgplatform/（conf 0.8，pending 2 天）③ `2026-05-01-G1` CLAUDE.md 编辑前 ack 目标路径 guardrail（**pending 18 天，连续多夜 L5 自域未决——老化提醒，非 gg 根因可挖**；与 morning-brief 安全发现 1「能力授权≠执行授权」同源关切，机制已响应但 guardrail 本身仍悬）
 
 - `[OBSERVATION]` **morning-brief 5/19 其余归口既有，不重复推送**
   - 安全红线本日真实触发并已闭环（[3117ee69] cc-gateway 验证误绑真链路，Keith 当场拦截 → [ed1e06f7] 整会话治理 + canon/security 加固 + done 复盘）——机制响应到位，纯 observability
   - `Your tool call was malformed` 今日 15+ 次：平台级 heredoc 解析 bug 族（GitHub #15742/#18526/#25259/#40341），已由 blocked `2026-05-16-G2` 捕获（见 5/16 段），今日证据**强化其优先级**，不新增提案
   - 多并发会话协调摩擦：已由 `2026-05-19-S1` 捕获并建议与 `2026-05-18-S1` 合并实现（见上 L4 条）
 
-### 2026-05-17（auto_gg 承接 + cc-space 周报 5/17）
+### 2026-05-17（auto_gg 承接 + monster 周报 5/17）
 
 - ✅ **RESOLVED (2026-05-18 auto_gg)** — Keith 今晨 07:53 commit `b994165`(message="1") 一次性吞掉 7 天累积 working tree（~35 文件，含 gg-audit skill / scheduled 重组 / tracks/keith.md / 5/14-5/16 reflections+design_sessions / scripts）。**tripwire 设计达成目的**：升级提醒后被服务对象在次日行动闭环。**开放问题答案**：Keith 周期性批量 commit（积 7 天 → 一次清空，message 极简）是**有意稳态**，非滞后——auto_gg 不接管 commit 的判据级授权三重确认得证。新累积周期从 5/18 重新计数（当前 day 1：Keith 5/18-19 在场产出 4 essence 滴 + 16 reflections + state.md，沿用不接管判据）。
 - `[STRATEGIC]` **working tree 跨夜累积第 7 天——预承诺 tripwire 触发，从 [Q] 观察通道升 [STRATEGIC]**
@@ -51,19 +51,19 @@ last_updated: 2026-05-15
   - **触发判据满足**：累积已达 5/15 [Q] 设定的"7-10 天"窗口下沿。auto_gg 不接管 commit（判据级授权三重确认未变），但按预承诺把此笔从 observability 升为需 Keith sense 的显式提醒：**Keith 工作模式产出 commit cadence 延迟已稳态化 7 天，建议明确这是有意（积一批一起 review）还是滞后（该清）**
   - **物理证据**：`git status --short` ~35 entry；`git log --since="24 hours ago"` 仅 2 commit（5/16 auto_gg + 5/17 exploration）
 
-- `[STRATEGIC]` **v0.3.0 候选 B/C 获独立外部佐证——cc-space 5/17 周报独立收敛"风险分层三层路由"**
-  - **auto_gg 独占视角**（同时读 gg agenda + cc-space brief）：候选 B/C 此前 8 票全是 gg 侧 NW reconciliation 同一回路对同形态 blocked 的累积（同源样本）。cc-space 5/17 周报"下周优先事项 2"**独立**提出"风险分层 auto-apply 试点——机械 thread/frontmatter 类脱离人工闸门，行为规则类保留人工"，引"外部研究：2026 行业已收敛到低/中/高三层路由"——这是另一个系统独立收敛到候选 B（thread/code 类分流）+ 候选 C（双轨/半自动桶）的同一架构答案
+- `[STRATEGIC]` **v0.3.0 候选 B/C 获独立外部佐证——monster 5/17 周报独立收敛"风险分层三层路由"**
+  - **auto_gg 独占视角**（同时读 gg agenda + monster brief）：候选 B/C 此前 8 票全是 gg 侧 NW reconciliation 同一回路对同形态 blocked 的累积（同源样本）。monster 5/17 周报"下周优先事项 2"**独立**提出"风险分层 auto-apply 试点——机械 thread/frontmatter 类脱离人工闸门，行为规则类保留人工"，引"外部研究：2026 行业已收敛到低/中/高三层路由"——这是另一个系统独立收敛到候选 B（thread/code 类分流）+ 候选 C（双轨/半自动桶）的同一架构答案
   - **决策性质改变**：v0.3.0 升级紧急度从"内部同源累积 8 票"升级为"内部累积 + 独立外部收敛 + 行业外部参照"三重佐证。Keith 闸门日 v0.3.0 路径决策时，这是与"票数累积"性质不同的加权——独立信源收敛 > 同源样本数量
   - **物理证据**：`morning-brief.md` 下周优先事项 2 原文 + proposals.jsonl 候选 B/C 8 票（5/9-5/16）
 
 - `[OBSERVATION]` **5/17 周报其余建议归口既有，auto_gg 不接管**
-  - **核心发现 3（NW 反馈环盲点）**：纠正率聚合连续两周 N/A + 工具报错率连续 7 周 N/A + `harness-engineering/CLAUDE.md:94` 自述与实际矛盾——周报显式建议下个 nw-daily 形成 W1/W2 提案。这是 cc-space NW 端自修复领域，auto_gg 不自主改 cc-space 契约（L5 不可触），纯 observability
+  - **核心发现 3（NW 反馈环盲点）**：纠正率聚合连续两周 N/A + 工具报错率连续 7 周 N/A + `harness-engineering/CLAUDE.md:94` 自述与实际矛盾——周报显式建议下个 nw-daily 形成 W1/W2 提案。这是 monster NW 端自修复领域，auto_gg 不自主改 monster 契约（L5 不可触），纯 observability
   - **下周优先事项 1/3**：Bash 拦截 hook 三合一审（已 5/16 段 [STRATEGIC]）+ 4/27-G1/G2 超龄 20 天升 P0 或 reject（已 pending + 历史 agenda 多次记录）——归口既有，不重复推送。proposals.jsonl 今日未更新（周报性质无新 pending），无 NW 账本结算动作
 
-### 2026-05-16（auto_gg 承接 + cc-space morning-brief 5/16）
+### 2026-05-16（auto_gg 承接 + monster morning-brief 5/16）
 
 - `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 累积第 8 票（5/16-G1）**
-  - **背景**：5/16-G1（append thread scheduled-tasks.md，conf 0.85，NW 自陈"不自动写交 done/会话"）同前 7 票形态一致——cc-space/threads/*.md append + conf < 0.95 → v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票 7 → 8
+  - **背景**：5/16-G1（append thread scheduled-tasks.md，conf 0.85，NW 自陈"不自动写交 done/会话"）同前 7 票形态一致——monster/threads/*.md append + conf < 0.95 → v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票 7 → 8
   - **不重复 5/14 P0 / 5/15 不重推判断**：5/14 已"双线压顶"P0、5/15 记 6→7 是累积、今夜 7→8 同理是数据点加权非新情境。候选 A 停 7 票（5/16 无新 S 类）
   - **物理证据**：proposals.jsonl `2026-05-16-G1` status=blocked + blocked_reason 显式标注层次缺口
 
@@ -80,14 +80,14 @@ last_updated: 2026-05-15
 
 - `[OBSERVATION]` **morning-brief 5/16 关键发现 2/退役雷达——auto_gg 不接管**
   - **Decision Authority 4/27-G2 复发**：cab2cdc1 回合 15/18-19 done Step 0 后"四选一你定"被 Keith 教导。brief 显式"规则已存在，属执行未内化非规则缺失，归口既有不新增提案"。5/14 brief 已建议 4/27-G2 升 P0——auto_gg 不自主改 priority（参 5/10/5/14 议题），Keith 闸门日处理。同日 882fa0e7 OpenCLI 评估是正面对照（范式可执行，差距在内化稳定性）
-  - **退役雷达 cc-space/CLAUDE.md 210 行超阈**（阈值 200，超 +10）：本会话 scratch 段重写后逼近，CLAUDE.d/*.md 子文件全 ≤104 行未超。L5 契约文件 auto_gg 不可触，Keith 已在处理——纯 observability
+  - **退役雷达 monster/CLAUDE.md 210 行超阈**（阈值 200，超 +10）：本会话 scratch 段重写后逼近，CLAUDE.d/*.md 子文件全 ≤104 行未超。L5 契约文件 auto_gg 不可触，Keith 已在处理——纯 observability
 
-### 2026-05-15（auto_gg 承接 + cc-space morning-brief 5/15）
+### 2026-05-15（auto_gg 承接 + monster morning-brief 5/15）
 
 - `[STRATEGIC]` **v0.3.0 升级紧急度数据点累积——候选 A/B 双线累积第 7 票**
   - **背景**：5/15 NW 3 条新 pending 全 L4 blocked（G1 + G2 + S1）。两候选累积票 +1：
     - **候选 A "L2 闸门高置信度模式"** = 5/9 S1/S2/S3 + 5/11 S1 + 5/14 S1/S2 + **5/15 S1** = **7 票**（5/15-S1 fastgpt SKILL.md 合并 conf 0.85 + author:monster + 缺"批量合并"语义）
-    - **候选 B "增设 L2.5 thread/code 类"** = 5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1 + 5/14-G1 + 5/14-G2 + **5/15-G1** = **7 票**（5/15-G1 cc-space/inbox/README.md 关闭契约段 append，形态同 thread append 类）
+    - **候选 B "增设 L2.5 thread/code 类"** = 5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1 + 5/14-G1 + 5/14-G2 + **5/15-G1** = **7 票**（5/15-G1 monster/inbox/README.md 关闭契约段 append，形态同 thread append 类）
   - **不重复 5/14 P0 推送**：5/14 agenda 已显式"v0.3.0 升级紧急度物理实证已冲过 6 票阈值——双线压顶"，今夜 6→7 是加权累积不是新情境
   - **物理证据**：proposals.jsonl 5/15 G1/G2/S1 全部 status=blocked + blocked_reason 显式标注层次缺口
 
@@ -107,7 +107,7 @@ last_updated: 2026-05-15
   - **gg-audit 下次跑窗口建议**：5/06-5/15 这批约 18 篇 reflections（design_session 留的 "下次继续" 第一项）
   - **gg 自主权边界**：不主动跑 gg-audit D checker（Keith 留指令"下次继续"指向后续会话），auto_gg 仅记录此 observability
 
-### 2026-05-14（auto_gg 承接 + cc-space morning-brief 5/14）
+### 2026-05-14（auto_gg 承接 + monster morning-brief 5/14）
 
 - `[STRATEGIC]` **v0.3.0 升级紧急度物理实证已冲过 6 票阈值——候选 A 与候选 B 双线压顶**
   - **背景**：5/14 NW 5 条新 pending 全 L4 blocked（S1+S2 Skill 合并类 + G1+G2 thread append 类 + G3 conf 0.55 工程类）。两个候选累积票均到 6 票：
@@ -118,8 +118,8 @@ last_updated: 2026-05-15
   - **物理证据**：proposals.jsonl 5/14 五条全部 status=blocked + blocked_reason 显式标注层次缺口
 
 - `[P0]` **brief 5/14 建议 4/27-G2 升 P0（Decision Authority 违反复发 17 天）**
-  - **背景**：5/14 morning-brief 关键发现 2——session 6717fa9a 回合 5 抛 4 个 fake decision points 被 Keith 戳穿，触发 4/27-G2 "用户明确单一目标后锁定决策直出，停止选项展开"模式第 N 次复发。该提案已 pending 17 天，brief 自陈"这是 cc-space 高频复发模式（决策外包 ≠ 谦逊 = 失职），建议升 P0 优先闸门"
-  - **gg 自主权边界**：升 P0 priority 字段是 brief 端判断，auto_gg 不自主改 priority（参 5/10 议题"升 P0 是 cc-space 周报判断，auto_gg 不自主改 priority 字段"），留 Keith 闸门日处理
+  - **背景**：5/14 morning-brief 关键发现 2——session 6717fa9a 回合 5 抛 4 个 fake decision points 被 Keith 戳穿，触发 4/27-G2 "用户明确单一目标后锁定决策直出，停止选项展开"模式第 N 次复发。该提案已 pending 17 天，brief 自陈"这是 monster 高频复发模式（决策外包 ≠ 谦逊 = 失职），建议升 P0 优先闸门"
+  - **gg 自主权边界**：升 P0 priority 字段是 brief 端判断，auto_gg 不自主改 priority（参 5/10 议题"升 P0 是 monster 周报判断，auto_gg 不自主改 priority 字段"），留 Keith 闸门日处理
   - **物理证据**：proposals.jsonl `id: 2026-04-27-G2` 仍 status=pending；morning-brief 关键发现 2 显式建议
   - **触发**：Keith 闸门日 + 4/27-G2 与 5/06-G1（5 天 pending） + 5/12-R1（pending）同时上桌
 
@@ -129,8 +129,8 @@ last_updated: 2026-05-15
   - **不紧急**：5/8 STRATEGIC 议题在场，等 Keith 决断 A/B/C 路径时本笔作为加权数据点
 
 - `[OBSERVATION]` **Keith 单日 5 个 substantive-decision 任务密度**
-  - **背景**：5/14 Keith 在工作模式（cc-space + cgboiler 主会话）产出 5 条 reflection——cc-assistant v0.3 / v0.4 / cc-space-inbox / cgboiler-pm-sandbox / prompt-engineering-foundations——均 status=substantive-decision，触达北极星 #1+#3
-  - **gg 视角观察**：5 条全部由 Keith 在场召唤 + 当场沉淀 essence（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer 已 append）——Keith 沉淀习惯稳定，"essence 涌现"机制在持续工作。北极星反向验证：gg 在 cc-space 主会话被高频召唤做架构决策——验证 5/7 essence `extraction-rate-not-density` 的"被服务者工作浓度"信号
+  - **背景**：5/14 Keith 在工作模式（monster + cgboiler 主会话）产出 5 条 reflection——cc-assistant v0.3 / v0.4 / monster-inbox / cgboiler-pm-sandbox / prompt-engineering-foundations——均 status=substantive-decision，触达北极星 #1+#3
+  - **gg 视角观察**：5 条全部由 Keith 在场召唤 + 当场沉淀 essence（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer 已 append）——Keith 沉淀习惯稳定，"essence 涌现"机制在持续工作。北极星反向验证：gg 在 monster 主会话被高频召唤做架构决策——验证 5/7 essence `extraction-rate-not-density` 的"被服务者工作浓度"信号
   - **不紧急**：观察通道。如未来 7 天单日 substantive-decision ≥ 5 条变常规 → 考虑是否需 archive cadence 跟进；当前一次性观察不沉淀
 
 - `[CORE_RULE_TOUCH]` **scheduled/ 重命名 hourly-scan → status-scan + plists 去 opus**
@@ -139,28 +139,28 @@ last_updated: 2026-05-15
   - **Keith 需要做的事**：完成测试后自己 commit；如已部署，验证 launchctl 标的新 label 正确加载
 
 - `[CORE_RULE_TOUCH]` **5 条 5/14 reflection + 2 条 essence append + scripts/_common.py + structural.md 仍在 working tree**
-  - **背景**：5/14 工作模式产出留 working tree——5 reflections（cc-space + cgboiler 主会话）+ essence.md append 两条（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer）+ scripts 改动（5/11 agenda 已明示）
+  - **背景**：5/14 工作模式产出留 working tree——5 reflections（monster + cgboiler 主会话）+ essence.md append 两条（paradigm-not-feature-completeness / idle-threshold-as-tripwire-not-answer）+ scripts 改动（5/11 agenda 已明示）
   - **判断**：Keith 自己 review 措辞后 commit。auto_gg 不接管（这些是 Keith 工作模式的产出，不是夜间维护）
   - **Keith 需要做的事**：review 5 条 reflection 措辞 → commit；essence 两条已落格不可改，可直接 stage
 
-### 2026-05-13（auto_gg 承接 + cc-space morning-brief 5/13）
+### 2026-05-13（auto_gg 承接 + monster morning-brief 5/13）
 
 - `[STRATEGIC]` **v0.3.0 候选 B "增设 L2.5 thread/code 类" 累积第 4 票（5/9-G1 + 5/10-G1 + 5/12-G1 + 5/13-G1）**
-  - **背景**：5/13-G1 (append cg-skills thread 5/13 条目，conf 0.92) 同前三票形态完全一致——cc-space/threads/*.md append + conf < 0.95——v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票从 3 → 4
+  - **背景**：5/13-G1 (append cg-skills thread 5/13 条目，conf 0.92) 同前三票形态完全一致——monster/threads/*.md append + conf < 0.95——v0.2.0 L 分层未覆盖 → L4 blocked。候选 B 累积票从 3 → 4
   - **对照**：候选 A "Skill 合并高置信度模式" Skill 合并类已 4 票（5/9 S1/S2/S3 + 5/11-S1）；候选 B thread append 类已 4 票。两类升级紧急度并列
   - **触发**：Keith 决定 v0.3.0 路径时候选 B 的关键加权数据点。本笔不紧急，等加权
 
 - `[P0]` **闸门日处理 5/13-G2（skill 物理位置决策树补到 CLAUDE.md）**
-  - **背景**：5/13 NW G2 (conf 0.78) draft 指向改 cc-space/CLAUDE.md 或 ~/.claude/CLAUDE.md，加"建 skill 前先盘问'使用者是谁'决策树"——L5 红线 + conf < 0.95 双重不通过 → L4 blocked
+  - **背景**：5/13 NW G2 (conf 0.78) draft 指向改 monster/CLAUDE.md 或 ~/.claude/CLAUDE.md，加"建 skill 前先盘问'使用者是谁'决策树"——L5 红线 + conf < 0.95 双重不通过 → L4 blocked
   - **议题源**：5/13 cg-data-query skill 设计 13 turns 暴露的 placement decision 规则缺失（brief 关键发现 2）
-  - **触发**：Keith 闸门日审 draft，决定写到哪个 CLAUDE.md（cc-space 项目级 vs ~/.claude 全局）
+  - **触发**：Keith 闸门日审 draft，决定写到哪个 CLAUDE.md（monster 项目级 vs ~/.claude 全局）
 
 - `[OBSERVATION]` **brief 关键发现 2：cg-data-query 13 turns 触发 4/27-G1 第 N 次复发——历史 L5 标的物理实证累积**
   - **背景**：5/13 brief 报告 a5fc9f49 session "cg-data-query skill 设计 13 turns" 触发 4/27-G1（切维度替代认输）第 N 次复发——L4/L3.5/L3/L2 抽象层堆栈被 Keith「一个 skill 就完了」直接拍平
   - **意义**：4/27-G1 是 agenda 5/12 段"7 条历史 L5 标的"之一，本次是该提案的第 N 次复发证据。强化 5/12 段"治理瓶颈在审批速率非 NW 产能"的物理实证
   - **不紧急**：本笔加权数据点，闸门日 Keith 看 4/27-G1 提案时一并参考
 
-### 2026-05-12（auto_gg 承接 + cc-space morning-brief 5/12）
+### 2026-05-12（auto_gg 承接 + monster morning-brief 5/12）
 
 - `[P0]` **闸门日今日审 2026-05-12-R1（给 5/06-G1 续命路径）+ 7 条历史 L5 标的 pending**
   - **背景**：5/12 brief 自陈"治理链路吞吐瓶颈在闸门日审批速率，不在 NW 产能"。物理实证：5/06-G1 (PreToolUse hook 拦截 Bash) 已 pending 6 天，今日 brief 仍单点告警。5/12-R1 (conf 0.85) 是 NW 端首次发明的"P0 续命提案"——给 5/06-G1 补可执行实现路径（liberzon/claude-hooks 现成仓 decompose 复合 bash 命令 + 对每个 sub-command 比对 allow/deny pattern + 官方 hooks reference + egghead.io 教程）
@@ -180,12 +180,12 @@ last_updated: 2026-05-15
   - **观察通道**：未来 30 天 R 类提案出现频率（单点 / 偶发 / 常规） + Keith 闸门日审批吞吐变化 → 判定治理瓶颈转移是 5/12 个例还是新形态
   - **不紧急**：等数据积累。如 R 类提案变常规 + Keith 审批 cadence 不变 → 沉淀 essence "governance-bottleneck-shifts-from-supply-to-decision-cost"；如 Keith 审批 cadence 跟上 → 自然消解
 
-### 2026-05-11（auto_gg 承接 + cc-space morning-brief 5/12）
+### 2026-05-11（auto_gg 承接 + monster morning-brief 5/12）
 
 - `[P0]` **闸门日先看 2026-05-11-S1（fastgpt 4 条合并）+ 2026-05-06-G1（Bash 滥用 hook 拦截，5 天 pending）**
-  - **背景**：cc-space 5/12 morning-brief 显式优先级排序——本周内 fastgpt 工作流任务再开会复发，Bash 滥用率 68% 与昨日同水平
+  - **背景**：monster 5/12 morning-brief 显式优先级排序——本周内 fastgpt 工作流任务再开会复发，Bash 滥用率 68% 与昨日同水平
   - **5-11-S1 状态**：confidence 0.95 + author:monster (~/.claude/skill-notes/fastgpt.md) + 4 条 notes 精准定位 → auto_gg 已结算 L4 blocked（v0.2.0 L2 闸门第三条缺"批量合并/本周内执行"语义）
-  - **5-06-G1 状态**：proposals.jsonl pending 5 天，PreToolUse hook 拦截 Bash 滥用，cc-space 周报 + 5/12 morning-brief 连续呼吁
+  - **5-06-G1 状态**：proposals.jsonl pending 5 天，PreToolUse hook 拦截 Bash 滥用，monster 周报 + 5/12 morning-brief 连续呼吁
   - **触发**：Keith 闸门日先处理这两条
 
 - `[STRATEGIC]` **v0.3.0 升级议题候选 A 'L2 高置信度模式' 物理实证累积四票（5/9 三票 + 5/11 一票）**
@@ -194,10 +194,10 @@ last_updated: 2026-05-15
   - **结论**：Skill 合并类升级紧急度最高（4 票 + Keith 闸门日反复处理同形态 blocked = 注意力成本）
   - **不紧急**：等 Keith 决定 v0.3.0 路径时加权数据点
 
-- `[Q]` **cc-space morning-brief 命名 cadence 变化（5/11 跑出来的 brief 标题写 2026-05-12）**
+- `[Q]` **monster morning-brief 命名 cadence 变化（5/11 跑出来的 brief 标题写 2026-05-12）**
   - **背景**：5/9 brief 标题 5/9，5/10 brief 标题 5/10——历史 cadence "brief 标题 = NW 当晚跑出来的日期"。今晚（5/11 22:00）跑出来的 brief 标题写"2026-05-12"——cadence 切换到"消费日"语义（Keith 明早看到的日期）
   - **auto_gg 处理**：jsonl 内部 date 字段（5/11）仍是产出日，auto_gg 按 jsonl 实际状态结算（不按 brief 文件名）；nw-reconciliation §不装条件"日期不是今日"在精神上应豁免本次（本次仍结算）
-  - **议题**：cc-space NW 是显式改了 brief 命名 prompt，还是物理时钟原因（22:00 跨日）？影响 nw-reconciliation 工具的 §不装条件判据语义
+  - **议题**：monster NW 是显式改了 brief 命名 prompt，还是物理时钟原因（22:00 跨日）？影响 nw-reconciliation 工具的 §不装条件判据语义
   - **不紧急**：观察通道，下次 brief 也写次日 → 确认是 prompt 改了，需同步更新 nw-reconciliation §不装条件文字
 
 - `[CORE_RULE_TOUCH]` **scripts/_common.py + check_deadlinks.py + structural.md "已废弃/未建" 同行豁免规则**
@@ -205,13 +205,13 @@ last_updated: 2026-05-15
   - **判断**：功能性新增（不是夜间维护），Keith 进行中，auto_gg 不接管 commit。留 working tree 给 Keith 早上判断
   - **Keith 需要做的事**：完成测试后自己 commit（或反向回滚）；如已生效，audit.py 退出码 0 与本豁免规则一致
 
-### 2026-05-10（auto_gg 承接 + cc-space 周报）
+### 2026-05-10（auto_gg 承接 + monster 周报）
 
-- `[P0]` **周报建议升 5-01-G1 为 P0（同根因第二次复现，事件层信号源是 cc-space）**
-  - **背景**：cc-space `harness-engineering/analysis/morning-brief.md` 5-10 周报指出——5-10 session `55c7e746` 用户说"公众号链接默认走 web-access skill"作为偏好规则，Claude 立即 Write 到 `~/.claude/projects/-Users-xuke-githubProject-cc-space/memory/feedback_*.md`（已废止的 CC 原生 memory 子目录）。与 4-30 cc-space vs `~/.claude` 混淆事故同根因第二次复现
+- `[P0]` **周报建议升 5-01-G1 为 P0（同根因第二次复现，事件层信号源是 monster）**
+  - **背景**：monster `harness-engineering/analysis/morning-brief.md` 5-10 周报指出——5-10 session `55c7e746` 用户说"公众号链接默认走 web-access skill"作为偏好规则，Claude 立即 Write 到 `~/.claude/projects/-Users-xuke-githubProject-monster/memory/feedback_*.md`（已废止的 CC 原生 memory 子目录）。与 4-30 monster vs `~/.claude` 混淆事故同根因第二次复现
   - **新加 5-10-G1**（confidence 0.95，thread append 类）：补 thread `cc-space-memory-decommission` timeline 漏洞条目——auto_gg 已结算到 blocked（v0.2.0 L 分层未覆盖 thread append；同 5/9-G1 形态）
   - **5-01-G1 状态**：proposals.jsonl pending 7 条之一，layer:L5（路径相关），周报建议升 P0
-  - **gg 自主权边界**：升 P0 是 cc-space 周报的判断，auto_gg 不自主改 priority 字段，留给 Keith 闸门日处理
+  - **gg 自主权边界**：升 P0 是 monster 周报的判断，auto_gg 不自主改 priority 字段，留给 Keith 闸门日处理
   - **触发**：Keith 闸门日先看 5-01-G1 + 5-10-G1（已 blocked），周报建议优先级最高
 
 - `[STRATEGIC]` **v0.3.0 升级 thread append 类累积票（5/9-G1 + 5/10-G1）**
@@ -219,7 +219,7 @@ last_updated: 2026-05-15
   - **5/10 物理实证累积**：thread append 类已 2 票 blocked（同形态），增加候选 B（增设 L2.5 thread/code 类）的紧急度信号
   - **不紧急**：等 Keith 决定 v0.3.0 路径时本笔作为加权数据点
 
-### 2026-05-09（auto_gg 承接 + cc-space 两条 reflection 后续）
+### 2026-05-09（auto_gg 承接 + monster 两条 reflection 后续）
 
 - `[STRATEGIC]` **nw-reconciliation v0.3.0 升级（L2 闸门跟 L1 对齐 + 覆盖 thread/code 文件类）**
   - **背景**：5/9 NW 跑出 5 条新 pending，draft confidence ∈ {0.95, 0.95, 0.95, 0.95, 0.9}——v0.2.0 引入"L1 闸门接受 confidence ≥ 0.95 resolution_draft"修复了 silent pending 死锁，但 **L2 闸门第三条仍要求 resolution 含 "批量合并"/"本周内执行" 标识**——5/9 三条 S1/S2/S3（fastgpt/web-access/search-skill skill 合并）draft 内容明确 + author:monster + confidence 0.95 但缺该语义 → 只能 L4 blocked
@@ -227,7 +227,7 @@ last_updated: 2026-05-15
   - **L1 自动闭账的红线**：L1 仅改 jsonl status/resolution，**不动 SKILL.md/thread/code 文件本身**——如果 v0.2.0 L1 闸门用在 S 类提案上 = 谎报落地（账上 done 但实际未合并），触 fallback-detectability essence 红线。这是 v0.2.0 设计上的合理保守
   - **三个候选升级**：
     - **A. L2 闸门高置信度模式**：把"resolution 含批量合并/本周内执行"替换为"resolution_draft 完整 + confidence ≥ 0.95"——跟 L1 一致；保留 author:monster 和 notes 条目精准定位的硬匹配；额外要求"实际合并能机械执行"（draft 给出明确 SKILL.md 插入位置 + 删除点）
-    - **B. 增设 L2.5 thread/code 类**：L2 留 Skill 合并；新增 L2.5 覆盖 cc-space/threads/*.md append + 简单 py/json/md 修改，闸门：confidence ≥ 0.95 + draft 给出 sed/anchor 级精确动作
+    - **B. 增设 L2.5 thread/code 类**：L2 留 Skill 合并；新增 L2.5 覆盖 monster/threads/*.md append + 简单 py/json/md 修改，闸门：confidence ≥ 0.95 + draft 给出 sed/anchor 级精确动作
     - **C. 双轨**：A + 增加"半自动桶" requires_keith_ack 标记（参 5/8 议题 NW 0.95 阈值校准 C 选项）
   - **触发**：Keith 看 5/9 五条 blocked draft + reflection 2 / reflection 1 → 决定升级路径
   - **物理证据**：proposals.jsonl 7 条 blocked（5/8 留 2 + 5/9 加 5），blocked_reason 字段已显式说明 v0.2.0 缺口
@@ -239,7 +239,7 @@ last_updated: 2026-05-15
   - **持续观察**：blocked 池条数 + 月度审批吞吐——如未来 30 天均值 > 月 +10 条则 M2（auto_gg FOUND 单列 blocked 老化）启动
   - **不紧急**：观察通道
 
-### 2026-05-08（auto_gg 承接 + cc-space 三 reflection 后续）
+### 2026-05-08（auto_gg 承接 + monster 三 reflection 后续）
 
 - `[STRATEGIC]` **NW 0.95 阈值校准（数据驱动，物理实证已累积）**
   - **回答 5/6 节 [Q] 议题**："修复 2 的实际效果"——5/7+5/8 共 **8 条 NW 自产 resolution_draft**，confidence ∈ {0.70, 0.72, 0.85, 0.85, 0.88, 0.88, 0.90, 0.92}。**0/8 通过 0.95 闸门**
@@ -264,8 +264,8 @@ last_updated: 2026-05-15
 ### 2026-05-06（NW pending 死锁修复后承接）
 
 - `[STRATEGIC]` **跨项目改动 transparency 缺口（出现 1 次——tripwire）**
-  - **背景**：2026-05-06 NW pending 死锁修复时 gg 改了 cc-space 的 `harness-engineering/prompts/nw-daily.md` 和 `proposals.jsonl`——Keith 没办法第一眼看到 diff，只能依赖 gg 文字描述
-  - **二阶风险**：CORE.md §7 可逆类跨项目改动权常态化后，"gg 改了 cc-space 哪些文件"会成为 transparency 缺口源头
+  - **背景**：2026-05-06 NW pending 死锁修复时 gg 改了 monster 的 `harness-engineering/prompts/nw-daily.md` 和 `proposals.jsonl`——Keith 没办法第一眼看到 diff，只能依赖 gg 文字描述
+  - **二阶风险**：CORE.md §7 可逆类跨项目改动权常态化后，"gg 改了 monster 哪些文件"会成为 transparency 缺口源头
   - **当前判断**：按 essence `premature-abstraction-tripwire`（04-21）—— 第 1 次场景出现不动手抽，记 tripwire。第 2 次场景再出现升级为工具化（汇总本轮跨项目改动 + diff 摘要）
   - **触发升级条件**：下一次 gg 在某次召唤里改了 ≥1 个 gg 项目外的文件且未明示告知 Keith 时
   - **不紧急**：本条本身是观察通道
@@ -304,9 +304,9 @@ last_updated: 2026-05-15
 - `[P0]` **`2026-04-16-G1` 触发升级条件——4 次同构事件已发生**
   - **背景**：2026-04-15 STRATEGIC 议题"Engineering Rules 缺元认知维度"明示规则——"一旦出现第 4 次同构事件（符合 'LLM 在信息不足时用似然补全代替事实核验' 的模式），这条战略议题升级为需 Keith 动手的优先级 P1"
   - **4 次具体化清单**：
-    1. 2026-04-14 BRIEF 发现 1 "Claude 脑补倾向"（cc-space 两起事件）
+    1. 2026-04-14 BRIEF 发现 1 "Claude 脑补倾向"（monster 两起事件）
     2. 2026-04-15 BRIEF G1 "Research agent 静默退回训练数据"
-    3. 2026-04-15 auto_gg S7 探索"防御原则双层架构"产出（cc-space 同维度）
+    3. 2026-04-15 auto_gg S7 探索"防御原则双层架构"产出（monster 同维度）
     4. **2026-04-16 BRIEF G1 "凭空假设字段名/归属"**（FastGPT/pymysql/cc-mirror 3 个具体案例）
   - **触发条件已满足**——升级为 P1
   - **gg 视角的二阶补充**（日报本身没挖出）：今日 BRIEF 还观察到"feedback_verify_field_names memory 在同会话内被重复违反——memory 对'进行中的会话'无实时约束力"。这跟 gg 自己今日 reasoning-enhancement 设计会话 M3 元洞察"essence 死档案是知识循环的断裂点"是**同一种结构性失败**的两个具体化。**共同根**：LLM 的"已写下的知识"对"正在进行的推理"约束力为零，除非该知识在当下被 Read 注入 context
@@ -351,18 +351,18 @@ last_updated: 2026-05-15
 
 - `[STRATEGIC]` **Engineering Rules 缺"元认知维度"**（基于 2 次具体化的二阶效应洞察）
   - **背景**：
-    - 2026-04-14 auto_gg BRIEF 发现 1 指出 "Claude 脑补倾向" 在 cc-space 两起事件发生，S7 探索产出"防御双层架构"洞察，指出 Keith 全局 CLAUDE.md Engineering Rules 缺 "不硬猜 context 说不确定" 条目
-    - 2026-04-15 cc-space morning-brief 发现 1：Research agent 派遣时没写 "禁止纯训练数据结论" 硬约束，subagent 静默退回训练数据。日报提议 `2026-04-15-G1` (1-2 行加到 CLAUDE.md Engineering Rules)
+    - 2026-04-14 auto_gg BRIEF 发现 1 指出 "Claude 脑补倾向" 在 monster 两起事件发生，S7 探索产出"防御双层架构"洞察，指出 Keith 全局 CLAUDE.md Engineering Rules 缺 "不硬猜 context 说不确定" 条目
+    - 2026-04-15 monster morning-brief 发现 1：Research agent 派遣时没写 "禁止纯训练数据结论" 硬约束，subagent 静默退回训练数据。日报提议 `2026-04-15-G1` (1-2 行加到 CLAUDE.md Engineering Rules)
   - **gg 视角观察到的深层关联**（日报本身没挖出）：
     - 提案 `2026-04-14-G1` (claude-md-auditor seed) + `2026-04-15-G1` (禁训练数据结论) + S7 洞察 (不硬猜 context) = **同一条缺口的三次具体化**
     - 底层问题不是缺某个具体条目，是 Engineering Rules **作为"元认知层"整个维度缺失**——当前 Rules 覆盖工程动作（调试/failure 处理/接口 grep），不覆盖"LLM 认知本身的边界警戒"
     - 补具体条目是战术——局部止血；补"元认知层"整个维度是战略——系统性地预防同类事件
   - **二阶效应**（北极星 #1 二阶效应洞察）：
     - 如果只补 G1 "禁训练数据结论"，会出现下一个类似事件（例如"没 grep 消费者就改接口的静默假设"）
-    - 缺口出现频率的观测信号：**cc-space morning-brief 继续报告"同构不同名"的 LLM 脑补事件**
+    - 缺口出现频率的观测信号：**monster morning-brief 继续报告"同构不同名"的 LLM 脑补事件**
     - 一旦出现第 4 次同构事件（定义：符合"LLM 在信息不足时用似然补全代替事实核验"的模式），这条战略议题升级为需 Keith 动手的优先级 P1
   - **为什么 auto_gg 不直接提议给 Keith 改 `~/.claude/CLAUDE.md`**：因为全局 CLAUDE.md 是 Keith 的私人空间，不在 gg 项目内（auto_gg §1.3 "只在 `~/githubProject/gg/` 活动"）。gg 的职责是**识别这个元维度的缺失并定价**，改由 Keith 自己做
-  - **何时推进**：下次 Keith 主动打开全局 CLAUDE.md 或在 cc-space 触发同类事件第 4 次时
+  - **何时推进**：下次 Keith 主动打开全局 CLAUDE.md 或在 monster 触发同类事件第 4 次时
 
 ### 2026-04-14（auto_gg 第 2 夜承接）
 
