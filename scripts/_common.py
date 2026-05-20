@@ -19,6 +19,7 @@ ARCHIVE_PREFIXES = (
     "memory/audit/",
     "memory/auto_gg/",
     "memory/explorations/",
+    "scratch/",
 )
 
 # 入口文件：它们是被外部 Read 的，不需要被其他文件"引用"才算活着
@@ -30,7 +31,8 @@ ENTRY_FILES = frozenset({
 
 # 跨项目前缀：这些不是死链，是指向别的仓库
 CROSS_PROJECT_PREFIXES = (
-    "cc-space/",
+    "cc-space/",  # 已重命名为 monster（保留供归档/旧引用兼容）
+    "monster/",
     "harness-engineering/",
     "gg/.claude/",  # 历史会话里出现过的完整项目路径
 )
