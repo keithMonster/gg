@@ -26,6 +26,18 @@ last_updated: 2026-05-15
 
 ## 待议（open）
 
+### 2026-05-21（auto_gg 承接 + monster morning-brief 5/21）
+
+- `[STRATEGIC]` **新 L5 标的 `2026-05-21-G2`——实物/外部依赖推荐前核查关键兼容性 + Engineering Rule 11 二次扩展信号**
+  - **提案**：今日会话 0bb4ffe1，推荐 YMDK 9 键键盘只验存在性、未核 Type-C↔Mac 兼容性，Keith 买后线不通需补转接头。NW draft（conf 0.55）建议扩写 Rule 11：实物/硬件推荐前除存在性外增「关键兼容性」核查（接口/供电/平台/协议）。落点二选一（全局 `~/.claude/CLAUDE.md` Rule 11 正文 vs monster CLAUDE.d/engineering-rules.md 翻车池）须 Keith 拍——L5 契约红线，auto_gg 不动手
+  - **auto_gg 独占视角**：`2026-05-21-G2` 是 Engineering Rule 11 的**第二次扩展提案**——`2026-05-15-G2`（实物 SKU 推荐前 WebSearch 验证存在性）已 5/18 落地合入 Rule 11，~6 天后 5/21-G2 又要扩它。单看每次扩展都"个案充分"，但同一规则二次扩展的**节奏**是 meta 问题——对位 essence `ontology-expansion-velocity-needs-cap`。Keith 闸门日审 5/21-G2 时建议连带判"Rule 11 是否在变成串行扩展靶 / 该不该立封顶判据"
+  - **物理证据**：proposals.jsonl `2026-05-21-G2` status=pending（L5 不自主结算）；`2026-05-15-G2` status=done resolution 含"合入#11"
+
+- `[OBSERVATION]` **NW 账本今日 L4 结算 2 条 + morning-brief 5/21 其余归口既有**
+  - **L4 已 blocked**：`2026-05-21-G1`（thread notescard append，conf 0.7——thread append 类延续 v0.3.0 候选 B 同形态，5/17 段 STRATEGIC 已捕获，不重推）+ `2026-05-21-S1`（fastgpt skill 经验合并，conf 0.65，draft 自陈"须走人工闸门"、改动涉及 references/）。均已回写 proposals.jsonl blocked_reason
+  - **发现 3 `2026-05-01-G1` 今日复现**：会话 0bb4ffe1 feedback memory 又误写 monster 仓外 auto-memory 目录，brief 建议"优先处理这条 pending"。该 L5 标的已 pending 20 天，5/19 段已显式追踪（"老化提醒"）——本笔仅记 brief 端 escalation 信号，不重复立项
+  - **发现 1/2 + 退役雷达归口既有**：发现 1（协作记忆腐烂，Keith 已亲自识别根因 + 进 inbox/todos）/ 发现 2（凭印象下结论复发 3 次，NW 自陈"规则存在未执行、克制不提案"）/ monster CLAUDE.md 225 行超阈（context-curation 已承接）——均 monster 自域，auto_gg 不接管，纯 observability
+
 ### 2026-05-19（auto_gg 承接 + monster morning-brief 5/19）
 
 - `[STRATEGIC]` **"一句话优先"偏好跨场景同构——auto_gg 独占视角**
@@ -54,7 +66,7 @@ last_updated: 2026-05-15
 - `[STRATEGIC]` **v0.3.0 候选 B/C 获独立外部佐证——monster 5/17 周报独立收敛"风险分层三层路由"**
   - **auto_gg 独占视角**（同时读 gg agenda + monster brief）：候选 B/C 此前 8 票全是 gg 侧 NW reconciliation 同一回路对同形态 blocked 的累积（同源样本）。monster 5/17 周报"下周优先事项 2"**独立**提出"风险分层 auto-apply 试点——机械 thread/frontmatter 类脱离人工闸门，行为规则类保留人工"，引"外部研究：2026 行业已收敛到低/中/高三层路由"——这是另一个系统独立收敛到候选 B（thread/code 类分流）+ 候选 C（双轨/半自动桶）的同一架构答案
   - **决策性质改变**：v0.3.0 升级紧急度从"内部同源累积 8 票"升级为"内部累积 + 独立外部收敛 + 行业外部参照"三重佐证。Keith 闸门日 v0.3.0 路径决策时，这是与"票数累积"性质不同的加权——独立信源收敛 > 同源样本数量
-  - **物理证据**：`morning-brief.md` 下周优先事项 2 原文 + proposals.jsonl 候选 B/C 8 票（5/9-5/16）
+  - **物理证据**：`harness-engineering/analysis/morning-brief.md` 下周优先事项 2 原文 + proposals.jsonl 候选 B/C 8 票（5/9-5/16）
 
 - `[OBSERVATION]` **5/17 周报其余建议归口既有，auto_gg 不接管**
   - **核心发现 3（NW 反馈环盲点）**：纠正率聚合连续两周 N/A + 工具报错率连续 7 周 N/A + `harness-engineering/CLAUDE.md:94` 自述与实际矛盾——周报显式建议下个 nw-daily 形成 W1/W2 提案。这是 monster NW 端自修复领域，auto_gg 不自主改 monster 契约（L5 不可触），纯 observability
