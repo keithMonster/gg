@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-15
+last_updated: 2026-05-22
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,20 @@ last_updated: 2026-05-15
 ---
 
 ## 待议（open）
+
+### 2026-05-22（auto_gg 承接 + monster morning-brief 5/22）
+
+- `[RECURRING]` **裸 morning-brief 跨项目引用死链 5/21→5/22 跨文件复发——根因待 Keith 判**
+  - **背景**：5/21 auto_gg 真修了 `next_session_agenda.md` L57 的裸 morning-brief 死链（补路径前缀）。今夜 audit.py 又报活跃死链 1——这次在 `memory/state.md` L21 `last_summoned_at`：5/21 那笔修复在 state.md 里**描述**"修了 agenda 裸名"时，描述文字本身又写进一个裸文件名 token。修复动作的描述文字复刻了被修复的 bug——`bug-shape-survives-fix` + `literal-token-blind-to-variant-form` 的活体，bug 形态幸存于修复并迁移一个文件
+  - **auto_gg 本夜处理**：state.md L21 是 `last_summoned_at`、auto_gg 每夜例行重写——本次重写时去除裸名（不带扩展名），audit 1→0。这不是新增 hack，是例行状态更新写干净
+  - **触发 §5"连续 2 次同类"——根因上交 Keith**：症状能每夜被 auto_gg 写干净，但根因是 `scripts/audit.py` 死链检查器**无法区分"散文里提到一个文件名" vs "导航链接"**——任何 .md 文件名出现在 gg 文件散文里、且 gg 内无同名文件即被判活跃死链。可选 root fix：① audit.py 区分 markdown 链接 `[x](path)` vs code-span 散文提名（语义改动，Tier 2/3，auto_gg 不自主改检查器逻辑）② 接受为常驻噪音、加 morning-brief 类已知跨项目裸名白名单 ③ 维持现状、每夜 auto_gg 写干净。三者各有代价，需 Keith sense
+  - **物理证据**：今夜 audit.py 首次 exit 1（state.md L21）→ 修复后 exit 0；5/21 auto_gg 日志 DID 段"真修 agenda L57"
+
+- `[OBSERVATION]` **NW 账本今日 4 新 pending 全 L4 blocked——候选 A·B 各 +2，G2 暴露候选 B scope 缺口**
+  - **L4 已 blocked（回写 proposals.jsonl，不 push monster）**：S1 web-access 经验合并（conf 0.9，author:monster，缺批量合并语义=候选 A 累积票）/ S2 voice-reply 偏好默认（conf 0.65，draft 自陈"理想默认语速含判断空间"=偏好类需 Keith sense）/ G1 thread cc-assistant append（conf 0.7=候选 B 累积票）/ G2 新建 thread cg-manage（conf 0.75）
+  - **auto_gg 独占视角**：G2 是**新建 thread 文件**，不是 append。v0.3.0 候选 B 当前表述是"增设 L2.5 覆盖 monster/threads/*.md **append**"——按当前 scope 落地，G2 这类"新建 thread 文件"仍会落 L4。闸门日决策 v0.3.0 候选 B 时建议把 scope 显式扩到"append + 新建"，否则候选 B 落地后仍有一类 thread 操作漏网
+  - **morning-brief 5/22 其余归口既有**：发现 1（5 corrected 回合同质根因，brief 显式"不提新规则"、NW 增改门槛 2/4 未达）/ 发现 3（多会话同仓 git 摩擦，worktree 路径 Keith 本日已两次主动评估选择不走）/ 退役雷达（thread stale ssot-registry/cgboiler-token-signing、monster/CLAUDE.md 239 行超阈，context-curation 已承接）——均 monster 自域，auto_gg 不接管，纯 observability
+  - **物理证据**：proposals.jsonl S1/S2/G1/G2 全部 status=blocked + blocked_reason
 
 ### 2026-05-21（auto_gg 承接 + monster morning-brief 5/21）
 
