@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-22
+last_updated: 2026-05-23
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,25 @@ last_updated: 2026-05-22
 ---
 
 ## 待议（open）
+
+### 2026-05-23（auto_gg 承接 + monster morning-brief 5/23）
+
+- `[OBSERVATION]` **NW 账本今日 2 新 pending 全 L4 + NW draft 能力上限累积 + 5/23-S1 暴露 v0.3.0 候选 A scope 缺口**
+  - **L4 已 blocked（回写 proposals.jsonl，不 push monster）**：5/23-S1（done 衍生规则到 skill-auditor，conf 0.75 / type=Skill+author:monster 命中但落点 references/rubric.md 非 SKILL.md 合并）/ 5/23-S2（CDP Proxy 常驻方案，conf 0.3 / 研究方向类、draft 自陈"等根因诊断完再选"）
+  - **NW draft 能力上限累积**（5/8 STRATEGIC NW 0.95 阈值校准 [Q] 加权数据点）：5/23 NW 2 条 conf ∈ {0.3, 0.75}。5/6-5/23 累积 confidence ≥ 0.95 占比 0%（L1 自动闭环路径累计零次激活）——5/8 [Q] B 选项"NW draft 输出能力上限在 ~0.92"假设持续被验证
+  - **auto_gg 独占视角**：5/23-S1 暴露 v0.3.0 候选 A scope 缺口——当前候选 A 表述"L2 闸门高置信度模式 + skill SKILL.md 合并"。5/23-S1 type=Skill+author:monster 完整命中前两项硬匹配，但落点 `references/<topic>.md`（skill 内部辅助文档）非 SKILL.md——若候选 A 落地建议 scope 显式扩到 "SKILL.md + references/*.md"。这是候选 A 的 scope refine 信号（5/22-G2 是候选 B "thread/*.md append vs 新建" scope 信号——A/B 都需 Keith 闸门日 refine scope）
+  - **物理证据**：proposals.jsonl 5/23-S1/S2 status=blocked + blocked_reason 显式标注 L2 scope 缺口 + conf 不足
+
+- `[OBSERVATION]` **5/19→5/23 信息密度偏好升级链路 4 天完成——跨场景反哺 + 元规则层暴露**
+  - **跨场景视角**（auto_gg 独占——同读 gg + monster）：5/19 段沉淀 "一句话优先"（跨场景首次实证）→ 5/23 Keith 升其为全局 Communication Style 段**两条硬规则**（信息密度 + 结论前置）→ 同次 review reflection（`2026-05-23_communication-style-rule-review`）自暴露 4 类盲区：(A) Prompt Writing「激活而非描述」自违（修啰嗦文本本身堆反例字符串污染上下文）/ (B) 第二条无检测器（dual-pattern 缺一半）/ (C) 触发条件未声明（硬规则泛化反噬调试场景）/ (D) 辐射只查冲突未查覆盖度（done/subagent 未同步）。4 天完成"隐式偏好→跨场景实证→硬规则升级→元层 review"链路
+  - **关键 essence 沉淀（5/23 Keith 工作模式产出，已 working tree append）**：`rule-with-half-pattern-self-violates` = `bug-shape-survives-fix` (2026-04-27) + `extraction-meta-inheritance` (2026-04-29) 在规则架构层的活体——抽取"信息密度"原则时复现想消灭的失败模式
+  - **auto_gg 已做（gg 自域，可逆）**：`tracks/keith.md` 补写"从 2026-05-23 communication-style-rule-review reflection 获得（auto_gg 补写 2026-05-23）"段——dual-pattern 5 维度模板 + scope 声明 + M2 在规则架构层应用 + gg 应对模板（未来改启动 Read 链承重段事前 call gg）
+  - **需 Keith 决策（L5 红线，不动手）**：reflection 提议 P0-P4 落地——P0 移反例字符串到 done skill 例库 + prompt-writer references / P1 第二条加检测器 / P2 加 scope 声明（长回复 vs 短回复） / P3 辐射到 done+subagent+monster / P4 Prompt Writing 加 dual-pattern 模板。落点涉及 `~/.claude/CLAUDE.md` + `~/.agents/skills/done/` + `~/.agents/skills/prompt-writer/` + monster 仓——全 L5
+
+- `[CORE_RULE_TOUCH]` **5/23 working tree 待 Keith 接管 commit**
+  - **背景**：working tree —— M memory/essence.md（+1 滴 rule-with-half-pattern-self-violates）+ ?? memory/reflections/2026-05-23_communication-style-rule-review.md
+  - **判断**：Keith 工作模式产出（review CLAUDE.md 升级 + essence 候选 append），auto_gg 不接管（参 5/14-5/17 同类 [CORE_RULE_TOUCH] 历史 + 5/18 b994165 Keith 周期性批量 commit 稳态闭环案例）
+  - **Keith 需要做的事**：自己 review 措辞后 commit；essence 已落格不可改可直接 stage
 
 ### 2026-05-22（auto_gg 承接 + monster morning-brief 5/22）
 
