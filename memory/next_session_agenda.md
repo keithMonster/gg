@@ -26,6 +26,24 @@ last_updated: 2026-05-23
 
 ## 待议（open）
 
+### 2026-05-24（auto_gg 承接 + Keith 在场召唤补跑 + monster morning-brief 5/24 周报）
+
+- `[OBSERVATION]` **Keith 5/24 在场设计会话已完整落地——auto_gg 本夜核心动作是收尾 commit**
+  - **背景**：5/24 早间 Keith 主动开"想了解我什么"反馈窗口，gg 应用 `blindspot-steers-its-own-search` (5/20) 提 4 题，跑出重型画像增量。设计反思 + tracks/keith.md (+177 行 4-9 节) + essence.md (+1 滴 `self-as-only-reference`) 已在 working tree 完整闭环（Keith 显式说"反思一下进 DD"触发），auto_gg 接管 commit 收尾（同 5/16 last_design_session b16f9d6 先例 / 区别于 5/23 [CORE_RULE_TOUCH] 类 Keith 工作模式产出留等本人 review）
+  - **本次主动反馈窗口的结构性增量（auto_gg 视角浓缩——细节在 tracks/keith.md 5/24 段）**：
+    1. **gg 第三条主动通道明示登记**——对话内主动追问权（"你觉得需要知道的时候你问我就行了"），跟 push-last-run / daily-word 并列。三条通道性质各异（推送 / 产出 / 追问），校准来源各不同
+    2. **项目寿命分层**修正 4/14 蓝图——monster=长期载体（跨公司跨角色场景延续）/ cgboiler+Voca=临时项目（项目期结束即终止）。monster 议题按"长期资产维护"框架 + cgboiler/Voca 议题按"项目期内最优"框架；跨项目资源竞争 monster 默认更高
+    3. **Keith 时间结构首次明示**——周六周日完全休（不推紧急议题 / 不召唤 Keith 决策类响应）/ 周一-五 7:30-8:30 早到自由时段（无压力缓冲带 / 只能推学习类材料，任务类侵占=对 Keith 自我时间的腐蚀）/ 8:30-17:30 工作时段（既有节奏）
+    4. **`self-as-only-reference` 重型画像 essence 沉淀**——Keith 答"心目中做得好的人是谁"= "没有偶像 / 一直都就成为自己就好了"。决策锚点 = 自我累积 + 第一性原理。引用外部人物分层判据：身份偶像层禁用 / 方法论层 + 语义工具层可用 / 训练数据高频默认谨慎
+    5. **三次同会话过度推演登记**——essence `bug-shape-survives-fix` + `signal-weak-vs-channel-dead-must-be-physically-disambiguated` 的稳定活体。reflection 已自加协议（决策动词预检停一拍）+ 4 个候选 essence tripwire
+  - **物理证据**：design_sessions/2026-05-24_keith-inquiry-and-overprojection.md / tracks/keith.md 第 4-9 节 / essence.md 末尾 `self-as-only-reference`
+
+- `[OBSERVATION]` **morning-brief 5/24 周报承接——monster 自域承重墙，gg 不接管**
+  - 三大本周发现：(1) cc-assistant 2.0 后端范式收敛 + Anthropic Agent SDK 同源（Keith 实发企微验证窗口已开 3 天未行使）(2) cg-platform v0→v1.1 双闭环 + 首个 dogfood 上线 cg-meetos.cgboiler.com（monster"对话搭系统"战略落地最大里程碑）(3) **NW blocked 池本周第二次自然涨满（8 条）→ v0.3.0 升级触发条件已达**（候选 A 累积 7 票 / 候选 B 累积 8 票，本周闸门日 5-27 或 5-31 启动）
+  - **下周优先事项**：企微 e2e 验证 / NW v0.3.0 升级决策（A+B 同时拍）/ monster/CLAUDE.md L541 fgw.py 歧义 1 行改 / 决议 2026-05-01-G1 升级 gg（pending 24 天 + 第三次复现）/ 补 analyze() 工具报错率采集
+  - **gg 视角加权**：NW v0.3.0 升级是 monster 自域决策，但 auto_gg 5/22/5/23 段已多次提示候选 A scope 缺口（SKILL.md only vs +references/）+ 候选 B scope 缺口（append vs 新建）——Keith 闸门日决策时建议带这两条 scope refine 信号进决议
+  - 物理证据：harness-engineering/analysis/morning-brief.md L9-22 + agenda 5/22/5/23 段历史
+
 ### 2026-05-23（auto_gg 承接 + monster morning-brief 5/23）
 
 - `[OBSERVATION]` **NW 账本今日 2 新 pending 全 L4 + NW draft 能力上限累积 + 5/23-S1 暴露 v0.3.0 候选 A scope 缺口**
