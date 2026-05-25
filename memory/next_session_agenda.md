@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-23
+last_updated: 2026-05-25
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,26 @@ last_updated: 2026-05-23
 ---
 
 ## 待议（open）
+
+### 2026-05-25（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/25）
+
+- `[CORE_RULE_TOUCH]` **5/25 working tree 4 reflection + essence.md +1 滴留 Keith review——auto_gg 不接管**
+  - **背景**：working tree —— M memory/essence.md（+1 滴 `symmetric-form-asymmetric-function` 已 append）+ ?? 4 个 5/25 reflection（communication-style-prompt-review / communication-style-prompt-revision / p2-self-agent-density-audit / p3-workspace-density-audit），全部 monster 召唤 gg subagent 工作模式产出，全部触达北极星 #3
+  - **判断**：Keith 工作模式产出（subagent 性质），auto_gg 不接管（参 5/14-5/17 / 5/23 同类 [CORE_RULE_TOUCH] 历史 + 5/18 b994165 Keith 周期性批量 commit 稳态闭环案例。区别于 5/24 设计模式产物归档先例 b16f9d6 / 7a43dd9）
+  - **p3 essence 候选悬而未决（需 Keith 拍）**：`meta-layer-files-lack-grounding-amplifies-decoration`——元层文件比业务层文件更易长装饰，根因是缺 grounding 反噬密度。reflection 显式标"subagent 不接管 git 权，留 Keith 早上 review 决定是否沉淀"。p2 候选 `symmetric-form-asymmetric-function` 已直接 append（subagent 自决），p3 候选未 append——两者处理不一致，建议 Keith review 时一并决定是否升 essence
+  - **Keith 需要做的事**：review 4 reflection 措辞 + 决定 p3 essence 候选是否 append → commit。essence.md p2 那滴已落格不可改可直接 stage
+
+- `[OBSERVATION]` **5/25 跨夜模式登记——评估者方法论密集触达（北极星 #3 / essence `generator-evaluator-separation` 落地）**
+  - **跨场景视角**（auto_gg 独占——同读 4 篇 reflection）：5/25 同日 monster 4 次召唤 gg subagent 做"评估者"——communication-style prompt 子代理 diff review（× 2 视角 / 否决 vs 部分接受）+ P2 自研 agent prompt 密度仲裁 + P3 工作区 CLAUDE.md 密度仲裁。本日是 essence `generator-evaluator-separation` (2026-04-18) 落地节奏的局部高峰——评估者方法论从抽象规则变成可复现实践，4 篇 reflection 都涌现具体识别 heuristic（"对称表面下功能不对称" / "元层文件缺 grounding 反噬密度" / "纯负向规则需配正向骨架" / "attention decay 是 prompt 工程的物理上限"）
+  - **不紧急**：观察通道，不沉淀 essence。未来若评估者方法论 heuristic 再涌现 ≥3 次相近形态 → 考虑沉淀"评估者识别 heuristic 库"作为 reasoning_modules 增量。当前 4 个 heuristic 分散落点 essence + reflection 已合理
+
+- `[OBSERVATION]` **NW 账本今日 2 新 pending 全 L4 blocked + v0.3.0 候选 B 累积票延续**
+  - **L4 已 blocked（回写 proposals.jsonl，不 push monster）**：
+    - 2026-05-25-G1（thread mattpocock-skills-survey timeline append，conf 0.9）—— **v0.3.0 候选 B 累积票第 N 张**（5/9-G1 / 5/10-G1 / 5/12-G1 / 5/13-G1 / 5/14-G1 / 5/14-G2 / 5/15-G1 / 5/16-G1 / 5/22-G1 / 5/25-G1）
+    - 2026-05-25-G2（自研 skill 主动 invoke 退化登记，conf 0.45）—— 仅识别类，draft 自陈"无单一明确 fix"+ 落点候选含 ~/.claude/CLAUDE.md L5 红线。**NW 自身性质要求 Keith sense**
+  - **NW draft 能力上限累积更新**（5/8 STRATEGIC NW 0.95 阈值校准 [Q] 加权数据点）：5/25 NW 2 条 conf ∈ {0.45, 0.9}。5/6-5/25 累积 confidence ≥ 0.95 占比 0%（L1 自动闭环路径累计零次激活）——5/8 [Q] B 选项"NW draft 输出能力上限在 ~0.92"假设持续被验证
+  - **morning-brief 5/25 核心提案归口既有**：G1 thread append（v0.3.0 候选 B）+ G2 skill invoke 退化（外部研究印证结构性 LLM 不可靠维度）+ 周报形态辅助观察（review-routing skill 扩 trigger word 候选）。Keith 闸门日审 G2 时建议带 v0.3.0 候选 B scope refine 信号 + Bash hook family（5/06-G1 / 5/12-R1 / 5/16-G2）合并决策
+  - **物理证据**：proposals.jsonl 5/25-G1/G2 status=blocked + blocked_reason 显式标注 L4 兜底原因
 
 ### 2026-05-24（auto_gg 承接 + Keith 在场召唤补跑 + monster morning-brief 5/24 周报）
 
