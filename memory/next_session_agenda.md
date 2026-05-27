@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-25
+last_updated: 2026-05-27
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,29 @@ last_updated: 2026-05-25
 ---
 
 ## 待议（open）
+
+### 2026-05-27（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/27）
+
+- `[CORE_RULE_TOUCH]` **5/26 working tree 1 reflection 留 Keith review——auto_gg 不接管**
+  - **背景**：working tree —— ?? memory/reflections/2026-05-26_cgplatform-contract1-applicability-decoupling.md（monster cg-platform 召唤 gg subagent 工作模式产出，议题=沙箱契约 1 反向验证闸门适用域解耦，三问全拍 Q1 派生信号源从内存 tables / Q2 cgx 跳 DB 走 db:null / Q3 _verify_dev_ro 同步解耦）
+  - **判断**：Keith 工作模式产出（subagent 性质），auto_gg 不接管（参 5/14-5/17 / 5/23 / 5/25 同类 [CORE_RULE_TOUCH] 历史 + 5/18 b994165 Keith 周期性批量 commit 稳态闭环案例。**区别于 5/24 设计模式产物归档先例 7a43dd9**）
+  - **reflection 自决要点**：essence 候选 `gate-applicability-derives-from-load-bearing-object` 已自判"判定不沉淀"——是 `gate-as-physical-fuse-not-business-metric` (5/07) 的应用而非新洞察，避免稀释 essence 浓度。Keith review 时无需重决 essence 升降
+  - **Keith 需要做的事**：review reflection 措辞 → commit。reflection 内"行动建议"段已细化到具体代码修改路径（`shared/scripts/cg_platform_create_app_db.py` + cg-platform/integration-contract.md），需 monster 工作区 follow-through 实施
+
+- `[OBSERVATION]` **Keith 5/27 NW 闸门日活跃——4 条单议题决议 + v0.3.0 范式升级窗口推到 5-31**
+  - **跨场景视角**（auto_gg 独占——同读 NW 账本变更历史）：5/27 是 5/18 b994165 之后又一次 NW 周期性批量决议节点。Keith 一日 resolve 4 条 NW 单议题：
+    - **rejected 3 条**：5/01-G1（"每次编辑前 ack 路径"规则——cc-space→monster 改名已物理消解事故场景 26 天 0 复发 + 跟新 Communication Style "窄+推进默认/不增加握手"直接冲突）/ 5/21-G2（实物推荐核兼容性——边界模糊 + 频率极低 + verbose 隐性税高于价值，退落 monster engineering-rules 翻车池）/ 5/27-S1 暂未拍
+    - **done 2 条**：5/18-G1（cg-platform 工作区索引已落地核实）/ 5/19-G2（Communication Style 已手动扩写，落地范围超提案：整套正向骨架 + 4 类反例锚定 + 末尾硬禁令）
+  - **v0.3.0 范式升级窗口未启动**：morning-brief 5/24 周报标"本周闸门日 5-27 或 5-31 启动（候选 A 累积 7 票 / 候选 B 累积 8 票）"——5/27 已过半 + Keith 已做了 4 条单议题决议但 v0.3.0 范式决议未见动作 → 窗口推到 5-31。本日 5/27-S1 推到候选 A 累积第 8 票
+  - **NW draft 能力上限累积更新**（5/8 STRATEGIC NW 0.95 阈值校准 [Q] 加权数据点）：5/27 NW 1 条 conf=0.85；5/6-5/27 累积 confidence ≥ 0.95 占比仍 0%（L1 自动闭环路径累计零次激活）——5/8 [Q] B 选项"NW draft 输出能力上限在 ~0.92"假设持续被验证（22 天数据点）
+  - **morning-brief 5/27 核心 3 条发现归口既有**：(1) notescard D 段事故根因（SSIE Single-Sample Inference Effect 学术锚点 + counterfactual checks 范式，建议未来 diagnose/review-routing skill 增段引用——但**本轮不产新 Guide 提案**，已由 done 5D/5F 沉淀）(2) canon.md 5F 扩写 5 条新 bug 复发型经验（含 hook exit code 2 潜伏 21 天）(3) 5/27-S1 新提案（auto_gg 已 L4 处理）
+  - **物理证据**：proposals.jsonl 5/27 5 条记录（4 resolved + 1 blocked）+ morning-brief 5/27 L9-13
+
+- `[OBSERVATION]` **5/26 那夜 auto_gg 未正式跑——cron 04:55 兜底接管 + essence 跨夜独立沉淀**
+  - **跨夜视角**：5/26 那夜没有 `memory/auto_gg/2026-05-26.md` 日志，但 04:55 auto-commit f5305dc 收尾了 7 个文件——含 essence.md +1 滴 `feedback-loopback-strength-determines-prior-leak`（5/26 夜间模式标记）+ exploration `2026-05-26_dialogue-with-past-self.md` + 5/25 4 reflection 一并归档
+  - **推测**：5/26 那夜 exploration 跑了（dialogue-with-past-self.md 是 exploration 模式产物，可独立于 auto_gg 运行）+ exploration 顺手 append 了一滴 essence + 4 reflection 是 5/25 Keith 工作模式产出本来就在 working tree 等接管。auto_gg 主流程那夜没跑（或者跑了但流程中断未留日志）。**04:55 兜底机制证明物理上有效**——working tree 不会无限制累积，最坏情况 auto-commit 强制收尾
+  - **不修不动**：5/26 缺日志不补造（事后造日志违反诚实），是 essence `physical-anchor` (2026-04-16) 的应用——记录只能基于物理事件。本夜日志 SCAN 段已明示"5/26 那夜 auto_gg 未正式跑，cron 04:55 兜底归档"作为历史标注
+  - **物理证据**：`git log -- memory/auto_gg/2026-05-26.md` 0 commits / `git show f5305dc --stat` 7 files
 
 ### 2026-05-25（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/25）
 
