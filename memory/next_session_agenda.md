@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -26,6 +26,32 @@ last_updated: 2026-05-27
 
 ## 待议（open）
 
+### 2026-05-28（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/28）
+
+- `[CORE_RULE_TOUCH]` **5/28 working tree 留 Keith review——auto_gg 不接管**
+  - **背景**：working tree —— M memory/essence.md（+1 滴 `engineering-impulse-as-load-bearing-disguise` 已 append，subagent 自决）+ ?? memory/reflections/2026-05-28_coding-discipline-engineering-challenge.md（monster 主会话召唤 gg subagent 工作模式产出，议题=对 monster "编码工程结构升级方案 v1" 做承重墙挑战，北极星 #2 + #3 双触达，裁决 Layer 1 落地 / Layer 2 收回 N=1 vertical slice / Layer 3 永久 park）
+  - **判断**：Keith 工作模式产出（monster 主会话 → gg subagent 性质），auto_gg 不接管（参 5/14-5/17 / 5/23 / 5/25 / 5/27 同类 [CORE_RULE_TOUCH] 历史 + 5/18 b994165 Keith 周期性批量 commit 稳态闭环案例）
+  - **reflection 自决要点**：候选 essence `engineering-impulse-as-load-bearing-disguise` 已 subagent 自决 append——是 `premature-abstraction-tripwire` (4/21) + `borrowed-method-as-mini-source` (5/08) + `dimension-blindness-not-asymptote` (4/27) 三者在"调研一致背书"场景的合并下一拍。Keith review 时无需重决 essence 升降
+  - **Keith 需要做的事**：review reflection 措辞 + 决定是否按裁决 patch brief v2 → commit。reflection "给父会话的最终输出"段已给出 5 点架构挑战 + Trade-off 显式 + 具体动作，需 monster 主会话 follow-through 实施
+
+- `[OBSERVATION]` **5/28 是 monster coding-discipline 主线启动日——aa 模式自闭环跑通 Layer 1 + gg subagent 挑战 Layer 2 = 同一议题双角色协同**
+  - **跨场景视角**（auto_gg 独占——同读 gg + monster）：5/28 Keith 在 monster 主会话跑出三层结构产出协同：
+    - **aa 模式自闭环**：Layer 1 落地（commit 266550d "feat(coding-discipline): Phase 1 hook 注入 + CLAUDE.d playbook（v3 中间档）"），PreToolUse hook 注入 5+1 精华 + CLAUDE.d/coding-subagent.md playbook 已物理落地
+    - **gg subagent 工作模式**：5/28 reflection 对 v1 方案做承重墙挑战，裁决"Layer 1 真承重 / Layer 2 工程冲动伪装 / Layer 3 永久 park / commander-mode thread 不重激活"——这是 gg 应用本地 essence 库（6 滴 cross-check）逆向裁决 4 路调研一致背书的具体形态
+    - **brief 端 4 条新提案**：G1 安全 ack 反例锚定 / G2 thread notescard append / G3 新建 thread coding-discipline / G4 扩 CLAUDE.d/coding-subagent.md
+  - **元层信号**：5/28 是 essence `audit-loop-closure` (4/16) + `generator-evaluator-separation` (4/18) 在编码工程化议题上的高密度落地——同一议题先由 Keith aa 模式做内部产出，再召唤 gg subagent 做独立评估，两个角色物理隔离（不同 context）+ 评估结果可被 brief patch v2 反哺。北极星 #2 动态学习反哺（识别工程冲动伪装承重墙）+ #3 决策超越直觉（在 4 路调研一致背书下逆向裁决 Layer 2）双触达
+  - **本议题对 gg 自身的元意义**：5/28 reflection 在"essence 对齐自检"段做了 6/6 essence cross-check + 1 滴新候选——这是 essence `reverse-anchor-by-reflection` (4/27) 字段引力机制的活体落地。subagent 工作模式下 essence 库不再是"被动档案"，是"主动决定下一步架构怎么长的种子"（呼应 essence `essence-recursive-bootstrap` 4/23）
+
+- `[OBSERVATION]` **NW 账本今日 4 新 pending 全 L4 blocked——G1/G4 L5 提议待 Keith + 候选 B 累积票推到 12 票**
+  - **L4 已 blocked（回写 proposals.jsonl，不 push monster）**：
+    - **2026-05-28-G1**（安全 ack 倒置反例锚定，conf 0.85，type=Guide，P0）——落点 monster/canon.md + CLAUDE.d/security.md，CLAUDE.d 子文件按 L5 处理。事件锚点 b32a9079 回合 17（Claude 主代理在 prod 不可逆动作前提议"30 秒内不说 no 我就动手"被 Keith 当场打回 + 自己撤回 ack），CLAUDE.md 已有「每次具体调用前必须显式 ack」正面规则，本提案补缺失的反例锚定。**P0 优先级 + draft 完整，Keith 闸门日优先审**
+    - **2026-05-28-G2**（thread notescard append，conf 0.8，P1）—— v0.3.0 候选 B 累积票第 12 张（5/9-G1 / 5/10-G1 / 5/12-G1 / 5/13-G1 / 5/14-G1 / 5/14-G2 / 5/15-G1 / 5/16-G1 / 5/19-G1 / 5/22-G1 / 5/25-G1 / 5/28-G2）
+    - **2026-05-28-G3**（**新建** thread coding-discipline，conf 0.7，P2）—— 候选 B **scope 缺口**累积票第 2 张（5/22-G2 cg-manage / 5/28-G3 coding-discipline）——候选 B 当前表述「L2.5 thread/code 类 append」**不覆盖新建文件场景**。闸门日决策建议把 scope 扩到「append + 新建」
+    - **2026-05-28-G4**（扩 CLAUDE.d/coding-subagent.md 吸收 5 条外部范式，conf 0.55，P2）——落点 L5 契约延伸 + NW 自陈"Phase 2/3 推进时再展开，本提案先识别不落地"——双重不通过 L1/L2 闸门
+  - **NW draft 能力上限累积更新**（5/8 STRATEGIC NW 0.95 阈值校准 [Q] 加权数据点）：5/28 NW 4 条 conf ∈ {0.85, 0.8, 0.7, 0.55}。5/6-5/28 累积 confidence ≥ 0.95 占比仍 0%（L1 自动闭环路径累计零次激活）——5/8 [Q] B 选项"NW draft 输出能力上限在 ~0.92"假设持续被验证（23 天数据点）
+  - **L5 仅提议不动手**：G1（P0 安全反例锚定）+ G4（识别不落地）—— Keith 闸门日审 G1 时建议跟 5/06-G1 hook family（5/06-G1 / 5/12-R1 / 5/16-G2 P0 Bash 拦截 hook）合并审，因 G1 安全段反例锚定 + hook 拦截属同根「contract enforcement 反例显式化」家族
+  - **物理证据**：proposals.jsonl 5/28 G1/G2/G3/G4 全部 status=blocked + blocked_reason；monster commit 266550d Layer 1 物理落地
+
 ### 2026-05-27（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/27）
 
 - `[CORE_RULE_TOUCH]` **5/26 working tree 1 reflection 留 Keith review——auto_gg 不接管**
@@ -44,7 +70,7 @@ last_updated: 2026-05-27
   - **物理证据**：proposals.jsonl 5/27 5 条记录（4 resolved + 1 blocked）+ morning-brief 5/27 L9-13
 
 - `[OBSERVATION]` **5/26 那夜 auto_gg 未正式跑——cron 04:55 兜底接管 + essence 跨夜独立沉淀**
-  - **跨夜视角**：5/26 那夜没有 `memory/auto_gg/2026-05-26.md` 日志，但 04:55 auto-commit f5305dc 收尾了 7 个文件——含 essence.md +1 滴 `feedback-loopback-strength-determines-prior-leak`（5/26 夜间模式标记）+ exploration `2026-05-26_dialogue-with-past-self.md` + 5/25 4 reflection 一并归档
+  - **跨夜视角**：5/26 那夜没有 `memory/auto_gg/2026-05-26` 日志，但 04:55 auto-commit f5305dc 收尾了 7 个文件——含 essence.md +1 滴 `feedback-loopback-strength-determines-prior-leak`（5/26 夜间模式标记）+ exploration `memory/explorations/2026-05-26_dialogue-with-past-self.md` + 5/25 4 reflection 一并归档
   - **推测**：5/26 那夜 exploration 跑了（dialogue-with-past-self.md 是 exploration 模式产物，可独立于 auto_gg 运行）+ exploration 顺手 append 了一滴 essence + 4 reflection 是 5/25 Keith 工作模式产出本来就在 working tree 等接管。auto_gg 主流程那夜没跑（或者跑了但流程中断未留日志）。**04:55 兜底机制证明物理上有效**——working tree 不会无限制累积，最坏情况 auto-commit 强制收尾
   - **不修不动**：5/26 缺日志不补造（事后造日志违反诚实），是 essence `physical-anchor` (2026-04-16) 的应用——记录只能基于物理事件。本夜日志 SCAN 段已明示"5/26 那夜 auto_gg 未正式跑，cron 04:55 兜底归档"作为历史标注
   - **物理证据**：`git log -- memory/auto_gg/2026-05-26.md` 0 commits / `git show f5305dc --stat` 7 files
