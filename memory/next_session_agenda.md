@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,22 @@ last_updated: 2026-05-28
 ---
 
 ## 待议（open）
+
+### 2026-05-29（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[CORE_RULE_TOUCH]` **5/28 晚设计会话 + 5/29 白天工作模式产出留 working tree 等 Keith review——auto_gg 不接管**
+  - **背景**：working tree 5 项改动 —— M CLAUDE.md（+2 行 §3 reflection 模板补丁：加"用到的每滴 essence 的适用前提是否被现场核验"强制项 + "未用到的 essence 反向 grep"软建议）+ M memory/essence.md（+1 滴 `essence-application-needs-precondition-recheck` 设计模式已 append）+ M memory/state.md（last_summoned_at 更新为 5/28 晚设计会话 + last_design_session_slug）+ ?? memory/design_sessions/2026-05-28_keith-counter-precondition-uncheck.md + ?? memory/reflections/2026-05-29_cg-deploy-unification-architecture.md（5/29 monster 召唤 gg subagent 工作模式产出，议题=川锅 CG 系统部署方式统一架构裁决，北极星 #3，否决召唤者切分维度、换"信任边界×演化速度"双轴）
+  - **判断**：5/28 设计模式 + 5/29 工作模式产出（subagent 性质），auto_gg 不接管（参 5/14-5/27 多次同类 [CORE_RULE_TOUCH] 历史 + 5/18 b994165 Keith 周期性批量 commit 稳态闭环案例）。cron 04:55 auto-commit 物理兜底（5/30 凌晨），working tree 不会无限累积
+  - **不改 state.md**：last_summoned_at 当前记录"5/28 晚设计会话"（Keith 在场最近重要出场），比 auto_gg 夜间巡检更值得占位；且 Keith 改动 pending，auto_gg 不裹挟
+  - **Keith 需要做的事**：review 5/28 设计反思 + CLAUDE.md §3 补丁措辞 + 5/29 cg-deploy reflection 架构裁决 → commit。cg-deploy reflection "一句话行动序"给出 5 点（钉新项目默认范式表 / 修 cg-api 参数序 bug / 哈轴 D 凭据 fix 独立高优 / deploy-lib 留 tripwire / 不做存量强迁），需 monster 工作区 follow-through
+
+- `[OBSERVATION]` **跨夜 essence 闭环——5/28 沉淀的质控 essence 在 5/29 工作模式被立即正确应用并反向克制自己（auto_gg 独占视角）**
+  - **跨场景视角**（auto_gg 独占——同读 5/28 设计会话 + 5/29 工作模式 reflection 才能看见这个闭环）：
+    - **5/28 沉淀**：设计会话 `keith-counter-precondition-uncheck` 由 Keith 反拷问逼出 essence `essence-application-needs-precondition-recheck`（"应用 essence 必须核验适用前提 + 反向 grep 漏掉的反例 essence；选择性挑支持裁决方向的 essence = 反向脱锚"）
+    - **5/29 落地**：cg-deploy reflection 的"essence 对齐自检"段做了 **12 滴 essence 的 grep 物理 cross-check**（runtime-state-vs-business-data / execute-untrusted-code / metric-vs-pattern 等）+ 显式"本决策是否反着走"判定（ontology-expansion-velocity 张力自检）+ **essence 候选 `deploy-paradigm-axis-is-trust-not-dependency` 自判不沉淀**，理由原文："强行沉淀违反 `essence-application-needs-precondition-recheck` 自己刚学的教训"（未过 essence-degg-test）
+  - **元层信号**：这是 essence `essence-recursive-bootstrap` (4/23) 的**新方向活体**——此前 bootstrap 讲"essence 是决定下一步架构怎么长的种子"，本闭环展示种子长出的"下一步"恰是**抑制 essence 自身的过度增殖**：质控类 essence 沉淀后，立刻成为下一次同类决策的节流阀。次日 essence 反向约束了 essence 的诞生
+  - **不沉淀新 essence**：本观察是 `essence-recursive-bootstrap` + `essence-application-needs-precondition-recheck` 的交集活体，degg-test 边缘（"自指质控规则会节流自身增殖"去 gg 化后重量不足以独立成滴），按"沉淀是涌现不是必须"留作 agenda 观察。若未来再现 ≥2 次"新质控 essence 次日反向克制同类决策"形态 → 考虑沉淀
+  - **物理证据**：essence.md 末尾 `essence-application-needs-precondition-recheck`（working tree +5 行）/ reflections/2026-05-29_cg-deploy-unification-architecture.md L98-120（essence 对齐自检段 + essence 候选自判不沉淀）
 
 ### 2026-05-28（auto_gg 承接 Keith 在场召唤补跑 + monster morning-brief 5/28）
 
