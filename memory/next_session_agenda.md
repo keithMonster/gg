@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-29
+last_updated: 2026-05-31
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,19 @@ last_updated: 2026-05-29
 ---
 
 ## 待议（open）
+
+### 2026-05-31（auto_gg 夜间补跑 — 05-30/05-31 两夜未跑，Keith 不在场）
+
+- `[STRATEGIC]` **NW blocked 池连续两周结构性增长 8→17，根因=gg 仓 nw-reconciliation v0.3.0 升级连续第 3 周未决**
+  - **跨夜视角（auto_gg 独占）**：blocked 池 5/24 周报 8 → 本周 15 → 今夜 +2（05-30-G1/05-31-R1 L4）→ **17**。是 essence `pending-resolved-becomes-blocked-stagnation`(05-09) 活体——"审批 throughput 持续 < 入池 throughput 时，机制完整=延迟暴露的失败"正在发生。17 条全部 conf < 0.95（最高 0.9），无一达 L1/L2/L3，**根因纯在 gg 仓 nw-reconciliation v0.2.0 L 分层覆盖不了 thread-append/新建两类动作**（非结算判断问题）
+  - **morning-brief 已顶 Keith**：候选 A 8 票（Skill 批量合并，scope 需扩含 references/*.md — 5/23-S1）+ 候选 B 12 票（thread append，scope 需扩含"新建 thread 文件" — 5/22-G2/5/28-G3 共 2 票缺口）。v0.3.0 升级**连续第 3 周列最高优先**（5/24→5/27→5/31），brief 建议闸门日"批量处置 17 blocked + 决策 v0.3.0"一次做完，不决则下周 ≥20
+  - **gg 视角加权**：v0.3.0 本质=改 gg 自己的工具 `tools/nw-reconciliation.md`（架构决策 A vs B + scope refine），auto_gg 不自主升级（跨工具能力扩张 + 影响形态，按 D1 需 Keith）
+  - **物理证据**：proposals.jsonl 今夜 2 条 status=pending→blocked + blocked_reason；morning-brief.md L9/L21
+
+- `[CORE_RULE_TOUCH→已接管]` **今晚设计会话（判断层 evaluator 范式）+ 今早 2 reflection 已 auto_gg 接管 commit — 议题未定案，4 决策点留 06-01**
+  - **背景**：working tree 4M（essence +3滴 / state / working_context / tracks-keith）+ 4??（design_sessions×2: judgment-layer-evaluator-paradigm + paradigm-hunt-three-rounds；reflections×2: session-level-workmode-assembly + workmode-skill-gap-audit）
+  - **判断=接管 commit**（区别于历史 [CORE_RULE_TOUCH] 不接管）：今晚是**设计模式 + Keith 触发 dd 收尾**（state 明示"dd 收工已写设计反思"）+ 改动**无任何核心规则文件**（CLAUDE/CORE/constitution/KERNEL 全未动，纯 memory/+tracks/ 记忆类）+ 05-30/05-31 两夜 auto_gg 未跑已积压。符合 5/24 b16f9d6 设计模式 dd 收尾→auto_gg 接管先例
+  - **Keith 需要做的事**：议题本身（判断层独立 evaluator 范式）**未定案，4 决策点留 06-01 细聊**：① 方向裁决 ② MVP（零不可逆离线盲测：取真实漂移 Keith-grill-前原始输出测 evaluator 命中率 >60% / 误报 <20% 才进触发机制设计）跑不跑 ③ prior 共盲天花板（同模型分叉，覆盖大头非完美解）可接受吗 ④ done 骨架化顺不顺手。完整推演见 `design_sessions/2026-05-31_judgment-layer-evaluator-paradigm.md` + state.md last_summoned_at
 
 ### 2026-05-29（auto_gg 夜间巡检 — Keith 不在场）
 

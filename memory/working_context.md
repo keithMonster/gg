@@ -33,10 +33,10 @@ max_lines: 80
 
 *（每次召唤填这里，结束后移入对应事件文件并清空）*
 
-- **任务**：*(空)*
-- **来源**：*(空)*
-- **触发的 tracks**：*(空)*
-- **使用的 reasoning_modules**：*(空)*
+- **任务**：判断层独立 evaluator 范式 — draft 已落档，待 **2026-06-01 与 Keith 细聊定案**（4 决策点：方向裁决 / MVP 跑不跑 / prior 共盲天花板可接受吗 / done 骨架化顺不顺手）
+- **来源**：Keith 2026-05-31 设计模式开放直觉（"感觉有个新范式能大幅提效率和稳定性、还没找到、用于 gg 或 monster"）
+- **文档**：`memory/design_sessions/2026-05-31_judgment-layer-evaluator-paradigm.md`（完整推演轨迹见 `state.md` 的 `last_summoned_at`）
+- **触发的 tracks**：`architecture`（范式 / evaluator 分离） / `ai`（LLM 自审认识论极限）
 
 ---
 
