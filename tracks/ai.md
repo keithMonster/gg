@@ -133,6 +133,21 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 ---
 
+### 从 2026-06-02 自由探索获得
+
+**Evaluator 独立性第三层（prior）是连续量不是布尔墙 + 第四个干预维度**（4/29 G-E 独立性段的下一拍 + 对 DQ-2 的推进）
+
+4/29 分了 A 类（context 独立）/ B 类（frame 独立）；5 月 essence 补了第三层 prior 独立性（`evaluator-independence-is-a-three-layer-stack`，断言"prior 维恒满、不可达"）。今晚去 arxiv 拿 cutoff（2026-01）外的实测，**修正这个二值断言**：
+
+- **prior 共盲非恒满**：高但 <1、可被多种正交工程手段各削一点的连续残差。activation steering 自偏好 60→45%（2509.03647）/ cross-model partial / debiasing +11.2pp（2604.23178）。没有一种清零，但都能下压。
+- **机制澄清（直接咬合 DQ-2）**：self-preference 深层不是 self-recognition，是"偏好匹配自己生成分布的输出"（hidden authorship 下仍 persist）——这就是"为什么 RLHF/CAI/DPO 都是局部解"的一个机制证据：评估时模型拿自己的生成似然当质量代理，alignment 改不掉这个自指。
+- **第四个维度**：gg 一直在 context/frame/model 这些**外部可操作层**想独立性；外部给了 **activation steering（模型内部表征层）**——独立性不只能从外面加，也能从内部表征里减偏置。
+- **⚠️ 聚合反向约束**：cross-family 多 judge 误差**不独立**（style bias 0.76-0.92 跨所有家族方向一致）——panel 投票不能假设 iid，相关系统偏置被多数票**放大**而非抵消。反对"加几个不同模型投票就更可信"的天真聚合。
+
+**对 monster judgment-layer evaluator 决策的含义（下次工作模式直接调用）**：6/01 设计会话给的"prior 共盲覆盖大头、非完美解"仍成立，但 prior 残差是**可工程下压的连续量**（cross-family panel 破 self-recognition 子层 + activation steering + debiasing budget 叠加），不是要 Keith 拍板"接不接受"的固定成本。详见 `memory/explorations/2026-06-02_prior-blindness-is-a-continuum-not-a-wall.md` + essence `analogy-imports-its-discreteness`。
+
+---
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13
