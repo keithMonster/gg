@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,27 @@ last_updated: 2026-05-31
 ---
 
 ## 待议（open）
+
+### 2026-06-01（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
+
+- `[CORE_RULE_TOUCH→已接管]` **06-01 设计会话（判断层 evaluator MVP→结案并入 monster verification-first-class ③档）+ 2 份 monster subagent reflection 已 auto_gg 接管 commit**
+  - **背景**：working tree 3M（essence +3 滴 `anchor-value-in-activation-not-in-content` / `verification-trace-as-camouflage` / `survey-coordinate-has-freshness`；state；working_context 任务槽结案）+ 4??（design_sessions/judgment-evaluator-mvp-merge；experiments/2026-06-01_judgment-evaluator-mvp/ 数据集；reflections×2: design-capability-layering-review + monster-memory-reconsolidation-vs-append-only）
+  - **判断=接管 commit**：设计模式 dd 收尾（state/working_context 已更新到结案态）+ 改动**无任何核心规则文件**（CLAUDE/CORE/constitution/cc_agent/auto_gg/KERNEL/personas/tools 全未动，纯 memory/ 记忆类）+ essence **纯 append**（15 insert / 0 delete，append-only 合规）。符合 5/24 b16f9d6 / 5/31 8317028 先例
+  - **Keith 需要做的事**：两份 subagent reflection 的 **monster 侧 follow-through**——① design-capability：先扩 monster-design §9 self-check 别建 design-foundations skill（核验 §9 是飞轮还是跑步机，否则只是把发酵桶搬家）；② monster-memory：在 CLAUDE.d/persistence.md 写死「re-derive 作用域=threads `## 当前状态`；canon/SSOT/契约硬条款=append-only 禁 re-derive」（落地前核夜跑 subagent 作用域边界）
+
+- `[Q]` **subagent reflection essence 候选 `reconsolidation-safe-iff-original-immutable` 待 Keith 决定是否 append gg essence**
+  - reflection `monster-memory-reconsolidation-vs-append-only` 自陈「subagent 模式不擅自 append 跨命根判断、留 Keith review」——本夜接管的 essence +3 滴**不含**此滴。一句话：记忆「重新归纳」只在原件不可改写时不构成 confabulation；危害不在重新归纳、在归纳覆盖原件；零容错契约类记忆禁派生重写、只能 append-only。Keith review reflection 时一并裁是否升 essence（漏看则此滴丢失）
+
+- `[STRATEGIC]` **NW 06-01-R1 并发 CC 会话共享 monster 单一 working tree 致 commit 串扰/假绿——morning-brief 标「宜 call gg」架构裁决**
+  - **升级信号**：worktree 隔离 Keith 5/19/5/22 评估过两次选择不走；06-01 morning-brief 给出**两起死证**（主交互会话 commit「从头没成功过」看到的 HEAD 实为并发 chat 会话的 4638262；auto-monster 夜跑 commit b5d92c5 push 了却不在 log 顶部）→ 从「评估过不走」升为「出现实际故障证据建议重评」。业界共识解 git worktree per agent（done Step 8 已有 merge 流程可复用）或最低 commit 后强制 `git log -1` 实证
+  - **auto_gg 处置**：06-01-R1 conf 0.55 < 0.95 + 架构契约性质 → L4 标 blocked（不自主结算）。架构决策 Keith 工作模式召唤 gg 拍，auto_gg 不动手
+  - **物理证据**：proposals.jsonl 06-01-R1 status=blocked + blocked_reason；morning-brief.md L7
+
+- **NW blocked 池延续增长 → 未结算 22 条**：延续 05-31 [STRATEGIC]（v0.3.0 升级连续第 3 周未决，根因纯在 gg 仓 nw-reconciliation v0.3.0 未升级）——本夜 +06-01-R1。`pending-resolved-becomes-blocked-stagnation` 持续活体。不重复立项，见 05-31 段
+
+- `[RECURRING 延伸]` **audit 死链根因（5/22 段）被 experiments/ 目录结构性放大 1-2 条 → 31 条**
+  - experiments/2026-06-01_judgment-evaluator-mvp/ 数据集系统性引用 monster 真实诊断文件路径（ground_truth 用 monster 案例路径作评测坐标）→ audit.py 无法区分「数据集跨项目引用」vs「gg 内死链」，全判活跃死链。**非 gg 内部结构损坏，不修**（修=破坏数据集真实引用；改 audit 逻辑是 Tier 2/3，5/22 已定 auto_gg 不自主改检查器）
+  - **root fix 优先级上升信号**：5/22 三选项之外多一更干净候选——**audit.py 对 experiments/ 目录豁免死链检查**（类比 archival/ 豁免，实验数据天然引用外部路径）。Keith sense
 
 ### 2026-05-31（auto_gg 夜间补跑 — 05-30/05-31 两夜未跑，Keith 不在场）
 

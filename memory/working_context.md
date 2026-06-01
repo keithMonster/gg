@@ -33,10 +33,9 @@ max_lines: 80
 
 *（每次召唤填这里，结束后移入对应事件文件并清空）*
 
-- **任务**：判断层独立 evaluator 范式 — draft 已落档，待 **2026-06-01 与 Keith 细聊定案**（4 决策点：方向裁决 / MVP 跑不跑 / prior 共盲天花板可接受吗 / done 骨架化顺不顺手）
-- **来源**：Keith 2026-05-31 设计模式开放直觉（"感觉有个新范式能大幅提效率和稳定性、还没找到、用于 gg 或 monster"）
-- **文档**：`memory/design_sessions/2026-05-31_judgment-layer-evaluator-paradigm.md`（完整推演轨迹见 `state.md` 的 `last_summoned_at`）
-- **触发的 tracks**：`architecture`（范式 / evaluator 分离） / `ai`（LLM 自审认识论极限）
+- **任务**：判断层独立 evaluator 范式 — **已结案 2026-06-01**。跑了 MVP（~50% frame-reachable 天花板、独立 evaluator≈内嵌自省、"错得自信"核心需工具重核纯文本看不见），建 v1 Adjudicator 后发现撞 monster `verification-first-class` ③档（dd_verify_gate.py 同范式、当天已建、更成熟）→ **已并入该线 + 退役并行实现**。gg 贡献=经验数据 + "可执行检查是承重项" critic 约束。后续 ③档 gate→critic 升级归 monster 线，gg 不主导。
+- **事件档**：`design_sessions/2026-06-01_judgment-evaluator-mvp-merge.md` + `experiments/2026-06-01_judgment-evaluator-mvp/` + monster `threads/verification-first-class.md`（2026-06-01 条）
+- **沉淀**：essence `verification-trace-as-camouflage` + `survey-coordinate-has-freshness`
 
 ---
 
