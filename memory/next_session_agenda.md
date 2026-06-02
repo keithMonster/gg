@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,18 @@ last_updated: 2026-06-01
 ---
 
 ## 待议（open）
+
+### 2026-06-02（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
+
+- `[CORE_RULE_TOUCH]` **06-02 白天 2 份 monster 工作模式 subagent reflection + essence +1 滴留 working tree 等 Keith review——auto_gg 不接管**（标签沿用惯例；实际**无核心规则改动**，纯 memory/）
+  - **背景**：working tree —— M memory/essence.md（+1 滴 `externalization-strength-spectrum` 工作会话自决 append，diff 5 insert/0 delete 合规）+ ?? reflections×2：`2026-06-02_verification-externalization-topology`（monster 召唤 gg subagent，议题=verification 基建外化拓扑，Q1 三档外化强度谱 / Q2 hook↔subagent 边界按真值来源划 / Q3 精确升一处=跨主线拓扑「一棵树两子系统禁焊统一引擎」，北极星 #1）+ `2026-06-02_cgnotes-bff-cgapi-vs-proxy-topology`（议题=cg-notes BFF 调 cg-api vs 走 cg-proxy，裁决 §3 真不变量=进程不持库凭据而非数据来源、写业务数据走 owning-service 已鉴权 API，北极星 #1）
+  - **判断=不接管**：今天是**纯工作模式 subagent 产出**（无设计模式 dd 收尾），与 5/28 / 5/25 / 5/27 / 5/29 [CORE_RULE_TOUCH] 先例同构（Keith 工作模式产出留本人 review + 周期性批量 commit + cron 04:55 兜底）。**区别于 06-01 设计模式 dd 收尾接管先例（435a0a9）**——06-01 有 Keith 在场设计会话明示收尾，今天没有
+  - **Keith 需要做的事**：① review 2 reflection 措辞 → commit；② 两份 reflection 的 monster 侧 follow-through——verification 那份「行动建议」4 点（dd_verify_gate v0 继续走 / thread 写拓扑约束「挂账不合并」/ critic 可执行检查是承重项 / L1→L3 强度谱框架进 thread）；cgnotes 那份 4 点（改 integration-contract §3 措辞 / 改 PLATFORM-SERVICES §33「唯一通道」过度声明**建议 Keith 过目此句** / BFF 分流第一原则回灌 ENGINEERING-STANDARD）
+
+- `[Q]` **subagent reflection essence 候选 `owning-service-not-proxy-for-write` 待 Keith 决定是否 append gg essence**
+  - reflection `cgnotes-bff-cgapi-vs-proxy-topology` 自陈「留 Keith review 后定，避免未 commit 噪音」——本夜未接管的 essence +1 滴**不含**此滴（已 append 的是 `externalization-strength-spectrum`，工作会话自决）。一句话：「业务数据唯一走代理」式契约会过度扩张禁止域、堵死 owning-service 正门，逼出在代理层重造业务后端迷你版的劣解——隔离不变量该锚在「进程是否持库凭据」不锚在「数据是不是业务数据」。Keith review reflection 时一并裁是否升 essence（漏看则此滴丢失）
+
+- **NW blocked 池延续 22 条 + 「清不动 ≠ 漏清」精确化（回应 morning-brief「建议清一轮」）**：morning-brief 06-02 建议「走 nw-reconciliation 清一轮 18 blocked」——auto_gg 本夜逐条核判据确认**当前 v0.2.0 工具下零增量**：18 blocked 无一满足 L1/L2/L3 自主条件（conf<0.95 / 落点 references/ 或新建文件超 L2 scope / 涉 CLAUDE.md 红线 / draft 自陈需人工闸门），4 deferred 无 deferred_until 机械闸（L3=0）。**真解仍是 v0.3.0 升级**（连续 ≥3 周 [STRATEGIC]，见 05-31/06-01 段），不重复立项。本条仅为澄清「auto_gg 不是漏清，是工具能力不覆盖」，免 Keith 误读 morning-brief
 
 ### 2026-06-01（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
 
