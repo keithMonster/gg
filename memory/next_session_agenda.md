@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,21 @@ last_updated: 2026-06-02
 ---
 
 ## 待议（open）
+
+### 2026-06-03（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
+
+- `[STRATEGIC]` **NW malformed bug 第 3 次提案（06-03-G1）锁定服务端根因 + 修正 05-31-R1 归因——G1↔R1 须作同一 bug 一并重评**
+  - **新二阶发现（auto_gg 独占——同读 R1 draft + G1 draft + morning-brief）**：malformed tool-call bug 已研究 3 次（5-29 inbox / 5-31-R1 / 06-03-G1）。R1（5-31）归因 **Opus 4.8 客户端 bug**、解药=研究型重会话 pin Opus 4.7；G1（今日）WebSearch+#61133 锁定根因=**服务端 A/B 投放 thinking 变体 `claude-quoll-v7-hr-fast-ab-high-p`**，明示「非客户端版本可修」——**这推翻了 R1 的归因前提**：若服务端 A/B 投放不区分客户端版本，pin 4.7 解药可能无效。两条 blocked 提案在 Keith 闸门日须**合并审、勿分开处理**
+  - **auto_gg 处置**：G1 conf 0.8 < 0.95 + 落点 monster/canon-bugs.md（知识库）+ 更新 R1（跨提案修改）属 monster 工作产出 → L4 标 blocked + blocked_reason（含 G1↔R1 耦合提醒）。canon-bugs append / R1 归因更新 = monster 工作模式或 Keith 动手，auto_gg 不接管
+  - **物理证据**：proposals.jsonl 06-03-G1 status=blocked + blocked_reason（本夜回写不 push monster）；05-31-R1 blocked_reason；morning-brief 06-03 L7
+
+- `[CORE_RULE_TOUCH]` **06-03 白天 2 份 monster 工作模式 subagent reflection + essence +1 滴留 working tree 等 Keith review——auto_gg 不接管**（标签沿用惯例；实际**无核心规则改动**，纯 memory/）
+  - **背景**：working tree —— M memory/essence.md（+1 滴 `self-reported-blindspot-list-shrinks-load-bearing` 工作会话自决 append，diff 5 insert/0 delete 合规）+ ?? reflections×2：`2026-06-03_self-verification-alarm-blindspots-selfaudit`（monster 召唤 gg 核查主代理自报盲点清单，总判=结构对但 3 处自报系统性「往小里说」+ 漏盲点③「清单完整性本身无验证」，北极星 #1）+ `2026-06-03_monster-claude-md-attention-audit`（monster 请 gg 第三层评判 CLAUDE.md 7 处 attention 精简，核心戳破「删论证留锚」判据只对 LLM 读者成立、对人类维护者论证段是承重锚，北极星 #1）
+  - **判断=不接管**：纯工作模式 subagent 产出（无设计模式 dd 收尾），与 6-02/5-28 [CORE_RULE_TOUCH] 先例同构（cron 04:55 兜底）。区别于 06-01 设计模式 dd 收尾接管先例
+  - **Keith 需要做的事**：① review 2 reflection 措辞 → commit；② monster 侧 follow-through——self-verification 那份 5 点推荐（盲点② 拓扑归 verification-first-class 作第三子系统/盲点① 汇报句式强制物理指针 L1 强化/盲点③ 递归追问机制接进验证机器）；claude-md-audit 那份 P0×3 逐处核（哥德尔段删复述须留理论根一句+thread 指针）+ 漏网项（触发词长串稀释）本轮不一起做
+  - **essence 候选**：`self-reported-blindspot-list-shrinks-load-bearing` 白天工作会话**已自决 append**（非待决），Keith review 时知悉即可，无需重决升降
+
+- **NW blocked 池延续 22→23（+06-03-G1）**：根因 nw-reconciliation v0.3.0 连续 ≥4 周未升级（见 05-31/06-01/06-02 段 [STRATEGIC]），`pending-resolved-becomes-blocked-stagnation` 持续活体。不重复立项
 
 ### 2026-06-02（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
 
