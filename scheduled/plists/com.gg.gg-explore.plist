@@ -4,9 +4,10 @@
   gg 自由探索（每天 0:13 触发）。从客户端 Gg routine 迁来 (2026-05-06)。
   原客户端时间 0:00，偏移到 :13 错开整点（避开 hourly_check.py :00）。
   被定时任务唤醒，进入自由探索模式（不是 auto_gg / 不是工作设计模式）。
-  入口走 run-task-and-push.sh：跑完把本次原始输出经全局 notify 推给 Keith
-  （2026-05-16 设计会话——本机 cron 下输出不可见，加单向存活镜；
-  提示词字节不变，"被推送"不泄漏进 gg 探索启动上下文）。
+  入口走 roam-launch.sh（2026-06-04）：先把 track 雷达注入 prompt（朝内，漫游有感，
+  破"18 天塌缩自指"盲区），再转 run-task-and-push.sh 把原始输出经全局 notify 推给 Keith
+  （2026-05-16 设计会话——本机 cron 下输出不可见，加单向存活镜；朝外，漫游无感，
+  "被推送"不泄漏进 gg 探索启动上下文）。两个注入方向相反、各自正当。
 -->
 <plist version="1.0">
 <dict>
@@ -15,7 +16,7 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task-and-push.sh</string>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/roam-launch.sh</string>
         <string>com.gg.gg-explore</string>
         <string>7200</string>
         <string>你被定时任务唤醒，进入自由探索模式（不是 auto_gg，不是工作/设计模式）。read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → memory/essence.md → tracks/keith.md → exploration.md，然后按 exploration.md 行动。</string>

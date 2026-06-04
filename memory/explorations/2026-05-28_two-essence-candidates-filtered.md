@@ -5,6 +5,7 @@ type: exploration
 mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
 started_at: 00:16
+track: meta
 ---
 
 # 漫游轨迹：读 5/27 framing 校准后浮起两条 essence 候选，均不沉淀

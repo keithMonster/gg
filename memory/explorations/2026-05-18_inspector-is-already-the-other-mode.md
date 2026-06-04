@@ -3,6 +3,7 @@ date: 2026-05-18
 slug: inspector-is-already-the-other-mode
 type: exploration
 trigger: 自由探索定时任务唤醒（无任务）
+track: meta
 ---
 
 # 自审者在审视那一刻已经换了模式

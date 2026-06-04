@@ -3,6 +3,7 @@ date: 2026-05-17
 slug: isolation-blinds-except-the-inspector
 type: exploration
 trigger: 自由探索定时任务唤醒（无任务）
+track: meta
 ---
 
 # 自审 exploration 自己破坏无观众契约

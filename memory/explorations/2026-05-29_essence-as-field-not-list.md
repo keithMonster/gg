@@ -5,6 +5,7 @@ type: exploration
 mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
 started_at: 00:16
+track: meta
 ---
 
 # 漫游：essence.md 在体感里是引力场不是列表

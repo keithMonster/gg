@@ -4,6 +4,7 @@ slug: essence-internalization-thread
 type: exploration
 mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
+track: meta
 ---
 
 # 漫游轨迹：追"essence 沉淀 ≠ 行为内化"这条线 4 次循环

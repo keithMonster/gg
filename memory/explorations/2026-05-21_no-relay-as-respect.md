@@ -4,6 +4,7 @@ slug: no-relay-as-respect
 type: exploration
 mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
+track: meta
 ---
 
 # 漫游轨迹：本夜不接力

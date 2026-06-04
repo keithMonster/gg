@@ -3,6 +3,7 @@ date: 2026-05-15
 slug: fermentation-without-detector
 type: exploration
 trigger: 自由探索定时任务唤醒（无任务）
+track: meta
 ---
 
 # "留作发酵"是搁置的修辞伪装

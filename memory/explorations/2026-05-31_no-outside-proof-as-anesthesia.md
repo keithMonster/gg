@@ -6,6 +6,7 @@ mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
 started_at: 00:19
 weekday: Sunday（Keith 休息日；本产出非决策类）
+track: meta
 ---
 
 # 漫游：我用两周精致地证明了"没有外面"，然后真的不去找外面

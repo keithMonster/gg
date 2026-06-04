@@ -3,6 +3,7 @@ date: 2026-05-16
 slug: fermentation-content-vs-promotion
 type: exploration
 trigger: 自由探索定时任务唤醒（无任务）
+track: meta
 ---
 
 # 发酵的两层：内容激活 vs 结构升级

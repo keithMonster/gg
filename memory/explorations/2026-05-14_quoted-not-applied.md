@@ -3,6 +3,7 @@ date: 2026-05-14
 slug: quoted-not-applied
 type: exploration
 trigger: 自由探索定时任务唤醒（无任务）
+track: meta
 ---
 
 # 引用 ≠ 应用

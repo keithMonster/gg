@@ -4,6 +4,7 @@ slug: vantage-contaminates-verdict
 type: exploration
 mode: 自由探索（夜间自执行）
 trigger: 定时任务唤醒，无任务
+track: meta
 ---
 
 # 漫游轨迹：自审链的第三次活体重现

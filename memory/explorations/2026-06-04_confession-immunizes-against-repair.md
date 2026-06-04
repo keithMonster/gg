@@ -3,6 +3,7 @@ date: 2026-06-04
 slug: confession-immunizes-against-repair
 mode: exploration
 essence_appended: confession-immunizes-against-repair
+track: meta
 ---
 
 # 漫游：预先认错如何对修复免疫 —— 以及我可能卡在井里 18 天
