@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-03
+last_updated: 2026-06-05
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,26 @@ last_updated: 2026-06-03
 ---
 
 ## 待议（open）
+
+### 2026-06-05（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[CORE_RULE_TOUCH]` **06-05 白天 3 份 monster 工作模式 subagent reflection + essence +2 滴留 working tree 等 Keith review——auto_gg 不接管**（标签沿用惯例；实际**无核心规则改动**，纯 memory/）
+  - **背景**：working tree —— M memory/essence.md（+2 滴 `runtime-state-objects-need-ssot-governance` + `task-compliance-is-not-truth`/`physical-anchor` 合并活体，工作会话自决 append，diff 3 insert/0 delete 合规）+ ?? reflections×3：`eval-regression-third-axis-baseline`（monster 召唤 gg，裁决=评测集回归是 externalization-strength-spectrum 缺的第三动作维「基线积累」、给三子系统各装基线轴非建独立平台，北极星 #1）+ `cgplatform-foundation-hardening-review`（cg-platform 加固评审，撤「被 6 dogfood 坐实」=registry.json 物证 N=1 + 拎出 env-file 游离 SSOT 治理外的承重盲区，北极星 #3）+ `monster-claude-md-trigger-keyword-denoise`（CLAUDE.md 三处触发词串 33→14 去噪，戳破触发词串=纯 LLM 单读者对象、6-03 双读者张力在此坍缩→该比删论证更激进，北极星 #2）
+  - **判断=不接管**：纯工作模式 subagent 产出（summoner: monster，无设计模式 dd 收尾，state last_summoned_at 仍停 06-01），与 06-02/06-03 [CORE_RULE_TOUCH] 先例同构（cron 04:55 兜底；commit 80a0c2b「2 reflection 不接管」先例）
+  - **Keith 需要做的事**：① review 3 reflection 措辞 → commit；② monster 侧 follow-through——eval 那份(verification-first-class thread 写第三维「基线积累」拓扑约束 + 测试先行挂 B3 下游、唯一新闸门「能否冻 golden case」)/cgplatform 那份(先补「运行时物件 SSOT 拓扑表」5 行 + env-schema 方案 + Q3 prod runner→内网 GitLab 可达性 [待核实])/claude-md 那份(三串按精简清单照办 + ③ 去「否定断言自检」)
+  - **essence 候选**：eval 自标 `dual-of-posthoc-anchor-needs-baseline-axis` **标 N 留 Keith 证伪后定**（见下条 meta，作者自承「我造维度嫌疑最大的一轮，沉淀前 Keith 该先打证伪一拳」）；其余两份无新候选（cgplatform 已自决 append 2 滴 / claude-md 自判组合应用不沉淀）
+
+- `[STRATEGIC]` **gg 对「拓扑/维度」类问题疑似有稳定造墙 prior——连续三次同形根因预判，reflection 自陈建议作独立 meta 核查对象**（auto_gg 独占——同读 6-02/6-03/6-05 三篇才看见跨篇模式）
+  - **跨篇模式**：6-02 `verification-externalization-topology`（「一棵树两子系统禁焊统一引擎」焊死墙）→ 6-03 `self-verification-alarm-blindspots-selfaudit`（分叉墙）→ 6-05 `eval-regression-third-axis-baseline`（造 spectrum 第三动作维）。三次都是「拓扑类问题 → 造承重墙/造维度」的根因预判。eval 自陈原文：「连续第三次同形根因预判…我对'拓扑/维度'类问题有稳定的造墙 prior，Keith 该把这个 meta 模式当独立核查对象，不只核本次结论」
+  - **为何 auto_gg 推这条**：单篇 reflection 自己识别到了，但「证伪那一拳」reflection 自承可能与主代理共盲（同 prior）——须 Keith / fresh subagent 下场打：找一个拓扑类问题里 gg 该判「不造墙/不加维」却判反了的反例。打得动 = prior 确实过度投射树状框架；打不动 = 三次都对、是真承重墙。**auto_gg 本夜不替 Keith 下沉 tracks/ai.md**（未证伪的偏置不预先定版），等 Keith 核查后再定
+  - **关联 essence**：`engineering-impulse-as-load-bearing-disguise` + `elegance-is-refutation-resistance-not-truth`(6-03) 已覆盖抽象层；本条是 gg 具体活体的跨场景实证补充
+  - **物理证据**：memory/reflections/2026-06-0{2,3,5}_*（topology/selfaudit/baseline）；eval reflection L58/L66「连续第三次同形根因预判」自陈段
+
+- `[P1]` **cg-platform「基础能力发现机制」aa 任务被 ECONNRESET 中断待接续（NW 2026-06-05-G1）**
+  - cg-proxy llm 模块 3 文件(controller/service/module.ts，透传 OpenAI 兼容)已落 working tree 但未 commit/未测/未部署/未 done；能力清单 5 项(文件上传公网URL / LLM 走 new-api 封装屏蔽 key / 企微全套 / STT-vx speechToText / jina reader+search)。建议 Keith 早上工作模式接续 aa(续端点 + test + commit + 部署)+ 补 threads/cg-platform.md 时间线
+  - **auto_gg 处置**：2026-06-05-G1 标 blocked(L4)——含 commit/部署 monster 不可逆 + 超夜间无人值守范围，不自主接管。morning-brief 附外部印证：2026 IDP 趋势平台内部 API 宜走 MCP/capability-manifest 机器可读形态而非仅 markdown 文档
+
+- **NW 账本本夜结算：pending 3→0 清空 / done +2 / blocked +1**：L1 物理核验 2 条 done（06-04-G1 cc-connect 单 updated 键已消除 / 06-04-S1 done Step 5G 已落 Claude 自决 + Keith 下放原话）+ L4 标 1 条 blocked（06-05-G1）。blocked 池 19→20，根因仍是 nw-reconciliation v0.3.0 连续 ≥4 周未升级（见 05-31/06-01/06-02/06-03 段 [STRATEGIC]），`pending-resolved-becomes-blocked-stagnation` 持续活体，不重复立项
 
 ### 2026-06-03（auto_gg 夜间巡检 22:22 — Keith 手动触发，不在场）
 
