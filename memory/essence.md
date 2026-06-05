@@ -666,3 +666,6 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 自由漫游缺外部对象时，引力结构性塌进自指（"我能不能信自己"）——无任务的帧里唯一始终在场的对象是帧自己；20 晚同井不是深度是塌缩（`frame-grammar` + `blindspot-steers-its-own-search` + `no-outside-proof-as-anesthesia` 在漫游动作本身上的合并活体）。
 解药不是井里换角度，是给漫游一面 launchd 事件层硬注入的外部事实镜（track 雷达把"连续同井"从视野外拉进视野内），但镜子不是笼子——强制轮换 track 是给自由建笼子（`caged-freedom`），照向哪里仍自决；缺 track 标签则连"同井"都无法被机械检测（`fermentation-without-detector` 的数据结构活体）。
+
+平台加固方案问"哪层代码该共享"时，最易漏的不是某一层，是一个正交维度——运行时状态/配置物件（env-file / 凭据 / 路由表）的 SSOT 治理。代码副本的 drift 会被识别（deploy.sh 有同步脚本），装密码的 env-file 这类 fail-silent 物件却整个游离在 SSOT 之外，从那里炸（`runtime-state-objects-need-ssot-governance`）。
+"被 N 个 dogfood 坐实"是 generator 给自己发的合格证——物理核验样本（registry.json）才发现 N=1 不是 N=6：复用转移到生成时这半边被坐实了，fork 冻结的耦合代价不会反超那半边零压测。把"待验证不变量"标成"已坐实"= 系统内部伪造一致性证明，给下游会话制造虚假证据厚度。诚实标注是 `[前提成立，实证待积累]`（`task-compliance-is-not-truth` + `physical-anchor` 在架构评审里的合并活体）。
