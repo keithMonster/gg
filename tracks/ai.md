@@ -1,7 +1,7 @@
 ---
 track: ai
 status: active
-last_updated: 2026-04-13
+last_updated: 2026-06-07
 ---
 
 # Track: AI
@@ -148,6 +148,30 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 ---
 
+### 从 2026-06-07 自由探索获得（领域坐标更新：cutoff 后五个月）
+
+**外部场域现状（2026-06，按领域自身话语，非 gg 回收）** —— 三路 WebSearch + arxiv 2603.29231 / 2602.19320 直读。对 DQ-3 / DQ-4 / DQ-5 同时推进。
+
+> **自检前提**：06-02 那条 ai 段被 track 雷达正确判为 meta——那晚"来 ai track"是为回答 gg 自己的 evaluator 问题，外部对象被工具化。本段纪律是对象留在外面，护栏用 essence `benchmark-belongs-to-its-own-race`（外部 SOTA 是别人赛道的坐标，不是 gg 的标杆）。
+
+**三条外部坐标**：
+
+1. **能力重心 model → scaffold**：领域反复出现同一判断——竞争优势不在更聪明的模型，在 agentic harness 本身（context 管理 / 评估 / 记忆 / 编排）。前沿 agent 已能自主 ~5h，**任务时域倍增周期 ~196 天**（METR 时域指标延续）。但长任务仍**可靠地失败**——能力曲线与可靠性曲线分离。
+2. **可靠性成了被测量的工程科学**（不是被论证的认识论）：pass@1 已死 → **pass^k**（k 次一致成功率）+ variance-aware metrics + **duration buckets**（按步数分层）。铁律：单步 90% → 10 步只剩 40-50%，**指数复合**。落地范式：golden dataset（取自真实失败）→ 校准人审的 LLM judge → CI gate 拦回归 → 从生产 trace 长出来。
+3. **记忆成了独立于 context window 的一等架构层**：抽事实进 vector DB，多 scope 标签（user/session/agent/org），检索时语义+关键词+实体合并重排。专属 benchmark（LoCoMo / LongMemEval / BEAM）。"Why Lexical Metrics Fail"——字面匹配指标误导。Letta = OS 启发的虚拟 context 分页。
+
+**对本 track 的推进**：
+
+- **DQ-4（token→tool scaling 边界）外部经验答案**：领域已一边倒——长时域下重心在 harness 不在模型。gg 早站在这条线的极端（几乎全是 scaffold），领域刚走到 gg 一直在的位置（`survey-as-coordinate`：差名字非差能力）。
+- **DQ-3 / 三轴模型（A/B/C scaling）外部印证 + 关键差异**：领域的「memory as first-class layer」= C 轴被产品化，但领域 C 轴是 **vector-DB 检索式**（解「从海量历史召回相关」= 规模问题），gg 的 C 轴是 **append-only 结晶 + 启动全量 Read**（解「把理解浓缩成几十滴每次在手」= 浓度问题）。**规模 vs 浓度是两条赛道**，不可互抄。
+- **DQ-2 / DQ-5 咬合的承重修正**：领域铁律——长时域可靠性由**步数复合几何（0.9^k）**主导，非单步认识论主导。这把"evaluator 单步判断的认识论天花板"（gg 这二十晚的 meta 井）降级为长时域的次要变量：单步再聪明，100 步处仍归零；杠杆在缩短/检查点化时域。详见今晚 essence `capability-locus-shifts-to-scaffold-as-horizon-grows`。
+
+**故意不做**：不提议 gg 上 vector-DB / pass^k harness / CI judge gate——别人赛道的解，套过来 = `borrowed-method-as-mini-source` 造迷你版。本段是坐标，不是工程清单。
+
+详见 `memory/explorations/2026-06-07_field-state-agent-reliability-and-scaffold-locus.md`。
+
+---
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13
@@ -171,7 +195,11 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 *（每次读到值得长期复用的资源时追加）*
 
-- [待 Keith 共建]
+- arxiv 2603.29231 — Beyond pass@1: A Reliability Science Framework for Long-Horizon LLM Agents（pass^k / variance / duration buckets / 单步90%→10步40-50%）
+- arxiv 2602.19320 — Anatomy of Agentic Memory: Taxonomy and Empirical Analysis（记忆分层 taxonomy + "Why Lexical Metrics Fail"）
+- METR-style 时域指标：自主任务时长倍增周期 ~196 天（2026-06 延续）
+- mem0 / Letta — agent memory 2026 产品化形态（multi-scope memory / OS 启发虚拟 context）
+- Datadog State of AI Engineering（2026-02 观测：5% call span 报错，60% 是 rate limit；"context 质量非容量是新瓶颈"）
 
 ---
 
