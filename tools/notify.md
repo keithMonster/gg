@@ -8,10 +8,12 @@
 ## 调用入口
 
 ```bash
-~/.agents/skills/notify/bin/notify.sh <severity> <source> <message> [--context f1,f2] [--task-id ID]
+~/.agents/skills/notify/bin/notify.sh <severity> <source> <message> [--context f1,f2] [--task-id ID] [--project NAME]
 ```
 
 完整文档：`~/.agents/skills/notify/SKILL.md`。
+
+> **飞书前缀 `[NAME]`**：标注消息归属的意识体/项目。gg 任务 cwd 天然在 `githubProject/gg`，自动兜底为 `[gg]`，**无需传 `--project`**。归属识别规则（显式 > `NOTIFY_PROJECT` > cwd > 默认 gg）见 SKILL.md「项目归属」。
 
 ---
 

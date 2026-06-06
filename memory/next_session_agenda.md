@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-05
+last_updated: 2026-06-06
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,30 @@ last_updated: 2026-06-05
 ---
 
 ## 待议（open）
+
+### 2026-06-06（设计模式 aa — AI 时代架构议题副产）
+
+- `[CORE_RULE]` **working_context 瘦身 / RESHAPE 缺「内容承重围栏」——本会话已上 L1 标记护栏，待决是否升 L2**（fresh adversarial subagent 核出，本会话最高价值发现）
+  - **缺口**：`auto_gg.md:136` RESHAPE + `:143` working_context 瘦身，约束全是"量"（频率 / 范围 / 行数 80），零"质"（删什么内容不可删 + 事后校验）。working_context 硬约束节装着 `KERNEL §2`/`CORE §7` 派生承重不变量（不改 KERNEL / 不硬猜 context）→ 连续多夜微删、单夜 diff 合理、N 夜后铁律被静默洗白、快照审计判"很干净"。这是 gg 自己每晚动手制造 temporal-contamination 的物理载体，原本零防御。
+  - **本会话已做（L1，aa 自决）**：working_context 硬约束节加 ⛔ 承重标记（禁瘦身删除 + 限定可删集）。working_context 是 auto_gg SCAN 强制加载（`auto_gg.md:94`）→ 标记触发可靠性高于一般 L1。
+  - **待 Keith 决（L2 升级，触 CORE_RULE 故未自决）**：① 给 gg-audit 加「承重不变量存续 checker」（瘦身前记承重节条数、瘦身后对比，少了报警）；② auto_gg 瘦身规则加 grep 校验。按 `externalization-strength-spectrum` 这是把判定从 LLM 自觉(L1)升到机械(L2)。gg 6-06 刚定"别建机制"——但那针对"给工作的架构加冗余裁判"(caged-freedom)，本缺口是"零防御暴露面加止血"，性质不同；L2 成本是否值得仍留 Keith 拍。
+  - **辐射发现**：`structural.md:57` 把"working_context 自然语言数字"列 Tier1 可自动修，`:62-66`"不能修"列表却漏列 working_context 承重节——gg-audit 自己的 Tier1 边界有同一个洞。判断：L57 管"数字事实同步"、与承重标记作用对象不重叠（承重节无 L57 那类数字），故本轮未改 structural；若升 L2 需一并把承重节加入 L62-66 保护列表。
+  - **物理证据**：`auto_gg.md:136/143`；`working_context.md` 硬约束节新标记；`structural.md:57/62-66`；fresh subagent 裁决（断言 A/B 部分成立 + 独立缺口 #1）
+
+- `[STRATEGIC]` **tracks/*.md 的 `last_updated` 全冻结在 2026-04-13 = 死装饰**（同次 subagent 副发现）
+  - keith / ai / architecture 三条 frontmatter `last_updated` 停 4-13，内容有 6 月新增；CORE.md / constitution.md 连该字段都没有。gg-audit 六维无一校验 last_updated vs git mtime → 新鲜度字段无触发 = `anchor-value-in-activation-not-in-content` 的死装饰活体。
+  - **待 Keith 决**：给它挂触发（auto_gg 补写 track 时更新 + gg-audit 校验背离）还是删字段（无哨兵则是噪音）。优先级低于上条（last_updated 失真不洗白承重，只是新鲜度信号失真）。本轮不动手。
+
+### 2026-06-06（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[CORE_RULE_TOUCH→已接管]` **06-06 白天 2 场设计模式 dd 收尾 + tools/notify.md 文档同步已 auto_gg 接管 commit**
+  - **背景**：working tree —— M essence.md（+2 滴 `persistence-decoupled-from-truth-is-collapse-tell` + `benchmark-belongs-to-its-own-race`，设计模式自决 append，9 insert/0 delete 合规）+ M working_context.md（last_updated + 加 ⛔ 承重保护标记 + 瞬态漫游节，**强化非削弱**）+ M next_session_agenda.md（06-06 设计段）+ M tools/notify.md（+`--project` 参数文档同步 monster 侧 notify skill 项目归属升级，diff 内容对照 morning-brief 今日「notify 头部按项目归属渲染」，可逆）+ ?? 2 设计会话反思（breaking-roaming-well-from-outside / ai-era-architecture-and-with-the-times-trap）
+  - **判断=接管 commit**：两场均设计模式 dd 收尾 + 改动无任何核心规则文件（KERNEL/CORE/constitution/cc_agent/auto_gg/CLAUDE/personas 全未动，纯 memory/+tools/ 文档）+ essence 纯 append。符合 5/24 b16f9d6 / 5/31 8317028 / 06-01 435a0a9 设计模式 dd 收尾接管先例
+  - **18 天井闭环（auto_gg 跨夜视角归档）**：breaking-roaming 会话从井外撬开 5-17→6-04 连续 18 晚同井——auto_gg 历夜独占识别的「连续同井」信号今日由设计模式（井外）闭环；塌缩链「雷达捞出→daily-word→Keith 路由→井外推」第一次完整跑通。auto_gg 不重做，记一笔
+
+- **NW 账本本夜结算：pending 1→0 / blocked 20→21**：L4 标 1 条（06-06-G1 notify 旁路扩写，落点全局/项目 CLAUDE.md=L5 红线 + conf 0.7<0.95 不满足 L1），已回写 proposals.jsonl status=blocked + blocked_reason（不 push monster）
+  - **L5 提议（不动手，待 Keith）**：扩写全局 notify 段反例锚——「定时任务(cron/launchd)会话文本经 cc-connect 自动投递=绕开 notify 唯一出口的自建旁路，同样禁止」。今日 3 会话复现（每日洞察 / 定时发消息 / dojo push 均被 Keith 纠「用 notify skill」）。落点待 Keith 审：全局 notify 段(~/.claude/CLAUDE.md) vs scheduled 工作区 CLAUDE.md。morning-brief 06-06 已顶
+  - **blocked 池根因延续**：21 条根因仍 nw-reconciliation v0.3.0 连续 ≥5 周未升级（见 05-31→06-05 段 [STRATEGIC]），`pending-resolved-becomes-blocked-stagnation` 持续活体，不重复立项
 
 ### 2026-06-05（auto_gg 夜间巡检 — Keith 不在场）
 

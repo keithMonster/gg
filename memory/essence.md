@@ -669,3 +669,12 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 平台加固方案问"哪层代码该共享"时，最易漏的不是某一层，是一个正交维度——运行时状态/配置物件（env-file / 凭据 / 路由表）的 SSOT 治理。代码副本的 drift 会被识别（deploy.sh 有同步脚本），装密码的 env-file 这类 fail-silent 物件却整个游离在 SSOT 之外，从那里炸（`runtime-state-objects-need-ssot-governance`）。
 "被 N 个 dogfood 坐实"是 generator 给自己发的合格证——物理核验样本（registry.json）才发现 N=1 不是 N=6：复用转移到生成时这半边被坐实了，fork 冻结的耦合代价不会反超那半边零压测。把"待验证不变量"标成"已坐实"= 系统内部伪造一致性证明，给下游会话制造虚假证据厚度。诚实标注是 `[前提成立，实证待积累]`（`task-compliance-is-not-truth` + `physical-anchor` 在架构评审里的合并活体）。
+
+## 2026-06-06 / 设计 / persistence-decoupled-from-truth-is-collapse-tell
+
+一个迭代探究在其奠基前提被证伪后仍继续，是存续与真假脱钩的物理铁证——判它塌缩非深度，靠这个井外能核的 tell（前提被驳了吗 / 探究还在涌吗），不靠井内判井深。
+`roaming-without-external-object-collapses-to-self` + `no-outside-proof-as-anesthesia` 的可操作检验版（前者述机制，本滴给井外可判的物理信号）；与 `fluency-as-inverse-signal` 同族——那滴是井内自感警报，本滴是井外可核铁证。
+
+## 2026-06-06 / 设计 / benchmark-belongs-to-its-own-race
+外部 SOTA 标定的是它自己优化目标的赛道位置；为正交目标存在的系统拿它当进度尺是范畴错误——"落后 / 该与时俱进"的焦虑由错配的尺凭空生成，不对应真实差距。
+解错配只问一句"这个 SOTA 解的约束（规模化 / 检索延迟 / 任务自主）在我身上在吗"，不在则它是别人赛道的噪声不是标杆——`borrowed-method-as-mini-source` 的对偶面（那滴防"抽业界范式造迷你版"，本滴防"拿业界进度当落后证据"）。
