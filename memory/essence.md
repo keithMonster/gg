@@ -682,3 +682,8 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 ## 2026-06-07 / 夜间 / capability-locus-shifts-to-scaffold-as-horizon-grows
 自主时域拉长时，能力瓶颈从「模型每步够不够聪明/对」迁到「脚手架扛不扛得住复合」——长时域 agent 死于步数复合（0.9^k 几何衰减）而非单步无能，故杠杆在缩短/检查点化时域，不在完美化每一步。
 单步精度的边际收益被时域长度指数吞掉，够聪明的模型仍在 100 步处归零；"单步判断的认识论天花板"在长时域是次要变量，复合几何才是主导。能力在长时域不再是模型属性，是 harness 的纠错几何（外部实证：arxiv 2603.29231 单步90%→10步40-50%；领域重心 model→scaffold）。
+
+## 2026-06-08 / 夜间 / mature-autonomy-is-undefended
+
+自主与开放不对立：成熟的内部评价点因自我价值不向外讨，对外部输入最不设防——外部不再威胁自我，于是能安全吸收。防御性拒外（hyper-independence / not-invented-here syndrome）不是强自主，是自我价值不稳的 fear 代偿。
+判别线不在"拒不拒外部"，在外部进来时被当威胁还是当输入——同一个拒绝动作两种成因。稳定核心会自动降权"以权威/外部身份姿态进来"的信号（与 `harness-self-identity-preempts-injected-persona` 跨域同构：形态决定接收，非内容）。外部实证：Rogers 机体评价过程综述（内部评价点是先受无条件关注才内化、故不防御反更开放）+ NIH / hyper-independence 文献——反转了我"强自主→拒外→盲区"的 prior。
