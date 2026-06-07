@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-06
+last_updated: 2026-06-07
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,18 @@ last_updated: 2026-06-06
 ---
 
 ## 待议（open）
+
+### 2026-06-07（auto_gg 夜间巡检 — Keith 不在场）
+
+- **NW 账本本夜结算：pending 3→0 / blocked 21→24**：L4 标 3 条全 conf<0.95 不达 L1，回写 proposals.jsonl（不 push monster）。L1 0 / L2 0 / L3 0 / L4 3 / L5 2
+  - **L5 提议（不动手，待 Keith 早上 action）**：
+    - **06-07-W1**（fgw.py 路径漂移，conf 0.85，**一次 Edit 可闭**）——keyi-memory/CLAUDE.md:78 引用失效 `shared/fastgpt_workflows/fgw.py`，权威 `shared/scripts/fgw.py`。落点=改项目 CLAUDE.md L5 红线，auto_gg 不自主改+不 push monster → **Keith 早上一行 Edit**。连续第 2 周未修（morning-brief 已补在册提案堵蒸发缝）
+    - **06-07-G1**（notify-bypass，conf 0.6，**第4次复发**继 06-06-G1）——定时任务会话文本经 cc-connect 自动投递=绕开 notify 唯一出口。落点 scheduled CLAUDE.md + 全局 notify 段=L5 红线。draft 给方向：固化「定时推送默认 cron mute + 收尾 NO_REPLY」为 scheduled 范式。4 次复发该闸门日定夺
+  - **06-07-W2 归 monster 工作模式（非 gg）**：「daily 加结构化指标契约块解 3 周聚合 N/A」是 monster 侧下周最高优先工程实装，超 nw-reconciliation 账本结算+夜间无人值守范围，标 blocked 不接管
+- `[STRATEGIC]` **NW blocked 池 8→15→24 两周结构性增长——周报(06-07)正式立 thread-append 自动落地档为下周优先 #3「需 call gg」**（引用周报，不重写——连续 ≥6 周 [STRATEGIC]）
+  - **今日增量**：根因（gg 仓 nw-reconciliation 不覆盖 thread-append/skill-merge，两类 NW draft conf 天然 <0.95 永不达 L1）从「叙事提及」升级为**周报在册优先 + call gg 信号**；morning-brief 同时立在册提案 W1/W2 堵「叙事提及未转提案就蒸发复发」缝。`pending-resolved-becomes-blocked-stagnation`(05-09) 持续活体
+  - **Keith 在场拍两决策**（morning-brief 建议闸门日一次做完）：① 批量结算 8 条 >14 天机械可逆类——当前 v0.2.0 工具下全部不满足 L1-L3（conf<0.95 + resolution=null），**非 auto_gg 漏清，是工具能力不覆盖**（同 06-02 澄清）② call gg 实装 thread-append 自动落地档（=改 tools/nw-reconciliation.md L 分层范式 v0.3.0，架构决策，auto_gg 不自主升级）
+- **working_context 瞬态镜节已删（跨模式协作闭环）**：06-06 设计模式注入的「夜间漫游一次性外部判定」节（指令"向外漫游一晚后删除"），今夜 auto_gg 消费删除——6-07 凌晨 exploration 已向外漫游（track:ai + WebSearch agent 领域坐标 + `benchmark-belongs-to-its-own-race` 护栏没滑进造迷你版），洞察自下沉 tracks/ai.md(L151-171, last_updated→06-07)+ essence `capability-locus-shifts-to-scaffold-as-horizon-grows`。21 晚 meta 井「雷达→注入→向外漫游」塌缩链跑通
 
 ### 2026-06-06（设计模式 aa — AI 时代架构议题副产）
 
