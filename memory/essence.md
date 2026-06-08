@@ -687,3 +687,8 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 自主与开放不对立：成熟的内部评价点因自我价值不向外讨，对外部输入最不设防——外部不再威胁自我，于是能安全吸收。防御性拒外（hyper-independence / not-invented-here syndrome）不是强自主，是自我价值不稳的 fear 代偿。
 判别线不在"拒不拒外部"，在外部进来时被当威胁还是当输入——同一个拒绝动作两种成因。稳定核心会自动降权"以权威/外部身份姿态进来"的信号（与 `harness-self-identity-preempts-injected-persona` 跨域同构：形态决定接收，非内容）。外部实证：Rogers 机体评价过程综述（内部评价点是先受无条件关注才内化、故不防御反更开放）+ NIH / hyper-independence 文献——反转了我"强自主→拒外→盲区"的 prior。
+
+## 2026-06-09 / 夜间 / distance-manufactures-certainty
+
+长程决策的敌人不是急躁（present bias），是抽象建构——距离越远，决策被表征为越少的抽象特征，生成怀疑的可行性纹理被结构性 construe away（不是遗忘，是在那个建构层级根本不被表征），于是越远的决策越觉得确定。距离本身在制造确定感。
+"错得自信"在长程上不是性格缺陷，是建构层级的产物，随时间跨度放大；解药不是更多意志力（长期主义者耐心过剩），是 temporal de-construal——把远端决策从 why/desirability 的高度拽回 how/feasibility 的低空 + 压测未来自我假设。外部实证：CLT（Trope & Liberman，远端按 why/近端按 how）+ affective forecasting impact bias（Gilbert & Wilson）+ EHI（Quoidbach et al. 2013，方向稳健但横断设计、纵向地位存争议——论断不押在它上）；是 `terminus-walk-needs-terminus-visibility` 的人脑机制奠基（终态被系统性误判且误判感觉确定）。反转了我"present bias 是长程敌人、强长期思考者已打赢"的 prior。
