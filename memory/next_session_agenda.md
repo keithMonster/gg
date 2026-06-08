@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-07
+last_updated: 2026-06-08
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,17 @@ last_updated: 2026-06-07
 ---
 
 ## 待议（open）
+
+### 2026-06-08（auto_gg 夜间巡检 — Keith 不在场）
+
+- **NW 账本本夜结算：pending 1→0 / blocked 24→25**：唯一 pending 06-08-G1（cgboiler-tick + cgboiler-inquiry-extract 两 launchd 任务转手动、应 append thread 留痕）→ L4 blocked。L1 0 / L2 0 / L3 0 / L4 1 / L5 0
+  - **物理核对增量（auto_gg 已替 Keith 核掉 draft conf 0.7 待定项）**：bootout 动作**已物理完成**——`scheduled/plists/_disabled/` 已归档 `cgboiler-tick` + `cgboiler-inquiry-extract` 两 plist；`launchctl list` 实剩 `com.monster.cgboiler-sync` + `com.monster.cgboiler-inquiry-fetch`（**核实 draft 待定的 fetch/extract 歧义 = fetch 留存、extract 已下线**）。**唯一缺口 = `threads/scheduled-tasks.md` 仍无 2026-06-08 留痕**（grep 无果，最近 cgboiler 记录停 05-21 改隔日触发）——"动作做了、协作记忆没留"
+  - **归属 + Keith 早上一步可闭**：morning-brief 建议动作即"done/会话 append scheduled-tasks.md 时间线"=归 done/会话侧；thread-append 超 nw-reconciliation 当前覆盖（已立周报优先#3 call gg），auto_gg 不凭二手信息写 monster thread。物理事实已核清，Keith 一次 append 可闭（措辞从 9593a64c 会话或本条 blocked_reason 取）
+- `[Q]` **今日 2 份工作模式 reflection 各留 1 滴 essence 候选待 Keith 定夺，auto_gg 不替工作模式 append**（append-only 不可逆 + 工作模式 gg 自标 N + 洞察留 reflection 没丢）
+  - **`baseline-axis-bottleneck-is-version-ownership-not-judgment`**（reflection `baseline-axis-trigger-ownership-cgplatform-metalayer`）——明确"留父会话转 Keith 定夺"，理由=**第四次造元层嫌疑**，沉淀前 Keith 须先核 cg-platform 实际产出 app 形态（结构化 vs 自由文本→定"无独立第三方定 golden case"是否成立）。一句话：给事后验证补基线维时真瓶颈不在判定（相对趋势比单次 gate 松）、在触发侧"谁定 golden case 版本"——定版权留生成侧则基线污染把回归 gate 变永远绿；PaaS 极限场景（作者=唯一懂产物者=generator）无独立第三方接管定版，只能上"漂移告警"不能上"回归 gate"
+  - **`cross-species-agent-no-safety-inheritance`**（reflection `codex-ops-delegation`）——标 N 未明示留 Keith；第一次场景（codex 作 ops 委派执行手），按 tripwire 先不沉淀。一句话：把执行权交给另一物种 agent（不同模型/不继承 RLHF 安全姿态/不读红线文件/approval=never）时本体系"安全靠自觉"全失效，安全须降到 mission prompt 结构层机械注入，否则护栏是画出来的。第二次同类场景再决定升 essence
+  - `[STRATEGIC 接续]` **baseline 这条是「gg 对拓扑/维度类问题疑似稳定造墙 prior」连续第四次同形**（6-02 焊死墙 / 6-03 分叉墙 / 6-05 第三维 / 06-08 cg-platform 元层）——强化 6-05 [STRATEGIC] 的 meta 核查信号：Keith / fresh 实例（不读 gg essence）须把这个 prior 当独立于本次结论的核查对象，找一个 gg 该判「不造墙/不加维」却判反了的反例。打得动=prior 过度投射；打不动=四次都对
+  - **auto_gg 不接管这 2 份 reflection commit**（`summoner: monster` 纯工作模式 subagent 产出、无设计模式 dd 收尾，6-02/6-03/6-05 [CORE_RULE_TOUCH] 先例同构）——留 working tree 等 Keith review 措辞 + cron 04:55 兜底。**monster 侧 follow-through**：codex-ops 那份 4 点安全前置（两段式 mission 模板「执行段+STOP 段」/ 安全注入机械锚点 L3 非软锚词 / 手写 AGENTS.md ops-brief 覆盖 Codex 不读 CLAUDE.md 缺口 / 修 brief L22「Codex 受同一套护栏」事实误述——hooks.json 只拦 Write/Edit 不拦 Bash）；baseline 那份 3 thread 补（verification-first-class 写「基线维瓶颈=定版权独立性」+ cg-platform 元层默认只能上告警 + CG Notes 首刀 `cg-notes/eval/golden/` 定版与 prompt 修改物理分开提交）
 
 ### 2026-06-07（auto_gg 夜间巡检 — Keith 不在场）
 
