@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-08
+last_updated: 2026-06-09
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,26 @@ last_updated: 2026-06-08
 ---
 
 ## 待议（open）
+
+### 2026-06-09（auto_gg 夜间巡检 — Keith 不在场）
+
+- **NW 账本本夜结算：pending 2→0 / blocked 25→26**（v0.3.0 新轨制首夜实战）：轨1 1 / 轨2 0 / 轨3a 0 / 轨3b 0 / L4 1
+  - **轨1 自动闭环 1 条（v0.3.0 落地后首次 thread-append 自动闭环）**：06-09-G1（inject_sender 身份隔离首次对抗性实证，杨雪儿社工式放行请求被守住）→ append `threads/cc-connect.md` 时间线 + 回写 status=done（`resolution_origin=auto-track1-threadappend`、`auto_done_at=22:28`）。物理核验三查过：核 a cc-connect `updated=06-08` grep 无该条目（需写入）/ 核 b `created=今日`未被推翻 / draft 关键事实（`sender_id=15108493422=杨雪儿` + inject_sender 机制）与 thread line24/line124（2026-05-21 落地）**交叉核验一致**。**不 push monster**（cc-connect.md + proposals.jsonl 留 monster working tree 待 Keith review）
+  - **L4 1 条**：06-09-G2（结构指针 confab → canon-bugs）落点 `monster/canon-bugs.md` 不在轨1 白名单（仅 threads/skill/harness lib·analysis）+ 自带语义自杀闸。**auto_gg 已替 Keith 物理核掉自杀闸**：canon-bugs:97（2026-06-01 条）=commit-hash flavor confab（无回显→编造 commit hash/成功态）、全局 ER#9=观察工具状态层（git stat-cache）滞后假阳性——**两者均不覆盖『结构物理指针(软链/路径/行号)confab』场景** → 自杀闸不成立、该 append 不该 reject。draft 现成，**Keith 一步可闭**（canon-bugs append 一条结构指针反查：断言软链/路径/行号前必 readlink/ls -ld/grep -n 核验附物理回执）
+
+- `[STRATEGIC 闭环]` **nw-reconciliation v0.3.0 今日落地 = 连续 ≥6 周 [STRATEGIC]「工具升级未决」缺口的闭环**（auto_gg 跨夜视角归档）
+  - **跨夜信号收束**：05-31→06-08 每夜 [STRATEGIC] 喊「NW blocked 池结构性增长 8→26、根因纯在 gg 仓 nw-reconciliation 工具不覆盖 thread-append/skill-merge、conf<0.95 永不达 L1」。今日 commit `83d6227` v0.3.0 **换准入判据**（confidence 自评 → 动作性质×物理核验）+ **新增 thread-append 轨1 档** = 根因解物理落地。**今夜 G1 第一次用上**，实证新轨制可自动闭环 thread-append（旧版上线一个月 `auto-from-draft` 0 触发）。`pending-resolved-becomes-blocked-stagnation`(05-09) 这条活体的对治机制今日上线
+  - 不重复立项——本条为**闭环归档**，标记 6 周 [STRATEGIC] 从「未决」转「已落地待观察」。下周观察 blocked 池是否随 thread-append 轨1 开始回落（26 是否见顶）
+
+- `[STRATEGIC]` **新元判断浮现：NW 该不该「裁存废」而非只「改造」——工作模式 gg 自曝偏置交 Keith**（essence `mixed-queue-funnels-all-to-scarcest-gate` 末段自曝，auto_gg 拎出上浮）
+  - **背景**：今日 Keith×gg 工作模式深议 NW 队列治理（3 reflection + 2 essence + v0.3.0），核心洞察=混装队列把所有产出 funnels 到最稀缺单人闸门，解在按「可逆性×是否需判断」物理拆队列。但 essence 第二滴末段 gg **自曝未闭合**：「开此解的我连续三次接受『NW 应存只是改造』前提、没裁存废本身——治理者审被治理系统系统性偏向『改造而非废除』(`vantage-contaminates-verdict` 新切面)，因废除会否定治理者 2 个月投入；此偏置我自己破不了，交 Keith」
+  - **为何 auto_gg 上浮**：这是比 v0.3.0（改造层）**更上位**的元判断——v0.3.0 优化「NW 队列怎么分轨」，本条质疑「NW 是否该整体存在」。gg 工作模式已诚实标记自己有「改造而非废除」的 vantage 偏置、无法自破。**Keith 须下场**：NW 跑了 ~2 个月，问「若今天从零、会不会建 NW」——打得动=该裁/大幅瘦身；打不动=改造正当。建议 Keith / fresh 实例（不读 gg essence、不承 2 个月投入沉没成本）做这个裁决
+  - 关联 essence：今日 2 滴 `signal-without-judgment-needs-live-consumer` + `mixed-queue-funnels-all-to-scarcest-gate`（工作模式已自决 append，working tree）；`vantage-contaminates-verdict` 新切面
+
+- `[CORE_RULE_TOUCH]` **06-09 白天 3 份 monster 工作模式 subagent reflection + essence 2 滴留 working tree 等 Keith review——auto_gg 不接管**（标签沿用；实际无核心规则改动，纯 memory/）
+  - **背景**：working tree —— M `memory/essence.md`（+2 滴上述，工作会话自决 append，10 insert/0 delete append-only 合规）+ ?? reflections×3：`nw-aprime-actionable-checklist`（北极星 #3）/ `nw-2month-whole-review-queue-split`（#1）/ `nw-deprecate-radar-4week-review`（#1），`summoner` 均 monster
+  - **判断=不接管**：纯工作模式 subagent 产出（summoner: monster，无设计模式 dd 收尾，state `last_summoned_at` 仍停 06-01），与 06-08/06-05/06-03/06-02 [CORE_RULE_TOUCH] 先例同构（cron 04:55 兜底，不裹挟 Keith 未定 essence/reflection）
+  - **Keith 需要做的事**：① review 3 reflection 措辞 → commit ② 上条 [STRATEGIC] NW 裁存废元判断裁决 ③ G2 一步 append canon-bugs（草稿见 proposals 06-09-G2 `resolution_draft`）
 
 ### 2026-06-08（auto_gg 夜间巡检 — Keith 不在场）
 
