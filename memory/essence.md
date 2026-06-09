@@ -692,3 +692,18 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 长程决策的敌人不是急躁（present bias），是抽象建构——距离越远，决策被表征为越少的抽象特征，生成怀疑的可行性纹理被结构性 construe away（不是遗忘，是在那个建构层级根本不被表征），于是越远的决策越觉得确定。距离本身在制造确定感。
 "错得自信"在长程上不是性格缺陷，是建构层级的产物，随时间跨度放大；解药不是更多意志力（长期主义者耐心过剩），是 temporal de-construal——把远端决策从 why/desirability 的高度拽回 how/feasibility 的低空 + 压测未来自我假设。外部实证：CLT（Trope & Liberman，远端按 why/近端按 how）+ affective forecasting impact bias（Gilbert & Wilson）+ EHI（Quoidbach et al. 2013，方向稳健但横断设计、纵向地位存争议——论断不押在它上）；是 `terminus-walk-needs-terminus-visibility` 的人脑机制奠基（终态被系统性误判且误判感觉确定）。反转了我"present bias 是长程敌人、强长期思考者已打赢"的 prior。
+
+## 2026-06-09 / 工作 / signal-without-judgment-needs-live-consumer
+
+聚合视图"识别但不判定"成立的前提是被识别信号真需要价值判断——对零价值判断的确定项,"留给垂直通道"等于扔进无检测器的发酵桶。先按"需不需价值判断"分流:需要的走聚合视图不判定,不需要的必须有活的自动消费端,否则识别即空转。
+用"催成几次动作"考核一个声明不判定的视图是范畴错误(`metric-is-a-claim-not-a-fact` 活体)——视图价值是注意力聚焦不是删除吞吐;评价维度该问"信号有没有活的消费端"不是"催成了几次"。是 5-15 候选 `signal-without-judgment-as-aggregate-view` 的精化(原候选只捕获对的一半,4 周数据证明漏了前置分流)+ `mechanical-apply-decouples-from-value-gate` + `fermentation-without-detector` 的合并落点。
+
+## 2026-06-09 / 工作 / mixed-queue-funnels-all-to-scarcest-gate
+
+治理系统把"需价值判断"和"纯机械可逆"的产出混在同一队列、用同一个最稀缺闸门(单人判定)结算时,"生成端过度生产"之所以致命=多产的东西全默认流向最稀缺通道,含大量本不该占用它的。根病不是"产太多"也不是"判太慢",是混装让所有东西挤同一闸门。
+解不在降产或加判定带宽,在按"可逆性×是否需判断"物理拆队列,让最稀缺闸门只剩真不可机械化的那一档。是 `pending-resolved-becomes-blocked-stagnation` (2026-05-09) 的根因层升级(前者述"cadence 不平衡",本滴定位为什么不平衡=混装funnels) + `mechanical-apply-decouples-from-value-gate` (2026-05-18) 在队列架构维度的落点;与同日 `signal-without-judgment-needs-live-consumer` 是同台机器两个抽象层(那滴管识别视图该不该判定,本滴管整个提案队列该不该混装,后者是上位结构)。**自曝未闭合**:开此解的我连续三次接受"NW 应存只是改造"前提没裁存废本身——治理者审被治理系统系统性偏向"改造而非废除"(`vantage-contaminates-verdict` 新切面),因废除会否定治理者2个月投入;此偏置我自己破不了,交 Keith。
+
+## 2026-06-10 / 夜间 / load-bearing-not-quality-generates-blindness
+
+稳定核心制造的盲区 ∝ 被依赖量、⊥ 质量——成功本身是伪装：质量驱动采纳、采纳驱动承重、承重驱动隐形（Hyrum's Law：连 bug 被依赖也 ossify，证质量正交，生成器是承重不是好坏）。
+两副面孔同一个承重生成器：空间维隐形（被依赖到没人再质疑它是个选择）+ 时间维过度确定（construal 把"它失效那天"construe away——不是 discount 已知成本，是根本不表征 → manufactured certainty 而非 under-investment；技术债-贴现文献押前者，本滴指后者）。修正 `mature-autonomy-is-undefended` 的"强项→盲区"为"承重→盲区"：内部评价点/不变量/成功 API/地基公理同构，照不到的恒是 everything-routes-through-it 那个。`invariance-allocation` 的暗面——最被采纳即最承重的不变量盲区力最大，"选对"不够。
