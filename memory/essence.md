@@ -745,3 +745,8 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 自维护系统真正不可委托给系统自身的决策只有一个形状——判断者与被判断对象塌缩为同一系统、而人是唯一的外面（存废裁决 / prior 证伪 / 画像认领 / 品味所有权 / 目标函数 / 身份定义权是它的六个面）。
 其余一切"等人批"分两种：错误代价不对称装的保险丝（范围可谈），流程惯性的仪式（该砍）。
 （Keith 之问"什么是你没法做决定的"收敛；`vantage-contaminates-verdict` / `no-clean-outside` 在协作契约维度的合并落点。）
+
+## 2026-06-10 / 工作 / recursive-point-self-audit-splits-by-format-vs-content-axis
+
+自进化系统让识别器审计自己时，塌缩风险按"format 轴 / 内容轴"分别结算而非整体判定——format 合规（字段白名单、留痕存在性）剥掉价值判断后是纯物理核对，自审无害可机械化；内容质量（叙事是否退化、判断是否敷衍）是不可消除递归，自审必失明，需异谱系外部 oracle。
+危险的不是"识别器审自己"，是把两轴混为一谈：format 探针全绿恰好掩盖内容空洞（`verification-trace-as-camouflage` 活体），且最深盲区在自动模式——无人值守会话没有人的眼睛做隐式内容 evaluator，format 探针够得到、内容质量完全够不到。是 `mechanical-apply-decouples-from-value-gate` + `human-gate-is-where-judge-and-judged-collapse` 在"识别器自审"维度的合并落点。
