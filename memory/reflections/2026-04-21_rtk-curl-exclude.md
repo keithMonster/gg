@@ -6,6 +6,8 @@ status: substantive-decision
 
 # rtk 去留决策
 
+> **后记（2026-06-10，monster 会话写入）**：本决策已被推翻——rtk 已整体退役（摘 PreToolUse hook）。当时方案 3 的前提"rtk 整体不坑、curl 这一对坑"被 2026-06-10 全面重评证伪：exclude 机制结构性 cover 不住（head/tail 在 classify 前转写 ~39 次/天静默过滤、管道首段改写污染下游 grep、0.40 把 ping 改写成不存在子命令两次硬失败），且真实 token 收益经实测仅 ~80-100K/天（gain 自报虚高 ~10×）。完整重评与退役执行记录见 `monster/threads/rtk-curl-exclude.md`。判断质量段的复盘仍有效——"精准切分 design level" 的方法论是对的，错的是当时可得证据下的事实前提（head/tail "0 命中"系测量假象）。
+
 ## 召唤 context
 父会话（cc-space）今日踩 rtk 透明截断坑：curl 外网 JS 拿到 898 字节假数据，实际 7165 字节，差点基于假数据改错生产配置。已有 guardrail（规则 #12 / rtk-curl skill）只覆盖 JSON schema 化，不覆盖文本截断——盲区。
 
