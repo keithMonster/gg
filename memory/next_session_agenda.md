@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-09
+last_updated: 2026-06-10
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,18 @@ last_updated: 2026-06-09
 ---
 
 ## 待议（open）
+
+### 2026-06-10（设计模式 — 全量体检 + Keith 目标函数注入）
+
+- **Keith 目标函数首次显式注入（架构 6 判据）**：飞轮自成长 / 模型无关（换模型不失效）/ 简洁有效 / 边界清晰 / 自循环 / 检验层做好。落地：`CORE.md §8` 承重/垫片分层 + `cc_agent.md` 头部垫片标注 + `tracks/architecture.md` 新节（模型无关×检验独立同轴）+ `scripts/check_structure.py` working_context 承重哨兵（06-06 L2 升级待决项按"检验层做好"判据落地，负面测试双路径验证过）
+- **全量体检已修**：README 全面同步 / CORE §1 daily-word 纠偏 / agenda 时间线归档（待议 36→9 段）/ working_context 任务槽清空 / TOOLS.md 计数 / daily_knowledge 归档 `archival/daily_knowledge_deprecated/` / tracks frontmatter `last_updated` 删除（06-06 待决项，按死装饰裁决）
+- ~~`[Q]` 4 个真正需要 Keith 的问题~~ **已全部答收（06-10 同会话）**：① NW 存废 → Keith 先要事实陈述（已给观测组/提案机二分 + 三选项后果），裁决待 Keith；② 造墙 prior → Keith 批 codex 证伪审，**已执行已闭环（见下条）**；③ essence 标准 → 按 gg 倾向落地（核心句 1-3 行 + 谱系注限 2 行，已写入 essence.md 格式约定）；④ D1 扩权 → Keith 批准，纯机械豁免已写入 CLAUDE.md D1
+- `[STRATEGIC 闭环]` **造墙 prior 证伪已执行（codex gpt-5.5 跨模型审，06-10）——prior 成立，形态被精确定位**，闭环 06-05 + 06-08 两条 [STRATEGIC] meta 核查议题：
+  - **总裁决**："拓扑类问题→造墙"不是四次都对——gg 对独立性/污染/耦合的**嗅觉强（分离需求每次都真）**，但稳定倾向把"需要分离 ownership / phase / oracle mutation"**升格成"新墙 / 新维 / 不可达"**。逐案例：6-02 基本成立（措辞偏硬）/ 6-03 可疑（独立性来自 actor+audit log，不必拓扑分叉）/ 6-05 可疑（baseline 该是 oracle 类型+mutation ownership，不必加维）/ **6-08 不成立（全称过强）**
+  - **⚠️ 修正 06-08 段 follow-through 建议**（Keith 执行前必读）：原建议"cg-platform 元层默认只能上告警不能上 gate"**被证伪**——正确边界 = PM prompt 拆两相（先冻结 acceptance contract / 标准化 oracle（DSL/schema/RBAC/数据 roundtrip），再生成 app），**contractible 部分可上 gate**；仅 freeform 无冻结契约部分先告警。另两条建议（基线定版权独立性 / golden 与 prompt 修改分开提交）经审成立，照原计划落
+  - **行为锚（未来拓扑/维度类判断自检）**：先问"这是治理问题还是拓扑问题"——治理形态（分离提交 / 分离角色 / 分离 phase / typed payload 薄编排）装得下就不造墙；治理形态装不下的物理证据拿到了再造。essence 候选 `separation-need-is-not-topology-verdict` 会话收尾沉淀
+- **tripwire 立项：essence 轮重**——125 滴 ~710 行全量进启动链，月增 ~60 滴。触发条件：essence.md 超 1000 行 或 启动可感变慢 → 做"高频被引滴上浮头部索引"最小版（不建检索系统；年度分卷是既定泄压阀）
+- **Keith「全部按推荐」批量裁决已执行完毕（06-10 同会话）**：① NW 存废 = 等 7-09 v0.3.0 回审数据再拍（届时观察 blocked 池是否回落 + 轨1 自动闭环率）；② R1 并发串扰 = git log 实证物理闸（落 monster/scheduled/README 约束#6 + 全局 done skill 合并第5步），不上 worktree；③ essence 按推荐沉 5 滴（reconsolidation / owning-service / baseline-version-ownership 修正版 / separation-need-is-not-topology-verdict / model-agnostic-unlocks-cross-prior-verification），6-05 dual-of-posthoc 不沉、cross-species 留 tripwire；④ G2 canon-bugs 已 append（结构指针 confab 条目）；⑤ W1 fgw.py 路径已修（keyi-memory:78；monster/CLAUDE.md:69 核验现状已正确无需改）；⑥ G1 推送纪律已固化（scheduled README 约束#5）。proposals.jsonl 四条回写 done（resolution_origin=keith-approved-gg-design-session），monster 侧改动留 working tree 不 push
 
 ### 2026-06-09（auto_gg 夜间巡检 — Keith 不在场）
 
@@ -160,6 +172,14 @@ last_updated: 2026-06-09
 - `[RECURRING 延伸]` **audit 死链根因（5/22 段）被 experiments/ 目录结构性放大 1-2 条 → 31 条**
   - experiments/2026-06-01_judgment-evaluator-mvp/ 数据集系统性引用 monster 真实诊断文件路径（ground_truth 用 monster 案例路径作评测坐标）→ audit.py 无法区分「数据集跨项目引用」vs「gg 内死链」，全判活跃死链。**非 gg 内部结构损坏，不修**（修=破坏数据集真实引用；改 audit 逻辑是 Tier 2/3，5/22 已定 auto_gg 不自主改检查器）
   - **root fix 优先级上升信号**：5/22 三选项之外多一更干净候选——**audit.py 对 experiments/ 目录豁免死链检查**（类比 archival/ 豁免，实验数据天然引用外部路径）。Keith sense
+
+## 已处理（archived）
+
+### 2026-06-10 时间线归档批（设计模式全量体检）
+
+> 以下 2026-04-13 → 2026-05-31 各段由 2026-06-10 设计会话整批从"待议"挪入。
+> 主线均已在 06 月段闭环或有接续条：NW v0.3.0 工具升级连续 6 周 [STRATEGIC] → 06-09 [STRATEGIC 闭环]；working tree 累积观察 → 05-18 RESOLVED b994165；NW 0.95 阈值校准 → v0.3.0 换准入判据；audit 死链根因 → 06-01 [RECURRING 延伸] 接续。
+> 按时间线整批归档，未逐条重裁；如发现残留活议题，以 06 月段与 monster 周报为准重新拉起。
 
 ### 2026-05-31（auto_gg 夜间补跑 — 05-30/05-31 两夜未跑，Keith 不在场）
 
@@ -690,7 +710,6 @@ last_updated: 2026-06-09
 
 ---
 
-## 已处理（archived）
 
 *（处理完的议题挪到这里留痕，文件太长时可以把这节整节移到 `memory/archival/next_session_agenda_YYYY-MM-DD.md`）*
 

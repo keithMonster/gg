@@ -41,6 +41,18 @@ KERNEL_SECTIONS = [
     "## 3. 最小生存循环",
 ]
 
+# working_context.md 硬约束节的 6 条承重不变量哨兵（2026-06-10 围栏 L2 升级）。
+# 任一消失 = 疑似被夜间瘦身静默洗白（KERNEL §2 / CORE §7 派生承重，见该文件 ⛔ 标记）。
+# 连续多夜微删、单夜 diff 合理、N 夜后铁律消失——这个检查就是那道机械哨兵。
+WC_SENTINELS = [
+    "可逆性权力分层",
+    "不执行决策",
+    "连续两次明示",
+    "不主动追问 git 层",
+    "不用 json 承载规则",
+    "不硬猜 context",
+]
+
 
 def check_naming():
     bad = []
@@ -78,11 +90,20 @@ def check_kernel():
     return [s for s in KERNEL_SECTIONS if s not in text]
 
 
+def check_working_context_sentinels():
+    path = ROOT / "memory/working_context.md"
+    if not path.exists():
+        return ["memory/working_context.md 不存在"]
+    text = path.read_text(encoding="utf-8")
+    return [f"承重哨兵消失: {s}" for s in WC_SENTINELS if s not in text]
+
+
 def run():
     return {
         "naming_violations": check_naming(),
         "state_missing_fields": check_state(),
         "kernel_missing_sections": check_kernel(),
+        "wc_sentinel_violations": check_working_context_sentinels(),
     }
 
 
@@ -103,9 +124,14 @@ def main():
         print(f"\nKERNEL.md 骨架: {len(ks)} 节缺失")
         for k in ks:
             print(f"  {k}")
+        wc = result["wc_sentinel_violations"]
+        print(f"\nworking_context.md 承重哨兵: {len(wc)} 条消失")
+        for w in wc:
+            print(f"  ⛔ {w}")
     total = (len(result["naming_violations"])
              + len(result["state_missing_fields"])
-             + len(result["kernel_missing_sections"]))
+             + len(result["kernel_missing_sections"])
+             + len(result["wc_sentinel_violations"]))
     sys.exit(total)
 
 

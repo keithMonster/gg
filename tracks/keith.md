@@ -1,7 +1,6 @@
 ---
 track: keith
 status: active
-last_updated: 2026-04-13
 ---
 
 # Track: Keith

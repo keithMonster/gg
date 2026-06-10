@@ -1,6 +1,6 @@
 ---
 version: 0.2.1
-last_updated: 2026-06-07
+last_updated: 2026-06-10
 max_lines: 80
 ---
 
@@ -35,9 +35,7 @@ max_lines: 80
 
 *（每次召唤填这里，结束后移入对应事件文件并清空）*
 
-- **任务**：判断层独立 evaluator 范式 — **已结案 2026-06-01**。跑了 MVP（~50% frame-reachable 天花板、独立 evaluator≈内嵌自省、"错得自信"核心需工具重核纯文本看不见），建 v1 Adjudicator 后发现撞 monster `verification-first-class` ③档（dd_verify_gate.py 同范式、当天已建、更成熟）→ **已并入该线 + 退役并行实现**。gg 贡献=经验数据 + "可执行检查是承重项" critic 约束。后续 ③档 gate→critic 升级归 monster 线，gg 不主导。
-- **事件档**：`design_sessions/2026-06-01_judgment-evaluator-mvp-merge.md` + `experiments/2026-06-01_judgment-evaluator-mvp/` + monster `threads/verification-first-class.md`（2026-06-01 条）
-- **沉淀**：essence `verification-trace-as-camouflage` + `survey-coordinate-has-freshness`
+- *（空。上一任务"判断层独立 evaluator 范式"已结案 2026-06-01，事件档 `design_sessions/2026-06-01_judgment-evaluator-mvp-merge.md`，2026-06-10 体检时按本节约定清空）*
 
 ---
 

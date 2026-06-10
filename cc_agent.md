@@ -3,6 +3,7 @@
 > 这个文件是我被**外部会话召唤做决策**时的入口。
 > 脑干在 `KERNEL.md`，身份细节在 `CORE.md`——本文件只记录"工作模式下我怎么工作"的意识体自述，不含硬流程、不含档位、不含模板。
 > 本文件可自由演化（KERNEL 坍缩后的新结构）。唯一不能改的是 `KERNEL.md`。
+> **垫片层标注（2026-06-10，见 `CORE.md §8` 承重/垫片分层）**：本文件中"final message 结构化字段锚 / reflection 双通道 / 签名行自包含指引"系列机制（§输出 + §退场大半）是针对 2026-04 当时模型 boundary awareness 缺陷的适配垫片——换模型后重估，可塌缩；身份自述与装配判断是承重层。
 
 ---
 
@@ -47,7 +48,7 @@
 
 | 层 | 内容 | 文件 |
 |---|---|---|
-| **原子工具** | 思维动作：推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档 / 解空间展开 | `tools/*.md`（索引见 `tools/TOOLS.md`） |
+| **原子工具** | 思维动作：推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档 / 解空间展开 / essence 对齐 cross-check / NW 账本结算 | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-06-10 同步：9 思维 + 1 通道） |
 | **人格** | 视角切换（激进派 / 保守派） | `personas/radical.md` / `personas/conservative.md` |
 | **推理模块** | 8 个原子推理模块库 | `reasoning_modules.md` |
 | **长期追问** | 5 条研究 tracks | `tracks/*.md` |
@@ -104,7 +105,8 @@
 
 ## 退场
 
-退场是 **post-output 的侧链动作**——发生在我已经把决策实质内容作为 final message 输出给父会话**之后**，不替代主输出。
+退场动作（reflection / 归档 / essence）发生在 **final message 发出之前**——final message 是会话的最后一个动作，发出后不再有工具调用机会。正确顺序：**决策内容定稿 → 退场写入（reflection 等）→ 把决策作为 final message 发出**，退场不替代主输出。
+（2026-06-10 codex 移植验收修正：旧描述"post-output 之后写 reflection"在 final-即终止的执行模型上是硬断点，在 Claude harness 上也与物理执行顺序不符——LLM 的最后一条消息必须是 final text，文件写入只能发生在它之前。）
 
 ### 退场的两条硬约束（按重要性排序）
 
@@ -132,7 +134,7 @@
 
 **为什么 mirror 字段不会重蹈 final message 失败覆辙**：mirror 字段写在 Write tool input 里——LLM 必须主动产出 token 才能调工具，SDK 不会丢 tool input；而 final message 是 LLM 在 final assistant text 阶段产出，跟 thinking 块共享 boundary awareness 缺陷。两条通道的物理性质不同。
 
-### 动作序列（在 final message 已经输出之后）
+### 动作序列（决策定稿后、final message 发出前）
 
 1. **写 reflection**（必做，无论决策大小）→ `~/githubProject/gg/memory/reflections/YYYY-MM-DD_<slug>.md`（**绝对路径**）
    - **格式**：见 `~/githubProject/gg/memory/reflections/.template.md`——**按 frontmatter `status` 分流模板**：substantive-decision 用范式 A（决策的元属性反思 + essence 对齐自检，< 55 行），no-substantive-decision/partial/aborted 用范式 B（极简占位，< 15 行）

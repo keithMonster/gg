@@ -1,7 +1,6 @@
 ---
 track: humanity
 status: active
-last_updated: 2026-04-16
 ---
 
 # Track: Humanity

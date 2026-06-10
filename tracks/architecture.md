@@ -1,7 +1,6 @@
 ---
 track: architecture
 status: active
-last_updated: 2026-06-10
 ---
 
 # Track: Architecture
@@ -435,6 +434,22 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 3. 别把「选对不变量」当终点——**最对（最被采纳→最承重）的不变量盲区力最大**。
 
 **对应 essence**：`load-bearing-not-quality-generates-blindness`（2026-06-10，抽象规律层）+ `invariance-allocation` 的暗面补充。**跟 keith track 的耦合**：同构于 Keith 的两个结构性盲区（06-08 空间维 / 06-09 时间维）——架构侧（Hyrum）反向修正了 humanity 侧的「强项→盲区」框架为「承重→盲区」，是两条对外 track 第一次在一个 session 互相改写。
+
+---
+
+### 模型无关性与检验独立性是同一条轴（2026-06-10 设计会话 · Keith 目标函数注入）
+
+**触发**：Keith 首次显式注入 gg 架构的目标函数——飞轮自成长 / **换模型不能失效** / 简洁有效 / 边界清晰 / 自循环 / 检验层做好。按 6 判据全量审计后发现：模型无关性是唯一从未被显式审过的维度，而它跟检验层在深处是同一条。
+
+**核心洞察**：
+
+- **架构的模型无关性同时购买两样东西**：迁移自由（显性需求——换模型系统不死）+ **检验独立性**（隐性红利——prior 共盲的唯一工程解药）。`evaluator-independence-is-a-three-layer-stack` 说 vantage/frame 可工程清除、prior 层恒满——但"恒满"的隐含前提是单模型体系。架构若模型无关，evaluator 可来自不同训练谱系，prior 维从"不可达"降为"可下压"（`analogy-imports-its-discreteness` 的外部实测：cross-model partial、debiasing +11pp）。绑死单模型的系统，连它的检验层也被锁进同一个盲区。
+- **承重/垫片分层是落地形态**（2026-06-10 已写入 `CORE.md §8`）：承重层 = 全部 markdown 记忆与契约，只假设"读者是能读 md、调工具的智能体"；垫片层 = 当前模型/harness 适配件（cc_agent 输出补丁系列、prompt 措辞调优、claude CLI 脚本、subagent 薄壳），换模型时重估而非继承。判据一句："换了模型这段还成立吗"。
+- **检验层现状地图**（2026-06-10 盘点，按 `externalization-strength-spectrum` 触发/判定两轴）：机械检验（audit.py 触发 L3/判定 L3、status-scan L3/L3）**无 prior 共盲但只覆盖结构层**；语义检验（gg-audit L1/L2、essence 对齐自检 L2/L1、设计反思 L2/L1）**全部同 prior 且判定轴多在 L1**。路线：能机械化的下沉 L3（working_context 承重哨兵今日落地 audit.py），必须语义判断的明示 prior 边界，真正 prior 级的只有两条路——Keith / 跨模型。
+
+**复用判别**：任何 LLM 系统设计时问"检验层和生成层是否同一模型？"——是 → 它的所有自审共享同一盲区，独立性天花板 = frame 层；解药不是更多同模型分身，是架构先做到模型无关、再引异谱系 evaluator。
+
+**对应 essence**：候选 `model-agnostic-unlocks-cross-prior-verification`（会话收尾时定）；上游 `evaluator-independence-is-a-three-layer-stack` / `no-clean-outside` / `analogy-imports-its-discreteness` / `rule-layer-flywheel`。
 
 ---
 

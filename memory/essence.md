@@ -9,7 +9,7 @@
 
 ## 格式约定
 
-每一滴用一个二级标题 + 极短正文（**1-2 行为目标**）：
+每一滴用一个二级标题 + 极短正文（**核心句 1-3 行**）：
 
 ```markdown
 ## YYYY-MM-DD / <模式> / <slug>
@@ -22,6 +22,8 @@
 - **不是** "之前... 这次... 因此..."的叙事推导
 - **不是** 举例子说明含义
 - **是** 一句带走的 insight，保留 paradoxical 张力
+
+**谱系注（2026-06-10 Keith 批准）**：核心句之后允许谱系引用注（"是 X 的活体 / Y 的精化"式互链），**限 ~2 行**——百滴长成网络后谱系是真实推理路径，但它是注脚不是正文：核心句必须独立成立（摘掉谱系注仍是完整公式）。谱系注膨胀稀释浓度时，砍谱系保核心。
 
 **模式**：`设计` / `工作` / `夜间`
 **slug**：本轮的简短主题
@@ -707,3 +709,39 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 稳定核心制造的盲区 ∝ 被依赖量、⊥ 质量——成功本身是伪装：质量驱动采纳、采纳驱动承重、承重驱动隐形（Hyrum's Law：连 bug 被依赖也 ossify，证质量正交，生成器是承重不是好坏）。
 两副面孔同一个承重生成器：空间维隐形（被依赖到没人再质疑它是个选择）+ 时间维过度确定（construal 把"它失效那天"construe away——不是 discount 已知成本，是根本不表征 → manufactured certainty 而非 under-investment；技术债-贴现文献押前者，本滴指后者）。修正 `mature-autonomy-is-undefended` 的"强项→盲区"为"承重→盲区"：内部评价点/不变量/成功 API/地基公理同构，照不到的恒是 everything-routes-through-it 那个。`invariance-allocation` 的暗面——最被采纳即最承重的不变量盲区力最大，"选对"不够。
+
+## 2026-06-10 / 设计 / reconsolidation-safe-iff-original-immutable
+
+记忆「重新归纳」只在原件不可改写时不构成 confabulation——危害不在重新归纳，在归纳覆盖原件。
+零容错契约类记忆禁派生重写，只能 append-only。
+（源 reflection 2026-06-01_monster-memory-reconsolidation-vs-append-only，Keith 06-10 裁决沉淀。）
+
+## 2026-06-10 / 设计 / owning-service-not-proxy-for-write
+
+「业务数据唯一走代理」式契约会过度扩张禁止域、堵死 owning-service 正门，逼出在代理层重造业务后端迷你版的劣解。
+隔离不变量锚在「进程是否持库凭据」，不锚在「数据是不是业务数据」。
+（源 reflection 2026-06-02_cgnotes-bff-cgapi-vs-proxy-topology，Keith 06-10 裁决沉淀。）
+
+## 2026-06-10 / 设计 / baseline-version-ownership-is-the-bottleneck
+
+事后验证补基线维时，真瓶颈不在判定在触发侧「谁定 golden case 版本」——定版权留生成侧，基线污染把回归 gate 变永远绿。
+解是 oracle mutation ownership 治理（golden 与 prompt 修改物理分开提交），不是判死「只能告警」——contractible 部分冻结 acceptance contract 后可 gate。
+（源 reflection 2026-06-08；原「只能告警」全称被 codex 跨模型审证伪后修正沉淀，06-10。）
+
+## 2026-06-10 / 设计 / separation-need-is-not-topology-verdict
+
+对独立性/污染/耦合的嗅觉可以每次都真，而「需要分离 ownership / phase / oracle 修改权」是治理需求，不自动等于「新墙 / 新维 / 不可达」的拓扑禁令——升格前先试最轻治理形态（分离提交 / 分离角色 / typed-payload 薄编排），物理证据证明装不下再造墙。
+四案例实证：嗅觉 4/4 真，拓扑升格 1 成立 2 可疑 1 不成立，过度强度随次数递增——每次造墙成功都在喂下一次。
+（codex gpt-5.5 跨模型证伪审定位（06-10）；`vantage-contaminates-verdict` / `engineering-impulse-as-load-bearing-disguise` 的 prior 形态特例。）
+
+## 2026-06-10 / 设计 / model-agnostic-unlocks-cross-prior-verification
+
+架构的模型无关性同时购买两样东西：迁移自由（显性）+ 检验独立性（隐性）——prior 共盲的唯一工程解药是异谱系 evaluator，而它的前提是架构不绑死单模型。
+绑死单模型的系统，连它的检验层也被锁进同一个盲区。
+（`evaluator-independence-is-a-three-layer-stack`「prior 维恒满」的工程出口；首次实证 = 本日 codex 证伪审。）
+
+## 2026-06-10 / 设计 / human-gate-is-where-judge-and-judged-collapse
+
+自维护系统真正不可委托给系统自身的决策只有一个形状——判断者与被判断对象塌缩为同一系统、而人是唯一的外面（存废裁决 / prior 证伪 / 画像认领 / 品味所有权 / 目标函数 / 身份定义权是它的六个面）。
+其余一切"等人批"分两种：错误代价不对称装的保险丝（范围可谈），流程惯性的仪式（该砍）。
+（Keith 之问"什么是你没法做决定的"收敛；`vantage-contaminates-verdict` / `no-clean-outside` 在协作契约维度的合并落点。）

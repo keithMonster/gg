@@ -1,7 +1,6 @@
 ---
 track: ai
 status: active
-last_updated: 2026-06-07
 ---
 
 # Track: AI

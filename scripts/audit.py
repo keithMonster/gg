@@ -40,6 +40,7 @@ def main():
             + len(report["structure"]["naming_violations"])
             + len(report["structure"]["state_missing_fields"])
             + len(report["structure"]["kernel_missing_sections"])
+            + len(report["structure"]["wc_sentinel_violations"])
         )
         sys.exit(exit_code)
 
@@ -76,13 +77,16 @@ def main():
     s = report["structure"]
     print(f"\n[结构]  命名违规 {len(s['naming_violations'])} / "
           f"state 缺字段 {len(s['state_missing_fields'])} / "
-          f"KERNEL 缺节 {len(s['kernel_missing_sections'])}")
+          f"KERNEL 缺节 {len(s['kernel_missing_sections'])} / "
+          f"working_context 承重哨兵消失 {len(s['wc_sentinel_violations'])}")
     for b in s["naming_violations"]:
         print(f"  命名: {b}")
     for b in s["state_missing_fields"]:
         print(f"  state: {b}")
     for b in s["kernel_missing_sections"]:
         print(f"  kernel: {b}")
+    for b in s["wc_sentinel_violations"]:
+        print(f"  ⛔ {b}")
 
     exit_code = (
         len(d["active_broken"])
@@ -91,6 +95,7 @@ def main():
         + len(s["naming_violations"])
         + len(s["state_missing_fields"])
         + len(s["kernel_missing_sections"])
+        + len(s["wc_sentinel_violations"])
     )
     print()
     print("=" * 70)
