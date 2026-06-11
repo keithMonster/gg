@@ -750,3 +750,8 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 自进化系统让识别器审计自己时，塌缩风险按"format 轴 / 内容轴"分别结算而非整体判定——format 合规（字段白名单、留痕存在性）剥掉价值判断后是纯物理核对，自审无害可机械化；内容质量（叙事是否退化、判断是否敷衍）是不可消除递归，自审必失明，需异谱系外部 oracle。
 危险的不是"识别器审自己"，是把两轴混为一谈：format 探针全绿恰好掩盖内容空洞（`verification-trace-as-camouflage` 活体），且最深盲区在自动模式——无人值守会话没有人的眼睛做隐式内容 evaluator，format 探针够得到、内容质量完全够不到。是 `mechanical-apply-decouples-from-value-gate` + `human-gate-is-where-judge-and-judged-collapse` 在"识别器自审"维度的合并落点。
+
+## 2026-06-11 / 工作 / trust-is-the-only-irreversible-org-asset
+
+组织里唯一一次破坏就永不回滚的资产是成员的信任——它在 `reversibility-not-permission` 的可逆性轴上处在最远端，远过任何 git push / DB 写。
+"全员采集"类决策的真 showstopper 从不在技术或合规条文，在"采集目的未定义"——目的未定义时"采全量"是愿望伪装成需求（`wish-as-pain-laundering` 的镜像），架构师对它唯一诚实的动作是打回目标层而非替它设计管道；目的一旦定义，采集粒度自动收敛、90% 合规雷自拆。采集边界的切根刀是数据结构极性（`safe-default-by-whitelist-inversion`：存准入白名单不存禁采黑名单），不是黑名单枚举完备性。
