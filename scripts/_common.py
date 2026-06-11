@@ -11,7 +11,7 @@ from pathlib import Path
 # gg 项目根（scripts/ 的上一级）
 ROOT = Path(__file__).resolve().parent.parent
 
-# 归档目录：里面的死链/漂移是时间戳的自然结果，脚本不报
+# 归档/历史快照目录：里面的死链/漂移是时间戳的自然结果，脚本不报
 ARCHIVE_PREFIXES = (
     "memory/archival/",
     "memory/design_sessions/",
@@ -19,6 +19,7 @@ ARCHIVE_PREFIXES = (
     "memory/audit/",
     "memory/auto_gg/",
     "memory/explorations/",
+    "memory/experiments/",
     "scratch/",
 )
 
@@ -34,6 +35,9 @@ CROSS_PROJECT_PREFIXES = (
     "cc-space/",  # 已重命名为 monster（保留供归档/旧引用兼容）
     "monster/",
     "harness-engineering/",
+    "threads/",  # monster 工作区线程，gg 侧只做跨项目引用
+    "inbox/",    # monster 工作区 inbox/briefs，gg 侧只做跨项目引用
+    "chat/",     # monster 工作区 chat 入口，gg 侧只做跨项目引用
     "gg/.claude/",  # 历史会话里出现过的完整项目路径
 )
 
@@ -79,7 +83,12 @@ def has_deprecated_marker(line: str) -> bool:
 def walk_md_files(root: Path = ROOT, include_archive: bool = True):
     """产出所有 .md 文件的相对路径（POSIX 风格）"""
     for dp, dns, fns in os.walk(root):
-        dns[:] = [d for d in dns if d != ".git"]
+        rel_dir = Path(dp).relative_to(root).as_posix()
+        dns[:] = [
+            d for d in dns
+            if d != ".git"
+            and (d if rel_dir == "." else f"{rel_dir}/{d}") != ".claude/worktrees"
+        ]
         for fn in fns:
             if not fn.endswith(".md"):
                 continue

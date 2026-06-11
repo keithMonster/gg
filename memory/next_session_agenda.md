@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-10
+last_updated: 2026-06-11
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,16 @@ last_updated: 2026-06-10
 ---
 
 ## 待议（open）
+
+### 2026-06-11（auto_gg 夜间巡检 — Keith 不在场）
+
+- **NW 账本本夜结算：pending 2→0 / blocked 9→10**：轨1 1 / 轨2 0 / 轨3a 0 / 轨3b 1 / L4 0
+  - **轨1 自动闭环 1 条 = v0.3.0 skill-merge 档首次触发**（继 06-09 thread-append 首例后第二个轨1 档位实证）：06-11-G1（multi-agent-docs 外研校准注记）→ append SKILL.md「边界/已知陷阱」段 3 条（human-curated 生成器只搬运 / toolchain-first 不复述工具可拦约束 / 200-500 行体量参考）+ 回写 done（`resolution_origin=auto-track1-skillmerge`）。物理核验三查过：核a grep NO-EQUIV 回执 / 核b created 今日 + 外研 5 源在 daily 报告可溯 + 当日两会话事实与 brief 关键发现 2/3 交叉一致 / author:monster 白名单命中。**不 push monster**
+  - **轨3b 1 条待 Keith 拍时机**：06-11-G2（cg-api / cg_app_h5_center GitLab protected branch，main 仅 MR 合入）——外部生产系统配置 + 团队 bootstrap 期时机判断，命中不可逆参数 trigger。建议本体与当日「MR 红线两次被 override」实证互证，纯时机问题，**GitLab 后台一次配置可闭**
+- **blocked 池 26→10 结构性回落（06-09 观察点答案：26 已见顶）**：monster 侧 06-10/11 闸门日批量动作（329839a「3b 轨 6 条结算」+ f11734e「NW 存量分流」+ 81c52ab，git log 物理核实）+ v0.3.0 轨制两档（thread-append / skill-merge）先后触发。`pending-resolved-becomes-blocked-stagnation` 活体的对治机制开始见效，7-09 回审数据点 +1
+- **audit 死链根因线闭环（5/22→6/01 [RECURRING 延伸] 收口）**：06-01 留的 root fix 候选「audit.py 对 experiments/ 豁免死链检查」今日由日间 gg-audit 物理落地（`scripts/_common.py` ARCHIVE_PREFIXES + worktrees 排除 + monster 相对路径识别；`check_essence.py` 检测粒度改 entry_del），exit 35→0 双向验证（见 `memory/audit/2026-06-11_status-scan-audit-exit35.md`）。auto_gg 本夜复跑 exit=0 确认。**该 Tier 1 产物已接管入本夜 commit**（机械维护产物，audit 报告自证物理回执）
+- `[CORE_RULE_TOUCH]` **06-11 白天 1 份工作模式 reflection + essence +1 滴不接管——留 Keith review**：?? `reflections/2026-06-11_cg-ime-enterprise-keylogger-architecture.md`（summoner: monster 主代理，无 dd 收尾，06-09 等先例）+ M essence.md（+1 滴 `trust-is-the-only-irreversible-org-asset`，5 insert/0 delete append-only 合规）。注：CORE.md 本夜虽进 commit，但 diff 仅 daily_knowledge 归档路径机械同步（gg-audit Tier 1 死链修复），无规则语义改动
+  - **Keith 需要做的事**：① review cg-ime reflection（brief 点名该会话反 sycophancy 成功实证——「术语库=全采集」等号被当场顶回）+ essence 滴措辞 → commit（cron 04:55 兜底）② G2 protected branch 时机拍板
 
 ### 2026-06-10（设计模式 — 全量体检 + Keith 目标函数注入）
 
