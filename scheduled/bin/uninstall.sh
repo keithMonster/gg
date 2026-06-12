@@ -18,10 +18,8 @@ DOMAIN="gui/$(id -u)"
 if [ -f "$ARG" ]; then
     PLIST_ABS=$(/usr/bin/python3 -c "import os,sys; print(os.path.abspath(sys.argv[1]))" "$ARG")
     LABEL=$(/usr/libexec/PlistBuddy -c "Print :Label" "$PLIST_ABS")
-    TARGET="$PLIST_ABS"
 else
     LABEL="$ARG"
-    TARGET="$DOMAIN/$LABEL"
 fi
 
 if ! launchctl print "$DOMAIN/$LABEL" >/dev/null 2>&1; then
@@ -29,8 +27,10 @@ if ! launchctl print "$DOMAIN/$LABEL" >/dev/null 2>&1; then
     exit 0
 fi
 
+# bootout 统一用单参数 domain-target 形式（gui/$UID/<label>）——两参数
+# 形式在传 label 时会把 domain-target 当 plist 路径解析，报 errno 5 I/O error。
 echo "[uninstall] bootout $LABEL"
-launchctl bootout "$DOMAIN" "$TARGET" 2>&1 || {
+launchctl bootout "$DOMAIN/$LABEL" 2>&1 || {
     # bootout 在某些情况下返回非零但服务实际已摘——再 print 验证
     if ! launchctl print "$DOMAIN/$LABEL" >/dev/null 2>&1; then
         echo "[uninstall] ✓ $LABEL removed (despite bootout warning)"

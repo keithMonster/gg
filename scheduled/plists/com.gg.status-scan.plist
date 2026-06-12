@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-  gg 全系统状态扫描（4 次/天：00:23 / 06:23 / 12:23 / 18:23，错开 cc-space.tick :17 高密区）。
+  gg 全系统状态扫描（4 次/天：00:23 / 06:23 / 12:23 / 18:23）。
 
   职责：
-    - 扫所有 com.cc-space.* 和 com.gg.* launchd 任务最近一次运行状态
-    - 扫 cc-space morning-brief.md 是否当日产出，提取 [RECURRING] 议题
-    - 扫 NW proposals.jsonl L4 blocked / L5 待提议项
+    - 扫所有 com.monster.* 和 com.gg.* launchd 任务最近一次运行状态
+    - 扫 monster morning-brief.md 是否停摆
+    - 扫 NW proposals.jsonl 是否 pending 积压
+    - 跑 gg scripts/audit.py --json 看自身健康
     - 一切正常 → 静默退出
-    - 发现异常 → 写告警文件到 scheduled/alerts/YYYY-MM-DD-HHmm.md
+    - 发现异常 → 通过全局 notify skill 推送，带 60 分钟去重
 
-  频次决策（2026-05-14）：从 24 次/天降到 4 次/天。所有扫描项变化频率都远低于 1h——
-    morning-brief 日产 1 次、NW 账本天级别变化、launchd 失败次日 cron 重跑能接上、
-    audit P0 静态稀疏。06:23 抓夜跑结果（cgboiler 03:30 / chat 04:30 等），
-    其余三点日间补位 + 夜里兜底。省 83% token-equivalent 成本。
-
-  为何 timeout=600：扫描 + 写告警 5 分钟内必须完成，超时即视为卡死。
+  这是确定性脚本巡检，不再调用 claude -p。监控器不能依赖被监控的 AI 定时链路。
 -->
 <plist version="1.0">
 <dict>
@@ -24,10 +20,8 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
-        <string>com.gg.status-scan</string>
-        <string>600</string>
-        <string>Read /Users/xuke/githubProject/gg/scheduled/STATUS_SCAN.md，按其中指令逐步执行</string>
+        <string>/usr/bin/python3</string>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/status-scan.py</string>
     </array>
 
     <key>StartCalendarInterval</key>

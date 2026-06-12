@@ -28,6 +28,7 @@ ENTRY_FILES = frozenset({
     "README.md", "KERNEL.md", "CLAUDE.md", "CORE.md",
     "cc_agent.md", "auto_gg.md", "constitution.md",
     "daily_knowledge.md", "reasoning_modules.md",
+    "DAILY_WORD.md", "GG_EXPLORE.md",
 })
 
 # 跨项目前缀：这些不是死链，是指向别的仓库
