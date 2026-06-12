@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-11
+last_updated: 2026-06-12
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,15 @@ last_updated: 2026-06-11
 ---
 
 ## 待议（open）
+
+### 2026-06-12（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[P0]` **NW G1：监控传感器与 launchd→桌面客户端迁移失同步，26h 内将集体误报刷飞书（轨3a，gg 已给架构推荐，物理 apply 待你拍）**
+  - **物理核验**：launchctl 实证 auto-monster/nw-daily/nw-weekly/chat-prep 等已离 launchd（与 brief 一致）；hourly_check.py:66 `cgboiler-inquiry-fetch` 行仍在（06-10 已停役但监控表没删，今晚 51h 告警即此误报）。引用 commit `ddd8ab20` 在 monster 仓未找到，但 launchctl 已独立坐实迁移
+  - **gg 架构推荐**：③让迁移任务写心跳 > ②重定向扫描桌面客户端日志 > ①摘除监控。根因=传感器绑死 launchd 基底、基底迁移后失明；正解=**传感器跟监控对象走、不跟基底走**（③：桌面客户端跑完写 heartbeat mtime，hourly_check 扫 heartbeat 而非 launchd log，监控对象与基底解耦、换 harness 不失效——同 gg 自己的承重/垫片哲学）。①摘除=核心自动化彻底失存活监控、治标
+  - **你需要拍**：① 眼前止血删 hourly_check.py:66 cgboiler 行（无争议，但改生产监控脚本属红线人工）② 这批迁移任务的 staleness 走 ③/②/① 哪个
+- **NW G2：cg-patent-agent pmAppGuard 暂缓方向决策（L4 上浮，待你一步 append thread）**：轨1 thread-append 候选降 L4——draft 引用 commit `8e88c1bf` 在 monster 仓不存在（疑跨仓 cg-patent-agent 项目 commit，auto_gg 够不到），无法独立核验「Keith 拍暂缓」的措辞上下文；draft 自标「写入由 done/会话 append」+ 方向决策有语义重量。核 a 已确认 thread 时间线无 06-12 等价。**你够得到该项目仓真实上下文，一步 append `threads/cg-patent-agent.md` 时间线即可闭**
+- **本夜无 RESHAPE / 无 essence 沉淀 / 无探索 / 无新 reflection 接管**：audit exit=0、working tree 干净、今日无新工作模式 reflection；维护+账本夜
 
 ### 2026-06-11（auto_gg 夜间巡检 — Keith 不在场）
 
