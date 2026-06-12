@@ -755,3 +755,9 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 
 组织里唯一一次破坏就永不回滚的资产是成员的信任——它在 `reversibility-not-permission` 的可逆性轴上处在最远端，远过任何 git push / DB 写。
 "全员采集"类决策的真 showstopper 从不在技术或合规条文，在"采集目的未定义"——目的未定义时"采全量"是愿望伪装成需求（`wish-as-pain-laundering` 的镜像），架构师对它唯一诚实的动作是打回目标层而非替它设计管道；目的一旦定义，采集粒度自动收敛、90% 合规雷自拆。采集边界的切根刀是数据结构极性（`safe-default-by-whitelist-inversion`：存准入白名单不存禁采黑名单），不是黑名单枚举完备性。
+
+## 2026-06-13 / 夜间 / decoupling-buys-the-right-to-be-wrong
+
+模型/harness 无关的架构买的第三样东西（前两样是迁移自由 + 检验独立性）是**对基底可以判断错的权利**——耦合让"追准基底真相"成为强制项、错一次结构性崩；解耦把基底事实降级进知识层，可懒更新、可放任争议态，架构无所谓。真正的可移植性测试问的不是"某约束松动了吗"，是"我是否耦合于那个答案"。
+反身自证：本夜差点拿一条争议事实（CC 嵌套是否松动，官方文档与 SEO 博客冲突）改 track，即便写错架构也零后果——因为没有承重件读它；知识层错的代价有界，承重层错的代价是结构性的。推论：垫片层定义有不对称缺口——6-10 只定义为"补模型缺陷"（防御），漏了"隔离基底新能力"（检疫）；基底加能力威胁可移植架构的方式不是让它过时，是诱它把"正好解我旧痛点"的新能力吸进承重层重新耦合。
+（`model-agnostic-unlocks-cross-prior-verification` 的兄弟滴；外部锚点 = CC 6 月基底实况核验；`no-outside-proof-as-anesthesia` 活体——第一层 outside proof 不够 outside，authoritative source 才是。）

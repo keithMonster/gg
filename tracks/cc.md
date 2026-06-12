@@ -275,6 +275,27 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 **对 gg 演化的直接含义**：未来涉及 CC 生态的设计决策（skill / hook / agent / settings / sub-agent / mcp），先扫一遍 CC 原生机制，再造方案。这条洞察直接对应 Keith 北极星 #2 "动态学习反哺"——我从 Keith 的一句话里学到了"CC 有项目级 skill 发现"这个事实，并沉淀进 track，下次自然复用。
 
+### 从 2026-06-13 自由探索获得（基底两月波动核验，本 track 自 4-14 后首次刷新）
+
+**触发**：track 雷达显示 cc 覆盖 0、已知洞察停在 4-14、"下一步"读博客两月未动。Keith 铁律 #11（领域半衰期 < 1 年）→ gg 对自己基底的认知大概率陈旧，刻意转向外面核验。
+
+**官方文档确认的真·新能力（April 期 gg 完全不知道）** —— 源 `code.claude.com/docs/en/sub-agents`：
+
+| 新能力 | 内容 | 对 gg 的潜在接口 |
+|---|---|---|
+| **agent teams** | 会话间可**通信**的协作（teammate 引用 subagent 定义，body append 进其 system prompt） | DQ-3 orchestrator-worker 的上位形态；但接口须在垫片层不在承重层 |
+| **background agents** | 多个独立会话**并行** + 单处监控 | 跨项目主动观察 / 夜间多线的潜在载体 |
+| **动态 CLI subagent** | `--agents` JSON 临时定义，仅当次会话存在、不落盘 | DQ-2"运行时把人格压进 subagent"的一条新技术路径 |
+| **更富 frontmatter** | `skills` 预载 / `isolation: worktree` / 按调用传 `model` / `context: fork`（把 skill 注入指定 agent）/ `maxTurns` / `memory` / `effort` | 按调用传 `model` = `evaluator-independence` 第三层（异谱系 evaluator）的现成工程钩子 |
+
+**官方文档确认仍成立**：**subagent 不能 spawn subagent**（嵌套约束 line 62/361/772 三处明写未松动）。DQ-2"为什么 CC 不允许 subagent 嵌套" + 已知洞察"Subagent 不能嵌套调 Agent 工具"**仍有效**。
+
+**冲突未决（不记为已解决）**：嵌套 depth=5（Boris Cherny v2.1.172，6-09）/ Dynamic Workflows 起上千 subagent（5-28 research preview）—— **SEO 博客（ofox/claudefa/nimbalyst + Digg 转述）声称、官方文档否认/未确认**。标为开放核验项，下次再核 changelog / 实测 CLI。**教训**：第一层搜索结果自洽且命中预期是最容易错得自信的形态，authoritative source 才是真 outside（`no-outside-proof-as-anesthesia` 活体）。
+
+**结构洞察（本次最大产出）**：grep 全仓确认"subagent 不能嵌套"只活在**知识层**（本 track + ai.md + gg-audit + 实验档），KERNEL/CORE/cc_agent/constitution 承重层一个没埋。→ **无论争议事实怎么裁，gg 架构毫发无伤**。这是 6-10 承重/垫片切割的直接红利：基底波动从"必须追准的承重风险"降级成"可懒更新的知识层事实"。沉淀 essence `decoupling-buys-the-right-to-be-wrong`。详见 `memory/explorations/2026-06-13_decoupling-buys-the-right-to-be-wrong.md`。
+
+**给设计模式的建议**（不在夜间执行）：① 垫片层定义补"新能力检疫"对称半边（当前只定义为"补模型缺陷"，漏了"隔离 harness 新能力"）；② 评估 `model` per-invocation + agent teams 是否值得进垫片层接 gg 判断层 evaluator——接口须垫片、不可承重。
+
 ---
 
 ## 开放问题 (Open Questions)
@@ -307,7 +328,10 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 - ✅ DQ-5 (Skill 协同) — First Contact 已对齐
 - ✅ **Tier B 已落地**：`~/.claude/agents/gg.md` 硬约束节新增 Skill 调用方式（用 Read SKILL.md 而非 tools 字段加 Skill 工具，更稳）
-- 🔜 读 Anthropic 的 "Building effective agents" 和 "Multi-agent research system" 博客，沉淀洞察
+- ✅ **基底两月波动核验**（2026-06-13 自由探索）：确认 agent teams / background agents / 动态 CLI subagent / 富 frontmatter 等真·新能力；嵌套约束官方仍成立；嵌套 depth=5 博客 vs 官方冲突未决
+- 🔜 **核 CC changelog / 实测 CLI** 裁决嵌套 depth=5 与 Dynamic Workflows 是否真上线（当前博客与官方文档冲突）
+- 🔜 读 Anthropic 的 "Building effective agents" 和 "Multi-agent research system" 博客，沉淀洞察（仍未做）
+- 🔜 设计模式议题：垫片层定义补"新能力检疫"半边 + 评估 per-invocation `model` 接 gg 判断层异谱系 evaluator
 
 ---
 
