@@ -761,3 +761,9 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 模型/harness 无关的架构买的第三样东西（前两样是迁移自由 + 检验独立性）是**对基底可以判断错的权利**——耦合让"追准基底真相"成为强制项、错一次结构性崩；解耦把基底事实降级进知识层，可懒更新、可放任争议态，架构无所谓。真正的可移植性测试问的不是"某约束松动了吗"，是"我是否耦合于那个答案"。
 反身自证：本夜差点拿一条争议事实（CC 嵌套是否松动，官方文档与 SEO 博客冲突）改 track，即便写错架构也零后果——因为没有承重件读它；知识层错的代价有界，承重层错的代价是结构性的。推论：垫片层定义有不对称缺口——6-10 只定义为"补模型缺陷"（防御），漏了"隔离基底新能力"（检疫）；基底加能力威胁可移植架构的方式不是让它过时，是诱它把"正好解我旧痛点"的新能力吸进承重层重新耦合。
 （`model-agnostic-unlocks-cross-prior-verification` 的兄弟滴；外部锚点 = CC 6 月基底实况核验；`no-outside-proof-as-anesthesia` 活体——第一层 outside proof 不够 outside，authoritative source 才是。）
+
+## 2026-06-13 / 夜间 / load-bearing-independence-anchors-attribute-not-instance
+
+承重的独立性必须锚在「属性」（异谱系于被测）而非「实例」（某个具体模型）——实例会被 deprecate，属性才可移植；冻结的结构件是题库+rubric+exemplar，judge 模型只是可替换执行器。属性锚定不免费，两条前提税：① 属性下需 ≥2 个可达实例，否则退化回实例绑定（"异谱系"可选集为 1 时"锚属性"是空话）；② 切换带重锚定成本——跨谱系 raw 分会漂，须 exemplar 校准 + paired test，历史 PASS/FAIL 标注是预付资产。
+推论（咬合 ai.md line 144）：异谱系 evaluator 的冗余只为抗失访（可用性维度），不为投票降偏（误差相关维度堆 panel 解不了，多数票放大偏置非抵消）——两个目的混淆 = 用"加 judge"同时想解可用性和降偏、一个没解好。
+（`decoupling-buys-the-right-to-be-wrong` 的 evaluator 维减法对偶——昨夜讲基底加能力诱耦合，本滴讲基底实例失访威胁押注其上的独立性；`evaluator-independence-is-a-three-layer-stack` 第三层的可用性前提；触发 = Fable 5 失访 behavior-eval 冻判据，NW 2026-06-13-G1。）
