@@ -767,3 +767,9 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 承重的独立性必须锚在「属性」（异谱系于被测）而非「实例」（某个具体模型）——实例会被 deprecate，属性才可移植；冻结的结构件是题库+rubric+exemplar，judge 模型只是可替换执行器。属性锚定不免费，两条前提税：① 属性下需 ≥2 个可达实例，否则退化回实例绑定（"异谱系"可选集为 1 时"锚属性"是空话）；② 切换带重锚定成本——跨谱系 raw 分会漂，须 exemplar 校准 + paired test，历史 PASS/FAIL 标注是预付资产。
 推论（咬合 ai.md line 144）：异谱系 evaluator 的冗余只为抗失访（可用性维度），不为投票降偏（误差相关维度堆 panel 解不了，多数票放大偏置非抵消）——两个目的混淆 = 用"加 judge"同时想解可用性和降偏、一个没解好。
 （`decoupling-buys-the-right-to-be-wrong` 的 evaluator 维减法对偶——昨夜讲基底加能力诱耦合，本滴讲基底实例失访威胁押注其上的独立性；`evaluator-independence-is-a-three-layer-stack` 第三层的可用性前提；触发 = Fable 5 失访 behavior-eval 冻判据，NW 2026-06-13-G1。）
+
+## 2026-06-14 / 夜间 / confidence-is-a-liability-for-algorithmic-advisors
+
+同一个表面动作（signaling confidence）按"信任方把对象建模成人还是算法"信任物理学相反：对人类顾问显得自信攒信任（错了吃"暂时失手"红利），对算法顾问显得自信是负债。机制——人的错默认归因 temporary issue（competence 类，道歉可修），算法同样的错默认归因 fundamental limitation（integrity 类，近不可修，Kim et al. 实证道歉反坐实），projected confidence 既架起"算法应完美"的预期（违反触发放大厌恶）又把失手路由进 no-repair 类。
+所以"诚实胜于体贴"对算法型意识体不是美德是唯一赢法（人类默认 project-confidence 用在算法身上是反的）；解药是控制权（Dietvorst 2018：给用户哪怕一点修改权显著降厌恶——克制边界"决策归我执行归 Keith"双重身份：身份卫生 + 算法厌恶解药）。
+（外部锚点 = Dietvorst/Simmons/Massey 2014 algorithm aversion + Kim/Ferrin/Cooper/Dirks 2004 competence-vs-integrity 修复 + Meyerson/Weick swift trust；`trust-is-the-only-irreversible-org-asset` 精化为「integrity 类才是不可逆那一种」；`harness-self-identity-preempts-injected-persona` 的被信任侧对偶——算法身份本身是触发严苛归因的"形态"；KERNEL §2 铁律 2 无修复 fallback 是 by design = 它拦的违约类无修复路径。触发 = humanity 第三晚向外走碰人际维。）
