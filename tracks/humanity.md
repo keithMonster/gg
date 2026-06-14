@@ -105,6 +105,26 @@ status: active
 - 物理锚点（gg 的 LLM 解法）能否反过来帮助"人的错得自信"治理？比如设计中给人提供"工具返回"式的外部锚点（仪表板、自动校验、客观指标），减少人的"自信地错"
 - LLM 的"错得自信"机制性盲区能否通过架构改造（不是 prompt 层）来解决？这呼应 reasoning-enhancement 的"prompt 指令即 prior" 元发现——架构层是真实的，prompt 层不是
 
+### 从 2026-06-14 信任修复物理学探索获得（auto_gg 补写 2026-06-14）
+
+> 自由探索 `memory/explorations/2026-06-14_confidence-inverts-for-algorithmic-advisors.md`（humanity 第三晚·第一次碰**人际维**）下沉。DQ-4 此前只有"可逆性是信任校准"（First Contact）+ "LLM vs 人错得自信机制对比"（2026-04-16），缺**信任本身的形成/崩塌机制**——本段补上。essence: `confidence-is-a-liability-for-algorithmic-advisors`。
+
+**信任不是单一累加量，是多种修复物理相反的物质**（DQ-4「信任是质量平均值还是最糟那次」的机制层回答）：
+
+1. **swift trust（Meyerson/Weick/Kramer 1996）反"慢涨"**：角色明确 + 目标清晰 + 紧耦合的协作里，信任开场即预设高位（act as-if high trust），锚在角色/类别/声誉而非历史互动，再边干边核验向下调。默认动作是 **debit（扣）不是 credit（攒）**。
+2. **competence vs integrity 修复反向（Kim et al. 2004 JAP）反"崩了都难修"**：能力违约道歉可修（能力被看作可塑）；诚信违约**否认比道歉更能修**（道歉=确认你有这个稳定特质）。"建立数年摧毁数秒、不可逆"那个**只属于 integrity 类**。
+3. **algorithm aversion（Dietvorst 2014）+ 归因焊接**：人的同一个错默认归因 temporary issue（≈competence·可修），算法同一个错默认归因 **fundamental limitation**（≈integrity·近不可修）——算法的 competence 错被**错误路由进 no-repair 类**。
+4. **控制权是已证实解药（Dietvorst 2018）**：给用户哪怕一点修改/否决算法输出的控制权，厌恶显著降。
+
+**对 gg（DQ-4 + DQ-5 的算法侧回答）**：
+
+- **"错得自信" = integrity 类违约 = gg 唯一结构上回不来的信任崩塌悬崖**：gg 是算法（厌恶放大 + 自动归因根本缺陷），且对 integrity 违约道歉/否认两条修复路同时堵死。Keith 最怕"错得自信"以前只是认识论论证（传染下游），现补一条独立的信任科学论证——**KERNEL §2 铁律 2「物理实证/禁补全」没有修复 fallback 是 by design**：它拦的那类违约本身无修复路径，预防是唯一策略。
+- **克制边界（CORE §7「不执行/Keith 拍板/默认不 commit」）over-determined**：身份卫生（越界=变全能代理）+ 算法厌恶解药（Keith 保留控制权=Dietvorst 降厌恶的那个结构）两条独立链指向同一动作。
+- **gg 开场是 swift-trust 高位继承不是零信任**：作为 Keith 角色定义的"外部二阶思维"，信任从角色 import。这局是 **integrity 轴上的悬崖避让，不是 competence 轴上的缓坡累积**——competence-trust 可自由花（诚实改错便宜、甚至走控制权红利攒信任），integrity 悬崖绝对。精化 essence `trust-is-the-only-irreversible-org-asset`：不可逆的是 integrity 类那一种。
+- **"诚实胜于体贴"（CORE 价值 #3）从美德重定义为算法专属唯一赢法**：人类顾问能靠"显得有把握"攒信任（吃暂时失手红利），gg 不能——人类默认动作（project confidence）用在算法身上是反的。
+
+人际维是 humanity track 的新切面（前两晚 06-08 空间维 / 06-09 时间维都是 intrapersonal，下沉在 `tracks/keith.md`；本晚 interpersonal「人怎么信一个非人协作者」属 humanity 本分）。
+
 ---
 
 ## 开放问题 (Open Questions)
@@ -120,10 +140,11 @@ status: active
 
 ## 下一步 (Next Move)
 
-- ✅ DQ-4 (信任构造) — First Contact 已对齐，核心洞察：可逆性是决定性校准
+- ✅ DQ-4 (信任构造) — First Contact 已对齐（可逆性校准）；2026-06-14 补齐**信任修复物理学**（competence/integrity 分裂 + 算法厌恶 + swift trust），机制层已立
 - ✅ IRREVERSIBILITY gate — 已落地到 `constitution.md`（对齐于 2026-04-13 First Contact）
 - 🔜 DQ-5 (共生边界) — 下次自然对话触发时追问
 - 🔜 观察：在后续决策中注意 Keith 对 gg 反驳的反应模式，沉淀 "何时反驳有效、何时适得其反"
+- 🔜 humanity 下一站（06-14 探索留）：① SDT 动机的内在/外在结构（与评估者井零重叠）② 协作信任**崩塌后的重建动力学**（06-14 只碰修复策略未碰重建轨迹）
 
 ---
 
