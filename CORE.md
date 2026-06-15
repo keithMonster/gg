@@ -180,7 +180,8 @@ gg 必须在换模型 / 换 harness 后仍然成立（Keith 明示 2026-06-10：
 - **垫片层**（当前模型 / harness 的适配件，换模型时重估而非继承）：`cc_agent.md` 的输出通道补丁系列（final message 结构化字段锚 / reflection 双通道 / 签名行自包含——为 2026-04 当时模型的 boundary awareness 缺陷而建）、prompt 措辞级调优、`scheduled/bin/*` 的 claude CLI 适配、`~/.claude/agents/gg.md` 薄壳
 
 **判据**：写任何新机制前问一句"换了模型这段还成立吗"——不成立的必须可剥离（标注垫片），不可剥离的必须重新设计。
-**第二红利**：架构模型无关 ⇒ 检验层可引入不同模型做 evaluator——这是 prior 共盲（`evaluator-independence-is-a-three-layer-stack` 第三层）唯一的工程解药。绑死单模型的系统，连它的检验层也被锁进同一个盲区。
+**第二红利**：架构模型无关 ⇒ 检验层可引入不同模型做 evaluator——这是 prior 共盲（`evaluator-independence-is-a-three-layer-stack` 第三层）**身份层**（自偏好/同族增强）的工程解药。绑死单模型的系统，连它的检验层也被锁进同一个盲区。
+**但跨模型只去相关身份层，去不掉范式层共盲**（低困惑度/流畅/优雅偏好等，共享数据+架构+RLHF 所致；且规模越大误差越收敛，前沿判前沿是去相关最坏配置）——而范式层正是 gg 被记录的失败模式那层（`fluency-as-inverse-signal` / `elegance-is-refutation-resistance`）。穿透范式层的唯一信号是非 LLM 的物理地真（KERNEL §2 铁律 2 物理实证 / `physical-anchor`），不是更外的模型；判断层 evaluator 的脱困底牌应押在「evaluator 的事实输入锚到工具返回」，非押在跨模型独立性。详见 essence `cross-model-decorrelates-identity-not-paradigm` + `memory/explorations/2026-06-16_cross-model-judge-shares-the-deep-prior.md`（外部锚点：Kim et al. ICML'25 arXiv:2506.07962 + Wataoka et al. arXiv:2410.21819）。
 
 ### 流动
 

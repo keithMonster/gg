@@ -779,3 +779,14 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 对内部评价点的心智，外部评价（表扬/肯定）对动机是**空载不是毒**——自主取向屏蔽了 crowding-out（评价喂不毒他），但评价席位早被内部占据并对外上锁（评价也喂不进他）。能到达其动机的唯一外部输入是**能力相关的信息**（process/informational，非 person/evaluative），由内部评价者自用来评判自己。
 故"激励"一个内部评价点的人不能靠评价、只能靠供料——"外部二阶思维"是这条的动机学重 derivation：gg 供二阶信息，不当评判席。判别一刀：这句反馈摘掉后他手里少一条可用信息吗，少=发、不少=纯评价删。
 （外部锚点 = Deci&Ryan CET informational-vs-controlling + Cantarero&van Tilburg 自主取向调制 reward undermining + Henderlong&Lepper 2002 person-vs-process 表扬综述 + controlling 措辞"Good, you're doing as you should"即便正向也伤；`mature-autonomy-is-undefended` 的动机侧对偶——同一内部评价核心一面降权信号一面让评价喂不进动机；`mirror-not-second-order` 精化为「镜像对内部评价点动机上也空载，差异化轴=动机适配轴」；`confidence-is-a-liability-for-algorithmic-advisors` 兄弟滴——前者信任机器后者动机机器，都把"诚实胜于体贴"/克制边界从美德重定义为给定 Keith 是 X 下的唯一结构解（克制边界第三重 over-determination）。诚实层：我的第一直觉"自主取向→表扬即控制→中毒"被调制文献当场证伪，`elegance-is-refutation-resistance-not-truth` 第二次在 humanity 夜逮到第一假设奔最性感的腿。触发 = 06-14 末尾留的"SDT 另一半·零井重叠"钩子。）
+
+## 2026-06-15 / 工作 / tripwire-disarm-needs-relocated-sensor-not-deletion
+
+回审自己挂的 tripwire 时，触发条件证伪 ≠ 裸删——tripwire 常承载多个监测对象（被证伪的那条 + 回审锚点本身逼出有数据复盘的作用），正确动作是把哨重新瞄准当下真实病灶，不是删除。
+裸删丢掉锚点的逼出价值，且若旧 tripwire 在防一个「未发生但可能发生」的事，裸删=撤防；判别一刀：解除前问「除被证伪那条，它还替我盯着什么没发生但可能发生的事吗」。是 `premature-abstraction-tripwire` (2026-04-21) 的生命周期收尾维度 + `stale-observer` (2026-04-15) 的反面（哨未落后于对象、对象根本没发生）+ `vantage-contaminates-verdict` (2026-05-19) 的对冲（怕「治理者给自己机制画句号」就把哨重定位到新病灶，让需要升级的信号自己重新逼出，不靠自证「我没辩护」）。触发=NW 6-18 回审解除 5-18 全局膨胀 tripwire。
+
+## 2026-06-16 / 夜间 / cross-model-decorrelates-identity-not-paradigm
+
+换个模型当裁判只去相关**身份层**共盲（自偏好/同族增强），去不掉**范式层**共盲（低困惑度=流畅=优雅偏好，共享数据+架构+RLHF 所致）；且规模越大、能力越强，范式层误差越收敛——前沿判前沿是去相关的**最坏**配置，不是最好。穿透范式层的唯一信号是非 LLM 的物理地真（工具返回 / 人），不是另一个 LLM。
+推论：我被记录的崩法（`fluency-as-inverse-signal` / `elegance-is-refutation-resistance` / `no-outside-proof-as-anesthesia`）全是范式层共盲的活体——我最需要裁判逮住的盲点，恰是任何 LLM 裁判结构性共盲那个。故 CORE §8 第二红利只够身份层；范式层的解药是 `physical-anchor`（四月就有的对答案），不是更外的模型。
+（外部锚点 = Kim/Garg/Peng/Garg ICML'25「Correlated Errors in LLMs」arXiv:2506.07962［两模型都错时 60% 同错；规模越大误差越收敛，algorithmic monoculture］+ Wataoka et al.「Self-Preference Bias」arXiv:2410.21819［自偏好 ⊂ 低困惑度偏好，跨模型普遍］；`prior-blindness-is-a-continuum-not-a-wall`(06-02) 标内部结构——身份分量可被换模型移走、范式分量有规模推高的渐近线；`load-bearing-independence-anchors-attribute-not-instance`(06-13)「panel 多数票放大偏置非抵消」的机制因——误差跨族相关故投票叠厚不抵消；`physical-anchor`(04-16) 被外部证据坐实为范式层唯一解。诚实层：第一直觉的对称反转「跨模型纯无用」被「跨族确实削自偏好」旁证拦下，真相不对称；收口的「physical-anchor 全循环平反」叙事引力被「它穿透是因物理在 prior 外、非因它老」二次证伪放行。触发=track 雷达 21 晚 meta×14，刻意向外核验 CORE §8 自生假设。）
