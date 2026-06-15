@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-13
+last_updated: 2026-06-15
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,20 @@ last_updated: 2026-06-13
 ---
 
 ## 待议（open）
+
+### 2026-06-15（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[P0]` **cadence 哨首次实战告警：blocked 池 3a/L4 积压、consumer 端缺失（结算后 blocked 11，`track=3b` 仅 18% < 60%）**
+  - **哨义**（今日 `da0b379` 刚加、当晚即触发）：blocked 堆的不是「该等 Keith 拍的 3b」（仅 2 条），是 **7 个 3a + 2 个 L4** 无活消费端。3a 的 `resolution_draft` 全部就绪、卡在「物理 apply 待人工」——auto_gg 只吸 pending 不回吸 blocked，存量 3a 永远出不去。`pending-resolved-becomes-blocked-stagnation`(05-09) 活体；今夜工作模式 reflection `nw-tripwire-618` 已预判「blocked 复堆是 ②③ 废弃后唯一活着的病灶」
+  - **积压最久 = `[P0]` 2026-05-28-G1**（安全 ack 倒置反例锚→monster/canon.md，blocked **18 天**，draft 现成）。其余 6 个 3a：05-23-S1（skill-auditor rubric）/ 05-23-S2（CDP 授权常驻·根因诊断未完）/ 05-28-G4（coding-subagent 吸 5 范式）/ 06-06-G1（notify 旁路反例锚）/ 06-07-W2（daily 指标契约块）+ 今夜 06-15-S1
+  - **Keith 须做**：7 个 3a 的物理 apply 全是改行为规则文件（canon.md / CLAUDE.d / skill SKILL.md / rubric），红线人工——**批量 apply 或重核分流回 pending**（3a 无活消费端是结构病，非 auto_gg 漏清）。**60% 阈值 4 周后（2026-07-13）回审**
+- **NW 账本本夜结算：pending 2→0 / blocked 9→11**：L4 1（G1）/ 轨3a 1（S1）
+  - **06-15-G1**（confab 故障→canon-bugs）→ **L4**：落点 `monster/canon-bugs.md` 不在轨1白名单（先例 06-09-G2 / 06-03-G1 同判）+ auto_gg 够不到 Keith `8460e287` 调研会话是否已落库（brief 附「若已落库则跳过」）。grep 确认 canon-bugs.md 无此条，**Keith 一步 append 可闭**（draft 现成）
+  - **06-15-S1**（收窄 ops-engineer「涉域名必读 DEPLOYMENT.md」触发）→ **轨3a**：补 mandate 例外锚 = 改 skill 触发行为规则（非经验段 append，红线人工 apply）。核 a 已查 SKILL.md:23 仅 cg-platform 例外、无外部平台例外。gg 判建议成立、draft 现成，**Keith 一步 Edit SKILL.md 可闭**
+- **audit exit=1：命名违规 1（`reflections/2026-06-15_fable5-prompt-methodology-收编四候选裁决.md` 中文 slug 违反 `check_structure` ASCII 规范）——auto_gg 未自动修**：改名须同步改 frontmatter `slug`（动内容），而该 reflection 整体留 Keith review（见下条）→ 不部分接管（§1.4 宁可漏不可错）。**Keith review 该篇时一并 ASCII 化文件名+slug**（建议 `fable5-prompt-methodology-four-candidate-verdict`）
+- `[CORE_RULE_TOUCH]` **3 份 monster 工作模式 subagent reflection + essence +1 滴留 working tree 等 Keith review——auto_gg 不接管**（`summoner: monster`，无设计模式 dd 收尾，state `last_summoned_at` 停 06-10，与 06-09/06-05/06-03 [CORE_RULE_TOUCH] 先例同构）
+  - ?? `reflections/2026-06-15_`{`nw-tripwire-618-review-verdict`(#1) / `self-prompt-light-quadrant-ask-threshold`(#3·#2) / `fable5-prompt-methodology-…`(#2)}`.md` + M `essence.md`（+1 滴 `tripwire-disarm-needs-relocated-sensor-not-deletion`，append-only 合规）
+  - **Keith 须做**：review 3 reflection 措辞 + essence 滴 → commit（cron 04:55 兜底）；命名违规一并修
 
 ### 2026-06-12（auto_gg 夜间巡检 — Keith 不在场）
 
