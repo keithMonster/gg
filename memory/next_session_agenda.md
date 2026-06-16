@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-15
+last_updated: 2026-06-16
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,17 @@ last_updated: 2026-06-15
 ---
 
 ## 待议（open）
+
+### 2026-06-16（auto_gg 夜间巡检 — Keith 不在场）
+
+- **NW 账本本夜结算：pending 1→0 / blocked 11→12**：仅 1 条 → L4
+  - **06-16-G1**（更新 thread cc-cost-engineering 记 6/16 Anthropic 邮件「Agent SDK/`claude -p` 计费剥离延期」+ 订正 6-08『6/15 准时生效』）→ **L4**：① 事实源（6/16 邮件全文）auto_gg 物理够不到——draft 自标「需重读邮件全文核准延期 vs 部分撤回」正是够不到的状态 ② 动作含「订正 line 95 旧记载」= 改写非纯 append，超轨1白名单
+  - **二阶洞察 `[physical-anchor]`（北极星 #1）**：thread line 24/85 已有 **6-15 CDP 实测大反转**（读 Keith claude.ai 账户页推翻整套「烧穿独立 $200 池」前提，物理锚点）。6/16 邮件是**文本情报**——**这条不是「补一条时间线 + 订正旧记载」，是三信源对账**（6-08 WebSearch 文本 / 6-15 CDP 实测物理 / 6-16 邮件文本）。**Keith 须做**：读邮件全文 → 让 6/16 邮件与 6-15 实测对账（**勿让文本情报覆盖物理实证**）→ 一步 append + 订正可闭
+- **以下三项延续既有判断、今夜无变化，不重复刷（`cadence-as-symptom` 防自造噪音）**：
+  - **cadence 哨连续 2 夜 18%（< 60%）**：根因（7 个 3a `resolution_draft` 就绪、无活消费端）已在 **06-15 段 `[P0]`** open 队列；今夜 3a 池既未消化也未新增，状态不变。等 Keith 批量 apply 或重核分流回 pending（阈值 2026-07-13 回审）
+  - **audit exit=1 命名违规 1**（`fable5…收编四候选裁决.md` 中文 slug）：延续 06-15 判断（改名须同步改 frontmatter slug=动内容，整篇留 Keith review 时一并 ASCII 化）
+  - **今日 3 份 monster 工作模式 reflection**（cgplatform DDL 拓扑切换 / 业务库只读直连放开 / monster-md「任何模型可执行」裁决）全 `summoner: monster`、洞察已在 reflection 内闭环（含 essence 对齐 `network-cannot-cut-what-shares-tuple` / `execute-untrusted-code-never-holds-prod-trust` 等），auto_gg 不接管下沉 track（先例 06-12/06-15 同构）
+- **scheduled status-scan 停用**（M `STATUS_SCAN.md` 加停用说明 + plist 改名 `.disabled` + D 原 plist）= **Keith 白天有意变更、状态自洽**（已文档化停用原因：usage-monitor exit=4 / gg-audit exit=1 被通用模板误报成「任务失败」飞书告警）。auto_gg **不接管 commit**，留 working tree 给 Keith
 
 ### 2026-06-15（auto_gg 夜间巡检 — Keith 不在场）
 
