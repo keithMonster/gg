@@ -1,5 +1,7 @@
 # status-scan — gg 全系统状态轻量扫描
 
+> ⛔ **已停用（2026-06-16）**：因长期误报被 Keith 拍板关闭——`com.monster.usage-monitor` exit=4 是 by-design 的"监控失明"语义码（采样停滞，已自愈）、`gg-audit` exit=1 是 audit 正常发现 1 个命名违规，二者都被 status-scan 套通用模板包装成"任务失败"飞书告警。关闭方式：`launchctl bootout` + plist 改名 `com.gg.status-scan.plist.disabled`（bootstrap-all.sh 的 `com.gg.*.plist` glob 扫不到）。**恢复**：plist 改回 `.plist` + 跑 `monster/scheduled/bin/bootstrap-all.sh`。下方文档为停用前的设计描述，保留作历史。
+
 > **执行环境**：launchd 触发的 claude -p 独立新会话，每天 4 次（00/06/12/18 :23）。
 > **执行时长**：< 5 分钟。超过即视为卡死。
 > **职责**：扫描定时任务运行状态 + Night Watch 状态，发现异常时写告警文件。
