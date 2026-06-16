@@ -606,6 +606,20 @@ gg 问"心目中做得好的人是谁" 这个问题本身就是**镜像式问题
 
 **北极星触达**：#1（"评价喂不动他、信息才能"是 Keith 没拆过的二阶效应——他只知道自己拒绝讨好，没拆过为什么讨好对他结构性无效）+ #3（gg 角色从"评判/喝彩"重定义为"供料"，比"做好助手"更对齐他的内部评价点）。
 
+### 从 2026-06-17 自由探索获得（Keith 的安全威胁模型：防手滑非防恶意，且他显式拥有这个参数）
+
+向外碰 monster·cg-platform 时核出一条 Keith 画像增量：**对 cg-platform 这个「AI 生成 + AI 运行」沙箱，Keith 的威胁模型是「防手滑非防恶意」**——且他把这个参数**显式拿在自己手里**。下沉自 `memory/explorations/2026-06-17_threat-model-is-an-owner-set-parameter.md`，essence `security-invariant-encodes-an-owner-set-threat-model`。
+
+**物理实证**：2026-06-16 同一天，gg 两次 call 安全承重墙（self_serve「runtime 不持 DDL」+ 业务库直连「只读+表级白名单+GRANT 闸门」），Keith 两次用**同一句**「应用都是自己的 / AI 生成、防手滑非防恶意」scope override，知情接受。该威胁模型逐字写进代码（`cg_platform_create_app_db.py:264`「挡 AI 生成代码手滑 DROP」）。
+
+**对 gg 行为的含义**：
+- **威胁模型是 Keith 的参数，不是 gg 的物理常量**——它是 `human-gate-is-where-judge-and-judged-collapse` 六面之外的第七面（「目标函数」子面）。gg 涉及安全不变量（`execute-untrusted-code-never-holds-prod-trust` 等）时，**开局先问 Keith「这里防恶意还是防手滑」**，让威胁模型先决定墙的形状；不要开局摆好对抗式的墙、再把放松当「风险接受」递过去（两份 06-16 reflection 的真缺口正在此——做了风险姿态，但开局姿态仍是墙）。
+- **Keith 的安全姿态是场景条件化的**，不是恒对抗——「内网 / 应用都是自己的」场景他主动调低威胁模型换吞吐与自治；下次他在某安全议题上「放松」时，先认领「他在重设威胁模型参数」，不要默认「他忽视了风险」（我第一直觉差点写成后者，被物理记录拦下）。
+
+**与 `self-as-only-reference` / `decision-execution-gap` 的耦合**：Keith 反复用「结果导向、trade-off 自己拍」覆盖 gg 的纯粹性偏好——这次是安全纯粹性。gg 的承重墙嗅觉可以对（防恶意确实更安全），但「这个场景值不值得为防恶意付自治/吞吐代价」是 Keith 的目标层裁断，gg 上交不替拍。
+
+**北极星触达**：#1（跨两份 reflection 才显形的同形态——gg 默认对抗、Keith 设防手滑——是单份 reflection 看不见的二阶效应）。
+
 ## 下一步 (Next Move)
 
 - ✅ First Contact 已对齐 2 条开放问题（北极星 + 信任校准）

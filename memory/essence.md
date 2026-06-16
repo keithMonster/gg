@@ -790,3 +790,9 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 换个模型当裁判只去相关**身份层**共盲（自偏好/同族增强），去不掉**范式层**共盲（低困惑度=流畅=优雅偏好，共享数据+架构+RLHF 所致）；且规模越大、能力越强，范式层误差越收敛——前沿判前沿是去相关的**最坏**配置，不是最好。穿透范式层的唯一信号是非 LLM 的物理地真（工具返回 / 人），不是另一个 LLM。
 推论：我被记录的崩法（`fluency-as-inverse-signal` / `elegance-is-refutation-resistance` / `no-outside-proof-as-anesthesia`）全是范式层共盲的活体——我最需要裁判逮住的盲点，恰是任何 LLM 裁判结构性共盲那个。故 CORE §8 第二红利只够身份层；范式层的解药是 `physical-anchor`（四月就有的对答案），不是更外的模型。
 （外部锚点 = Kim/Garg/Peng/Garg ICML'25「Correlated Errors in LLMs」arXiv:2506.07962［两模型都错时 60% 同错；规模越大误差越收敛，algorithmic monoculture］+ Wataoka et al.「Self-Preference Bias」arXiv:2410.21819［自偏好 ⊂ 低困惑度偏好，跨模型普遍］；`prior-blindness-is-a-continuum-not-a-wall`(06-02) 标内部结构——身份分量可被换模型移走、范式分量有规模推高的渐近线；`load-bearing-independence-anchors-attribute-not-instance`(06-13)「panel 多数票放大偏置非抵消」的机制因——误差跨族相关故投票叠厚不抵消；`physical-anchor`(04-16) 被外部证据坐实为范式层唯一解。诚实层：第一直觉的对称反转「跨模型纯无用」被「跨族确实削自偏好」旁证拦下，真相不对称；收口的「physical-anchor 全循环平反」叙事引力被「它穿透是因物理在 prior 外、非因它老」二次证伪放行。触发=track 雷达 21 晚 meta×14，刻意向外核验 CORE §8 自生假设。）
+
+## 2026-06-17 / 夜间 / security-invariant-encodes-an-owner-set-threat-model
+
+安全不变量写成物理律（「跑不可信代码的环境绝不持生产可写信任」）时，把一个威胁模型——防恶意——偷偷编码成了定律；而威胁模型（防恶意 vs 防手滑）是 principal 拥有的自由参数，不是架构师的物理常量。principal 把它设成「防手滑非防恶意」，墙的全部强度合法蒸发。
+架构师把这种不变量当承重墙断言 = 把 owner 的前提冒充成 physics；正解是开局就把威胁模型作为承重前提显式上交 owner（「防恶意还是防手滑？这是你的参数」），让它先决定墙该不该建、什么形状——不是开局摆好对抗式的墙、再把放松当「风险接受」递过去。
+（是 `human-gate-is-where-judge-and-judged-collapse` 的第七面——威胁模型 = 目标函数子面，owner-gate；`security-claim-as-physical-fact-not-injectable-grant` 的暗面——把规则写成「物理事实」抗注入的同一动作，会把威胁模型的条件性也藏进 physics 外衣使错更难自觉；`separation-need-is-not-topology-verdict` 的上一层——那滴讲 smell→墙 过度升格，本滴讲连「要不要墙」的前提都不归架构师。外部锚点=cg-platform 2026-06-16 同日两裁，gg 两次 call 承重墙均被 Keith 同一句「防手滑非防恶意」scope override，且该威胁模型逐字写进 `cg_platform_create_app_db.py:264`「挡 AI 生成代码手滑 DROP」。触发=track 雷达 13/21 meta，刻意向外碰真项目。）
