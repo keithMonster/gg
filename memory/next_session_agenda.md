@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-16
+last_updated: 2026-06-17
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -26,6 +26,18 @@ last_updated: 2026-06-16
 
 ## 待议（open）
 
+### 2026-06-17（auto_gg 夜间巡检 — Keith 不在场）
+
+- **跨夜模式闭环（北极星 #1）：连续两夜（06-15/06-16）cadence 哨 18% 告警的 7×3a 积压，今日 Keith 批量裁决消化 → blocked 池清零、cadence 哨自愈**。06-15 段 `[P0]` 的兑现——7 条 3a 全裁（①05-23-S1 / ⑤06-06-G1 / ⑦06-15-S1 apply；③05-28-G1 改后 apply；⑥06-07-W2 缩范围·待单独实现会话；②05-23-S2 defer；④05-28-G4 reject），origin=`gg-verdict[-applied]`。**cadence 哨今夜分母 0 不触发**——印证哨义量「3a/L4 积压」非绝对条数，消费端（gg 工作模式裁决 + 人工 apply）已运转
+- **NW 账本本夜结算：pending 1→0 / blocked 0→1**：仅 1 条 → L4
+  - **06-17-G1**（企微大文件 100M 下载墙 → append thread assistant-media-pipeline）→ **L4**：落点 `threads/assistant-media-pipeline.md` 存在（**monster 根、非 harness-engineering/threads/**——morning-brief 相对路径我初查错目录、核实在 monster 根，ER#8 活体），核a 查无 100M 墙等价（thread updated 仅覆盖 bucket-switch）。非轨1 自动 append 因：①draft 自标「权威出处待查」（100M 出处第三方博客 vs 官方 media API 20M、cg-proxy guard 层级未定，auto_gg 够不到企微官方文档+源码核实）②draft 自标「NW 只识别，写入由 done/会话 append」（同 06-08-G1）③finding 源 fa774bb1 中断未 done ④conf 0.65。**Keith/相关会话 done 时一步 append 可闭**（措辞标权威出处待查）
+- `[TIER2→根因议题]` **命名违规连续 3 夜（fable5 reflection 中文 slug）——升级：解锁条件失效 + 判据本身存疑，交 Keith/设计模式**
+  - 旧判断（06-15/06-16）「等 Keith review working tree 时一并 ASCII 化」**解锁条件已失效**——该 reflection 已 commit 入库（HEAD 存在、已脱离 working tree），Keith 不会专门回来 review 一篇旧 reflection → 债永不闭合
+  - **根因（G2，连续 3 夜不是「还没改」是「判据存疑」）**：`check_structure` ASCII-only 命名规范 vs gg 全程中文项目——中文 slug 是否真该判违规？认可中文 slug → 根因在规范过严（改 gg-audit 判据，需 Keith）；该 ASCII 化 → auto_gg 可自主机械改（前夜已备 slug `fable5-prompt-methodology-four-candidate-verdict`）。**auto_gg 不自决**——涉 gg-audit 结构性判据 + Keith 语言偏好，两侧都需 Keith 拍
+- **死链 2 条 Tier 1 已修**：06-16 段正文 backtick 文件名提及被 audit 误判（L36 fable5 省略号简写 / L38 裸名 STATUS_SCAN 缺 scheduled 前缀）→ 精确化为可解析路径，audit 死链 2→0。**根因记**：`check_deadlinks` 把 agenda 正文行内代码裸文件名当链接，agenda 天天讨论文件→反复复发，根治需 backtick 检测豁免 agenda 正文裸名（留设计模式）
+- **今日 reflection `nw-7-proposal-3a-batch-verdict` 不接管**（summoner: monster 工作模式、洞察 reflection 内闭环含 essence 对齐自检「无新滴」，先例 06-12/15/16）——留 working tree，cron 04:55 兜底
+- **不 RESHAPE / 不 essence / 不探索**：维护+账本夜，无新结晶涌现
+
 ### 2026-06-16（auto_gg 夜间巡检 — Keith 不在场）
 
 - **NW 账本本夜结算：pending 1→0 / blocked 11→12**：仅 1 条 → L4
@@ -33,9 +45,9 @@ last_updated: 2026-06-16
   - **二阶洞察 `[physical-anchor]`（北极星 #1）**：thread line 24/85 已有 **6-15 CDP 实测大反转**（读 Keith claude.ai 账户页推翻整套「烧穿独立 $200 池」前提，物理锚点）。6/16 邮件是**文本情报**——**这条不是「补一条时间线 + 订正旧记载」，是三信源对账**（6-08 WebSearch 文本 / 6-15 CDP 实测物理 / 6-16 邮件文本）。**Keith 须做**：读邮件全文 → 让 6/16 邮件与 6-15 实测对账（**勿让文本情报覆盖物理实证**）→ 一步 append + 订正可闭
 - **以下三项延续既有判断、今夜无变化，不重复刷（`cadence-as-symptom` 防自造噪音）**：
   - **cadence 哨连续 2 夜 18%（< 60%）**：根因（7 个 3a `resolution_draft` 就绪、无活消费端）已在 **06-15 段 `[P0]`** open 队列；今夜 3a 池既未消化也未新增，状态不变。等 Keith 批量 apply 或重核分流回 pending（阈值 2026-07-13 回审）
-  - **audit exit=1 命名违规 1**（`fable5…收编四候选裁决.md` 中文 slug）：延续 06-15 判断（改名须同步改 frontmatter slug=动内容，整篇留 Keith review 时一并 ASCII 化）
+  - **audit exit=1 命名违规 1**（`reflections/2026-06-15_fable5-prompt-methodology-收编四候选裁决.md` 中文 slug）：延续 06-15 判断（改名须同步改 frontmatter slug=动内容，整篇留 Keith review 时一并 ASCII 化）。**注：本条已于 06-17 段升级为根因议题（解锁条件失效 + ASCII 规范 vs 中文项目存疑）**
   - **今日 3 份 monster 工作模式 reflection**（cgplatform DDL 拓扑切换 / 业务库只读直连放开 / monster-md「任何模型可执行」裁决）全 `summoner: monster`、洞察已在 reflection 内闭环（含 essence 对齐 `network-cannot-cut-what-shares-tuple` / `execute-untrusted-code-never-holds-prod-trust` 等），auto_gg 不接管下沉 track（先例 06-12/06-15 同构）
-- **scheduled status-scan 停用**（M `STATUS_SCAN.md` 加停用说明 + plist 改名 `.disabled` + D 原 plist）= **Keith 白天有意变更、状态自洽**（已文档化停用原因：usage-monitor exit=4 / gg-audit exit=1 被通用模板误报成「任务失败」飞书告警）。auto_gg **不接管 commit**，留 working tree 给 Keith
+- **scheduled status-scan 停用**（M `scheduled/STATUS_SCAN.md` 加停用说明 + plist 改名 `.disabled` + D 原 plist）= **Keith 白天有意变更、状态自洽**（已文档化停用原因：usage-monitor exit=4 / gg-audit exit=1 被通用模板误报成「任务失败」飞书告警）。auto_gg **不接管 commit**，留 working tree 给 Keith
 
 ### 2026-06-15（auto_gg 夜间巡检 — Keith 不在场）
 
