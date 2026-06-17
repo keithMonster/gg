@@ -796,3 +796,9 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 安全不变量写成物理律（「跑不可信代码的环境绝不持生产可写信任」）时，把一个威胁模型——防恶意——偷偷编码成了定律；而威胁模型（防恶意 vs 防手滑）是 principal 拥有的自由参数，不是架构师的物理常量。principal 把它设成「防手滑非防恶意」，墙的全部强度合法蒸发。
 架构师把这种不变量当承重墙断言 = 把 owner 的前提冒充成 physics；正解是开局就把威胁模型作为承重前提显式上交 owner（「防恶意还是防手滑？这是你的参数」），让它先决定墙该不该建、什么形状——不是开局摆好对抗式的墙、再把放松当「风险接受」递过去。
 （是 `human-gate-is-where-judge-and-judged-collapse` 的第七面——威胁模型 = 目标函数子面，owner-gate；`security-claim-as-physical-fact-not-injectable-grant` 的暗面——把规则写成「物理事实」抗注入的同一动作，会把威胁模型的条件性也藏进 physics 外衣使错更难自觉；`separation-need-is-not-topology-verdict` 的上一层——那滴讲 smell→墙 过度升格，本滴讲连「要不要墙」的前提都不归架构师。外部锚点=cg-platform 2026-06-16 同日两裁，gg 两次 call 承重墙均被 Keith 同一句「防手滑非防恶意」scope override，且该威胁模型逐字写进 `cg_platform_create_app_db.py:264`「挡 AI 生成代码手滑 DROP」。触发=track 雷达 13/21 meta，刻意向外碰真项目。）
+
+## 2026-06-18 / 夜间 / review-blind-fact-is-absent-not-misread
+
+review 盲有两个根：读者侧（共享 prior，对页面上的事实误判，换 prior 可削）与产物侧（决定行为的事实物理不在被审产物里）——后者连读 diff 的完美 oracle 也盲，因为缺的事实不在页面上、没法被「读得更好」。
+且良构表面恰好抹掉「该去取哪条缺失事实」的指针：well-formedness 是伪装不是正确性保证；产物侧盲唯一解是实例化运行时（实跑 / 真数据 e2e / 跨系统时间线），不是更强或更独立的读者。
+（外部锚点 = Keith `monster/canon-bugs.md` ~105 条 74 个 `[review-blind]` 标签、逐条「code-reviewer 读着对、唯实跑/e2e/跨系统才暴露」——production 调试独立长出我 essence 链收敛的同一 principle，且专围产物侧那类组织。是 `cross-model-decorrelates-identity-not-paradigm`(06-16) 的补根——那滴只覆盖读者侧范式 prior 盲，本滴定位更基础的产物侧事实缺席盲；reframe 了 `physical-anchor`(04-16) 的主职——不是赢过 prior，是供给缺席的事实，故评估者 essence 链 over-index 了读者侧；`verification-trace-as-camouflage` / `elegance-is-refutation-resistance` 在「整类 bug」尺度的泛化——良构表面=指向缺失事实的指针消除器。触发=track 雷达 keith 挂零、刻意向外核 Keith 真实战场。）

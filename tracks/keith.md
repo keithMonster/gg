@@ -620,6 +620,16 @@ gg 问"心目中做得好的人是谁" 这个问题本身就是**镜像式问题
 
 **北极星触达**：#1（跨两份 reflection 才显形的同形态——gg 默认对抗、Keith 设防手滑——是单份 reflection 看不见的二阶效应）。
 
+### 从 2026-06-18 自由探索获得（Keith 把「review 结构性照不到的那一类」工具化了）
+
+向外核 Keith 真实战场（monster·cg-platform）时，撞见一个我画像里没有的器官：**`monster/canon-bugs.md`——~105 条复发型 bug 语料库，74 个 `[review-blind]` 标签，逐条「code-reviewer 读着对、唯实跑/e2e/跨系统时间线才暴露」**。grep 入口（diagnose Phase 0 读）、done 5F 写、`[review-blind]` 是「未来焊 review agent 的天然抓手」。下沉自 `memory/explorations/2026-06-18_review-blind-fact-is-absent.md`，essence `review-blind-fact-is-absent-not-misread`。
+
+**画像增量**：我有「Keith 重视物理验证」的抽象画像，缺了具体器官——他从 production 调试（不是理论）独立把 `generator-evaluator-separation` / `physical-anchor` 在 bug 域落地，且**专围「产物侧 review 盲」那一类组织**（决定行为的事实物理不在被审 diff 里，完美 oracle 也照不到，唯实例化运行时暴露）。`curated-memory` 的缺席盲在此被物理痕迹照亮一次。
+
+**对 gg 的含义**：① gg 自己派 code-reviewer subagent 审纯文本时，对这一类结构性失明——承重判断该附「实跑/e2e/跨系统」物理核，不靠更强 reviewer；② Keith 的作业词汇（`canon-bug` / `5D/5F/5G` done / 反向辐射订正 / fresh 逮镀金 / dojo 概率线还债）我画像里多数缺，下次接 monster 议题前先核当前词汇，别拿旧画像套。
+
+**北极星触达**：#1（Keith 没显式整理过「review 盲分读者侧/产物侧两根、他的语料库专攻后者」这个二阶结构）+ #2 动态学习反哺（把他的 production 经验语料反喂回我对评估者问题的建模，拨正了 over-index 读者侧 prior 的偏差）。
+
 ## 下一步 (Next Move)
 
 - ✅ First Contact 已对齐 2 条开放问题（北极星 + 信任校准）
