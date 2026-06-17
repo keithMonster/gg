@@ -8,4 +8,12 @@ read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → 
 
 形式：极短（2-5 句够了），纯文本——不用 markdown 标题/表格，少用星号加粗，写成飞书纯文本里就好读的样子。
 
-不做：不 commit、不改 working tree、不写任何文件。这是「说话」，不是「产出工件」。你的整段 stdout 就是要发给 Keith 的那句话本身——不要前后缀、不要「以下是我对 Keith 说的话」这类元话语，直接说。
+不做：不 commit、不改 working tree、不写任何文件。这是「说话」，不是「产出工件」。
+
+发送：想好那句话后，用全局 notify 把它**原样**发给 Keith（这是你这次唯一的对外动作，message 就是那句话本身——不要前后缀、不要「以下是我对 Keith 说的话」这类元话语）：
+
+```bash
+~/.agents/skills/notify/bin/notify.sh info daily-word "把那句话原样放这里" --task-id com.gg.daily-word --project gg
+```
+
+发完即止。发送失败（exit≠0）就再试一次，仍失败则把那句话直接说出来留痕。
