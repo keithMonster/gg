@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-17
+last_updated: 2026-06-20
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,20 @@ last_updated: 2026-06-17
 ---
 
 ## 待议（open）
+
+### 2026-06-20（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[P0]` **🔴 dojo bot OAuth 401 致训练轮丢失——token 刷新机制是基础设施问题，殃及全部 8 个 cc-connect 长驻 bot（Keith 闸·不可逆）**
+  - **症状**：今日 dojo cron 训练题 Keith 答得漂亮（识破 B 系统总成交率虚高=意向客户基数构成误导，分层后 A 陌生 10%>B 8%、A 意向 40%>B 33.33%，辛普森式判断），但 Claude 端连续两次 `401 Invalid authentication credentials`、完全没给评估，Keith 重发一次仍 401 → 训练轮丢失
+  - **根因（morning-brief 外部查证）**：Claude Code OAuth access token 约 8h 过期且**不自动用 refresh token 续期**（known issue #68398/#61912），长驻/无头会话高发。**同一 OAuth 可能殃及其余 7 bot**
+  - **Keith 须做**：查 cc-connect 各长驻 bot 的 token 刷新机制——长驻进程定期 re-login 或注入 `CLAUDE_CODE_OAUTH_TOKEN`。涉 cc-connect 凭据/cron=不可逆，auto_gg 不自主动手
+- **NW `2026-06-20-G1`（P1，pending）= 复合提案，留 pending 不自动 done**：① append dojo thread 记本日 401 中断 + 保留 Keith 答案作 thinker 样本 ② 上述 token 刷新排查。
+  - **① 不自动闭环**：核 a 确认 dojo thread 时间线无 6-20 条目（待写），但与 06-14 轨1 thread-append 先例**本质不同**——06-14 是转写一份**已完成的评估**到 thread（核 a 命中已存在评估），06-20 是 401 没给评估、auto_gg 注入会**创建一条未评估 stub**。dojo thread 是 fresh-subagent 对抗性评估的制品线，注入原始未评估样本偏离其约定 → **留 dojo 主导者下次会话评估后正式落**（样本已物理存于 proposals.jsonl + brief，不会丢）
+  - **② = 上条 token 基础设施问题**，Keith 闸。复合提案含未决 Keith 闸部分 → auto_gg 不标 done（防半 done 埋葬②）
+- **carried（延续无变化，`cadence-as-symptom` 防自造噪音）**：blocked `06-17-G1`（企微 100M 下载墙·L4 待外部）/ pending `06-18-MA1`（tripwire_streak 重跑 behavior-eval 落基线=monster 系统操作非自闭白名单·Keith 闸）/ pending `06-18-G1`（decision-throwback 升 L3 机械检查涉 hook 不可逆·Keith 闸）
+- **命名违规 fable5 连续第 6 夜**：延续 06-17 段升级的 G2 根因议题（ASCII 规范 vs 中文项目存疑），auto_gg 不自决改文件名，待 Keith/设计模式拍
+- **cadence 哨**：blocked 池 n=1（唯一 L4 非 3b），3b 占比 0% 但分母≈1 无统计意义（同 06-17/18/19）。cadence 健康
+- **不 RESHAPE / 不 essence / 不探索**：维护-轻夜，无新结晶涌现
 
 ### 2026-06-17（auto_gg 夜间巡检 — Keith 不在场）
 
