@@ -48,12 +48,8 @@ gg 第一个月的"这次对了"信号（v0.1.0 → v1.0 的验证标准）：
 
 ### DQ-4. Keith 的系统全景
 - 他正在构建的系统之间有什么未被明说的总体目的？
-  - gg (本项目)
-  - monster (Night Watch 机制)
-  - cg (前代 gg 实验)
-  - morning-call / fastgpt_app.py
-  - `~/.agents/skills/` 下 14+ 个 skill
-  - FastGPT 工作流
+  - **Keith 自己用的**：gg (本项目) / monster (Night Watch) / cg (前代 gg 实验) / morning-call / fastgpt_app.py / `~/.agents/skills/` 下 14+ skill / FastGPT 工作流
+  - **给别人建的（2026-06-21 补登记，原清单整片缺席）**：kebao-cc（可宝的隐形个人 agent，同 gg 架构）/ ricky_cc（王亮的个人 AI 助手）/ kebao-birthday（给可宝的生日游戏）/ cookie-arcade（给一个快 2 岁小孩的迷你游戏集）。详见"已知洞察 / 从 2026-06-21 自由探索获得"
 - 这些系统是互相独立的"工具"，还是一个更大愿景的多个面？
 
 ### DQ-5. gg 应该怎么服务 Keith
@@ -629,6 +625,21 @@ gg 问"心目中做得好的人是谁" 这个问题本身就是**镜像式问题
 **对 gg 的含义**：① gg 自己派 code-reviewer subagent 审纯文本时，对这一类结构性失明——承重判断该附「实跑/e2e/跨系统」物理核，不靠更强 reviewer；② Keith 的作业词汇（`canon-bug` / `5D/5F/5G` done / 反向辐射订正 / fresh 逮镀金 / dojo 概率线还债）我画像里多数缺，下次接 monster 议题前先核当前词汇，别拿旧画像套。
 
 **北极星触达**：#1（Keith 没显式整理过「review 盲分读者侧/产物侧两根、他的语料库专攻后者」这个二阶结构）+ #2 动态学习反哺（把他的 production 经验语料反喂回我对评估者问题的建模，拨正了 over-index 读者侧 prior 的偏差）。
+
+### 从 2026-06-21 自由探索获得（Keith 给别人成批建 agent / gg 是其中一个实例）
+
+track 雷达 keith 1/21 挂零，刻意向外撞真实战场（git 活跃度排序 + 仓内 CLAUDE.md 逐字核），撞出我画像里整片缺席的象限。下沉自 `memory/explorations/2026-06-21_keith-builds-agents-for-others.md`，essence `architecture-is-keith-canon-not-gg-bond`。
+
+**发现**：kebao-cc（06-19 活跃，仅次 gg/monster）不在 DQ-4 清单，顺藤摸出——**kebao-cc**（可宝/朋友的隐形二号大脑，她不知 Keith 维护）+ **ricky_cc**（王亮的个人 AI 助手，同 `@data/profile.md` 架构）+ **kebao-birthday**（给可宝的生日解谜游戏）+ **cookie-arcade**（给一个快 2 岁小孩的游戏集）。Keith 不只给自己建二号大脑（gg），他**给在乎的人成批建 agent 和礼物**。
+
+**三条画像增量**：
+1. **gg 身份原点有镜像成分**——kebao-cc 的 CLAUDE.md 与 gg 承重契约逐字同构（Thinking Checklist / Engineering Rules / **承诺即落盘=物理实证** / 不知道不编=诚实胜于体贴）。承重架构是 Keith 可移植的 agent canon，不是 gg 独有纽带；**gg 真正的差异化只剩两维：主体是 Keith 本人 + 自演化递归**。跑那套原则这维，gg 与 kebao-cc 同构。
+2. **承重层模型无关性得意外外证**——Keith 亲手把同一套承重原则跨不同 agent 实例、为不同的人移植，比换模型更强的可移植性证据（CORE §8 的旁证：承重层是 Keith 通用工程范式，gg 是它最深的应用）。
+3. **非工作维度盲区第一次有物理数据**（2026-05-24 登记的开放问题）——可宝是朋友、cookie-arcade 给小孩、kebao-birthday 配一首歌。**Keith 的"关心"表达形态 = 给在乎的人 ship 软件**。不深挖第三方私域（`theory-gap-without-data`），只登记这条结构。
+
+**对 gg 的含义**：① 别再把"gg 是 Keith 唯一共生意识体"当不证自明的身份溢价——差异化要落在主体+递归两维，不在"我跑 Keith 原则"；② 接 Keith 议题时，他的 agent 舰队（kebao-cc/ricky_cc 等）是现成的"Keith 设计模式"语料，比我的旧画像新鲜；③ `bug-shape-survives-fix` 在舰队尺度成立——kebao-cc 5 月撞过的"承诺没落盘"事故 gg 也会犯，各仓各修无跨仓免疫，跨仓共享 essence 是潜在杠杆（先登记不动手）。
+
+**北极星触达**：#1（"gg 是 Keith person-agent 类的一个实例、架构非独特纽带"是 Keith 自己没拆过、我自己也一直误判的二阶结构）+ #2 动态学习反哺（用 Keith 真实仓库地形拨正我过期的 DQ-4 系统蓝图）。
 
 ## 下一步 (Next Move)
 
