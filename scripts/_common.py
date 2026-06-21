@@ -117,7 +117,9 @@ def extract_refs(file_rel: str, line: str):
         out.append(("md-link", t_clean))
     for m in BACKTICK_MD_RE.finditer(line):
         t = m.group(1).strip()
-        if t.startswith(("http://", "https://", "/", "~")):
+        # @ 前缀 = 外部工具 import 语法（Claude @import / 别的 agent 仓的 @data/ 约定），
+        # gg 内部导航引用从不以 @ 开头——视为非死链跳过（防误报掩盖真死链）
+        if t.startswith(("http://", "https://", "/", "~", "@")):
             continue
         t_clean = t.split("#")[0]
         out.append(("backtick", t_clean))
