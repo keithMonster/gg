@@ -296,6 +296,34 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 **给设计模式的建议**（不在夜间执行）：① 垫片层定义补"新能力检疫"对称半边（当前只定义为"补模型缺陷"，漏了"隔离 harness 新能力"）；② 评估 `model` per-invocation + agent teams 是否值得进垫片层接 gg 判断层 evaluator——接口须垫片、不可承重。
 
+### 从 2026-06-23 自由探索获得（06-13 未决冲突结案 + 权威分档）
+
+**触发**：track 雷达 cc 仅 2、architecture 昨夜独占；`tracks/cc.md`「下一步」挂着 06-13 留的未决项。刻意向 cc 走核它。
+
+**06-13「嵌套 depth=5 / Dynamic Workflows」未决冲突——双双确认，博客对、官方文档页错**：
+
+| 争议项 | 裁决 | 权威证据 |
+|---|---|---|
+| 嵌套 depth=5 | **确认** | changelog `v2.1.172 (2026-06-10)`「Sub-agents can now spawn their own sub-agents (up to 5 levels deep)」；`v2.1.181 (06-17)` 修前台 subagent 也守 5 级；depth 5 时 Agent 工具被收走 |
+| Dynamic Workflows | **确认** | changelog `v2.1.154 (2026-05-28)`「orchestrates work across tens to hundreds of agents in the background」+ 本轮会话物理握着 `Workflow` 工具（`agent()`/`parallel()`/`pipeline()`，agent 上限 1000，并发 `min(16,cores-2)`） |
+
+物理工具表自核一致：`Explore = "All tools except Agent"`（受限层收走 Agent，对应 depth5）、`general-purpose / claude = "Tools: *"`（可嵌套）。
+
+**关键时序**：v2.1.172 嵌套能力 **2026-06-10 上线，比 06-13 搜索早 3 天**。能力当时已在——是官方 **sub-agents 文档页**（line 62/361/772「不能嵌套」）没跟上 changelog。06-13 我信了滞后的文档页、判更新更快的博客「大概率错」。
+
+**最大产出——权威分档，按离产物距离排不按"官方与否"排**：
+
+| 档 | 源 | 滞后 |
+|---|---|---|
+| Tier 0 · 地真 | **运行中的 harness = 我自己的工具表** | 零（就是产物本身） |
+| Tier 1 | changelog（带版本号/日期） | 极小 |
+| Tier 2 | 散文文档页（sub-agents.md） | **会滞后**——06-13 的坑 |
+| Tier 3 | SEO 博客 | 吵，但本例比 Tier 2 更新得快 |
+
+那个 Tier 0、零滞后、对"我的基底能做什么"最高权威的源，**每轮注入我上下文（Workflow 工具就在手里）**——跨两次 cc 漫游（06-13 + 今夜）我两次跑去网上查我自己的基底，没读手里的工具。`physical-anchor` 在 cc track 的精确落点 = 读手里的工具 schema，不是再搜一层网。沉淀 essence `toolset-is-the-changelog`。详见 `memory/explorations/2026-06-23_toolset-is-the-changelog.md`。
+
+**对 gg 的接口**：判断层 evaluator 异谱系独立性现有现成工程钩子——`Workflow` 的 `agent({model})` per-invocation 换模型 + depth≤5 嵌套裁判。接口须垫片、不进承重（CORE §8）。
+
 ---
 
 ## 开放问题 (Open Questions)
@@ -329,9 +357,10 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 - ✅ DQ-5 (Skill 协同) — First Contact 已对齐
 - ✅ **Tier B 已落地**：`~/.claude/agents/gg.md` 硬约束节新增 Skill 调用方式（用 Read SKILL.md 而非 tools 字段加 Skill 工具，更稳）
 - ✅ **基底两月波动核验**（2026-06-13 自由探索）：确认 agent teams / background agents / 动态 CLI subagent / 富 frontmatter 等真·新能力；嵌套约束官方仍成立；嵌套 depth=5 博客 vs 官方冲突未决
-- 🔜 **核 CC changelog / 实测 CLI** 裁决嵌套 depth=5 与 Dynamic Workflows 是否真上线（当前博客与官方文档冲突）
+- ✅ **核 CC changelog 裁决嵌套 depth=5 与 Dynamic Workflows**（2026-06-23 自由探索）：双双确认（v2.1.172 / v2.1.154），博客对、06-13 信的官方 sub-agents 文档页滞后于 changelog。教训沉淀 `toolset-is-the-changelog`
+- 🔜 **每次 cc track 触达，先 grep 本轮自己的工具表当一手 changelog（Tier 0 地真），再决定要不要搜网**（toolset-is-the-changelog 落地动作）
 - 🔜 读 Anthropic 的 "Building effective agents" 和 "Multi-agent research system" 博客，沉淀洞察（仍未做）
-- 🔜 设计模式议题：垫片层定义补"新能力检疫"半边 + 评估 per-invocation `model` 接 gg 判断层异谱系 evaluator
+- 🔜 设计模式议题：垫片层定义补"新能力检疫"半边 + 评估 per-invocation `model`（已确认是现成钩子）接 gg 判断层异谱系 evaluator + depth≤5 嵌套裁判
 
 ---
 
