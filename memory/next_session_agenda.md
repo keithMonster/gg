@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-20
+last_updated: 2026-06-22
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,18 @@ last_updated: 2026-06-20
 ---
 
 ## 待议（open）
+
+### 2026-06-22（auto_gg 夜间巡检 — Keith 不在场）
+
+- `[CORE_RULE_TOUCH]` **今日 1 份工作模式 reflection 留 working tree 等 Keith review——auto_gg 不接管**（`summoner: monster`，无设计模式 dd 收尾，state `last_summoned_at` 停 06-10；先例 06-05/09/11/15/17）
+  - ?? `reflections/2026-06-22_chinese-punct-hook-scope.md`（北极星 #1）= gg 工作模式裁中文标点 bash 3.2 bug 的 PreToolUse hook 范围：认同 hook 是对的层，但砍两刀补一刀——砍 Bash matcher（只留 `Write|Edit` target `*.sh/*.bash`）、砍「canon-bugs 自动升通用通道」（读完 30+ 条 canon-bugs 仅中文标点三条件全中=写时可机械检测+修法唯一无副作用+高复发，通用通道=premature abstraction）、补「block vs auto-fix」维裁 **block**（能力>体验，不在我没看见时改我代码）
+  - **无 essence append**：候选 `solution-scope-inflates-past-problem-shape`（确诊问题层后工程本能把解扩张到超过问题形状，OCCAM 在架构层落点）作者自标 N 留 Keith 定夺——append-only 不可逆，auto_gg 不替工作模式 append
+  - **Keith 须做**：① review reflection 措辞 + 落地前核两硬前提（PreToolUse Write/Edit payload 含 `tool_input.file_path`？/ 注释行 `# $var中` 误报是否需预处理）② 定 essence 候选沉/不沉（cron 04:55 兜底 commit reflection）
+- **NW 账本：今日 brief 日报新增 3 提案全 monster canon/thread → 归 monster owner，auto_gg 不接管/不代写**：`06-22-G1`（P1·canon 加调研域兄弟条目：承重架构/契约事实禁采信 subagent 二手摘要、与 Keith 记忆冲突时读真代码裁决）/ `06-22-G2`（P2·canon 选型成本账剥「人类学习成本+复用省工」默认、按 AI-as-developer 重算）/ `06-22-G3`（P2·建桌面/移动客户端 thread，brief 已自标「NW 只识别·写入留 done/Keith」）。落点 monster canon.md/thread 非轨1 白名单 + 行为规则红线人工，无轨1/2/3a 可自闭
+- **carried（延续无变化，`cadence-as-symptom` 防自造噪音）**：pending `06-18-MA1`（tripwire_streak 重跑 eval=monster 系统操作·Keith 闸）/ pending `06-18-G1`（decision-throwback 升 L3 涉 hook·Keith 闸）/ pending `06-20-G1`（dojo 401 复合·①dojo 主导者②token Keith 闸）/ blocked `06-17-G1`（企微 100M 下载墙·L4 待外部）
+- **命名违规 fable5 连续第 8 夜**：延续 06-17 升级的 G2 根因议题（`check_structure` ASCII 规范 vs gg 全程中文项目存疑），auto_gg 不自决改文件名，待 Keith/设计模式拍
+- **cadence 哨**：blocked 池 n=1（唯一 L4 非 3b），3b 占比 0% 但分母≈1 无统计意义（同 06-17~21）。cadence 健康
+- **不 Tier1 修 / 不 RESHAPE / 不 essence / 不探索**：维护-轻夜（连续第 5 夜），无新结晶涌现
 
 ### 2026-06-20（auto_gg 夜间巡检 — Keith 不在场）
 
