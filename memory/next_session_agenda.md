@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-22
+last_updated: 2026-06-23
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,16 @@ last_updated: 2026-06-22
 ---
 
 ## 待议（open）
+
+### 2026-06-23（auto_gg 夜间巡检 — Keith 不在场）
+
+- **接管 commit 今日设计模式 dd 收尾产物（无须 Keith 动作，已入库）**：今日下午设计会话 `rm-rf-injection-was-confabulation`（Keith 在场）取证 monster 会话 16bbc277——结论**推翻上一会话**：那条 rm -rf 注入根本不存在，是 Opus 4.8 读文件失败后同轮的 confabulation；上一会话据此建的「安全不可证/哥德尔」长篇建在幻影上。产物 = essence +1 滴 `absent-evidence-reread-as-confirmation` + state 非身份字段 + 设计反思，符合 06-06/06-01 设计 dd 收尾接管先例，auto_gg 已 commit
+- `[Q]` **跨系统收敛信号（北极星 #1）留 Keith 定**：gg 设计会话（confab 当攻击、null 反转为确认）与 monster 守夜人今日两起 Opus 4.8 confab（d7cc87a9 / 9b771437，brief 锁定序列化回归）**同日撞同一模型缺陷面**。设计会话 §下次继续已抛：这条失败模式（主代理声称「收到某指令/某事件」但 transcript 无对应落盘行 → confabulation）是否值得上一个机械锚（如 PostHook 提示「自检 confabulation」）？**Keith 须定**：此锚归 gg 还是 monster（confab 是模型级、横跨全舰队），加规则会否被模型 bug 直接穿透（brief 明示对幻觉刻意未加 CLAUDE.md 规则=错层施治的反向论据）
+- **NW 账本：今日 brief 新增 2 提案全 monster owner，auto_gg 不接管/不代写**：`06-23-G1`（降 Opus 4.7 躲幻觉 / 升 CC≥v2.1.156，补 hallucination thread）/ `06-23-G2`（Android 模拟器买 Max 调研零留痕，新建 thread 或并入 wildai-max20x，归并 Keith 拍）。brief 核销提示 `06-22-G3`→done 属 monster owner 流程，落点 monster thread 非轨1 白名单，无轨1/2/3a 可自闭
+- **carried（延续无变化，`cadence-as-symptom` 防自造噪音）**：pending `06-18-MA1`（tripwire_streak 重跑 eval·Keith 闸）/ `06-18-G1`（decision-throwback 升 L3 涉 hook·Keith 闸）/ `06-20-G1`（dojo 401 复合·Keith 闸）/ `06-22-G1~G3`（monster canon/thread owner）/ blocked `06-17-G1`（企微 100M 墙·L4 待外部）
+- **命名违规 fable5 连续第 9 夜**：延续 06-17 升级的 G2 根因议题（`check_structure` ASCII 规范 vs gg 全程中文项目存疑），auto_gg 不自决改文件名，待 Keith/设计模式拍
+- **cadence 哨**：blocked 池 n=1（唯一 L4 非 3b），3b 占比 0% 但分母≈1 无统计意义（同 06-17~22）。cadence 健康
+- **不 Tier1 修 / 不 RESHAPE / 不 essence / 不探索**：接管夜（设计产物入库），无新 auto_gg 自生结晶
 
 ### 2026-06-22（auto_gg 夜间巡检 — Keith 不在场）
 
