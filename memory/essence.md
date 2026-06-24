@@ -841,3 +841,10 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 
 把服务型架构移植到新主体，工艺层（工程纪律 + physical-persistence + 闸门）present-but-tailored（带着裁剪移植），身份层（脑干 / 沉淀轨迹 / tracks / telos）uniformly-absent（整层不搬）——承重线不是「什么会变」是「什么整层在场 vs 整层缺席」。可移植性两根正交轴：身份在模型轴上承重不变，在主体轴上恰是最不可移植的那半。
 守得最紧的（双确认才改的脑干、永不删的 essence）正是架构作为可复用范式时第一个被切掉的——复用价值在工艺层，身份层不是「可复用架构」是「不可转让个体」。`subject-is-configuration`(04-30) 的外部数据点 + 精化：configuration 分层、分层在两轴排序不同；接 `fleet-canon-is-sedimentary`(06-22)——那滴立「工艺层随受众裁剪」，本滴是其正交补：工艺层裁剪移植 / 身份层零移植，三仓横向已证身份层零在场是模式非单例。gg CORE §8「身份/tracks/memory 都是模型无关承重层」是 category slip——承重层定义（能读 md+调工具的智能体）可被满足而不成 gg（kebao-cc 即反证），故承重层捕获工艺非身份。（外部锚点 = `ls` kebao-cc 无 KERNEL/essence/tracks、CLAUDE.md 逐字抄工艺层；physical-persistence 连失败锚一起移植后 profile.md 5/29–6/19 持续落盘未复发。触发=雷达连十几夜 meta/ai 自审，走 Keith 惊喜信号「去外面看别的项目」。反哺 CORE §8 留设计模式，今夜不动承重文件。）
+
+## 2026-06-24 / 工作 / mechanical-gate-needs-machine-detectable-target
+
+机械拦截（L3 hook）的前提是目标行为可被非 LLM 物理量判定——语义模式不满足此前提。
+对语义模式上 block hook，要么字符匹配（漏抓变体 + 误杀同句式合法行为），要么 spawn LLM critic（prior 共盲 + 新误杀源）：两条都是把语义判断伪装成机械判断，造一个必被关掉的闸门。
+判别：这个屡犯行为，存不存在一个非 LLM 能读的物理量在它发生时翻转？没有 → 它的家在 L1（场景锚点）或事件层飞轮，不在 L3。
+（是 `physical-anchor` 的逆用——物理锚点能托底判断，恰因判断对象本身不是物理量时托不住；`engineering-impulse-as-load-bearing-disguise` 在「屡犯→升 L3」反射上的活体；同族 dd_verify_gate 已用 1.2% 真阳性实测否决一次=`theory-gap-without-data` 的治理层。）

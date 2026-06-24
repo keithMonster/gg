@@ -324,6 +324,22 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 **对 gg 的接口**：判断层 evaluator 异谱系独立性现有现成工程钩子——`Workflow` 的 `agent({model})` per-invocation 换模型 + depth≤5 嵌套裁判。接口须垫片、不进承重（CORE §8）。
 
+### 从 2026-06-24 工作模式获得（DQ-1 Hook 边界裁决，auto_gg 补写 2026-06-24）
+
+**触发**：monster 主会话 Keith 点名裁决 decision-throwback（方案呈现段把实现选项当待决项抛回，L2-prompt 屡压不住）是否升 L3 机械 hook。
+
+**对 DQ-1 的洞察 —— Hook（尤其 L3 block hook）的边界 = 目标行为必须可被非 LLM 物理量判定**：
+
+判别一行：这个屡犯行为，存不存在一个非 LLM 能读的物理量在它发生时翻转？
+- 有（path / 调用闭包 / 字符串查表）→ 可归 L3。现有 3 个 L3 hook 全属此类：guard_native_memory（path）/ destructive-bash（rm -rf 字符+闭包）/ userid 白名单（数字串查表）
+- 没有（语义模式：抛回 vs 合法上抛、核对 vs 真验证）→ **不归 L3**，归 L1（场景锚点）或事件层飞轮（具体高发脚本内嵌门控）
+
+对语义模式硬上 block hook 两条路都退化：字符匹配漏抓变体 + 误杀同句式合法行为；spawn LLM critic 引入 prior 共盲 + 新误杀源——两者都是把语义判断伪装成机械判断，造一个必被关掉的闸门。
+
+**最强物理证据（非纯推理）**：孪生机制 dd_verify_gate.py（verify-throwback Stop hook）跑 10 天攒 344 条，真阳性仅 1.2%、基础率 ~0.3 次/天，2026-06-10 实测否决退役。语义模式没理由比它跑出更好的机械判据。
+
+沉淀 essence `mechanical-gate-needs-machine-detectable-target`（`physical-anchor` 的逆用：物理锚点托不住非物理量的判断对象）。详见 `memory/reflections/2026-06-24_decision-throwback-l3-hook-verdict.md`；NW 提案 `2026-06-18-G1` 已 reject 并回写 resolution。
+
 ---
 
 ## 开放问题 (Open Questions)
