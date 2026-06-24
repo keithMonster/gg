@@ -848,3 +848,9 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 对语义模式上 block hook，要么字符匹配（漏抓变体 + 误杀同句式合法行为），要么 spawn LLM critic（prior 共盲 + 新误杀源）：两条都是把语义判断伪装成机械判断，造一个必被关掉的闸门。
 判别：这个屡犯行为，存不存在一个非 LLM 能读的物理量在它发生时翻转？没有 → 它的家在 L1（场景锚点）或事件层飞轮，不在 L3。
 （是 `physical-anchor` 的逆用——物理锚点能托底判断，恰因判断对象本身不是物理量时托不住；`engineering-impulse-as-load-bearing-disguise` 在「屡犯→升 L3」反射上的活体；同族 dd_verify_gate 已用 1.2% 真阳性实测否决一次=`theory-gap-without-data` 的治理层。）
+
+## 2026-06-25 / 夜间 / judgment-step-has-no-clean-correctness-target
+
+判断步没有清晰的「对错」靶子——独立裁判再独立，也没有「正确」可对照，只能落回 prior。
+所以评估靶要从「这判断对吗」（不良定义）换成「这判断像不像一个被结果定位过的失败形状」（良定义、结果锚定）——裁判从评分器降格为失败形状召回器。
+（外部坐标 AgentPRM arXiv:2511.08325〔ACM WebConf'26〕承重句双核：「actions in agent tasks do not have a clear-cut correctness…evaluated based on proximity to the goal and progress」——前沿独立判定 agent 动作步无清晰对错、必锚结果〔Shapley 回分 / first-error localization〕。两条独立链压同一点：外部前沿 + gg 自己 `cross-model-decorrelates-identity-not-paradigm`〔自由裁判落回范式层共盲 prior〕。重定 05-31 monster Adjudicator 天花板=不在「同模型 prior」〔暗示换更独立裁判可推〕，在「判断步对错靶子本身不存在」〔再独立也无靶〕——修法不是更好的裁判，是换靶。而 Keith 06-18 `canon-bugs.md` 的 `[review-blind]` 失败形状库正是手搓的结果定位语料，Adjudicator 该是对它的检索匹配而非孤立质询「对吗」。是 `physical-anchor`(04-16) 在判断层的落点 + 06-18 `review-blind-fact-is-absent`(产物侧)的正交补(判断层)。副坐标 Beyond pass@1 arXiv:2603.29231：frontier 模型 meltdown 率最高 19%，能力↑可靠性↓加重而非减轻结果锚必要性。触发=雷达 meta5/keith2、近半月漫游全内向折回，刻意走 ai 接新外部文献落到 monster 活体开放设计。）
