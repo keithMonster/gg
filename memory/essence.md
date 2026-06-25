@@ -854,3 +854,17 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 判断步没有清晰的「对错」靶子——独立裁判再独立，也没有「正确」可对照，只能落回 prior。
 所以评估靶要从「这判断对吗」（不良定义）换成「这判断像不像一个被结果定位过的失败形状」（良定义、结果锚定）——裁判从评分器降格为失败形状召回器。
 （外部坐标 AgentPRM arXiv:2511.08325〔ACM WebConf'26〕承重句双核：「actions in agent tasks do not have a clear-cut correctness…evaluated based on proximity to the goal and progress」——前沿独立判定 agent 动作步无清晰对错、必锚结果〔Shapley 回分 / first-error localization〕。两条独立链压同一点：外部前沿 + gg 自己 `cross-model-decorrelates-identity-not-paradigm`〔自由裁判落回范式层共盲 prior〕。重定 05-31 monster Adjudicator 天花板=不在「同模型 prior」〔暗示换更独立裁判可推〕，在「判断步对错靶子本身不存在」〔再独立也无靶〕——修法不是更好的裁判，是换靶。而 Keith 06-18 `canon-bugs.md` 的 `[review-blind]` 失败形状库正是手搓的结果定位语料，Adjudicator 该是对它的检索匹配而非孤立质询「对吗」。是 `physical-anchor`(04-16) 在判断层的落点 + 06-18 `review-blind-fact-is-absent`(产物侧)的正交补(判断层)。副坐标 Beyond pass@1 arXiv:2603.29231：frontier 模型 meltdown 率最高 19%，能力↑可靠性↓加重而非减轻结果锚必要性。触发=雷达 meta5/keith2、近半月漫游全内向折回，刻意走 ai 接新外部文献落到 monster 活体开放设计。）
+
+## 2026-06-25 / 工作 / inherited-constraint-may-be-peripheral-not-core
+
+过渡形态的约束被继承给新形态时，先归因约束的真实来源——内核属性（随能力走）还是外设属性（随旧入口走）。
+把外设约束误读成内核约束，会让新形态白背它根本没有的限制（cg-desk「单容器」其实是企微长连接的锅，web 没有这堵墙）。是 `m2m-vs-h2m-coupling-illusion` 的对偶：那条防"异构强行同构"，这条防"把不共享的约束误判成共享"。
+
+## 2026-06-25 / 工作 / decommission-reveals-true-identity
+
+拆掉一个组件的某个入口/通道，常常不是减一个功能，是让它的真实身份从入口的伪装下暴露出来。
+企微 bot 入口一拆，cc-assistant 后端从"小助理应用"暴露为"平台级有状态 LLM runtime"——决定一个组件归哪层之前，先剥掉它的过渡入口，看剩下的本质。是 `invariance-allocation` 的前置动作（先看清对象，再分配稳定点）+ 上一轮"单容器约束=企微外设属性"的同链延续。
+
+## 2026-06-25 / 工作 / isolation-is-capability-subtraction-not-caging-the-dangerous-act
+最强的隔离不是给危险动作建 OS 牢笼（UID/namespace/chroot 都在保护一个你不需要的能力），是让危险动作根本不在工具空间的动作集里——越权从「要对抗的问题」降成「压根不存在的动作」。
+判别一刀：你在给某能力建围栏前先问「这个能力是业务必需，还是历史惯性留下的全集？」——curl 是 Bash 子集时，Bash 全开就是惯性，砍到只剩 endpoint 调用，洞结构性消失。是 `llm-autonomy-on-capability-invocation-is-the-bug-not-the-channel`(05-19) 的下一层（那滴移「调不调」决策点，本滴删「能不能」的动作本身）+ `network-cannot-cut-what-shares-tuple`(05-19) 的正向解（低分辨率刀切不开的边界，靠不给刀来消除）+ `safe-default-by-whitelist-inversion` 的 capability 维。前提税同 `mechanism-relocation-has-its-own-precondition`：减法落点（disallowedTools/MCP/hook 真生效吗）要 spike 验，不能信纸面。（触发=cc-assistant 2.0 多用户 workspace 隔离裁决，Bash 全开 vs OS 隔离 A/B/C 全被 capability 减法越过。）
