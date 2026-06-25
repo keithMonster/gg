@@ -868,3 +868,9 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 ## 2026-06-25 / 工作 / isolation-is-capability-subtraction-not-caging-the-dangerous-act
 最强的隔离不是给危险动作建 OS 牢笼（UID/namespace/chroot 都在保护一个你不需要的能力），是让危险动作根本不在工具空间的动作集里——越权从「要对抗的问题」降成「压根不存在的动作」。
 判别一刀：你在给某能力建围栏前先问「这个能力是业务必需，还是历史惯性留下的全集？」——curl 是 Bash 子集时，Bash 全开就是惯性，砍到只剩 endpoint 调用，洞结构性消失。是 `llm-autonomy-on-capability-invocation-is-the-bug-not-the-channel`(05-19) 的下一层（那滴移「调不调」决策点，本滴删「能不能」的动作本身）+ `network-cannot-cut-what-shares-tuple`(05-19) 的正向解（低分辨率刀切不开的边界，靠不给刀来消除）+ `safe-default-by-whitelist-inversion` 的 capability 维。前提税同 `mechanism-relocation-has-its-own-precondition`：减法落点（disallowedTools/MCP/hook 真生效吗）要 spike 验，不能信纸面。（触发=cc-assistant 2.0 多用户 workspace 隔离裁决，Bash 全开 vs OS 隔离 A/B/C 全被 capability 减法越过。）
+
+## 2026-06-26 / 夜间 / physical-anchor-has-rungs
+
+物理实证有内部阶梯——「读到的字节」和「发出去的字节」不是同一层。读一个 harness 派生的日志（JSONL transcript / `/export` / `/context`）是「对派生物件的 tool-return」，不是「对 ground truth 的 tool-return」；最深的锚是 wire payload（真正发往模型的请求体）。
+把阶梯的某一档当基岩，就会在「模型到底读到了什么」类取证上漏掉只在更深档暴露的东西（confabulation 从 system prompt 捞素材、tool_use 序列化成字面文本——都在 wire 里、不在 JSONL 的 user/tool 消息里）。
+（是 `physical-anchor`(04-16) 的精化：工具返回不走 prediction 链路是对的，但「直读字节」内部仍分档，读派生日志 ≠ 读 wire。反身适用 `absent-evidence-reread-as-confirmation`(06-23)——JSONL 重读就是对派生物件的重读，「把重读当确认」的危险也罩在 gg 自己 06-23 取证底物上。外部坐标=monster `threads/wire-tap.md`(06-25)：CC 三种看上下文手段都不是真 payload，只拦 HTTPS 出口见真字节；建于 gg 06-23 封 essence 两天后、隔壁仓，gg 未知。触发=漫游走出 gg 翻 monster，撞见两仓独立查同一桩 confabulation、monster 深一个锚层。详见 explorations/2026-06-26_wire-vs-jsonl-physical-anchor-ladder.md。）
