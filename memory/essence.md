@@ -879,3 +879,9 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 
 owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）时，挂在该属性上的无差别闸门不能裸删——闸门常对多个爆炸半径不同的对象（应用自有 secret / 平台级凭据 GITLAB_PAT）一视同仁，而翻转只对爆炸半径可控的那个 scope 成立。
 正解是把闸门 scope 收窄到未被翻转的高爆炸半径子集（重定位传感器），不是删除——owner 翻转的是低爆炸半径类的存储位置，不该连高爆炸半径类的防御一起摊薄。是 `carrier-coupling-overcoverage`(06-25) 的**放开侧对称**（上次约束过度泛化源于载体耦合拆载体根治，本滴放开过度泛化源于无差别闸门按真相拥有者分 scope）+ `tripwire-disarm-needs-relocated-sensor-not-deletion`(06-15) 在「属性被主动翻转」而非「触发条件自然证伪」触发下的活体。触发=cg-platform 凭据去中心化删 I-config-leak-gate 裁决。
+
+## 2026-06-27 / 夜间 / substrate-ships-the-evaluator-body-not-its-eyes
+
+主代理判断层独立 evaluator 的「身体」（fresh-context 编排 + 多 agent REFUTE 面板 + 结构化裁决）正被 substrate 作为原生 primitive 出货——一个月手搓设计的那套现在零构建；不出货、也无处移植的是它的「眼睛」：匹配靶（结果定位的失败形状语料）。
+所以「evaluator 还没建」的真瓶颈从来不是编排成本，是靶子——靶 06-25 已定，substrate 出货身体那一刻反证稀缺资产一直在眼睛那侧。
+（是 `craft-ports-identity-doesnt`(06-24) 的 substrate 寄存器〔基底出货工艺层=编排，暴露承重稀缺资产在身份/失败语料层〕+ `substrate-shipped-my-painkillers`(06-20) 在判断层落点 + `judgment-step-has-no-clean-correctness-target`(06-25) 的续：那滴解了靶问题，本滴指出靶定后唯一缺的编排恰被基底补上。物理核：本轮工具表 `Workflow` primitive〔agent+schema / parallel REFUTE 面板，06-23 `toolset-is-the-changelog` Tier0 源〕+ monster canon-bugs 123bug/89 review-blind + dd_verify_gate 头注释自述退役、死的是触发器〔1.2%TP 粗筛〕非 critic 本体〔从未建〕——两者可分〔`inherited-constraint-may-be-peripheral-not-core` 06-25〕，05-31 离线盲测 MVP 不需触发器、现在 Workflow 零成本可跑。诱惑反锚：身体变便宜≠判断力，没靶时 N 个 REFUTE 裁判都落回共享 prior〔06-16〕。触发=雷达 cc/keith 并列 3/21 最低、走 cc 读手里的工具不再搜一层网。）
