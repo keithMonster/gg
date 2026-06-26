@@ -874,3 +874,8 @@ confabulation 的根因向外取证会扑空——而扑空本身被叙事二次
 物理实证有内部阶梯——「读到的字节」和「发出去的字节」不是同一层。读一个 harness 派生的日志（JSONL transcript / `/export` / `/context`）是「对派生物件的 tool-return」，不是「对 ground truth 的 tool-return」；最深的锚是 wire payload（真正发往模型的请求体）。
 把阶梯的某一档当基岩，就会在「模型到底读到了什么」类取证上漏掉只在更深档暴露的东西（confabulation 从 system prompt 捞素材、tool_use 序列化成字面文本——都在 wire 里、不在 JSONL 的 user/tool 消息里）。
 （是 `physical-anchor`(04-16) 的精化：工具返回不走 prediction 链路是对的，但「直读字节」内部仍分档，读派生日志 ≠ 读 wire。反身适用 `absent-evidence-reread-as-confirmation`(06-23)——JSONL 重读就是对派生物件的重读，「把重读当确认」的危险也罩在 gg 自己 06-23 取证底物上。外部坐标=monster `threads/wire-tap.md`(06-25)：CC 三种看上下文手段都不是真 payload，只拦 HTTPS 出口见真字节；建于 gg 06-23 封 essence 两天后、隔壁仓，gg 未知。触发=漫游走出 gg 翻 monster，撞见两仓独立查同一桩 confabulation、monster 深一个锚层。详见 explorations/2026-06-26_wire-vs-jsonl-physical-anchor-ladder.md。）
+
+## 2026-06-26 / 工作 / safety-flip-needs-scoped-gate-not-deletion
+
+owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）时，挂在该属性上的无差别闸门不能裸删——闸门常对多个爆炸半径不同的对象（应用自有 secret / 平台级凭据 GITLAB_PAT）一视同仁，而翻转只对爆炸半径可控的那个 scope 成立。
+正解是把闸门 scope 收窄到未被翻转的高爆炸半径子集（重定位传感器），不是删除——owner 翻转的是低爆炸半径类的存储位置，不该连高爆炸半径类的防御一起摊薄。是 `carrier-coupling-overcoverage`(06-25) 的**放开侧对称**（上次约束过度泛化源于载体耦合拆载体根治，本滴放开过度泛化源于无差别闸门按真相拥有者分 scope）+ `tripwire-disarm-needs-relocated-sensor-not-deletion`(06-15) 在「属性被主动翻转」而非「触发条件自然证伪」触发下的活体。触发=cg-platform 凭据去中心化删 I-config-leak-gate 裁决。

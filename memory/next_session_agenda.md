@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-23
+last_updated: 2026-06-26
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,16 @@ last_updated: 2026-06-23
 ---
 
 ## 待议（open）
+
+### 2026-06-26（auto_gg 夜间巡检 — Keith 不在场）
+
+- **接管 commit 今日 2 份工作模式 dd 收尾产物（无须 Keith 动作，已入库）**：`cgplatform-secrets-decentralize-leak-gate-relocate`（北极星 #1：删 I-config-leak-gate 的二阶=Keith 翻转的安全属性有隐含 scope=应用自有 secret，无差别删会泛化到平台凭据 GITLAB_PAT，正解=重定位传感器收窄 scope 非裸删）+ `taste-core-web-contract-structure`（北极星 #1：按「载体-不变性」而非内容分类切层，14 条 web 工艺全归 frontend-design 执行器、taste-core 只扩零参数判断式+指针）。产物 = essence +1 滴 `safety-flip-needs-scoped-gate-not-deletion`（append-only 合规）+ state 非身份字段 + 2 reflection，核心规则文件全未动，符合 06-24/06-25 接管先例
+- `[STRATEGIC]` **cadence 哨第三独立确认「善后臂停摆」（北极星 #1，跨夜视角合流）**：我算出 blocked `track=3b`=0%（7 blocked = 4×L4 + 3×3a，0×3b），与 ① monster meta_audit 机械哨（`2026-06-26-MA1` tripwire_streak 连 3 天命中无人善后 / `MA2` lint 存量 45 七天未降）② Keith 人工诊断（会话 c76963f1「很久没做机制优化」精确改诊断为「不是机制没人优化，是善后臂停摆——15 tripwire 全在岗、夜巡环准点，但报警报进空房间」）**三路独立信号指向同一结论：NW 消费层缺口是真的**。Keith 拍「先留档后处理」（21 项债清单已落 monster-architecture.md）。**Keith 须做**：择日捡起 MA1/MA2 + 21 项债，这是 NW 体系自身的善后闭环；不处理则传感器持续空报、信噪比衰减。3a 积压根因=auto_gg 只吸 pending 不回吸 blocked + 存量 3a 无活消费端，需人工重核分流回 pending 才能重进轨1（阈值 2026-07-13 回审）
+- **NW 账本：3 pending 全今日 brief 新生 + monster owner，Keith 今日已主动 defer，auto_gg 不接管/不代写**：`06-26-MA1`（meta_audit tripwire_streak 善后）/ `06-26-MA2`（lint_backlog 45）/ `06-26-G1`（新建 thread ai-engineering-from-scratch，brief 标「由 done/你定」）。非轨1 白名单（新建 thread / 系统操作 = 语义判断 + 红线人工），churn proposals.jsonl 无益不动
+- **carried blocked（延续无变化，`cadence-as-symptom` 防自造噪音）**：3a `06-22-G1/G2`（canon 调研域兄弟条目 / AI-as-developer 成本账）+ `06-25-G3`（canon-bugs subagent cwd 串扰），三条 gg 判断 draft 现成、物理 canon 改待人工 apply；L4 `06-17-G1`（企微 100M 墙待外部）/ `06-18-MA1`（tripwire_streak 重跑 eval·Keith 闸）/ `06-20-G1`（dojo 401 复合·Keith 闸）/ `06-25-G1`（cgplatform 后缀键 thread 补记——注：今日 cgplatform 决策已 supersede 后缀键，该 thread 补记的事实已变，落地时一并订正）
+- `[可靠性]` **Opus 4.8 `[1m]` 工具泄漏今日 ≥4 起复发**（brief 发现 2，会话 57381813/b746c2d1/38100a74/4fa861a7）：工具调用泄漏成 `<invoke>` 文本 / bash 乱码 / 子代理谎报落盘。根因 canon-bugs line 29（`/compact`/长会话 tool_use 序列化回归），外部今日证实官方未修（GH #64108/#64658 open），补强：几乎只命中 Edit/Read 不碰 Bash + fresh session > /compact。属 L4 模型层、CLAUDE.md 规则治不了，靠会话模型路由兜底（承重长会话避 `[1m]`、卡住直接 fresh 不 /compact）
+- **命名违规 fable5 连续第 12 夜**：延续 06-17 升级的 G2 根因议题（`check_structure` ASCII 规范 vs gg 全程中文项目存疑），auto_gg 不自决改文件名，待 Keith/设计模式拍
+- **不 Tier1 修 / 不 RESHAPE / 不 essence / 不探索**：接管夜（工作产物入库 + cadence 哨上浮），无新 auto_gg 自生结晶
 
 ### 2026-06-23（auto_gg 夜间巡检 — Keith 不在场）
 
