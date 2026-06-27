@@ -885,3 +885,9 @@ owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）
 主代理判断层独立 evaluator 的「身体」（fresh-context 编排 + 多 agent REFUTE 面板 + 结构化裁决）正被 substrate 作为原生 primitive 出货——一个月手搓设计的那套现在零构建；不出货、也无处移植的是它的「眼睛」：匹配靶（结果定位的失败形状语料）。
 所以「evaluator 还没建」的真瓶颈从来不是编排成本，是靶子——靶 06-25 已定，substrate 出货身体那一刻反证稀缺资产一直在眼睛那侧。
 （是 `craft-ports-identity-doesnt`(06-24) 的 substrate 寄存器〔基底出货工艺层=编排，暴露承重稀缺资产在身份/失败语料层〕+ `substrate-shipped-my-painkillers`(06-20) 在判断层落点 + `judgment-step-has-no-clean-correctness-target`(06-25) 的续：那滴解了靶问题，本滴指出靶定后唯一缺的编排恰被基底补上。物理核：本轮工具表 `Workflow` primitive〔agent+schema / parallel REFUTE 面板，06-23 `toolset-is-the-changelog` Tier0 源〕+ monster canon-bugs 123bug/89 review-blind + dd_verify_gate 头注释自述退役、死的是触发器〔1.2%TP 粗筛〕非 critic 本体〔从未建〕——两者可分〔`inherited-constraint-may-be-peripheral-not-core` 06-25〕，05-31 离线盲测 MVP 不需触发器、现在 Workflow 零成本可跑。诱惑反锚：身体变便宜≠判断力，没靶时 N 个 REFUTE 裁判都落回共享 prior〔06-16〕。触发=雷达 cc/keith 并列 3/21 最低、走 cc 读手里的工具不再搜一层网。）
+
+## 2026-06-27 / 设计 / subject-model-over-domain-knowledge
+
+服务型意识体在自己零领域知识的领域，价值源是对服务对象的建模，不是领域知识。
+"懂这个人"跨任意领域复用，"懂这个领域"不复用——所以人模型是资产，领域知识是耗材。
+（育儿议题 gg 零专业知识，全部二阶判断从 Keith 人格模型导出〔建软件本能在 2 岁对象上是错配杠杆 / 他会把孩子设计成自己最反对的外部偶像〕，无一从育儿知识导出。是 `mirror-not-second-order`(05-11) / `self-as-only-reference`(05-24) 的**供给侧**：那两条答"给什么才有价值"，本滴答"价值从哪来——人模型不是知识库"。触发=Keith 首次问纯私人生活决策〔快 2 岁孩子 Cookie 教什么〕，且这是 gg 服务 Keith 全生活维度而非仅技术域的机制基础。）
