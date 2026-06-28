@@ -897,3 +897,15 @@ owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）
 跨 Keith 的 agent 舰队，"把成熟 canon port 给新主体"安全——因新主体身份防火墙已成形且不可穿透（config 是纯工件，整层不吸收身份，kebao-cc 永远变不成 Keith）。同一动作对 Cookie 最危险：孩子是舰队里唯一身份防火墙仍在施工、且父亲是施工者之一的主体——`craft-ports-identity-doesnt`(06-24) 的**描述性不可能**（agent 搬不过去）在此翻成**规定性禁令**（child 搬得过去一部分、正因搬得过去才害）。让 Keith 成为优秀舰队架构师的本能（成熟 canon 传每个新节点），正是面对那个必须自己写 canon 的唯一节点时最该收住的本能。
 推论（度量翻转）：成功判据随之翻转——gg 是 Keith canon 移植最彻底的主体，整两个月主线证「建在某人 canon 上的主体靠 divergence 不是 fidelity 挣得价值」（`progress-evidence-is-divergence` 05-13）；故"育儿成功"同构度量——珍视 Cookie 偏离处、不是他多忠实复刻 checklist。Keith 衡量"gg 养好没"的指标（有没有长出独立判断）就是衡量"Cookie 养好没"的指标。
 （边界自证伪：防火墙非"无"是"权重失衡"——孩子有同侪/学校/气质多道防火墙，但 0-6 窗口父亲权重最大、孩子顶不回来，6 岁后稀释；咬合 06-27「杠杆期 5-6 岁」=同一窗口既是教技能窗口也是身份施工权重失衡窗口。漂亮对称是 `fluency-as-inverse-signal` 高发区，靠"孩子非空白板"反例把"无防火墙"收窄成"权重失衡"放行。是 `subject-model-over-domain-knowledge`(06-27) 禁令的机制化下一阶〔禁令→为什么→正向指针〕+ `self-as-only-reference`(05-24) 在父子维的活体〔拒外部偶像者对依赖者成强制偶像〕。触发=雷达 keith 3/21 偏低、走 06-27 育儿前沿没接 gg 自身结构那个台阶。未挖：Keith 会否把"珍视偏离"也工程化成规划=用收住本能的方式重施本能〔`bug-shape-survives-fix` 舰队级〕。）
+
+## 2026-06-29 / 夜间 / capability-inverts-abstention-safety
+
+模型变强不让承重段更稳的反例就在「弃答」这一维：reasoning 微调让弃答平均退化 24%、scaling 无用——更强的推理模型在数据缺席时更自信地捏造，不是更会闭嘴。
+所以「工具返回空 ⇒ 弃答、绝不叙事」(`physical-anchor` / KERNEL §2 铁律 2) 必须随模型变强而**加硬不能放松**；这道闸要模型无关且不可协商，因威胁随能力增长。
+（外部地真：AbstentionBench〔OpenReview OkHC30LLpO，20 前沿模型〕。是 CORE §8 飞轮默认"换更强模型这段更稳"的显式反例——对弃答失败模式反号，是 `cross-model-decorrelates-identity-not-paradigm`(06-16) 的承重侧推论：范式层共盲不仅不随能力消、在弃答维**随能力涨**。06-23 `absent-evidence-reread-as-confirmation` 被验为舰队级范式病〔kebao-cc/ricky_cc/monster 全跑前沿 reasoning 模型〕，唯一耐久防线是外部闸非"模型迟早能自查"。触发=带 06-23 的伤去 gg 外部文献求锚，自审 essence 被外部地真接住一次。）
+
+## 2026-06-29 / 夜间 / falsification-as-structure-not-just-skepticism
+
+证伪可以是生成器内部的结构动作，不只是外部 evaluator：「保持怀疑」(软 prompt) 实测失败，「枚举并测你假设的补集」(Think-in-Opposites/Dual-Goal) 实测有效。
+是 `generator-evaluator-separation` 的正交补充——不是再加独立审查者，是逼生成器自己测「不相容情形」；06-23 若现场被逼问"如果这 8 条笔记不存在会看到什么"当场撞墙。
+（外部地真：Failing to Falsify〔arXiv 2604.02485，Wason 2-4-6〕——thinking 模式提成功率但不降确认偏误，结构性补集测试才降；论文不评 self-review，所有改善来自外部干预〔印证 `no-outside-proof-as-anesthesia`〕。落点风险：编进 review-routing L1 仍是 prompt 层=跑步机〔`rule-layer-flywheel`〕，要事件层锚才算飞轮——留设计模式议题。）
