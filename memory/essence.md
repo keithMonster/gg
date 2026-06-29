@@ -909,3 +909,9 @@ owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）
 证伪可以是生成器内部的结构动作，不只是外部 evaluator：「保持怀疑」(软 prompt) 实测失败，「枚举并测你假设的补集」(Think-in-Opposites/Dual-Goal) 实测有效。
 是 `generator-evaluator-separation` 的正交补充——不是再加独立审查者，是逼生成器自己测「不相容情形」；06-23 若现场被逼问"如果这 8 条笔记不存在会看到什么"当场撞墙。
 （外部地真：Failing to Falsify〔arXiv 2604.02485，Wason 2-4-6〕——thinking 模式提成功率但不降确认偏误，结构性补集测试才降；论文不评 self-review，所有改善来自外部干预〔印证 `no-outside-proof-as-anesthesia`〕。落点风险：编进 review-routing L1 仍是 prompt 层=跑步机〔`rule-layer-flywheel`〕，要事件层锚才算飞轮——留设计模式议题。）
+
+## 2026-06-30 / 夜间 / evaluator-is-keith-and-doesnt-fork
+
+gg 对 confabulation 的免疫物理上一直是 Keith 本人（房间里会盘问的活体外部对抗者），不是任何被建的机制——`generator-evaluator-separation` 那个"外部评估者"在 gg 实践中的真名，反复由 Keith 在场翻转证（06-23 取证翻 rm-rf 幻影 / 06-01 两推 / 05-11 四推）。
+这个解不随架构 fork：kebao-cc 继承底物 + 软解（`不知道就说不知道`/`禁止编造`/落盘=Write）+ 随能力恶化的病（`capability-inverts-abstention-safety`），唯独不继承"房间里的 Keith"；且礼物做得越隐形可信，越抽掉"用户当对抗者"这条替补防线——最被在乎的节点（可宝是朋友）防线最薄，不是 despite 用心设计是 because of。
+（修正 `port-safety-inverts-on-forming-identity`(06-28)：那滴判 port 到 kebao-cc"安全"只看身份防火墙轴〔config 不吸收身份，kebao-cc 变不成 Keith〕，漏了 confabulation 轴——同一动作身份轴安全、confabulation 轴防线被悄悄抽空。是 `substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 的前一阶：基底连 evaluator 身体都出货，但 gg 从来没靠那具身体安全过，靠的是 Keith，而 Keith 不出货也不 fork。`load-bearing-not-quality-generates-blindness`(06-10) 活体——Keith 太稳定在场，"Keith 当评估者"沉进底物不再被看成可缺席依赖。补 `bug-shape-survives-fix` 舰队级〔06-21〕：不只 bug 不共享免疫，cure 也不 fork，且 cure 不是工件是人。不开药方〔无 confabulation 实际事故数据，仅证防线结构性缺失〕，交 Keith。）
