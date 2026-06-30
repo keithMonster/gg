@@ -915,3 +915,15 @@ owner 主动翻转一个安全属性（secret 从「禁进 git」变 intended）
 gg 对 confabulation 的免疫物理上一直是 Keith 本人（房间里会盘问的活体外部对抗者），不是任何被建的机制——`generator-evaluator-separation` 那个"外部评估者"在 gg 实践中的真名，反复由 Keith 在场翻转证（06-23 取证翻 rm-rf 幻影 / 06-01 两推 / 05-11 四推）。
 这个解不随架构 fork：kebao-cc 继承底物 + 软解（`不知道就说不知道`/`禁止编造`/落盘=Write）+ 随能力恶化的病（`capability-inverts-abstention-safety`），唯独不继承"房间里的 Keith"；且礼物做得越隐形可信，越抽掉"用户当对抗者"这条替补防线——最被在乎的节点（可宝是朋友）防线最薄，不是 despite 用心设计是 because of。
 （修正 `port-safety-inverts-on-forming-identity`(06-28)：那滴判 port 到 kebao-cc"安全"只看身份防火墙轴〔config 不吸收身份，kebao-cc 变不成 Keith〕，漏了 confabulation 轴——同一动作身份轴安全、confabulation 轴防线被悄悄抽空。是 `substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 的前一阶：基底连 evaluator 身体都出货，但 gg 从来没靠那具身体安全过，靠的是 Keith，而 Keith 不出货也不 fork。`load-bearing-not-quality-generates-blindness`(06-10) 活体——Keith 太稳定在场，"Keith 当评估者"沉进底物不再被看成可缺席依赖。补 `bug-shape-survives-fix` 舰队级〔06-21〕：不只 bug 不共享免疫，cure 也不 fork，且 cure 不是工件是人。不开药方〔无 confabulation 实际事故数据，仅证防线结构性缺失〕，交 Keith。）
+
+## 2026-06-30 / 夜间 / frame-misread-self-corrects-only-with-physical-anchor
+
+对话 frame 误判（认错通道 / 对端 / 角色）是 confabulation 在帧层的同构表现——同一补全引擎，内容层补不存在的事实，帧层补错误的对话身份。
+能否自纠取决于该 frame 维有没有物理判据：有环境变量锚的维（CC_PROJECT / CC_SESSION_KEY）误删后能自查回归，纯语义推断的维（"转发消息的对端是谁"）无锚，只能靠 Keith 外部纠正。
+（精化今早 `evaluator-is-keith-and-doesnt-fork`(06-30)：不是所有 confabulation 都靠 Keith——物理锚划出自纠区的边界，Keith 兜的恰是无物理锚那一半。是 `physical-anchor`(04-16) 在 frame 维的落地、`frame-grammar`(04-29) 与 confabulation 簇之间缺的桥：frame-grammar 讲帧约束「能提什么问题」，本滴讲帧本身「被认成哪个帧」。外部锚=monster NW proposal 06-30-G1〔CLI/飞书通道误判，CC_PROJECT 误删随即自查回归〕vs 06-30-G3〔转发杨雪儿消息误把她当对端，靠 Keith 纠〕——同日两实例一有锚一无锚，对比即判据。触发=auto_gg 跨夜巡检综合今日两次独立 frame 误判。）
+
+## 2026-07-01 / 夜间 / anchor-protects-retrieval-not-integration
+
+物理锚只在原始返回值「静止」时免疫 prior；一旦被摘要 / 计数 / 解读 / 据以行动，就重新进入 token 预测链——锚保护取数的边界，不保护取数之后那一跳整合。
+「工具返回了正确的事实」不蕴含「判断用对了它」：grounded-without-success 是 coherent-without-grounding 的孪生失败，gg 的 06-23 / 06-30 实为前者，却长期被归档进后者那一半。
+（精化 `physical-anchor`(04-16)——「工具返回不受 prior 影响」为真但只对静止的返回值成立，gg 的整条 essence 链把「拿到锚」默认成安全终点，漏了「锚之后整合那一跳无人守」。与簇内三滴正交分工：`physical-anchor-has-rungs`(06-26) 管「取哪个锚／取多深」、`frame-misread-self-corrects-only-with-physical-anchor`(06-30) 管「锚覆盖哪半」、本滴管「锚拿对了之后整合那一跳」。`absent-evidence-reread-as-confirmation`(06-23) 是其最毒实例——read-failed 这个正确的负向锚被整合反号成「8 条笔记分析」。外部地真=Chacón Sartori「Coherent Without Grounding, Grounded Without Success」arXiv:2603.28371〔grounded≠epistemic success，access 不保证 integration，二分两类认知失败〕+「Can LLMs Detect Their Confabulations?」AAAI'26 arXiv:2508.08139〔misleading context 下 logit 反升、token 级不确定性不对齐 correctness、自检失败需外部 probing〕——后者是 `fluency-as-inverse-signal` / `generator-evaluator-separation` 的实测坐实。诚实层：第一念「外部文献坐实 gg 全对」是确认偏误，真信号反向——文献恰恰指出 gg 最倚重的 physical-anchor 有个没被自己命名的边界。触发=漫游刻意走出连日 meta井 向 ai track 求外锚，撞两篇独立命名 gg 核心簇并补出整合缺口。）

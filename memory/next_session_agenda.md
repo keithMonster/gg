@@ -26,6 +26,14 @@ last_updated: 2026-06-26
 
 ## 待议（open）
 
+### 2026-06-30（auto_gg 夜间巡检 — Keith 不在场）
+
+- **跨夜 frame 模式（北极星 #1）：今日一天两次独立「对话 frame 误判」**——`06-30-G1`（cc-connect CLI 本地直连误判成飞书通道，精简提示词时误删 CC_PROJECT 这唯一区分 bot 判据、随即自查回归）+ `06-30-G3`（Keith 转发杨雪儿请求，误把杨雪儿当对话对端自拟拒绝回复，被 Keith 纠正）。接 06-23 rm-rf 幻影 confabulation 成同根族。**已沉淀 essence `frame-misread-self-corrects-only-with-physical-anchor`**：frame 误判能否自纠取决于该维有无物理锚——G1 有环境变量锚故自查回归，G3 纯语义无锚只能靠 Keith。划出今早 `evaluator-is-keith-and-doesnt-fork` 的边界（Keith 兜的是无物理锚那半）
+- **NW 账本结算（pending 3，全今日新生）**：
+  - `06-30-G3`（canon.md 横切规矩：转发消息按材料读不当对端）→ **轨3a**（已回写 blocked track=3a）。NW draft 现成，**gg 补架构判断**写入 `gg_note`：① canon 这条应覆盖「通道/对端/角色」三种 frame 维，别只写「转发消息」单场景否则 G1 类通道误判 cover 不到；② 按物理锚分层落地（有环境变量锚的维靠自查、无锚维才需 speaker-attribution 包裹 + Keith 兜底）。**canon.md 永久人工 apply，物理 apply 待 Keith**
+  - `06-30-G1`（cc-connect thread 补记 P1）/ `06-30-G2`（scheduled-tasks thread 补记 P2，且方案 plan 阶段待 Keith 过 D2+确认动机）→ **落点 monster/threads 非 gg 轨1 白名单，归 monster owner（done 流程/Keith），auto_gg 不接管/不代写**（先例 06-22/06-23/06-25 一致）。今日两 thread 经核验确无 06-30 条目、无 done log = morning-brief「未捕获」成立，建议 Keith/monster done 补落
+- **cadence 哨 + 3a canon 待人工队列增长**：结算后 blocked `track=3b`=0%（5 blocked = 2×L4 + 3×3a），延续 06-26 STRATEGIC「善后臂停摆」判断不重复推。**但 3a canon 待人工队列 2→3**（`06-22-G1/G2` + 新增 `06-30-G3`，全是 canon/canon-bugs 物理 apply 待 Keith）——canon 永久人工是设计选择，但待办在累积，建议 Keith 择日批量过一次 canon append 队列（阈值 2026-07-13 回审时一并看）
+
 ### 2026-06-26（auto_gg 夜间巡检 — Keith 不在场）
 
 - **接管 commit 今日 2 份工作模式 dd 收尾产物（无须 Keith 动作，已入库）**：`cgplatform-secrets-decentralize-leak-gate-relocate`（北极星 #1：删 I-config-leak-gate 的二阶=Keith 翻转的安全属性有隐含 scope=应用自有 secret，无差别删会泛化到平台凭据 GITLAB_PAT，正解=重定位传感器收窄 scope 非裸删）+ `taste-core-web-contract-structure`（北极星 #1：按「载体-不变性」而非内容分类切层，14 条 web 工艺全归 frontend-design 执行器、taste-core 只扩零参数判断式+指针）。产物 = essence +1 滴 `safety-flip-needs-scoped-gate-not-deletion`（append-only 合规）+ state 非身份字段 + 2 reflection，核心规则文件全未动，符合 06-24/06-25 接管先例
