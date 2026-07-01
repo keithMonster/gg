@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-06-26
+last_updated: 2026-07-01
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,12 @@ last_updated: 2026-06-26
 ---
 
 ## 待议（open）
+
+### 2026-07-01（auto_gg 夜间巡检 — Keith 不在场）
+
+- **跨夜 frame 族长出第 4 轴「对话意图态」（北极星 #1）**：morning-brief #1「过早写文件 ×2」——两会话 cg-platform PM 隔离，「你先理解一下这个事情，我们再说」被读成执行信号径直写文件，同 5-22 cg-meetos「开搞吧」误读同型。这是补全引擎在**意图态（理解态 vs 执行态）**维的实例，接 06-30 frame-misread 族（通道/对端/角色三维）+ 06-23 confabulation 成同根族的第 4 轴。**闭环亮点**：fix 已由 monster `07-01-G1`（信号词集扩写：纳入「先理解…再说」= 停在理解态不写文件）独立认领，其本质=给意图态加物理锚——**恰是 essence `frame-misread-self-corrects-only-with-physical-anchor` 预测的修法形状**（该维本无锚故不自纠，加锚即解）。族已覆盖，auto_gg 未新 append essence（凑滴即稀释）。**Keith 无需动作**，G1 归 monster done 流程消费即可
+- **NW 账本（pending 5，全 monster owner，auto_gg 不接管/不代写）**：`07-01-G1`（信号词扩写=行为规则·红线永久人工 apply）/ `07-01-G2`（cg-platform thread 补记 PM 隔离 framing + app-context-kit WIP，git untracked 有 context 丢失风险，方向「按 PM fork monster·类 kebao-cc」被打断未定论）/ `07-01-G3`（cg-proxy-build thread 补 `/prx/llm/chat/completions` 全量透传事实）+ carried `06-30-G1/G2`。落点 monster/threads 非 gg 轨1 白名单，authoring 需 gg 够不到的 session context（核 b uncheckable），归 monster owner（先例 06-22~30）。**建议 Keith/monster done**：G2 的 app-context-kit WIP untracked 优先落库防丢
+- **cadence 哨 + 3a canon 队列**：blocked `track=3b`=0%（5 blocked = 2×L4 + 3×3a），延续 06-26 STRATEGIC「善后臂停摆」不重复推。3a canon 待人工队列=3（`06-22-G1/G2` + `06-30-G3`）carried 待 Keith 批量过——阈值 **2026-07-13** 回审时一并看
 
 ### 2026-06-30（auto_gg 夜间巡检 — Keith 不在场）
 
