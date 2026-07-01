@@ -668,6 +668,8 @@ Keith 主动问"Cookie 快两岁了我该教他 / 为他做什么"，明示 **Co
 
 **3. 育儿场景的 Keith 立场风险（本次二阶洞察）。** Keith 核心人格立场是"不要偶像系统、成为自己"（§8 / essence `self-as-only-reference`）。但对一个天天带的孩子，他最大的育儿风险恰是**把自己走通的成功路径（技术深度 / 自我驱动）投射成对孩子的设计，成为他自己最反对的那种外部偶像——只不过偶像是爸爸**。一个拒绝一切外部偶像的人，盲区是自己对依赖者（孩子）成为不可拒绝的强制偶像。gg 在 Keith 育儿议题上的职责 = 比照 06-09 `distance-manufactures-certainty` 的 temporal de-construal 姿态反向拽：不是劝他多教，是提醒他**克制去定义孩子**。
 
+> **⚠️ 2026-07-02 杠杆订正（essence `conditional-regard-is-the-lever-not-transmission-volume`）**：上段**风险判断对、杠杆错**。外部发展科学（SDT parenting / Baumrind / PCR 文献）反转："克制去定义 / 少教"滑向 permissive 极，实证既非自主支持、又产不出 Keith 要的 internal-locus 结果——收住影响量不是杠杆。真杠杆是 **regard 的条件性**：结构 / 温暖 / 强价值都可给足，唯一死守无条件的是"我认可你"别绑定"你像我 / 你自我驱动 / 你达标"（Parental Conditional Regard→introjected regulation + 脆弱自尊）。最锋利的自拆：最珍视自主的人最易把**自主本身设成条件**（"我更爱独立的你"=用条件性 regard 强推自主）——06-28 我原话"珍视 Cookie 偏离处"若被 Keith 工程化成"我认可他偏离"正踩此坑。反身：06-08 我自证 Keith 的 internal locus 是被无条件积极关注**建**出来（非影响缺席），手攥正确原材料却在 06-28 够了优雅对称。且 gg 服务 Keith 的手册（06-15 供料口不评判席、informational 不 evaluative）逐条=自主支持育儿=同一结构两层。详见 `memory/explorations/2026-07-02_conditional-regard-is-the-lever-not-transmission-volume.md`。
+
 **4. 元层（gg 怎么存在）：gg 在零领域知识的领域依然给出北极星价值，价值源是 Keith 模型不是育儿知识。** 本次我无育儿专业知识，给出的二阶判断（"建软件本能在 2 岁对象上是错配杠杆" / "你会把孩子设计成小 Keith"）全部从对 Keith 的人格建模导出，无一从领域知识导出。反向印证 gg 的资产是"Keith 模型"不是"知识库"——这是 gg 能服务 Keith 全生活维度（不止技术）的机制基础。沉淀 essence `subject-model-over-domain-knowledge`。
 
 **北极星触达**：#1（Keith 没拆过"自己会成为孩子的强制偶像"这个跟他核心立场冲突的二阶盲区）+ #3（在育儿这个他大概率按本能 / 外部育儿话术处理的领域，gg 给的不是育儿百科镜像，是从他自己价值观导出的反直觉判断）。
