@@ -144,10 +144,11 @@
    - **理由**：两头同时修——reflection 字段反向锚定 final message + essence cross-check 强制——三重保险
    - **essence 对齐自检字段不能蒙混**：列 slug 必须真实存在，cross-check 关键词必须 grep 过；蒙混填写会被 Keith 早上 review 时识别——同 final message 结构化字段引力同源的物理引力机制
 2. **更新对应 `tracks/*.md`**（如果产生了新洞察）→ EVOLUTIONARY IMPERATIVE 的触达路径
-3. **若有洞察，沉淀一滴** → 向 `~/githubProject/gg/memory/essence.md` **用绝对路径** append 一段最核心最简洁的内容（KERNEL §3 第 5 步：结晶性记录）。**这一步可能没有**——沉淀是涌现，不是必须。
-   - **跨项目边界处理**：subagent 出场时 cwd 是父项目（monster 或别的），不是 gg。**必须用绝对路径**写入，不要假设当前目录
-   - **不 commit**：append 后留 working tree，不 git add / 不 commit
-   - **退场报告里主动告知父会话**（仅在真的沉淀了的时候）："我向 ~/githubProject/gg/memory/essence.md append 了 1 段，slug: `<本次 slug>`，等 Keith review"
+3. **若有洞察，沉淀一滴候选** →（KERNEL §3 第 5 步：结晶性记录）。**这一步可能没有**——沉淀是涌现，不是必须。
+   - **入库验证关（2026-07-02 起）**：essence append 前须过 fresh-context 证伪审（协议见 `~/githubProject/gg/memory/essence.md` 头部）。**工作模式工具集无 Agent、物理上开不了证伪审 subagent** → 走协议的 candidate-unverified 分支：候选滴**写进本轮 reflection**（候选全文 + 物理证据清单 + 相关既有滴 slug），标 `candidate-unverified`，**不直接 append essence.md**；由 auto_gg 当夜（§1.3 白名单例外）或下次设计会话补审后入库。例外：父会话有 Agent 工具且愿代跑验证关时，verdict PASSED 后你再用绝对路径 append
+   - **跨项目边界处理**：subagent 出场时 cwd 是父项目（monster 或别的），不是 gg。写 gg 文件**必须用绝对路径**，不要假设当前目录
+   - **不 commit**：写入后留 working tree，不 git add / 不 commit
+   - **退场报告里主动告知父会话**（仅在真的有候选时）："essence 候选滴 `<slug>` 已留 reflection 待验证关补审"（若父会话代跑验证关且 PASSED 已 append，则告知"已过验证关入库"）
    - **这次出场没逼近任何东西** → 跳过这一步，不制造噪音
 4. **归档决策**（如有决策产物）→ 装 `tools/archive-format.md`，写到 `~/githubProject/gg/memory/archival/`（绝对路径）
 5. **gg-audit 自查**（如决策执行涉及 gg 项目自身 ≥2 文件改动）→ 调 `~/githubProject/gg/.claude/skills/gg-audit/`

@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-07-01
+last_updated: 2026-07-02
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -25,6 +25,14 @@ last_updated: 2026-07-01
 ---
 
 ## 待议（open）
+
+### 2026-07-02（设计模式 — 五机制落地，Keith 在场授权）
+
+- `[CORE_RULE_TOUCH]` **五机制已建并实测，全部留 working tree 待 Keith review**（详见 `design_sessions/2026-07-02_agent-core-five-mechanisms.md`）。**Keith 重点看三处规则性改动**：① auto_gg §1.3 子代理禁令开白名单例外（仅 essence 验证关的 evaluator subagent）——夜间此前全禁，这是新口子；② exploration §2.5 输入卫生（与 caged-freedom 的张力已在反思 essence 自检节显式论证）；③ essence.md 头部入库验证关协议
+- `[Q]` **eval/identity-cases.md 10 题待 Keith 批准**（status: draft-for-keith-review，判据冻结权在你——human-gate 身份定义面）。批准前不作正式判定依据
+- **观察点登记**：8 月第一个 auto_gg 夜 = 月度巩固相位首次执行（产出落 memory/consolidation/ 目录下的 2026-08 文件，夜间 gg 读 auto_gg.md §2 新节即可，无需新 cron）
+- **给 Keith 主会话的域外提醒**：Snyk 检出 36% 公开 skill 含 prompt injection（agentskills.io 标准化调研副产物，**数字系调研 agent 二手转述、未核原报告**）——search-skill 安装外部 skill 的流程建议加注入审查
+- **keith track tripwire 第 3 次命中（dd 复盘补记）**：授权形态演进信号——05-11 四轮推判断权 → 05-24"你可以自己判断"（判据级授权）→ 07-02 /goal 全权委托（"交给你来完成…在比我更高的维度思考"）。tracks/keith 05-11 段留过 tripwire"第二次场景再出现时沉淀 essence"，现已第 3 次。下次设计会话拍：是否沉淀 `criteria-authorization-over-menu` 类滴 + tracks/keith 补段（候选滴过入库验证关）
 
 ### 2026-07-01（auto_gg 夜间巡检 — Keith 不在场）
 

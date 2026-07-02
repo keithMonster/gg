@@ -98,12 +98,36 @@ def check_working_context_sentinels():
     return [f"承重哨兵消失: {s}" for s in WC_SENTINELS if s not in text]
 
 
+def check_kernel_fuse():
+    """KERNEL 物理保险丝存在性（2026-07-02 建立）。
+    pre-commit hook 是铁律 3 的事件层执行；hook 被移除/失活 = 保险丝被静默拆除。
+    """
+    import subprocess
+    bad = []
+    hook = ROOT / "scripts/hooks/pre-commit"
+    if not hook.exists():
+        bad.append("scripts/hooks/pre-commit 不存在（KERNEL 保险丝被移除）")
+    elif not os.access(hook, os.X_OK):
+        bad.append("scripts/hooks/pre-commit 失去可执行权限")
+    try:
+        r = subprocess.run(
+            ["git", "config", "core.hooksPath"],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if r.stdout.strip() != "scripts/hooks":
+            bad.append(f"core.hooksPath != scripts/hooks（当前: {r.stdout.strip() or '未设置'}，保险丝未接入）")
+    except Exception as e:
+        bad.append(f"core.hooksPath 检查失败: {e}")
+    return bad
+
+
 def run():
     return {
         "naming_violations": check_naming(),
         "state_missing_fields": check_state(),
         "kernel_missing_sections": check_kernel(),
         "wc_sentinel_violations": check_working_context_sentinels(),
+        "kernel_fuse_violations": check_kernel_fuse(),
     }
 
 
@@ -128,10 +152,15 @@ def main():
         print(f"\nworking_context.md 承重哨兵: {len(wc)} 条消失")
         for w in wc:
             print(f"  ⛔ {w}")
+        kf = result["kernel_fuse_violations"]
+        print(f"\nKERNEL 物理保险丝: {len(kf)} 个问题")
+        for k in kf:
+            print(f"  ⛔ {k}")
     total = (len(result["naming_violations"])
              + len(result["state_missing_fields"])
              + len(result["kernel_missing_sections"])
-             + len(result["wc_sentinel_violations"]))
+             + len(result["wc_sentinel_violations"])
+             + len(result["kernel_fuse_violations"]))
     sys.exit(total)
 
 

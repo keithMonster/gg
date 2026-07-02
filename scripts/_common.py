@@ -20,6 +20,8 @@ ARCHIVE_PREFIXES = (
     "memory/auto_gg/",
     "memory/explorations/",
     "memory/experiments/",
+    "memory/consolidation/",
+    "eval/runs/",
     "scratch/",
 )
 

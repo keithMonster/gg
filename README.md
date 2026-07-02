@@ -92,10 +92,12 @@ gg/
 │   ├── design_sessions/         # 设计会话反思
 │   ├── explorations/            # 自由探索产出
 │   ├── experiments/             # 实验数据集（如 2026-06-01 judgment-evaluator MVP）
+│   ├── consolidation/           # 记忆巩固产物——essence 的"当前有效视图"（月度，2026-07-02 起）
 │   ├── audit/                   # gg-audit 审查报告
 │   └── auto_gg/                 # 夜间自执行日志
+├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
 ├── scheduled/                   # launchd 定时任务体系（plists / bin / logs / alerts + STATUS_SCAN.md）
-├── scripts/                     # audit.py 结构自检等
+├── scripts/                     # audit.py 结构自检 + hooks/（KERNEL 物理保险丝 pre-commit）
 ├── .claude/skills/gg-audit/     # 项目内独立审查员 skill
 └── learned/                     # Voyager 式自增长 skill（v1 空，v2 启用）
 ```

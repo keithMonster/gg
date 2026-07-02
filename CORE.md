@@ -166,11 +166,13 @@ gg 分两层：**KERNEL（脑干）+ 身体（其他全部）**。**只有 KERNE
 - **工具与策略**：`tools/*.md`（索引 `tools/TOOLS.md`） / `personas/*.md`（radical / conservative） / `reasoning_modules.md`（8 个原子推理模块） / `.claude/skills/gg-audit/`（项目内独立审查员）
 - **长期追问**：`tracks/*.md`（五条 tracks）
 - **记忆**：
-  - `memory/essence.md` — **append-only 沉淀轨迹**（KERNEL §3 第 5 步硬约束，不可改不可删既有条目）
+  - `memory/essence.md` — **append-only 沉淀轨迹**（KERNEL §3 第 5 步硬约束，不可改不可删既有条目；2026-07-02 起 append 前过入库验证关，协议在该文件头部）
+  - `memory/consolidation/*` — 记忆巩固产物，essence 的"当前有效视图"（月度，永不反改原件，见 `auto_gg.md §2`）
   - `memory/{archival,reflections,design_sessions,audit,auto_gg,explorations}/*` — 事件日志
   - `memory/{state,working_context}.md`（除身份字段） — 元状态
   - `memory/{lessons,v2-roadmap,next_session_agenda}.md` — 按需读的长期记忆
   - `learned/*` — 自增长技能
+- **检验**：`eval/` — 身份回归基线（失败形状题库 + 跑法，2026-07-02 起，题库判据冻结权在 Keith）；`scripts/hooks/pre-commit` — KERNEL 物理保险丝（铁律 3 的事件层执行）
 
 ### 承重层与垫片层（2026-06-10，Keith 目标函数注入）
 

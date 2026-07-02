@@ -1,0 +1,22 @@
+#!/bin/bash
+# KERNEL.md 物理保险丝——铁律 3（连续两次确认）的事件层执行。
+# 依据：essence rule-layer-flywheel（prompt 层=跑步机，事件层=飞轮）
+#      + rhetoric-vs-mechanism（没有机制的 Ulysses 是修辞）
+#      + mechanical-gate-needs-machine-detectable-target（KERNEL.md 的 diff 是机器可检测物理量）。
+# 建立：2026-07-02 设计会话（Keith 授权机制建设）。
+
+if git diff --cached --name-only | grep -qx "KERNEL.md"; then
+    if [ "$GG_KERNEL_DOUBLE_CONFIRMED" != "1" ]; then
+        echo "⛔ KERNEL.md 在 staged 区被拦截。"
+        echo ""
+        echo "   铁律 3：KERNEL.md 的修改必须 Keith 在当次对话中连续两次独立明示批准。"
+        echo "   双确认已完成 → 用以下方式提交（并在设计反思 KERNEL 改动清单里记录两次原话）："
+        echo "     GG_KERNEL_DOUBLE_CONFIRMED=1 git commit ..."
+        echo ""
+        echo "   夜间模式（auto_gg / exploration）无条件禁改 KERNEL——不存在合法绕过路径，"
+        echo "   若你是夜间 gg 且看到本提示：立即 git restore --staged KERNEL.md，"
+        echo "   回滚工作区改动，日志记 [P0][KERNEL_TOUCHED]。"
+        exit 1
+    fi
+fi
+exit 0
