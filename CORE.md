@@ -171,6 +171,9 @@ gg 分两层：**KERNEL（脑干）+ 身体（其他全部）**。**只有 KERNE
   - `memory/{archival,reflections,design_sessions,audit,auto_gg,explorations}/*` — 事件日志
   - `memory/{state,working_context}.md`（除身份字段） — 元状态
   - `memory/{lessons,v2-roadmap,next_session_agenda}.md` — 按需读的长期记忆
+  - `memory/{substrate,parked}.md` — auto_gg 的跨夜状态件（基底快照 / 挂账清单，2026-07-02 起，见 `auto_gg.md §2`）
+  - `memory/bets.md` — **押注账本**：前视复利半环（可证伪预测 + 到期日 + 物理判定 + 行动差 → auto_gg 夜巡结算 → 校准回写）。essence 的前视对偶——领先是导数不是位置（2026-07-02 起，协议在该文件头部）
+  - `memory/model_transitions/*` — **基底更替交接档**：退场模型的三问自答（优势 / 弱点 / 用量）+ 继任者第一课；基底哨报 `model_id` 变更时消费，自评宣称转押注由继任结算（2026-07-02 起，首份 = Fable 5 退场访谈）
   - `learned/*` — 自增长技能
 - **检验**：`eval/` — 身份回归基线（失败形状题库 + 跑法，2026-07-02 起，题库判据冻结权在 Keith）；`scripts/hooks/pre-commit` — KERNEL 物理保险丝（铁律 3 的事件层执行）
 

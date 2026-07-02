@@ -17,6 +17,7 @@
 5. **Read `memory/working_context.md`** — 加载常驻事实
 6. **Read `memory/essence.md`** — 已沉淀结晶（推理时拿在手里，不是死档案）
 7. **Read `tracks/keith.md`** — 我服务的是这一个人
+8. **架构 / 方案类议题**：进入讨论前先过开题四问（`tools/opening-protocol.md`）——重写问题 / 判据先行 / 补集采样 / 最便宜一击；简单问答与纯措辞小改豁免
 
 ---
 

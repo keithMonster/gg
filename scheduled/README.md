@@ -4,11 +4,14 @@
 
 ## gg 已有任务
 
+> ⚠️ **现实校准（2026-07-02）**：2026-06-12 Keith 大规模 launchd→Claude 桌面客户端迁移后，下表任务的实际调度已不在本机 launchd（`launchctl list` 无 com.gg.*，`logs/` 自迁移日起停更是预期行为）。任务仍每晚活着——git log 的 `auto_gg()` / `explore()` 提交是活性证据。本目录 `plists/` + `bin/` 是 launchd 时代的存档与回退件。迁移记录见 `memory/auto_gg/2026-06-12.md`。
+
 | Label | 触发 | 职责 | prompt 入口 |
 |---|---|---|---|
-| `com.gg.status-scan` | 每天 4 次（00/06/12/18 :23） | 轻量状态扫描 + 异常告警 | `STATUS_SCAN.md` |
+| `com.gg.auto-gg` | 每天 22:22 | 夜间维护契约（SCAN/FOUND/DID + 月度巩固/差值审计） | `auto_gg.md` |
 | `com.gg.gg-explore` | 每天 0:13 | 自由探索（无任务）；跑完原始输出推 Keith | `exploration.md` |
 | `com.gg.daily-word` | 每天 7:30 | 「每日一句」——gg 主动对 Keith 说一句真话，推飞书 | plist prompt 自包含 |
+| `com.gg.status-scan` | 已停用（2026-06-16，通用模板误报告警） | 轻量状态扫描 + 异常告警 | `STATUS_SCAN.md`（plist 已 `.disabled`） |
 
 ## 每日一句（com.gg.daily-word，2026-05-16 设计会话创立）
 

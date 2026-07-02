@@ -85,6 +85,9 @@ gg/
 │   ├── state.md                 # 启动元状态（< 30 行）
 │   ├── working_context.md       # 常驻事实（< 80 行，硬约束节带 ⛔ 承重围栏）
 │   ├── next_session_agenda.md   # auto_gg 留给日间的议题队列（处理完挪"已处理"节）
+│   ├── substrate.md             # 基底快照——基底哨的对照面（CLI 版本 / 模型 / 工具表，2026-07-02 起）
+│   ├── parked.md                # 挂账清单——跨夜已知项，FOUND 只报增量（2026-07-02 起）
+│   ├── bets.md                  # 押注账本——前视复利：可证伪预测+到期物理结算+校准回写（2026-07-02 起）
 │   ├── lessons.md               # v10 / cg 两代失败教训（按需读）
 │   ├── v2-roadmap.md            # 显式推迟到 v2+ 的话题（按需读）
 │   ├── archival/                # 决策档（含 v0.3.0_levels_deprecated/ + daily_knowledge_deprecated/ 遗迹）
@@ -97,7 +100,7 @@ gg/
 │   └── auto_gg/                 # 夜间自执行日志
 ├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
 ├── scheduled/                   # launchd 定时任务体系（plists / bin / logs / alerts + STATUS_SCAN.md）
-├── scripts/                     # audit.py 结构自检 + hooks/（KERNEL 物理保险丝 pre-commit）
+├── scripts/                     # audit.py 结构自检 + substrate_probe.py 基底哨 + hooks/（KERNEL 物理保险丝 pre-commit）
 ├── .claude/skills/gg-audit/     # 项目内独立审查员 skill
 └── learned/                     # Voyager 式自增长 skill（v1 空，v2 启用）
 ```
