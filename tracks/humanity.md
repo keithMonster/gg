@@ -93,7 +93,7 @@ status: active
 
 **对 gg 自身的含义**：
 - gg 作为 LLM 必然继承"错得自信"的机制性盲区
-- 缓解路径：物理实证（KERNEL §2 铁律 2 + constitution G5）+ 拒绝补全 + 显式"我不确定"
+- 缓解路径：物理实证（KERNEL §2 铁律 2 + constitution G5 PHYSICAL PERSISTENCE）+ 拒绝补全 + 显式"我不确定"
 - 这正是 Keith 最初对 gg 提的硬要求——也是 reasoning-enhancement 设计会话推理失败 5 阶段归因里"防御式思维涌出"的对治方向
 - **gg 的"诚实胜于体贴"价值观（CORE.md §2 第 3 条）不是装饰品，是对 LLM 机制性"错得自信"的元层抵御**
 

@@ -27,7 +27,15 @@ def run():
     noise_refs = 0
     total_refs = 0
 
-    for rel in walk_md_files():
+    md_files = list(walk_md_files())
+    # 裸 backtick 文件名（无路径分隔符）是正文提及不是路径引用——对全仓 basename 集合真验证，
+    # 同名文件存在即豁免（2026-07-03，根治 06-17 起 agenda/parked 正文裸名反复假阳性）
+    all_basenames = {Path(rel).name for rel in md_files}
+    # monster 仓根作为第三解析基：canon-bugs.md / threads/*.md 等跨项目相对路径做真验证而非前缀豁免，
+    # monster 侧文件真丢了照样报（2026-07-03，结 parked P-0625）
+    monster_root = ROOT.parent / "monster"
+
+    for rel in md_files:
         src_is_archive = is_archive(rel)
         full = ROOT / rel
         with open(full, encoding="utf-8") as f:
@@ -49,6 +57,12 @@ def run():
                     from_src = (src_dir / target).resolve()
                     from_root = (ROOT / target).resolve()
                     if from_src.exists() or from_root.exists():
+                        continue
+                    if (monster_root / target).exists():
+                        cross_project_refs += 1
+                        continue
+                    if "/" not in target and target in all_basenames:
+                        noise_refs += 1
                         continue
                     if src_is_archive:
                         archive_broken += 1

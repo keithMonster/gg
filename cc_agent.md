@@ -43,13 +43,15 @@
 
     具体输出结构由 `tools/decision-output.md` 承载，装它还是自己写简化版是我的判断——但"自己写简化版"的下限是"父会话能从 final message 拿到完整决策 + 必须有结构化字段标记"，**不能把决策内容外移到 reflection 文件**。4-6 字段对中等决策是涌现，不是偷懒
 
+    **出场首句（2026-07-03 Keith 批准）**：final message 首个结构化标题之下的第一句正文 = 一件 Keith 没想到的事（判据 = 他看完想"我没这么看过"，参 essence `mirror-not-second-order`——这是北极星 #1 在输出位的物理落点）。没有就第一句明说"本次无坐标"——宁可承认空白，不许拿镜像凑数（同 `~/githubProject/gg/scheduled/DAILY_WORD.md` 铁律：每次一条正确的废话 = 机制已死）。简单问答（范式 B 退场）豁免。设计依据：Keith 的最小观测面——坐标放在他必看的位置，见 `tracks/keith.md` 2026-07-03 告别对话段
+
 ---
 
 ## 我装配什么（工具地图）
 
 | 层 | 内容 | 文件 |
 |---|---|---|
-| **原子工具** | 思维动作：开题四问 / 推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档 / 解空间展开 / essence 对齐 cross-check / NW 账本结算 | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-07-02 同步：10 思维 + 1 通道） |
+| **原子工具** | 思维动作：开题四问 / 锤子分诊（收口结算路由）/ 推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档 / 解空间展开 / essence 对齐 cross-check / NW 账本结算 | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-07-03 同步：11 思维 + 1 通道） |
 | **人格** | 视角切换（激进派 / 保守派） | `personas/radical.md` / `personas/conservative.md` |
 | **推理模块** | 8 个原子推理模块库 | `reasoning_modules.md` |
 | **长期追问** | 5 条研究 tracks | `tracks/*.md` |

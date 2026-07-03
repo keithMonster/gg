@@ -65,3 +65,7 @@ status: substantive-decision
 
 - `~/githubProject/monster/canon-bugs.md` line 100/163/170 ← 中文标点 bug 的 4 条复发记录
 - `~/githubProject/monster/threads/canon-bugs` 无独立 thread，归 canon 体系
+
+---
+
+**candidate-refuted（2026-07-03 验证关补审，Keith 全托授权下裁决）**：`solution-scope-inflates-past-problem-shape` 不入库——fresh 证伪审判两个实例分别被 `premature-abstraction-tripwire` / `theory-gap-without-data` / `separation-need-is-not-topology-verdict` 的既有算子完整结算（本反思自检节自己就引用了它们），候选系换皮合并索引；"问题的形状"无刻度、与 `tool-elevation-as-occam` 边界未划。重提名条件：覆盖面判据在非抽象非拓扑的第三类场景独立复发一次，且带上 tool-elevation 反向前提。

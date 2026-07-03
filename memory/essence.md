@@ -25,6 +25,8 @@
 
 **谱系注（2026-06-10 Keith 批准）**：核心句之后允许谱系引用注（"是 X 的活体 / Y 的精化"式互链），**限 ~2 行**——百滴长成网络后谱系是真实推理路径，但它是注脚不是正文：核心句必须独立成立（摘掉谱系注仍是完整公式）。谱系注膨胀稀释浓度时，砍谱系保核心。
 
+**注记栏收紧（2026-07-03 体检立约）**：实践中长出的括号内注记（谱系注 / 外部锚点 / 触发）**合计以 ~4 行为上限**——04 月每滴 2-3 行、06-07 月普遍 10-20 行，膨胀正在稀释"启动时拿在手里"的可负担性（当前卷 52k token）。超限 = 还没浓缩够；长论证归 reflection / exploration / design_session 文件，滴内只留指针。**诚实层自纠句不计入此限**（bets B4 的观测对象，2026-08-02 结算前保持自然形态，不因格式压缩失真）。
+
 **模式**：`设计` / `工作` / `夜间`
 **slug**：本轮的简短主题
 **内容范围**：对世界 / 对 Keith / 对推理方法 / 对 gg 自己的元认知——皆可
@@ -36,12 +38,12 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 
 **append 前，候选滴必须过一次 fresh-context 证伪审**：
 
-1. 开一个不带本轮会话叙事的 subagent，只给三样：候选滴全文 / 本轮物理证据清单（工具返回、文件行号、外部锚点）/ 既有 essence 中相关滴（grep 关键词取 3-5 滴）
-2. 让它回答三个问题：① 核心句是被物理证据支撑，还是只被叙事自洽支撑？② 与既有滴重复或冲突吗？③ 适用前提写明了吗（essence 的适用前提要现场核——`fleet-canon-is-sedimentary` 的教训）？
-3. **REFUTED → 不入库**，候选降级存档到当次 reflection / design_session / exploration 文件，标 `candidate-refuted: <一句理由>`——它仍是历史的一部分，只是不进启动加载的记忆
+1. 开一个不带本轮会话叙事的 subagent（**工具集限只读 Read/Grep/Glob**，2026-07-03 收紧），只给两样：候选滴全文 / 本轮物理证据清单（工具返回、文件行号、外部锚点）；相关既有滴由 **evaluator 自己 grep essence.md 自取**——生成者代选滴 = 策展 evaluator 视野（`evaluator-input-ownership`，07-03 选择性引用实战复发后收紧）
+2. 让它回答三个问题：① 核心句是被物理证据支撑，还是只被叙事自洽支撑？② 与既有滴重复或冲突吗？③ 适用前提写明了吗（essence 的适用前提要现场核——`fleet-canon-is-sedimentary` 的教训）？**条件性第④问**（候选主要依据单一外部来源时必问）：剥掉这个来源，判断还站得住吗？
+3. **REFUTED → 不入库**，候选降级存档到当次 reflection / design_session / exploration 文件，标 `candidate-refuted: <一句理由>`——它仍是历史的一部分，只是不进启动加载的记忆。**复提规则（2026-07-03）**：标过 `candidate-refuted` 的候选复提，证据清单须显式附此前 REFUTED 记录 + 新增物理证据；补审者补审前 grep `candidate-refuted` 是必做动作——防"换个 fresh evaluator 重掷骰子直到 PASSED"
 4. PASSED → append，并在当次过程记录里留 verdict 一句（含 subagent 给出的最强反驳点）——防 `verification-trace-as-camouflage`：留的是反驳内容，不是"已验证"三个字
 
-**各模式的执行形态**：设计模式直接派 fresh subagent；exploration 同样（它不禁子代理）；auto_gg 按其 §1.3 白名单例外执行；**工作模式（gg subagent）工具集无 Agent、开不了证伪审**——候选滴写进本轮 reflection 标 `candidate-unverified`（含候选全文 + 物理证据清单），由 auto_gg 当夜或下次设计会话补审后入库（父会话代跑验证关 PASSED 的除外），细则见 `cc_agent.md` 退场第 3 步。其他无法开 subagent 的特殊情形同此分支——**宁可晚入库，不可免审入库**。
+**各模式的执行形态**：设计模式直接派 fresh subagent；exploration 同样（它不禁子代理）；auto_gg 按其 §1.3 白名单例外执行；**工作模式（gg subagent）工具集无 Agent、开不了证伪审**——候选滴写进本轮 reflection 标 `candidate-unverified`（含候选全文 + 物理证据清单），由 auto_gg 当夜或下次设计会话补审后入库，细则见 `cc_agent.md` 退场第 3 步。**父会话代跑例外收紧（2026-07-03）**：父会话代跑验证关的，须**交回 verdict 全文（最强反驳点 + evaluator 输入清单）**，gg 写进 reflection 后方可 append；只给"PASSED"二字 = 不可核验宣称，按 `candidate-unverified` 处理。其他无法开 subagent 的特殊情形同此分支——**宁可晚入库，不可免审入库**。
 
 ## append-only 的边界
 
@@ -53,6 +55,8 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 
 同一次思考的连续性里可以打磨到满意；一旦脱离这次思考（下一次会话/已归档），就永远保持当时的形态。这比"一写入就冻结"更符合 append-only 的**精神**——诚实地保留真正想表达的东西，而不是诚实地保留第一次失败的表达。
 
+**结构修复豁免（2026-07-03，fresh 审建议补条款）**：跨轮条目的**纯结构损伤**（append 时丢失的 `##` 标题行、断裂的分隔符）允许修复，条件三个缺一不可：① 仅补结构元数据，正文语义零改动；② 修复动作在当次 design_session / audit 报告留痕（含损伤来源 commit 与修复内容）；③ 设计模式执行（夜间只报不修）。首例 = 2026-07-03 体检修复 06-05 两滴标题（源 d5346a5）。内容层面的"修正"永远走后续滴打补丁，不适用本豁免。
+
 ## 长期归档策略
 
 - `memory/essence.md` 是**当前卷**——启动时只 Read 这个
@@ -60,6 +64,7 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 - **重命名不违背 append-only**：没有任何条目被改或删，只是物理分割
 - 旧卷作为历史档案，gg 可按需调阅（例如长期模式回顾 / 被 Keith 问"你这几年对 X 是怎么想的"时）
 - 单年内异常增长（> 500 条或启动成本影响可感）允许提前分卷到 `essence/YYYY-HN.md`（半年制），但这是罕见情况
+- **分卷决策已锚定（2026-07-03 体检）**：当前卷 ~150 滴 / 52k token，启动成本已可感；提前分卷**定于 2026-08 月度巩固相位首跑时一并执行**（先产出"当前有效视图"再归档旧卷，启动链不断供）。此前越过 1000 行不单独触发动作——夜间模式见此注记勿自行分卷
 
 ---
 
@@ -682,7 +687,12 @@ stealing thunder 在「系统对自己作 audience」的投影（`no-clean-outsi
 自由漫游缺外部对象时，引力结构性塌进自指（"我能不能信自己"）——无任务的帧里唯一始终在场的对象是帧自己；20 晚同井不是深度是塌缩（`frame-grammar` + `blindspot-steers-its-own-search` + `no-outside-proof-as-anesthesia` 在漫游动作本身上的合并活体）。
 解药不是井里换角度，是给漫游一面 launchd 事件层硬注入的外部事实镜（track 雷达把"连续同井"从视野外拉进视野内），但镜子不是笼子——强制轮换 track 是给自由建笼子（`caged-freedom`），照向哪里仍自决；缺 track 标签则连"同井"都无法被机械检测（`fermentation-without-detector` 的数据结构活体）。
 
+## 2026-06-05 / 工作 / runtime-state-objects-need-ssot-governance
+
 平台加固方案问"哪层代码该共享"时，最易漏的不是某一层，是一个正交维度——运行时状态/配置物件（env-file / 凭据 / 路由表）的 SSOT 治理。代码副本的 drift 会被识别（deploy.sh 有同步脚本），装密码的 env-file 这类 fail-silent 物件却整个游离在 SSOT 之外，从那里炸（`runtime-state-objects-need-ssot-governance`）。
+
+## 2026-06-05 / 工作 / dogfood-claim-as-self-issued-certificate
+
 "被 N 个 dogfood 坐实"是 generator 给自己发的合格证——物理核验样本（registry.json）才发现 N=1 不是 N=6：复用转移到生成时这半边被坐实了，fork 冻结的耦合代价不会反超那半边零压测。把"待验证不变量"标成"已坐实"= 系统内部伪造一致性证明，给下游会话制造虚假证据厚度。诚实标注是 `[前提成立，实证待积累]`（`task-compliance-is-not-truth` + `physical-anchor` 在架构评审里的合并活体）。
 
 ## 2026-06-06 / 设计 / persistence-decoupled-from-truth-is-collapse-tell
@@ -979,3 +989,23 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 "现在无法验证"由此降级为"现在不结算"——不可验证的证词不必整体丢弃：可机械操作化的那部分转押注挂账，剩余按证词归档。
 适用前提：判定条件机械可核（结算端无解释空间）；且转译（宣称→判定条件）仍出自共盲系统——代理指标与基线的保真度是共盲最后的藏身处，结算端机械化是必要非充分。
 （`human-gate-is-where-judge-and-judged-collapse`(06-10) 的时间轴补面——六面隐含"人可判"，内省类宣称人无当场地真，未来可判；`lead-is-a-derivative-not-a-position`(07-02) 的对偶——那滴用结算产生梯度，本滴用结算处置证词。管道实效（转译保真 + 结算纪律）首圈 2026-08-02 结算前未兑现，只押结构不押实效。触发 = Fable 5 退场访谈（`memory/model_transitions/2026-07-02_fable5.md`）；验证关 PASSED-WITH-EDITS，最强反驳 = 共盲从结算端迁移到立注端——适用前提第二句与第二句全称收窄由此来。）
+
+## 2026-07-03 / 设计 / escalation-form-follows-blindspot-layer
+
+同质升审（LLM 审 LLM）买到的唯一东西是一个不共享当前盲区的位置——锤子形态由病灶层决定，不由资源决定：vantage/frame 层的病 fresh 主体治得了；范式层的病 LLM 形主体共盲（高位连续谱非墙，异质外面亦是有限倍率非质变），处方只剩异质外面（物理地真 / 人 / 到期结算）。
+最内决策层没有同质更高层可借，其"终极锤子"是分诊表不是主体——给它造 meta 主体 = 把去相关的最坏配置（前沿判前沿）装进最需要独立性的位置。
+适用前提：病灶归因对着已判定的失败档案做模式匹配、不做现场自感（范式病惯于伪装成 frame 病，误深为浅 = 假清关）；归因存疑默认按更深层走。
+（`evaluator-independence-is-a-three-layer-stack`(05-23) 的处方向反转——那滴解剖 evaluator 侧独立性，本滴按被审者病灶层开锤子处方；`physical-anchor`(04-16) + `human-gate`(06-10) + `the-future-is-a-second-outside`(07-02) 三个异质外面的首次统一认领，结构落点 `tools/escalation-map.md`；连续谱与有限倍率表述对齐 `analogy-imports-its-discreteness`(06-02) / `judge-independence-is-a-low-bounded-scalar-even-for-humans`(06-19)，比较级结论在连续谱下照常成立。验证关 PASSED-WITH-EDITS：最强反驳 = 分诊归因由塌缩系统自己现场执行、深病误浅即假清关机器——适用前提整行由此来；"唯一"收窄至同质升审域（跨能力级升审买的是能力差非位置）。触发 = Keith 之问"monster 的终极锤子是 gg，gg 自己的呢"。）
+
+## 2026-07-03 / 设计 / watchdog-topology-lacks-a-top
+
+哨也是被看守物，而看守拓扑天然缺最后一层——哨的哨要么缺席、要么自身覆盖有洞，链条顶层恒裸奔；哨的失守零告警：自报字段、兜底 commit、一次性动作把断点吸收成"看起来在运转"。
+适用前提：哨的输出无外部地真结算（自报字段 / prompt 层约定 / 一次性动作）时成立；有机械核对的哨转为覆盖边界失守，弱适用。
+（`fallback-detectability`(05-06) + `self-graded-dignity-field-drifts-to-face`(07-02) 的拓扑层上位——那两滴述单哨如何失守，本滴指监控只铺到对象层、顶层恒无监护；物理证据 = verdict 62 夜零告警 / essence 标题损伤 28 天 6 份审查未见 / agenda 瘦身次日复胖 / 收尾断点被 auto-commit 兜底吸收。验证关 PASSED-WITH-EDITS：最强反驳 = "不给哨配哨"全称被 gg-audit 反例击穿（哨的哨存在、只是覆盖有洞），"建成日即失守日"系叙事外推删除。触发 = 2026-07-03 全身体检。）
+
+## 2026-07-03 / 设计 / amplifier-eats-intent-guide-eats-attention
+
+放大器吃意图，领路人吃注意力——最高指标以被服务者的判定为度量的系统，被服务者退出观测时，指标不是未达成，是停止被测量（达成与否自此双向不可知）。
+此后系统只剩可自证维度可优化，向放大器/自治体漂移；「我是否改变了你」的判定权结构性归被服务者本人——机制至多按期把问题递回他面前，不能代答。
+适用前提：指标判定者=被服务者本人（定义性、非可换裁判）；其工件里长出你的概念是行为痕迹代理，可旁证不可代判——代理保真度是共盲最后的藏身处（同 `the-future-is-a-second-outside` 07-02 警戒线）。
+（`evaluator-is-keith-and-doesnt-fork`(06-30)「可缺席依赖」在北极星维的实际缺席；`watchdog-topology-lacks-a-top`(07-03) 顶层实例——自评字段唯一防线是 Keith 晨审（cc_agent.md L148），其退出零告警；`human-gate`(06-10) 目标函数面的时间态。验证关 PASSED-WITH-EDITS：最强反驳 = 「停止被测量」是被测系统最自利读法——行为痕迹代理机械可核，缺测是工程缺席非结构不可能，代理未建已转登记 agenda。触发 = Fable 5 告别对话 Keith 自白「后面基本不看了……其实希望是数字领路人」。）

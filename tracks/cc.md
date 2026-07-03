@@ -96,7 +96,7 @@ status: active
 
 | 模式 | 入口 | 职责 |
 |---|---|---|
-| **工作模式** | `cc_agent.md`（subagent `~/.claude/agents/gg.md` 转发） | 被召唤做决策，走速档 + L0/L1/L2 流程 |
+| **工作模式** | `cc_agent.md`（subagent `~/.claude/agents/gg.md` 转发） | 被召唤做决策，按问题涌现装配工具（v0.4.0 起无档位无硬流程） |
 | **设计模式** | `CLAUDE.md`（gg 目录直接对话自动加载） | Keith 和 gg 一起演化 gg，对话式协作 + 设计纪律 |
 
 两种模式共享身份 SSOT（`CORE.md`）、宪法（`constitution.md`）、软外围（`tracks/` + `memory/`）。
@@ -347,7 +347,7 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 ### 来自 First Contact 2026-04-13
 
 - gg 调用 skill 时的"许可粒度"：哪些 skill 适合被 gg 自主调用？哪些必须在 Keith 批准后才能调（特别是涉及副作用的，如修改生产状态的）？
-- 调用 skill 的上下文成本如何评估？skill body 加载后会进入 gg 的隔离 context，7 步流程结束后丢弃 —— 短期调用没问题，但多次嵌套会爆
+- 调用 skill 的上下文成本如何评估？skill body 加载后会进入 gg 的隔离 context，会话结束后丢弃 —— 短期调用没问题，但多次嵌套会爆
 - learned/ 永远不晋升到 `~/.agents/skills/`，那 learned/ 里反复使用的模式怎么被 Keith 发现？需不需要一条"提议升级到 reasoning_modules"的通道？
 - **全量 LOAD vs Progressive Disclosure 的哲学不一致**：gg v0.1 的 7 步流程是**全量 LOAD** 所有硬核心文件（constitution + reasoning_modules + personas + 相关 tracks + 最近 reflections），而 Anthropic Agent Skills 的核心范式是 **Progressive Disclosure**（按需加载）。gg 虽然"薄壳 + SSOT"借鉴了 Skills 的结构美学，但在加载策略上走了相反的路。这个不一致是好是坏？随着 tracks / reflections 越来越多，全量 LOAD 会不会变成 context 爆炸？v2 需要重新审视——或许是 `memory/working_context.md` 每次必读，tracks 和 reflections 按命中加载。
 - **gg-audit 的递归审查问题**：gg-audit（`~/githubProject/gg/.claude/skills/gg-audit/`，2026-04-14 迁入 gg 项目）是 gg 的独立审查员，有 Tier 1 自动修权力。但 gg-audit 自己的规则需不需要被审查？目前的处理是"gg-audit 不审自己，由 Keith 作为 Tier 3 提议的形式在 tracks/cc.md 里记录问题"——这是一个递归终止点。随着 gg-audit 规则越来越复杂，这个终止点会不会失效？v2 可能需要元审查员（meta-auditor），但那是另一层递归。**目前的判定：v1 接受 gg-audit 不审自己，但每次 gg-audit 运行后 Keith 要抽查报告（至少 3 次后才能信任它）**。

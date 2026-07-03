@@ -117,7 +117,7 @@
 | **P1 INVERSION** | `personas/radical.md` 引用 / `reasoning_modules.md` INVERSION_DESIGN 模块 / `tools/red-team-challenge.md` "先想怎么失败"精神物理化 | ✅ 强触达 |
 | **P2 FIRST PRINCIPLES** | `personas/radical.md` 直接引用 / `reasoning_modules.md` 模块 | 🟡 间接触达 |
 | **P3 OCCAM** | `cc_agent.md` "装配数量是涌现，不是预设" / `tools/compose-reasoning.md` "3-5 个模块"约束 / `tools/TOOLS.md` 工具上限提示 ≤20 | ✅ 强触达 |
-| **P4 MVP FIRST** | 🔴 未在三模式装配链路里找到触达点（v0.1.0 缺口仍在） | 🔴 未触达 |
+| **P4 MVP FIRST** | `reasoning_modules.md` M3 SKETCH_MINIMAL_MVP 模块（名称即原则）/ `tools/opening-protocol.md` 第④问"最便宜一击"（装载点 = CLAUDE.md 启动协议第 8 条 + cc_agent.md 步骤 6，2026-07-02 起） | ✅ 触达（2026-07-03 基线修正：M3 系 05-11 基线漏判，opening-protocol 系 07-02 新增） |
 | **P5 TRADE-OFFS** | `tools/decision-output.md` 12 字段 "Trade-off" 必填项 / `tools/solution-space.md` 多方案对比 | ✅ 强触达 |
 | **P6 DECOMPOSITION** | `reasoning_modules.md` 自身就是 8 个原子模块的物理体现 / `tools/*.md` 工具原子化策略 | ✅ 强触达 |
 | **P7 ANTI-ENTROPY** | `auto_gg.md` SCAN/FOUND/DID 三段（"维护对抗熵增"明示） / `.claude/skills/gg-audit/` 整个 skill 是 P7 的物理实现 | ✅ 强触达 |
@@ -128,12 +128,9 @@
 | **G4 IRREVERSIBILITY** | `CORE.md §7` 可逆性二分（核心决策轴）/ `tools/red-team-challenge.md` 不可逆项红队 / `tools/decision-output.md` 可逆性必填字段 / `CORE.md §3 M4` | ✅ 强触达 |
 | **G5 PHYSICAL PERSISTENCE** | `KERNEL.md §2` 铁律 2（"物理实证，禁止补全"）/ `cc_agent.md` "工具返回 OK 作为证据" / `auto_gg.md` 物理日志 | ✅ 强触达 |
 
-**v0.5.0+ 缺口**（仅剩 1 条 vs v0.1.0 的 6 条缺口）：
-- **P4 MVP FIRST** —— 三模式装配链路没有物理体现"先跑通再完美"的具体工具 / 字段 / 字段引力。最相近的是 `cc_agent.md` "简单问题装 0 个工具" 但那是 OCCAM 不是 MVP
+**缺口现状（2026-07-03 基线修正后）**：13/13 全触达，缺口清零。v0.1.0 的 6 条缺口（P4 / P6 / P7 / G1 / G2 / G3）经 v0.4.0 工具层落地 + v0.5.0 KERNEL 坍缩收敛到 1 条（P4），再经 2026-07-03 基线修正（M3 SKETCH_MINIMAL_MVP 系 05-11 漏判 + opening-protocol 系 07-02 新增触达）清零。
 
-**v0.5.0+ 净改善（vs v0.1.0）**：6 条缺口（P4 / P6 / P7 / G1 / G2 / G3）→ 1 条（仅 P4）。原因是 v0.4.0 C 路线工具层落地 + v0.5.0 KERNEL 坍缩后，许多原则通过具体工具 / skill / 协议获得物理触达，不再靠"CRITIQUE 步骤笼统覆盖"。
-
-**为什么 P4 仍未触达**：MVP FIRST 跟 OCCAM 容易混淆——OCCAM 是"砍到极致"，MVP 是"先跑通再完美"。前者是终态，后者是过程。当前 gg 的三模式都没有显式"先跑通再完美"的字段引力或协议步骤。建议作为 Tier 3 提议留给后续设计会话。
+**P4 的辨析留档**（判"触达"的边界，供未来复审）：MVP FIRST 跟 OCCAM 容易混淆——OCCAM 是"砍到极致"（终态），MVP 是"先跑通再完美"（过程）。M3 模块与 opening-protocol ④"最便宜一击"都是过程语义，判 P4 触达成立；`cc_agent.md` "简单问题装 0 个工具"是 OCCAM，不计入 P4。
 
 ### 报告格式
 

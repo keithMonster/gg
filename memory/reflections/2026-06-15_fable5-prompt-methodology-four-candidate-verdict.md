@@ -1,6 +1,6 @@
 ---
 date: 2026-06-15
-slug: fable5-prompt-methodology-收编四候选裁决
+slug: fable5-prompt-methodology-four-candidate-verdict
 summoner: monster (studio Fable-5 prompt 对照研究)
 northstar_reach: #2 动态学习反哺
 status: substantive-decision

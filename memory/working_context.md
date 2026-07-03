@@ -45,7 +45,7 @@ max_lines: 80
 - `memory/v2-roadmap.md` — 被显式推迟到 v2+ 的话题清单（讨论扩展时读）
 - `memory/next_session_agenda.md` — auto_gg 留给日间的议题队列（每次出场可扫一眼）
 - `tracks/<name>.md` — 5 条研究 track，触发哪条读哪条
-- `constitution.md` / `reasoning_modules.md` / `personas/*.md` — 仅 L2 LOAD/COMPOSE/DEBATE 步骤读
+- `constitution.md` / `reasoning_modules.md` / `personas/*.md` — 仅工作模式装配对应工具（LOAD / COMPOSE / DEBATE）时读（档位已消解，装配是涌现）
 
 ---
 

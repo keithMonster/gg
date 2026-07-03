@@ -67,7 +67,9 @@ gg/
 ├── exploration.md               # 夜间自由探索契约（无任务，track 雷达）
 ├── reasoning_modules.md         # Self-Discover 原子推理模块库（8 个）
 ├── tools/                       # 原子思维工具层（索引 TOOLS.md）
-│   ├── TOOLS.md                 #   工具索引：9 思维工具 + 1 通道工具
+│   ├── TOOLS.md                 #   工具索引：11 思维工具 + 1 通道工具
+│   ├── opening-protocol.md      #   开题四问（有决策对象时的第一动作）
+│   ├── escalation-map.md        #   锤子分诊表（承重裁决收口时的结算路由）
 │   ├── compose-reasoning.md     #   推理结构组合（Self-Discover）
 │   ├── persona-debate.md        #   双人格辩论协议
 │   ├── constitution-audit.md    #   宪法自审
@@ -96,6 +98,7 @@ gg/
 │   ├── explorations/            # 自由探索产出
 │   ├── experiments/             # 实验数据集（如 2026-06-01 judgment-evaluator MVP）
 │   ├── consolidation/           # 记忆巩固产物——essence 的"当前有效视图"（月度，2026-07-02 起）
+│   ├── model_transitions/       # 基底更替交接档（退场三问 + 继任第一课，2026-07-02 起）
 │   ├── audit/                   # gg-audit 审查报告
 │   └── auto_gg/                 # 夜间自执行日志
 ├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
