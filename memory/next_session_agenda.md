@@ -30,6 +30,7 @@ last_updated: 2026-07-03
 *（2026-07-03 Keith 全托授权后清空——5 项裁决全记录在 `design_sessions/2026-07-03_full-body-checkup.md` 追记节：eval 题库经 fresh 对抗审 8 条修改后启用 v0.2 / 五机制三处经 fresh 审句级收紧 / confab 机械锚裁不上（错层+判定非物理量，事故数据出现可重开）/ solution-scope 候选 REFUTED 不入库 / NW 存废维持 07-09 fresh 无叙事实例裁决）*
 
 - **Snyk 域外提醒**（07-02，一次性）：36% 公开 skill 含 prompt injection（二手转述未核原报告）——search-skill 装外部 skill 建议加注入审查，落点在全局 skill 归主会话
+- **[STRATEGIC] subject-model 层缺入库门**（07-06 gg-explore 斥候产出，详见 `explorations/2026-07-06_protection-is-allocated-inversely-to-irreplaceability.md`）：2026 演化记忆领域已把失败模式收敛成命名分类（Semantic/Procedural/Goal-Role Drift + "被 LLM 持续更新的记忆会烂" arXiv 2605.12978）。叠到 gg 上露出反向分配——最强治理机械（append-only + 验证关 + fresh 审）全焊在**可重建**的 essence 上；皇冠层 `tracks/keith.md`（每次启动加载、按 `subject-model-over-domain-knowledge` 是真资产、不可重建）却在裸奔的持续更新范式上，无任何门。踩中 gg 第一滴 essence `immutable`（不可变=不可重建）自己立的判据，分配是反的。**待拍板**：要不要给 subject-model 层加一道验证 / 半 append 门（触 D1，漫游未自动手）。辐射舰队：kebao-cc/ricky_cc 的 `@data/profile.md` 同暴露 ×N，且 `fleet-canon-is-sedimentary` 不回流
 
 ### 到期驱动
 
