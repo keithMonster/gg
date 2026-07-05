@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""memory/ 结构规范 + KERNEL 骨架 + state 字段完整性。
+r"""memory/ 结构规范 + KERNEL 骨架 + state 字段完整性。
 
 三个静态检查：
 1. memory/{archival,design_sessions,reflections,audit,auto_gg}/*.md 命名规范

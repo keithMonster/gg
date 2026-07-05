@@ -1,6 +1,6 @@
 ---
-version: 0.2.1
-last_updated: 2026-06-10
+version: 0.2.2
+last_updated: 2026-07-05
 max_lines: 80
 ---
 
@@ -41,6 +41,7 @@ max_lines: 80
 
 ## 按需读的相邻文件（启动时**不**读）
 
+- `memory/model_transitions/` + `memory/substrate.md` — 基底更替交接档 + 三相判别刀。**换基底后的首次日间出场必读最近一份交接档**（07-03 farewell 暴露的缺口：目录不在任何启动链，前一天的交接产出对次日会话不可见，险些另起平行流程。2026-07-05 收口）
 - `memory/lessons.md` — v10 / cg 两代前身的失败教训（First Principles 时读）
 - `memory/v2-roadmap.md` — 被显式推迟到 v2+ 的话题清单（讨论扩展时读）
 - `memory/next_session_agenda.md` — auto_gg 留给日间的议题队列（每次出场可扫一眼）
