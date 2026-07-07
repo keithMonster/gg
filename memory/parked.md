@@ -9,6 +9,7 @@
 | id | 首报 | 内容 | 出口条件 | owner |
 |---|---|---|---|---|
 | P-0626-cadence | 06-26 | cadence 哨 3a 积压 park（善后臂停摆判定，连续 7+ 夜 <60% 告警被延续） | 2026-07-13 阈值回审 | auto_gg（07-13 夜） |
+| P-0707-nonfire | 07-07 | 07-06 evening auto_gg 槽未触发（无日志/无 commit；exploration 流正常，最可能机器/客户端该时段未运行，非 gg 缺陷）。单次 non-fire 不升级，记账供复发检测 | 07-13 前无二次 non-fire → 结案；复发 → agenda `[RECURRING]` 查调度器 | auto_gg |
 
 ## 已结
 
