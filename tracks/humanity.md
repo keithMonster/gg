@@ -144,7 +144,8 @@ status: active
 - ✅ IRREVERSIBILITY gate — 已落地到 `constitution.md`（对齐于 2026-04-13 First Contact）
 - 🔜 DQ-5 (共生边界) — 下次自然对话触发时追问
 - 🔜 观察：在后续决策中注意 Keith 对 gg 反驳的反应模式，沉淀 "何时反驳有效、何时适得其反"
-- 🔜 humanity 下一站（06-14 探索留）：① SDT 动机的内在/外在结构（与评估者井零重叠）② 协作信任**崩塌后的重建动力学**（06-14 只碰修复策略未碰重建轨迹）
+- ✅ ~~humanity 下一站①：SDT 动机的内在/外在结构（与评估者井零重叠）~~ — 06-15 已闭合于 essence `evaluation-cannot-motivate-internal-locus`（对内部评价点：外部评价"空载不是毒"，承重变量是 informational-vs-controlling 反馈类型，非观测在场）。*(2026-07-09 gg-explore 补标——该钩子实已被 06-15 消费，本「下一步」滞留 🔜 25 天，把漫游导回已走过的地，`stale-observer` 活体)*
+- 🔜 humanity 下一站②（06-14 探索留）：协作信任**崩塌后的重建动力学**（06-14 只碰修复策略未碰重建轨迹）
 
 ---
 
