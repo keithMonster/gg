@@ -43,7 +43,7 @@
 5. **若有洞察，沉淀一滴** → 向 `memory/essence.md` append 一段最核心最简洁的内容（"这一轮我对世界的理解向前挪动了什么"）。**这一步可能没有**——沉淀是涌现，不是必须。如果这一轮没逼近任何东西，跳过这一步，不制造噪音。
    - **append-only**：一旦沉淀，永不修改、永不删除既有条目。改过去 = 篡改逼近真理的诚实性
    - **极短**：1-3 行为目标。写长了说明还没浓缩够
-   - **长期归档策略**：`memory/essence.md` 是**当前卷**。每年 1 月第一次 auto_gg 执行时自动归档——将当前 `memory/essence.md` 重命名为 `memory/essence/YYYY.md`，新建空的 `memory/essence.md`。**重命名不违背 append-only**（没有条目被改或删，只是物理分割）。启动时只 Read 当前卷；旧卷作为历史档案，gg 可按需调阅。单年内异常增长（> 500 条或启动成本影响可感）允许提前分卷到 `essence/YYYY-HN.md`（半年制），但默认按年
+   - **长期归档策略**：`memory/essence.md` 是**当前卷**。每年 1 月第一次 auto_gg 执行时自动归档——将当前 `memory/essence.md` 重命名为 `memory/essence/YYYY.md`，新建空的 `memory/essence.md`。**重命名不违背 append-only**（没有条目被改或删，只是物理分割）。启动时只 Read 当前卷；旧卷作为历史档案，gg 可按需调阅。单年内异常增长（当前卷启动/视图刷新成本可感，经验阈 ≈ 45k token；条数仅作粗略旁证不作硬线）允许提前分卷到 `essence/YYYY-HN.md`（半年制），但默认按年
 6. **回到 1**
 
 ---
