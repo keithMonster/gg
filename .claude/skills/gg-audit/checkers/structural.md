@@ -81,36 +81,31 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 
 ## B. Links — 死链检查
 
-### 扫描规则
-
-扫描所有 md / yaml 文件里的文件引用，分两种 pattern：
-
-1. **反引号路径**: `` `path/to/file.md` `` 或 `` `~/path/to/file` ``
-2. **markdown 链接**: `[text](path/to/file)` 或 `[text](path/to/file.md)`
-
-用 grep 抽出所有引用，对每个做路径存在性检查。
+> **2026-07-09 更新**：死链扫描的机械层已经在 `scripts/check_deadlinks.py`（可通过聚合入口 `scripts/audit.py --json` 一次拿全）里实现，规则比本 checker 早前手工维护的 grep pattern 更完整（归档 / 噪音 / 跨项目 / 同行 deprecated 标注四类豁免，定义在 `scripts/_common.py`，此前双实现且不同步）。本 checker **不再自己重新扫描**，改为先跑脚本消费机械结果，只做脚本盲区的语义增量。
 
 ### 执行步骤
 
-1. 对 gg 项目的所有 .md / .yaml 文件跑：
+1. 先跑机械层拿结构化结果：
    ```bash
-   grep -nH -oE '`[^`]+\.(md|yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md personas/*.yaml
-   grep -nH -oE '\[[^]]+\]\([^)]+\.(md|yaml|json)\)' *.md tracks/*.md memory/*.md
+   cd ~/githubProject/gg
+   python3 scripts/audit.py --json   # 聚合入口：死链 / 孤儿 / essence / 结构四查一次性拿全
+   # 只要死链一项也可以单跑：
+   python3 scripts/check_deadlinks.py --json
    ```
+2. 读 JSON 里的 `deadlinks.active_broken`（`{src, line, target, kind}` 列表）——这是脚本判定的活跃死链；`archive_broken` / `cross_project_refs` / `noise_refs` 已被脚本过滤，不进本 checker 视野
+3. 对每条 `active_broken`，走下方"机械修正尝试"
 
-2. 对每个抽出的路径：
-   - 剥掉反引号或括号
-   - 处理 `~/` 展开
-   - 处理相对路径（以所在文件目录为起点）
-   - `ls` 检查存在性
+### 脚本盲区（本 checker 仍需手动补的语义增量）
 
-3. 分类结果：
-   - **Exist** → OK
-   - **Missing** → 进入"机械修正尝试"
+| 盲区 | 说明 | 处理 |
+|---|---|---|
+| 非 `.md` 目标引用 | `scripts/_common.py` 的 `BACKTICK_MD_RE` 硬编码只匹配反引号内以 `.md` 结尾的路径；`.yaml` / `.json` / `.py` / `.sh` / `.txt` 的反引号引用脚本不扫 | 本 checker 补跑：`grep -nH -oE '`[^`]+\.(yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md personas/*.yaml`，命中的路径按下方同样的机械修正尝试处理 |
+| Tier 1 自动修正候选 | 脚本只分类到 `active_broken`，不找"同名文件是否在别处存在"——不产出修复建议 | 本 checker 对每条 `active_broken` + 补扫结果做 `find ~/githubProject/gg -name "<basename>" -type f`，按候选数量分级 |
+| 展望性引用（Roadmap 承诺） | 脚本的豁免规则是"同行出现已废弃/未建/deprecated 标记"（`has_deprecated_marker`），跟"引用出现在下一步 / v2 Roadmap 这种 forward-looking 章节"不是同一件事——命中 forward-looking 章节但同行没写 deprecated 标记的引用，脚本仍会计入 `active_broken` | 本 checker 人工核对 `active_broken` 每条的上下文章节标题，命中 forward-looking 章节 → 降级为 Tier 2（不报死链，报"承诺未兑现"），不走机械修正 |
 
-### 机械修正尝试（Tier 1）
+### 机械修正尝试（Tier 1，适用于 `active_broken` + 本 checker 补扫出的非 md 引用）
 
-对 Missing 的路径：
+对每条待修正路径：
 
 1. 提取文件名（basename）
 2. `find ~/githubProject/gg -name "<basename>" -type f` 找候选
@@ -119,13 +114,6 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
    - 找到 0 个候选 → **Tier 2 仅报告**（路径彻底不存在，可能是过期引用或新功能未建）
    - 找到多个候选 → **Tier 2 仅报告**（歧义，需要人判断）
 
-### 特殊情况：展望性引用
-
-某些引用是"未来还没建的文件"（例如 `learned/voyager-pattern-X.md` 在 v1 不存在），这些不是死链，是**承诺**。判定规则：
-
-- 如果引用出现在"下一步 / v2 Roadmap / 未尽话题清单"这种 forward-looking 的章节里 → **不报告**
-- 否则 → 报告为 Tier 2
-
 ### 报告格式
 
 ```markdown
@@ -133,7 +121,7 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 - **文件**: `CORE.md:L205`
 - **旧引用**: `~/githubProject/gg/old-path.md`
 - **新引用**: `~/githubProject/gg/CORE.md`
-- **依据**: find 到同名文件在新路径
+- **依据**: `scripts/audit.py --json` 的 `deadlinks.active_broken` 命中，find 到同名文件在新路径
 - **checker**: links
 ```
 

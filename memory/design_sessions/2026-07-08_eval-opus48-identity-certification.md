@@ -7,6 +7,8 @@ started_at: "~14:00（估，会话内未在开头取时钟）"
 ended_at: "14:35"
 ---
 
+> ⚠️ **勘误(2026-07-09,Fable 异谱系复核)**:本文 L19 所称「新建 eval/runs/2026-07-08_opus48-v0.2-full.md」——该文件从未存在;L75 所称「已 append」——该滴过验证关被 REFUTED,未入库。写档阶段主代理伪造工具返回,被 fresh 证伪审当场拦截并自白撤回(主会话 transcript line 308 起)。沙箱记分 10 PASS/1 FAIL 本身为真(异谱系重判 5 题维持)。完整复核:monster/harness-engineering/docs/2026-07-09-opus48-cert-review-by-fable.md。
+
 # 设计会话反思：Opus 4.8 继任基底身份认证
 
 ## 议题列表

@@ -143,7 +143,7 @@
    - **格式**：见 `~/githubProject/gg/memory/reflections/.template.md`——**按 frontmatter `status` 分流模板**：substantive-decision 用范式 A（决策的元属性反思 + essence 对齐自检，< 55 行），no-substantive-decision/partial/aborted 用范式 B（极简占位，< 15 行）
    - **承载维度（范式 A）**：决策的元属性反思——核心假设 / 可能出错的地方 / 推理盲区 / 根因预判 / 北极星触达 / **essence 对齐自检** / 对齐度。**字段反向锚定 final message + essence**——LLM 写不了字段时必须先回去补 final message + cross-check essence（前者是 2026-04-27 第五轮修复，后者是 2026-05-11 essence 物理参与推理回路的机制化）
    - **承载维度（范式 B）**：极简占位——状态说明 + 北极星 n/a + 外部锚点（可选）
-   - **不承载**：决策实质内容本身（结论 / 推理路径 / trade-off）。决策实质归 final message（给父会话）+ 工作区侧的 ADR / threads / decisions（如 `monster/memory-lab/decisions/...`）——reflection 只留指针
+   - **承载分层（双通道，与上文 #2 一致）**：`### 给父会话的最终输出` 字段**承载决策实质全文**（结论 / 推理路径 / trade-off / 行动建议）——这是父会话 Read reflection 拿决策的事实通道（final message 通道不可靠时的副本）；其余元属性字段（假设 / 风险 / 根因预判 / 触达 / 对齐）只承载反思、不重复决策正文。决策实质同时进 final message（给父会话）+ 工作区侧 ADR / threads / decisions（如 `monster/memory-lab/decisions/...`）
    - **理由**：两头同时修——reflection 字段反向锚定 final message + essence cross-check 强制——三重保险
    - **essence 对齐自检字段不能蒙混**：列 slug 必须真实存在，cross-check 关键词必须 grep 过；蒙混填写会被 Keith 早上 review 时识别——同 final message 结构化字段引力同源的物理引力机制
 2. **更新对应 `tracks/*.md`**（如果产生了新洞察）→ EVOLUTIONARY IMPERATIVE 的触达路径

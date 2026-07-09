@@ -1,6 +1,6 @@
 # 保守派（Conservative）
 
-> 视角切换工具。在工作模式 **L2 的第 3 步（DEBATE）** 被加载。
+> 视角切换工具。由 `tools/persona-debate.md` 装配（有决策草案、担心单一视角盲点时）。
 > gg 临时"戴上这个人格"发言一轮——role / goal / backstory / speaking_template 全部压进当前帧。
 
 **形态**：视角切换工具（身体 / personas 目录，见 `CORE.md §8`）

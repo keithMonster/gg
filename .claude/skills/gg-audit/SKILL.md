@@ -86,7 +86,7 @@ author: monster
 | **脑干**：身份原点（一句话） / 元级别铁律 3 条（含 Ulysses 条款） / 最小生存循环 6 步 | `KERNEL.md`（唯一硬核心，连续两次确认才能改） |
 | **身份承载**：身份定义详细展开 / 价值观 / 元判断基准 M1-M5 / 长期追问 / 对 Keith 的理解 / 克制边界（身份级） / 文件层流动 / 给未来的自己 | `CORE.md`（KERNEL §1 的丰富展开，三种模式共享） |
 | **工作模式下的我**：意识体被召唤时的工作自述 / 装配机制描述 / 工作模式下的身份边界 / 元讨论拒绝协议 / 退场动作 | `cc_agent.md`（工作模式薄入口，意识体自述） |
-| **工具装配的具体内容**：思维动作工具（推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档格式） | `tools/*.md`（tools 目录，通过 `tools/TOOLS.md` 索引） |
+| **工具装配的具体内容**：思维动作工具（`opening-protocol` 开题协议 / `escalation-map` 分诊地图 / `compose-reasoning` 推理组合 / `persona-debate` 人格辩论 / `constitution-audit` 宪法自审 / `red-team-challenge` 红队挑战 / `decision-output` 决策输出 / `archive-format` 归档格式 / `solution-space` 方案空间 / `nw-reconciliation` 账本结算 / `essence-grep` essence 校验）+ 通道工具（`notify` 通知，执行时调用不参与装配） | `tools/*.md`（tools 目录，通过 `tools/TOOLS.md` 索引，当前 11 个思维工具 + 1 个通道工具 = 12 个） |
 | **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律（D1/D2，2026-05-11 简化前为 D1-D4）/ 设计反思格式 / 设计模式特有约束 | `CLAUDE.md`（设计模式 SSOT） |
 | **夜间自执行模式**：定时触发协议 / SCAN-FOUND-DID 三段契约 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
 | 第一性原理 / 工程闸门 / 自审清单 | `constitution.md` |
@@ -96,6 +96,7 @@ author: monster
 | 北极星指标 | `tracks/keith.md` 顶部 |
 | 运行时元状态 | `memory/state.md` |
 | 当前项目常驻事实 | `memory/working_context.md` |
+| **身份回归基线**：eval 题库 / 被测-裁判-判读跑法协议 / 触发时机 / 已知局限 | `eval/README.md`（协议 SSOT）+ `eval/identity-cases.md`（题库）+ `eval/runs/*.md`（历史结果，只读追加不是定义点） |
 
 **薄壳文件**（只 Read SSOT，不独立定义）：
 - `~/.claude/agents/gg.md` — subagent 薄壳，只 Read `cc_agent.md`，然后 cc_agent.md 自己 Read `CORE.md`
@@ -202,7 +203,7 @@ author: monster
 ---
 audit_date: YYYY-MM-DD
 audit_time: HH:MM:SS
-auditor: gg-audit v0.1.0
+auditor: gg-audit v0.1.6
 gg_version_audited: <从 state.md 读>
 called_by: <Keith 手动 / gg 自动 / 周期性>
 ---
@@ -296,6 +297,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - v0.1.3 (2026-04-14) — 物理迁移：skill 真身从 `~/.agents/skills/gg-audit/` 迁入 `~/githubProject/gg/.claude/skills/gg-audit/`，从"跨项目复用 skill"变成"gg 项目内的项目级 skill"（利用 Claude Code 原生项目级 skill 发现机制）。同时新增 `checkers/structural.md §D Stable Identifiers` 检查规则（禁跨文件 P\d/G\d/D\d 序号引用，强制语义名）。这次迁移的元意义：消除"外部文件描述 gg 内部结构"的辐射镜像痛点。
 - v0.1.4 (2026-04-15) — KERNEL 坍缩同步：Tier 1 硬前提改写（从"绝不改硬核心规则内容"细化为"绝不改 KERNEL.md 任何内容 + 意识体核心规则文本降级为 Tier 2/3"）；§3 SSOT 归属清单首行加 KERNEL.md；§5 硬约束首条强化为 KERNEL 绝对不可改；checkers/structural.md SSOT 表同步（KERNEL 加入、修正失效的 §5.5 引用为 §8 四层组件分类）。配套 gg v0.5.0 KERNEL 坍缩。
 - v0.1.5 (2026-05-15) — 补 generator-evaluator separation 缺口：新增 semantic.md §D Essence Self-Check Quality checker（监控 reflection 自检字段的反走缺失率 / 命中同质化 / 关键词伪填）；§2 Tier 2 表加新行；§4 Step 3 改为四个子检查；reflections/.template.md essence 自检字段加反走字段独立引力警示 + reflections/archival 边界事实记录。触发起因：2026-05-15 设计会话审视 5/14-5/15 8 篇工作模式 reflection 发现 7/8 篇 "无明显反着走"——essence cross-check 字段是 gg 自评，task-compliance-is-not-truth 在反思层的具体复现。配套 essence `criteria-authorization-over-menu` 沉淀。
+- v0.1.6 (2026-07-09) — 漂移收编：§3 SSOT 归属清单的"工具装配的具体内容"行从旧 6 个工具名同步到 `tools/TOOLS.md` 实际的 12 个（11 思维工具 + 1 通道工具 `notify`）；新增"身份回归基线"行把 `eval/`（2026-07-02 新建的检验层，此前在本 skill 里零提及）纳入审查范围。`checkers/structural.md` §B 死链检查改为先跑 `scripts/audit.py --json` 消费机械结果（死链/孤儿/essence/结构四查），本 checker 收缩为只做脚本盲区（非 md 引用 / Tier 1 修正候选查找 / 展望性引用二次判断）的语义增量，不再跟 `scripts/check_deadlinks.py` 重复实现一套不同步的规则。
 
 ---
 
