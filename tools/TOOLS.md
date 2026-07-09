@@ -19,7 +19,6 @@
 | `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
 | `tools/archive-format.md` | 我要归档决策到 `memory/archival/` | 退场时装 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
-| `tools/nw-reconciliation.md` | 承接 monster NW proposals 账本结算（auto_gg 夜间专用） | 一次装，按轨1/2/3a/3b + L4 分桶执行 |
 | `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check `memory/essence.md` 避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
 
 ---
@@ -64,10 +63,10 @@
 
 - 这个索引本身是工具，不是规则——如果你发现某个工具从不被装，提议下沉到 `memory/archival/`
 - 如果你发现某个思维动作反复手工做，提议升级为新工具（需 Keith 明示批准——tools/ 目录在 CORE.md §8 身体内，扩充规则相对自由，但**新增工具文件**是 tools/TOOLS.md 的结构性变更，需要批准）
-- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 11 个思维工具 + 1 个通道工具（2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol；2026-06-10 体检同步——v0.4.0 首建时 6 个，后增 solution-space / nw-reconciliation / essence-grep / notify），仍有空间但要警惕"每次加一个"的 AI 扩张症状
+- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 10 个思维工具 + 1 个通道工具（2026-07-09 NW 缩编删 nw-reconciliation；2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol——v0.4.0 首建时 6 个，后增 solution-space / essence-grep / notify），仍有空间但要警惕"每次加一个"的 AI 扩张症状
 
 ---
 
-**版本**：v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14，期间工具表随新增持续更新但版本号未动）
+**版本**：v0.4.4（2026-07-09 NW 缩编删 nw-reconciliation，fresh 裁决执行）/ v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14，期间工具表随新增持续更新但版本号未动）
 **职责**：tools 目录入口索引（身体内）
 **管辖**：`CORE.md §8`

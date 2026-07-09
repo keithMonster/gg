@@ -11,6 +11,8 @@ last_updated: 2026-04-13
 > - First Contact 续签或大版本规划时
 >
 > 这些话题在 v1 范围内**不要做**——保持 v1 的节奏，把已锁定的组件先跑起来。
+>
+> **触发阈值 SSOT 已移至 `memory/checkup.md §2`**（2026-07-09 三层蓝图批次 C）——本文件是"明令别读"文件，阈值定义在此 = 无人机械监测的死角。checkup.md 配月度机械读者（auto_gg 巩固夜）。本文件留话题背景；越线判定看 checkup.md。
 
 ---
 
@@ -24,16 +26,15 @@ last_updated: 2026-04-13
 - sqlite 化是体量优化，先有量才需要优化
 - 现在事件归档才个位数文件，read 完全够用
 
-**v2 启动条件**：
-- events 数量 ≥ 50 *或*
-- 单次启动加载量 > 200k tokens *或*
-- Keith 明示"现在做"
+**v2 启动条件**：见 `memory/checkup.md §2`（events ≥ 50 / 启动加载 > 200k tokens / Keith 明示——前两条机械监测）。
 
 **首个子项**：schema 设计
 
 ---
 
 ## v2 候选清单（未排期）
+
+> 以下各项的**触发/升级阈值 SSOT = `memory/checkup.md §2`**（机械监测）；本节留话题背景。
 
 ### learned/ 的 Voyager 式自增长
 - v1 是空目录

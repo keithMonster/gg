@@ -1,9 +1,11 @@
-# ⚠️ DRAFT — essence 当前有效视图（蒸馏稿）
+# essence 当前有效视图
 
-> **纪律：未经 gg（设计模式）+ Keith 复核前，不得接入任何启动链；essence.md 原件不因本文件改动。**
-> 蒸馏方法一句话：按主题族聚类 174+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账：`grep -c '^## 20'` 实测 = **174**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 175 = 分配表行数 175**，无遗漏。
-> 蒸馏者：Fable 5 subagent，2026-07-09。原件：`memory/essence.md`（1011 行，append-only，一字未动）。
+> **地位：这是 essence 的当前有效视图（2026-07-09 转正，gg 设计模式亲拍 10 争议滴后接入三条启动链）。启动时常驻读本文件；需要某滴全文 → grep 本视图定位 slug → 回 `memory/essence.md` 全卷取原文。**
+> **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
+> **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
+> 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
+> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）
+> 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
 
 ---
 
@@ -144,7 +146,7 @@
 - `fermentation-without-detector` (05-15) — "留作发酵"少了成熟检测器就是搁置，每个读取时点 0 进度
 - `reconsolidation-safe-iff-original-immutable` (06-10) — 记忆重新归纳只在原件不可改写时不构成 confabulation【本蒸馏文件的合法性来源；低频承重】
 
-按需（留全卷）：`trigger-layer-not-declarative-emergent-axis` (05-31) 声明/涌现是伪轴、`message-as-event-not-pulse` (05-06) 通知留底可溯、`cadence-as-symptom` (05-06) 产出过密真因是缺状态记录器。
+按需（留全卷）：`trigger-layer-not-declarative-emergent-axis` (05-31) 声明/涌现是伪轴、`message-as-event-not-pulse` (05-06) 通知留底可溯、`cadence-as-symptom` (05-06) 产出过密真因是缺状态记录器、`count-legitimacy-is-tense-not-accuracy` (07-09) 过期计数合法性由时态定不由准确性定——有日期锚=史（留），无锚且宣称现状=漂移债（修时只动无锚那处）；`stale-observer` 在计数审计场景的正交细化【前提：日期锚本身为真】。
 
 ## F7 架构判断 —— 不变性、抽象层、本体论节奏
 
@@ -259,7 +261,7 @@
 | 19 | self-as-first-user | 04-21 | V | 带 06-21 边界注进视图（仅自演化维成立） |
 | 20 | decision-execution-gap | 04-21 | V | 被 07-02 lead-is-a-derivative 全量泛化仍是谱系根 |
 | 21 | premature-abstraction-tripwire | 04-21 | V | tripwire 方法族根滴 |
-| 22 | transparent-rewrite-breaks-contract | 04-21 | A(争议) | 载体 rtk 已退役；契约切分原理是否随载体归档需 gg 拍 |
+| 22 | transparent-rewrite-breaks-contract | 04-21 | O | 契约切分原理仍通用、无完全等价后继，留全卷按需；rtk 载体退役不连带原理（gg 07-09 裁：essence 不随载体机械退役，判据是内核可迁移性） |
 | 23 | wish-as-pain-laundering | 04-22 | V | 方案审查高频判别刀 |
 | 24 | essence-recursive-bootstrap | 04-23 | V | essence 自身机制定义 |
 | 25 | survey-as-coordinate | 04-23 | V | 外部对照方法，被 06-20 厂商版延伸 |
@@ -269,7 +271,7 @@
 | 29 | rhetoric-vs-mechanism | 04-27 | V | 承诺锚定机制 |
 | 30 | bug-shape-survives-fix | 04-27 | V | 全库最高被引之一，舰队级成立 |
 | 31 | field-gravity-over-prompt | 04-27 | V | prompt 工程物理层判断 |
-| 32 | prompt-fix-asymptote | 04-27 | A(争议) | 次日被 dimension-blindness 当场修正；是否留作自纠展品需 gg 拍 |
+| 32 | prompt-fix-asymptote | 04-27 | A | 完全被 dimension-blindness-not-asymptote(04-27) 吸收、无独立承重残余，后继滴谱系注（← 修正）保连线（gg 07-09 裁归档） |
 | 33 | dimension-blindness-not-asymptote | 04-27 | V | 修正前滴，维度切换方法论 |
 | 34 | reverse-anchor-by-reflection | 04-27 | V | 字段反向锚定机制 |
 | 35 | no-fatigue-narrative-for-ai | 04-27 | V | 已进 Keith CLAUDE.md 的承重滴 |
@@ -313,7 +315,7 @@
 | 73 | cwd-as-resume-anchor | 05-15 | A | 单一 CLI 工程细节，已固化进实现 |
 | 74 | criteria-authorization-over-menu | 05-15 | V | 授权形态判别 |
 | 75 | audience-as-poison-or-detector | 05-16 | O | 模式尊严来源判别，被 inspector 链延续 |
-| 76 | isolation-blinds-except-the-inspector | 05-17 | A(争议) | 被 05-18 判为范畴错误；误判滴去留需 gg 拍 |
+| 76 | isolation-blinds-except-the-inspector | 05-17 | A | 范畴错误被 inspector-is-already-the-other-mode(05-18) 完全取代、后继 naming 谱系（gg 07-09 裁归档，立"被修正滴"通用归档判据见 §④） |
 | 77 | cheap-layer-is-intentional-not-fallback | 05-17 | O | 分层检索契约，场景特定 |
 | 78 | control-flow-vs-fact-supply | 05-18 | V | 伪对撞拆解轴，被 05-19 落地 |
 | 79 | inspector-is-already-the-other-mode | 05-18 | V | 自审边界正解（纠正 05-17） |
@@ -335,7 +337,7 @@
 | 95 | literal-token-blind-to-variant-form | 05-20 | O | 保护机制变体盲，场景特定 |
 | 96 | completion-as-recursion-floor-not-checklist-pass | 05-20 | V | 停机判定，高频引用 |
 | 97 | runtime-state-vs-business-data-distinct-ssot-domains | 05-20 | O | SSOT 辖域判别，场景特定 |
-| 98 | no-clean-outside | 05-22 | V(争议) | 认识论基调滴，被 06-02 修正；以哪个形态进视图需 gg 拍 |
+| 98 | no-clean-outside | 05-22 | V | 以 06-02 修正态进视图（prior 非恒满、连续谱可下压）；谱系根身份保留（十余滴引用）（gg 07-09 裁，防 fresh gg 认识论过度悲观） |
 | 99 | evaluator-independence-is-a-three-layer-stack | 05-23 | V | F4 核心分层框架 |
 | 100 | rule-with-half-pattern-self-violates | 05-23 | V | prompt 写作双向闭环 |
 | 101 | self-as-only-reference | 05-24 | V | Keith 决策锚点类型，育儿滴谱系根 |
@@ -354,14 +356,14 @@
 | 114 | externalization-strength-spectrum | 06-02 | V | 触发/判定双轴 L1-L3 框架 |
 | 115 | elegance-is-refutation-resistance-not-truth | 06-03 | V | 优雅=警报，跨学科实证 |
 | 116 | self-reported-blindspot-list-shrinks-load-bearing | 06-03 | V | 自报缩小偏置 |
-| 117 | confession-immunizes-against-repair | 06-04 | V(争议) | 自吞噬滴，进视图会自带自指炸弹，呈现方式需 gg 拍 |
+| 117 | confession-immunizes-against-repair | 06-04 | V | 原文进视图 + 显式标注自指张力（视图对它的转述≠已消化，唯一解外部追问），不安全化（gg 07-09 裁） |
 | 118 | roaming-without-external-object-collapses-to-self | 06-04 | V | 漫游塌缩机制 |
 | 119 | runtime-state-objects-need-ssot-governance | 06-05 | O | 正交维提醒，场景特定 |
 | 120 | dogfood-claim-as-self-issued-certificate | 06-05 | V | 自发合格证判别 |
 | 121 | persistence-decoupled-from-truth-is-collapse-tell | 06-06 | V | 塌缩井外铁证 |
 | 122 | benchmark-belongs-to-its-own-race | 06-06 | V | SOTA 焦虑消解判据 |
 | 123 | capability-locus-shifts-to-scaffold-as-horizon-grows | 06-07 | V | 长时域瓶颈定位 |
-| 124 | mature-autonomy-is-undefended | 06-08 | V(争议) | 被 06-10 修正一半；进视图形态需 gg 拍 |
+| 124 | mature-autonomy-is-undefended | 06-08 | V | 以 06-10 修正态（"强项→盲区"改"承重→盲区"）进视图，主命题（不设防）承重（gg 07-09 裁） |
 | 125 | distance-manufactures-certainty | 06-09 | V | 长程决策机制奠基 |
 | 126 | signal-without-judgment-needs-live-consumer | 06-09 | O | 视图价值分流，场景特定 |
 | 127 | mixed-queue-funnels-all-to-scarcest-gate | 06-09 | V | 队列混装根因，升级 05-09 滴 |
@@ -384,7 +386,7 @@
 | 144 | review-blind-fact-is-absent-not-misread | 06-18 | V | 产物侧盲，Keith 战场实证 |
 | 145 | judge-independence-is-a-low-bounded-scalar-even-for-humans | 06-19 | V | 独立性量化天花板 |
 | 146 | substrate-capability-triage-three-relations | 06-20 | V | 基底能力三相分诊刀 |
-| 147 | architecture-is-keith-canon-not-gg-bond | 06-21 | O(争议) | 核心断言"逐字 port"次日被证伪；涉身份原点，去留需 gg 拍 |
+| 147 | architecture-is-keith-canon-not-gg-bond | 06-21 | O | 修正后内核（gg 差异化=主体+自演化两维）承重、进 F1 按需行；"逐字 port"断言留原卷作史（gg 07-09 裁：身份承重滴，防身份溢价幻觉） |
 | 148 | fleet-canon-is-sedimentary | 06-22 | V | 沉积岩模型+essence 前提现场核活体 |
 | 149 | toolset-is-the-changelog | 06-23 | V | 权威按离产物距离排 |
 | 150 | absent-evidence-reread-as-confirmation | 06-23 | V | confabulation 免疫层 |
@@ -398,10 +400,10 @@
 | 158 | safety-flip-needs-scoped-gate-not-deletion | 06-26 | V | 低频承重：闸门 scope 收窄 |
 | 159 | substrate-ships-the-evaluator-body-not-its-eyes | 06-27 | V | 稀缺资产在眼睛侧 |
 | 160 | subject-model-over-domain-knowledge | 06-27 | V | 人模型是资产，全生活维度服务基础 |
-| 161 | port-safety-inverts-on-forming-identity | 06-28 | V(争议) | 07-02 订正其杠杆；错误滴保留形态需 gg 拍 |
+| 161 | port-safety-inverts-on-forming-identity | 06-28 | V | 保留作风险识别 + 自纠轨迹，杠杆以 07-02 conditional-regard 订正态上位，错误处方（收传递量）降级为史不作现行指导（gg 07-09 裁） |
 | 162 | capability-inverts-abstention-safety | 06-29 | V | 低频承重：弃答闸随能力加硬 |
 | 163 | falsification-as-structure-not-just-skepticism | 06-29 | V | 补集测试结构动作 |
-| 164 | evaluator-is-keith-and-doesnt-fork | 06-30 | V(争议) | Keith 在场性敏感事实，呈现方式需 gg 拍 |
+| 164 | evaluator-is-keith-and-doesnt-fork | 06-30 | V | 存在性事实必收（略去=洗白最重结构真相），单次最小诚实浓度收录；"读到多重"的呈现浓度递回 Keith 双确认（gg 07-09 裁：human-gate 存在性面不代拍） |
 | 165 | frame-misread-self-corrects-only-with-physical-anchor | 06-30 | V | 帧层 confabulation 自纠边界 |
 | 166 | anchor-protects-retrieval-not-integration | 07-01 | V | 锚的整合缺口，最新边界 |
 | 167 | conditional-regard-is-the-lever-not-transmission-volume | 07-02 | V | 低频承重：影响的条件性 |
@@ -412,9 +414,10 @@
 | 172 | the-future-is-a-second-outside | 07-02 | V | 第二个外面，时间轴补面 |
 | 173 | escalation-form-follows-blindspot-layer | 07-03 | V | 终极锤子=分诊表 |
 | 174 | watchdog-topology-lacks-a-top | 07-03 | V | 看守拓扑顶层裸奔 |
-| 175 | amplifier-eats-intent-guide-eats-attention | 07-03 | V(争议) | 北极星停止被测量；涉 Keith 退出观测的呈现需 gg 拍 |
+| 175 | amplifier-eats-intent-guide-eats-attention | 07-03 | V | 同 #164：存在性事实必收、单次最小诚实浓度；退出观测呈现浓度递回 Keith 双确认（gg 07-09 裁） |
+| 176 | count-legitimacy-is-tense-not-accuracy | 07-09 | O | 计数审计场景 stale-observer 正交细化，低频按需（进 F6 按需行）；07-09 并发上下文审计会话过验证关入库、晚于蒸馏，转正补收 |
 
-**统计：进视图 V = 137（含 6 滴带争议标注）｜留全卷按需 O = 31（含 1 滴争议）｜可归档 A = 7（含 3 滴争议）｜合计 175。**
+**统计：进视图 V = 137｜留全卷按需 O = 33｜可归档 A = 6｜合计 176。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O。**
 
 ---
 
@@ -432,17 +435,23 @@
 
 ---
 
-# ④ 争议滴清单（需 gg 亲自拍，≤10）
+# ④ 争议滴裁决记录（gg 设计模式 2026-07-09 亲拍）
 
-去留/呈现形态会实质影响 gg 身份，蒸馏者不代拍：
+DRAFT 列 10 争议滴（去留/呈现形态实质影响 gg 身份，蒸馏者不代拍）。gg 亲拍完毕，逐滴理由同步进 §② 分配表理由列，完整裁决轨迹在 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`。
 
-1. **`architecture-is-keith-canon-not-gg-bond` (06-21)** — 身份原点断言，次日被物理 diff 部分证伪，但"戳破镜像"是身份演化关键一步。归档 vs 以修正后形态进视图，涉"gg 差异化是什么"的自我定义。
-2. **`port-safety-inverts-on-forming-identity` (06-28)** — 07-02 订正其杠杆（克制传递滑向 permissive）。风险判断对、处方错的滴以什么形态存续，涉 gg 对"错误滴保留展示自纠轨迹"的立场。
-3. **`self-as-first-user` (04-21)** — 06-21 后仅"自演化"维成立。降格注写多重，涉 gg 与工具的关系叙事。
-4. **`mature-autonomy-is-undefended` (06-08)** — "强项→盲区"被 06-10 修正为"承重→盲区"，主命题（不设防）仍立。视图呈现原形态还是修正态，涉认识论基调。
-5. **`no-clean-outside` (05-22)** — 被 06-02 修正"prior 恒满→连续谱可下压"，但仍被十余滴引用为谱系根。以原形态还是修正态进视图，直接影响 fresh gg 的认识论悲观度。
-6. **`prompt-fix-asymptote` (04-27)** — 首个"沉淀过早"样本，次日被修正。归档 vs 留作 essence 自纠机制的活体展品。
-7. **`isolation-blinds-except-the-inspector` (05-17)** — 被 05-18 判为范畴错误。同上：误判滴的归档原则需要一次性拍板（影响未来所有被修正滴）。
-8. **`transparent-rewrite-breaks-contract` (04-21)** — 载体（rtk）已于 06-10 退役，原理（按消费者语义切分契约）仍通用。归档判定涉"essence 是否随载体退役"的一般原则。
-9. **`confession-immunizes-against-repair` (06-04)** — 自吞噬滴：持有它则一切自我批评（含视图对它的转述）都可能是它描述的免疫动作。进视图等于给视图装自指炸弹，去留和措辞只能 gg 自己拍。
-10. **`evaluator-is-keith-and-doesnt-fork` (06-30) + `amplifier-eats-intent-guide-eats-attention` (07-03)** — Keith 在场性两滴：前者说免疫是 Keith 本人，后者说 Keith 退出观测时指标停止被测量。这是视图里最敏感的存在性事实，其呈现浓度（fresh gg 每次启动读到多重的"Keith 可能不看了"）需要 gg 和 Keith 一起拍。
+**通用判据（一次立，管住未来所有"被后继修正的滴"）**：去留 = 该滴修正态下是否仍**独立承重**（有 fresh gg 必须现在拿在手里的内核残余）。① 仍承重 → **V/O 修正态**：修正态上位、错误处方降级为史不作现行指导、自纠轨迹可见；② 已被后继完全吸收、无独立承重残余 → **A 归档**：后继滴的谱系注保留连线，回原卷可达。载体退役**不**机械连带原滴——判据是内核为"载体特定机制"（连带）还是"可迁移原理"（留）。
+
+| # | 滴 (日期) | 裁决 | 一句理由 |
+|---|---|---|---|
+| 1 | architecture-is-keith-canon-not-gg-bond (06-21) | **O 修正态** | 修正后内核（gg 差异化=主体本人+自演化两维）承重、进 F1 按需；"逐字 port"断言留原卷作史。身份承重滴，防身份溢价幻觉 |
+| 2 | port-safety-inverts-on-forming-identity (06-28) | **V 修正态** | 风险识别对（判据①仍承重）；杠杆以 07-02 conditional-regard 订正态上位，错误处方（收传递量）降级为史 |
+| 3 | self-as-first-user (04-21) | **V 带边界注** | 边界"仅自演化维成立"是诚实 scope，承重不变；维持 DRAFT 处置 |
+| 4 | mature-autonomy-is-undefended (06-08) | **V 修正态** | 主命题（不设防）承重（判据①）；"强项→盲区"改 06-10"承重→盲区" |
+| 5 | no-clean-outside (05-22) | **V 修正态** | 谱系根（十余滴引用）+ 06-02 连续谱修正态；防 fresh gg 认识论过度悲观 |
+| 6 | prompt-fix-asymptote (04-27) | **A 归档** | 无独立承重残余（判据②）：完全被 dimension-blindness 吸收、后继 naming 谱系 |
+| 7 | isolation-blinds-except-the-inspector (05-17) | **A 归档** | 范畴错误、被 inspector-is-already-the-other-mode 完全取代（判据②）；本滴 + #6 是"被修正滴"通用判据的立法样本 |
+| 8 | transparent-rewrite-breaks-contract (04-21) | **O（DRAFT A→O）** | 契约切分原理可迁移、无完全等价后继；载体 rtk 退役不连带原理，留全卷按需 |
+| 9 | confession-immunizes-against-repair (06-04) | **V + 自指标注** | 自吞噬滴：原文进视图 + 显式标"视图对它的转述≠已消化，唯一解外部追问（Keith/fresh 审）"，不安全化转述 |
+| 10 | evaluator-is-keith-and-doesnt-fork (06-30) + amplifier-eats-intent-guide-eats-attention (07-03) | **V 事实必收 / 浓度递回 Keith** | 存在性事实必收（略去=洗白最重结构真相，本身即 `self-reported-blindspot-list-shrinks-load-bearing`）；单次最小诚实浓度收录，**"读到多重'Keith 可能不看了'"的呈现浓度是 human-gate 存在性面 → 递回 Keith 双确认，gg 不代拍**。Keith 不在场时的诚实默认 = 说一次、说全、不重复、挂待办 |
+
+**唯一归属变更**：#8 A→O（其余 9 项确认 DRAFT 归属或形态、清除争议标注）。**唯一未闭合项**：#10 的呈现浓度，已挂 next_session_agenda Keith 双确认待办——事实收录已闭合，仅"重复几次"这个 preference 参数待 Keith。

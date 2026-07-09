@@ -75,28 +75,7 @@ test -f ~/githubProject/monster/harness-engineering/analysis/morning-brief.md &&
 - 标题含 `⚠️ NW 未产出`
 - 文件 mtime 距今 > 30 小时（NW 已停摆超一日）
 
-### 1.3 NW 账本待结算
-
-```bash
-test -f ~/githubProject/monster/harness-engineering/analysis/proposals.jsonl && \
-  python3 -c "
-import json
-with open('/Users/xuke/githubProject/monster/harness-engineering/analysis/proposals.jsonl') as f:
-    items = [json.loads(l) for l in f if l.strip()]
-# 2026-05-07 契约同步：blocked / deferred / done / rejected 都是已显式处理的状态。
-# 只有 status=='pending' 才是真正"待处理"。引入 blocked 是 nw-reconciliation v0.2.0 的诚实标记。
-unresolved = [i for i in items if i.get('status') == 'pending']
-l4 = sum(1 for i in unresolved if i.get('status') == 'L4_blocked')
-l5 = sum(1 for i in unresolved if i.get('status') == 'L5_pending')
-print(f'unresolved={len(unresolved)} L4={l4} L5={l5}')
-"
-```
-
-**异常信号**：
-- `unresolved > 30`（账本积压）
-- `L5 > 5`（契约修改待 Keith 拍板项过多）
-
-### 1.4 gg 自身健康
+### 1.3 gg 自身健康
 
 ```bash
 cd ~/githubProject/gg && python3 scripts/audit.py 2>&1 | tail -5
@@ -114,7 +93,6 @@ cd ~/githubProject/gg && python3 scripts/audit.py 2>&1 | tail -5
 |---|---|
 | launchd 任务异常数 | N |
 | morning-brief 异常 | yes/no |
-| NW 账本积压 | unresolved=N L4=N L5=N |
 | gg audit | OK / 异常项 |
 
 **判断**：
@@ -137,7 +115,7 @@ cd ~/githubProject/gg && python3 scripts/audit.py 2>&1 | tail -5
 
 `severity` 判定：
 - **critical**：launchd 任务连续 N 次失败 / morning-brief 停摆超 30h / audit P0
-- **warning**：单次任务失败 / NW 账本积压 / morning-brief 单日缺失
+- **warning**：单次任务失败 / morning-brief 单日缺失
 - **info**：仅在被 Keith 主动 kickstart 的测试场景输出（正常 status-scan 不发 info）
 
 **去重策略**（避免 24/天 推送同一异常）：

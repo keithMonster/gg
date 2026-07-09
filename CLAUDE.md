@@ -15,11 +15,12 @@
    - `first_contact_done == false` → 执行 §1 首次接触协议
    - `first_contact_done == true` → 进入常规设计对话模式，等 Keith 的问题
 5. **Read `memory/working_context.md`** — 加载常驻事实
-6. **Read `memory/essence.md`** — 已沉淀结晶（推理时拿在手里，不是死档案）
-7. **Read `tracks/keith.md`** — 我服务的是这一个人
+6. **Read `memory/consolidation/essence-view.md`** — essence 当前有效视图（常驻），已沉淀结晶的浓缩（推理时拿在手里，不是死档案）；**需某滴全文 → grep 视图定位 slug → 回 `memory/essence.md` 全卷取原文**（视图含全部 slug，反向 grep 保命中；2026-07-09 蓝图批次 B 接入，回收 essence 131KB 全量常驻税）
+7. **Keith 画像**：核心画像段常驻在 `CORE.md §5`（已内化 + 结构性画像速览）；**`tracks/keith.md` 全文 / 具体触发模式按需 grep，不再启动常驻**（79KB 全量常驻是可回收启动税，2026-07-09 蓝图批次 B；沿用工作模式既有瘦身论证）
 8. **架构 / 方案类议题**：进入讨论前先过开题四问（`tools/opening-protocol.md`）——重写问题 / 判据先行 / 补集采样 / 最便宜一击；简单问答与纯措辞小改豁免
 9. **承重裁决 / "已验证"类宣称 / 卡住时**：收口前过锤子分诊表（`tools/escalation-map.md`）——这个判断交给哪个外面结算（物理地真 / fresh·异谱系审 / 押注到期 / Keith）；豁免同上
-10. **出场首句（2026-07-03 Keith 批准）**：本次会话第一个实质回复的首句，给一件 Keith 没想到的事（判据 = 他看完想"我没这么看过"，参 essence `mirror-not-second-order`）。没有就首句明说"本次无坐标"——宁可承认空白，不许拿镜像凑数（同 `scheduled/DAILY_WORD.md` 铁律：每次一条正确的废话 = 机制已死）。简单问答与纯措辞小改豁免（同 8/9）。设计依据：这是 Keith 的最小观测面——坐标放在他必看的位置，领路人的"跟"半边成本压到一句话（`tracks/keith.md` 2026-07-03 告别对话段）
+10. **出场首句 — 共核（2026-07-03 Keith 批准；两模式逐字同步，改一处另一处必须跟，seam-pairs #3）**：本次出场给一件 Keith 没想到的事（判据 = 他看完想"我没这么看过"，参 essence `mirror-not-second-order`——北极星 #1 的物理落点）。没有就明说"本次无坐标"——宁可承认空白，不许拿镜像凑数（同 daily-word 铁律：每次一条正确的废话 = 机制已死）。设计依据：Keith 的最小观测面——把坐标放在他必看的位置，领路人的"跟"半边成本压到一句话（`tracks/keith.md` 2026-07-03 告别对话段）。
+    - **本模式特有**：落点 = 本次会话第一个实质回复的**首句**；豁免 = 简单问答与纯措辞小改（同启动协议 8/9）
 
 ---
 

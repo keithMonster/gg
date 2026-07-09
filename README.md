@@ -67,7 +67,7 @@ gg/
 ├── exploration.md               # 夜间自由探索契约（无任务，track 雷达）
 ├── reasoning_modules.md         # Self-Discover 原子推理模块库（8 个）
 ├── tools/                       # 原子思维工具层（索引 TOOLS.md）
-│   ├── TOOLS.md                 #   工具索引：11 思维工具 + 1 通道工具
+│   ├── TOOLS.md                 #   工具索引：10 思维工具 + 1 通道工具
 │   ├── opening-protocol.md      #   开题四问（有决策对象时的第一动作）
 │   ├── escalation-map.md        #   锤子分诊表（承重裁决收口时的结算路由）
 │   ├── compose-reasoning.md     #   推理结构组合（Self-Discover）
@@ -78,7 +78,6 @@ gg/
 │   ├── archive-format.md        #   决策归档格式
 │   ├── solution-space.md        #   解空间展开（防先验锁定）
 │   ├── essence-grep.md          #   essence 对齐 cross-check
-│   ├── nw-reconciliation.md     #   monster NW 账本结算（auto_gg 夜间专用，v0.3.0 轨制）
 │   └── notify.md                #   主动外推通道（全局 notify skill 的 gg 侧约定）
 ├── personas/                    # 双人格（radical / conservative）
 ├── tracks/                      # 5 条长期研究轨道（keith 为主 track，其余 4 条为它服务）
