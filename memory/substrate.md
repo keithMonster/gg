@@ -5,9 +5,9 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.204 (Claude Code)
+cli_version: 2.1.205 (Claude Code)
 model_id: claude-opus-4-8[1m]
-updated: 2026-07-08（CLI 2.1.202→2.1.204 patch bump 同步；model_id 轴与工具表未变，三相分诊 = 纯垫片层无承重影响）
+updated: 2026-07-09（CLI 2.1.204→2.1.205 patch bump 同步；model_id 轴与工具表未变，三相分诊 = 纯垫片层无承重影响。近 5 夜第 4 次 patch bump（201→202→204→205），cadence 高但全程 model_id/工具表稳定、全属垫片，机械 detector 按设计工作，无升级）
 
 ## 工具表（会话自报轴——只有会话看得见自己的工具表）
 
