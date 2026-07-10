@@ -1,6 +1,6 @@
 ---
 type: v2-roadmap
-last_updated: 2026-04-13
+last_updated: 2026-07-09
 ---
 
 # v2 Roadmap — 被显式推迟到 v2+ 的话题

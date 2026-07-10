@@ -47,6 +47,7 @@ max_lines: 80
 - `memory/next_session_agenda.md` — auto_gg 留给日间的议题队列（每次出场可扫一眼）
 - `tracks/<name>.md` — 5 条研究 track，触发哪条读哪条
 - `constitution.md` / `reasoning_modules.md` / `personas/*.md` — 仅工作模式装配对应工具（LOAD / COMPOSE / DEBATE）时读（档位已消解，装配是涌现）
+- `knowledge-map/` — Keith 的 agent 生态 5 层知识图谱（70 节点交互页，2026-07-10 建）；机制演化后需更新时读其 README 的再生成路径
 
 ---
 

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent 生态知识地图</title>
+<style>
+/* ============ paper-editorial tokens ============ */
+:root {
+  --canvas: #F8F6F0;
+  --surface: #FBFAF6;
+  --surface-hover: #F2F0EA;
+  --text-1: #1A1A1A;
+  --text-2: #6B6B6B;
+  --text-3: #8B8B8B;
+  --hairline: #E5E2DC;
+  --accent: #2A3340;            /* accent_bluegrey */
+  /* 层徽标：同色相 5 档明度（hsl(214 21% L)） */
+  --layer-0: hsl(214 21% 21%);
+  --layer-1: hsl(214 18% 34%);
+  --layer-2: hsl(214 15% 47%);
+  --layer-3: hsl(214 12% 60%);
+  --layer-4: hsl(214 10% 72%);
+  --font-display: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif;
+  --font-ui: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", -apple-system, system-ui, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --drawer-w: 500px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--canvas);
+  color: var(--text-1);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ============ 顶栏 ============ */
+header.topbar {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--hairline);
+  padding: 12px 32px;
+  display: flex; align-items: baseline; gap: 24px;
+}
+.topbar h1 {
+  font-family: var(--font-display);
+  font-size: 20px; font-weight: 700; line-height: 1.25;
+  white-space: nowrap;
+}
+.topbar .stats {
+  font-size: 12px; color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.topbar .spacer { flex: 1; }
+.searchbox { position: relative; width: 320px; }
+.searchbox input {
+  width: 100%; height: 36px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 14px; font-family: var(--font-ui);
+  color: var(--text-1);
+  transition: border-color 150ms ease-out;
+}
+.searchbox input:focus { outline: none; border-color: var(--text-1); }
+.searchbox input::placeholder { color: var(--text-3); }
+.search-results {
+  position: absolute; top: 40px; left: 0; right: 0;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  max-height: 420px; overflow-y: auto;
+  display: none;
+  box-shadow: 0 1px 2px -1px rgba(0,0,0,.06), 0 2px 4px rgba(0,0,0,.04);
+}
+.search-results.open { display: block; }
+.search-results .sr-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--hairline);
+  transition: background-color 150ms ease-out;
+}
+.search-results .sr-item:last-child { border-bottom: none; }
+.search-results .sr-item:hover, .search-results .sr-item.active { background: var(--surface-hover); }
+.sr-item .sr-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.sr-item .sr-summary { font-size: 12px; color: var(--text-2); line-height: 1.45;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ============ 主区 ============ */
+main {
+  transition: margin-right 250ms ease-in-out;
+}
+body.drawer-open main { margin-right: var(--drawer-w); }
+@media (max-width: 1280px) { body.drawer-open main { margin-right: 0; } }
+
+.intro {
+  padding: 48px 32px 32px;
+  max-width: 46em;
+}
+.intro h2 {
+  font-family: var(--font-display);
+  font-size: 32px; font-weight: 700; line-height: 1.18;
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+.intro p { color: var(--text-2); font-size: 15px; text-wrap: pretty; margin-bottom: 8px; }
+.intro .hint { font-size: 13px; color: var(--text-3); }
+.intro .hint kbd {
+  font-family: var(--font-mono); font-size: 12px;
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: 2px; padding: 1px 5px;
+}
+
+/* ============ 图区（泳道 + SVG 边） ============ */
+#map { position: relative; }
+#edges {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.lane { border-top: 1px solid var(--hairline); }
+.lane:nth-child(even) { background: var(--surface); }
+.lane-head {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 24px 32px 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.lane-head .roman {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 700; line-height: 1;
+  color: var(--text-1);
+  min-width: 44px;
+}
+.lane-head .lane-name {
+  font-family: var(--font-display);
+  font-size: 20px; font-weight: 700;
+}
+.lane-head .lane-desc { font-size: 13px; color: var(--text-2); text-wrap: pretty; }
+.lane-head .lane-count {
+  margin-left: auto; font-size: 12px; color: var(--text-3);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.lane-head .caret { font-size: 12px; color: var(--text-3); }
+.lane-body { padding: 12px 32px 28px; }
+.lane.collapsed .lane-body { display: none; }
+
+.group-label {
+  font-size: 12px; color: var(--text-3);
+  letter-spacing: 0.05em;
+  margin: 12px 0 8px;
+}
+.lane-body .group-label:first-child { margin-top: 0; }
+.cards { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.node-card {
+  position: relative; z-index: 20;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 10px 14px;
+  width: 250px;
+  cursor: pointer;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out, opacity 200ms ease-out;
+}
+.lane:nth-child(even) .node-card { background: var(--canvas); }
+.node-card:hover { background: var(--surface-hover); }
+.node-card .nc-title {
+  font-size: 14px; font-weight: 600; line-height: 1.4;
+  display: flex; align-items: center; gap: 7px;
+}
+.node-card .nc-summary {
+  font-size: 12px; color: var(--text-2); line-height: 1.45;
+  margin-top: 2px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-wrap: pretty;
+}
+.node-card.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.node-card.dimmed { opacity: .3; }
+.node-card.chain { border-color: hsl(214 18% 55%); }
+
+.layer-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex: none;
+  display: inline-block;
+}
+.ld-0 { background: var(--layer-0); } .ld-1 { background: var(--layer-1); }
+.ld-2 { background: var(--layer-2); } .ld-3 { background: var(--layer-3); }
+.ld-4 { background: var(--layer-4); }
+
+/* ============ 详情抽屉 ============ */
+#drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: var(--drawer-w); max-width: 92vw;
+  background: var(--surface);
+  border-left: 1px solid var(--hairline);
+  z-index: 50;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  display: flex; flex-direction: column;
+}
+body.drawer-open #drawer { transform: translateX(0); }
+
+.drawer-top {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--hairline);
+  display: flex; align-items: center; gap: 8px;
+  min-height: 48px;
+}
+#breadcrumb {
+  flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 4px;
+  font-size: 12px; color: var(--text-3);
+}
+#breadcrumb .bc-item {
+  cursor: pointer; color: var(--text-2);
+  padding: 1px 4px; border-radius: 2px;
+  transition: background-color 150ms ease-out;
+}
+#breadcrumb .bc-item:hover { background: var(--surface-hover); }
+#breadcrumb .bc-item.current { color: var(--text-1); font-weight: 600; cursor: default; }
+#breadcrumb .bc-sep { color: var(--text-3); }
+#drawer .close-btn {
+  flex: none;
+  width: 28px; height: 28px;
+  background: transparent; border: none;
+  border-radius: 4px;
+  font-size: 18px; line-height: 1; color: var(--text-2);
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
+}
+#drawer .close-btn:hover { background: var(--surface-hover); }
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 24px 24px 48px; }
+.drawer-body .d-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--text-3); letter-spacing: .05em;
+  margin-bottom: 8px;
+}
+.drawer-body h2 {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 700; line-height: 1.25;
+  text-wrap: balance;
+  margin-bottom: 8px;
+}
+.drawer-body .d-summary {
+  font-size: 14px; color: var(--text-2); line-height: 1.6;
+  text-wrap: pretty;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 16px;
+}
+.d-body { font-size: 14px; line-height: 1.7; }
+.d-body p { margin-bottom: 10px; text-wrap: pretty; }
+.d-body h3 {
+  font-family: var(--font-display);
+  font-size: 16px; font-weight: 700;
+  margin: 20px 0 8px;
+}
+.d-body ul { margin: 0 0 10px 1.4em; }
+.d-body li { margin-bottom: 4px; }
+.d-body code {
+  font-family: var(--font-mono); font-size: 12.5px;
+  background: var(--surface-hover);
+  border-radius: 2px; padding: 1px 4px;
+}
+.d-body strong { font-weight: 700; }
+.d-body a { color: var(--accent); }
+
+.d-section { margin-top: 24px; }
+.d-section > .ds-title {
+  font-size: 12px; color: var(--text-3);
+  letter-spacing: .05em;
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.file-list { display: flex; flex-direction: column; gap: 6px; }
+.file-item {
+  display: flex; flex-direction: column; gap: 1px;
+  padding: 8px 12px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+}
+.file-item .fi-path { font-family: var(--font-mono); font-size: 12px; word-break: break-all; }
+.file-item .fi-desc { font-size: 12px; color: var(--text-2); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+.chip:hover { background: var(--surface-hover); border-color: var(--text-3); }
+
+.paper-list { display: flex; flex-direction: column; gap: 10px; }
+.paper {
+  padding: 12px 14px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+}
+.paper .p-title {
+  font-family: var(--font-display);
+  font-size: 14.5px; font-weight: 700; line-height: 1.35;
+  text-wrap: balance;
+}
+.paper .p-title a { color: var(--text-1); text-decoration: none; }
+.paper .p-title a:hover { text-decoration: underline; }
+.paper .p-meta {
+  font-size: 12px; color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  margin: 2px 0 4px;
+}
+.paper .p-take { font-size: 13px; color: var(--text-2); line-height: 1.55; text-wrap: pretty; }
+.ext { font-size: 11px; color: var(--text-3); }
+
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 24px 32px 48px;
+  font-size: 12px; color: var(--text-3);
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <h1>Agent 生态知识地图</h1>
+  <span class="stats" id="stats"></span>
+  <span class="spacer"></span>
+  <div class="searchbox">
+    <input id="search" type="text" placeholder="搜索节点（标题 / 摘要 / 标签）…" autocomplete="off">
+    <div class="search-results" id="search-results"></div>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h2 id="intro-title"></h2>
+    <p id="intro-desc"></p>
+    <p class="hint">点击节点查看详情与出处 · 详情面板内点上下游节点即可逐层下钻 · <kbd>Esc</kbd> 关闭面板 · <kbd>/</kbd> 聚焦搜索 · 点层标题可折叠</p>
+  </section>
+  <section id="map">
+    <svg id="edges"></svg>
+    <!-- lanes injected -->
+  </section>
+  <footer id="foot"></footer>
+</main>
+
+<aside id="drawer" aria-label="节点详情">
+  <div class="drawer-top">
+    <div id="breadcrumb"></div>
+    <button class="close-btn" id="close-drawer" aria-label="关闭">×</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<script src="./data.js"></script>
+<script>
+(function () {
+  'use strict';
+  const D = window.KM_DATA;
+  if (!D) { document.body.innerHTML = '<p style="padding:48px">data.js 加载失败</p>'; return; }
+
+  const nodes = D.nodes;
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+  // 反向索引：谁踩在它之上
+  const dependents = {};
+  nodes.forEach(n => (n.basedOn || []).forEach(t => {
+    if (!byId[t]) { console.warn('悬空引用', n.id, '->', t); return; }
+    (dependents[t] = dependents[t] || []).push(n.id);
+  }));
+  const edgeCount = nodes.reduce((s, n) => s + (n.basedOn || []).filter(t => byId[t]).length, 0);
+  const paperCount = nodes.reduce((s, n) => s + (n.papers || []).length, 0);
+
+  const state = { selected: null, trail: [] };
+
+  /* ---------- 顶部 / 简介 ---------- */
+  document.getElementById('stats').textContent =
+    `${nodes.length} 节点 · ${edgeCount} 支撑关系 · ${paperCount} 文献`;
+  document.getElementById('intro-title').textContent = D.meta.title;
+  document.getElementById('intro-desc').textContent = D.meta.desc;
+  document.getElementById('foot').textContent =
+    `${D.meta.footer || ''} 更新于 ${D.meta.updated}`;
+  document.title = D.meta.title;
+
+  /* ---------- 渲染泳道 ---------- */
+  const map = document.getElementById('map');
+  const ROMAN = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ'];
+  D.layers.forEach(layer => {
+    const lane = document.createElement('div');
+    lane.className = 'lane';
+    lane.dataset.layer = layer.id;
+    const laneNodes = nodes.filter(n => n.layer === layer.id);
+    const head = document.createElement('div');
+    head.className = 'lane-head';
+    head.innerHTML =
+      `<span class="roman">${ROMAN[layer.id]}</span>` +
+      `<span class="lane-name">${esc(layer.name)}</span>` +
+      `<span class="lane-desc">${esc(layer.desc)}</span>` +
+      `<span class="lane-count">${laneNodes.length} 节点 <span class="caret">▾</span></span>`;
+    head.addEventListener('click', () => { lane.classList.toggle('collapsed'); drawEdges(); });
+    lane.appendChild(head);
+
+    const body = document.createElement('div');
+    body.className = 'lane-body';
+    // 组内分组（group 字段可选）
+    const groups = [...new Set(laneNodes.map(n => n.group || ''))];
+    groups.forEach(g => {
+      if (g) {
+        const gl = document.createElement('div');
+        gl.className = 'group-label';
+        gl.textContent = g;
+        body.appendChild(gl);
+      }
+      const wrap = document.createElement('div');
+      wrap.className = 'cards';
+      laneNodes.filter(n => (n.group || '') === g).forEach(n => wrap.appendChild(cardEl(n)));
+      body.appendChild(wrap);
+    });
+    lane.appendChild(body);
+    map.appendChild(lane);
+  });
+
+  function cardEl(n) {
+    const el = document.createElement('div');
+    el.className = 'node-card';
+    el.id = 'card-' + n.id;
+    el.innerHTML =
+      `<div class="nc-title"><span class="layer-dot ld-${n.layer}"></span>${esc(n.title)}</div>` +
+      `<div class="nc-summary">${esc(n.summary)}</div>`;
+    el.addEventListener('click', e => { e.stopPropagation(); select(n.id, false); });
+    return el;
+  }
+
+  /* ---------- 选中 / 链路高亮 ---------- */
+  function chainOf(id) {
+    const set = new Set([id]);
+    const down = [id];               // 沿 basedOn 向下
+    while (down.length) {
+      const cur = down.pop();
+      (byId[cur].basedOn || []).forEach(t => { if (byId[t] && !set.has(t)) { set.add(t); down.push(t); } });
+    }
+    const up = [id];                 // 沿 dependents 向上
+    const upSet = new Set([id]);
+    while (up.length) {
+      const cur = up.pop();
+      (dependents[cur] || []).forEach(t => { if (!upSet.has(t)) { upSet.add(t); set.add(t); up.push(t); } });
+    }
+    return set;
+  }
+
+  function select(id, fromPanel) {
+    if (!byId[id]) return;
+    state.selected = id;
+    if (fromPanel) {
+      const i = state.trail.indexOf(id);
+      if (i >= 0) state.trail = state.trail.slice(0, i + 1);
+      else state.trail.push(id);
+    } else {
+      state.trail = [id];
+    }
+    document.body.classList.add('drawer-open');
+    renderHighlight();
+    renderDrawer();
+    history.replaceState(null, '', '#' + id);
+    const card = document.getElementById('card-' + id);
+    if (card) card.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    drawEdges();
+    scheduleRedraw();
+  }
+
+  function deselect() {
+    state.selected = null;
+    state.trail = [];
+    document.body.classList.remove('drawer-open');
+    renderHighlight();
+    history.replaceState(null, '', location.pathname);
+    drawEdges();
+    scheduleRedraw();
+  }
+
+  // 抽屉开合时 main 的 margin 过渡（250ms）会让卡片重新换行，
+  // 过渡前测的边坐标全部失准——过渡结束后必须重画一次
+  let redrawTimer = null;
+  function scheduleRedraw() {
+    clearTimeout(redrawTimer);
+    redrawTimer = setTimeout(drawEdges, 330);
+  }
+  document.querySelector('main').addEventListener('transitionend', e => {
+    if (e.propertyName === 'margin-right') drawEdges();
+  });
+
+  function renderHighlight() {
+    const chain = state.selected ? chainOf(state.selected) : null;
+    nodes.forEach(n => {
+      const el = document.getElementById('card-' + n.id);
+      if (!el) return;
+      el.classList.toggle('selected', n.id === state.selected);
+      el.classList.toggle('chain', !!chain && chain.has(n.id) && n.id !== state.selected);
+      el.classList.toggle('dimmed', !!chain && !chain.has(n.id));
+    });
+  }
+
+  /* ---------- SVG 边 ---------- */
+  const svg = document.getElementById('edges');
+  function drawEdges() {
+    svg.innerHTML = '';
+    const mapRect = map.getBoundingClientRect();
+    svg.setAttribute('width', map.clientWidth);
+    svg.setAttribute('height', map.scrollHeight);
+    svg.setAttribute('viewBox', `0 0 ${map.clientWidth} ${map.scrollHeight}`);
+    if (!state.selected) return;
+    const chain = chainOf(state.selected);
+    const frag = document.createDocumentFragment();
+    chain.forEach(idA => {
+      (byId[idA].basedOn || []).forEach(idB => {
+        if (!chain.has(idB) || !byId[idB]) return;
+        const a = document.getElementById('card-' + idA);
+        const b = document.getElementById('card-' + idB);
+        if (!a || !b || a.offsetParent === null || b.offsetParent === null) return;
+        const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        const x1 = ra.left + ra.width / 2 - mapRect.left;
+        const y1 = ra.bottom - mapRect.top;
+        const x2 = rb.left + rb.width / 2 - mapRect.left;
+        const y2 = rb.top - mapRect.top;
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const dy = Math.max(32, (y2 - y1) / 2);
+        path.setAttribute('d', `M ${x1} ${y1} C ${x1} ${y1 + dy}, ${x2} ${y2 - dy}, ${x2} ${y2}`);
+        const direct = (idA === state.selected || idB === state.selected);
+        path.setAttribute('stroke', '#2A3340');
+        path.setAttribute('stroke-width', direct ? '1.5' : '1');
+        path.setAttribute('stroke-opacity', direct ? '0.55' : '0.22');
+        path.setAttribute('fill', 'none');
+        frag.appendChild(path);
+      });
+    });
+    svg.appendChild(frag);
+  }
+  window.addEventListener('resize', () => requestAnimationFrame(drawEdges));
+
+  /* ---------- 详情抽屉 ---------- */
+  function renderDrawer() {
+    const n = byId[state.selected];
+    if (!n) return;
+    // 面包屑
+    const bc = document.getElementById('breadcrumb');
+    bc.innerHTML = '';
+    state.trail.forEach((id, i) => {
+      if (i > 0) {
+        const sep = document.createElement('span');
+        sep.className = 'bc-sep'; sep.textContent = '›';
+        bc.appendChild(sep);
+      }
+      const item = document.createElement('span');
+      item.className = 'bc-item' + (i === state.trail.length - 1 ? ' current' : '');
+      item.textContent = byId[id] ? byId[id].title : id;
+      if (i < state.trail.length - 1) item.addEventListener('click', () => select(id, true));
+      bc.appendChild(item);
+    });
+
+    const layer = D.layers[n.layer];
+    const body = document.getElementById('drawer-body');
+    let html = '';
+    html += `<div class="d-meta"><span class="layer-dot ld-${n.layer}"></span>${ROMAN[n.layer]} · ${esc(layer.name)}${n.group ? ' · ' + esc(n.group) : ''}</div>`;
+    html += `<h2>${esc(n.title)}</h2>`;
+    html += `<div class="d-summary">${esc(n.summary)}</div>`;
+    html += `<div class="d-body">${mdLite(n.body || '')}</div>`;
+
+    if (n.inProject && n.inProject.length) {
+      html += `<div class="d-section"><div class="ds-title">项目落点</div><div class="file-list">` +
+        n.inProject.map(f =>
+          `<div class="file-item"><span class="fi-path">${esc(f.path)}</span><span class="fi-desc">${esc(f.desc)}</span></div>`
+        ).join('') + `</div></div>`;
+    }
+    const based = (n.basedOn || []).filter(t => byId[t]);
+    if (based.length) {
+      html += `<div class="d-section"><div class="ds-title">↓ 它踩在什么之上（下钻）</div><div class="chips">` +
+        based.map(t => chipHtml(t)).join('') + `</div></div>`;
+    }
+    const deps = dependents[n.id] || [];
+    if (deps.length) {
+      html += `<div class="d-section"><div class="ds-title">↑ 谁踩在它之上</div><div class="chips">` +
+        deps.map(t => chipHtml(t)).join('') + `</div></div>`;
+    }
+    if (n.papers && n.papers.length) {
+      html += `<div class="d-section"><div class="ds-title">文献与出处</div><div class="paper-list">` +
+        n.papers.map(p =>
+          `<div class="paper"><div class="p-title">${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)} <span class="ext">↗</span></a>` : esc(p.title)}</div>` +
+          `<div class="p-meta">${esc(p.authors || '')}${p.year ? ' · ' + p.year : ''}</div>` +
+          `<div class="p-take">${esc(p.takeaway || '')}</div></div>`
+        ).join('') + `</div></div>`;
+    }
+    body.innerHTML = html;
+    body.scrollTop = 0;
+    body.querySelectorAll('.chip[data-id]').forEach(el =>
+      el.addEventListener('click', () => select(el.dataset.id, true)));
+  }
+
+  function chipHtml(id) {
+    const t = byId[id];
+    return `<span class="chip" data-id="${esc(id)}"><span class="layer-dot ld-${t.layer}"></span>${esc(t.title)}</span>`;
+  }
+
+  document.getElementById('close-drawer').addEventListener('click', deselect);
+
+  /* ---------- 搜索 ---------- */
+  const searchInput = document.getElementById('search');
+  const searchResults = document.getElementById('search-results');
+  let srIndex = -1;
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    srIndex = -1;
+    if (!q) { searchResults.classList.remove('open'); return; }
+    const hits = nodes.filter(n =>
+      n.title.toLowerCase().includes(q) ||
+      n.summary.toLowerCase().includes(q) ||
+      (n.tags || []).some(t => t.toLowerCase().includes(q))
+    ).slice(0, 12);
+    if (!hits.length) { searchResults.classList.remove('open'); return; }
+    searchResults.innerHTML = hits.map(n =>
+      `<div class="sr-item" data-id="${esc(n.id)}">` +
+      `<div class="sr-title"><span class="layer-dot ld-${n.layer}"></span>${esc(n.title)}</div>` +
+      `<div class="sr-summary">${esc(n.summary)}</div></div>`
+    ).join('');
+    searchResults.classList.add('open');
+    searchResults.querySelectorAll('.sr-item').forEach(el =>
+      el.addEventListener('click', () => { pick(el.dataset.id); }));
+  });
+  function pick(id) {
+    searchResults.classList.remove('open');
+    searchInput.blur();
+    // 若所在层折叠，展开
+    const lane = document.querySelector(`.lane[data-layer="${byId[id].layer}"]`);
+    if (lane) lane.classList.remove('collapsed');
+    select(id, false);
+  }
+  searchInput.addEventListener('keydown', e => {
+    const items = [...searchResults.querySelectorAll('.sr-item')];
+    if (e.key === 'ArrowDown') { srIndex = Math.min(srIndex + 1, items.length - 1); e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { srIndex = Math.max(srIndex - 1, 0); e.preventDefault(); }
+    else if (e.key === 'Enter' && items.length) { pick(items[Math.max(srIndex, 0)].dataset.id); return; }
+    else if (e.key === 'Escape') { searchResults.classList.remove('open'); searchInput.blur(); return; }
+    else return;
+    items.forEach((el, i) => el.classList.toggle('active', i === srIndex));
+    if (items[srIndex]) items[srIndex].scrollIntoView({ block: 'nearest' });
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.searchbox')) searchResults.classList.remove('open');
+  });
+
+  /* ---------- 全局键 ---------- */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { deselect(); }
+    else if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault(); searchInput.focus();
+    }
+  });
+
+  /* ---------- 工具 ---------- */
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+  // 极简 markdown：### 标题 / - 列表 / **粗** / `码` / [文](url) / 空行分段
+  function mdLite(src) {
+    const lines = String(src).split('\n');
+    let out = '', inList = false, para = [];
+    const flush = () => {
+      if (para.length) { out += '<p>' + inline(para.join(' ')) + '</p>'; para = []; }
+    };
+    const closeList = () => { if (inList) { out += '</ul>'; inList = false; } };
+    lines.forEach(raw => {
+      const line = raw.trimEnd();
+      if (!line.trim()) { flush(); closeList(); return; }
+      if (/^###\s+/.test(line)) { flush(); closeList(); out += '<h3>' + inline(line.replace(/^###\s+/, '')) + '</h3>'; return; }
+      if (/^-\s+/.test(line)) {
+        flush();
+        if (!inList) { out += '<ul>'; inList = true; }
+        out += '<li>' + inline(line.replace(/^-\s+/, '')) + '</li>';
+        return;
+      }
+      closeList();
+      para.push(line);
+    });
+    flush(); closeList();
+    return out;
+  }
+  function inline(s) {
+    let t = esc(s);
+    t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    t = t.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1 <span class="ext">↗</span></a>');
+    return t;
+  }
+
+  /* ---------- 初始 hash ---------- */
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (hash && byId[hash]) select(hash, false);
+})();
+</script>
+</body>
+</html>

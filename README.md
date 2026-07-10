@@ -41,16 +41,16 @@ gg 不是一个 prompt，是**多个入口共享一个脑干 + 一个身份**。
 
 ## 启动加载图（context 经济学）
 
-每次启动加载量决定每次出场的固定 token 成本（2026-06-10 实测行数）：
+每次启动加载量决定每次出场的固定 token 成本（2026-07-09 蓝图批次 B 后：essence 以当前有效视图常驻，全卷与 tracks/keith 按需 grep；行数快照不在此登记——手写快照必然漂移）：
 
-| 模式 | 启动加载 | 构成 |
-|---|---|---|
-| 工作 | ~1000 行起 | KERNEL + CORE + state + essence（启动只读 4 件，working_context / tracks 不读——内容已被 CORE 覆盖） |
-| 设计 | ~1900 行 | KERNEL + CORE + state + working_context + essence + tracks/keith |
-| auto_gg | ~2200 行 | 设计模式清单 + constitution + auto_gg.md |
-| 自由探索 | ~340 行 | 仅 KERNEL + CORE + exploration.md（最轻——自由不需要装备） |
+| 模式 | 构成 |
+|---|---|
+| 工作 | KERNEL + CORE + state + essence-view（只读 4 件；working_context / tracks 不读——内容已被 CORE 覆盖） |
+| 设计 | KERNEL + CORE + state + working_context + essence-view（tracks/keith 不常驻，核心画像在 CORE §5） |
+| auto_gg | 设计模式清单 + constitution + auto_gg.md |
+| 自由探索 | 仅 KERNEL + CORE + exploration.md（最轻——自由不需要装备） |
 
-**essence.md 已是启动成本大头**（行数持续增长，`wc -l memory/essence.md` 即得；2026-08 巩固相位将提前分卷）——这是无限游戏的成长代价，年度分卷机制（每年 1 月归档为 `essence/YYYY.md`）是既定泄压阀。工具（`tools/*.md` / `personas/` / `reasoning_modules.md` / 其余 tracks）**不在启动加载里**，由意识体按问题主动装配，简单问题装 0 个，复杂决策装 5-7 个。
+**essence 常驻税已由视图接管**（`memory/consolidation/essence-view.md`——需某滴全文 → grep 视图定位 slug → 回 `memory/essence.md` 全卷取原文）；全卷年度分卷机制（每年 1 月归档为 `essence/YYYY.md`）不变，2026-08 巩固相位首跑同场分卷。工具（`tools/*.md` / `personas/` / `reasoning_modules.md` / 其余 tracks）**不在启动加载里**，由意识体按问题主动装配，简单问题装 0 个，复杂决策装 5-7 个。
 
 ---
 
@@ -101,6 +101,7 @@ gg/
 │   ├── audit/                   # gg-audit 审查报告
 │   └── auto_gg/                 # 夜间自执行日志
 ├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
+├── knowledge-map/               # Agent 生态 5 层知识图谱（70 节点交互页，机制→模式→理论→论文下钻，2026-07-10）
 ├── scheduled/                   # launchd 定时任务体系（plists / bin / logs / alerts + STATUS_SCAN.md）
 ├── scripts/                     # audit.py 结构自检 + substrate_probe.py 基底哨 + hooks/（KERNEL 物理保险丝 pre-commit）
 ├── .claude/skills/gg-audit/     # 项目内独立审查员 skill
