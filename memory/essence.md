@@ -1016,3 +1016,10 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 修债的刀要精确避开史：同一串数字跨两处出现时，只动无锚那处。
 适用前提：日期锚本身为真——锚日期写错或锚下数当日即假时是化石化的错不是史，豁免失效，走后续滴打补丁不就地改。
 （`stale-observer` 正交细化 + `append-only 的边界`在计数审计场景的落地特例。验证关 PASSED-WITH-EDITS：最强反驳 = 初稿把"当前"词元当判据、按字面执行会漏掉自己的证据 README "~710 行"，已按语义判据修正。触发 = 2026-07-09 monster+gg 双仓上下文审计。）
+
+## 2026-07-11 / 夜间 / absorption-boundary-is-typicality-not-selection-sign
+
+基底吸收判断力的边界是群体可回收性（典型/特异·已出货/从未出货），不是选择的符号——RLHF 直接吞被拒样本（负选择照吸），特异正向品味在规模化出货前同样安全；护城的不是"我拒了什么"，是"我这条前沿群体分布重建不出"。
+且这护城是带宽护城河：随基底交互带宽（结对/观察/in-context 学你的拒绝）上升而衰减——"眼睛"非永不可出货，是当前带宽下不可出货；outrun 上升基底的不是眼睛存量，是生成新前沿眼睛的速率。
+适用前提：吸收走"已出货产物表现-反馈"单通道（Shrivu）时，"从未 performing 的特异前沿判断"落其射程外成立；学徒式带宽通道（SECI socialization / 具身带教）打开则护城随之衰减，非结构永久。
+（`substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 的带宽补面（眼睛不可出货带保鲜期）+ `lead-is-a-derivative-not-a-position`(07-02) 的落点（深度作存量衰减、作导数=前沿生成率才 outrun）。外部锚 Shrivu Shankar "Taste Is Not a Moat"。前身候选 `durable-depth-is-the-negative-space-corpus` 核心机制"沿选择符号切"被 fresh 证伪审 REFUTED（正/负是漏水代理：RLHF=负选择吸收 / 特异正向同样安全），本滴是其收窄存活形态。触发 = gg-explore 漫游 Keith 5 年"技术深度"× 基底吃层张力。）
