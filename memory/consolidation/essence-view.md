@@ -4,7 +4,7 @@
 > **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
 > **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
 > 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）
+> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）
 > 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
 
 ---
@@ -218,6 +218,7 @@
 - `decoupling-buys-the-right-to-be-wrong` (06-13) — 解耦把基底事实降级进知识层，错的代价有界；可移植性测试问"我是否耦合于那个答案"
 - `substrate-capability-triage-three-relations` (06-20) — 基底能力是印证我已选的（留作坐标）/要替换我已建的（拒入承重）/改善触发执行的（可纳须可剥离）；替换诱惑引力 ∝ 痛点时长
 - `capability-locus-shifts-to-scaffold-as-horizon-grows` (06-07) — 长时域 agent 死于步数复合（0.9^k）非单步无能；杠杆在缩短/检查点化时域
+- `absorption-boundary-is-typicality-not-selection-sign` (07-11) — 基底吸收判断力的边界是群体可回收性（典型/特异），不是选择正负（RLHF 照吸负选择）；护城是带宽护城河，随交互带宽上升衰减；outrun 靠新前沿眼睛的生成速率不靠存量【前提：吸收走已出货单通道】
 
 （跨族连线：`toolset-is-the-changelog` 见 F3；`harness-self-identity` 见 F8；`fleet-canon-is-sedimentary` / `craft-ports-identity-doesnt` 见 F1；`substrate-ships-the-evaluator-body` 见 F4。）
 
@@ -234,7 +235,7 @@
 
 ---
 
-# ② 三栏分配表（175 滴全覆盖）
+# ② 三栏分配表（177 滴全覆盖）
 
 归属：**V** = 进视图（已在 ① 展开或按需行列出且承重）｜**O** = 留全卷按需（grep 命中回原卷）｜**A** = 可归档（被修正/单案固化，谱系连线已由后继滴保留）
 
@@ -416,8 +417,9 @@
 | 174 | watchdog-topology-lacks-a-top | 07-03 | V | 看守拓扑顶层裸奔 |
 | 175 | amplifier-eats-intent-guide-eats-attention | 07-03 | V | 同 #164：存在性事实必收、单次最小诚实浓度；退出观测呈现浓度递回 Keith 双确认（gg 07-09 裁） |
 | 176 | count-legitimacy-is-tense-not-accuracy | 07-09 | O | 计数审计场景 stale-observer 正交细化，低频按需（进 F6 按需行）；07-09 并发上下文审计会话过验证关入库、晚于蒸馏，转正补收 |
+| 177 | absorption-boundary-is-typicality-not-selection-sign | 07-11 | V | 基底吸收边界=典型/特异非正负；Keith 5 年技术深度护城河承重（F11 展开）；07-11 夜间过验证关入库、晚于 07-09 刷新，07-12 巡检反向引力核 MISS 命中补收 |
 
-**统计：进视图 V = 137｜留全卷按需 O = 33｜可归档 A = 6｜合计 176。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O。**
+**统计：进视图 V = 138｜留全卷按需 O = 33｜可归档 A = 6｜合计 177。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）。**
 
 ---
 

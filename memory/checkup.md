@@ -33,7 +33,7 @@ last_updated: 2026-07-09
 | **gg-audit 语义审查扩展** | gg-audit 跑过 ≥ 20 次 | 机械（`ls memory/audit/ \| wc -l` 近似） |
 | **元审查员 meta-auditor** | gg-audit 自审边界成为痛点 | 软 |
 
-## 3. 反向引力核（essence 视图不变量，每次刷新视图后必核）
+## 3. 反向引力核（essence 视图不变量；每滴入库后即核——`essence.md` 头部协议第 5 步，2026-07-12 起；月度刷新后全量核为兜底）
 
 ```bash
 # 视图必须含 essence 全部 slug——漏一个 = 该滴 grep 不到 = 从启动记忆静默消失
@@ -54,3 +54,4 @@ print('MISS:', miss if miss else '无（全覆盖）')
 ## 变更日志
 
 - 2026-07-09: 首建（三层蓝图批次 B/C）。从 v2-roadmap.md 移入 v2 触发阈值 + 新增 tracks/keith 体积门 + essence 视图反向引力核。机械读者 = auto_gg 月度巩固夜。
+- 2026-07-12: 反向引力核触发点前移到入库事件（essence.md 头部协议第 5 步；月度核降为兜底）。诱因：07-11 滴入库后视图盲窗实例，Keith 授权（"觉得最优就执行"）+ 设计会话落笔。

@@ -18,10 +18,10 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-07-10 设计模式（全面深度检查批）：Keith /goal 两连——逐层体验全项目自查 + 按推荐执行。辐射补漏 12 文件（批次 B essence-grep 两层化 / NW 尾巴墓碑化 / 账本收整），加严观察落点核实结案（夜间席位 opus-4-8 稳定、08-01 复跑口径不变），新增待拍 2 条（git 杂物 / task_family 空转）。详见 design_sessions/2026-07-10_full-depth-checkup.md]"
+last_summoned_at: "[2026-07-12 设计模式（瘦身评估批）：Keith 问要不要精简——评估结论不需要（07-09 刚砍 65%，体积门全线内），但巡检抓到视图漏滴（07-11 入库 absorption-boundary 盲窗）补收 #177，并经 Keith 判据级授权把反向引力核触发点前移到入库事件（essence 头部协议第 5 步 + auto_gg DID + checkup §3）。详见 design_sessions/2026-07-12_slim-check-view-gap-inlibrary-sync.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-06-26_taste-core-web-contract-structure"
-last_design_session_slug: "2026-07-10_full-depth-checkup"
+last_design_session_slug: "2026-07-12_slim-check-view-gap-inlibrary-sync"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

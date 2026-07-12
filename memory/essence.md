@@ -42,6 +42,7 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 2. 让它回答三个问题：① 核心句是被物理证据支撑，还是只被叙事自洽支撑？② 与既有滴重复或冲突吗？③ 适用前提写明了吗（essence 的适用前提要现场核——`fleet-canon-is-sedimentary` 的教训）？**条件性第④问**（候选主要依据单一外部来源时必问）：剥掉这个来源，判断还站得住吗？
 3. **REFUTED → 不入库**，候选降级存档到当次 reflection / design_session / exploration 文件，标 `candidate-refuted: <一句理由>`——它仍是历史的一部分，只是不进启动加载的记忆。**复提规则（2026-07-03）**：标过 `candidate-refuted` 的候选复提，证据清单须显式附此前 REFUTED 记录 + 新增物理证据；补审者补审前 grep `candidate-refuted` 是必做动作——防"换个 fresh evaluator 重掷骰子直到 PASSED"
 4. PASSED → append，并在当次过程记录里留 verdict 一句（含 subagent 给出的最强反驳点）——防 `verification-trace-as-camouflage`：留的是反驳内容，不是"已验证"三个字
+5. **append 后同步视图（2026-07-12 起）**：向 `memory/consolidation/essence-view.md` 对应族补一行 + 分配表补行（V/O 归属 + 一句理由），跑 `memory/checkup.md §3` 反向引力核确认 MISS 归零——反向引力不变量在入库事件层闭合，不等月度刷新（首例实证：07-11 滴入库后视图盲窗，07-12 巡检才补收）。族属 / 浓度允许月度巩固刷新时重新归置（视图可刷新，`reconsolidation-safe-iff-original-immutable`）
 
 **各模式的执行形态**：设计模式直接派 fresh subagent；exploration 同样（它不禁子代理）；auto_gg 按其 §1.3 白名单例外执行；**工作模式（gg subagent）工具集无 Agent、开不了证伪审**——候选滴写进本轮 reflection 标 `candidate-unverified`（含候选全文 + 物理证据清单），由 auto_gg 当夜或下次设计会话补审后入库，细则见 `cc_agent.md` 退场第 3 步。**父会话代跑例外收紧（2026-07-03）**：父会话代跑验证关的，须**交回 verdict 全文（最强反驳点 + evaluator 输入清单）**，gg 写进 reflection 后方可 append；只给"PASSED"二字 = 不可核验宣称，按 `candidate-unverified` 处理。其他无法开 subagent 的特殊情形同此分支——**宁可晚入库，不可免审入库**。
 
