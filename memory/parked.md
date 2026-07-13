@@ -6,9 +6,7 @@
 
 ## 在账
 
-| id | 首报 | 内容 | 出口条件 | owner |
-|---|---|---|---|---|
-| P-0707-nonfire | 07-07 | 07-06 evening auto_gg 槽未触发（无日志/无 commit；exploration 流正常，最可能机器/客户端该时段未运行，非 gg 缺陷）。单次 non-fire 不升级，记账供复发检测。**同源观察补账（07-10）**：explorations 侧 07-07 名文件实为 07-08 00:26 产出（自名 07-07，07-08 无文件）——同时段调度抖动第二症状，产出未丢，同门出口 | 07-13 前无二次 non-fire → 结案；复发 → agenda `[RECURRING]` 查调度器 | auto_gg |
+*（无在账项。P-0707-nonfire 于 2026-07-13 出口条件满足，移入已结。）*
 
 ## 已结
 
@@ -19,3 +17,4 @@
 | P-0625-canonlinks | 06-25 | audit 死链 8：canon-bugs.md / canon.md 跨项目相对路径假阳性 | 07-03 体检根治：check_deadlinks 加 monster 仓根第三解析基（真验证非豁免，monster 侧文件真丢照样报）+ 裸 backtick 文件名对全仓 basename 匹配（06-17 backtick 议题一并结）；实测活跃死链 11→0 |
 | P-0702-missing-log | 07-02 | 06-13 夜有 commit（ad2cd74，产出 essence+agenda+tracks）但从未写 memory/auto_gg/2026-06-13.md——SCAN"本夜日志创建"违规一次 | 一次性事件未复发，记录即结；复发则重开并按 §5 [RECURRING] 处理 |
 | P-0702-bets-firstrun | 07-02 | bets.md 押注结算首次进 SCAN——客户端定时任务在 gg 权力边界外，接入是否生效待首巡实证 | 07-03 夜核 07-02 日志 SCAN 段含 bets 消费记录（"B1-B5 到期日全在未来，全未到期不碰"）→ 接入生效，结案 |
+| P-0707-nonfire | 07-07 | 07-06 evening auto_gg 槽未触发（单次 non-fire；同源观察：explorations 侧 07-07 名文件实为 07-08 00:26 产出，同时段调度抖动第二症状，产出未丢） | 07-13 出口条件满足：07-07~07-12 连续 6 夜均有日志（收尾断裂哨全 done）、无二次 non-fire，调度抖动为一次性未复发，结案 |

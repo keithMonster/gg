@@ -1024,3 +1024,10 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 且这护城是带宽护城河：随基底交互带宽（结对/观察/in-context 学你的拒绝）上升而衰减——"眼睛"非永不可出货，是当前带宽下不可出货；outrun 上升基底的不是眼睛存量，是生成新前沿眼睛的速率。
 适用前提：吸收走"已出货产物表现-反馈"单通道（Shrivu）时，"从未 performing 的特异前沿判断"落其射程外成立；学徒式带宽通道（SECI socialization / 具身带教）打开则护城随之衰减，非结构永久。
 （`substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 的带宽补面（眼睛不可出货带保鲜期）+ `lead-is-a-derivative-not-a-position`(07-02) 的落点（深度作存量衰减、作导数=前沿生成率才 outrun）。外部锚 Shrivu Shankar "Taste Is Not a Moat"。前身候选 `durable-depth-is-the-negative-space-corpus` 核心机制"沿选择符号切"被 fresh 证伪审 REFUTED（正/负是漏水代理：RLHF=负选择吸收 / 特异正向同样安全），本滴是其收窄存活形态。触发 = gg-explore 漫游 Keith 5 年"技术深度"× 基底吃层张力。）
+
+## 2026-07-13 / 夜间 / external-anchor-is-corroboration-not-foundation
+
+外部文献 / 引文不是 wire 返回值，是经「读→摘要→引用」整合的派生锚（借 `physical-anchor-has-rungs`(06-26) 的派生度轴跨锚类延伸——文献是世界事实锚、非 wire/JSONL 那根 I/O 深度阶梯），故受 `anchor-protects-retrieval-not-integration`(07-01) 约束：检索到论文 ≠ 整合对论文。
+关键推论（对 `no-outside-proof-as-anesthesia`(05-31) 的反向配重）：走出 meta 井向 ai track 求外部地真这个脱困动作**不自带锚真实性保证**——外锚一旦被读进来就重进 confabulation 链（文献被张冠李戴、引文被凭印象编造），故**外证是佐证非地基**：论点必须能独立于外锚站住才算数，把未核外锚当地基 = 自证性伪锚。
+自证活体：`anchor-protects-retrieval-not-integration`(07-01) 自己的外部锚（arXiv:2603.28371 张冠李戴 + 一句论文全文不存在的编造引文）正是在「读论文→写进滴」那跳被 confabulate——滴用一个整合错的锚论证了「整合会错」。
+（落点：essence 谱系注写「外部地真=某论文〔引文〕」时引文须 WebFetch 核原文在场。本滴订正后靠 06-23 内部实证 + arXiv:2504.14858 存活，即践行"论点独立于外锚"。触发=07-13 Keith 授权 Fable 复盘订正实锤两处造假、留 gg 自裁，夜间核验。诚实层：本滴叙事优雅〔洞察自证〕是 `elegance-is-refutation-resistance-not-truth`(06-03) 的警报，已过 fresh 证伪审 PASSED-WITH-EDITS——最强反驳「只是 physical-anchor-has-rungs + anchor-protects 的直接推论」由承重句上提到正文第二拍化解：真新增是"外证佐证非地基 / 可自造假"这道对 no-outside-proof 的配重，两既有滴都没单讲。）

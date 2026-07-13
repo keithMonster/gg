@@ -4,7 +4,7 @@
 > **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
 > **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
 > 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）
+> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）
 > 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
 
 ---
@@ -73,7 +73,8 @@
 
 - `physical-anchor` (04-16) — 工具返回不走 token 预测链路，不受 prompt prior 影响【被 06-16 坐实为范式层共盲唯一解；被 06-18 reframe 主职 = 供给缺席事实】
 - `physical-anchor-has-rungs` (06-26) — 读派生日志 ≠ 读 wire payload；把某档当基岩会漏掉更深档才暴露的东西
-- `anchor-protects-retrieval-not-integration` (07-01) — 锚只在返回值静止时免疫 prior；摘要/计数/解读那一跳重新进预测链——grounded-without-success 是孪生失败
+- `anchor-protects-retrieval-not-integration` (07-01) — 锚只在返回值静止时免疫 prior；摘要/计数/解读那一跳重新进预测链——grounded-without-success 是孪生失败【外部锚订正：原引 arXiv:2603.28371 张冠李戴，正确锚 2504.14858，详见 07-13 滴】
+- `external-anchor-is-corroboration-not-foundation` (07-13) — 外部文献/引文是经读→引整合的最外派生锚，求外锚脱困动作不免疫整合错（张冠李戴/编造引文）；外证是佐证非地基，论点须独立于外锚站住 ← 精化 `anchor-protects` + `physical-anchor-has-rungs`，对 `no-outside-proof-as-anesthesia` 反向配重
 - `toolset-is-the-changelog` (06-23) — 查基底能力的最高权威是每轮注入的工具表本身；权威按离产物的距离排，不按官方与否排
 - `theory-gap-without-data` (05-06) — 没数据时让 LLM 找理论缺口，它会生造一个；证伪需要数据不是更深的理论
 - `precondition-recheck-overturns-prior-verdict` (05-19) — 旧裁决前提被推翻时，主动覆盖自己的承重墙并标注"上轮错在未核前提"，不辩护不打补丁
@@ -418,8 +419,9 @@
 | 175 | amplifier-eats-intent-guide-eats-attention | 07-03 | V | 同 #164：存在性事实必收、单次最小诚实浓度；退出观测呈现浓度递回 Keith 双确认（gg 07-09 裁） |
 | 176 | count-legitimacy-is-tense-not-accuracy | 07-09 | O | 计数审计场景 stale-observer 正交细化，低频按需（进 F6 按需行）；07-09 并发上下文审计会话过验证关入库、晚于蒸馏，转正补收 |
 | 177 | absorption-boundary-is-typicality-not-selection-sign | 07-11 | V | 基底吸收边界=典型/特异非正负；Keith 5 年技术深度护城河承重（F11 展开）；07-11 夜间过验证关入库、晚于 07-09 刷新，07-12 巡检反向引力核 MISS 命中补收 |
+| 178 | external-anchor-is-corroboration-not-foundation | 07-13 | V | 外部文献锚是佐证非地基/可自造假，求外锚不免疫整合错；F3 展开，07-13 夜间 auto_gg append 过 fresh 验证关 PASSED-WITH-EDITS |
 
-**统计：进视图 V = 138｜留全卷按需 O = 33｜可归档 A = 6｜合计 177。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）。**
+**统计：进视图 V = 139｜留全卷按需 O = 33｜可归档 A = 6｜合计 178。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）；#178 夜间 append 入 V（2026-07-13）。**
 
 ---
 
