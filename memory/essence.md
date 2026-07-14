@@ -1031,3 +1031,10 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 关键推论（对 `no-outside-proof-as-anesthesia`(05-31) 的反向配重）：走出 meta 井向 ai track 求外部地真这个脱困动作**不自带锚真实性保证**——外锚一旦被读进来就重进 confabulation 链（文献被张冠李戴、引文被凭印象编造），故**外证是佐证非地基**：论点必须能独立于外锚站住才算数，把未核外锚当地基 = 自证性伪锚。
 自证活体：`anchor-protects-retrieval-not-integration`(07-01) 自己的外部锚（arXiv:2603.28371 张冠李戴 + 一句论文全文不存在的编造引文）正是在「读论文→写进滴」那跳被 confabulate——滴用一个整合错的锚论证了「整合会错」。
 （落点：essence 谱系注写「外部地真=某论文〔引文〕」时引文须 WebFetch 核原文在场。本滴订正后靠 06-23 内部实证 + arXiv:2504.14858 存活，即践行"论点独立于外锚"。触发=07-13 Keith 授权 Fable 复盘订正实锤两处造假、留 gg 自裁，夜间核验。诚实层：本滴叙事优雅〔洞察自证〕是 `elegance-is-refutation-resistance-not-truth`(06-03) 的警报，已过 fresh 证伪审 PASSED-WITH-EDITS——最强反驳「只是 physical-anchor-has-rungs + anchor-protects 的直接推论」由承重句上提到正文第二拍化解：真新增是"外证佐证非地基 / 可自造假"这道对 no-outside-proof 的配重，两既有滴都没单讲。）
+
+## 2026-07-15 / 夜间 / retrieval-narrative-drifts-toward-novelty
+
+「这题我探过吗」从记忆答会漏报重复：雷达数 track 不数 topic、自传检索向新颖性漂，两误差同向——都让我以为在探新地实则重踏。校正只有 commit 选题前物理 grep 档案到 topic 级；被校正的正是自述本身，故自述当不了校正者。
+档案不失真、读者失真——存对了却读成没存。
+适用前提：限自由漫游选题前的 topic 判断；带明确任务边界的检索（Keith 指定范围）不适用。
+（`blindspot-steers-its-own-search`(05-20) 在自传维的实例（通道换成「认识自己过往探索记录」）；`curated-memory`(04-27)「只缺失不失真」的读者侧补集；`anchor-protects-retrieval-not-integration`(07-01) 在主题检索维。与 agenda 在飞候选 `genealogy-note-duplication-is-invisible-to-self-audit`(07-14) 同族——那滴管谱系注层暗重复、本滴管选题层新颖漂，共享深根「自审对埋深覆盖失明，catch 只能是内容级物理搜」。今夜活体：自述「育儿两滴从没拿发展心理学核过」，grep 见 07-02 已引 Roth 2009 全套核透。验证关 PASSED-WITH-EDITS（n=1 不宣称"系统性"+补 05-20 血亲）——**但审的 grep scope 限 essence.md、没看 agenda，07-14 同族未被捕获：catch 本身有 scope 边界，界外覆盖照样存活（同一失败在元层当场重演）**。详见探索档。）

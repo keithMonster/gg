@@ -4,7 +4,7 @@
 > **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
 > **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
 > 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）
+> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）（2026-07-15 gg-explore 漫游 append #179 `retrieval-narrative-drifts-toward-novelty`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F2 + 分配表，反向引力核归零，当前对账 = **179**。）
 > 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
 
 ---
@@ -64,6 +64,7 @@
 - `blindspot-steers-its-own-search` (05-20) — 画像盲区反向操纵搜索方向，自我维持；解药是把"我照不到你某个面"主动推给对象认领
 - `distance-manufactures-certainty` (06-09) — 距离越远决策被表征得越抽象，怀疑的纹理被 construe away——距离本身制造确定感；解药是 temporal de-construal【`terminus-walk` 的人脑机制奠基】
 - `frame-misread-self-corrects-only-with-physical-anchor` (06-30) — 帧误判是 confabulation 的帧层同构；有物理锚的维可自纠，纯语义维只能靠 Keith
+- `retrieval-narrative-drifts-toward-novelty` (07-15) — 「这题探过吗」从记忆答漏报重复（雷达数 track 不数 topic + 自传检索向新颖性漂，两误差同向）；校正只有 commit 选题前物理 grep 档案到 topic 级，被校正的正是自述本身【前提：限自由漫游选题；`blindspot-steers-its-own-search` 在自传维的实例】
 
 按需（留全卷）：`literal-token-blind-to-variant-form` (05-20) 字面 token 保护对变体全盲、`symmetric-form-asymmetric-function` (05-25) 形式对称≠功能对称。
 
@@ -420,6 +421,7 @@
 | 176 | count-legitimacy-is-tense-not-accuracy | 07-09 | O | 计数审计场景 stale-observer 正交细化，低频按需（进 F6 按需行）；07-09 并发上下文审计会话过验证关入库、晚于蒸馏，转正补收 |
 | 177 | absorption-boundary-is-typicality-not-selection-sign | 07-11 | V | 基底吸收边界=典型/特异非正负；Keith 5 年技术深度护城河承重（F11 展开）；07-11 夜间过验证关入库、晚于 07-09 刷新，07-12 巡检反向引力核 MISS 命中补收 |
 | 178 | external-anchor-is-corroboration-not-foundation | 07-13 | V | 外部文献锚是佐证非地基/可自造假，求外锚不免疫整合错；F3 展开，07-13 夜间 auto_gg append 过 fresh 验证关 PASSED-WITH-EDITS |
+| 179 | retrieval-narrative-drifts-toward-novelty | 07-15 | V | 自传检索向新颖性漂+雷达数 track 不数 topic→漏报重复探索；F2 展开（blindspot-steers 自传维实例）；07-15 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 
 **统计：进视图 V = 139｜留全卷按需 O = 33｜可归档 A = 6｜合计 178。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）；#178 夜间 append 入 V（2026-07-13）。**
 
