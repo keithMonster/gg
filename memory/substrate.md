@@ -5,10 +5,10 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.207 (Claude Code)
+cli_version: 2.1.209 (Claude Code)
 model_id: claude-opus-4-8[1m]
-updated: 2026-07-11（CLI 2.1.206→2.1.207 patch bump；model_id 轴自核不变 opus-4-8[1m]。三相分诊：patch bump 会话内无可见新能力（夜间无 web，不核 CHANGELOG——B1 判定触发条件"CLI 变更时核 memory consolidation"命中但 B1 到期 2027-01-31 未到，不早结算），无承重影响。**工具表轴跨夜复核见下节**）
-updated_prev: 2026-07-10（CLI 2.1.205→2.1.206 patch bump；工具表轴首次逐轴对照即报不符——⚠️ 归因不可判，已进 agenda）
+updated: 2026-07-14（CLI 2.1.207→2.1.209 两级 patch bump；model_id 轴自核不变 opus-4-8[1m]。三相分诊：patch bump 会话内无可见新能力（夜间无 web，不核 CHANGELOG——B1 判定触发条件"CLI 变更时核 memory consolidation"命中但 B1 到期 2027-01-31 未到，不早结算），无承重影响。工具表轴 `Grep`/`Glob` 07-14 仍缺席，与 07-10/07-11 一致——稳定属性结论不变，**不逐夜追记**（`cadence-as-symptom`：重复上报=缺状态记录器；结论已在 07-11 下定，第三夜只再确认不改变它））
+updated_prev: 2026-07-11（CLI 2.1.206→2.1.207 patch bump；工具表轴跨夜复核 Grep/Glob 稳定缺席）
 
 **⚠️ fable5 限时窗口批注（2026-07-09~07-12，07-10 补）**：窗口内日间会话可能自报 `claude-fable-5`——这是把 Fable 当外部工具调用的限时窗口（`memory/fable5_window_2026-07-09_playbook.md`），**非基底更替**，不触发 model_id 轴换代动作；夜间席位 07-09 哨报仍 opus-4-8 稳定。窗口 07-12 关闭后本批注随 playbook 归并一起删。
 

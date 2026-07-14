@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-07-10
+last_updated: 2026-07-14
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -36,6 +36,7 @@ last_updated: 2026-07-10
 ### 到期驱动
 
 - **[2026-08 第一夜] 月度巩固相位首跑 + essence 分卷**（07-03 体检锚定：先产"当前有效视图"再归档当前卷，启动链不断供；当前卷 989 行 / 52k token）；**[第二夜]** 差值审计首跑（personas 28/305、reasoning_modules 20/305 低引用差值在案）；**[08-02]** bets B4/B5 结算
+- **[已到期·07-12 满足] fable5 窗口清理单元**（2026-07-14 auto_gg 夜巡登记）：07-08/07-10 设计会话规划的窗口关闭善后（`design_sessions/2026-07-10_full-depth-checkup.md:47`：substrate 批注删 + playbook 产出归并 + playbook 文件 `memory/fable5_window_2026-07-09_playbook.md` 删）。窗口 07-12 已关闭 2 天，出口条件满足。**auto_gg 夜间未动手**：核心含删文件（不可逆·§1.2 夜禁）+ 产出归并（4 个 Fable-native prompt 哪些值得沉淀属语义判断），整体退不可逆侧。substrate 批注（substrate.md:13）有日期锚=史非漂移债，单拆删会造 playbook 孤儿 → 三件绑定一起处置。推荐：playbook 产出若有复用价值先归并到 prompt-writer/tracks，再连 substrate 批注 + playbook 一起删
 
 ### monster owner（gg 不代办，列出防丢）
 
@@ -68,4 +69,5 @@ last_updated: 2026-07-10
 - 2026-07-10（全面深度检查，Keith /goal「按推荐执行」授权）：辐射补漏批 12 文件——批次 B essence-view 漏网 3 处（essence-grep 两层 grep / TOOLS 描述 / README 启动加载图）+ NW 尾巴 3 处（cc_agent 工具地图与 task_family / archive-format nw-batch 降历史标签）+ parked P-0626 作废结案并 explorations 07-07/08 错位并账 + v2-roadmap 日期 + substrate fable5 窗口批注 + .gitignore .omx 版本化 + constitution 待审议移账。到期项收口 2 条：**加严观察落点核实结案**（07-09 夜哨证夜间席位 opus-4-8[1m] 稳定 → monster review-anchors 08-01 复跑口径不需重估；FAIL=2 处置 gg 自决 = 维持既有 08-01 加严观察复跑轨，不另开新轨）+ [KERNEL] 草稿条款上移条删（commit 9681639 已落）。已收口删除线条目 3 条清账下沉 git。新增待拍 2 条（git 杂物去留 / task_family 空转）
 - 2026-07-10（auto_gg 夜巡）：新增设计模式待办 2 条——基底哨自报轴（工具表逐轴首核报不符，⚠️ 归因不可判）+ essence 验证关 evaluator 工具集 L1/L3 错档
 - 2026-07-14（gg-explore 夜巡）：昨夜候选滴 `fanout-cheapness-inverts-independence-signal` 经 codex(GPT) 跨模型 fresh 证伪审 **REFUTED 结算**（净新增那句耦合已由 06-27 `substrate-ships-the-evaluator-body-not-its-eyes` 谱系注逐字覆盖，物理核 essence.md:911；主体三滴亦全覆盖）——不入库、从待议删除，降级存档于 `explorations/2026-07-14_cross-model-refutation-proves-its-own-thesis.md`。同档新增二阶候选 `genealogy-note-duplication-is-invisible-to-self-audit` 转待议（见上）
+- 2026-07-14（auto_gg 夜巡）：substrate 哨报 CLI 2.1.207→2.1.209 两级 patch bump（无承重影响，工具表轴 Grep/Glob 三夜稳定缺席，substrate.md 已更）；到期驱动节新增 fable5 窗口清理单元（07-12 出口满足，含不可逆删+语义归并整体退 Keith）
 - 2026-07-09（设计会话·NW 缩编批）：Keith 拍板三件全按 gg 推荐执行——① NW 缩编五步当日落地（存废回审 / 缩编 gg 侧 / cadence 回审三条到期项一并收口）② subject-model 画像门立门（威胁模型=防写错）③ KERNEL 草稿条款上移（双确认「都按照你推荐的执行」+「都确认」，commit 9681639）；另清 Snyk 转登记 + monster owner 节队列引用刷新 + daily-word SSOT 结案（Keith 贴 routine 原文 = 一行指针直读 DAILY_WORD.md → 它即 SSOT，CORE:19 / scheduled/README 指针已正，[Q] 条删）+ frontier-radar 拆挂 launchd com.monster.frontier-radar（Keith 授权本机添加）
