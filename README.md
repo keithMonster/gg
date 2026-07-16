@@ -67,7 +67,7 @@ gg/
 ├── exploration.md               # 夜间自由探索契约（无任务，track 雷达）
 ├── reasoning_modules.md         # Self-Discover 原子推理模块库（8 个）
 ├── tools/                       # 原子思维工具层（索引 TOOLS.md）
-│   ├── TOOLS.md                 #   工具索引：10 思维工具 + 1 通道工具
+│   ├── TOOLS.md                 #   工具索引：9 思维工具 + 1 通道工具 + 1 退役留档
 │   ├── opening-protocol.md      #   开题四问（有决策对象时的第一动作）
 │   ├── escalation-map.md        #   锤子分诊表（承重裁决收口时的结算路由）
 │   ├── compose-reasoning.md     #   推理结构组合（Self-Discover）
@@ -75,7 +75,7 @@ gg/
 │   ├── constitution-audit.md    #   宪法自审
 │   ├── red-team-challenge.md    #   不可逆项红队挑战（IRREVERSIBILITY 必装）
 │   ├── decision-output.md       #   决策结构化输出（12 字段）
-│   ├── archive-format.md        #   决策归档格式
+│   ├── archive-format.md        #   决策归档格式【已退役 2026-07-16，读旧档参考】
 │   ├── solution-space.md        #   解空间展开（防先验锁定）
 │   ├── essence-grep.md          #   essence 对齐 cross-check
 │   └── notify.md                #   主动外推通道（全局 notify skill 的 gg 侧约定）
@@ -102,7 +102,7 @@ gg/
 │   └── auto_gg/                 # 夜间自执行日志
 ├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
 ├── knowledge-map/               # Agent 生态 5 层知识图谱（70 节点交互页，机制→模式→理论→论文下钻，2026-07-10）
-├── scheduled/                   # launchd 定时任务体系（plists / bin / logs / alerts + STATUS_SCAN.md）
+├── scheduled/                   # 定时任务体系（2026-06-12 起客户端调度；plists/bin 为 launchd 存档回退件 + STATUS_SCAN.md）
 ├── scripts/                     # audit.py 结构自检 + substrate_probe.py 基底哨 + hooks/（KERNEL 物理保险丝 pre-commit）
 ├── .claude/skills/gg-audit/     # 项目内独立审查员 skill
 └── learned/                     # Voyager 式自增长 skill（v1 空，v2 启用）

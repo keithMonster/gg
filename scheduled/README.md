@@ -5,6 +5,7 @@
 ## gg 已有任务
 
 > ⚠️ **现实校准（2026-07-02）**：2026-06-12 Keith 大规模 launchd→Claude 桌面客户端迁移后，下表任务的实际调度已不在本机 launchd（`launchctl list` 无 com.gg.*，`logs/` 自迁移日起停更是预期行为）。任务仍每晚活着——git log 的 `auto_gg()` / `explore()` 提交是活性证据。本目录 `plists/` + `bin/` 是 launchd 时代的存档与回退件。迁移记录见 `memory/auto_gg/2026-06-12.md`。
+> **plist 停用惯例（2026-07-16 补记）**：两种写法并存且等价——`plists/_disabled/` 子目录（2026-07-15 归档已迁客户端的 auto-gg / daily-word / gg-explore 三份，防重启双跑）与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。
 
 | Label | 触发 | 职责 | prompt 入口 |
 |---|---|---|---|

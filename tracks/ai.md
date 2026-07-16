@@ -183,6 +183,13 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 **可复用判据**（任何"承重独立性/承重能力押在外部实例可用性"上时调用）：① 独立性锚的是属性还是实例？② 属性下可达实例 ≥2 吗？③ 切换的重锚定成本可付吗（有无预付资产）？三问任一不满足 = 隐性耦合，外部 deprecate 一次即结构性崩。
 
+### 从 2026-07-16 设计模式外部坐标扫描获得（全仓体检附带，WebSearch 强制取证；同日 done 复盘 WebFetch 抽验 3/7——2606.05976 / 2602.06948 / 2602.02474 标题主题逐一相符，余 4 个未逐验）
+
+- **六项 gg 机制被 2026 年独立结果反向验证**（`survey-as-coordinate`：产出是坐标不是清单）：入库验证关 ↔ Self-Correction Illusion（arXiv:2606.05976——同上下文自纠 vs 换帧外部纠，纠正率差 23-93 个百分点，7 模型族实测）；bets 账本 ↔ Agentic Overconfidence（arXiv:2602.06948——agent 自评成功率虚高 55pp）；多锚身份（KERNEL/CORE/essence/tracks/state/eval）↔ Multi-Anchor Identity（arXiv:2604.09588）；substrate 哨 ↔ 行业模型漂移检测（2025 年 63% 企业因未检测到的模型衰减出过事故）；essence append-only+派生视图 ↔ Anthropic Dreams（后者覆盖式合并重写，gg 不改原件——有意取舍非缺口）；tracks 多文件分层 ↔ Claude Memory Files（官方 2026-05 内测，gg 先落地）。
+- **两个真实缺口已当日落地为轻机制**：沉淀判据元回顾 tripwire（MemSkill/AutoMem，arXiv:2602.02474 / 2607.01224——"记忆该怎么存"不该是永不回看的静态硬编码；落 essence.md 头部协议第 6 步）；bets 结算帧改"找茬"（arXiv:2602.06948 实测对抗帧校准更好；落 bets.md 协议）。
+- **观察名单（判"不建"，留坐标）**：FARMA 伪造推理注入（arXiv:2607.05029，攻击成功率 100%）+ MemLineage 血缘防御（arXiv:2605.14421）——gg 的攻击面随 exploration 读网页在打开，但威胁模型是 owner 参数（`security-invariant-encodes-an-owner-set-threat-model`），且引文⑤问核验关（07-16 工作模式立）已覆盖最高频入口，全量密码学血缘属过度工程；temporal decay（arXiv:2603.11768）——视图分配表 V/O/A 已是读取层 decay，原件层退休违 append-only，不做。
+- DQ-5（agent 身份持续性）补一坐标：RSI 综述（arXiv:2607.07663，覆盖 1250 篇）把 gg 定位在 **bounded self-refinement / behavior 层**象限——不改权重、非全闭环；这正是 CORE §7「不新建自动化进化机制」边界的学术名字。
+
 ---
 
 ## 开放问题 (Open Questions)

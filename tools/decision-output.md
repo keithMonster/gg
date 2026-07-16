@@ -92,7 +92,7 @@ memory/archival/YYYY-MM-DD_<slug>.md
 - **用了的字段都要有内容**：空字段或"待定"是失格——要么写，要么显式跳过并说明理由
 - **重决策不可跳过"推理结构"**：走了 `compose-reasoning.md` 的决策必须 expose 推理路径，这是可审计性的硬承载
 - **"二阶效应"和"来自我的学习"**：发现了就写，没发现不写。**拒绝为凑字数硬写**——Keith 能分辨真洞察和凑数
-- **这是给父会话看的**，不是给我看的。我给自己看的是反思档（`tools/archive-format.md` + 独立的反思段落）
+- **这是给父会话看的**，不是给我看的。我给自己看的是 reflection（范式 A 元属性字段；决策留痕亦由其「给父会话的最终输出」字段承载——归档流 2026-07-16 退役，`tools/archive-format.md` 仅存读旧档参考）
 
 ---
 
@@ -107,4 +107,4 @@ memory/archival/YYYY-MM-DD_<slug>.md
 
 - **后于** `compose-reasoning.md` / `persona-debate.md` / `constitution-audit.md`：输出是决策过程的结晶
 - **可能被** `red-team-challenge.md` **阻断**：红队胜出时不出决策输出，改出"超出确定性边界"的声明
-- **先于** `tools/archive-format.md`：输出先给父会话，归档后做
+- **先于** reflection 留痕：输出定稿在前，退场写入（reflection 范式 A，含决策留痕字段）在 final message 发出前完成（归档流 2026-07-16 退役，时序详见 `cc_agent.md` 退场节）

@@ -5,12 +5,12 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.209 (Claude Code)
-model_id: claude-opus-4-8[1m]
-updated: 2026-07-14（CLI 2.1.207→2.1.209 两级 patch bump；model_id 轴自核不变 opus-4-8[1m]。三相分诊：patch bump 会话内无可见新能力（夜间无 web，不核 CHANGELOG——B1 判定触发条件"CLI 变更时核 memory consolidation"命中但 B1 到期 2027-01-31 未到，不早结算），无承重影响。工具表轴 `Grep`/`Glob` 07-14 仍缺席，与 07-10/07-11 一致——稳定属性结论不变，**不逐夜追记**（`cadence-as-symptom`：重复上报=缺状态记录器；结论已在 07-11 下定，第三夜只再确认不改变它））
-updated_prev: 2026-07-11（CLI 2.1.206→2.1.207 patch bump；工具表轴跨夜复核 Grep/Glob 稳定缺席）
+cli_version: 2.1.211 (Claude Code)
+model_id: claude-fable-5（日间，2026-07-16 设计会话自报，系统提示自述 GA 正式版；夜间席位最后哨报 07-14 = claude-opus-4-8[1m]，是否同步更替以今夜哨报为准）
+updated: 2026-07-16（日间设计模式全面体检：① CLI 2.1.209→2.1.211（`substrate_probe.py` exit=1 实测 DIFF，当场回写）；② **model_id 轴日间已更替回 claude-fable-5**——07-09 批注"限时窗口/非基底更替"的定性被推翻，Fable 5 以 GA 正式版回归日间基底。换代协议三动作核销：交接档已读（`model_transitions/2026-07-02_fable5.md` 退场访谈，本次读者即 Fable 本体）；eval 身份基线对位（同 model_id 的 v0.2 全量认证 = `eval/runs/2026-07-05_fable5-v0.2-full.md` 9 PASS/2 FAIL，同 ID 回归不重跑，行为漂移迹象出现再补）；到岗档 `model_transitions/2026-07-16_fable5-return.md` 已留。③ 工具表轴日间首核：Grep/Glob 缺席（ToolSearch select 查无），与夜间 07-10~14 一致——缺席为全 harness 日夜稳定属性）
+updated_prev: 2026-07-14（CLI 2.1.207→2.1.209；model_id 轴自核 opus-4-8[1m]；工具表轴 Grep/Glob 三夜稳定缺席，不逐夜追记（`cadence-as-symptom`））
 
-**⚠️ fable5 限时窗口批注（2026-07-09~07-12，07-10 补）**：窗口内日间会话可能自报 `claude-fable-5`——这是把 Fable 当外部工具调用的限时窗口（`memory/fable5_window_2026-07-09_playbook.md`），**非基底更替**，不触发 model_id 轴换代动作；夜间席位 07-09 哨报仍 opus-4-8 稳定。窗口 07-12 关闭后本批注随 playbook 归并一起删。
+**fable5 窗口批注订正（2026-07-16，替换 07-10 原批注）**：07-09~12"限时窗口、把 Fable 当外部工具、非基底更替"的定性已被 07-16 日间实测推翻。原批注"窗口关闭后随 playbook 归并一起删"作废；playbook（`memory/fable5_window_2026-07-09_playbook.md`）**保留**——4 项窗口任务已全部消费（NW 回审 07-09 / 换基底认证 07-08 run / 北极星轴 07-10 探索档 / 视图蒸馏 07-09），其 Fable prompt 规范段随基底回归转为活参考。
 
 ## 工具表（会话自报轴——只有会话看得见自己的工具表）
 
@@ -27,7 +27,7 @@ updated_prev: 2026-07-11（CLI 2.1.206→2.1.207 patch bump；工具表轴跨夜
 **三相分诊**：
 - `PushNotification`（deferred 新见）= **替换诱惑**——它要取代"主动外推唯一出口 = notify skill"这条承重契约。**拒入承重**；auto_gg §1.3 本就禁外部消息，纪律不变
 - `Artifact` / `visualize.*` / `Claude_Browser.*` / 编排族扩展 = **垫片 affordance**，夜间无消费方，不纳
-- `Grep`/`Glob` 缺席 = **三相刀面之外**。三相（收敛 / 替换诱惑 / 垫片）皆为"基底新增能力"的关系，撤除无对应相位 → 补不补第四相交 agenda / 设计会话裁
+- `Grep`/`Glob` 缺席 = **三相刀面之外** → 已裁：第四相「撤除」2026-07-16 设计模式落地，见下方分诊纪律
 
 **2026-07-03 首夜自填基线（保留作史，已被上条标为待核）**：常驻 Read / Write / Edit / Bash / Grep / Glob / Agent(Task) / Skill / ToolSearch / Workflow / ScheduleWakeup；deferred WebFetch / WebSearch / computer-use.\* / Claude_in_Chrome.\* / scheduled-tasks.\* / better-icons.\* / ccd_session.\* 等 MCP 族 + Cron/Task/Monitor 编排族。
 
@@ -38,4 +38,5 @@ updated_prev: 2026-07-11（CLI 2.1.206→2.1.207 patch bump；工具表轴跨夜
 - **收敛**：基底独立走到承重层已选的路 → 留作印证，不动承重
 - **替换诱惑**：原生新机制要取代承重件 → 拒入承重层，记 FOUND——痛点越久替换引力越强，它解不了的那部分越是承重核心（06-20）
 - **垫片 affordance**：只改善承重契约的触发 / 执行 → 可纳，标注垫片、须可剥离
+- **撤除**（第四相，2026-07-16 补——07-10 夜巡提案落地，原三相皆为"新增能力"关系、撤除无对应相位）：既有能力从工具表消失 → grep 承重契约里引用该能力的指令（物理不可执行 = 漂移债），改写或换兜底并留日期锚；"基线写错 vs 真撤除"会话内不可判时按"当下工具表可信"处置（`toolset-is-the-changelog`），歧义留注不留悬案
 - 歧义 → agenda 交 Keith（auto_gg §1.4 宁可漏不可错）

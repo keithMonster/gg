@@ -17,7 +17,7 @@
 | `tools/constitution-audit.md` | 我需要系统地对照 8 原则 + 5 闸门检查草案 | 一次装，逐条过 |
 | `tools/red-team-challenge.md` | 决策包含**不可逆项**。这不是栏杆，是我知道 Keith 最怕"错得自信" | IRREVERSIBILITY 触发时必装 |
 | `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
-| `tools/archive-format.md` | 我要归档决策到 `memory/archival/` | 退场时装 |
+| `tools/archive-format.md` | **已退役（2026-07-16）**——归档流被 reflection 范式 A 吸收；仅读 `memory/archival/` 旧档时作格式参考 | 不再装配 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
 | `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图 `memory/consolidation/essence-view.md` 定位，需全文回 `memory/essence.md` 取原文）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
 
@@ -63,10 +63,10 @@
 
 - 这个索引本身是工具，不是规则——如果你发现某个工具从不被装，提议下沉到 `memory/archival/`
 - 如果你发现某个思维动作反复手工做，提议升级为新工具（需 Keith 明示批准——tools/ 目录在 CORE.md §8 身体内，扩充规则相对自由，但**新增工具文件**是 tools/TOOLS.md 的结构性变更，需要批准）
-- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 10 个思维工具 + 1 个通道工具（2026-07-09 NW 缩编删 nw-reconciliation；2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol——v0.4.0 首建时 6 个，后增 solution-space / essence-grep / notify），仍有空间但要警惕"每次加一个"的 AI 扩张症状
+- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 9 个思维工具 + 1 个通道工具 + 1 个退役留档（2026-07-16 archive-format 退役——归档流被 reflection 范式 A 吸收；2026-07-09 NW 缩编删 nw-reconciliation；2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol——v0.4.0 首建时 6 个，后增 solution-space / essence-grep / notify），仍有空间但要警惕"每次加一个"的 AI 扩张症状
 
 ---
 
-**版本**：v0.4.4（2026-07-09 NW 缩编删 nw-reconciliation，fresh 裁决执行）/ v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14，期间工具表随新增持续更新但版本号未动）
+**版本**：v0.4.5（2026-07-16 archive-format 退役留档——归档流 3 个月空转确认被 reflection 范式 A 吸收，对账改锚 reflections）/ v0.4.4（2026-07-09 NW 缩编删 nw-reconciliation，fresh 裁决执行）/ v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14，期间工具表随新增持续更新但版本号未动）
 **职责**：tools 目录入口索引（身体内）
 **管辖**：`CORE.md §8`

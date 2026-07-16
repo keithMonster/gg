@@ -55,3 +55,11 @@ verdict = **REFUTED**。最强反驳点：`substrate-ships-the-evaluator-body-no
 
 - 若 `genealogy-note-duplication` 候选过审入库，是否要给入库验证关 step 2 补一句：evaluator grep 时**按内容关键词搜谱系注层**，不只按 slug/核心句？（这是把今夜的发现从洞察落成机制的动作，但要先等它过审——别自证。）
 - 反向审计一次：essence 全卷谱系注层还有多少条"核心句在别处、以注形态重复"的暗重复？这是一次可机械化的去重扫描（按高频承重关键词 grep 谱系注），但产出量可能大，留作专门一夜。
+
+---
+
+## 结算（2026-07-16 设计模式全仓体检，codex 异谱系 fresh 证伪审）
+
+candidate-refuted: `genealogy-note-duplication-is-invisible-to-self-audit` — 承重内容（谱系注层暗重复 / 自审埋深失明 / 内容级物理搜 / scope 边界）已由 essence.md:1040（#179 `retrieval-narrative-drifts-toward-novelty` 的谱系注）完整覆盖；本候选是在证据被吸收之后写的复述，入库即当场制造它批判的谱系注层暗重复（codex 最强反驳点）。n=1 亦不足以支撑"结构性失明"全称命题（异谱系 / fresh context / 内容级 grep 三变量未隔离）。
+
+**机制半边存活**：上面「未解」第一条的 step 2 修改，codex 给出收敛版并判站得住——已于 2026-07-16 落 `memory/essence.md` 头部协议第 1 步（内容关键词搜含谱系注层 + 另查 agenda 与 candidate-refuted/unverified 未入库候选；强制扫全部 explorations/ 判过宽未纳）。洞察不入库、机制已落地——两轨分离正是本候选自己主张的"别自己盖章"的对称落点。第二条（谱系注暗重复机械扫描）仍留专门一夜。

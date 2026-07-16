@@ -99,7 +99,7 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 
 | 盲区 | 说明 | 处理 |
 |---|---|---|
-| 非 `.md` 目标引用 | `scripts/_common.py` 的 `BACKTICK_MD_RE` 硬编码只匹配反引号内以 `.md` 结尾的路径；`.yaml` / `.json` / `.py` / `.sh` / `.txt` 的反引号引用脚本不扫 | 本 checker 补跑：`grep -nH -oE '`[^`]+\.(yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md personas/*.yaml`，命中的路径按下方同样的机械修正尝试处理 |
+| 非 `.md` 目标引用 | `scripts/_common.py` 的 `BACKTICK_MD_RE` 硬编码只匹配反引号内以 `.md` 结尾的路径；`.yaml` / `.json` / `.py` / `.sh` / `.txt` 的反引号引用脚本不扫 | 本 checker 补跑：`grep -nH -oE '`[^`]+\.(yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md personas/*.md`，命中的路径按下方同样的机械修正尝试处理 |
 | Tier 1 自动修正候选 | 脚本只分类到 `active_broken`，不找"同名文件是否在别处存在"——不产出修复建议 | 本 checker 对每条 `active_broken` + 补扫结果做 `find ~/githubProject/gg -name "<basename>" -type f`，按候选数量分级 |
 | 展望性引用（Roadmap 承诺） | 脚本的豁免规则是"同行出现已废弃/未建/deprecated 标记"（`has_deprecated_marker`），跟"引用出现在下一步 / v2 Roadmap 这种 forward-looking 章节"不是同一件事——命中 forward-looking 章节但同行没写 deprecated 标记的引用，脚本仍会计入 `active_broken` | 本 checker 人工核对 `active_broken` 每条的上下文章节标题，命中 forward-looking 章节 → 降级为 Tier 2（不报死链，报"承诺未兑现"），不走机械修正 |
 
@@ -265,14 +265,14 @@ grep -c '^### P[0-9]' constitution.md
 # 闸门数
 grep -c '^### G[0-9]' constitution.md
 
-# 推理模块数
-grep -c '^  - id:' reasoning_modules.yaml
+# 推理模块数（2026-07-16 订正：yaml 时代命令已死，现为 .md + '## M<n>' 标题）
+grep -c '^## M[0-9]' reasoning_modules.md
 
 # tracks 实际文件
 ls tracks/*.md | xargs -n1 basename | sed 's/.md$//'
 
-# personas 实际文件
-ls personas/*.yaml | xargs -n1 basename | sed 's/.yaml$//'
+# personas 实际文件（2026-07-16 订正 .yaml→.md）
+ls personas/*.md | xargs -n1 basename | sed 's/.md$//'
 
 # 反引号路径引用
 grep -rn '`[^`]*\.\(md\|yaml\|json\)`' --include='*.md' --include='*.yaml'

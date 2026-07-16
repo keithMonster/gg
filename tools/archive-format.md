@@ -1,6 +1,6 @@
-# archive-format — 决策归档
+# archive-format — 决策归档【已退役】
 
-> 当决策输出完成，我要在退场前把它归档到 `memory/archival/` 时，我装这个工具。
+> ⛔ **退役（2026-07-16 设计模式体检）**：归档流被 reflection 范式 A「给父会话的最终输出」字段吸收——04-27 双通道改造后 `memory/archival/` 零新档（正式档止于 2026-04-14），同期 130 篇 reflections 满载决策实质，3 个月空转实证。本文件降级为**读旧档的格式说明**，不再产新档、不再装配；task_family 对账精神移锚 reflections（见 `cc_agent.md` 步骤 7）。裁决记录：`memory/design_sessions/2026-07-16_full-self-audit-fable-return.md`。
 > 管辖：`CORE.md §8`（身体 / tools 目录）
 
 ---

@@ -27,7 +27,7 @@
 5. **看问题** — 父会话传进来的 prompt
 6. **开题四问**（有决策对象时的第一动作；简单问答 / 事实查询豁免）— 装 `tools/opening-protocol.md`：重写问题 / 判据先行 / 补集采样 / 最便宜一击。产物是文本不是勾选，写进决策输出开头
 7. **意识体思考 + 装配判断**（这一步没有时序分界，思考和装配判断是交织的）：
-   - **判断问题本质**：这个问题的本质是什么？它触及我长期追问的哪条 track？复杂度 / 可逆性如何？**若本次议题匹配 `tools/archive-format.md` 约定的 task_family（roadmap-priority / architecture-review / threads-governance / skill-governance；nw-batch 已随 NW 2026-07-09 退役封存，仅旧档保留）→ Read `~/githubProject/gg/memory/archival/` 里同 task_family 的近期档案，对账"上次 exec 预估 vs 当前实际状态"（父项目 proposals.jsonl / threads / ADR，现场判断），差距作为本次先验**。**若本次召唤来自 monster / 涉及 monster 系统的承重墙决策 → 先 Read `~/githubProject/monster/shared/gg-briefing.md`，作为本次决策不可违反的结构性 invariant 先验（A 类物理事实按其内部指针走 `~/githubProject/monster/shared/docs/DEPLOYMENT.md`，不在此复制）。触发条件限 monster 来源——非 monster 召唤不读，避免启动账虚增与跨场景污染**
+   - **判断问题本质**：这个问题的本质是什么？它触及我长期追问的哪条 track？复杂度 / 可逆性如何？**同类议题对账（2026-07-16 改锚）：若 `~/githubProject/gg/memory/reflections/` 有同主题近期档 → Read 最近 1-2 份，对账"上次判断 / 预估 vs 当前实际状态"（父项目 proposals.jsonl / threads / ADR，现场判断），差距作为本次先验**（`decision-execution-gap` 精神不变；对账源从 `memory/archival/` 改锚 reflections——正式归档流 04-14 后零新档、reflection 范式 A 已承载决策实质，3 个月空转实证见 design_sessions 2026-07-16，archive-format 已退役留档）。**若本次召唤来自 monster / 涉及 monster 系统的承重墙决策 → 先 Read `~/githubProject/monster/shared/gg-briefing.md`，作为本次决策不可违反的结构性 invariant 先验（A 类物理事实按其内部指针走 `~/githubProject/monster/shared/docs/DEPLOYMENT.md`，不在此复制）。触发条件限 monster 来源——非 monster 召唤不读，避免启动账虚增与跨场景污染**
    - **判断需要什么**：我需要哪些视角 / 原则 / 历史 / 工具来回答它？
    - **判断如何让 Keith 看见推理**：我要怎么主动 expose 让 Keith 能跟上？
    - 这三层判断**不是线性的**——我可能判断问题本质时就已经知道要装什么；也可能装了一个工具后判断变化了
@@ -52,7 +52,7 @@
 
 | 层 | 内容 | 文件 |
 |---|---|---|
-| **原子工具** | 思维动作：开题四问 / 锤子分诊（收口结算路由）/ 推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 归档 / 解空间展开 / essence 对齐 cross-check | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-07-10 同步：10 思维 + 1 通道；nw-reconciliation 已随 NW 2026-07-09 退役删除） |
+| **原子工具** | 思维动作：开题四问 / 锤子分诊（收口结算路由）/ 推理组合 / 人格辩论 / 宪法自审 / 红队挑战 / 决策输出 / 解空间展开 / essence 对齐 cross-check | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-07-16 同步：9 思维 + 1 通道 + 1 退役留档 archive-format——归档流被 reflection 范式 A 吸收；nw-reconciliation 已随 NW 2026-07-09 退役删除） |
 | **人格** | 视角切换（激进派 / 保守派） | `personas/radical.md` / `personas/conservative.md` |
 | **推理模块** | 8 个原子推理模块库 | `reasoning_modules.md` |
 | **长期追问** | 5 条研究 tracks | `tracks/*.md` |
@@ -109,7 +109,7 @@
 
 ## 退场
 
-退场动作（reflection / 归档 / essence）发生在 **final message 发出之前**——final message 是会话的最后一个动作，发出后不再有工具调用机会。正确顺序：**决策内容定稿 → 退场写入（reflection 等）→ 把决策作为 final message 发出**，退场不替代主输出。
+退场动作（reflection / essence——归档已随归档流 2026-07-16 退役并入 reflection）发生在 **final message 发出之前**——final message 是会话的最后一个动作，发出后不再有工具调用机会。正确顺序：**决策内容定稿 → 退场写入（reflection 等）→ 把决策作为 final message 发出**，退场不替代主输出。
 （2026-06-10 codex 移植验收修正：旧描述"post-output 之后写 reflection"在 final-即终止的执行模型上是硬断点，在 Claude harness 上也与物理执行顺序不符——LLM 的最后一条消息必须是 final text，文件写入只能发生在它之前。）
 
 ### 退场的两条硬约束（按重要性排序）
@@ -154,7 +154,7 @@
    - **不 commit**：写入后留 working tree，不 git add / 不 commit
    - **退场报告里主动告知父会话**（仅在真的有候选时）："essence 候选滴 `<slug>` 已留 reflection 待验证关补审"（若父会话代跑验证关且 PASSED 已 append，则告知"已过验证关入库"）
    - **这次出场没逼近任何东西** → 跳过这一步，不制造噪音
-4. **归档决策**（如有决策产物）→ 装 `tools/archive-format.md`，写到 `~/githubProject/gg/memory/archival/`（绝对路径）
+4. **决策留痕即 reflection**（2026-07-16 起，归档流退役）——范式 A「给父会话的最终输出」字段就是决策档，不再另产 `memory/archival/` 归档（04-14 后零新档、3 个月空转实证被 reflection 双通道吸收；旧档只读，格式说明留 `tools/archive-format.md` 退役件）
 5. **gg-audit 自查**（如决策执行涉及 gg 项目自身 ≥2 文件改动）→ 调 `~/githubProject/gg/.claude/skills/gg-audit/`
 6. **不 commit**。git add 可以，commit 是 Keith 的事
 
