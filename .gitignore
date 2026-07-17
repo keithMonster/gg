@@ -9,8 +9,11 @@ __pycache__/
 # harness 运行时状态缓存（此前仅 .git/info/exclude 本地兜底，跨机器 clone 不生效——2026-07-10 版本化）
 .omx/
 
-# cc-connect 运行时附件缓存（2026-07-16 补；已入库的 attachments/ 旧图去留另由 Keith 拍——见 agenda git 杂物条）
+# cc-connect 运行时附件缓存（2026-07-16 补；已入库旧图 2026-07-17 Keith 拍板工作区删除，git 历史未清洗）
 .cc-connect/
+
+# 一次性迁移工件区（2026-07-17 Keith 拍板：随 monster-rename 工件删除入 ignore）
+scratch/
 
 # macOS
 .DS_Store

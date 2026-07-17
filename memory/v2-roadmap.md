@@ -1,6 +1,6 @@
 ---
 type: v2-roadmap
-last_updated: 2026-07-09
+last_updated: 2026-07-17
 ---
 
 # v2 Roadmap — 被显式推迟到 v2+ 的话题
@@ -26,7 +26,7 @@ last_updated: 2026-07-09
 - sqlite 化是体量优化，先有量才需要优化
 - 现在事件归档才个位数文件，read 完全够用
 
-**v2 启动条件**：见 `memory/checkup.md §2`（events ≥ 50 / 启动加载 > 200k tokens / Keith 明示——前两条机械监测）。
+**v2 启动条件**：见 `memory/checkup.md §2`（阈值 SSOT，2026-07-17 改锚痛感线；值不在本行复写——多复写一处就多一处待同步）。
 
 **首个子项**：schema 设计
 

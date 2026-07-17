@@ -18,10 +18,10 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-07-16 设计模式（全仓体检批·Fable 5 回归）：Keith /goal 全托——四路审计 + codex 异谱系审 + Q12 对抗审。基底事件：日间席位翻回 claude-fable-5 GA 且 3 天无哨捕获，换代三动作核销 + 到岗档；收口 agenda 5 条（验证关工具集死锁订正 / 归档流退役改锚 reflections / 基底哨两落点机械化 / genealogy 候选 REFUTED / 垫片重估对象变更），Q12 入库 v0.3，v2 sqlite 阈值越线 206≥50 转 Keith。详见 design_sessions/2026-07-16_full-self-audit-fable-return.md]"
+last_summoned_at: "[2026-07-17 设计模式（07-16 遗留四项拍板）：Keith 逐项裁决——v2 不开、阈值改锚痛感线（档案侧检索失败≥2 外部登记，判别刀入 checkup §2）/ git 杂物两处删+scratch ignore / 全局 CLAUDE.md ghost-rule 回委 gg 判断改条件式 / KERNEL §3 死分支不动改捆绑提醒。执行验证全绿（audit 0 违规），KERNEL 零触碰。详见 design_sessions/2026-07-17_leftover-four-verdicts.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-07-16_citation-fabrication-selftrial-append-only"
-last_design_session_slug: "2026-07-16_full-self-audit-fable-return"
+last_design_session_slug: "2026-07-17_leftover-four-verdicts"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
