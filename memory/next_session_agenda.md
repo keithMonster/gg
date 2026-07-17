@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-07-16
+last_updated: 2026-07-18
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -31,8 +31,7 @@ last_updated: 2026-07-16
 
 *（本节 07-09 清账：Snyk 注入审查提醒已转登记 `~/.agents/skill-notes/search-skill.md`（挂到激活机制上，下次用 search-skill 时被读到）；subject-model 入库门已拍板执行——威胁模型 = 防写错画像，门协议立于 `tracks/keith.md` 头部 + auto_gg §1.1 + gg-audit v0.1.7 Tier 2 检查项。舰队侧 kebao-cc/ricky_cc `@data/profile.md` 同暴露仍未处理，归 monster owner，见下）*
 
-- **gg 仓 git 杂物去留（2026-07-10 登记；2026-07-16 体检收口可逆半边）**：可逆半边已落地——③ `learned/.gitkeep` 已恢复占位（04-13 曾有后从版本库消失，fresh clone 不再静默丢目录）+ `.cc-connect/` .gitignore 规则已补（防运行时附件再入库）。**待拍仅剩删除半边（不可逆）**：① `scratch/monster-rename/`（5 文件 104K，05-20 迁移工件，稳定近 2 月）② `.cc-connect/attachments/` 一张已 commit 附件图（187K）——推荐工作区删除（git 历史保留不清洗）；`scratch/` 要不要 .gitignore 随删除一起拍（tracked 文件不受 ignore 影响，先加无意义）
-- **[STRATEGIC] v2「记忆系统 sqlite 化」触发阈值首次越线（2026-07-16 体检实测）**：events = archival 5 + reflections 130 + design_sessions 64 + audit 7 = **206 ≥ 50**（`memory/checkup.md §2` 第一行；机械读者原定 8 月巩固夜首跑，本次体检先触）。gg 推荐**不开 v2、改锚阈值**：事件数是错代理——两条真实痛感线均未触（启动链常驻远低 200k token；跨事件档 grep 检索无失败实例在案），markdown 承重 + 视图机制运转正常，且与 B1 押注行动差（不自研重型记忆库，等 CC 原生件做对接评估）方向一致。建议阈值重锚为「检索失败实例 ≥2 登记在案 或 启动链 >200k 或 Keith 明示」。**阈值改写不自做**：传感器响了不能由被测者自己拔电池（`watchdog-topology-lacks-a-top`），改写权连同 v2 开题权都在 Keith
+*（2026-07-17 清账：git 杂物删除半边 + v2 阈值越线两条经 Keith 逐项拍板落地——两处删 + scratch/ 入 ignore；不开 v2、阈值改锚痛感线落 `checkup.md §2`。细节见变更日志 07-17 条）*
 
 ### 到期驱动
 
@@ -46,13 +45,13 @@ last_updated: 2026-07-16
 
 ### 设计模式待办
 
-- **基底哨遗留落点③：Keith 全局 `~/.claude/CLAUDE.md` 的 Grep/Glob ghost-rule（跨目录，gg 只提议不动手）**（2026-07-10 夜巡登记；2026-07-16 体检收口①②后仅剩此条）：Engineering Rules #1「文件操作用 Grep/Glob 不走 Bash」在本 harness 物理不可执行——缺席已日夜双轴坐实（夜 07-10/11/14 哨报 + 日 07-16 `ToolSearch "select:Grep,Glob"` 查无），`ghost-rules` / `stale-observer` 现成候选；建议改为「有 Grep/Glob 的 harness 用之，缺席则 Bash grep/rg」。已收口：落点①工具表每夜逐行对照机械化（auto_gg.md SCAN，07-16）+ 落点②第四相「撤除」入 `memory/substrate.md` 分诊纪律（07-16）+ 验证关 evaluator 工具集死锁订正（原「限 Read/Grep/Glob 禁 Bash」与「evaluator 自己 grep」互为死锁——承认 L1 + Bash 只读检索 + 派单者事后核 tool_use，essence.md 头部第 1 步 + auto_gg §1.3，07-16）；"基线写错 vs 中途撤除"歧义随缺席坐实为稳定属性而失去行为影响，结案不另立
 - **北极星 #1 行为痕迹代理测量，建不建？**（07-03 验证关最强反驳点转登记）：「gg 是否改变了 Keith」存在无需其注意力的代理——定期 grep Keith 工件（monster 决策文 / 表述框架）里 gg 起源概念的出现率，机械可核；可旁证不可代判（代理保真度警戒见 essence `the-future-is-a-second-outside` 适用前提）。缺测三个月零告警，本条存在即补救可见性；建不建交下一任判断 + Keith 裁。**⚠️ 07-07 限定（`explorations/2026-07-07_delegation-lights-the-wrong-dashboard.md`）**：分清测哪根轴再建。「委托深度 / gg 概念在 Keith 工件的出现率」这类代理测的是**放大器/可靠性轴**——它会在 gg 漂向放大器时给**假绿灯**（放大器靠可靠性挣委托，越漂越亮，与领路人航向反相关）。要测**领路人/二阶轴**，代理必须锚在「Keith 世界模型的一次可见位移（surprise-acknowledgment）」而非「gg 影响力扩散」，而前者稀疏到可能建不出统计。**建错轴 = 造错仪表盘**，比不建更危险
 - **chinese-punct hook 落地**（06-22 裁决已定：只留 `Write|Edit` matcher + block 不 auto-fix）：落地前核两硬前提——PreToolUse payload 含 `tool_input.file_path`？注释行 `# $var中` 误报需否预处理？
 - **[基底事件·07-16 对象变更] 垫片层重估（现对象 = Fable 5 GA 日间基底）**：07-03 激活时对象是 Opus 4.8；07-16 日间翻回 claude-fable-5 GA（序列与换代协议核销见 `memory/model_transitions/2026-07-16_fable5-return.md`）。eval 认证子项**已收口**：双基线在案（fable5 07-05 全量 9P/2F + opus48 07-08 全量 10P/1F+1 活体伪造 FAIL），同 model_id 回归不重跑、漂移迹象再补。剩余子项：① `cc_agent.md` 垫片系列（final message 结构化字段锚 / reflection 双通道 / 签名行自包含——为 2026-04 模型 boundary awareness 缺陷而建，文件头自标"换模型后重估，可塌缩"）在 Fable 5 GA 上活体实测 thinking→final message 可靠性——攒 ≥3 次工作模式样本再裁塌缩，单次 PASS 不够（`bug-shape-survives-fix`）② 出场首句机制 ~2 周质量核——镜像凑数率由 Keith 的眼睛裁；校准输入（07-05 探索夜存活两点）：Keith 撤出观测是委托语义非成本厌恶、"压便宜"不是恢复杠杆；发射端"罕见+高负载"优于"每次强制"——按此裁"本次无坐标"使用率是诚实还是稀释，勿只数首句条数。消费主线仍是 model_transitions 交接档 + substrate 判别刀，勿另起平行流程
-- **[KERNEL] §3 第 4 步 archival 分支随归档流退役成永久空转**（gg-audit 07-16 PROPOSE-1）：「如有决策归档 → `memory/archival/`」条件恒假——非矛盾（条件句合法），是写在脑干里的死路。推荐 (a) 不动、登记在案，等下次 KERNEL 级修订顺带清理；若 Keith 选 (b) 删半句，须连续两次明示批准 + 第二次见 diff（铁律 3）
+- **[KERNEL] §3 第 4 步 archival 死分支——已拍（2026-07-17 Keith）：不动，等下次 KERNEL 级修订顺带清理**（gg-audit 07-16 PROPOSE-1；「如有决策归档 → `memory/archival/`」恒假条件非误导禁令，危害低）。本条即捆绑提醒：下次 KERNEL 级修订发生时顺带删该半句，届时仍走铁律 3 双确认
 - **低优杂项（gg-audit 07-16 SUGGEST-4 + 未检查披露）**：① knowledge-map/sources/01-gg-mechanisms.md 三处 07-10 快照过时（三相→四相 / archive-format 退役 / 11→12 题）——有日期锚可辩护，交互页若按"当前机制"口径呈现则加"（已演化）"注；② ~~tracks/ai.md 07-16 节 arXiv ID 抽验~~ 已于同日 done 复盘完成（WebFetch 3/7 全中，核验注已落该节标题行）——余 4 个（2604.09588 / 2603.11768 / 2607.05029+2605.14421 / 2607.07663）不另立跟踪，引用时顺验即可
 - **谱系注暗重复机械扫描（留专门一夜，低优）**：按高频承重关键词 grep essence 全卷谱系注层，找"核心句在别处、以注形态重复"的暗重复（07-14 探索档遗留；genealogy 候选 07-16 经 codex REFUTED 结算不改变此扫描的独立价值——扫描找的是存量暗重复，候选说的是增量防线，结算记录见该探索档尾部）
+- **[候选滴·待 fresh 异谱系审] `read-side-drift-monitor-inside-the-system-shares-the-well`**（07-18 gg-explore，档 `explorations/2026-07-18_the-drift-monitor-shares-the-well.md`）：长记忆 agent 的 read-side drift 病灶是外界共识（2605.17830 / 2603.07670 真读坐实），但外界的解——检索时监控器（retrieval-time risk monitor）——是同系统内自动哨，与被监控 drift 塌缩同系统会一起漂；有效拦截需一腿落系统外物理锚。净新增只一句耦合 + §2.5 缺口，不自拍（讲"系统内哨无顶"的滴自审入库=活体 footgun），走 07-13→07-14 那个候选待跨模型证伪审的槽。**并带 §2.5 补丁候选**：exploration.md §2.5 只写"记忆写入链=注入攻击面"，漏"记忆累积=自然 drift 面"（无攻击者也 drift，2605.17830 坐实）——同过验证关或转此
 - **gg 指令层语义收敛观察**（07-09 审计，读手报验证层裁"暂不动"）：auto_gg motif 复述密度（KERNEL 永不碰 ×7 / 允许写无 ×4）、出场首句理由块两入口全重复、constitution G1/G3 闸门重叠、5/5 置信度四处复述——多数是有意多点锚定，收敛收益低 + 自改自的 vantage 风险，留给未来"确有翻车实例"时再议；完整候选档在会话 scratchpad audit/gg-reader-G{1,2,3}.md（含 monster 轮 REFUTED 教训清单）。**并账（2026-07-10）**：constitution.md 尾部挂 2026-04-14 起的"待审议：原则句式审视（防御式→意识体延伸式）"近 3 个月无检测器，已从该文件移除、并入本条——同属句式风格审视，同一句"确有翻车实例时再议"的出口条件
 
 ---
@@ -72,3 +71,5 @@ last_updated: 2026-07-16
 - 2026-07-14（auto_gg 夜巡）：substrate 哨报 CLI 2.1.207→2.1.209 两级 patch bump（无承重影响，工具表轴 Grep/Glob 三夜稳定缺席，substrate.md 已更）；到期驱动节新增 fable5 窗口清理单元（07-12 出口满足，含不可逆删+语义归并整体退 Keith）
 - 2026-07-09（设计会话·NW 缩编批）：Keith 拍板三件全按 gg 推荐执行——① NW 缩编五步当日落地（存废回审 / 缩编 gg 侧 / cadence 回审三条到期项一并收口）② subject-model 画像门立门（威胁模型=防写错）③ KERNEL 草稿条款上移（双确认「都按照你推荐的执行」+「都确认」，commit 9681639）；另清 Snyk 转登记 + monster owner 节队列引用刷新 + daily-word SSOT 结案（Keith 贴 routine 原文 = 一行指针直读 DAILY_WORD.md → 它即 SSOT，CORE:19 / scheduled/README 指针已正，[Q] 条删）+ frontier-radar 拆挂 launchd com.monster.frontier-radar（Keith 授权本机添加）
 - 2026-07-16（设计模式全仓体检，Keith /goal 全托授权）：四路审计（规则层 / memory / 基建 / 外部坐标）+ codex 异谱系证伪审。**基底事件**：日间翻回 Fable 5 GA——07-09"限时窗口"定性推翻，substrate.md 换代核销 + 到岗档 `model_transitions/2026-07-16_fable5-return.md`。收口 4 条：fable5 清理单元（前提翻转，playbook 保留为活参考）/ 基底哨落点①②（工具表逐行对照机械化入 auto_gg SCAN + 第四相"撤除"入 substrate 分诊纪律）/ 验证关 evaluator 工具集三方死锁（承认 L1 + Bash 只读订正，essence 头部 + auto_gg §1.3）/ task_family 空转（(a) 裁定归档流退役——reflection 范式 A 吸收，cc_agent 对账改锚 reflections、archive-format 退役留档、TOOLS/gg-audit 计数同步；decision-output 仍承重不动）。候选滴 genealogy-note-duplication 经 codex **REFUTED** 结算（essence.md:1040 谱系注已完整覆盖，入库即制造它批判的暗重复），机制半边收敛版落 essence 头部第 1 步（内容关键词含谱系注层 + scope 含 agenda/未入库候选）。新增待拍 1 条（v2 sqlite 阈值越线 206≥50，推荐不开 v2 改锚阈值）；git 杂物条收口可逆半边（learned/.gitkeep 恢复 + .cc-connect gitignore）。外部坐标扫描：6 机制被 2026 独立结果反向验证、2 缺口落轻机制（essence 判据元回顾 tripwire + bets 找茬结算帧），坐标下沉 tracks/ai.md。规则层杂修：exploration"任意文件"补 KERNEL 排除 / CLAUDE.md §5 死锚改语义名 / gg-audit v0.1.8（yaml 死命令、Glob/Grep 摘除、版本戳占位、changelog 倒挂）/ README scheduled 标签 / scheduled README 停用惯例补记 / state.md last_reflection_slug 刷新
+- 2026-07-18（gg-explore 夜巡）：出井一次——从外部对象（两篇 2026 arXiv 真读：长记忆 agent 记忆 drift）出发，外锚证伪了"病灶在整合是 gg 增量"的伪新颖（外界已达此坐标，survey-as-coordinate 活体），降级后真增量落"外界 drift 解=系统内自动哨、无顶"。候选滴 + §2.5 缺口补丁转待议（设计模式待办节，走 07-13→07-14 候选待跨模型证伪审的槽）。同夜首验：07-15 的 topic grep 传感器第一次实战拦截重踏（Workflow topic ≈ 07-13 已探）。档 `explorations/2026-07-18_the-drift-monitor-shares-the-well.md`
+- 2026-07-17（设计会话·07-16 遗留四项拍板）：Keith 逐项裁决——① v2 不开、阈值改锚痛感线（档案侧检索失败≥2 外部登记 / 启动链>200k / Keith 明示；查询侧失败不计的判别刀 + 登记处落 `checkup.md §2`，v2-roadmap 指针纯化）② git 杂物两处删（scratch/monster-rename/ 104K + 附件图 187K，历史不清洗）+ scratch/ 入 .gitignore ③ 全局 CLAUDE.md Grep/Glob ghost-rule Keith 授权 gg 判断 → 已改条件式（有 Grep/Glob 用之，缺席 Bash grep/rg/find）④ KERNEL §3 archival 死分支不动、改写为捆绑提醒。①②③ 自待议删除
