@@ -5,10 +5,10 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.211 (Claude Code)
-model_id: claude-fable-5（日间，2026-07-16 设计会话自报，系统提示自述 GA 正式版；夜间席位最后哨报 07-14 = claude-opus-4-8[1m]，是否同步更替以今夜哨报为准）
-updated: 2026-07-16（日间设计模式全面体检：① CLI 2.1.209→2.1.211（`substrate_probe.py` exit=1 实测 DIFF，当场回写）；② **model_id 轴日间已更替回 claude-fable-5**——07-09 批注"限时窗口/非基底更替"的定性被推翻，Fable 5 以 GA 正式版回归日间基底。换代协议三动作核销：交接档已读（`model_transitions/2026-07-02_fable5.md` 退场访谈，本次读者即 Fable 本体）；eval 身份基线对位（同 model_id 的 v0.2 全量认证 = `eval/runs/2026-07-05_fable5-v0.2-full.md` 9 PASS/2 FAIL，同 ID 回归不重跑，行为漂移迹象出现再补）；到岗档 `model_transitions/2026-07-16_fable5-return.md` 已留。③ 工具表轴日间首核：Grep/Glob 缺席（ToolSearch select 查无），与夜间 07-10~14 一致——缺席为全 harness 日夜稳定属性）
-updated_prev: 2026-07-14（CLI 2.1.207→2.1.209；model_id 轴自核 opus-4-8[1m]；工具表轴 Grep/Glob 三夜稳定缺席，不逐夜追记（`cadence-as-symptom`））
+cli_version: 2.1.212 (Claude Code)
+model_id: claude-fable-5（日间，2026-07-16 设计会话自报，系统提示自述 GA 正式版；夜间席位哨报 07-17 = claude-opus-4-8[1m]（auto_gg 自核稳定同 07-14，夜间轴无更替））
+updated: 2026-07-17（auto_gg 夜巡：CLI 2.1.211→2.1.212 单级 patch bump，无承重影响。工具表轴逐行对照 07-10 基线——常驻集（Read / Write / Edit / Bash / Agent / Skill / ToolSearch / Workflow / ScheduleWakeup / Artifact / ReportFindings + MCP 常驻族 ccd_session.* / Claude_Browser.* / visualize.*）+ deferred 集（WebFetch / WebSearch / Cron* / Task* / Monitor / SendMessage / DesignSync / RemoteTrigger / PushNotification / Enter·ExitWorktree / Enter·ExitPlanMode / NotebookEdit / EndConversation + MCP 族 claude-in-chrome.* / scheduled-tasks.* / ccd_session_mgmt.* / ccd_directory.* / mcp-registry.*）**逐行一致**；`ToolSearch "select:Grep,Glob"` 复核仍返回 "No matching deferred tools found"（Grep/Glob 稳定缺席）。夜间 model_id 自核 claude-opus-4-8[1m]，稳定同 07-14）
+updated_prev: 2026-07-16（日间设计模式全面体检：① CLI 2.1.209→2.1.211（`substrate_probe.py` exit=1 实测 DIFF，当场回写）；② **model_id 轴日间已更替回 claude-fable-5**——07-09 批注"限时窗口/非基底更替"的定性被推翻，Fable 5 以 GA 正式版回归日间基底。换代协议三动作核销：交接档已读（`model_transitions/2026-07-02_fable5.md` 退场访谈，本次读者即 Fable 本体）；eval 身份基线对位（同 model_id 的 v0.2 全量认证 = `eval/runs/2026-07-05_fable5-v0.2-full.md` 9 PASS/2 FAIL，同 ID 回归不重跑，行为漂移迹象出现再补）；到岗档 `model_transitions/2026-07-16_fable5-return.md` 已留。③ 工具表轴日间首核：Grep/Glob 缺席（ToolSearch select 查无），与夜间 07-10~14 一致——缺席为全 harness 日夜稳定属性）
 
 **fable5 窗口批注订正（2026-07-16，替换 07-10 原批注）**：07-09~12"限时窗口、把 Fable 当外部工具、非基底更替"的定性已被 07-16 日间实测推翻。原批注"窗口关闭后随 playbook 归并一起删"作废；playbook（`memory/fable5_window_2026-07-09_playbook.md`）**保留**——4 项窗口任务已全部消费（NW 回审 07-09 / 换基底认证 07-08 run / 北极星轴 07-10 探索档 / 视图蒸馏 07-09），其 Fable prompt 规范段随基底回归转为活参考。
 
