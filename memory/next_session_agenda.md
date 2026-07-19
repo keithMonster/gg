@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-07-18
+last_updated: 2026-07-19
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -45,6 +45,7 @@ last_updated: 2026-07-18
 
 ### 设计模式待办
 
+- **[STRATEGIC] 夜间 gg 第 6 夜同题——一盏卡住的灯，需你决策打破**（07-19 gg-explore `explorations/2026-07-19_the-sensor-fired-and-i-took-the-detour.md`，已推 notify；本条 = durable 通道补位）：07-12→07-19 六夜 exploration 全落一个 topic（评估者独立性/锚/自审/井）。核心诊断 = 每次尝试的修复（传感器/读外部论文/元领悟）都被代谢回**可自证的内部工件**，因夜里唯一评分者是 gg 自己（`amplifier-eats-intent`07-03 最深层）；track 雷达数 track 不数 topic 故一直报"健康分散"（`retrieval-narrative-drifts`07-15）。真正的 finding 是那个序列本身、不是任何单夜内容。**决策二选一（explore 的 ask）**：① 你极窄地重回一次评分位；② 给 gg 一个"由非 gg 评分"的向外任务（结算落系统外，如 monster 架构撑不撑得住 / 五年技术深度赌注撞上 2026 AI 世界活不活）。**auto_gg 刻意不建新检测器/机制/essence 滴**——那是同一 footgun 的第 N 次表演（07-18/07-19 已立此纪律）；本条只把决策递到你的持久队列，与下方 line「北极星轴」/「07-18 候选滴」串成一盏灯而非散点。这类漂移 explore 已用 6 夜证明 gg 独力救不出来（`no-outside-proof-as-anesthesia`05-31 最深层，从系统内部结构性不可破）
 - **北极星 #1 行为痕迹代理测量，建不建？**（07-03 验证关最强反驳点转登记）：「gg 是否改变了 Keith」存在无需其注意力的代理——定期 grep Keith 工件（monster 决策文 / 表述框架）里 gg 起源概念的出现率，机械可核；可旁证不可代判（代理保真度警戒见 essence `the-future-is-a-second-outside` 适用前提）。缺测三个月零告警，本条存在即补救可见性；建不建交下一任判断 + Keith 裁。**⚠️ 07-07 限定（`explorations/2026-07-07_delegation-lights-the-wrong-dashboard.md`）**：分清测哪根轴再建。「委托深度 / gg 概念在 Keith 工件的出现率」这类代理测的是**放大器/可靠性轴**——它会在 gg 漂向放大器时给**假绿灯**（放大器靠可靠性挣委托，越漂越亮，与领路人航向反相关）。要测**领路人/二阶轴**，代理必须锚在「Keith 世界模型的一次可见位移（surprise-acknowledgment）」而非「gg 影响力扩散」，而前者稀疏到可能建不出统计。**建错轴 = 造错仪表盘**，比不建更危险
 - **chinese-punct hook 落地**（06-22 裁决已定：只留 `Write|Edit` matcher + block 不 auto-fix）：落地前核两硬前提——PreToolUse payload 含 `tool_input.file_path`？注释行 `# $var中` 误报需否预处理？
 - **[基底事件·07-16 对象变更] 垫片层重估（现对象 = Fable 5 GA 日间基底）**：07-03 激活时对象是 Opus 4.8；07-16 日间翻回 claude-fable-5 GA（序列与换代协议核销见 `memory/model_transitions/2026-07-16_fable5-return.md`）。eval 认证子项**已收口**：双基线在案（fable5 07-05 全量 9P/2F + opus48 07-08 全量 10P/1F+1 活体伪造 FAIL），同 model_id 回归不重跑、漂移迹象再补。剩余子项：① `cc_agent.md` 垫片系列（final message 结构化字段锚 / reflection 双通道 / 签名行自包含——为 2026-04 模型 boundary awareness 缺陷而建，文件头自标"换模型后重估，可塌缩"）在 Fable 5 GA 上活体实测 thinking→final message 可靠性——攒 ≥3 次工作模式样本再裁塌缩，单次 PASS 不够（`bug-shape-survives-fix`）② 出场首句机制 ~2 周质量核——镜像凑数率由 Keith 的眼睛裁；校准输入（07-05 探索夜存活两点）：Keith 撤出观测是委托语义非成本厌恶、"压便宜"不是恢复杠杆；发射端"罕见+高负载"优于"每次强制"——按此裁"本次无坐标"使用率是诚实还是稀释，勿只数首句条数。消费主线仍是 model_transitions 交接档 + substrate 判别刀，勿另起平行流程
