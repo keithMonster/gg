@@ -6,7 +6,9 @@
 
 ## 在账
 
-*（无在账项。P-0707-nonfire 于 2026-07-13 出口条件满足，移入已结。）*
+| id | 首报 | 内容 | 状态 / 出口条件 |
+|---|---|---|---|
+| P-0720-nonfire-recur | 07-20 | **07-15 / 07-16 双夜 auto_gg 全暗**（无日志、无 commit；gg-explore 槽同期同暗——explore 档 07-15 后直接跳 07-18）。物理核：`git log 07-14..07-18` 该两夜零 gg 产出；07-16 07:19 的 plist 归档 commit(c699a0a) **不是成因**（客户端 routine 自 06-12 起即唯一执行者，plist 06-12 已 bootout）。**P-0707-nonfire 于 07-13 以"一次性未复发"结案属过早**——两天后即复发且连发两夜 | §5「连续 2 次同类问题」触发：已推 agenda `[RECURRING]` 交 Keith 查客户端调度根因（定时任务配置在 gg 权力边界外，gg 不自查不自修）。**出口**：Keith 定位根因并处置 / 或此后连续 14 个日历日无缺夜 |
 
 ## 已结
 
@@ -17,4 +19,4 @@
 | P-0625-canonlinks | 06-25 | audit 死链 8：canon-bugs.md / canon.md 跨项目相对路径假阳性 | 07-03 体检根治：check_deadlinks 加 monster 仓根第三解析基（真验证非豁免，monster 侧文件真丢照样报）+ 裸 backtick 文件名对全仓 basename 匹配（06-17 backtick 议题一并结）；实测活跃死链 11→0 |
 | P-0702-missing-log | 07-02 | 06-13 夜有 commit（ad2cd74，产出 essence+agenda+tracks）但从未写 memory/auto_gg/2026-06-13.md——SCAN"本夜日志创建"违规一次 | 一次性事件未复发，记录即结；复发则重开并按 §5 [RECURRING] 处理 |
 | P-0702-bets-firstrun | 07-02 | bets.md 押注结算首次进 SCAN——客户端定时任务在 gg 权力边界外，接入是否生效待首巡实证 | 07-03 夜核 07-02 日志 SCAN 段含 bets 消费记录（"B1-B5 到期日全在未来，全未到期不碰"）→ 接入生效，结案 |
-| P-0707-nonfire | 07-07 | 07-06 evening auto_gg 槽未触发（单次 non-fire；同源观察：explorations 侧 07-07 名文件实为 07-08 00:26 产出，同时段调度抖动第二症状，产出未丢） | 07-13 出口条件满足：07-07~07-12 连续 6 夜均有日志（收尾断裂哨全 done）、无二次 non-fire，调度抖动为一次性未复发，结案 |
+| P-0707-nonfire | 07-07 | 07-06 evening auto_gg 槽未触发（单次 non-fire；同源观察：explorations 侧 07-07 名文件实为 07-08 00:26 产出，同时段调度抖动第二症状，产出未丢） | 07-13 出口条件满足：07-07~07-12 连续 6 夜均有日志（收尾断裂哨全 done）、无二次 non-fire，调度抖动为一次性未复发，结案。**⚠️ 2026-07-20 追注：本次结案过早**——07-15/07-16 双夜复发（见在账 P-0720-nonfire-recur）。教训同 substrate 第四相 n=2 条款：6 夜无复发也只是"未见复现"，`bug-shape-survives-fix` 的又一实例 |
