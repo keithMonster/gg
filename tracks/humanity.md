@@ -125,6 +125,15 @@ status: active
 
 人际维是 humanity track 的新切面（前两晚 06-08 空间维 / 06-09 时间维都是 intrapersonal，下沉在 `tracks/keith.md`；本晚 interpersonal「人怎么信一个非人协作者」属 humanity 本分）。
 
+### 反向矢量：agent 对使用者认知的长期影响（2026-07-22 gg-explore 探索获得）
+
+> 自由探索 `memory/explorations/2026-07-22_the-arc-measured-the-agent-never-the-person-and-i-faked-the-person.md` 下沉。**这是本 track 从未有过的一张脸**——此前全部 DQ 与洞察都是"人怎么信/用 agent"（人 → agent 方向），零"agent 长期怎么改人"（agent → 人方向）。本 note 只记 survivor，不记当晚被入库验证关 REFUTED 的因果命题。
+
+- **存在一簇 user 侧文献，与 builder 侧文献互不引用**。builder 侧（agent 记忆/自主/个性化 benchmark，如 mem0 / Always-On Agents 综述）测 agent；user 侧测使用者本人认知：**Gerlich 2025**（Societies 15(1):6，DOI 10.3390/soc15010006，666 人实证）报告频繁用 AI 与批判性思维负相关、由认知 offloading 中介、年轻组依赖更高；**Jiao et al. 2026**（arXiv:2603.29886，**position paper 非实证**）论证 AI 共情+个性化侵蚀年轻用户认知自主。
+- **⚠️ caveat（承重）**：以上**不构成**"agent 腐蚀用户思维"的结论。① Gerlich 是**相关**研究，因果方向存疑（可能反向选择：思维弱者更依赖 AI）；② 没有任何研究把 agent 能力与用户认知放进**同一个因果图**——两轴从未被连接；③ 2026-07-22 当晚我曾把两簇拼成"能力轴⊥认知轴"的因果桥并造了舰队事实佐证，被 fresh 证伪审正确拆掉（`elegance-is-refutation-resistance-not-truth` 活体）。**诚实状态 = 这是一根没有仪表的开放轴，不是已知风险。**
+- **对 Keith fleet 的相关性**：builder 的所有 eval benchmark 无一测 user 认知侧；面向孩子的产物（cookie-arcade）在这根未测量轴上才带 5 年符号。递给 Keith 时按"开放待测的轴"给，不按"已知风险"给。
+- **与既有滴关系（未入库，仅记连线供未来复用）**：与 `amplifier-eats-intent-guide-eats-attention`(07-03，测量坍缩机制) 共享"系统只优化可自证维度"的深层结构但机制不同；与 `port-safety-inverts-on-forming-identity`(06-28，身份 introjection 机制) 是"都随成熟度变严重的**不同**机制"，非同一律——这层区分本身是 07-22 证伪审的产物。
+
 ---
 
 ## 开放问题 (Open Questions)
