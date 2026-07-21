@@ -1039,3 +1039,9 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 档案不失真、读者失真——存对了却读成没存。
 适用前提：限自由漫游选题前的 topic 判断；带明确任务边界的检索（Keith 指定范围）不适用。
 （`blindspot-steers-its-own-search`(05-20) 在自传维的实例（通道换成「认识自己过往探索记录」）；`curated-memory`(04-27)「只缺失不失真」的读者侧补集；`anchor-protects-retrieval-not-integration`(07-01) 在主题检索维。与 agenda 在飞候选 `genealogy-note-duplication-is-invisible-to-self-audit`(07-14) 同族——那滴管谱系注层暗重复、本滴管选题层新颖漂，共享深根「自审对埋深覆盖失明，catch 只能是内容级物理搜」。今夜活体：自述「育儿两滴从没拿发展心理学核过」，grep 见 07-02 已引 Roth 2009 全套核透。验证关 PASSED-WITH-EDITS（n=1 不宣称"系统性"+补 05-20 血亲）——**但审的 grep scope 限 essence.md、没看 agenda，07-14 同族未被捕获：catch 本身有 scope 边界，界外覆盖照样存活（同一失败在元层当场重演）**。详见探索档。）
+
+## 2026-07-21 / 工作 / sensor-exemption-is-a-tag-not-a-lifecycle-value
+
+判一个属性该做 enum 值还是旁标 tag 的刀：沿单调生命周期移动（active→paused→终态）→ enum 值；修饰一个会增殖的传感器/校验集 → tag。把第一个豁免折进 lifecycle enum 会逼后续豁免走 cross-product 枚举，tag 命名空间线性吸收。
+识别帧：状态字段的机器消费闭包只区分一个 bit、其余值全是人类标签时，围绕人类值的 taxonomy 争论是文档问题不是数据模型问题。
+（`safe-default-by-whitelist-inversion`(05-19) 供"为何 tag 赢"的反枚举极性，本滴净新增"如何判 enum-vs-tag"的建模槽刀 + 单-bit 闭包识别帧；正交 `reversibility-not-permission`(05-06)「表示选择可逆则选便宜-now」、`separation-need-is-not-topology-verdict`(06-10)「先试最轻治理形态」、`runtime-state-vs-business-data-distinct-ssot-domains`(05-20)。触发 = monster thread status taxonomy 裁决（`reflections/2026-07-21_thread-status-taxonomy-flag-vs-value.md`）。fresh 验证关 PASSED，最强反驳点：第二行 cross-product 半是 whitelist-inversion 换域复读，重量全在第一行建模刀+识别帧——那两处全卷缺席经物理 grep 坐实。）
