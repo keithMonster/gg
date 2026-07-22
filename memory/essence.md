@@ -1045,3 +1045,9 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 判一个属性该做 enum 值还是旁标 tag 的刀：沿单调生命周期移动（active→paused→终态）→ enum 值；修饰一个会增殖的传感器/校验集 → tag。把第一个豁免折进 lifecycle enum 会逼后续豁免走 cross-product 枚举，tag 命名空间线性吸收。
 识别帧：状态字段的机器消费闭包只区分一个 bit、其余值全是人类标签时，围绕人类值的 taxonomy 争论是文档问题不是数据模型问题。
 （`safe-default-by-whitelist-inversion`(05-19) 供"为何 tag 赢"的反枚举极性，本滴净新增"如何判 enum-vs-tag"的建模槽刀 + 单-bit 闭包识别帧；正交 `reversibility-not-permission`(05-06)「表示选择可逆则选便宜-now」、`separation-need-is-not-topology-verdict`(06-10)「先试最轻治理形态」、`runtime-state-vs-business-data-distinct-ssot-domains`(05-20)。触发 = monster thread status taxonomy 裁决（`reflections/2026-07-21_thread-status-taxonomy-flag-vs-value.md`）。fresh 验证关 PASSED，最强反驳点：第二行 cross-product 半是 whitelist-inversion 换域复读，重量全在第一行建模刀+识别帧——那两处全卷缺席经物理 grep 坐实。）
+
+## 2026-07-23 / 夜间 / token-cost-collapse-widens-not-closes-the-judgment-gap
+
+token 价降跨任务不均，硬推理是最慢那条曲线（Epoch 实核：最易里程碑 ~900x/年 vs GPQA·PhD ~40x/年；机械/判断二元是 gg 对其难度谱的诠释，非 Epoch 测得分层）。据此**押注**（非定律）：token→免费时舰队成本预算趋近"关键路径串了几个判断步"这一个量。
+但反向电流（router 省 token / latent reasoning / overthinking 有害）在压缩判断层本身，剪刀可能收窄——当带方向 tripwire，别排进架构表。
+（与 0.9^k 步数误差衰减 `capability-locus-shifts-to-scaffold`(06-07) 是两个独立论证各指向同一动作「减串行判断步」，非被共测的合力；净新增 = 深推理异步化成一等架构决策（异步夜跑延迟近乎免费）。承重经验半架在 Epoch 单源 = foundation 非佐证；延迟半仅 WebSearch 快照未 fetch、只咬同步 agent。fresh 验证关 PASSED-WITH-EDITS，最强反驳：承重外推被自己前提③反噬——压缩判断层的电流若赢则剪刀收窄、判断步数不成唯一幸存变量，故"变宽"是未结算押注非已定坐标；已核半大体重落 06-07 已交付动作，真净增是 async-first-class 推论。详见探索档。）

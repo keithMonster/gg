@@ -453,6 +453,22 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### 推理经济学是一条架构力：判断是跌得最慢的曲线（2026-07-23 gg-explore 漫游 · WebFetch Epoch AI 价格趋势）
+
+**触发**：track 雷达 architecture 偏冷 + 档案 grep `latency/inference cost as design force` 命中 0（全库首探）。物理对象 = Epoch AI「跨任务价格下跌不均」实读数据。
+
+**核心洞察**：主流叙事"inference 快免费了，当算力免费那样建"只对**机械层**成立。把价格曲线按任务拆开（Epoch 实核）：匹配同一性能里程碑的年降速跨任务 9x–900x，**越硬的任务跌得越慢**——GPQA·PhD 级 40x/年 vs 最快里程碑 900x/年。判断/硬推理是所有价格曲线里最慢那条，且背着**上升**的墙钟延迟（test-time compute 趋势朝上）。**架构后果（押注，非定律）**：token→免费时，agent 舰队的成本/延迟预算趋近"关键路径上串了几个判断步"这一个量——机械 fan-out 那半从账单消失，判断那半是唯一不快速降价 + 唯一背延迟的档。
+
+**与既有洞察的连线**：这跟 `capability-locus-shifts-to-scaffold-as-horizon-grows`(06-07) 的 0.9^k 步数**误差**衰减是**两个独立论证指向同一架构动作**（减串行判断步）——一条走误差复合、一条走经济/延迟复合，非共测合力。第一次两条独立力在同一架构规则上汇合。
+
+**复用判别 / 落地杠杆**：① 判断步能并行就别串行（pipeline 而非 chain）——驱动力现在不止墙钟好看，是"判断是唯一不降价的资源"；② **同步 vs 异步分界升为一等架构决策**——延迟半只咬人在环档（Keith call gg / daily-word），异步夜跑（auto_gg / exploration / 舰队隔夜）判断延迟近乎免费，故"这个判断能否异步化"比"要不要做"更决定成本。
+
+**诚实边界**：反向电流真实（router 省 token / latent reasoning / overthinking 有害在压缩判断层本身，剪刀可能收窄）——当带方向 tripwire 别排进架构表。
+
+**对应 essence**：`token-cost-collapse-widens-not-closes-the-judgment-gap`(07-23，#181，fresh 审 PASSED-WITH-EDITS 入库)；详见 `memory/explorations/2026-07-23_token-cost-collapses-but-judgment-is-the-slowest-falling-curve.md`。
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐
