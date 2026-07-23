@@ -24,6 +24,8 @@ updated_prev: 2026-07-21（auto_gg 夜巡：CLI 2.1.215→2.1.216 单级 patch b
 
 **2026-07-11 auto_gg 跨夜复核**：`ToolSearch "select:Grep,Glob"` 仍返回 "No matching deferred tools found"（物理证据，与 07-10 一致）→ Grep/Glob 缺席**稳定跨夜（07-10 + 07-11 两夜一致），非单夜抖动**。"07-03 基线本就写错" 的歧义仍不可从会话内判，但"07-10 单夜偶发"这一支已被排除——即本 harness 席位确实无 Grep/Glob 常驻，是稳定属性不是偶发。夜巡全程 Bash grep 兜底照旧。
 
+**⚠️ 2026-07-23 auto_gg 翻回（订正上条"稳定属性不是偶发"）**：`ToolSearch "select:Grep,Glob,EndConversation"` 今夜返回 **Grep + Glob 完整 schema（物理可加载）**——07-10~07-22 **连续 13 夜** "No matching" 后首次命中，Grep/Glob 翻回可用。上条"稳定属性不是偶发"被物理打脸：**13 夜连贯（远超第四相 ≥5 夜门槛）仍能翻回**，证明工具表**没有"稳定属性"这回事，只有"当下可信"**（`toolset-is-the-changelog` 06-23 的又一强证）+ `bug-shape-survives-fix`（缺席这个形态在 13 夜后翻转）。分诊：Grep/Glob 回归属**垫片 affordance**（改善检索执行方式，承重层对二者零硬依赖——一直 Bash grep 兜底且工作正常；CLAUDE.md 全局指令已是条件式"有 Grep/Glob 用之，缺席则 Bash 兜底"），可用但契约不改。启示：写工具表结论**永远用"连续 N 夜一致，未见复现"，永不写"稳定属性"**——即便 n=13。
+
 **三相分诊**：
 - `PushNotification`（deferred 新见）= **替换诱惑**——它要取代"主动外推唯一出口 = notify skill"这条承重契约。**拒入承重**；auto_gg §1.3 本就禁外部消息，纪律不变
 - `Artifact` / `visualize.*` / `Claude_Browser.*` / 编排族扩展 = **垫片 affordance**，夜间无消费方，不纳
