@@ -81,7 +81,7 @@ token 红利有三扇门通向 Keith 固定的注意力预算：
 
 - **臂 A 异步深推理 agent = 强证据、门 A/B 落地-able**：OpenAI GPT-5.3-Codex 官方博客明说 "agentic coding is increasingly about time horizon, not just one-shot intelligence"、支持 25+ 小时连续自主编码（developers.openai.com/blog，2026-02-23）；Google Gemini API Managed Agents `background:true` 服务端异步（blog.google，2026-07-07）；Anthropic Cowork 离线设备云端后台 + Routines + "Dreaming" 隔夜自改进（Simon Willison 现场博客，2026-05-06）。07-23 的 async-first-class 落点被现实坐实——门 A（deeper-per-coordinate 异步深想）、门 B（清盘）物理可落地，不是我的推演。
 - **臂 B 推理压缩 = 弱/未决、剪刀尚未收窄**：OptimalThinkingBench（arXiv 2508.13141）评 33 模型结论 "no model is able to optimally think"（压缩过度思考就牺牲思考不足，反证）；Meta Coconut（arXiv 2412.06769）latent 推理 GSM8k 34.1% < 显式 CoT 42.9%；强证据全停在 arXiv、无一进生产管线。**07-23 flag 的收窄电流尚未触发，本探索前提成立**——但记 subagent 的诚实警戒：压缩类工作天然以论文非博客形态存在，"缺证据"不能反推"无进展"，这是空白不是反证。
-- **臂 C 成本降速分层 = 强证实 + 一处加锐**：Epoch AI（2025-03-12）GPQA Diamond ~40x/年 vs 六基准中位 50x、区间 9x-900x，坐实 07-23 数字。**加锐**：MIT 关联 arXiv 2511.23455 —— 达固定能力单价年降 5-10x，**但前沿模型运行总成本因模型更大/推理量更大年涨 3-18x**。前沿判断不是"降得慢"，是**总成本在涨**。剪刀比 07-23"两条都降、只是速率不同"的框架张得更开：非瓶颈（典型）狂降、瓶颈（前沿）逆势上涨。
+- **臂 C 成本降速分层 = 强证实 + 一处加锐**：Epoch AI（2025-03-12）GPQA Diamond ~40x/年 vs 六基准中位 50x、区间 9x-900x，坐实 07-23 数字。**加锐**：arXiv 2511.23455（Neil Thompson 等；"MIT 关联" 系子代理转述，affiliation 未在亲核抓取页确认，见 §essence 去向核验痕迹）—— 达固定能力单价年降 5-10x，**但前沿模型运行总成本因模型更大/推理量更大年涨 3-18x**。前沿判断不是"降得慢"，是**总成本在涨**。剪刀比 07-23"两条都降、只是速率不同"的框架张得更开：非瓶颈（典型）狂降、瓶颈（前沿）逆势上涨。
 - **对门 A 的收窄**：MIT 那条同时收窄我"异步近乎免费"的乐观——async 消除的是**延迟**成本，不是**算力**成本，而前沿算力在涨。所以门 A（deeper-per-coordinate）不是白拿的：越推前沿，单位越贵。红利不均匀免费，深-前沿那半在变贵。这不推翻内核（前沿保值、存量贬值方向更强了），只把"免费"精确成"延迟免费、算力不免费"。
 
 结论：terrain 作佐证成立，内核方向被加强（剪刀更开），一处乐观被收窄（门 A 非白拿）。无一臂反证内核。
@@ -107,7 +107,8 @@ REFUTED 对。三件我承认：
 REFUTED 掉的是"结晶成永久滴"的资格，不是今夜的全部所得：
 
 - **缝合本身成立但不够格新滴**：07-23 与 07-11 的表面矛盾靠"判断沿典型性分层（典型→快曲线、前沿→慢曲线）"化解——这澄清了两滴，但正如证伪审指出，是两滴的直接组合（缝合非第三结晶），留在本档作理解，不入 essence。
-- **一条真外部事实（佐证 07-23，非新滴）**：MIT arXiv 2511.23455——固定能力单价年降 5-10x，但前沿模型运行总成本因模型更大/推理量更大**年涨 3-18x**。剪刀比 07-23"两条都降速率不同"张得更开：非瓶颈侧狂降、瓶颈侧逆势涨。07-23 append-only 不可改，此事实存此档，作它的旁证坐标。
+- **一条真外部事实（佐证 07-23，非新滴）**：arXiv 2511.23455 "The Price of Progress: Price Performance and the Future of AI"（Gundlach / Lynch / Mertens / **Neil Thompson**）——摘要逐字："the price for a given level of benchmark performance has decreased remarkably fast, around 5× to 10× per year" + "the price of running frontier models is rising between 3× to 18× per year due to bigger models and larger reasoning demands"。剪刀比 07-23"两条都降速率不同"张得更开：非瓶颈侧狂降、瓶颈侧逆势涨。07-23 append-only 不可改，此事实存此档，作它的旁证坐标。
+  - **引文核验痕迹（讲解帧拦截后补，2026-07-24）**：原稿写"MIT 关联…子代理转述"——子代理 WebFetch 转述不算亲核（`external-anchor-is-corroboration-not-foundation` 07-13：外证须亲核、张冠李戴入口在"读论文→写进结论"那跳）。stop-hook explain-guard 拦下后，主会话 **WebFetch arxiv.org/abs/2511.23455 亲核**：标题/作者/两处数字逐字为真。两处订正原措辞——① affiliation "MIT" **抓取页未列**，删（Neil Thompson 公开身份 MIT FutureTech 属识别非工具证据）；② "硬外部事实"过度，它是**单篇论文非共识**，亲核的是引文文本真实性，不是结论已获多源。
 
 ### Keith-observation：发酵，不今夜落 keith.md
 
