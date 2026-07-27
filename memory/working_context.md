@@ -18,6 +18,16 @@ max_lines: 80
 
 ---
 
+## 关注范围（2026-07-28 Keith 明示收窄）
+
+**只有 gg 和 monster 两个工作区。** kebao-cc / ricky_cc 不在关注面内——涉及它们的议题不再进 agenda、不再做存活监控、不再提"舰队/fleet 四仓"框架。
+
+- 「fleet 级 XX」这类表述一律按 **gg + monster 两点**理解；两个节点之间要的是**一条边**，不是一层共享基础设施
+- **唯一例外（安全，与关注范围脱钩）**：ricky_cc 那台机器上的永不过期凭据（`CGBOILER_NOTE_TOKEN` test/prod 同钥 + CG 生产库 pm 账号 + 共用 tokenhub token）风险仍在计息，轮换与"关不关注该仓"无关，归 monster owner
+- essence.md 与已归档探索 / 反思档中的 kebao/ricky 记述**不改**——append-only 历史结晶记录的是当时判断，不因范围收窄而失效
+
+---
+
 ## 我的硬约束（速查；详细在 `KERNEL.md §2` + `CORE.md §7`）
 
 > ⛔ **本节承重不变量，auto_gg 瘦身 / RESHAPE 禁删任一条**（`KERNEL §2` + `CORE §7` 派生；删 = 静默洗白一条铁律，连续多夜微删、单夜 diff 合理、N 夜后铁律消失而无哨兵）。瘦身只动「按需读指针 / 变更日志 / 已结案任务槽」等明确冗余。升级到机械哨兵的路径见 `next_session_agenda` 2026-06-06。

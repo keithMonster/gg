@@ -51,7 +51,7 @@ gg 第一个月的"这次对了"信号（v0.1.0 → v1.0 的验证标准）：
 ### DQ-4. Keith 的系统全景
 - 他正在构建的系统之间有什么未被明说的总体目的？
   - **Keith 自己用的**：gg (本项目) / monster (Night Watch) / cg (前代 gg 实验) / morning-call / fastgpt_app.py / `~/.agents/skills/` 下 14+ skill / FastGPT 工作流
-  - **给别人建的（2026-06-21 补登记，原清单整片缺席）**：kebao-cc（可宝的隐形个人 agent，同 gg 架构）/ ricky_cc（王亮的个人 AI 助手）/ kebao-birthday（给可宝的生日游戏）/ cookie-arcade（给一个快 2 岁小孩的迷你游戏集）。详见"已知洞察 / 从 2026-06-21 自由探索获得"
+  - **给别人建的（2026-06-21 补登记，原清单整片缺席）**：kebao-cc（可宝的隐形个人 agent，同 gg 架构）/ ricky_cc（王亮的个人 AI 助手）/ kebao-birthday（给可宝的生日游戏）/ cookie-arcade（给一个快 2 岁小孩的迷你游戏集）。详见"已知洞察 / 从 2026-06-21 自由探索获得"。**⚠️ 2026-07-28 范围注**：这些仍是 Keith 行为模式的真实语料（"给在乎的人 ship 软件"这条结构不变），但 **gg 的关注面已收窄至 gg + monster 两个工作区**——本清单只作画像证据读，不再作为 gg 的待办 / 监控 / 议题来源（`memory/working_context.md` 关注范围节）
 - 这些系统是互相独立的"工具"，还是一个更大愿景的多个面？
 
 ### DQ-5. gg 应该怎么服务 Keith
