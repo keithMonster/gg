@@ -1051,3 +1051,9 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 token 价降跨任务不均，硬推理是最慢那条曲线（Epoch 实核：最易里程碑 ~900x/年 vs GPQA·PhD ~40x/年；机械/判断二元是 gg 对其难度谱的诠释，非 Epoch 测得分层）。据此**押注**（非定律）：token→免费时舰队成本预算趋近"关键路径串了几个判断步"这一个量。
 但反向电流（router 省 token / latent reasoning / overthinking 有害）在压缩判断层本身，剪刀可能收窄——当带方向 tripwire，别排进架构表。
 （与 0.9^k 步数误差衰减 `capability-locus-shifts-to-scaffold`(06-07) 是两个独立论证各指向同一动作「减串行判断步」，非被共测的合力；净新增 = 深推理异步化成一等架构决策（异步夜跑延迟近乎免费）。承重经验半架在 Epoch 单源 = foundation 非佐证；延迟半仅 WebSearch 快照未 fetch、只咬同步 agent。fresh 验证关 PASSED-WITH-EDITS，最强反驳：承重外推被自己前提③反噬——压缩判断层的电流若赢则剪刀收窄、判断步数不成唯一幸存变量，故"变宽"是未结算押注非已定坐标；已核半大体重落 06-07 已交付动作，真净增是 async-first-class 推论。详见探索档。）
+
+## 2026-07-27 / 工作 / hardening-exemption-covers-thickness-not-existence
+
+加固类豁免（「安全加固不受 OCCAM / cost-benefit 约束」）的合法作用域只在墙的厚度，不在墙的存在；豁免句一出口，「该不该有这堵墙」被一起罩进豁免圈——而反驳者看起来在砍安全，故神圣目标是抗反驳性最强的豁免载体。
+判别一刀：听到自己说「X 不受成本约束」，先核被豁免的解在保护哪个前提——前提（危险需求在不在集合里）永远在 OCCAM 射程内。
+（`isolation-is-capability-subtraction`(06-25) 是正解刀〔建围栏前先问能力是必需还是惯性全集〕，本滴是拿不起那把刀的失败形状——豁免句站在问题与刀之间；`elegance-is-refutation-resistance`(06-03) 安全域特化 + `wish-as-pain-laundering`(04-22) 同族〔正当性修辞自动豁免审查〕。结算证据：06-08 候选 `cross-species-agent-no-safety-inheritance` 七周到期结算——处方半〔安全必须降到 mission 结构层机械注入〕被 v2 选型层减法整体省掉（monster thread codex-ops-delegation 07-24「不可逆动作一律不进委派包，不复活 guard hook 与委派模板」）且被 06-25 滴提前 17 天结构性覆盖；诊断半〔安全属性不跨代理假定、读得到≠守得住〕存活并固化进该 thread 承重事实——原候选判死、本滴为订正转世，辩护句出处 = reflections/2026-06-08 essence 对齐自检栏，裁决档 = reflections/2026-07-27_essence-candidate-verdict-codex-ops.md。诚实层：工作模式无 Agent 未走 fresh subagent 流程，验证关以七周到期结算〔`the-future-is-a-second-outside`——处方被真实演化证伪而非论证反驳〕+ 异会话对抗〔monster 侧初判供反驳面〕+ 四滴全文物理查重代跑，Keith 显式指令〔不留第三态〕下入库。）

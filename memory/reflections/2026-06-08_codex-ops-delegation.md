@@ -62,7 +62,7 @@ status: substantive-decision
 
 - slug: cross-species-agent-no-safety-inheritance
 - 一句话: 把执行权交给另一个物种的 agent（不同模型/不继承 RLHF 安全姿态/不读你的红线文件/approval=never）时，本体系"安全靠自觉"全部失效——安全必须降到 mission prompt 结构层机械注入，否则护栏是画出来的。
-- 是否已 append 到 essence.md: N
+- 是否已 append 到 essence.md: **判死，不入库（2026-07-27，Keith 指令下刀，gg 工作模式裁决）**。处方半〔安全必须降到 mission prompt 结构层机械注入〕被 v2 选型层减法取代（monster thread `codex-ops-delegation.md` 07-24 承重事实：不可逆动作一律不进委派包，不复活 guard hook 与委派模板）且被 `isolation-is-capability-subtraction`(06-25) 提前 17 天结构性覆盖；诊断半〔安全属性不跨代理假定、读得到≠守得住〕存活但已固化进该 thread 承重事实，且属"X 不跨边界传递"既有家族（fleet-canon-is-sedimentary / craft-ports-identity-doesnt）的又一实例——两半均无不可再生的独立留存价值。七周结算的真残余 = 上方「essence 对齐自检」栏那句 OCCAM 豁免辩护没站住（豁免只覆盖墙的厚度，不覆盖墙的存在），订正转世为 essence #182 `hardening-exemption-covers-thickness-not-existence`（2026-07-27 入库）。裁决档：`reflections/2026-07-27_essence-candidate-verdict-codex-ops.md`
 
 ### 外部锚点（可选）
 
