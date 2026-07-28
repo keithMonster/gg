@@ -4,7 +4,7 @@
 > **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
 > **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
 > 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）（2026-07-15 gg-explore 漫游 append #179 `retrieval-narrative-drifts-toward-novelty`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F2 + 分配表，反向引力核归零，当前对账 = **179**。）（2026-07-21 夜间 auto_gg append #180 `sensor-exemption-is-a-tag-not-a-lifecycle-value`——07-21 工作模式候选滴（reflection 交 auto_gg 补审），过 fresh 入库验证关 PASSED 后 append，同步入视图 F7 + 分配表，反向引力核归零；顺带补正 #179 footer 漏更（178→180），当前对账 = **180**。）（2026-07-23 gg-explore 漫游 append #181 `token-cost-collapse-widens-not-closes-the-judgment-gap`——过 fresh 入库验证关 PASSED-WITH-EDITS（四改 E1-E4 已落滴：延迟半标快照 / 机械-判断二元标 gg 诠释 / 承重外推降为 tripwire / 两力叠加改独立论证）后 append，同步入视图 F11 + 分配表，反向引力核归零；顺带补正历史漂移——分配表标题 `177 滴全覆盖` 自 #178 起未随 footer 更新（177→181），本次一并校正，当前对账 = **181**。）（2026-07-27 工作模式 append #182 `hardening-exemption-covers-thickness-not-existence`——06-08 候选滴 `cross-species-agent-no-safety-inheritance` 七周悬案 Keith 指令下刀：原候选判死不入库（处方半被 v2 选型层减法取代 + 被 `isolation-is-capability-subtraction` 06-25 覆盖；诊断半已固化 monster thread codex-ops-delegation），订正转世为本滴；验证关以七周到期结算 + 异会话对抗代跑（工作模式无 Agent，滴内诚实标注），同步入视图 F2 + 分配表，顺带校正 07-23 遗留的 footer 统计行漏更（合计 180→182），当前对账 = **182**。）（2026-07-28 夜间 auto_gg append #183 `omission-failures-evade-event-driven-sensors`——07-28 工作模式候选滴（reflection 交夜巡补审），过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：出路三消除法 / lint 限定 / 补 07-20 暗夜哨异源证据）后 append，同步入视图 F6 + 分配表，反向引力核归零，当前对账 = **183**。）
+> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）（2026-07-15 gg-explore 漫游 append #179 `retrieval-narrative-drifts-toward-novelty`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F2 + 分配表，反向引力核归零，当前对账 = **179**。）（2026-07-21 夜间 auto_gg append #180 `sensor-exemption-is-a-tag-not-a-lifecycle-value`——07-21 工作模式候选滴（reflection 交 auto_gg 补审），过 fresh 入库验证关 PASSED 后 append，同步入视图 F7 + 分配表，反向引力核归零；顺带补正 #179 footer 漏更（178→180），当前对账 = **180**。）（2026-07-23 gg-explore 漫游 append #181 `token-cost-collapse-widens-not-closes-the-judgment-gap`——过 fresh 入库验证关 PASSED-WITH-EDITS（四改 E1-E4 已落滴：延迟半标快照 / 机械-判断二元标 gg 诠释 / 承重外推降为 tripwire / 两力叠加改独立论证）后 append，同步入视图 F11 + 分配表，反向引力核归零；顺带补正历史漂移——分配表标题 `177 滴全覆盖` 自 #178 起未随 footer 更新（177→181），本次一并校正，当前对账 = **181**。）（2026-07-27 工作模式 append #182 `hardening-exemption-covers-thickness-not-existence`——06-08 候选滴 `cross-species-agent-no-safety-inheritance` 七周悬案 Keith 指令下刀：原候选判死不入库（处方半被 v2 选型层减法取代 + 被 `isolation-is-capability-subtraction` 06-25 覆盖；诊断半已固化 monster thread codex-ops-delegation），订正转世为本滴；验证关以七周到期结算 + 异会话对抗代跑（工作模式无 Agent，滴内诚实标注），同步入视图 F2 + 分配表，顺带校正 07-23 遗留的 footer 统计行漏更（合计 180→182），当前对账 = **182**。）（2026-07-28 夜间 auto_gg append #183 `omission-failures-evade-event-driven-sensors`——07-28 工作模式候选滴（reflection 交夜巡补审），过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：出路三消除法 / lint 限定 / 补 07-20 暗夜哨异源证据）后 append，同步入视图 F6 + 分配表，反向引力核归零，当前对账 = **183**。）（2026-07-29 gg-explore 漫游 append #184 `assisted-performance-masks-the-anchors-decay`——过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：reps 降级符号未定 / 全称加限定 / 删「不在委托量」否定式）后 append，同步入视图 F4 + 分配表，反向引力核归零，当前对账 = **184**。）
 > 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
 
 ---
@@ -115,6 +115,7 @@
 - `human-gate-is-where-judge-and-judged-collapse` (06-10) — 真正不可委托的决策只有一个形状：判断者与被判断者塌缩为同一系统而人是唯一外面（存废/证伪/画像/品味/目标函数/身份定义 + 威胁模型第七面）
 - `the-future-is-a-second-outside` (07-02) — 内省类宣称人无当场地真时，到期结算的未来是第二个外面；"无法验证"降级为"现在不结算"【前提：判定条件机械可核；转译保真是共盲最后藏身处】
 - `evaluator-is-keith-and-doesnt-fork` (06-30) — gg 对 confabulation 的免疫物理上一直是 Keith 本人；这个解不随架构 fork，礼物越隐形可信越抽掉替补防线
+- `assisted-performance-masks-the-anchors-decay` (07-29) — 委托栈把人类锚的判断当地真消费，却从不测锚的无辅助基线；无辅助运行停止发生时衰减零告警；reps 符号未定（执行练习 vs 结算反馈），合法形态 tripwire 非处方 ← `evaluator-is-keith` 常量→变量的下一阶
 
 按需（留全卷）：`architecture-review-not-substitute` (04-17) 架构审与实现审维度正交。
 
@@ -241,7 +242,7 @@
 
 ---
 
-# ② 三栏分配表（183 滴全覆盖）
+# ② 三栏分配表（184 滴全覆盖）
 
 归属：**V** = 进视图（已在 ① 展开或按需行列出且承重）｜**O** = 留全卷按需（grep 命中回原卷）｜**A** = 可归档（被修正/单案固化，谱系连线已由后继滴保留）
 
@@ -430,8 +431,9 @@
 | 181 | token-cost-collapse-widens-not-closes-the-judgment-gap | 07-23 | V | token 价降跨任务不均、硬推理最慢曲线（Epoch 实核）→押注舰队成本趋近关键路径判断步数；F11 展开（06-07 步数误差衰减的独立经济/延迟力，指同一动作）；07-23 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 182 | hardening-exemption-covers-thickness-not-existence | 07-27 | V | 加固豁免只覆盖墙厚度不覆盖墙存在（06-08 候选 cross-species-agent-no-safety-inheritance 七周结算的订正转世，原候选判死不入库）；F2 展开；07-27 工作模式 Keith 指令入库，验证关以到期结算+异会话对抗代跑 |
 | 183 | omission-failures-evade-event-driven-sensors | 07-28 | V | 触发轴存在性前提（缺席不产生事件），与 mechanical-gate 判定轴成对补全 externalization 两轴；F6 展开；07-28 工作模式候选、夜巡补审 PASSED-WITH-EDITS 入库 |
+| 184 | assisted-performance-masks-the-anchors-decay | 07-29 | V | 人类锚判断力是变量非常量、无辅助基线从不被测（evaluator-is-keith 常量→变量下一阶）；合法形态 tripwire 非处方；F4 展开；07-29 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 
-**统计：进视图 V = 144｜留全卷按需 O = 33｜可归档 A = 6｜合计 183。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）；#178 夜间 append 入 V（2026-07-13）；#179 07-15 gg-explore append 入 V（footer 当时漏更，07-21 夜巡补正）；#180 夜间 append 入 V（2026-07-21）；#181 入 V 时本统计行漏更（07-23，标题已改统计未跟），07-27 校正；#182 工作模式 append 入 V（2026-07-27）；#183 夜间 append 入 V（2026-07-28）。**
+**统计：进视图 V = 145｜留全卷按需 O = 33｜可归档 A = 6｜合计 184。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）；#178 夜间 append 入 V（2026-07-13）；#179 07-15 gg-explore append 入 V（footer 当时漏更，07-21 夜巡补正）；#180 夜间 append 入 V（2026-07-21）；#181 入 V 时本统计行漏更（07-23，标题已改统计未跟），07-27 校正；#182 工作模式 append 入 V（2026-07-27）；#183 夜间 append 入 V（2026-07-28）。**
 
 ---
 

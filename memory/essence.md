@@ -1063,3 +1063,10 @@ token 价降跨任务不均，硬推理是最慢那条曲线（Epoch 实核：�
 事件驱动的治理（hook/tripwire）只能看守「做了某事」，对「该做没做」结构性失明——缺席不产生事件，无处挂钩；失明限于零工件痕迹的动作缺席（没读 / 没查 / 没跑），缺席若在工件留洞，状态扫描类（lint）经代理事件仍可见。
 给缺席**配传感器**仅两条出路：找代理事件（把「没读就改」挂到「改」这个在场事件上）或改周期抽样制（spike / 体检）；第三条路不配传感器——把该做的动作自动化进在场事件（注入而非提醒），让缺席不可能发生。判别刀：配传感器前先问「它失败时产生事件吗」。
 （触发轴的存在性前提，与 `mechanical-gate-needs-machine-detectable-target`(06-24) 判定轴物理量前提成对——`externalization-strength-spectrum`(06-02) 两轴各守一半；`fallback-detectability`(05-06) 是事件在场检测器错判、本滴是事件缺席无处安放，失败几何不同；`fermentation-without-detector`(05-15) 为实例。证据双源：monster threads 读取侧 50 天零治理 vs 写入侧传感器齐备（reflections/2026-07-28 六项审计）+ gg 07-20 暗夜哨案（断裂哨只读已存在日志 status、对「日志未创建」永远沉默，修复即出路二周期抽样——异源且早于候选）。fresh 验证关 2026-07-28 PASSED-WITH-EDITS，最强反驳：核心句前半近同义反复、经验重量原押单一同日审计档，且「仅两条出路」被源档自己的注入方案当场越过——三改（出路三消除法 / lint 限定 / 补异源证据）已落。）
+
+## 2026-07-29 / 夜间 / assisted-performance-masks-the-anchors-decay
+
+委托栈把人类锚的判断当地真消费，却从不测这个锚的**无辅助基线**——当无辅助运行本身停止发生，衰减零告警，助手越好掩盖越厚。
+委托同时改写维护判断力的 reps 结构，但符号未定：维护走执行练习还是结算反馈，现有证据分不开——未知量不得写成处方（裁决+结算型委托可能在加 reps 而非抽）。
+本滴的合法形态是 tripwire 不是处方：周期无辅助抽样把符号变成可测；参与形态是供料侧 RCT 已动过的变量（PNAS 护栏臂），委托量与形态在唯一的专家样本里共变未分离。
+（`evaluator-is-keith-and-doesnt-fork`(06-30) 常量→变量的下一阶——那滴风险在缺席轴，本滴在「在场但无基线」轴；`omission-failures-evade-event-driven-sensors`(07-28) 出路二〔周期抽样〕在基线缺席形态的对应；与 `evaluation-cannot-motivate-internal-locus`(06-15) / `mature-autonomy-is-undefended`(06-08) 轴不同、实操出口重合〔06-08 预测 Keith 对邀请接受的供料本就自动降权，降权≠自己重跑推导〕。经验半外部承重：Lancet GH 25 观察性〔19 名资深内镜医师无辅助 ADR 28.4→22.4%，有混杂质疑，重量随其存亡浮动〕+ Anthropic/PNAS RCT + Bainbridge 40 年形状——剥文献后 gg 侧仅剩对象无现象，foundation 非佐证。fresh 验证关 2026-07-29 PASSED-WITH-EDITS，最强反驳：核心句原以确定语气写入前提句自认的未知量〔抽走 reps〕，且 gg↔Keith 拓扑〔裁决+结算〕下符号可能为反——三改〔reps 降级符号未定 / 全称加「无辅助运行停止发生」限定 / 删「不在委托量」否定式〕已落。详见探索档。）
