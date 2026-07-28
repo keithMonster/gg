@@ -18,10 +18,10 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-07-17 设计模式（07-16 遗留四项拍板）：Keith 逐项裁决——v2 不开、阈值改锚痛感线（档案侧检索失败≥2 外部登记，判别刀入 checkup §2）/ git 杂物两处删+scratch ignore / 全局 CLAUDE.md ghost-rule 回委 gg 判断改条件式 / KERNEL §3 死分支不动改捆绑提醒。执行验证全绿（audit 0 违规），KERNEL 零触碰。详见 design_sessions/2026-07-17_leftover-four-verdicts.md]"
+last_summoned_at: "[2026-07-28 设计模式（关注范围收窄 + 短周期押注）：Keith 拍板关注面收窄至 gg+monster（kebao-cc/ricky_cc 出局，凭据轮换例外）、bets 心跳 90 天压 14 天，新下 S1-S4 四注（到期 08-11）。同日工作模式独立裁决 monster threads 记忆体系六项盲区（读取侧零反馈回路为根病）。详见 design_sessions/2026-07-28_scope-cut-and-short-horizon-bets.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-07-16_citation-fabrication-selftrial-append-only"
-last_design_session_slug: "2026-07-17_leftover-four-verdicts"
+last_reflection_slug: "2026-07-28_monster-threads-memory-audit"
+last_design_session_slug: "2026-07-28_scope-cut-and-short-horizon-bets"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

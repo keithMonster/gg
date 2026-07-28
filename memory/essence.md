@@ -1057,3 +1057,9 @@ token 价降跨任务不均，硬推理是最慢那条曲线（Epoch 实核：�
 加固类豁免（「安全加固不受 OCCAM / cost-benefit 约束」）的合法作用域只在墙的厚度，不在墙的存在；豁免句一出口，「该不该有这堵墙」被一起罩进豁免圈——而反驳者看起来在砍安全，故神圣目标是抗反驳性最强的豁免载体。
 判别一刀：听到自己说「X 不受成本约束」，先核被豁免的解在保护哪个前提——前提（危险需求在不在集合里）永远在 OCCAM 射程内。
 （`isolation-is-capability-subtraction`(06-25) 是正解刀〔建围栏前先问能力是必需还是惯性全集〕，本滴是拿不起那把刀的失败形状——豁免句站在问题与刀之间；`elegance-is-refutation-resistance`(06-03) 安全域特化 + `wish-as-pain-laundering`(04-22) 同族〔正当性修辞自动豁免审查〕。结算证据：06-08 候选 `cross-species-agent-no-safety-inheritance` 七周到期结算——处方半〔安全必须降到 mission 结构层机械注入〕被 v2 选型层减法整体省掉（monster thread codex-ops-delegation 07-24「不可逆动作一律不进委派包，不复活 guard hook 与委派模板」）且被 06-25 滴提前 17 天结构性覆盖；诊断半〔安全属性不跨代理假定、读得到≠守得住〕存活并固化进该 thread 承重事实——原候选判死、本滴为订正转世，辩护句出处 = reflections/2026-06-08 essence 对齐自检栏，裁决档 = reflections/2026-07-27_essence-candidate-verdict-codex-ops.md。诚实层：工作模式无 Agent 未走 fresh subagent 流程，验证关以七周到期结算〔`the-future-is-a-second-outside`——处方被真实演化证伪而非论证反驳〕+ 异会话对抗〔monster 侧初判供反驳面〕+ 四滴全文物理查重代跑，Keith 显式指令〔不留第三态〕下入库。）
+
+## 2026-07-28 / 夜间 / omission-failures-evade-event-driven-sensors
+
+事件驱动的治理（hook/tripwire）只能看守「做了某事」，对「该做没做」结构性失明——缺席不产生事件，无处挂钩；失明限于零工件痕迹的动作缺席（没读 / 没查 / 没跑），缺席若在工件留洞，状态扫描类（lint）经代理事件仍可见。
+给缺席**配传感器**仅两条出路：找代理事件（把「没读就改」挂到「改」这个在场事件上）或改周期抽样制（spike / 体检）；第三条路不配传感器——把该做的动作自动化进在场事件（注入而非提醒），让缺席不可能发生。判别刀：配传感器前先问「它失败时产生事件吗」。
+（触发轴的存在性前提，与 `mechanical-gate-needs-machine-detectable-target`(06-24) 判定轴物理量前提成对——`externalization-strength-spectrum`(06-02) 两轴各守一半；`fallback-detectability`(05-06) 是事件在场检测器错判、本滴是事件缺席无处安放，失败几何不同；`fermentation-without-detector`(05-15) 为实例。证据双源：monster threads 读取侧 50 天零治理 vs 写入侧传感器齐备（reflections/2026-07-28 六项审计）+ gg 07-20 暗夜哨案（断裂哨只读已存在日志 status、对「日志未创建」永远沉默，修复即出路二周期抽样——异源且早于候选）。fresh 验证关 2026-07-28 PASSED-WITH-EDITS，最强反驳：核心句前半近同义反复、经验重量原押单一同日审计档，且「仅两条出路」被源档自己的注入方案当场越过——三改（出路三消除法 / lint 限定 / 补异源证据）已落。）
