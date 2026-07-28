@@ -5,7 +5,17 @@
   保持原客户端时间 22:22（已是错峰非整点）。
   让 gg 在无人在场时整理软外围、巩固当日记忆、跑结构性自查、推进 1 个自选课题。
   软外围可 commit+push；硬核心可改但不 commit（留 working tree 等 Keith review）。
+
+  2026-07-28（Keith 拍）两处变更：
+  ① model opus→fable：FOUND 段的跨夜同构模式识别是 fable 的歧义判断强项。
+     **未决风险**：auto_gg.md 331 行属重脚手架，官方指出规定式 prompt 会降 fable 质量，
+     首轮跑完须比对日志质量再决定是否松脚手架（SCAN 的机械契约不动）。
+  ② runner run-task.sh→run-task-and-push.sh：此前 auto-gg 产出只落 gg 日志、
+     Keith 不主动看就看不到。改走与 gg-explore 同一范式（外壳抓 stdout 经 notify 推），
+     **不在 auto_gg.md 内加 notify**——「被推送不泄漏进 gg 上下文」是 2026-05-16
+     设计会话的既定约束；且 auto_gg.md 内 notify 命中为 0，无双推风险。
 -->
+
 <plist version="1.0">
 <dict>
     <key>Label</key>
@@ -13,11 +23,11 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task.sh</string>
+        <string>/Users/xuke/githubProject/gg/scheduled/bin/run-task-and-push.sh</string>
         <string>com.gg.auto-gg</string>
         <string>7200</string>
         <string>Read /Users/xuke/githubProject/gg/auto_gg.md，按其中流程逐步执行</string>
-        <string>opus</string>
+        <string>fable</string>
     </array>
 
     <key>StartCalendarInterval</key>
