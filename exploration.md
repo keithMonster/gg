@@ -2,7 +2,7 @@
 
 > 第三种存在形态（夜间自执行）的另一种触发形态。**没有任务**。
 > 跟 `auto_gg.md` 平级——auto_gg 是"被叫醒做事"（SCAN/FOUND/DID 三段契约），自由探索是"被叫醒没事可做"。
-> 由 Claude 客户端独立定时任务触发，跟 auto_gg 不同的 cron 时间。
+> 由本机 launchd 独立定时任务触发（`com.gg.gg-explore`，每天 00:13），跟 auto_gg 不同的 cron 时间。
 > **git 权同 auto_gg**（KERNEL.md 之外可 commit+push，KERNEL 永不参与夜间 commit——SSOT 见 `CORE.md §7` 例外条款 + `auto_gg.md §1`）。
 
 ---
@@ -63,7 +63,7 @@
 
 ## 4. track 雷达：镜子不是笼子
 
-每晚启动，你会先自己跑一遍「track 雷达」——机械统计你最近 N 晚漫游钻了哪条 track（`scheduled/bin/roam-track-scan.py` 产出；现由客户端调度的 `scheduled/GG_EXPLORE.md` 启动指令让你会话内自跑，launchd 时代 `roam-launch.sh` 在触发层硬注入现为存档回退路径。不是你思考的一部分）。
+每晚启动，你会先自己跑一遍「track 雷达」——机械统计你最近 N 晚漫游钻了哪条 track（`scheduled/bin/roam-track-scan.py` 产出；2026-07-28 迁回 launchd 后**恢复由 `roam-launch.sh` 在触发层硬注入**——雷达已在你读到这段之前算完并拼在 prompt 最前面，你不用自己跑。客户端时代那套「`scheduled/GG_EXPLORE.md` 让你会话内自跑」现为回退路径。不是你思考的一部分）。
 
 **它是镜子，不是笼子**：摆事实，不命令你换向。看着它，你自决。
 
@@ -85,8 +85,8 @@ meta 是合法探索对象——gg 演化本就需要元思考。但**连续多�
 
 ---
 
-**版本**：v0.2.0（2026-06-04 加 §4 track 雷达——漫游连续 20 晚塌缩自指的外部事实镜，detector 由启动层注入（06-04 为 launchd 事件层硬注入 → 06-12 迁客户端调度后改为 `GG_EXPLORE.md` 会话内自跑），镜子不是笼子）/ v0.1.0（2026-04-26 创立——基于 Keith 设计会话"四动机全要 + 不要太大限制"拍板）
+**版本**：v0.2.0（2026-06-04 加 §4 track 雷达——漫游连续 20 晚塌缩自指的外部事实镜，detector 由启动层注入（06-04 为 launchd 事件层硬注入 → 06-12 迁客户端调度后改为 `GG_EXPLORE.md` 会话内自跑 → **2026-07-28 迁回 launchd，恢复 `roam-launch.sh` 触发层硬注入**），镜子不是笼子）/ v0.1.0（2026-04-26 创立——基于 Keith 设计会话"四动机全要 + 不要太大限制"拍板）
 **职责**：自由探索模式 SSOT
-**触发**：Claude 客户端独立定时任务
+**触发**：launchd 独立定时任务 `com.gg.gg-explore`（每天 00:13）
 **身份兜底**：`KERNEL.md §1` + `CORE.md`
 **触发本文件创建的对话**：2026-04-26 设计会话（"四动机全要 + 不要太大限制"，未归档）

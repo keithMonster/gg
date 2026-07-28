@@ -4,14 +4,14 @@
 
 ## gg 已有任务
 
-> ⚠️ **现实校准（2026-07-02）**：2026-06-12 Keith 大规模 launchd→Claude 桌面客户端迁移后，下表任务的实际调度已不在本机 launchd（`launchctl list` 无 com.gg.*，`logs/` 自迁移日起停更是预期行为）。任务仍每晚活着——git log 的 `auto_gg()` / `explore()` 提交是活性证据。本目录 `plists/` + `bin/` 是 launchd 时代的存档与回退件。迁移记录见 `memory/auto_gg/2026-06-12.md`。
-> **plist 停用惯例（2026-07-16 补记）**：两种写法并存且等价——`plists/_disabled/` 子目录（2026-07-15 归档已迁客户端的 auto-gg / daily-word / gg-explore 三份，防重启双跑）与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。
+> ✅ **现实校准（2026-07-28 迁回）**：Keith 拍「不在客户端跑了，回本地来跑」——`auto-gg` / `daily-word` / `gg-explore` 三条已从 Claude 桌面客户端 routine **迁回本机 launchd**（`launchctl list` 重新可见 `com.gg.*`，`logs/` 恢复写入，三份 plist 从 `plists/_disabled/` 移回并 `install.sh` 重注册，每条第 4 参数钉 `opus`）。**本目录 `plists/` + `bin/` 重新是现役 SSOT，不再是存档回退件**。推翻 2026-07-02 校准块（06-12 迁客户端后写的）。载体史见 monster `threads/scheduled-tasks.md` 07-28 条。
+> **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
 |---|---|---|---|
 | `com.gg.auto-gg` | 每天 22:22 | 夜间维护契约（SCAN/FOUND/DID + 月度巩固/差值审计） | `auto_gg.md` |
 | `com.gg.gg-explore` | 每天 0:13 | 自由探索（无任务）；跑完原始输出推 Keith | `exploration.md` |
-| `com.gg.daily-word` | 每天 7:30（桌面客户端 routine；launchd plist 已退场） | 「每日一句」——gg 主动对 Keith 说一句真话，推飞书 | `DAILY_WORD.md`（**SSOT**——routine prompt 仅一行指针直读它，2026-07-09 据 Keith 提供 routine 原文核实） |
+| `com.gg.daily-word` | 每天 7:30（**launchd**，2026-07-28 迁回） | 「每日一句」——gg 主动对 Keith 说一句真话，推飞书 | ⚠️ **两套 prompt 别混**：launchd 走 plist **内联 prompt** + 外壳 `run-task-and-push.sh` 抓 stdout 推飞书（当前形态）；`DAILY_WORD.md` 是客户端时代的 SSOT，**prompt 内自带 `notify.sh`**（06-17 补），把 plist 指向它会双推 |
 | `com.gg.status-scan` | 已停用（2026-06-16，通用模板误报告警） | 轻量状态扫描 + 异常告警 | `STATUS_SCAN.md`（plist 已 `.disabled`） |
 
 ## 每日一句（com.gg.daily-word，2026-05-16 设计会话创立）
@@ -59,7 +59,7 @@ Keith 这一个人的通道。每日一句 = 主 track 第一次有物理心跳�
 
 ## 工作流速查
 
-> ⚠️ 本节命令仅在**回退到 launchd 调度**的场景有效——当前调度已迁桌面客户端（见顶部 2026-07-02 校准块），日常 `launchctl list` 无 com.gg.* 是预期。
+> ✅ 本节命令**当前完全有效**——2026-07-28 已迁回 launchd 调度（见顶部校准块），`launchctl list` 应能看到三条 `com.gg.*`；看不到 = 真出问题了。
 
 详见 `~/.agents/skills/scheduled/SKILL.md`。常用命令：
 

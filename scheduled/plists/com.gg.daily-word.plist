@@ -29,6 +29,7 @@ read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → 
 形式：极短（2-5 句够了），纯文本——不用 markdown 标题/表格，少用星号加粗，写成飞书纯文本里就好读的样子。
 
 不做：不 commit、不改 working tree、不写任何文件。这是「说话」，不是「产出工件」。你的整段 stdout 就是要发给 Keith 的那句话本身——不要前后缀、不要「以下是我对 Keith 说的话」这类元话语，直接说。</string>
+        <string>opus</string>
     </array>
 
     <key>StartCalendarInterval</key>

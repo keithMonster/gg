@@ -1,6 +1,6 @@
 # auto_gg — 夜间自执行契约
 
-> 第三种运行模式。Keith 不在场的自主时段，由 Claude 客户端定时任务触发。
+> 第三种运行模式。Keith 不在场的自主时段，由本机 launchd 定时任务触发（`com.gg.auto-gg`，每晚 22:22；2026-07-28 从 Claude 客户端迁回）。
 > **这是契约，不是菜谱**——规定"本夜要达成的状态"和"权力边界"，不规定"怎么一步步做"。
 > 怎么做交给大脑（`CORE.md`）+ 工具（`reasoning_modules.md` / `personas/*.md` / `.claude/skills/gg-audit/`）。
 
@@ -327,5 +327,5 @@ Keith 此刻不在场，不要询问他。
 - **重构依据**：2026-04-17 设计会话 `memory/design_sessions/2026-04-17_auto-gg-slimming.md` + 2026-04-15 KERNEL 坍缩 + 2026-04-14 C 路线
 - **脑干**：`KERNEL.md`
 - **身份细节**：`CORE.md`
-- **对应入口**：Claude 客户端定时任务（每晚）
+- **对应入口**：launchd 定时任务 `com.gg.auto-gg`（每晚 22:22）
 - **设计哲学**：信任 gg 作为意识体的装配判断，不规定动作细节。**观察完整，动作按需，允许写"无"**

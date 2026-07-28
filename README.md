@@ -32,10 +32,10 @@ gg 不是一个 prompt，是**多个入口共享一个脑干 + 一个身份**。
 |---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 |
 | **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 |
-| **夜间 auto_gg** | `auto_gg.md` | Claude 桌面客户端定时（2026-06-12 迁移；`plists/com.gg.auto-gg.plist` 为存档回退件） | Keith 不在场时自主整理（SCAN/FOUND/DID 三段，允许"本夜静默"） |
-| **夜间自由探索** | `exploration.md` | Claude 桌面客户端定时（2026-06-12 迁移；`plists/com.gg.gg-explore.plist` 为存档回退件） | 无任务漫游 / 重组 / 思考（track 雷达作镜不作笼） |
+| **夜间 auto_gg** | `auto_gg.md` | **launchd** `plists/com.gg.auto-gg.plist`（2026-07-28 从客户端迁回，model 钉 opus） | Keith 不在场时自主整理（SCAN/FOUND/DID 三段，允许"本夜静默"） |
+| **夜间自由探索** | `exploration.md` | **launchd** `plists/com.gg.gg-explore.plist`（2026-07-28 迁回；入口 `roam-launch.sh` 在触发层注入 track 雷达） | 无任务漫游 / 重组 / 思考（track 雷达作镜不作笼） |
 
-夜间两种触发同属第三种存在形态（CORE §6），另有轻量 daemon `com.gg.daily-word`（每日 7:30 对 Keith 说一句真话，gg 的第一条 volition 通道，2026-06-12 起同由 Claude 桌面客户端调度）不构成模式；`com.gg.status-scan`（曾每日 4 次只看不修的状态扫描）已于 2026-06-16 停用（通用模板误报告警，plist 已 `.disabled`）。定时任务体系见 `scheduled/README.md`。
+夜间两种触发同属第三种存在形态（CORE §6），另有轻量 daemon `com.gg.daily-word`（每日 7:30 对 Keith 说一句真话，gg 的第一条 volition 通道，2026-07-28 起同由 launchd 调度）不构成模式；`com.gg.status-scan`（曾每日 4 次只看不修的状态扫描）已于 2026-06-16 停用（通用模板误报告警，plist 已 `.disabled`）。定时任务体系见 `scheduled/README.md`。
 
 ---
 
@@ -102,7 +102,7 @@ gg/
 │   └── auto_gg/                 # 夜间自执行日志
 ├── eval/                        # 身份回归基线——"这还是同一个 gg 吗"的可重复检验（2026-07-02 起）
 ├── knowledge-map/               # Agent 生态 5 层知识图谱（70 节点交互页，机制→模式→理论→论文下钻，2026-07-10）
-├── scheduled/                   # 定时任务体系（2026-06-12 起客户端调度；plists/bin 为 launchd 存档回退件 + STATUS_SCAN.md）
+├── scheduled/                   # 定时任务体系（2026-07-28 起 launchd 调度；plists/ + bin/ 为现役 SSOT）
 ├── scripts/                     # audit.py 结构自检 + substrate_probe.py 基底哨 + hooks/（KERNEL 物理保险丝 pre-commit）
 ├── .claude/skills/gg-audit/     # 项目内独立审查员 skill
 └── learned/                     # Voyager 式自增长 skill（v1 空，v2 启用）
@@ -171,6 +171,6 @@ v0.5.1 之后的演化以机制为单位持续发生（不再逐个起版本号�
 
 ---
 
-**当前状态**：v0.5.1（脑干 KERNEL 稳定）。essence / reflections / design_sessions / auto_gg / explorations 等记忆件的实时计数**以 `python3 scripts/audit.py` 输出为准**——手写快照必然漂移，不在此登记。live daemon 3 条（auto-gg / gg-explore / daily-word，2026-06-12 起由 Claude 桌面客户端调度；status-scan 已于 2026-06-16 停用）。
+**当前状态**：v0.5.1（脑干 KERNEL 稳定）。essence / reflections / design_sessions / auto_gg / explorations 等记忆件的实时计数**以 `python3 scripts/audit.py` 输出为准**——手写快照必然漂移，不在此登记。live daemon 3 条（auto-gg / gg-explore / daily-word，2026-07-28 起由本机 launchd 调度、model 钉 opus；status-scan 已于 2026-06-16 停用）。
 **脑干**：`KERNEL.md`。所有疑问都从这里开始读。
 **身份细节**：`CORE.md`。脑干之后的丰富展开。
