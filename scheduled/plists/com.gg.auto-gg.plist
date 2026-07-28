@@ -8,7 +8,8 @@
 
   2026-07-28（Keith 拍）两处变更：
   ① model opus→fable：FOUND 段的跨夜同构模式识别是 fable 的歧义判断强项。
-     **未决风险**：auto_gg.md 331 行属重脚手架，官方指出规定式 prompt 会降 fable 质量，
+     **未决风险**：auto_gg.md 331 行属重脚手架，官方指出为旧模型写的规定式 prompt
+     **often**（常常、非必然）过于规定化并降低 fable 输出质量，
      首轮跑完须比对日志质量再决定是否松脚手架（SCAN 的机械契约不动）。
   ② runner run-task.sh→run-task-and-push.sh：此前 auto-gg 产出只落 gg 日志、
      Keith 不主动看就看不到。改走与 gg-explore 同一范式（外壳抓 stdout 经 notify 推），
