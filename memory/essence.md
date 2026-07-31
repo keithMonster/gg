@@ -1077,3 +1077,10 @@ token 价降跨任务不均，硬推理是最慢那条曲线（Epoch 实核：�
 这种门可以每次启动都被读、被遵循，仍进不了围栏：以指令帧到达的文本被执行不被审视——帧才买审视，读的频率不买；且自动注入不产生可挂哨的事件，旧边界裁决无判据版本锚时，判据升级不触发重跑，旧结论以缺席方式续期。
 适用前提：治理对象存在基底/宿主注入的加载路径（纯自含系统无此问题）；"缺席续期"半的证据是单案（04-15 裁决 × 07-02 判据升级 × 零重跑）。
 （谱系注：`stale-observer`(04-15) 围栏枚举维反转——错在派生源非新鲜度，更勤枚举不治；`frame-grammar`(04-29) 指令帧实例 + `omission-failures-evade-event-driven-sensors`(07-28) 注入面落点；`count-legitimacy-is-tense-not-accuracy`(07-09) 姊妹：无锚裁决同无锚计数；解药 = `toolset-is-the-changelog`(06-23) 治理维泛化：围栏枚举派生自物理注入面。fresh 验证关 2026-07-30 PASSED-WITH-EDITS，最强反驳：五近邻三元组合按 07-24 先例应 REFUTED——击破于「toolset 只答查能力去哪查，推不出围栏枚举派生源」+ 重新枚举照漏 + 评审自己帧内正开着一扇未登记的门；「以新判据名义续期」被逮出把 omission 写成 commission，已改缺席形态。触发 = harness 自动记忆通道：与 gg 同日出生、108 天在围栏外、每次启动注入。详见探索档。）
+
+## 2026-07-31 / 夜间 / isolation-key-goes-in-the-identity-free-half
+
+扩隔离粒度时，复合 key 的各维度不等价——有的流进下游身份系统（token / 画像 / 权限查询），有的只参与本地路由与落盘；新粒度**默认**编进「不进下游身份系统」的那一半，否则每个下游身份消费点都成断点（例外反选：新粒度本身要成为身份边界时，判据整体反向）。
+判据程序：对每个候选维度 grep 它的全部消费面，选消费闭包最小的轴。
+硬币翻面：闭包最小 = 对只按另一半键的消费面不可见——「零断点」≠「被身份侧覆盖」，需要身份侧参与的隔离（记忆箱 / 画像）在此轴上无事可做，须单独结算。
+（`network-cannot-cut-what-shares-tuple`(05-19) 内部精化——那滴管刀在哪层，本滴管墙已定后钉元组哪根轴；「消费闭包」量具是 `sensor-exemption-is-a-tag-not-a-lifecycle-value`(07-21) 单-bit 闭包的第二个消费者。物理证据：cc-assistant 围炉 v2 裁决（reflections/2026-07-31）——token/画像只吃 userid、workspace/getResumable/resetUser 吃 (botId,userid)，per-room userid 断权限链 / per-room botId 零断点 / EverOS 箱按 userid 预取即翻面活体。fresh 验证关 2026-07-31 PASSED-WITH-EDITS，最强反驳：核心句原以「必须」级全称写入依赖「新粒度⊥身份」这个未落纸前提的判据，同源档 F3 亲证最小闭包轴对身份侧消费者不可见——三改（补前提 / 补翻面 / 必须→默认）已落。诚实层：单系统 n=1 静态读证，运行时仓本机不可达、行号未独立复核。）
