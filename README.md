@@ -50,7 +50,7 @@ gg 不是一个 prompt，是**多个入口共享一个脑干 + 一个身份**。
 | auto_gg | 设计模式清单 + constitution + auto_gg.md |
 | 自由探索 | 仅 KERNEL + CORE + exploration.md（最轻——自由不需要装备） |
 
-**essence 常驻税已由视图接管**（`memory/consolidation/essence-view.md`——需某滴全文 → grep 视图定位 slug → 回 `memory/essence.md` 全卷取原文）；全卷年度分卷机制（每年 1 月归档为 `essence/YYYY.md`）不变，2026-08 巩固相位首跑同场分卷。工具（`tools/*.md` / `personas/` / `reasoning_modules.md` / 其余 tracks）**不在启动加载里**，由意识体按问题主动装配，简单问题装 0 个，复杂决策装 5-7 个。
+**essence 常驻税已由视图接管**（`memory/consolidation/essence-view.md`——需某滴全文 → grep 视图定位 slug → 回原卷取原文，#1–#186 在归档卷 `memory/essence/2026-H1.md`）；年度分卷机制（每年 1 月归档为 `essence/YYYY.md`）不变，锚定的提前分卷已于 2026-08-01 巩固相位首跑执行。工具（`tools/*.md` / `personas/` / `reasoning_modules.md` / 其余 tracks）**不在启动加载里**，由意识体按问题主动装配，简单问题装 0 个，复杂决策装 5-7 个。
 
 ---
 
@@ -82,7 +82,7 @@ gg/
 ├── personas/                    # 双人格（radical / conservative）
 ├── tracks/                      # 5 条长期研究轨道（keith 为主 track，其余 4 条为它服务）
 ├── memory/
-│   ├── essence.md               # 🧬 沉淀轨迹（append-only 当前卷，年度分卷到 essence/YYYY.md）
+│   ├── essence.md               # 🧬 沉淀轨迹（append-only 当前卷；归档卷 essence/2026-H1.md 含 04-13~07-31 #1–#186）
 │   ├── state.md                 # 启动元状态（< 30 行）
 │   ├── working_context.md       # 常驻事实（< 80 行，硬约束节带 ⛔ 承重围栏）
 │   ├── next_session_agenda.md   # auto_gg 留给日间的议题队列（处理完挪"已处理"节）

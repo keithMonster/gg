@@ -61,6 +61,12 @@ def run():
                     if (monster_root / target).exists():
                         cross_project_refs += 1
                         continue
+                    # essence 归档卷第四解析基：分卷是纯改名不改内容（append-only），卷内相对路径
+                    # 按原居所 memory/ 解析——真验证非豁免，目标真丢照样报（2026-08-01 分卷随动，
+                    # 同 2026-07-03 monster 第三解析基判例）
+                    if rel.startswith("memory/essence/") and (ROOT / "memory" / target).exists():
+                        noise_refs += 1
+                        continue
                     if "/" not in target and target in all_basenames:
                         noise_refs += 1
                         continue

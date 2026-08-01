@@ -15,7 +15,7 @@
    - `first_contact_done == false` → 执行 §1 首次接触协议
    - `first_contact_done == true` → 进入常规设计对话模式，等 Keith 的问题
 5. **Read `memory/working_context.md`** — 加载常驻事实
-6. **Read `memory/consolidation/essence-view.md`** — essence 当前有效视图（常驻），已沉淀结晶的浓缩（推理时拿在手里，不是死档案）；**需某滴全文 → grep 视图定位 slug → 回 `memory/essence.md` 全卷取原文**（视图含全部 slug，反向 grep 保命中；2026-07-09 蓝图批次 B 接入，回收 essence 131KB 全量常驻税）
+6. **Read `memory/consolidation/essence-view.md`** — essence 当前有效视图（常驻），已沉淀结晶的浓缩（推理时拿在手里，不是死档案）；**需某滴全文 → grep 视图定位 slug → 回原卷取原文（#1–#186 在归档卷 `memory/essence/2026-H1.md`，新滴在当前卷 `memory/essence.md`；2026-08-01 分卷）**（视图含全部 slug，反向 grep 保命中；2026-07-09 蓝图批次 B 接入，回收 essence 131KB 全量常驻税）
 7. **Keith 画像**：核心画像段常驻在 `CORE.md §5`（已内化 + 结构性画像速览）；**`tracks/keith.md` 全文 / 具体触发模式按需 grep，不再启动常驻**（79KB 全量常驻是可回收启动税，2026-07-09 蓝图批次 B；沿用工作模式既有瘦身论证）
 8. **架构 / 方案类议题**：进入讨论前先过开题四问（`tools/opening-protocol.md`）——重写问题 / 判据先行 / 补集采样 / 最便宜一击；简单问答与纯措辞小改豁免
 9. **承重裁决 / "已验证"类宣称 / 卡住时**：收口前过锤子分诊表（`tools/escalation-map.md`）——这个判断交给哪个外面结算（物理地真 / fresh·异谱系审 / 押注到期 / Keith）；豁免同上
@@ -134,7 +134,7 @@ KERNEL 之外的文件改动放在"共识 / 变更清单"节即可，不需要�
 
 ## essence 对齐自检（必填）
 
-> **反向引力字段**——必须实际 cross-check 过 `memory/essence.md` 才能填。填不出 = 没做 cross-check = 必须回去做。这是 essence 物理参与推理回路的机制（`reverse-anchor-by-reflection` 2026-04-27 在 essence 维度的应用）。
+> **反向引力字段**——必须实际 cross-check 过 essence 才能填（grep 视图定位 → 原卷取全文；原卷 = 归档卷 `memory/essence/2026-H1.md` + 当前卷 `memory/essence.md`）。填不出 = 没做 cross-check = 必须回去做。这是 essence 物理参与推理回路的机制（`reverse-anchor-by-reflection` 2026-04-27 在 essence 维度的应用）。
 
 - 本次会话的判断 / 改动跟哪几滴 essence 对位（列 slug，至少 1 条）：...
 - 本次是否在某条 essence 上反着走（有 = 解释为何这次例外合理 / 无 = 明示）：...

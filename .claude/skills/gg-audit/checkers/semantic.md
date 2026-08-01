@@ -232,7 +232,7 @@ reflection 模板 §A 的 "essence 对齐自检（必填）" 字段是 gg 自评
 3. 计算三个指标：
    - **反走缺失率** = (反走字段为"无明显反着走" / "无" / 空 的篇数) / 总篇数
    - **命中同质化率** = (在 > 60% 篇中重复出现的 top essence 数量) / 该窗口内总命中 essence 种类数
-   - **关键词伪填率** = (cross-check 关键词字段里出现 essence.md 实际不存在的 slug 的篇数) / 总篇数
+   - **关键词伪填率** = (cross-check 关键词字段里出现 essence 原卷（essence.md + essence/*.md）实际不存在的 slug 的篇数) / 总篇数
 
 ### 报告规则
 
@@ -277,7 +277,7 @@ Semantic checker 按顺序跑四个子检查：
 1. **A. Semantic Drift** — 先跑，因为成本低（just Read + 比对）
 2. **B. Principle Reach** — 再跑，需要 grep 多个文件
 3. **C. Northstar Rate** — 然后跑，因为依赖 archival/reflections 的累积
-4. **D. Essence Self-Check Quality** — 最后跑，因为依赖 reflections 最近 N 篇的解析 + essence.md 物理 grep
+4. **D. Essence Self-Check Quality** — 最后跑，因为依赖 reflections 最近 N 篇的解析 + essence 原卷（essence.md + essence/*.md）物理 grep
 
 ---
 

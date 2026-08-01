@@ -19,7 +19,7 @@
 | `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
 | `tools/archive-format.md` | **已退役（2026-07-16）**——归档流被 reflection 范式 A 吸收；仅读 `memory/archival/` 旧档时作格式参考 | 不再装配 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
-| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图 `memory/consolidation/essence-view.md` 定位，需全文回 `memory/essence.md` 取原文）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
+| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图 `memory/consolidation/essence-view.md` 定位，需全文回原卷取原文：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
 
 ---
 

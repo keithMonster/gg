@@ -40,6 +40,19 @@ def first_entry_line_at(rev: str) -> int | None:
 
 
 def entry_deletions_in_commit(commit_hash: str) -> int:
+    # 分卷豁免：当前卷 100% 纯改名归档进 memory/essence/（KERNEL §3"重命名不违背
+    # append-only"）不计条目删除；内容有任何改动（非 R100）不豁免（2026-08-01 分卷随动）
+    ns = git("diff", "--name-status", "-M100%", f"{commit_hash}^", commit_hash, check=False).stdout
+    for line in ns.splitlines():
+        parts = line.split("\t")
+        if (
+            parts[0] == "R100"
+            and len(parts) >= 3
+            and parts[1] == ESSENCE_PATH
+            and parts[2].startswith("memory/essence/")
+        ):
+            return 0
+
     first_entry = first_entry_line_at(f"{commit_hash}^")
     if first_entry is None:
         return 0

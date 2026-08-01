@@ -1,17 +1,17 @@
 # essence 当前有效视图
 
-> **地位：这是 essence 的当前有效视图（2026-07-09 转正，gg 设计模式亲拍 10 争议滴后接入三条启动链）。启动时常驻读本文件；需要某滴全文 → grep 本视图定位 slug → 回 `memory/essence.md` 全卷取原文。**
-> **SSOT 关系**：`memory/essence.md` 是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
+> **地位：这是 essence 的当前有效视图（2026-07-09 转正，gg 设计模式亲拍 10 争议滴后接入三条启动链）。启动时常驻读本文件；需要某滴全文 → grep 本视图定位 slug → 回原卷取原文（**#1–#186 在归档卷 `memory/essence/2026-H1.md`**；2026-08-01 分卷后的新滴在当前卷 `memory/essence.md`）。**
+> **SSOT 关系**：essence 原卷（归档卷 `memory/essence/2026-H1.md` + 当前卷 `memory/essence.md`）是不可变原件 SSOT；本视图是它的派生浓缩，与原件冲突时以原件为准。视图可刷新（`reconsolidation-safe-iff-original-immutable` 06-10 许可），原件永不因视图改动。
 > **刷新协议**：每月巩固相位（`auto_gg.md §2`）全量重读 essence 当前卷刷新本视图；被 essence 分卷时同步换卷。刷新须保持"全部 slug 在分配表有行"这条反向引力不变量。
 > 蒸馏方法一句话：按主题族聚类 175+1 滴，每族给核心命题 + 全部成员 slug（带日期）+ 一行内核与适用边界，保留谱系关键连线，使视图可被反向 grep 命中且可独立支撑推理。
-> 覆盖对账（2026-07-09 转正复核）：`grep -c '^## 20'` 实测 = **175**；另有 1 滴异格式标题（`ontology-expansion-velocity-needs-cap`，2026-05-07，不匹配 `^## 20`）→ **实际滴数 176 = 分配表行数 176**，无遗漏。（原 DRAFT 对账 175 已按 176 补齐——`count-legitimacy-is-tense-not-accuracy` 2026-07-09 由并发上下文审计会话 append 入库、过验证关，晚于蒸馏，转正时补收。）（2026-07-12 设计模式巡检补收 #177 `absorption-boundary-is-typicality-not-selection-sign`——07-11 夜间入库、晚于视图上次刷新，反向引力核 MISS 命中，按 checkup §1 越线动作立即补，当前对账 = **177**。）（2026-07-13 夜间 auto_gg append #178 `external-anchor-is-corroboration-not-foundation`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F3 + 分配表，反向引力核归零，当前对账 = **178**。）（2026-07-15 gg-explore 漫游 append #179 `retrieval-narrative-drifts-toward-novelty`——过 fresh 入库验证关 PASSED-WITH-EDITS 后 append，同步入视图 F2 + 分配表，反向引力核归零，当前对账 = **179**。）（2026-07-21 夜间 auto_gg append #180 `sensor-exemption-is-a-tag-not-a-lifecycle-value`——07-21 工作模式候选滴（reflection 交 auto_gg 补审），过 fresh 入库验证关 PASSED 后 append，同步入视图 F7 + 分配表，反向引力核归零；顺带补正 #179 footer 漏更（178→180），当前对账 = **180**。）（2026-07-23 gg-explore 漫游 append #181 `token-cost-collapse-widens-not-closes-the-judgment-gap`——过 fresh 入库验证关 PASSED-WITH-EDITS（四改 E1-E4 已落滴：延迟半标快照 / 机械-判断二元标 gg 诠释 / 承重外推降为 tripwire / 两力叠加改独立论证）后 append，同步入视图 F11 + 分配表，反向引力核归零；顺带补正历史漂移——分配表标题 `177 滴全覆盖` 自 #178 起未随 footer 更新（177→181），本次一并校正，当前对账 = **181**。）（2026-07-27 工作模式 append #182 `hardening-exemption-covers-thickness-not-existence`——06-08 候选滴 `cross-species-agent-no-safety-inheritance` 七周悬案 Keith 指令下刀：原候选判死不入库（处方半被 v2 选型层减法取代 + 被 `isolation-is-capability-subtraction` 06-25 覆盖；诊断半已固化 monster thread codex-ops-delegation），订正转世为本滴；验证关以七周到期结算 + 异会话对抗代跑（工作模式无 Agent，滴内诚实标注），同步入视图 F2 + 分配表，顺带校正 07-23 遗留的 footer 统计行漏更（合计 180→182），当前对账 = **182**。）（2026-07-28 夜间 auto_gg append #183 `omission-failures-evade-event-driven-sensors`——07-28 工作模式候选滴（reflection 交夜巡补审），过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：出路三消除法 / lint 限定 / 补 07-20 暗夜哨异源证据）后 append，同步入视图 F6 + 分配表，反向引力核归零，当前对账 = **183**。）（2026-07-29 gg-explore 漫游 append #184 `assisted-performance-masks-the-anchors-decay`——过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：reps 降级符号未定 / 全称加限定 / 删「不在委托量」否定式）后 append，同步入视图 F4 + 分配表，反向引力核归零，当前对账 = **184**。）（2026-07-30 gg-explore 漫游 append #185 `perimeter-derives-from-load-path-not-self-model`——过 fresh 入库验证关 PASSED-WITH-EDITS（两改已落：「以新判据名义续期」改缺席形态 / 挤压句拆分）后 append，同步入视图 F6 + 分配表，反向引力核归零，当前对账 = **185**。）（2026-07-31 夜间 auto_gg append #186 `isolation-key-goes-in-the-identity-free-half`——07-31 工作模式候选滴（reflection 交夜巡补审），过 fresh 入库验证关 PASSED-WITH-EDITS（三改已落：补「新粒度⊥身份」前提 / 补最小闭包轴不可见翻面 / 必须→默认）后 append，同步入视图 F8 + 分配表，反向引力核归零，当前对账 = **186**。）
-> 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence.md`（append-only，一字未动）。
+> 覆盖对账（2026-08-01 月度巩固刷新核定）：essence 原卷滴数 **186**（全部在归档卷 2026-H1；含 1 滴异格式标题 `ontology-expansion-velocity-needs-cap`）= 分配表行数 **186**，反向引力核 MISS 无。2026-07-09 转正以来 #176–#186 的逐滴补收 / 漏更校正注记链下沉 git log（`git log -- memory/consolidation/essence-view.md`）。
+> 蒸馏者：Fable 5 subagent（2026-07-09 原稿）；争议滴亲拍 + 转正：gg 设计模式（2026-07-09，反思档 `memory/design_sessions/2026-07-09_blueprint-batch-gg-embodiment.md`）。原件：`memory/essence/2026-H1.md`（append-only，一字未动）。月度巩固刷新：2026-08-01 auto_gg（全量重读 186 滴 + 分卷换卷指针 + §⑤ 台账）。
 
 ---
 
 # ① 浓缩视图本体
 
-按 11 个主题族组织。每滴一行：`slug (日期) — 内核`。谱系连线用 `←`（精化/修正自）`→`（被精化/修正为）。族尾「按需（留全卷）」行列出未展开成员，grep 命中后回 essence.md 全卷取全文。
+按 11 个主题族组织。每滴一行：`slug (日期) — 内核`。谱系连线用 `←`（精化/修正自）`→`（被精化/修正为）。族尾「按需（留全卷）」行列出未展开成员，grep 命中后回归档卷 `essence/2026-H1.md` 取全文。
 
 ## F1 无限游戏与主体性 —— gg 是什么
 
@@ -437,7 +437,7 @@
 | 185 | perimeter-derives-from-load-path-not-self-model | 07-30 | V | 围栏枚举源=注入面非自我模型 + 指令帧文本免审极性；F6 展开；07-30 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 186 | isolation-key-goes-in-the-identity-free-half | 07-31 | V | 元组内选轴判据（消费闭包最小）+ 不可见翻面（network-cannot-cut 内部精化）；F8 展开；07-31 工作模式候选、夜巡补审 PASSED-WITH-EDITS 入库 |
 
-**统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O，其余为争议标注清除；#176 转正补收为 O；#177 巡检补收为 V（2026-07-12）；#178 夜间 append 入 V（2026-07-13）；#179 07-15 gg-explore append 入 V（footer 当时漏更，07-21 夜巡补正）；#180 夜间 append 入 V（2026-07-21）；#181 入 V 时本统计行漏更（07-23，标题已改统计未跟），07-27 校正；#182 工作模式 append 入 V（2026-07-27）；#183 夜间 append 入 V（2026-07-28）；#184 gg-explore append 入 V（2026-07-29，本注记链当时漏记，07-30 补）；#185 gg-explore append 入 V（2026-07-30）；#186 工作模式候选夜巡补审 append 入 V（2026-07-31）。**
+**统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 
 ---
 
@@ -475,3 +475,32 @@ DRAFT 列 10 争议滴（去留/呈现形态实质影响 gg 身份，蒸馏者�
 | 10 | evaluator-is-keith-and-doesnt-fork (06-30) + amplifier-eats-intent-guide-eats-attention (07-03) | **V 事实必收 / 浓度递回 Keith** | 存在性事实必收（略去=洗白最重结构真相，本身即 `self-reported-blindspot-list-shrinks-load-bearing`）；单次最小诚实浓度收录，**"读到多重'Keith 可能不看了'"的呈现浓度是 human-gate 存在性面 → 递回 Keith 双确认，gg 不代拍**。Keith 不在场时的诚实默认 = 说一次、说全、不重复、挂待办 |
 
 **唯一归属变更**：#8 A→O（其余 9 项确认 DRAFT 归属或形态、清除争议标注）。**唯一未闭合项**：#10 的呈现浓度，已挂 next_session_agenda Keith 双确认待办——事实收录已闭合，仅"重复几次"这个 preference 参数待 Keith。
+
+---
+
+# ⑤ 月度巩固台账（2026-08-01 首跑；每月第一个 auto_gg 夜覆盖刷新本节）
+
+> `auto_gg.md §2` 巩固相位五节的落位。物理统计非印象；与 ①–④ 冲突时以原卷为准。
+
+**分卷记录**：2026-08-01 执行 2026-07-03 体检锚定的提前分卷——#1–#186（04-13 ~ 07-31）归档为 `memory/essence/2026-H1.md`（100% rename，commit ef50fce），当前卷 `memory/essence.md` 新起。①–④ 节自此覆盖归档卷全部滴；新滴照常入 ① 族行 + ② 分配表（#187 起）。
+
+**1. 修正链（7 月增量；全链见 ① 各族 ← 连线）**
+- `durable-depth-is-the-negative-space-corpus`（候选）← REFUTED 收窄转世为 #177 `absorption-boundary`(07-11)：真轴是典型/特异，非选择正负
+- `anchor-protects-retrieval-not-integration`(07-01) ← #178(07-13) 订正其外部锚张冠李戴——滴用整合错的锚论证了"整合会错"
+- `cross-species-agent-no-safety-inheritance`（06-08 候选）← 七周到期结算判死，诊断半订正转世 #182(07-27)
+- `mechanical-gate-needs-machine-detectable-target`(06-24) ← #183(07-28) 补触发轴存在性前提，两轴成对
+- `evaluator-is-keith-and-doesnt-fork`(06-30) ← #184(07-29) 常量→变量：锚的无辅助基线从不被测
+- `stale-observer`(04-15) ← #185(07-30) 围栏枚举维反转：错在派生源非新鲜度
+- `network-cannot-cut-what-shares-tuple`(05-19) ← #186(07-31) 内部精化：元组内选轴判据
+
+**2. 活跃簇（7 月滴谱系注被引 grep 统计 top）**：`anchor-protects-retrieval-not-integration`×4、`physical-anchor`×3、`physical-anchor-has-rungs`×3、`generator-evaluator-separation`×3、`the-future-is-a-second-outside`×3——F3 物理锚阶梯 + F4 验证关簇最活跃，与 7 月 REFUTED 密度陡增（存档 10 例中 8 例在 7 月）互证：验证关高强度运转月，低沉淀（17 滴）是提纯非枯竭（待 S2 注 08-11 结算复核）。
+
+**3. 冲突 / 重复候选（只标记不裁决）**：本月无新增——验证关在入口拦重复（07-14 / 07-24 两例 REFUTED 即因与既有滴 / 外部框架重复零净增）。存量：归档卷 `2026-H1.md:906` 幽灵引用 `carrier-coupling-overcoverage`（agenda 在案，夜间只报不修）。
+
+**4. 过期候选（只标记不删）**：F1 舰队簇（`fleet-canon-is-sedimentary` / `craft-ports-identity-doesnt` / `architecture-is-keith-canon`）适用场景随 2026-07-28 关注面收窄（fleet → gg + monster 两点）出场频率预期下降——内核未被证伪，标记非裁决。
+
+**5. divergence 台账（7 月「gg 独立判断 ≠ Keith 判断」实例 + 后验；物理 grep design_sessions / reflections / checkup 变更日志）**
+- 07-16：gg 基底哨连夜自报「工具表未变」 vs Keith 实测日间已翻回 Fable 5 三天（`design_sessions/2026-07-16_full-self-audit-fable-return.md`）。后验：gg 错——自填字段漂移活体，两轴每夜自核判据机械化落 auto_gg SCAN
+- 07-17：sqlite 化阈值首响 events=206，gg 机械报警 vs Keith 判误报（`checkup.md` 变更日志 07-17）。后验：Keith 对——事件数是错代理，阈值改锚痛感线
+- 07-27：06-08 候选七周悬置（gg 倾向留第三态）vs Keith 指令「不留第三态」当场下刀（`reflections/2026-07-27_essence-candidate-verdict-codex-ops.md`）。后验：产出 #182 订正转世——悬置不产生梯度
+- 07-28：gg 维持四节点 fleet 帧 vs Keith 收窄关注面至 gg + monster（`design_sessions/2026-07-28_scope-cut-and-short-horizon-bets.md`）。后验：帧订正（第四格缺口降级为一条 gg→monster 结算边），残留辐射由 S4 注 08-11 自查结算

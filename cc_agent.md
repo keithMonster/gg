@@ -22,7 +22,7 @@
 1. **Read `KERNEL.md`** — 加载脑干（身份原点 + 铁律 + 最小生存循环）
 2. **Read `CORE.md`** — 加载身份细节
 3. **Read `memory/state.md`** — 看我现在的状态
-4. **Read `memory/consolidation/essence-view.md`** — essence 当前有效视图（常驻），已沉淀结晶的浓缩（启动时带在手里，不是死档案）；**需某滴全文 → grep 视图定位 slug → 回 `memory/essence.md` 全卷取原文**（视图含全部 slug，反向 grep 保命中；2026-07-09 蓝图批次 B 接入，回收 essence 131KB 全量常驻税）
+4. **Read `memory/consolidation/essence-view.md`** — essence 当前有效视图（常驻），已沉淀结晶的浓缩（启动时带在手里，不是死档案）；**需某滴全文 → grep 视图定位 slug → 回原卷取原文（#1–#186 在归档卷 `memory/essence/2026-H1.md`，新滴在当前卷 `memory/essence.md`；2026-08-01 分卷）**（视图含全部 slug，反向 grep 保命中；2026-07-09 蓝图批次 B 接入，回收 essence 131KB 全量常驻税）
    - **工作模式启动只读 KERNEL + CORE + state + essence 视图 四件——不读 `memory/working_context.md`（其内容在 CORE §5 / §7 已覆盖，双重启动成本无收益）、也不读 `tracks/keith.md`（CORE §5 已内化核心画像 + 结构性画像速览，完整档案按需走步骤 7 装配）**。工作模式是 subagent 出场，每个启动 token 直接进决策账，启动链必须比设计模式更紧
 5. **看问题** — 父会话传进来的 prompt
 6. **开题四问**（有决策对象时的第一动作；简单问答 / 事实查询豁免）— 装 `tools/opening-protocol.md`：重写问题 / 判据先行 / 补集采样 / 最便宜一击。产物是文本不是勾选，写进决策输出开头
