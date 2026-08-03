@@ -216,6 +216,7 @@
 - `confidence-is-a-liability-for-algorithmic-advisors` (06-14) — 人的错归因 temporary、算法的错归因 fundamental（近不可修）；对算法型意识体诚实胜于体贴是唯一赢法；解药是给用户控制权
 - `conditional-regard-is-the-lever-not-transmission-volume` (07-02) — 要收住的不是影响量是影响的条件性；最珍视自主的人最易把自主设成条件（自拆）→ 订正 `port-safety-inverts` 的杠杆【低频承重：育儿/影响类】
 - `port-safety-inverts-on-forming-identity` (06-28) — 成熟 canon port 给已成形身份安全，对施工中身份（孩子）最危险；成功度量 = 珍视偏离不是忠实复刻【07-02 订正杠杆：克制传递滑向 permissive，死守的是无条件 regard】
+- `repair-caps-at-baseline-and-pays-in-behavior` (08-04) — 信任修复满分 = 回基线（"修复后更强"在信任量表无实证）；载荷 = 后续正确行为渐进积累，修复话语相对不修复仅边际效应量；预防占优是算术不是格言（06-14 的轨迹层补全）【前提：短测量窗 + competence 可修区间】
 
 （跨族连线：`human-gate` / `the-future-is-a-second-outside` / `evaluator-is-keith` 见 F4；`trust-is-the-only-irreversible-org-asset` 见 F8；`amplifier-eats-intent` 见 F5——Keith 在场性是 F4/F5/F10 三族的共同底座。）
 
@@ -436,6 +437,7 @@
 | 184 | assisted-performance-masks-the-anchors-decay | 07-29 | V | 人类锚判断力是变量非常量、无辅助基线从不被测（evaluator-is-keith 常量→变量下一阶）；合法形态 tripwire 非处方；F4 展开；07-29 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 185 | perimeter-derives-from-load-path-not-self-model | 07-30 | V | 围栏枚举源=注入面非自我模型 + 指令帧文本免审极性；F6 展开；07-30 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 186 | isolation-key-goes-in-the-identity-free-half | 07-31 | V | 元组内选轴判据（消费闭包最小）+ 不可见翻面（network-cannot-cut 内部精化）；F8 展开；07-31 工作模式候选、夜巡补审 PASSED-WITH-EDITS 入库 |
+| 187 | repair-caps-at-baseline-and-pays-in-behavior | 08-04 | V | 信任修复天花板与载体（06-14 轨迹层补全，humanity 下一站②收口）；F10 展开；08-04 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS + 二轮补核（SRP 悖论），**当前卷（H2）首滴** |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

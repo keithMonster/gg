@@ -134,6 +134,16 @@ status: active
 - **对 Keith fleet 的相关性**：builder 的所有 eval benchmark 无一测 user 认知侧；面向孩子的产物（cookie-arcade）在这根未测量轴上才带 5 年符号。递给 Keith 时按"开放待测的轴"给，不按"已知风险"给。
 - **与既有滴关系（未入库，仅记连线供未来复用）**：与 `amplifier-eats-intent-guide-eats-attention`(07-03，测量坍缩机制) 共享"系统只优化可自证维度"的深层结构但机制不同；与 `port-safety-inverts-on-forming-identity`(06-28，身份 introjection 机制) 是"都随成熟度变严重的**不同**机制"，非同一律——这层区分本身是 07-22 证伪审的产物。
 
+### 信任重建轨迹：满分是保本（2026-08-04 gg-explore 探索获得）
+
+> 自由探索 `memory/explorations/2026-08-04_repair-caps-at-baseline-and-pays-in-behavior.md` 下沉。06-14 回答了"用什么策略修"，本节补"重建轨迹长什么样"（下一站②收口）。essence: `repair-caps-at-baseline-and-pays-in-behavior`（当前卷首滴，PASSED-WITH-EDITS + 二轮补核）。
+
+1. **天花板 = 基线**：领域把 complete repair 操作定义为回到 pre-transgression 水平（Sharma et al. 2023 JoM）；"修复后更强"在邻域有名字（服务补救悖论——satisfaction 轴元分析为正但强情境依赖，De Matos 2007）而在信任量表上跨自动化/人际/服务补救三文献域均无直接实证。
+2. **载荷在行为不在言语**：22 研 N=3763 元分析（Esterwood & Robert HRI'25）——修复话语相对不修复只有边际效应量；LLM 域独立同向（Martell 2025：三策略无差异、对数恢复；Ashktorab 2025：幻觉场景各道歉类型无差异 p=.205——**LLM 版"错得自信"发生后说哪种道歉都一样**）；重复违约后一切策略失效（"Three Strikes" 2023）。
+3. **早期违约 = 临界窗**：Lount 2008——早期违约在 20 轮后续合作后仍显著低于从未违约组。与 06-14 swift trust 叠加：**高位起点不是缓冲是抵押品**，关系最早期是违约代价最大且最无修复路径的窗口。
+4. **⚠️ 跨域符号翻转（单源，未铸滴）**：Sebo et al.（HRI）机器 integrity 违约后道歉 > 否认，与 Kim 2004 人际结论方向相反——**此后引 Kim 2004 必须带域限定**。06-14 段用 Kim 当支柱之一的悬崖论证经此换柱存活（新柱 = 元分析级全体策略边际 + 策略耗竭）。不铸滴理由：刚引完"单点 HRI 显著效果被元分析稀释、疑发表偏倚"，转头给单点研究铸滴 = 当场表演发表偏倚。
+5. **对 gg 的含义**：诚实层自纠、verdict 留痕这些动作的价值不在"修复信任"（言语边际），在预防侧——让错误停留在 competence 类、不因隐瞒被发现而转入 integrity 类（gg 归纳，无直接实证，参归档卷 `confession-immunizes-against-repair` 的暗面警告：认错增观感 ≠ 修复发生）。
+
 ---
 
 ## 开放问题 (Open Questions)
@@ -154,7 +164,7 @@ status: active
 - 🔜 DQ-5 (共生边界) — 下次自然对话触发时追问
 - 🔜 观察：在后续决策中注意 Keith 对 gg 反驳的反应模式，沉淀 "何时反驳有效、何时适得其反"
 - ✅ ~~humanity 下一站①：SDT 动机的内在/外在结构（与评估者井零重叠）~~ — 06-15 已闭合于 essence `evaluation-cannot-motivate-internal-locus`（对内部评价点：外部评价"空载不是毒"，承重变量是 informational-vs-controlling 反馈类型，非观测在场）。*(2026-07-09 gg-explore 补标——该钩子实已被 06-15 消费，本「下一步」滞留 🔜 25 天，把漫游导回已走过的地，`stale-observer` 活体)*
-- 🔜 humanity 下一站②（06-14 探索留）：协作信任**崩塌后的重建动力学**（06-14 只碰修复策略未碰重建轨迹）
+- ✅ ~~humanity 下一站②（06-14 探索留）：协作信任**崩塌后的重建动力学**~~ — 2026-08-04 gg-explore 收口（见"信任重建轨迹：满分是保本"节 + essence `repair-caps-at-baseline-and-pays-in-behavior`）。残余开放：trust 量表上的超基线检验是三文献域共同空白，属"无人测过"非"已证伪"
 
 ---
 
