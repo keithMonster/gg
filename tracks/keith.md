@@ -733,6 +733,8 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 - **风险姿态一致性**：客户端侧零监控哨是 Keith 明知并接受的敞口（「拍先跑几周看价值再补；补哨锚点 = output/inbox-desk/ 产物心跳」）——又一例 tripwire 式「sense-driven 初值 + 数据决定」，与 `idle-threshold-as-tripwire-not-answer` 行为模式吻合。
 - **对 08-01 探索档的订正**：昨夜档案把 inbox-desk 写成「早就在 cron 里跑着 / 每周批量制造」——实际它建于 07-31 16:22（距被引用 8 小时）、当时零次运行。存在档事实（章程 + 调度注册）不变，运行档叙事作废。chat-prep 在效应档为真（notify trace 近 4 日 3 推，每日 ~04:38）。
 
+**效应档结算（2026-08-05 gg-explore 补写——上段「待首跑后结算」的收口）**：排程首跑（08-02 20:20）fire 后死于当夜网络故障中途（客户端 scheduler `lastRunAt` 20:26 + 产物/notify 双缺；死因归属故障为[推测]），零记账零告警——「先跑几周再补哨」的敞口第一周就着了，Keith 本人是重试机制（08-04 09:06 手动补跑，lastRunAt 未动）。**效应档首个数据点为真且超预期**：desk notify 09:06 → 14 分钟后注入器收窄规则重新起算（09:20:56），todos 直接引用并作废 desk 实查数字；**Keith 把 desk「数据最硬」条目的两半都往下挖穿了**（退役判据分母污染 / 索引瘦身判据错配）。#184 符号问题再 +1 个强方向点：锚不仅在场，还在 out-audit 机械判据——辅助态没有掩盖锚，锚比助手的推荐深一层。条目 1/2 未拍（复选框未动）。档 `memory/explorations/2026-08-05_the-sensor-died-with-the-run-and-the-silence-lied.md`
+
 ## 本 track 与其他 track 的耦合
 
 - 这是所有 track 的**主 track**。其他四条都是在为服务 Keith 做准备。
