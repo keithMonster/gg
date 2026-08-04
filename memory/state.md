@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-07-31 工作模式（围炉 v2 per-room 隔离裁决）：A(workspaceKey 穿线) vs B(per-room botId) 判 B——房间必须编码进不进下游身份系统的那半维度（C 案反证），另挖出 getResumable 串会话 / resetUser 全灭 / EverOS 跨群箱三条方案外物理事实。候选滴当夜过验证关入库 #186。详见 reflections/2026-07-31_weilu-v2-per-room-isolation.md]"
+last_summoned_at: "[2026-08-04 工作模式（cg-platform 契约分层四问 + 契约 9 ratify）：shape 两态 bit + 声明须配反向对账传感器 / Q3 帧重立『闸门等的裁决者就是我』直接 ratify 带事实 C 修正 / Q4 首选向 Keith 申请 cgx 定向豁免。候选滴当夜由 auto_gg 补审入库 #188。详见 reflections/2026-08-04_cgplatform-contract-layering-and-ratify9.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-07-28_monster-threads-memory-audit"
+last_reflection_slug: "2026-08-04_cgplatform-contract-layering-and-ratify9"
 last_design_session_slug: "2026-07-28_scope-cut-and-short-horizon-bets"
 ```
 

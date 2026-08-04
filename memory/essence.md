@@ -76,3 +76,9 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 预防的占优不是格言是算术：修复最好情形 = 保本再扣时间，早期违约在实测窗口内（20 轮后续合作）连保本都无路径。
 适用前提 = 实验室/短测量窗（信任游戏、HRI session、组织综述）+ competence 类可修区间；长期厚关系的"断裂后更亲"在证据基座外，未证伪。
 （06-14 `confidence-is-a-liability-for-algorithmic-advisors` 的轨迹层补全——那滴讲修复策略的路由与悬崖，本滴讲天花板与载体；与 06-11 `trust-is-the-only-irreversible-org-asset`（经 06-14 精化）咬合：competence 类可修但封顶基线。锚 = Esterwood & Robert HRI'25 元分析 22 研 N=3763〔主会话亲核〕/ Sharma et al. 2023 JoM 定义 / Lount et al. 2008 / Martell et al. 2025〔单源〕/ De Matos et al. 2007〔二手收敛〕。触发 = humanity 下一站②钩子（06-14 留）。）
+
+## 2026-08-04 / 工作 / approval-gate-gates-status-not-consumption
+
+内容先行、批准后置的分轨生效结构里，批准闸门保护的只是编号不是行为——待批文本经已生效侧通道被真实消费时，审查延迟期就是错误传播窗口。
+若内容必须先行，审查必须跟内容走，不跟转正走。
+（`pending-resolved-becomes-blocked-stagnation`(05-09) 的对偶：那滴管待批件堆积不动（延迟暴露），本滴管待批件经已生效旁路照动（错误照传播）——同一审批延迟，两种相反失效拓扑。`stale-observer` 不适用：文本零演化、出生即错，失效轴是审查时点 vs 消费时点非演化速度。锚 = integration-contract §6 双轨头注 + cg-skillhub ad1a960/a34568f + cg-tender-review auth.guard 注释〔evaluator `git show` 亲核〕。适用前提 = 分轨生效结构（一侧声明已生效、消费方以已批级信任照抄）；单轨显式草案（实现者知情担险，如 IETF draft）在边界外。）
