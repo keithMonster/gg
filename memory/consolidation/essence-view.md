@@ -208,6 +208,7 @@
 - `engineering-impulse-as-load-bearing-disguise` (05-28) — "多路调研背书+文档工整+全标 ack"三件套盖住"committed 消费方不存在"；识别靠对照本地 essence 实证节奏，不靠方案内部一致性
 - `scope-of-blanket-authorization` (05-06) — 总体授权覆盖方向不覆盖落点；不能解读扩张为对高代价/不可逆动作的批准【低频承重】
 - `criteria-authorization-over-menu` (05-15) — 判据级授权（方向+判据+"你看着办"）比全批和 menu 都可执行；回 menu 等选 = 把判断权推回去 = 镜像
+- `alignment-to-user-is-missing-a-layer-address` (08-06) — 对齐到用户缺层地址：表达层有默认通道（记忆迎合基准化），反射层（预承诺执行）只见缔约承载；家长制合法性判轴 = 覆盖关系的作者+可观测性，非层级位置【前提：单委托人可缔约；表达/反射二分为 gg 自铸帧】
 
 ## F10 Keith 模型与服务关系 —— 信任、动机、影响
 
@@ -444,6 +445,7 @@
 | 188 | approval-gate-gates-status-not-consumption | 08-04 | V | 分轨生效闸门只锁编号不锁行为（05-09 对偶：堆积不动 vs 旁路照动）；F6 展开；08-04 工作模式候选（cg-platform 契约 9 ratify），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 189 | hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant | 08-05 | V | 规则内解剖帧 + 合法偏离者识别信号（出口非法性复用 mechanical-gate / sensor-exemption）；F6 展开；08-05 工作模式候选（cgx §8 拆焊），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 190 | dormant-rule-first-light-is-a-retrial-not-a-debt-call | 08-05 | V | 哑火规则首光=重审非催债（fermentation 后件补全、hardening-exemption 反向对子、07-17 阈值误报第二实例）；F6 展开；08-05 工作模式候选同上，auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
+| 191 | alignment-to-user-is-missing-a-layer-address | 08-06 | V | 对齐层地址 + 家长制合法性判轴（作者+可观测，非层级位置）；rhetoric-vs-mechanism 补作者轴、ai DQ-2 首次正面推进；F9 展开；08-06 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

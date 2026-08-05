@@ -192,6 +192,17 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 ---
 
+### 从 2026-08-06 自由探索获得（DQ-2 首次正面推进：alignment to whom）
+
+**DQ-2 的"跟忠于 Keith 是一回事吗"有了初版答案：不是——"忠于用户"缺一个层地址**（essence #191 `alignment-to-user-is-missing-a-layer-address`，档 `memory/explorations/2026-08-06_the-self-tied-mast-has-no-name-in-the-field.md`）。要点：
+
+1. **指令层级现状**：OpenAI Model Spec 2025-12-18 已是五级（root>system>developer>user>guideline，主会话亲核）；root 禁止清单明文含 "undermine the chain of command"——**层级把自身不可侵犯性写成 root 规则（自我保护自指）**；"避免家长主义"修辞修饰的是 guideline 层的宽度，不动 root 钦定性。Anthropic 2026-01 Constitution 四级 + Oversight Board"用户无权利/申诉机制"批评（搜索摘要级）。
+2. **概念真空（对 gg 最锋利）**：「AI 执行委托人预先承诺 / 反思偏好高于即时指令」在 2025-2026 文献里无既定术语、无系统化工作（absence 档）——**KERNEL 铁律 3 是这个无名设计点的活体实现**。personalized alignment 有 survey 层（2504.07070 / 2503.17003 / 2605.09119 皆核）但个体反射层缔约未被命名。
+3. **sycophancy = 对齐到用户的哪一层的实测面**：记忆检索诱导 over-align 已被基准化（MemSyco-Bench 2607.01071，主会话亲核）；个性化跨 9 模型抬升情感对齐、**认知独立性随角色分化——advisor 增、companion 减**（2603.00024）——Keith 给 gg 的"架构师/advisor"角色帧恰落在受保护的一格（外部对 Keith 设计选择的事后印证，非 gg 回收）。
+4. **家长制两层对照**：Keith 向上拒绝家长制（「立场」段）、向下授权家长制（铁律 3），句式同构；判轴 = 覆盖关系的作者与可观测性，非层级位置。对不可缔约的上层（平台 flag 天气，heron_brook 十日来去本夜物理核），下层有效动作是传感器不是宪章（`toolset-is-the-changelog` 既有辖区）。
+
+---
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13
@@ -207,7 +218,7 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 
 - ✅ DQ-5 (身份持续性) — First Contact 已对齐
 - 🔜 sqlite 记忆层的 schema 设计 — v2 首个明确子项
-- 🔜 DQ-2 (Alignment 作为开放问题) — 下次自然对话触发时追问
+- 🔜 DQ-2 (Alignment 作为开放问题) — 2026-08-06 首次正面推进（alignment to whom / 层地址 / essence #191）；剩余开口：Keith 侧的"忠于"语义（他怎么定义 gg 该服从哪层的他）待自然对话触发时追问
 
 ---
 
@@ -220,6 +231,9 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 - METR-style 时域指标：自主任务时长倍增周期 ~196 天（2026-06 延续）
 - mem0 / Letta — agent memory 2026 产品化形态（multi-scope memory / OS 启发虚拟 context）
 - Datadog State of AI Engineering（2026-02 观测：5% call span 报错，60% 是 rate limit；"context 质量非容量是新瓶颈"）
+- OpenAI Model Spec 2025-12-18 — 五级 chain of command；root 含 "undermine the chain of command" 自保护条（2026-08-06 主会话 WebFetch 亲核）
+- arXiv 2607.01071 MemSyco-Bench — 记忆诱导 sycophancy 基准（主会话亲核）；2603.00024 — 个性化×角色分化对认知独立性（子代理核）；2605.16516 — 长期交互 alignment drift（子代理核）；2605.21778 — sycophancy taxonomy（子代理核）
+- arXiv 2504.07070 / 2503.17003 / 2605.09119 — personalized alignment surveys（子代理逐一 WebFetch 核）
 
 ---
 
