@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-08-04 工作模式（cg-platform 契约分层四问 + 契约 9 ratify）：shape 两态 bit + 声明须配反向对账传感器 / Q3 帧重立『闸门等的裁决者就是我』直接 ratify 带事实 C 修正 / Q4 首选向 Keith 申请 cgx 定向豁免。候选滴当夜由 auto_gg 补审入库 #188。详见 reflections/2026-08-04_cgplatform-contract-layering-and-ratify9.md]"
+last_summoned_at: "[2026-08-05 工作模式（cgx token 规则冲突）：否掉父会话二选一（① 豁免开洞 / ② 登记造假均非法），裁拆焊 §8——意图留 [硬]、形态降 [范式]；第二轮间距半句被证伪后支点换链、[硬] 辖域收窄至颜色。两候选滴当夜由 auto_gg 补审。详见 reflections/2026-08-05_cgx-token-hard-rule-unweld.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-08-04_cgplatform-contract-layering-and-ratify9"
+last_reflection_slug: "2026-08-05_cgx-token-hard-rule-unweld"
 last_design_session_slug: "2026-07-28_scope-cut-and-short-horizon-bets"
 ```
 

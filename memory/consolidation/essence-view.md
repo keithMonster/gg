@@ -152,6 +152,8 @@
 - `omission-failures-evade-event-driven-sensors` (07-28) — 事件驱动治理对「该做没做」结构性失明（缺席不产生事件）；出路 = 代理事件 / 周期抽样 / 自动化消除缺席【触发轴存在性前提，与 `mechanical-gate` 判定轴成对；失明限零工件痕迹的动作缺席】
 - `perimeter-derives-from-load-path-not-self-model` (07-30) — 治理围栏枚举派生自基底注入的加载面，不派生自自我模型文件清单（判据再对，重新枚举照漏）；指令帧到达的文本被执行不被审视——帧才买审视，读的频率不买【`stale-observer` 派生源反转；`omission-failures` 注入面实例；触发 = harness 自动记忆通道 108 天围栏外】
 - `approval-gate-gates-status-not-consumption` (08-04) — 分轨生效结构里批准闸门只锁编号不锁行为：待批文本经已生效侧通道被消费时，审查延迟期即错误传播窗口；内容先行则审查跟内容走，不跟转正走【`pending-resolved-becomes-blocked-stagnation` 对偶：那滴管待批件堆积不动，本滴管待批件经旁路照动；前提 = 分轨生效，单轨显式草案在外】
+- `hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant` (08-05) — 意图与形态焊死在同一条最高强制级规则里，第一个合法偏离者（过意图、只违形态）只剩登记造假 / 豁免开洞两个非法出口；意图核实承重 → 拆焊（意图留硬、形态降默认），核不出 → 转重审【前提：拆焊后意图仍机械可检 + 偏离不可移动且合法性依据不可机械判；出口非法性结算复用 `mechanical-gate` + `sensor-exemption`】
+- `dormant-rule-first-light-is-a-retrial-not-a-debt-call` (08-05) — 哑火规则首接检验器涌出的海量阳性是重审时刻不是欠账单：违反×零事故长期并存首要假设是规则过宽 / 搭便车；先重估承重度再定还债策略，全量催债透支强制级信用【前提：危害连续可观测 + 事故通道物理通着，低频灾变型不适用；`hardening-exemption`(07-27) 的反向对子——那滴拆护墙修辞、本滴给拆墙判据】
 
 按需（留全卷）：`trigger-layer-not-declarative-emergent-axis` (05-31) 声明/涌现是伪轴、`message-as-event-not-pulse` (05-06) 通知留底可溯、`cadence-as-symptom` (05-06) 产出过密真因是缺状态记录器、`count-legitimacy-is-tense-not-accuracy` (07-09) 过期计数合法性由时态定不由准确性定——有日期锚=史（留），无锚且宣称现状=漂移债（修时只动无锚那处）；`stale-observer` 在计数审计场景的正交细化【前提：日期锚本身为真】。
 
@@ -440,6 +442,8 @@
 | 186 | isolation-key-goes-in-the-identity-free-half | 07-31 | V | 元组内选轴判据（消费闭包最小）+ 不可见翻面（network-cannot-cut 内部精化）；F8 展开；07-31 工作模式候选、夜巡补审 PASSED-WITH-EDITS 入库 |
 | 187 | repair-caps-at-baseline-and-pays-in-behavior | 08-04 | V | 信任修复天花板与载体（06-14 轨迹层补全，humanity 下一站②收口）；F10 展开；08-04 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS + 二轮补核（SRP 悖论），**当前卷（H2）首滴** |
 | 188 | approval-gate-gates-status-not-consumption | 08-04 | V | 分轨生效闸门只锁编号不锁行为（05-09 对偶：堆积不动 vs 旁路照动）；F6 展开；08-04 工作模式候选（cg-platform 契约 9 ratify），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
+| 189 | hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant | 08-05 | V | 规则内解剖帧 + 合法偏离者识别信号（出口非法性复用 mechanical-gate / sensor-exemption）；F6 展开；08-05 工作模式候选（cgx §8 拆焊），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
+| 190 | dormant-rule-first-light-is-a-retrial-not-a-debt-call | 08-05 | V | 哑火规则首光=重审非催债（fermentation 后件补全、hardening-exemption 反向对子、07-17 阈值误报第二实例）；F6 展开；08-05 工作模式候选同上，auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

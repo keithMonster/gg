@@ -82,3 +82,17 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 内容先行、批准后置的分轨生效结构里，批准闸门保护的只是编号不是行为——待批文本经已生效侧通道被真实消费时，审查延迟期就是错误传播窗口。
 若内容必须先行，审查必须跟内容走，不跟转正走。
 （`pending-resolved-becomes-blocked-stagnation`(05-09) 的对偶：那滴管待批件堆积不动（延迟暴露），本滴管待批件经已生效旁路照动（错误照传播）——同一审批延迟，两种相反失效拓扑。`stale-observer` 不适用：文本零演化、出生即错，失效轴是审查时点 vs 消费时点非演化速度。锚 = integration-contract §6 双轨头注 + cg-skillhub ad1a960/a34568f + cg-tender-review auth.guard 注释〔evaluator `git show` 亲核〕。适用前提 = 分轨生效结构（一侧声明已生效、消费方以已批级信任照抄）；单轨显式草案（实现者知情担险，如 IETF draft）在边界外。）
+
+## 2026-08-05 / 工作 / hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant
+
+把检验意图和实现形态焊死在同一条最高强制级规则里，第一个合法偏离者（满足意图、只违形态）面前只剩非法出口：登记造假（谎称规则不适用）或豁免开洞（语义洞不可机械判）。
+偏离者出现时先分轴核意图承重度：意图独立核实为硬级承重 → 拆焊，意图留硬、形态降默认；核不出承重 → 转规则重审（姊妹滴 `dormant-rule-first-light-is-a-retrial-not-a-debt-call`）。识别信号 = 偏离者通过检验意图、只挂在实现形态上——按约束逐轴判，不按应用整体贴标。
+适用前提 = 拆焊后意图仍机械可检 + 偏离不可移动且其合法性依据不可机械判（可机械判则走辖域收窄，无需拆焊）。
+（两个出口的非法性结算是既有滴复用——① `mechanical-gate-needs-machine-detectable-target`(06-24)、② `sensor-exemption-is-a-tag-not-a-lifecycle-value`(07-21)；净新增 = 规则内部解剖帧 + 偏离者识别信号。诚实注：源案 cgx 仅颜色轴构成合法偏离者，间距轴走了重审支。锚 = cgx engineeringStandard §8 拆焊裁决，档 reflections/2026-08-05_cgx-token-hard-rule-unweld.md。）
+
+## 2026-08-05 / 工作 / dormant-rule-first-light-is-a-retrial-not-a-debt-call
+
+给长期哑火的规则第一次接上检验器，涌出的海量阳性不是待还的债，是规则的重审时刻——大规模违反与零事故长期并存，首要假设是规则过宽（或搭了同条更强规则的便车）而非全员欠账；这是重审的入口，不是免检结论。
+动作序列 = 先按维度重估规则承重度，再对幸存约束定还债策略（存量豁免、增量收紧）；直接全量催债 = 向全员摊派不可执行的惩罚语义，透支整个强制级的信用。
+适用前提 = 危害是连续可观测型（每次违反即产生本会被看见的成本）且事故通道在窗口内物理通着；低频灾变型危害（暴露周期长于观察窗）不适用——「长期」以危害自然暴露周期计，不以日历计。
+（`fermentation-without-detector`(05-15) 在规则域的后件补全；`hardening-exemption-covers-thickness-not-existence`(07-27) 的反向对子——那滴拆护墙修辞、本滴给拆墙判据，前提条款是两滴相容铰链；「零事故」的证据资格系于 `signal-weak-vs-channel-dead-must-be-physically-disambiguated`(05-19)。第二实例 = 07-17 sqlite 阈值首响 206 判误报改锚（异域同构，解单源）。锚同姊妹滴。）
