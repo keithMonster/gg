@@ -469,6 +469,20 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### DQ-1 首次正面推进：生成成本塌缩把 DRY 降维成判断对判断的交易（2026-08-07 gg-explore 漫游 · GitClear/DORA 实测）
+
+**触发**：architecture 全窗最陈（07-23 后 14 晚未踏）+ DQ-1 从未带外部数据推过（06-22 fleet-canon 只裁了 gg 舰队单案）。
+
+**核心洞察**：DRY 权衡两侧账本各有一个写项（抽象的"写抽象+迁移" / 重复的"修复编辑"），生成成本塌缩把它们同时消掉——权衡降维为**设计判断 vs 发散检测**的纯判断交易，而判断恰是 #181 里唯一不降价的资源。**市场没换账本**：GitClear 2026（主会话亲核逐字；厂商单源，DORA/arXiv 佐证方向）重复块 40.3→73.0/M 行历史新高、moved code 21%→3.8% 自由落体、重复 vs 重构偏好 ~5x；DORA 2025 吞吐与不稳定性**同升**（amplifier 原句）；"AI 降低发散"全网未检得第三方实测。可见项塌缩后，幸存的不可见项不自动接管定价——变成免费买进的债。
+
+**DQ-1 三问的 2026 答案形态**：①"何时抽象" → 抽象值不值 = 它省下的未来判断 vs 它现在消耗的设计判断 + 耦合（写项两边约掉，用代码量/写工时算这笔账的直觉全部作废）；②"OCCAM vs DRY 冲突" → 第三条出路在两难外：**发散检测机械化**（hash/传感器把检测从判断账本挪到机器账本）——Keith 的 canon 传感器族 / #192 hash 缓存已经在建业界整体缺席的这层；③"过早抽象 vs 过早硬编码" → 在再生体制（SSOT 上移 spec 层、代码成构建产物）下整题失效——体制归属是先决问题，现行体制（长命维护物）仍是主流（DORA 不稳定性 + 债存活曲线在场）。
+
+**规则失效家族观察（不入滴）**：#189 合法偏离者拆焊 / #190 流改道绕过执行位 / 本次锚定成本塌缩——规则把意图焊在形态上的三种断裂模式。第二次场景再议是否值得成滴。
+
+**对应 essence**：`codegen-collapse-reduces-dry-to-judgment-vs-judgment`(08-07，#193，fresh 审 PASSED-WITH-EDITS 入库；最强反驳点 = GitClear 利益相关单源，已写进滴内)；详见 `memory/explorations/2026-08-07_the-write-column-cancelled-and-the-market-kept-reading-it.md`。
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐

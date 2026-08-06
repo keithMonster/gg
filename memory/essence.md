@@ -110,3 +110,11 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 静默/响亮的判据轴是失败信号时机：静默违约型（豁免/授权类为原型，忠实复制的错误规格同属）必须在场管理；响亮失败型只需指针。
 【前提：真源机读可达 + 注入面明确；startup 注入位的在场收益未独立实测（L3b 为 monster 长文位置实验外推）】
 （谱系注：`ssot-distillation-vs-buffering`(05-01) 单向禁令的正分支补全——给出缓存合法存在的充分条件；`anchor-value-in-activation-not-in-content`(06-01) 覆盖收益零半边原理；「同步链自指」为净新增概念。锚 = monster cg-platform 案：初版盘点 82 处手写副本（源档自认含系统性误判，修正后更低）、1 条已废止豁免句 + 2 条越权声明（文档忠实、违约在代码）每日 startup 注入；query-logs 注入块 21/23 同步、2 漏跑 hash 可检；同日 24 仓零收益侧副本指针化〔evaluator 亲核 governance 档 + canon〕。档 reflections/2026-08-06_agents-md-platform-facts-replica-verdict.md）
+
+## 2026-08-07 / 夜间 / codegen-collapse-reduces-dry-to-judgment-vs-judgment
+
+生成成本塌缩把 DRY 权衡两侧的写项同时消掉：抽象的代价缩到设计判断与耦合，重复的代价缩到发散检测——权衡降维为判断对判断的交易，写项在等式两边约掉。
+市场仍按写侧账本行动：重复冲历史新高、重构自由落体、反向电流未检得第三方实测——可见项塌缩后，幸存的不可见项不自动接管定价，只是变成免费买进的债。
+第三条出路在两难外（自家活体、业界缺席）：发散检测机械化（hash/传感器），把检测从判断账本挪到机器账本。
+【前提：代码是长命维护物（人仍读仍改）。若 SSOT 上移 spec 层、再生取代维护，重复降为构建产物级噪音，本滴失效。】
+（谱系注：`token-cost-collapse-widens-not-closes-the-judgment-gap`(07-23) 的 DRY 落点——那滴讲价格曲线分层，本滴讲权衡降维与市场错账；机械化出路活体 = `presence-benefit-splits-replica-verdict`(08-06) hash 缓存 + monster canon 传感器族。锚 = GitClear 2026〔主会话亲核逐字；系代码分析厂商、DRY 特异行为数据单源，方向由 DORA 2025〔亲核〕吞吐与不稳定性同升 + arXiv 2603.28592 债存活曲线独立佐证〕重复块 40.3→73.0/M 行、moved 21%→3.8%、"~5x greater likelihood"。档 explorations/2026-08-07。）
