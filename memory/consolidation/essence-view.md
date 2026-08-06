@@ -175,6 +175,7 @@
 - `wish-as-pain-laundering` (04-22) — 愿望列入痛点段是最隐蔽污染；"用户原始诉求是 X"出现在痛点段时 X 就是被洗白的愿望
 - `mixed-queue-funnels-all-to-scarcest-gate` (06-09) — 混装让所有产出挤最稀缺闸门；解在按"可逆性×是否需判断"物理拆队列 ← 根因层升级 `pending-resolved-becomes-blocked-stagnation`
 - `sensor-exemption-is-a-tag-not-a-lifecycle-value` (07-21) — 判 enum 值 vs 旁标 tag 的刀：沿单调生命周期移动→enum 值，修饰会增殖的传感器/校验集→tag；机器消费闭包只判一个 bit 时人类值 taxonomy 之争是文档问题非数据模型问题【净新增建模槽刀+单-bit 识别帧，`safe-default-by-whitelist-inversion` 只覆盖反枚举极性那半】
+- `presence-benefit-splits-replica-verdict` (08-06) — 分发副本裁决轴 = 注入面在场性收益，非同步可行性：收益零删副本（同步链皆自指开销），收益正降格机器缓存（单源盖写 + hash 失效检测——差由外部真源变更制造，不自指）；真源在别处的具体当前值不入缓存；静默/响亮判据轴 = 失败信号时机【前提：真源机读可达 + 注入面明确】← `ssot-distillation-vs-buffering` 正分支补全
 
 按需（留全卷）：`new-source-as-ontology-not-feature` (05-01)、`ssot-distillation-vs-buffering` (05-01)、`ssot-as-loadable-fragment` (05-08)、`runtime-state-vs-business-data-distinct-ssot-domains` (05-20)、`runtime-state-objects-need-ssot-governance` (06-05)、`owning-service-not-proxy-for-write` (06-10)、`baseline-version-ownership-is-the-bottleneck` (06-10)、`inherited-constraint-may-be-peripheral-not-core` (06-25)、`decommission-reveals-true-identity` (06-25)、`m2m-vs-h2m-coupling-illusion` (05-09)、`exit-promotes-protocol` (05-01)、`skill-as-references-not-skills` (05-01)、`cheap-layer-is-intentional-not-fallback` (05-17)、`default-bucket-as-deadlock` (05-06)、`bucket-time-asymmetry` (05-08)、`gate-as-physical-fuse-not-business-metric` (05-07)、`signal-without-judgment-needs-live-consumer` (06-09)、`snapshot-as-immutable-archive-not-single-file` (05-19)、`action-type-over-aggressiveness` (04-21)。
 
@@ -446,6 +447,7 @@
 | 189 | hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant | 08-05 | V | 规则内解剖帧 + 合法偏离者识别信号（出口非法性复用 mechanical-gate / sensor-exemption）；F6 展开；08-05 工作模式候选（cgx §8 拆焊），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 190 | dormant-rule-first-light-is-a-retrial-not-a-debt-call | 08-05 | V | 哑火规则首光=重审非催债（fermentation 后件补全、hardening-exemption 反向对子、07-17 阈值误报第二实例）；F6 展开；08-05 工作模式候选同上，auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 191 | alignment-to-user-is-missing-a-layer-address | 08-06 | V | 对齐层地址 + 家长制合法性判轴（作者+可观测，非层级位置）；rhetoric-vs-mechanism 补作者轴、ai DQ-2 首次正面推进；F9 展开；08-06 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
+| 192 | presence-benefit-splits-replica-verdict | 08-06 | V | 分发副本裁决轴置换（同步可行性→在场收益）+ 机器缓存合法形态充分条件（ssot-distillation 正分支）+「同步链自指」净新增概念；F7 展开；08-06 工作模式候选（cg-platform AGENTS.md 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 
