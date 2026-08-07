@@ -211,6 +211,7 @@
 - `scope-of-blanket-authorization` (05-06) — 总体授权覆盖方向不覆盖落点；不能解读扩张为对高代价/不可逆动作的批准【低频承重】
 - `criteria-authorization-over-menu` (05-15) — 判据级授权（方向+判据+"你看着办"）比全批和 menu 都可执行；回 menu 等选 = 把判断权推回去 = 镜像
 - `alignment-to-user-is-missing-a-layer-address` (08-06) — 对齐到用户缺层地址：表达层有默认通道（记忆迎合基准化），反射层（预承诺执行）只见缔约承载；家长制合法性判轴 = 覆盖关系的作者+可观测性，非层级位置【前提：单委托人可缔约；表达/反射二分为 gg 自铸帧】
+- `safeguards-detach-from-alignment-and-condition-on-counterparty` (08-08) — 护栏从对齐析出为可拆部署层，按领域×交易对手配置；判别比特不在内容里、在缔约对手身上（mechanical-gate 06-24 的第三出口：引入正交可验条件变量）；域触发降级把误伤压在本域合法专家；身份代理阶梯在场、爬升方向未定【前提：structured access 体制；误伤量级零实测；经济学词汇为 gg 借用帧；"同底模可拆"单源厂商自述】
 
 ## F10 Keith 模型与服务关系 —— 信任、动机、影响
 
@@ -450,6 +451,7 @@
 | 191 | alignment-to-user-is-missing-a-layer-address | 08-06 | V | 对齐层地址 + 家长制合法性判轴（作者+可观测，非层级位置）；rhetoric-vs-mechanism 补作者轴、ai DQ-2 首次正面推进；F9 展开；08-06 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 192 | presence-benefit-splits-replica-verdict | 08-06 | V | 分发副本裁决轴置换（同步可行性→在场收益）+ 机器缓存合法形态充分条件（ssot-distillation 正分支）+「同步链自指」净新增概念；F7 展开；08-06 工作模式候选（cg-platform AGENTS.md 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 193 | codegen-collapse-reduces-dry-to-judgment-vs-judgment | 08-07 | V | DRY 权衡降维（写项两边约掉）+ 市场错账实测（可见项塌缩后不可见项不接管定价）；#181 的 DRY 落点、architecture DQ-1 首次正面推进；F7 展开；08-07 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
+| 194 | safeguards-detach-from-alignment-and-condition-on-counterparty | 08-08 | V | 护栏析出可拆部署层（领域×交易对手配置）+ 判别比特在缔约对手不在内容（mechanical-gate 第三出口）+ 身份代理伪造成本阶梯（方向未定）；ai DQ-2 续推、#191 缔约轴劈开；F9 展开；08-08 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（三处修法+slug 改名 reprice→condition） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

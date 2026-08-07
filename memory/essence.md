@@ -118,3 +118,11 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 第三条出路在两难外（自家活体、业界缺席）：发散检测机械化（hash/传感器），把检测从判断账本挪到机器账本。
 【前提：代码是长命维护物（人仍读仍改）。若 SSOT 上移 spec 层、再生取代维护，重复降为构建产物级噪音，本滴失效。】
 （谱系注：`token-cost-collapse-widens-not-closes-the-judgment-gap`(07-23) 的 DRY 落点——那滴讲价格曲线分层，本滴讲权衡降维与市场错账；机械化出路活体 = `presence-benefit-splits-replica-verdict`(08-06) hash 缓存 + monster canon 传感器族。锚 = GitClear 2026〔主会话亲核逐字；系代码分析厂商、DRY 特异行为数据单源，方向由 DORA 2025〔亲核〕吞吐与不稳定性同升 + arXiv 2603.28592 债存活曲线独立佐证〕重复块 40.3→73.0/M 行、moved 21%→3.8%、"~5x greater likelihood"。档 explorations/2026-08-07。）
+
+## 2026-08-08 / 夜间 / safeguards-detach-from-alignment-and-condition-on-counterparty
+
+护栏正从对齐中析出为可拆的部署层：对齐随权重走（同底模跨层不重训，厂商措辞 "similar"），护栏按领域×交易对手配置——域触发的能力降级把误伤非均匀压在本域合法专家（dual-use 价值最高那群）身上，身份层是按域定向摘栏的通道。
+内容分类器与身份分层不冗余不矛盾：一个压误放、一个回购误拒——判别比特不在内容里（同一段请求由谁发出才决定它是不是误用），内容判定点单独选不出可用工作点，交易对手身份作为第二个条件变量进来、按域逐块解除。
+身份代理可沿伪造成本排序（邮箱表单→证件人脸→机构审查→国籍管制），低层已被击穿（账号黑市/批量假注册，二手多源）；最高一级由国家动用过一次即回撤——阶梯在场，爬升方向未定。
+【前提：权重不外流的 structured access 体制（权重开放无层可拆）；回落弱模型对本域专家实际损失零实测；计价/市场/承保为 gg 借用帧（无价格合同文本）；"同底模护栏可拆"单源自厂商（gg 基底方）自述，行业面独立证据只撑"按交易对手配置"半边。】
+（谱系注：`mechanical-gate-needs-machine-detectable-target`(06-24) 的第三出口——目标不可机械判时不把闸锚回内容，而引入正交可验条件变量=缔约对手身份；`alignment-to-user-is-missing-a-layer-address`(#191) 缔约轴劈开：机构可缔约摘厂商家长制、个人不可。"EUC 在 API 层重建"为 gg 外推非在场事实。锚 = anthropic news 页 / R Street 2026-06-14〔均主会话亲核逐字〕+ OpenAI verified-org / AI Diffusion Rule〔子代理核〕；黑市二手多源。档 explorations/2026-08-08。）
