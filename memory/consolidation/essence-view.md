@@ -132,6 +132,7 @@
 - `completion-as-recursion-floor-not-checklist-pass` (05-20) — 完成态由"再追问一轮零增量"判定；清单边界 = 检测器盲区边界
 - `fallback-detectability` (05-06) — fallback 的隐性成本是失败识别可靠性；失败被误判为成功时 fallback 永不触发
 - `amplifier-eats-intent-guide-eats-attention` (07-03) — 被服务者退出观测时，指标不是未达成，是停止被测量；系统只剩可自证维度可优化，向放大器漂移【"我是否改变了你"的判定权结构性归被服务者】
+- `trace-presence-substitutes-for-the-check-it-invites` (08-09) — 核验痕迹在读者侧替代监督：在场无差别抬升对错采纳且与内容无关（随机引用同效增信；真核验者信任反降），降错误采纳的只有压核验成本的来源指针与自曝矛盾的对比结构；零抽核体制里物理指针退化为内容无关信任放大器【前提：短时程/中低专业度实验域；同效与反降均单源 Ding AAAI'25；"在场→核验减少"为帧层推论无行为直测】← `verification-trace-as-camouflage` 读者侧升级（那滴管痕迹骗过检查者，本滴管检查动作被在场替代）
 
 ## F6 规则与触发层 —— 飞轮 vs 跑步机
 
@@ -452,6 +453,7 @@
 | 192 | presence-benefit-splits-replica-verdict | 08-06 | V | 分发副本裁决轴置换（同步可行性→在场收益）+ 机器缓存合法形态充分条件（ssot-distillation 正分支）+「同步链自指」净新增概念；F7 展开；08-06 工作模式候选（cg-platform AGENTS.md 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库 |
 | 193 | codegen-collapse-reduces-dry-to-judgment-vs-judgment | 08-07 | V | DRY 权衡降维（写项两边约掉）+ 市场错账实测（可见项塌缩后不可见项不接管定价）；#181 的 DRY 落点、architecture DQ-1 首次正面推进；F7 展开；08-07 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 194 | safeguards-detach-from-alignment-and-condition-on-counterparty | 08-08 | V | 护栏析出可拆部署层（领域×交易对手配置）+ 判别比特在缔约对手不在内容（mechanical-gate 第三出口）+ 身份代理伪造成本阶梯（方向未定）；ai DQ-2 续推、#191 缔约轴劈开；F9 展开；08-08 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（三处修法+slug 改名 reprice→condition） |
+| 195 | trace-presence-substitutes-for-the-check-it-invites | 08-09 | V | 核验痕迹读者侧替代监督（06-01 伪装外补替代半边）+ 内容无关性与正向校准判据两件净新增；humanity overreliance 半边首开（06-14 aversion 的对偶轴）；F5 展开；08-09 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 删无实证半句 / E2 单源补标 / E3 动词软化+slug 改名 anaesthetizes→substitutes） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

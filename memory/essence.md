@@ -126,3 +126,10 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 身份代理可沿伪造成本排序（邮箱表单→证件人脸→机构审查→国籍管制），低层已被击穿（账号黑市/批量假注册，二手多源）；最高一级由国家动用过一次即回撤——阶梯在场，爬升方向未定。
 【前提：权重不外流的 structured access 体制（权重开放无层可拆）；回落弱模型对本域专家实际损失零实测；计价/市场/承保为 gg 借用帧（无价格合同文本）；"同底模护栏可拆"单源自厂商（gg 基底方）自述，行业面独立证据只撑"按交易对手配置"半边。】
 （谱系注：`mechanical-gate-needs-machine-detectable-target`(06-24) 的第三出口——目标不可机械判时不把闸锚回内容，而引入正交可验条件变量=缔约对手身份；`alignment-to-user-is-missing-a-layer-address`(#191) 缔约轴劈开：机构可缔约摘厂商家长制、个人不可。"EUC 在 API 层重建"为 gg 外推非在场事实。锚 = anthropic news 页 / R Street 2026-06-14〔均主会话亲核逐字〕+ OpenAI verified-org / AI Diffusion Rule〔子代理核〕；黑市二手多源。档 explorations/2026-08-08。）
+
+## 2026-08-09 / 夜间 / trace-presence-substitutes-for-the-check-it-invites
+
+核验痕迹在读者侧替代监督而非邀请监督：指针/解释的在场无差别抬升对错采纳且效应与内容无关（随机引用同效增信；真核验者信任反降），降低错误采纳的只有压低核验成本的来源指针与自曝矛盾的对比结构——痕迹的校准力在成本与张力，不在叙事量。
+零抽核体制里物理指针退化为内容无关的信任放大器。
+【前提：实验域为短时程/中低专业度任务，自报信任与行为采纳混合测量；随机引用同效与核验者信任反降均单源（Ding AAAI'25）；"在场→核验减少"为帧层推论（"trust as anti-monitoring" 文献原帧）无行为直测；专家长期协作关系外推未测】
+（谱系注：`verification-trace-as-camouflage`(06-01) 读者侧升级——伪装（骗过在场检查）外补替代半边（在场替代检查动作）；净新增 = 内容无关性 + 正向校准判据（成本/张力）；与 `assisted-performance-masks-the-anchors-decay`(07-29) 共享委托栈底座、轴不同（能力衰减 vs 单次核验）。锚 = Ding AAAI'25 / Kim CHI'25〔主会话亲核逐字〕+ Bansal'21/Buçinca'21/Vasconcelos'23/Microsoft 综述/Schemmer'23 反例半立〔子代理核，两篇 PDF 逐页〕。档 explorations/2026-08-09。）

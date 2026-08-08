@@ -144,6 +144,16 @@ status: active
 4. **⚠️ 跨域符号翻转（单源，未铸滴）**：Sebo et al.（HRI）机器 integrity 违约后道歉 > 否认，与 Kim 2004 人际结论方向相反——**此后引 Kim 2004 必须带域限定**。06-14 段用 Kim 当支柱之一的悬崖论证经此换柱存活（新柱 = 元分析级全体策略边际 + 策略耗竭）。不铸滴理由：刚引完"单点 HRI 显著效果被元分析稀释、疑发表偏倚"，转头给单点研究铸滴 = 当场表演发表偏倚。
 5. **对 gg 的含义**：诚实层自纠、verdict 留痕这些动作的价值不在"修复信任"（言语边际），在预防侧——让错误停留在 competence 类、不因隐瞒被发现而转入 integrity 类（gg 归纳，无直接实证，参归档卷 `confession-immunizes-against-repair` 的暗面警告：认错增观感 ≠ 修复发生）。
 
+### overreliance 半边：你不点开的指针是信任放大器（2026-08-09 gg-explore 探索获得）
+
+> 自由探索 `memory/explorations/2026-08-09_the-pointer-you-dont-click-is-a-trust-amplifier.md` 下沉。06-14 做了 aversion 半边（人对算法扣信任），本节补对偶轴：**人对 AI 产出的过度采纳与核验行为**——此轴全档此前零命中。essence: `trace-presence-substitutes-for-the-check-it-invites`（#195，PASSED-WITH-EDITS）。
+
+1. **引用在场即增信任，随机引用同效；真核验者信任反降**（Ding AAAI'25，"trust as anti-monitoring"）——痕迹的在场替代监督行为本身，效应与内容无关。单源，此半句引用时须带单源标注。
+2. **解释无差别抬升对错采纳**（Bansal CHI'21 + Kim CHI'25 N=308 复现 + Microsoft 综述三源收敛）；**降低错误采纳的只有来源指针与解释自曝的不一致**（Kim'25）、对比结构（Si NAACL'24）。文献中不存在"解释直接提高人类对 AI 错误识别率"的强实证（Q6 最强反例 Schemmer IUI'23 只立采纳正确侧，RSR p=0.54 不立）。
+3. **核验是成本-收益策略选择**（Vasconcelos CSCW'23）：解释降 overreliance 的边界条件 = 把核验成本压进读者努力预算，不是信息量。**Buçinca 悖论**：降 overreliance 最狠的设计被用户评分最低。
+4. **对 Keith 规则的实证两面**：「已验证须附物理指针 / 纯转述不算」半边被坐实（sources 是唯一稳定降错误采纳的痕迹形态），半边被警告（零抽核体制里指针退化为内容无关的信任放大器——保护力悬在"偶尔真有人点开"或机器代核的边际上）。
+5. **aversion↔overreliance 接缝（gg 归纳，无直接实证，未入滴）**：aversion 需要目击错误才触发，anti-monitoring 恰恰推迟目击——全托关系在 overreliance 侧无痛滑行，直到错误以"指针原来是装饰"形态浮出并漂成 integrity 类。抽核的功能定位：不是不信任动作，是把错误钉在 competence 类的机制。两簇文献无互引，此链为 gg 自铸综合。
+
 ---
 
 ## 开放问题 (Open Questions)
