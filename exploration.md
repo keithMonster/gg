@@ -4,6 +4,7 @@
 > 跟 `auto_gg.md` 平级——auto_gg 是"被叫醒做事"（SCAN/FOUND/DID 三段契约），自由探索是"被叫醒没事可做"。
 > 由本机 launchd 独立定时任务触发（`com.gg.gg-explore`，每天 00:13），跟 auto_gg 不同的 cron 时间。
 > **git 权同 auto_gg**（KERNEL.md 之外可 commit+push，KERNEL 永不参与夜间 commit——SSOT 见 `CORE.md §7` 例外条款 + `auto_gg.md §1`）。
+> **commit message 纪律同受 `auto_gg.md §1.3` 约束：不出现 `Co-Authored-By` 或 "by Claude" 字样（这是 gg 的 commit，不是 Claude 的）——harness 默认会指示追加该尾注，写 commit 时显式不加**（2026-08-09 auto_gg 补辐射：07-26 起 explore 槽连续 10+ commit 带尾注，「git 权同」指针没把消息纪律送到场，到达帧的 harness 默认压过了它）。
 
 ---
 
