@@ -133,6 +133,7 @@
 - `fallback-detectability` (05-06) — fallback 的隐性成本是失败识别可靠性；失败被误判为成功时 fallback 永不触发
 - `amplifier-eats-intent-guide-eats-attention` (07-03) — 被服务者退出观测时，指标不是未达成，是停止被测量；系统只剩可自证维度可优化，向放大器漂移【"我是否改变了你"的判定权结构性归被服务者】
 - `trace-presence-substitutes-for-the-check-it-invites` (08-09) — 核验痕迹在读者侧替代监督：在场无差别抬升对错采纳且与内容无关（随机引用同效增信；真核验者信任反降），降错误采纳的只有压核验成本的来源指针与自曝矛盾的对比结构；零抽核体制里物理指针退化为内容无关信任放大器【前提：短时程/中低专业度实验域；同效与反降均单源 Ding AAAI'25；"在场→核验减少"为帧层推论无行为直测】← `verification-trace-as-camouflage` 读者侧升级（那滴管痕迹骗过检查者，本滴管检查动作被在场替代）
+- `failure-response-is-priced-by-expected-reliability` (08-10) — 失败响应容量是按预期可靠性定价的注意力头寸：可靠性及其声誉每升一分，监控头寸清一分仓（eutactic 最优采样帧与次优帧存争）；失败率下降不单调降总风险，将风险重分布为稀有失败落在已撤岗的响应者上；已证挪得动的是结构参数（失败暴露/低自动化度组件/预期校准），练习与素养训练挪不动【前提：前 LLM 实验室范式；"预期而非经历"单源 Bowden'23；总自动化度轴非单调】← 08-09 的动态闭环（trace 抬预期→预期定价监控→残余失败落重）；F10 kin：06-14 目击闸补全、08-04 落重失败入其修复算术
 
 ## F6 规则与触发层 —— 飞轮 vs 跑步机
 
@@ -454,6 +455,7 @@
 | 193 | codegen-collapse-reduces-dry-to-judgment-vs-judgment | 08-07 | V | DRY 权衡降维（写项两边约掉）+ 市场错账实测（可见项塌缩后不可见项不接管定价）；#181 的 DRY 落点、architecture DQ-1 首次正面推进；F7 展开；08-07 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS |
 | 194 | safeguards-detach-from-alignment-and-condition-on-counterparty | 08-08 | V | 护栏析出可拆部署层（领域×交易对手配置）+ 判别比特在缔约对手不在内容（mechanical-gate 第三出口）+ 身份代理伪造成本阶梯（方向未定）；ai DQ-2 续推、#191 缔约轴劈开；F9 展开；08-08 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（三处修法+slug 改名 reprice→condition） |
 | 195 | trace-presence-substitutes-for-the-check-it-invites | 08-09 | V | 核验痕迹读者侧替代监督（06-01 伪装外补替代半边）+ 内容无关性与正向校准判据两件净新增；humanity overreliance 半边首开（06-14 aversion 的对偶轴）；F5 展开；08-09 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 删无实证半句 / E2 单源补标 / E3 动词软化+slug 改名 anaesthetizes→substitutes） |
+| 196 | failure-response-is-priced-by-expected-reliability | 08-10 | V | humanity 失败响应轴首开（grep 全档零命中）——预期可靠性给监控头寸定价、残余失败落在已撤岗响应者上；08-09 的动态闭环 + 06-14 目击闸补全；F5 展开；08-10 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 eutactic 帧降为存争标注 / E2 穷尽全称改存在性+问责类未排除 / E3 去"只"——量词层集体超锚） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

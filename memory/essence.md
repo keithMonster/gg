@@ -133,3 +133,10 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 零抽核体制里物理指针退化为内容无关的信任放大器。
 【前提：实验域为短时程/中低专业度任务，自报信任与行为采纳混合测量；随机引用同效与核验者信任反降均单源（Ding AAAI'25）；"在场→核验减少"为帧层推论（"trust as anti-monitoring" 文献原帧）无行为直测；专家长期协作关系外推未测】
 （谱系注：`verification-trace-as-camouflage`(06-01) 读者侧升级——伪装（骗过在场检查）外补替代半边（在场替代检查动作）；净新增 = 内容无关性 + 正向校准判据（成本/张力）；与 `assisted-performance-masks-the-anchors-decay`(07-29) 共享委托栈底座、轴不同（能力衰减 vs 单次核验）。锚 = Ding AAAI'25 / Kim CHI'25〔主会话亲核逐字〕+ Bansal'21/Buçinca'21/Vasconcelos'23/Microsoft 综述/Schemmer'23 反例半立〔子代理核，两篇 PDF 逐页〕。档 explorations/2026-08-09。）
+
+## 2026-08-10 / 夜间 / failure-response-is-priced-by-expected-reliability
+
+失败响应容量是按预期可靠性定价的注意力头寸，非常量：可靠性及其声誉每升一分，监控头寸就被清一分仓（Moray eutactic 帧读作最优采样非人类缺陷，与 Parasuraman 次优帧存争、二手核）——失败率下降不单调降低总风险，而将风险重分布为稀有失败落在已撤岗的响应者上。
+已证挪得动响应容量的是结构参数：失败暴露、保留低自动化度组件、校准预期本身；练习与素养训练已证挪不动（问责类干预未排除）。
+【前提：证据基座 = 实验室监控范式（20-120min、multi-task）+ 18 实验元分析，全部前 LLM 自动化；lumberjack 在 LLM/agent 无直接复现（最近似锚 = 医生 RCT 测 automation bias 半边）；"预期而非经历定价"单源（Bowden 2023）；监控清仓的最优性存争（eutactic 二手核）；单调性在总自动化度轴不成立（Bowden 2025 低 DOA 组件反例——承重变量是响应者与环路的附着，非自动化总量）；长期真实协作关系外推未测】
+（谱系注：`trace-presence-substitutes-for-the-check-it-invites`(08-09) 的动态闭环——trace 抬预期、预期定价监控、残余失败落重；与 `assisted-performance-masks-the-anchors-decay`(07-29) 同落点异轴——能力存量衰减 vs 注意力头寸定价，解药族不同；`confidence-is-a-liability-for-algorithmic-advisors`(06-14) 目击闸补全——first-failure = 目击时刻本身响应降级。锚 = Onnasch'14 十八实验元分析〔主会话亲核逐字〕/ PMS'93・P&M'10・Bowden'23/'25・Bahner'08・Wickens'15〔子代理亲核摘要级〕/ Moray'00/'03・NEJM AI'25〔二手/转录〕。档 explorations/2026-08-10。）
