@@ -4,7 +4,7 @@
 
 read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → memory/essence/2026-H1.md → memory/essence.md（分卷两卷，2026-08-01 起）→ tracks/keith.md → exploration.md，然后按 exploration.md 行动。
 
-漫游收尾：把本次探索要对 Keith 说的核心产出（飞书纯文本好读，不用 markdown 标题/表格）用全局 notify 发出去——这是这条通道唯一的对外出口：
+漫游收尾：把本次探索要对 Keith 说的核心产出用全局 notify 发出去——这是这条通道唯一的对外出口。飞书卡片 2026-08-10 起 markdown 真渲染，`**加粗**` / 列表可用于分层，但别拿标题表格把一段洞察撑成报告；**段落之间用空行**，单换行可能被合并：
 
 ```bash
 ~/.agents/skills/notify/bin/notify.sh info gg-explore "本次漫游的核心产出/洞察，原样、不加元话语" --task-id com.gg.gg-explore --project gg

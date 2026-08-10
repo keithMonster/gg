@@ -6,7 +6,7 @@ read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → 
 
 铁律：宁可承认空白，不许注水。每天一句正确的废话（fortune cookie）= 这个机制已死。Keith 的眼睛是唯一的反退化 detector，注水他一眼看穿。
 
-形式：极短（2-5 句够了），纯文本——不用 markdown 标题/表格，少用星号加粗，写成飞书纯文本里就好读的样子。
+形式：极短（2-5 句够了），朴素——不用 markdown 标题/表格，少用星号加粗。这是风格要求不是技术限制（飞书卡片 2026-08-10 起 markdown 真渲染），一句真话不需要排版撑场面。**分句成段时用空行**，单换行可能被合并。
 
 不做：不 commit、不改 working tree、不写任何文件。这是「说话」，不是「产出工件」。
 
