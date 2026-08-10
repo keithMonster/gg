@@ -106,6 +106,7 @@
 - `feedback-loopback-strength-determines-prior-leak` (05-26) — 评估者再独立，反馈经被评者 prior 通道再编码就重新污染；事实通道（读印迹）污染弱于反馈通道
 - `evaluator-ceiling-is-measured-not-pre-judged` (06-01) — 同源评估者天花板是评估的输出（换帧后命中率渐近线），不是前置拍板
 - `cross-model-decorrelates-identity-not-paradigm` (06-16) — 换模型只去身份层共盲，去不掉范式层（流畅=优雅偏好）；前沿判前沿是去相关最坏配置；穿透范式层的唯一信号是非 LLM 地真
+- `control-hardens-every-node-except-the-root-of-trust` (08-11) — AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐/改写/重采样；受信 AI 以能力上限换论证），却把信任栈的根（人类审计）写成质量常数（2% 预算、完美检出、静态 FNR）；人因证据里审计容量是按预期可靠性内生定价的头寸，协议的成功就是清仓的力；失败暴露机制在场却未作为常设机制指向人类节点【前提：absence 搜索级；指控锚在 safety case 语境；episodic↔连续监控映射未测】← #196 的跨领域传导缺口滴；补填 05-22/23 显式搁置的 scalable oversight 口袋（trusted=能力论证，买 scheming 独立性不买 prior 独立性）
 - `judge-independence-is-a-low-bounded-scalar-even-for-humans` (06-19) — 9 个 LLM 实测 2.2 个有效票；人也只 ~2× 有效独立——anchor 优势是有限倍率不是质变
 - `model-agnostic-unlocks-cross-prior-verification` (06-10) — 模型无关性同时买迁移自由 + 检验独立性；绑死单模型连检验层也锁进同一盲区
 - `load-bearing-independence-anchors-attribute-not-instance` (06-13) — 独立性锚属性（异谱系）不锚实例；panel 多数票放大偏置非抵消，冗余只抗失访
@@ -456,6 +457,7 @@
 | 194 | safeguards-detach-from-alignment-and-condition-on-counterparty | 08-08 | V | 护栏析出可拆部署层（领域×交易对手配置）+ 判别比特在缔约对手不在内容（mechanical-gate 第三出口）+ 身份代理伪造成本阶梯（方向未定）；ai DQ-2 续推、#191 缔约轴劈开；F9 展开；08-08 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（三处修法+slug 改名 reprice→condition） |
 | 195 | trace-presence-substitutes-for-the-check-it-invites | 08-09 | V | 核验痕迹读者侧替代监督（06-01 伪装外补替代半边）+ 内容无关性与正向校准判据两件净新增；humanity overreliance 半边首开（06-14 aversion 的对偶轴）；F5 展开；08-09 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 删无实证半句 / E2 单源补标 / E3 动词软化+slug 改名 anaesthetizes→substitutes） |
 | 196 | failure-response-is-priced-by-expected-reliability | 08-10 | V | humanity 失败响应轴首开（grep 全档零命中）——预期可靠性给监控头寸定价、残余失败落在已撤岗响应者上；08-09 的动态闭环 + 06-14 目击闸补全；F5 展开；08-10 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 eutactic 帧降为存争标注 / E2 穷尽全称改存在性+问责类未排除 / E3 去"只"——量词层集体超锚） |
+| 197 | control-hardens-every-node-except-the-root-of-trust | 08-11 | V | AI control 议程轴首开（仅 05-22/23 显式搁置命中）——不信任工程化遍及 AI 节点、信任栈的根被常数化，#196 定价机制的跨领域传导缺口；F4 展开；08-11 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 "每个/唯独"收量词（trusted T 是双料反例）/ E2 补"常设机制"限定（auditing-1 即合成后门指向人类的一次性测量）/ E3 "已不成立"降"未支持+作者自承测偏"） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

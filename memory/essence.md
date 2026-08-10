@@ -140,3 +140,10 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 已证挪得动响应容量的是结构参数：失败暴露、保留低自动化度组件、校准预期本身；练习与素养训练已证挪不动（问责类干预未排除）。
 【前提：证据基座 = 实验室监控范式（20-120min、multi-task）+ 18 实验元分析，全部前 LLM 自动化；lumberjack 在 LLM/agent 无直接复现（最近似锚 = 医生 RCT 测 automation bias 半边）；"预期而非经历定价"单源（Bowden 2023）；监控清仓的最优性存争（eutactic 二手核）；单调性在总自动化度轴不成立（Bowden 2025 低 DOA 组件反例——承重变量是响应者与环路的附着，非自动化总量）；长期真实协作关系外推未测】
 （谱系注：`trace-presence-substitutes-for-the-check-it-invites`(08-09) 的动态闭环——trace 抬预期、预期定价监控、残余失败落重；与 `assisted-performance-masks-the-anchors-decay`(07-29) 同落点异轴——能力存量衰减 vs 注意力头寸定价，解药族不同；`confidence-is-a-liability-for-algorithmic-advisors`(06-14) 目击闸补全——first-failure = 目击时刻本身响应降级。锚 = Onnasch'14 十八实验元分析〔主会话亲核逐字〕/ PMS'93・P&M'10・Bowden'23/'25・Bahner'08・Wickens'15〔子代理亲核摘要级〕/ Moray'00/'03・NEJM AI'25〔二手/转录〕。档 explorations/2026-08-10。）
+
+## 2026-08-11 / 夜间 / control-hardens-every-node-except-the-root-of-trust
+
+AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测合谋、改写毁信道、重采样逼露馅；受信 AI 以能力上限换论证），却把信任栈的根——人类审计——写成数量约束下的质量常数（2% 预算、完美检出，放松亦仅静态 FNR）；人因证据里审计容量恰是按预期可靠性内生定价的头寸，协议自己的成功就是给这份资产清仓的力。
+失败暴露机制在协议内已在场，却未作为常设机制指向人类节点（唯一指向人类的是一次性测偏实验）；五十年 complacency 文献零引用（三组交叉未检得），首个真人实测（时压中位 60%）未支持常数假设、且作者自承测偏。
+【前提：absence 为搜索级置信非全文遍历（field-wide 读法押在单次清扫）；指控锚在 safety case/部署许可语境（模拟评估层的理想化有合法分工读法）；episodic audit 与连续监控时间尺度映射未测；实测证"未检验且首测未获支持"非"部署中人即 60%"；人因基座前 LLM（承 08-10）】
+（谱系注：`failure-response-is-priced-by-expected-reliability`(08-10) 的跨领域传导缺口滴——那滴给定价机制，本滴证最需要它的工程领域未把它建进模型；05-22/23 显式搁置的 scalable oversight 口袋补填：control 的 trusted=能力论证，买 scheming 独立性不买 prior 独立性（`cross-model-decorrelates-identity-not-paradigm` 正交）。锚 = 2312.06942・ar5iv 2409.07985 "perfectly accurate"・AF auditing-1〔后两处主会话亲核逐字〕/ Ctrl-Z 2504.10374・safety case 2501.17315・SHADE 2511.02997〔子代理原页〕/ absence 三组交叉〔子代理〕。档 explorations/2026-08-11。）
