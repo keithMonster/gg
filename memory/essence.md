@@ -147,3 +147,24 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 失败暴露机制在协议内已在场，却未作为常设机制指向人类节点（唯一指向人类的是一次性测偏实验）；五十年 complacency 文献零引用（三组交叉未检得），首个真人实测（时压中位 60%）未支持常数假设、且作者自承测偏。
 【前提：absence 为搜索级置信非全文遍历（field-wide 读法押在单次清扫）；指控锚在 safety case/部署许可语境（模拟评估层的理想化有合法分工读法）；episodic audit 与连续监控时间尺度映射未测；实测证"未检验且首测未获支持"非"部署中人即 60%"；人因基座前 LLM（承 08-10）】
 （谱系注：`failure-response-is-priced-by-expected-reliability`(08-10) 的跨领域传导缺口滴——那滴给定价机制，本滴证最需要它的工程领域未把它建进模型；05-22/23 显式搁置的 scalable oversight 口袋补填：control 的 trusted=能力论证，买 scheming 独立性不买 prior 独立性（`cross-model-decorrelates-identity-not-paradigm` 正交）。锚 = 2312.06942・ar5iv 2409.07985 "perfectly accurate"・AF auditing-1〔后两处主会话亲核逐字〕/ Ctrl-Z 2504.10374・safety case 2501.17315・SHADE 2511.02997〔子代理原页〕/ absence 三组交叉〔子代理〕。档 explorations/2026-08-11。）
+
+## 2026-08-11 / 工作 / authorization-intent-must-stay-in-a-framed-locus
+
+授权意图搬家的代价不在可审计性（读侧可用 dump 补），在写入时的帧：集中授权文件把「你正在改一条对外通道能看见的世界」放在下笔那一刻的视野里，搬进被授权对象自身的元数据后，写入场景的契约与守卫均不再含授权信号——写的人以为在记录属性、实际在配权限（帧层推论）。
+授权落点判据 = 「写它的那一刻，写的人知不知道自己在授权」，不是「读它的人能不能审计」——读侧是可补维，写入帧是不可补维。
+【前提：写入方为读帧主体且授权语义无机器层守卫（lint/guard 可替代帧时判据失效）；「dump 可补审计」以审计动作实际存在为前提；心理半句零行为实例（tags 方案未实施）】
+（谱系注：净新增 = 读侧/写侧的轴翻转排序——`anchor-value-in-activation-not-in-content`(06-01) 只持激活维、未排它与读侧维的序；`frame-grammar`(04-29) 供机制母体；`security-claim-as-physical-fact-not-injectable-grant`(05-19) 为读者侧对偶（那滴管措辞被注入曲解，本滴管写入场景缺授权信号）。锚 = read-allowlist.txt:29 信任根自述 vs threads/README frontmatter 零安全字段、183 thread 文件在 is_trust_root 守卫外〔evaluator 亲核〕。档 reflections/2026-08-11_thread-tags-authorization-locus.md，验证关 PASSED-WITH-EDITS 三修采纳）
+
+## 2026-08-11 / 工作 / one-shot-invariant-decays-under-live-append
+
+一次性动作宣告的不变式，在写入方不消费该宣告的持续写入通道上衰减为历史快照断言——它只描述宣告那一刻，此后每次写入都在无告警地改写它宣称守护的状态。
+宣告不变式必须同时绑定写入路径上的维护机制（写入闸门 / 周期收口相位 / audit 传感器，或结构消除让违反不可构造——开放枚举）。
+【前提：写入方不以宣告为输入；违反是静默 append（响亮失败型第一次即暴露）；不变式为跨条目横断性质（单条目 schema 可强制的不在此列）；规律性表述实证 n=1】
+（谱系注：`stale-observer`(04-15) 管内容演化轴，本滴管执行拓扑轴——内容恒真仍衰减；`fermentation-without-detector`(05-15) 宣告无检测器同构；`omission-failures`(07-28) 三出路的不变式域落点；`dormant-rule-first-light`(08-05) 是其下游对子（首光处置）。锚 = 王亮卡 archived_until 宣告后 84 天静默积 173 条违反、fold 收益 225→416 吃回〔spot_checks/2026-08-11:78；主卡指针同日已被 fold v3 收口刷新〕。档 reflections/2026-08-11_cgboiler-fold-invariant-and-batch-final-review.md，验证关 PASSED-WITH-EDITS 五修采纳）
+
+## 2026-08-11 / 工作 / backfill-is-the-channels-native-act-not-a-decision
+
+存量回填不是独立决策变量，是分发通道的原生分发动作：远程通道回填=零动作，注入通道=重跑，fork 复制通道=一次性机械刷——「回填 vs 自然迭代」的二选一在通道修对后整体消解；在错误通道里手工改对 N 份存量恒为白做（承重 = 结构演绎 + 08-06 副本处决先例，非实测归纳）。
+通道选型判据 = 变化频率 × 违约响亮度。
+【前提：多通道分发体系已存在；「自然迭代能修」需实测自愈率佐证（本案 1/19）；「缺显式选型表时事实滑进最弱通道（fork 出生快照）」为单案根因预判，未跨案验证】
+（谱系注：`presence-benefit-splits-replica-verdict`(08-06) 裁副本的存在形态，本滴补其缺席的存量回填维；「响亮度」半轴承其判据轴，「变化频率」轴为净新增。锚 = monster cg-platform 案：四类缺陷回填答案全由通道推出、ENV 残留自愈 1/19、AUTH_PAGE 值逐字复制传导〔所抄值同日被平台 SSOT 裁为正确默认——传导机制真、带病结论废；evaluator 亲核三处 SSOT〕。档 reflections/2026-08-11_cg-platform-onboarding-defect-layer-verdict.md，验证关 PASSED-WITH-EDITS 三修采纳）

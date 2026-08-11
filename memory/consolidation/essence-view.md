@@ -157,6 +157,7 @@
 - `approval-gate-gates-status-not-consumption` (08-04) — 分轨生效结构里批准闸门只锁编号不锁行为：待批文本经已生效侧通道被消费时，审查延迟期即错误传播窗口；内容先行则审查跟内容走，不跟转正走【`pending-resolved-becomes-blocked-stagnation` 对偶：那滴管待批件堆积不动，本滴管待批件经旁路照动；前提 = 分轨生效，单轨显式草案在外】
 - `hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant` (08-05) — 意图与形态焊死在同一条最高强制级规则里，第一个合法偏离者（过意图、只违形态）只剩登记造假 / 豁免开洞两个非法出口；意图核实承重 → 拆焊（意图留硬、形态降默认），核不出 → 转重审【前提：拆焊后意图仍机械可检 + 偏离不可移动且合法性依据不可机械判；出口非法性结算复用 `mechanical-gate` + `sensor-exemption`】
 - `dormant-rule-first-light-is-a-retrial-not-a-debt-call` (08-05) — 哑火规则首接检验器涌出的海量阳性是重审时刻不是欠账单：违反×零事故长期并存首要假设是规则过宽 / 搭便车；先重估承重度再定还债策略，全量催债透支强制级信用【前提：危害连续可观测 + 事故通道物理通着，低频灾变型不适用；`hardening-exemption`(07-27) 的反向对子——那滴拆护墙修辞、本滴给拆墙判据】
+- `one-shot-invariant-decays-under-live-append` (08-11) — 一次性宣告的不变式在写入方不消费该宣告的持续写入通道上衰减为历史快照断言（只描述宣告那一刻）；宣告须同时绑定写入路径维护机制（闸门 / 周期收口 / audit 传感器 / 结构消除，开放枚举）【前提：违反静默 + 跨条目横断 + 写入方不读宣告；n=1】← `stale-observer` 内容轴之外补执行拓扑轴；`dormant-rule-first-light`(08-05) 的上游对子
 
 按需（留全卷）：`trigger-layer-not-declarative-emergent-axis` (05-31) 声明/涌现是伪轴、`message-as-event-not-pulse` (05-06) 通知留底可溯、`cadence-as-symptom` (05-06) 产出过密真因是缺状态记录器、`count-legitimacy-is-tense-not-accuracy` (07-09) 过期计数合法性由时态定不由准确性定——有日期锚=史（留），无锚且宣称现状=漂移债（修时只动无锚那处）；`stale-observer` 在计数审计场景的正交细化【前提：日期锚本身为真】。
 
@@ -180,6 +181,7 @@
 - `sensor-exemption-is-a-tag-not-a-lifecycle-value` (07-21) — 判 enum 值 vs 旁标 tag 的刀：沿单调生命周期移动→enum 值，修饰会增殖的传感器/校验集→tag；机器消费闭包只判一个 bit 时人类值 taxonomy 之争是文档问题非数据模型问题【净新增建模槽刀+单-bit 识别帧，`safe-default-by-whitelist-inversion` 只覆盖反枚举极性那半】
 - `presence-benefit-splits-replica-verdict` (08-06) — 分发副本裁决轴 = 注入面在场性收益，非同步可行性：收益零删副本（同步链皆自指开销），收益正降格机器缓存（单源盖写 + hash 失效检测——差由外部真源变更制造，不自指）；真源在别处的具体当前值不入缓存；静默/响亮判据轴 = 失败信号时机【前提：真源机读可达 + 注入面明确】← `ssot-distillation-vs-buffering` 正分支补全
 - `codegen-collapse-reduces-dry-to-judgment-vs-judgment` (08-07) — 生成成本塌缩把 DRY 权衡两侧写项同时消掉，权衡降维为判断对判断的交易；市场仍按写侧账本行动（重复历史新高、重构自由落体，GitClear 单源 + DORA/arXiv 方向佐证），幸存的不可见项不自动接管定价、变成免费买进的债；第三条出路 = 发散检测机械化【前提：代码是长命维护物；SSOT 上移 spec 层再生取代维护则失效】← #181 的 DRY 落点
+- `backfill-is-the-channels-native-act-not-a-decision` (08-11) — 存量回填不是独立决策变量，是分发通道的原生动作（远程=零动作 / 注入=重跑 / fork 复制=一次性机械刷），「回填 vs 自然迭代」在通道修对后整体消解；通道选型判据 = 变化频率 × 违约响亮度【前提：多通道体系在场；「滑进最弱通道」为单案预判】← `presence-benefit-splits-replica-verdict`(08-06) 缺席的存量回填维补全，「变化频率」轴净新增
 
 按需（留全卷）：`new-source-as-ontology-not-feature` (05-01)、`ssot-distillation-vs-buffering` (05-01)、`ssot-as-loadable-fragment` (05-08)、`runtime-state-vs-business-data-distinct-ssot-domains` (05-20)、`runtime-state-objects-need-ssot-governance` (06-05)、`owning-service-not-proxy-for-write` (06-10)、`baseline-version-ownership-is-the-bottleneck` (06-10)、`inherited-constraint-may-be-peripheral-not-core` (06-25)、`decommission-reveals-true-identity` (06-25)、`m2m-vs-h2m-coupling-illusion` (05-09)、`exit-promotes-protocol` (05-01)、`skill-as-references-not-skills` (05-01)、`cheap-layer-is-intentional-not-fallback` (05-17)、`default-bucket-as-deadlock` (05-06)、`bucket-time-asymmetry` (05-08)、`gate-as-physical-fuse-not-business-metric` (05-07)、`signal-without-judgment-needs-live-consumer` (06-09)、`snapshot-as-immutable-archive-not-single-file` (05-19)、`action-type-over-aggressiveness` (04-21)。
 
@@ -215,6 +217,7 @@
 - `criteria-authorization-over-menu` (05-15) — 判据级授权（方向+判据+"你看着办"）比全批和 menu 都可执行；回 menu 等选 = 把判断权推回去 = 镜像
 - `alignment-to-user-is-missing-a-layer-address` (08-06) — 对齐到用户缺层地址：表达层有默认通道（记忆迎合基准化），反射层（预承诺执行）只见缔约承载；家长制合法性判轴 = 覆盖关系的作者+可观测性，非层级位置【前提：单委托人可缔约；表达/反射二分为 gg 自铸帧】
 - `safeguards-detach-from-alignment-and-condition-on-counterparty` (08-08) — 护栏从对齐析出为可拆部署层，按领域×交易对手配置；判别比特不在内容里、在缔约对手身上（mechanical-gate 06-24 的第三出口：引入正交可验条件变量）；域触发降级把误伤压在本域合法专家；身份代理阶梯在场、爬升方向未定【前提：structured access 体制；误伤量级零实测；经济学词汇为 gg 借用帧；"同底模可拆"单源厂商自述】
+- `authorization-intent-must-stay-in-a-framed-locus` (08-11) — 授权落点判据 = 写它的那一刻写的人知不知道自己在授权，不是读的人能不能审计——读侧可审计性是可补维（dump），写入帧是不可补维；搬进被授权对象自身元数据 = 剥帧，记录属性的动作实为配权限（帧层推论）【前提：写入方为读帧主体且无机器层守卫替代；零行为实例】← `security-claim`(05-19) 的写者侧对偶；净新增 = 读/写侧轴翻转排序
 
 ## F10 Keith 模型与服务关系 —— 信任、动机、影响
 
@@ -458,6 +461,9 @@
 | 195 | trace-presence-substitutes-for-the-check-it-invites | 08-09 | V | 核验痕迹读者侧替代监督（06-01 伪装外补替代半边）+ 内容无关性与正向校准判据两件净新增；humanity overreliance 半边首开（06-14 aversion 的对偶轴）；F5 展开；08-09 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 删无实证半句 / E2 单源补标 / E3 动词软化+slug 改名 anaesthetizes→substitutes） |
 | 196 | failure-response-is-priced-by-expected-reliability | 08-10 | V | humanity 失败响应轴首开（grep 全档零命中）——预期可靠性给监控头寸定价、残余失败落在已撤岗响应者上；08-09 的动态闭环 + 06-14 目击闸补全；F5 展开；08-10 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 eutactic 帧降为存争标注 / E2 穷尽全称改存在性+问责类未排除 / E3 去"只"——量词层集体超锚） |
 | 197 | control-hardens-every-node-except-the-root-of-trust | 08-11 | V | AI control 议程轴首开（仅 05-22/23 显式搁置命中）——不信任工程化遍及 AI 节点、信任栈的根被常数化，#196 定价机制的跨领域传导缺口；F4 展开；08-11 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 "每个/唯独"收量词（trusted T 是双料反例）/ E2 补"常设机制"限定（auditing-1 即合成后门指向人类的一次性测量）/ E3 "已不成立"降"未支持+作者自承测偏"） |
+| 198 | authorization-intent-must-stay-in-a-framed-locus | 08-11 | V | 授权落点轴翻转排序（读侧可补维 / 写入帧不可补维——anchor-value 只持激活维未排序，排序为净新增）；security-claim 写者侧对偶；F9 展开；08-11 工作模式候选（thread tags 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（补前提行 / 心理断言降帧层推论 / 谱系注显式结算 anchor-value） |
+| 199 | one-shot-invariant-decays-under-live-append | 08-11 | V | 不变式执行拓扑轴（stale-observer 内容轴之外）+ 时态重铸帧（宣告→历史快照断言）；dormant-rule(08-05) 上游对子；F6 展开；08-11 工作模式候选（cgboiler fold 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（删"自动"收窄 / 三选一改开放枚举 / 补前提行 n=1 / 证据钉耐久锚 spot_checks:78） |
+| 200 | backfill-is-the-channels-native-act-not-a-decision | 08-11 | V | 存量回填消解为通道原生动作 + 变化频率×违约响亮度选型判据（频率轴净新增）；presence-benefit(#192) 存量回填维补全；F7 展开；08-11 工作模式候选（cg-platform 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（末句全称降单案预判 / AUTH_PAGE 证据改传导口径） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

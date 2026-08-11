@@ -35,7 +35,7 @@ last_updated: 2026-08-03
 
 ### 到期驱动
 
-- *（空。2026-08 月度三件套已全部执行：巩固+分卷 08-01 / 差值审计首跑 + bets B4/B5 结算 08-03（08-02 网络故障全暗顺延一日，B4 ✅ B5 ✅ verdict 落 `memory/bets.md`，30 天回执 append `model_transitions/2026-07-02_fable5.md`，审计产出 `memory/consolidation/2026-08_gap.md`）。下一到期：S1-S4 结算 2026-08-11。）*
+- *（空。S1-S4 已全结：S1/S2/S4 于 08-10 设计模式提前开箱（❌❌❌），S3 于 08-11 auto_gg 按期结算（✅，verdict 落 `memory/bets.md`）。**S3 命中行动差自 08-11 生效：夜间停止逐条新增 [STRATEGIC]，改月度巩固夜合并递一次选择题（2-4 选项带影响/代价）**。下一到期:B3 2026-09-30；下一月度巩固 09 月首个 auto_gg 夜。）*
 
 ### monster owner（gg 不代办，列出防丢）
 

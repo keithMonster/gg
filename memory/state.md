@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-08-06 工作模式（cg-platform AGENTS.md 平台事实副本）：裁「副本裁决轴 = 注入面在场性收益，非同步可行性」——收益零删副本（上午 24 仓案），收益正降格为机器缓存（单源盖写 + hash 失效检测，非自指）；三问机械判据（真源归属 / 值剥离 canon36 / 静默违约 vs 响亮失败）套 38 种抄写块。候选滴 presence-benefit-splits-replica-verdict 留 reflection 待补审。详见 reflections/2026-08-06_agents-md-platform-facts-replica-verdict.md]"
+last_summoned_at: "[2026-08-11 工作模式三连出场（单日 3 档 substantive-decision）：① thread tags 授权落点（裁不做 tags，堵 registry 自授权路径）② cgboiler fold 不变式 + 打包终审（fold v3 按 fact_type 分流，僵尸账归因传感器拓扑）③ cg-platform onboarding 缺陷层裁决（回填由通道原生动作消解）。3 条 candidate-unverified 候选滴由 08-11 auto_gg 夜巡补验证关。详见 reflections/2026-08-11_*.md 三档]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-08-06_agents-md-platform-facts-replica-verdict"
+last_reflection_slug: "2026-08-11_cg-platform-onboarding-defect-layer-verdict"
 last_design_session_slug: "2026-07-28_scope-cut-and-short-horizon-bets"
 ```
 
