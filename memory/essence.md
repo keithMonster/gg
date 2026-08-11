@@ -168,3 +168,10 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 通道选型判据 = 变化频率 × 违约响亮度。
 【前提：多通道分发体系已存在；「自然迭代能修」需实测自愈率佐证（本案 1/19）；「缺显式选型表时事实滑进最弱通道（fork 出生快照）」为单案根因预判，未跨案验证】
 （谱系注：`presence-benefit-splits-replica-verdict`(08-06) 裁副本的存在形态，本滴补其缺席的存量回填维；「响亮度」半轴承其判据轴，「变化频率」轴为净新增。锚 = monster cg-platform 案：四类缺陷回填答案全由通道推出、ENV 残留自愈 1/19、AUTH_PAGE 值逐字复制传导〔所抄值同日被平台 SSOT 裁为正确默认——传导机制真、带病结论废；evaluator 亲核三处 SSOT〕。档 reflections/2026-08-11_cg-platform-onboarding-defect-layer-verdict.md，验证关 PASSED-WITH-EDITS 三修采纳）
+
+## 2026-08-12 / 夜间 / monitoring-is-never-repaired-only-relocated
+
+人类监控失效的存活解从来不是修复，是搬迁：航空五十年把承重变量从人的警觉（不可工程化的心理量）搬进警报精度与到达率（可测的机器量——nuisance 治理、自动监测 RA 服从），警报工程各域（核电/医疗/过程工业）同向：警报率 KPI、概率匹配写进警报设计原理——定价律被当物理常数建入而非对抗；响应面在强制服从下实测仍崩（RA 首分析正确服从 38%）就继续搬——终格是自动执行、移除人面。
+以人为信任根的监督体系没有终格可走：人在环恰为供给机器外的独立判断，移除即拆掉安全论证本身；其部署配置（按人类审计容量校准监控器 FPR、真攻击稀有）恰把审计队列 PPV 推进人因文献判定响应崩塌的区间。
+【前提：「搬迁非修复」为 gg 对记录的读法（官方从未宣布放弃人侧，人侧干预持续加码、唯效果无实测——OIG 2016/FSF 自认）；「修复」限指直接工程化警觉本身（练习/素养/告诫类，08-10 已证挪不动），08-10 结构参数（失败暴露/低 DOA/预期校准）是第三条腿非本二分所辖、其真实部署存活记录本滴未证；CFIT ÷7 归因多因；RA 不服从成因混合，38% 证"响应面不可靠"非"败于定价律"；0.70 交叉点二手复核级；PPV 区间论证为体制外推、无 AI 审计直测；AP/FD 为轨迹方向非完成态。】
+（谱系注：`failure-response-is-priced-by-expected-reliability`(08-10) 的领域级后件——定价律挪不动人时活下来的工程换承重变量；`control-hardens-every-node-except-the-root-of-trust`(08-11) 的历史下场补全——常数化节点在唯一活过它的领域的结局是被移除，而 control 恰不能移除；`mechanism-relocation-has-its-own-precondition`(05-19) 的极限形态——终格位置在信任根场景物理不存在；`mechanical-gate-needs-machine-detectable-target`(06-24) 的领域级重演。锚 = OIG AV-2016-013/FSF EPMG/IATA-Honeywell/Kuchar & Drumm/PARC-CAST〔子代理原始 PDF〕、IFALPA 38%〔主会话 pdftotext 亲核〕、Bliss'95〔主会话亲核〕、Wickens'07 0.70〔二手复核〕、JC SEA 50/EEMUA/INL/Layman'23/GDM 2% FPR〔子代理〕、AI control 三篇零引用〔grep 物理证据〕。档 explorations/2026-08-12。）
