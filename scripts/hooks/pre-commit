@@ -5,6 +5,24 @@
 #      + mechanical-gate-needs-machine-detectable-target（KERNEL.md 的 diff 是机器可检测物理量）。
 # 建立：2026-07-02 设计会话（Keith 授权机制建设）。
 
+# ── 夜巡哨 selftest 保险丝（2026-08-13 设计会话建立） ──────────────────
+# nightly_scan.py 是 SCAN 段的判定者，改它 = 改 gg 看世界的判据。
+# selftest 里那组「判据漂移」case 保证的是「格式变了会喊看不见，不会喊都好」——
+# 一次性跑过会衰减（essence one-shot-invariant-decays-under-live-append 08-11），
+# 所以挂在事件层：碰这两个文件就必须当场跑过。
+if git diff --cached --name-only | grep -qE "^scripts/nightly_scan(_selftest)?\.py$"; then
+    if ! SELFTEST_OUT=$(python3 scripts/nightly_scan_selftest.py 2>&1); then
+        echo "⛔ nightly_scan selftest 未通过，commit 被拦截。"
+        echo ""
+        echo "$SELFTEST_OUT"
+        echo ""
+        echo "   传感器改动必须保持：真实故障报 alert / 判据漂移报 error。"
+        echo "   永远不许出现「解析不到 → 报 OK」——那是报了一句假话，比漏报更坏。"
+        exit 1
+    fi
+    echo "✓ nightly_scan selftest 通过"
+fi
+
 if git diff --cached --name-only | grep -qx "KERNEL.md"; then
     if [ "$GG_KERNEL_DOUBLE_CONFIRMED" != "1" ]; then
         echo "⛔ KERNEL.md 在 staged 区被拦截。"

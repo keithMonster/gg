@@ -21,7 +21,7 @@ created: 2026-04-13
 last_summoned_at: "[2026-08-11 工作模式三连出场（单日 3 档 substantive-decision）：① thread tags 授权落点（裁不做 tags，堵 registry 自授权路径）② cgboiler fold 不变式 + 打包终审（fold v3 按 fact_type 分流，僵尸账归因传感器拓扑）③ cg-platform onboarding 缺陷层裁决（回填由通道原生动作消解）。3 条 candidate-unverified 候选滴由 08-11 auto_gg 夜巡补验证关。详见 reflections/2026-08-11_*.md 三档]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-08-11_cg-platform-onboarding-defect-layer-verdict"
-last_design_session_slug: "2026-07-28_scope-cut-and-short-horizon-bets"
+last_design_session_slug: "2026-08-13_scan-unwelding-and-nightly-sentinel"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。

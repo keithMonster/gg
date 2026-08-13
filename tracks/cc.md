@@ -340,6 +340,8 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 沉淀 essence `mechanical-gate-needs-machine-detectable-target`（`physical-anchor` 的逆用：物理锚点托不住非物理量的判断对象）。详见 `memory/reflections/2026-06-24_decision-throwback-l3-hook-verdict.md`；NW 提案 `2026-06-18-G1` 已 reject 并回写 resolution。
 
+**CC 运行时基底事实——transcript 磁盘只留约 1 个月**（auto_gg 补写 2026-08-13）：08-13 设计会话实测（现存 07-14~08-12），一切基于 transcript 的回溯分析（token 构成 / 行为审计 / 采样复盘）有此硬天花板；超窗口的历史只剩 git log 与自写日志两条派生锚（`physical-anchor-has-rungs`——wire 层证据 30 天后物理消失）。源：`memory/design_sessions/2026-08-13_scan-unwelding-and-nightly-sentinel.md`。
+
 ---
 
 ## 开放问题 (Open Questions)

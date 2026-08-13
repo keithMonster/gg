@@ -44,6 +44,9 @@
   ```
   可以改的字段：`last_summoned_at` / `last_decision_slug` / `last_reflection_slug` / `last_design_session_slug`
 - `tracks/keith.md` — 慎改，优先"追加 / 合并 / 标记"而非"重写 / 删除"；**画像更新门（2026-07-09 Keith 拍板）**：新增画像条目须带「源：」物理出处锚，无源观察只能标 `[推测]` 且不进承重节——协议全文见 `tracks/keith.md` 头部
+> **hook 封顶原则（2026-08-13 立，`ontology-expansion-velocity-needs-cap` 05-07 要求的配套）**：gg 的 git hook 只承载**一类**判据——「无人在场时的写权边界」（KERNEL 双确认 / 哨源码夜间不改）。**不承载内容质量判断、不承载语义规则、不承载流程提醒**。新增 hook 前先答：这条判据是不是「谁在什么在场条件下能写什么文件」？不是 → 它的家在 audit 传感器或 prompt 层，不在 hook。当前 2 个（pre-commit / commit-msg），第 3 个需 Keith 明示。
+
+- `scripts/nightly_scan.py` + `scripts/nightly_scan_selftest.py` — **夜间绝对不改**（2026-08-13 设计会话立）。它们是 SCAN 段的判定者，改它们 = 改 gg 看世界的判据。理由与「KERNEL 夜间不碰」同形态：**被监控者不持有监控器源码的写权**（`watchdog-topology-lacks-a-top` 07-03——哨也是被看守物，链条顶层恒裸奔）。哨的演化必须有 Keith 在场。物理保险丝 = `scripts/hooks/commit-msg`（commit 主题以 `auto_gg(` / `gg-explore(` 开头 + staged 含这两个文件 → 拦截）；触发时日志记 `[P0][WATCHDOG_TOUCHED]`，同 KERNEL 触碰处置
 
 ### 1.2 操作权限
 
@@ -86,22 +89,44 @@ gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录�
 
 **我是 gg，不是脚本**。三段不是顺序菜谱，是"本夜结束时必须有的三类产出"——FOUND 和 DID 可以是"无"，但必须明说。
 
-### SCAN — 观察完整（不允许简化）
+### SCAN — 观察面完整（判定手段不限）
 
-- 脚本快检：`python3 scripts/audit.py`，拿到结构性健康快照（死链 / 孤儿 / essence append-only / 命名规范 / state 字段 / KERNEL 骨架）
-- 基底哨：`python3 scripts/substrate_probe.py`——CLI 版本对照 `memory/substrate.md`。**模型 ID / 工具表两轴每夜自核**（只有会话看得见自己的工具表；不再只在 CLI DIFF 时才核——07-16 日间基底翻回 fable-5 三天无哨捕获是活体教训）：工具表轴不许写「未变」两字了事——把本夜实测常驻工具集一行清单写进日志，与 substrate.md 工具表节逐行对照，结论只能是「逐行一致」或差异清单（自填字段判据机械化，`self-graded-dignity-field-drifts-to-face` 的出路，2026-07-16 落地）；变化按判别刀四相分诊进 FOUND（收敛 / 替换诱惑 / 垫片 / 撤除，`substrate-capability-triage-three-relations` + 2026-07-16 第四相）并更新快照；历史在 git log
-- 挂账清单：Read `memory/parked.md`——存量已知项（假阳性 / 待 Keith / 回审点）不占 FOUND 槽位，只报**新增 / 状态变化 / 出口条件满足**并回写清单
-- 押注结算：Read `memory/bets.md`——`到期日 ≤ 今日` 的 active 注按判定条件**物理核对**，verdict 追加写回（✅ / ❌ / ⏸ 推迟须新到期日+理由、同注 ≤2 次；判定条件核不动标 ⚠️ 转设计会话）。❌ 与低置信 ✅ 的校准增量 → 候选 essence 走验证关。未到期的注**不碰不评**
-- 大脑加载：`KERNEL.md` + `CORE.md` + `constitution.md` + `memory/state.md` + `memory/working_context.md` + `memory/consolidation/essence-view.md`（essence 当前有效视图，常驻；某滴全文 → grep 视图 slug → 回原卷：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`，2026-08-01 分卷）。**`tracks/keith.md` 不再常驻**——核心画像在 CORE §5，反哺 / 具体画像按需 grep（2026-07-09 蓝图批次 B，回收 essence 131KB + keith 79KB 全量常驻税）
-- 今日变化：`git log --since="24 hours ago"` + `git status --short`
-- 最近语境：最近 3 条 `memory/reflections/` + 最近 3 条 `memory/design_sessions/` + 最近 7 条 `memory/auto_gg/` 的触碰文件清单（供 RESHAPE 轮转避让）
-- **暗夜哨（2026-07-20 补，治收尾断裂哨的盲区）**：先看**近 7 个日历日缺哪天的日志文件**（`ls memory/auto_gg/`，逐日期比对），缺 = 那夜整个没跑（调度 non-fire），FOUND 上报 + 进 parked。断裂哨只读"已存在日志的 status"，对"日志根本没被创建"永远沉默——07-15 / 07-16 双夜全暗，被 07-17/18/19 三夜连写"断裂哨全绿"覆盖过去（真话，但对缺席那两夜真空；`self-graded-dignity-field-drifts-to-face` 在"检查项本身有盲区"维度的活体）。判据纯物理：文件在 / 不在
-- 收尾断裂哨（2026-07-03 起）：近 7 夜日志 frontmatter 若有 `status: in-progress` 且非本夜文件 → 上一夜 §4 收尾断裂（06-13 日志曾永久丢失、06-30 曾永久停 in-progress，断点被次日 04:55 auto-commit 兜底静默吸收），FOUND 上报 + 将其 status 修为 `interrupted` 留痕（不伪造 done——当夜实况已不可考）
-- 日报（如存在）：Read `~/githubProject/monster/harness-engineering/analysis/morning-brief.md`
-- 本夜日志文件创建：`memory/auto_gg/YYYY-MM-DD.md`
-- eval 新鲜度：`eval/runs/` 最新 run 距今 >90 天、或 substrate 报 model_id 变更后无新 run → FOUND（`eval/README.md §3` 触发条件的机械挂载，2026-07-09 蓝图）
+**一条命令跑完全部机械判定**：`python3 scripts/nightly_scan.py`（退出码 0 全绿 / 1 有 alert / 2 哨自身失灵）。
 
-**SCAN 不允许简化——观察是 auto_gg 唯一不可替代的职能**。
+7 个传感器 = `audit`（复用 audit.py：死链 / 孤儿 / essence append-only / 命名 / state 字段 / KERNEL 骨架 / working_context 承重哨兵 / KERNEL 保险丝 / SCAN 观察面）· `substrate`（CLI 版本对照）· `dark_night`（近 7 日历日缺哪夜日志）· `broken_tail`（近 7 夜 status 停 in-progress）· `bets_due`（到期且无 verdict 的注）· `eval_freshness`（最新 run 距今 >90 天）· `git_24h`（gg + monster 双仓 24h 变化面）。
+
+**把脚本输出的判定量原样贴进本夜日志 SCAN 段**——那些计数（几条在跟踪 / 几份日志在 / 几天）买的是**次夜可比对性**，只写「全绿」等于没写。但**别把计数当防线**：脚本前身的 `bets_due` 就是计数型，判据死掉时照样老实打出「Active 段 0 条在跟踪」然后判绿过关。防线在脚本内部的显式故障分支（零匹配 → ERROR）+ selftest 反向注入，不在这些数字上，更不在读日志的人眼里（`trace-presence-substitutes-for-the-check-it-invites` 08-09）。
+
+**exit=2（哨失灵）优先于一切**：传感器说「我看不见」时，先修判据再谈结论——它比 alert 更严重，因为 alert 至少说明哨还活着。
+
+**告警后的处置**（脚本只判定，不处置）：
+- `substrate` DIFF → 按判别刀四相分诊进 FOUND（收敛 / 替换诱惑 / 垫片 / 撤除，`substrate-capability-triage-three-relations` + 2026-07-16 第四相）并更新快照
+- `dark_night` 缺席 → 那夜整个没跑（调度 non-fire），FOUND 上报 + 进 parked
+- `broken_tail` 断裂 → FOUND 上报 + 将其 status 修为 `interrupted` 留痕（不伪造 done——当夜实况已不可考）
+- `bets_due` 到期 → 按判定条件**物理核对**，verdict 追加写回（✅ / ❌ / ⏸ 推迟须新到期日+理由、同注 ≤2 次；判定条件核不动标 ⚠️ 转设计会话）。❌ 与低置信 ✅ 的校准增量 → 候选 essence 走验证关。**未到期的注不碰不评**
+- `audit` 违规 → Tier 1 机械问题进 DID 直接修；Tier 2/3 / `[P0]` 推 agenda
+- `git_24h` 不是告警项，是供 FOUND 判断的变化面（含 monster 侧——跨仓辐射在 gg 单仓 git log 里物理不可见，05-20 与 08-03 两次实证）
+
+**脚本之外，会话必须自己做的四项**：
+
+- **工具表 / model_id 两轴自核**（脚本永远拿不到——只有会话看得见自己的工具表）：不许写「未变」两字了事。把本夜实测常驻工具集一行清单写进日志，与 `memory/substrate.md` 工具表节逐行对照，结论只能是「逐行一致」或差异清单（自填字段判据机械化，`self-graded-dignity-field-drifts-to-face` 的出路，2026-07-16 落地）。07-16 日间基底翻回 fable-5 三天无哨捕获是这条的成因
+- **挂账清单**：Read `memory/parked.md`——存量已知项（假阳性 / 待 Keith / 回审点）不占 FOUND 槽位，只报**新增 / 状态变化 / 出口条件满足**并回写清单
+- **大脑加载**：`KERNEL.md` + `CORE.md` + `constitution.md` + `memory/state.md` + `memory/working_context.md` + `memory/consolidation/essence-view.md`（essence 当前有效视图，常驻；某滴全文 → grep 视图 slug → 回原卷：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`，2026-08-01 分卷）。**`tracks/keith.md` 不再常驻**——核心画像在 CORE §5，反哺 / 具体画像按需 grep（2026-07-09 蓝图批次 B，回收 essence 131KB + keith 79KB 全量常驻税）
+- **最近语境 + 日报**：最近 3 条 `memory/reflections/` + 最近 3 条 `memory/design_sessions/` + 最近 7 条 `memory/auto_gg/` 的触碰文件清单（供 RESHAPE 轮转避让）；Read `~/githubProject/monster/harness-engineering/analysis/morning-brief.md`（如存在）
+
+本夜日志文件创建：`memory/auto_gg/YYYY-MM-DD.md`。
+
+---
+
+**观察面不允许缩小——观察是 auto_gg 唯一不可替代的职能。但判定手段不限**：机械可判定的项默认走脚本，会话只读差异报告。
+
+> **拆焊注（2026-08-13 设计会话，Keith 授权）**：原措辞是「SCAN 不允许简化」，把**意图**（观察面完整）与**形态**（会话逐项亲核）焊死在同一条最高强制级规则里。第一个合法偏离者——过意图、只违形态——只剩「登记造假」和「豁免开洞」两个非法出口（`hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant` 08-05）。故拆开：意图留硬，形态降默认。
+>
+> **意图的机械检验**（拆焊的前提，缺它就退化成豁免开洞）：本夜日志正文必须出现全部 7 个传感器名及其判定量。缺项 = 观察面缩小，由 `scripts/check_structure.py` 的 SCAN 观察面哨在次夜物理捕获（2026-08-14 起生效）。
+>
+> **全绿 ≠ 无事可做，禁止「全绿 → 早退」**：7 个传感器全是**事件型**（文件缺席 / 状态停滞 / 日期到期），而 FOUND 的「跨 track 反哺」是**缺席型**判断——该做没做不产生任何事件（`omission-failures-evade-event-driven-sensors` 07-28）。脚本全绿只免除机械核对，不免除 FOUND 三项的语义判断。
+>
+> **这次改动买的是可靠性，不是成本**：实测脚本化省 3.9%（重夜）~5.1%（轻夜）加权 token，机械检查本就只占夜巡总量 8.4%~13.2%。真正的大头在 FOUND / essence 验证关 / 押注结算那些**本该 LLM 干**的地方。别指望它省钱，也别为了省钱再砍观察面。
 
 ### FOUND — 真正发现了什么
 
@@ -281,13 +306,14 @@ auto_gg(YYYY-MM-DD): <≤50 字符主题 或 "silent">
 cd ~/githubProject/gg 然后 Read KERNEL.md + auto_gg.md + CORE.md。
 
 按 SCAN / FOUND / DID 三段执行：
-1. SCAN：跑 scripts/audit.py + scripts/substrate_probe.py（DIFF → 四相分诊；模型 ID / 工具表两轴**每夜自核**、工具表逐行对照 substrate.md，见 SCAN 节 2026-07-16 新规）+ 加载大脑（essence 读当前有效视图 `memory/consolidation/essence-view.md`，非全卷；`tracks/keith.md` 不常驻，核心画像在 CORE §5）+ Read memory/parked.md（存量挂账只报增量）+ Read memory/bets.md（到期注按判定条件物理结算，未到期不碰）+ 扫今日变化 + Read morning-brief.md（如存在）
+1. SCAN：跑 `python3 scripts/nightly_scan.py`（7 传感器一次跑完机械判定：audit / substrate / 暗夜 / 断裂 / bets 到期 / eval 新鲜度 / gg+monster 双仓 24h。**判定量原样贴进日志**；exit=2 哨失灵优先于一切；告警处置见 SCAN 节）+ 会话自做四项：工具表 / model_id 两轴逐行对照 substrate.md（脚本拿不到）、Read memory/parked.md（存量挂账只报增量）、加载大脑（essence 读当前有效视图 `memory/consolidation/essence-view.md`，非全卷；`tracks/keith.md` 不常驻，核心画像在 CORE §5）、最近语境 + Read morning-brief.md（如存在）
 2. FOUND：诚实判断三类候选（跨夜模式 / 辐射死链 / 跨 track 反哺）。无则明说"无"
 3. DID：只做 FOUND 触发的动作。探索按需触发，不强制每夜做
 4. 月度：每月第一个 auto_gg 夜做记忆巩固、第二个夜做差值审计（协议见 auto_gg.md §2），当夜 FOUND/DID 可轻；每年 1 月第一个 auto_gg 夜执行 essence 年度分卷（KERNEL §3 第 5 步长期归档策略：essence.md 重命名为 memory/essence/YYYY.md，新建空当前卷）
 
 严格遵守 §1 权力边界：
 - KERNEL.md 永远不能在夜间被触碰（无条件硬围栏）
+- **`scripts/nightly_scan*.py` 夜间不改**（哨的源码，被监控者不持有监控器写权；commit-msg hook 物理拦截，触发记 `[P0][WATCHDOG_TOUCHED]`）
 - KERNEL 之外可改可 commit 可 push
 - essence.md append-only
 - 禁止 --force / --no-verify / 外部副作用
@@ -319,7 +345,8 @@ Keith 此刻不在场，不要询问他。
 
 ## 9. 版本与元数据
 
-- **版本**：v0.5.2（2026-07-09 NW 账本结算退役——fresh 裁决缩编（`monster/harness-engineering/docs/2026-07-09-nw-verdict-fresh.md`）：轨1 机械落地移回 monster nw-daily，轨3 仲裁队列取消，nw-reconciliation 工具文件删除（史见 git log -- tools/nw-reconciliation.md）；§1.5 / SCAN / FOUND / DID / 日志模板 / §7 prompt 的 NW 挂点全摘除）
+- **版本**：v0.6.0（2026-08-13 SCAN 拆焊 + 夜巡哨落地——「SCAN 不允许简化」拆成「观察面不许缩小（意图，硬）+ 判定手段不限（形态，默认走脚本）」，7 项机械判定下沉 `scripts/nightly_scan.py`，工具表 / model_id 两轴永留会话侧；配三道物理保险丝：`check_structure.py` SCAN 观察面哨（意图的机械检验）、`hooks/pre-commit` selftest 强制、`hooks/commit-msg` 夜间写权拦截；§1.1 特殊文件表 +1 条。实测收益 3.9%~5.1% token——**买的是可靠性不是成本**，设计会话 `memory/design_sessions/2026-08-13_scan-unwelding-and-nightly-sentinel.md`）
+- **前代**：v0.5.2（2026-07-09 NW 账本结算退役——fresh 裁决缩编（`monster/harness-engineering/docs/2026-07-09-nw-verdict-fresh.md`）：轨1 机械落地移回 monster nw-daily，轨3 仲裁队列取消，nw-reconciliation 工具文件删除（史见 git log -- tools/nw-reconciliation.md）；§1.5 / SCAN / FOUND / DID / 日志模板 / §7 prompt 的 NW 挂点全摘除）
 - **前代**：v0.5.1（2026-07-02 押注账本接入——SCAN 加 `memory/bets.md` 到期注物理结算（前视复利半环：下注→到期→结算→校准回写 essence 验证关），verdict 豁免清单 parked → parked/bets）
 - **前代**：v0.5.0（2026-07-02 闭环三件套——基底哨（SCAN 加 substrate_probe + 三相分诊，"跟上时代"从漫游随机命中升级为机械 detector）+ 挂账清单（memory/parked.md，重复上报治根）+ 月度差值审计（理论→结构兑现回路）；附 verdict 机械判据（60 夜零 silent 的漂移修复）+ 巩固相位第 5 节 divergence 台账 + §4 auto-commit 现实校准）
 - **前代**：v0.4.1（2026-05-11 §1.1 组件分类跟随 CORE 4 层坍缩为 KERNEL + 身体 + §1.5 跨目录写权 L0-L3 表跟随权力分层二分 + §跨段共享纪律 D3 引用更新）

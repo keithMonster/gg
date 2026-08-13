@@ -1,0 +1,31 @@
+#!/bin/bash
+# 夜间模式改哨的物理保险丝（2026-08-13 设计会话建立）。
+#
+# auto_gg.md §1.1 把 scripts/nightly_scan*.py 列为特殊文件：夜间不得改。
+# 理由与「KERNEL 夜间不碰」同形态——被监控者不该持有监控器源码的写权
+# （essence watchdog-topology-lacks-a-top 07-03：哨也是被看守物，链条顶层恒裸奔）。
+#
+# 只写在 auto_gg.md 里就是 prompt 层 = 跑步机（rule-layer-flywheel 04-24）。
+# 这里是它的事件层落点：判据 = commit message 前缀（auto_gg.md §4 规定的格式，机械可判）。
+#
+# 本 hook 防的是手滑与流程漂移，不是防恶意——与 KERNEL 保险丝的 GG_KERNEL_DOUBLE_CONFIRMED
+# 逃生门同一量级。设计模式（Keith 在场）改这些文件不带夜间前缀，自然放行。
+
+MSG_FILE="$1"
+SUBJECT=$(head -1 "$MSG_FILE")
+
+if echo "$SUBJECT" | grep -qE "^(auto_gg|gg-explore)\("; then
+    TOUCHED=$(git diff --cached --name-only | grep -E "^scripts/nightly_scan(_selftest)?\.py$")
+    if [ -n "$TOUCHED" ]; then
+        echo "⛔ 夜间 commit 触碰夜巡哨源码，被拦截。"
+        echo ""
+        echo "   staged: $TOUCHED"
+        echo "   commit: $SUBJECT"
+        echo ""
+        echo "   auto_gg.md §1.1：scripts/nightly_scan*.py 夜间不得改。"
+        echo "   哨的演化必须有 Keith 在场——被监控者不持有监控器的写权。"
+        echo "   立即 git restore --staged 该文件，回滚工作区改动，日志记 [P0][WATCHDOG_TOUCHED]。"
+        exit 1
+    fi
+fi
+exit 0
