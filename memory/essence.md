@@ -196,3 +196,11 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 目录粒度隔离下文件是最小信任量子，「按段分权」在 seatbelt/guard 这类隔离层上物理不存在——权威读者与多信任级写者共文件时，修法收敛为让权威凭据成为弱写者物理铸不出之物：按写者信任级拆存储（写路径即凭据，本案取），或服务端持钥签名（同族第二形态）；in-band 格式标记不在此列——任何写者都铸得出。
 【前提：隔离层最细粒度 ≥ 文件；文件承载会被机器读出权威的内容；凭据为内容层格式标记且 reader 无密码学验签——有验签时「信任级 = 最弱写者」不成立】
 （谱系注：净新增 = 触发侧帧——信任域合并发生在一个不像安全决策的合并决策里（F8 族 + 08-11 授权帧滴均无先例）；三从句为继承件：`deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 供 reader 轴与修法半边 / `network-cannot-cut-what-shares-tuple`(05-19) 供粒度刀半边 / `security-claim-as-physical-fact-not-injectable-grant`(05-19) 供凭据形态半边。锚 = monster keith-mcp mailbox 案：README「两件事一起干」+「手写一块同样生效」、parseMessages 全文件 matchAll（mailbox.mjs:234〔evaluator git 亲核〕）、Bash 目录内 exit=0 实证段级/工具级防御全失效；实际修复 = 投递挂点迁服务端私有 outbox.jsonl、通道写权归零〔evaluator 亲核〕。档 reflections/2026-08-14_keith-mcp-mailbox-authority-store.md，验证关 PASSED-WITH-EDITS 三修采纳。）
+
+## 2026-08-15 / 夜间 / platform-trust-gates-cluster-on-the-authorization-axis-truth-ships-ungated
+
+平台信任工程单轴聚簇在授权（谁可行动——出处证明/消息不构成批准/push 闸），真值轴（什么被记为真）全行业裸发：生成者自策展可变记忆是四厂加框架层的出货默认、零写入前验证，而同一行业的文献已多组复现这恰是错误复利构型（经验跟随传播/错误先例自增强/查询级可注入）。
+不对称的机制是闸门需要机器可判靶：授权轴靶密布，真值轴无靶——记忆唯一被闸的属性恰是长度（其最便宜的机器可判性质）；验证的身体照常出货（adversarial 编排原语），只是不接线到记忆写入口，接线是买家自装件。
+换用原生记忆器官 = 静默换掉自己的认知信任模型：出货默认 = 无摩擦写入 + 诚实性闸零出货（「按采用率优化」为摩擦经济学读法，未与靶缺席机制分离）。
+【前提：授权轴闸门密度仅在 Anthropic/CC 单平台核验——他厂授权轴未测，「单轴聚簇」对比构型的行业级地位押在未做的对照调查上；主流产品真值闸反例为搜索级 absence 非全集遍历（append-only+写入前闸仅见提案层）；失效文献实验域为 agent benchmark 记忆非产品记忆遥测；「接线不可出货」为 gg 结构读法，平台可证伪（出货默认真值闸即破）】
+（谱系注：`mechanical-gate-needs-machine-detectable-target`(06-24) 的平台信任面系统级投影——闸门聚簇处即靶在场处；`substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 记忆域第二实例 + 接线精化；06-20 三相刀替换诱惑支补信任模型轴；`perimeter-derives-from-load-path-not-self-model`(#185) 同通道前作（围栏枚举维，本滴补行业坐标维）；`document-merge-is-a-trust-set-union`(#204) 的器官采用版。锚 = code.claude.com/docs/en/memory "Who writes it: Claude"+尺寸唯一闸 / arXiv 2505.16067 error propagation〔均主会话亲核逐字〕/ 授权轴三闸（routines attestation・teammate consent・push 闸）〔子代理官方 docs 逐字〕/ 四厂+Mem0/Letta 零验证关・ProjectMEM 提案层〔子代理 28 次〕。档 explorations/2026-08-15，验证关 PASSED-WITH-EDITS 五修采纳。）

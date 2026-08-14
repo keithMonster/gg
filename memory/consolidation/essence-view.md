@@ -246,6 +246,7 @@
 - `capability-locus-shifts-to-scaffold-as-horizon-grows` (06-07) — 长时域 agent 死于步数复合（0.9^k）非单步无能；杠杆在缩短/检查点化时域
 - `token-cost-collapse-widens-not-closes-the-judgment-gap` (07-23) — token 价降跨任务不均，硬推理是最慢曲线（Epoch：最易 ~900x/年 vs GPQA·PhD ~40x/年）；押注（非定律，反向电流可收窄剪刀）token→免费时舰队成本趋近"关键路径判断步数"这一个量——与 06-07 步数误差衰减是两个独立论证指向同一动作（减串行判断步），净增=深推理异步化成一等架构决策【前提：高降速域 + 延迟半只咬同步 agent】
 - `absorption-boundary-is-typicality-not-selection-sign` (07-11) — 基底吸收判断力的边界是群体可回收性（典型/特异），不是选择正负（RLHF 照吸负选择）；护城是带宽护城河，随交互带宽上升衰减；outrun 靠新前沿眼睛的生成速率不靠存量【前提：吸收走已出货单通道】
+- `platform-trust-gates-cluster-on-the-authorization-axis-truth-ships-ungated` (08-15) — 平台信任工程闸在授权轴（靶密布），真值轴全行业裸发（生成者自策展可变记忆为出货默认，失效构型已被同行业文献复现）；验证身体出货不接线到记忆写入口，接线是买家自装件；换原生记忆器官 = 静默换认知信任模型【前提：授权轴密度仅 Anthropic 单平台核验】
 
 （跨族连线：`toolset-is-the-changelog` 见 F3；`harness-self-identity` 见 F8；`fleet-canon-is-sedimentary` / `craft-ports-identity-doesnt` 见 F1；`substrate-ships-the-evaluator-body` 见 F4。）
 
@@ -472,6 +473,7 @@
 | 202 | counterfeit-the-watched-world-not-the-watcher | 08-13 | V | 人因部署证据域首开（TIP/钓鱼/VAT/golden set 四轴零命中）——监控第二类存活解=伪造被看守世界的统计（与 #201 搬迁并列）+ 判据非知识（载荷=流行率×地真反馈）+ 可拦截性闸门；08-10「失败暴露」部署存活记录补口；F5 展开；08-13 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 核心句焊点拆除「造回」降「向…推」/ E2 前提补跨域等同 + TIP 剂量错位 / E3 探索档 golden set 直引补源） |
 | 203 | retiring-a-dead-mechanism-orphans-no-one-who-lives-elsewhere | 08-14 | V | 拆除方向三分处置表（安家/归位/没活过）+「死触发⇒活约束另有因」演绎门控（帧新：挂载点/登记处/住所 essence 双卷零命中）；anchor-value(06-01) 拆除方向逆向应用、dormant-rule(08-05) 同对象域分工；F7 展开；08-14 工作模式候选（cg-platform §11 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（量词改前提门控 / 前提补机制死亡证据 / 证据补 cg-ppt 反例 / 判据补传感器安家支 / 谱系补 dormant-rule） |
 | 204 | document-merge-is-a-trust-set-union | 08-14 | V | 触发侧帧净新增（信任域合并藏在不像安全决策的 DRY 合并里——F8 十三滴 + 08-11 授权帧滴均无先例）；05-19 三滴各供半边（reader 轴 / 粒度刀 / 凭据形态）；F8 展开；08-14 工作模式候选（keith-mcp mailbox 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（「唯一修法」收敛纳签名同族 / 前提补验签半句 / 谱系标继承 vs 净新增） |
+| 205 | platform-trust-gates-cluster-on-the-authorization-axis-truth-ships-ungated | 08-15 | V | 行业信任模型证据域首开（essence 双卷 sherlock/absorb/envelopment 零命中）——平台信任单轴聚簇（授权闸密/真值裸发）+ 06-24 系统级投影（长度=记忆唯一被闸属性）+ 接线为买家自装件；#185 同通道前作补行业坐标维、06-20 三相刀补信任模型轴；F11 展开；08-15 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（前提补单平台采样 / 「唯一机器可判」降级 / 动机归因降读法 / 锚补授权轴出处 / 谱系补 #185） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 
