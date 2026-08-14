@@ -184,6 +184,7 @@
 - `presence-benefit-splits-replica-verdict` (08-06) — 分发副本裁决轴 = 注入面在场性收益，非同步可行性：收益零删副本（同步链皆自指开销），收益正降格机器缓存（单源盖写 + hash 失效检测——差由外部真源变更制造，不自指）；真源在别处的具体当前值不入缓存；静默/响亮判据轴 = 失败信号时机【前提：真源机读可达 + 注入面明确】← `ssot-distillation-vs-buffering` 正分支补全
 - `codegen-collapse-reduces-dry-to-judgment-vs-judgment` (08-07) — 生成成本塌缩把 DRY 权衡两侧写项同时消掉，权衡降维为判断对判断的交易；市场仍按写侧账本行动（重复历史新高、重构自由落体，GitClear 单源 + DORA/arXiv 方向佐证），幸存的不可见项不自动接管定价、变成免费买进的债；第三条出路 = 发散检测机械化【前提：代码是长命维护物；SSOT 上移 spec 层再生取代维护则失效】← #181 的 DRY 落点
 - `backfill-is-the-channels-native-act-not-a-decision` (08-11) — 存量回填不是独立决策变量，是分发通道的原生动作（远程=零动作 / 注入=重跑 / fork 复制=一次性机械刷），「回填 vs 自然迭代」在通道修对后整体消解；通道选型判据 = 变化频率 × 违约响亮度【前提：多通道体系在场；「滑进最弱通道」为单案预判】← `presence-benefit-splits-replica-verdict`(08-06) 缺席的存量回填维补全，「变化频率」轴净新增
+- `retiring-a-dead-mechanism-orphans-no-one-who-lives-elsewhere` (08-14) — 拆除死机制的真空焦虑是幻觉（死触发激活不了任何东西——活约束必早有别的激活现场）；判据 = 逐条问「实际被什么激活」，被拆机制激活的才需安家（传感器恒落此支走重瞄），找不到新挂载点 ≈ 没活过【前提：被拆机制实测已死（真实触发≈0）；拆活跃机制不适用】← `anchor-value-in-activation-not-in-content`(06-01) 拆除方向逆向应用，`dormant-rule-first-light`(08-05) 同对象域分工
 
 按需（留全卷）：`new-source-as-ontology-not-feature` (05-01)、`ssot-distillation-vs-buffering` (05-01)、`ssot-as-loadable-fragment` (05-08)、`runtime-state-vs-business-data-distinct-ssot-domains` (05-20)、`runtime-state-objects-need-ssot-governance` (06-05)、`owning-service-not-proxy-for-write` (06-10)、`baseline-version-ownership-is-the-bottleneck` (06-10)、`inherited-constraint-may-be-peripheral-not-core` (06-25)、`decommission-reveals-true-identity` (06-25)、`m2m-vs-h2m-coupling-illusion` (05-09)、`exit-promotes-protocol` (05-01)、`skill-as-references-not-skills` (05-01)、`cheap-layer-is-intentional-not-fallback` (05-17)、`default-bucket-as-deadlock` (05-06)、`bucket-time-asymmetry` (05-08)、`gate-as-physical-fuse-not-business-metric` (05-07)、`signal-without-judgment-needs-live-consumer` (06-09)、`snapshot-as-immutable-archive-not-single-file` (05-19)、`action-type-over-aggressiveness` (04-21)。
 
@@ -204,6 +205,7 @@
 - `reversibility-not-permission` (05-06) — 权力分层的正确轴是可逆性不是"能不能做"
 - `trust-is-the-only-irreversible-org-asset` (06-11) — 组织唯一破坏即永不回滚的资产是成员信任，在可逆性轴最远端；"采集目的未定义"才是真 showstopper
 - `isolation-key-goes-in-the-identity-free-half` (07-31) — 复合 key 维度不等价：新隔离粒度默认编进不进下游身份系统的那半（例外：新粒度即身份边界时反向）；判据 = 选消费闭包最小的轴；翻面 = 最小闭包轴对身份侧消费面不可见须单独结算 ← `network-cannot-cut-what-shares-tuple` 内部精化
+- `document-merge-is-a-trust-set-union` (08-14) — 文档合并决策（DRY/便利帧）同时是静默的信任域合并：权威 reader 实际信任级 = 最弱写者；目录粒度下文件是最小信任量子；修法收敛为让权威凭据成为弱写者铸不出之物（按信任级拆存储 / 服务端持钥签名），in-band 格式标记不在此列【前提：隔离粒度 ≥ 文件 + reader 无密码学验签】← 05-19 三滴各供半边（deploy-decision reader 轴 / network-cannot-cut 粒度刀 / security-claim 凭据形态），净新增 = 触发侧帧（合并决策不像安全决策）
 
 ## F9 治理机制工程 —— tripwire、授权、抽取纪律
 
@@ -468,6 +470,8 @@
 | 200 | backfill-is-the-channels-native-act-not-a-decision | 08-11 | V | 存量回填消解为通道原生动作 + 变化频率×违约响亮度选型判据（频率轴净新增）；presence-benefit(#192) 存量回填维补全；F7 展开；08-11 工作模式候选（cg-platform 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（末句全称降单案预判 / AUTH_PAGE 证据改传导口径） |
 | 201 | monitoring-is-never-repaired-only-relocated | 08-12 | V | 航空/警报工程史证据域首开（essence 双卷 alarm/TCAS/航空轴零命中）——监控存活解=搬迁棘轮（终格移除人面）+ 信任根体系无终格的结构不对称 + PPV 崩塌区外推；#196 领域级后件、#197 历史下场补全；F5 展开；08-12 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 跨域锚拆出单域框架 / E2 前提补「修复」窄定义堵二分穷尽性 / E3 谱系补 05-19 搬迁前提极限形态） |
 | 202 | counterfeit-the-watched-world-not-the-watcher | 08-13 | V | 人因部署证据域首开（TIP/钓鱼/VAT/golden set 四轴零命中）——监控第二类存活解=伪造被看守世界的统计（与 #201 搬迁并列）+ 判据非知识（载荷=流行率×地真反馈）+ 可拦截性闸门；08-10「失败暴露」部署存活记录补口；F5 展开；08-13 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 核心句焊点拆除「造回」降「向…推」/ E2 前提补跨域等同 + TIP 剂量错位 / E3 探索档 golden set 直引补源） |
+| 203 | retiring-a-dead-mechanism-orphans-no-one-who-lives-elsewhere | 08-14 | V | 拆除方向三分处置表（安家/归位/没活过）+「死触发⇒活约束另有因」演绎门控（帧新：挂载点/登记处/住所 essence 双卷零命中）；anchor-value(06-01) 拆除方向逆向应用、dormant-rule(08-05) 同对象域分工；F7 展开；08-14 工作模式候选（cg-platform §11 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（量词改前提门控 / 前提补机制死亡证据 / 证据补 cg-ppt 反例 / 判据补传感器安家支 / 谱系补 dormant-rule） |
+| 204 | document-merge-is-a-trust-set-union | 08-14 | V | 触发侧帧净新增（信任域合并藏在不像安全决策的 DRY 合并里——F8 十三滴 + 08-11 授权帧滴均无先例）；05-19 三滴各供半边（reader 轴 / 粒度刀 / 凭据形态）；F8 展开；08-14 工作模式候选（keith-mcp mailbox 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（「唯一修法」收敛纳签名同族 / 前提补验签半句 / 谱系标继承 vs 净新增） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

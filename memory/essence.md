@@ -182,3 +182,17 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 制度化存活有一道可拦截性闸门：合成正例无害且人的输出是注入方可拦截的标记才许静默入流；输出接不可逆动作的领域被同意书与模拟器挡出——离开真实工作流即拆掉判据修复的现场性（08-10「练习挪不动」的候补机制根源）。
 【前提：判据机制强形态限实验室视觉搜索核心（真实 TSO 群 d′ 亦随流行率动）；载荷公式反馈半边为 Wolfe'07 单实验对且 Exp6/7 混杂反馈与流内插入两变量；「候补机制根源」为 gg 跨域等同非实证；TIP 运营内加热器收益无在场对照（实证最强用途是测量），且部署流行率 ~2% 仍处实验室高漏检区、已证修复剂量为 50% 突发+反馈——「造回能存活区间」未被任何部署参数直证；「注意非知识」终点均为模拟沦陷率；反噬限自愿式嵌入培训；VAT 自报；闸门为 gg 跨域归纳（各域文献互不引用）；AI 审计队列 TIP 形态 + 注入吃审计预算为 gg 外推未实测】
 （谱系注：`monitoring-is-never-repaired-only-relocated`(08-12) 的并列解补全——搬迁改人的位置、本滴改人看到的统计，两解均不碰人本身；08-10「失败暴露」参数的部署存活记录补口 + 08-11「在场未指向人类节点」的可行性半边。锚 = Wolfe'07 Exp6/7・Lain'22 摘要〔主会话亲核〕/ Van Wert d′・Lain'22 正文 3593v3087・Ho'25 2%・Evans'13 30%v12%・VAT 74→18.9s・EU 2015/1998・GAO 9/11 关停〔子代理原文级〕。档 explorations/2026-08-13，验证关 PASSED-WITH-EDITS 三修采纳。）
+
+## 2026-08-14 / 工作 / retiring-a-dead-mechanism-orphans-no-one-who-lives-elsewhere
+
+拆除死机制时「寄生约束失去挂载点」的真空焦虑是幻觉——死触发激活不了任何东西：约束若真活着，恰因它早有别的激活现场（骨架空槽 / 已存在的契约条目 / 必然动作流）；规范文字只是登记处，不是住所。
+判据：拆除前逐条问「它现在实际被什么激活」——答案是「被要拆的那个机制」的才需要安家（传感器/哨类恒落此支，走重瞄非裸删），答案在别处的直接归位即可；找不到新挂载点 ≈ 它本来就没活过。
+【前提：被拆机制本身有实测死亡证据（真实触发≈0）——拆仍在活跃触发的机制时寄生约束确会失去挂载点，本滴不适用；且各约束已运行一段时间、有实测激活证据可查，全新约束无历史不适用】
+（谱系注：`anchor-value-in-activation-not-in-content`(06-01) 拆除方向逆向应用；`dormant-rule-first-light-is-a-retrial-not-a-debt-call`(08-05) 同对象域分工——那滴管首接检验器的重审，本滴管拆除时乘客分诊；`tripwire-disarm-needs-relocated-sensor-not-deletion`(06-15) 为安家支既有算子；`backfill-is-the-channels-native-act`(#198) 登记处 vs 住所同谱系。锚 = cg-platform §11 案：阶段切换 0/25 真实发生（死）、PRD 五条 6 prod 仓实填 61–160 行（活，住模板骨架；占位 grep 较粗，cg-ppt 反例 prod 开启含 7 处占位——住所在场≠强制执行，故配传感器重瞄）、不可逆清单住所 = §0 契约 5 已存在。档 reflections/2026-08-14_cgplatform-stage-retirement-verdict.md，验证关 PASSED-WITH-EDITS 五修采纳。）
+
+## 2026-08-14 / 工作 / document-merge-is-a-trust-set-union
+
+把两份文档合并成一份的决策（DRY / 便利 / 「两件事一起干」帧）同时是一次静默的信任域合并：合并文件的写者集 = 各角色写者集的并集，任何从该文件读出权威（以某人名义投递 / 授权语气）的 reader，其实际信任级 = 最弱写者。
+目录粒度隔离下文件是最小信任量子，「按段分权」在 seatbelt/guard 这类隔离层上物理不存在——权威读者与多信任级写者共文件时，修法收敛为让权威凭据成为弱写者物理铸不出之物：按写者信任级拆存储（写路径即凭据，本案取），或服务端持钥签名（同族第二形态）；in-band 格式标记不在此列——任何写者都铸得出。
+【前提：隔离层最细粒度 ≥ 文件；文件承载会被机器读出权威的内容；凭据为内容层格式标记且 reader 无密码学验签——有验签时「信任级 = 最弱写者」不成立】
+（谱系注：净新增 = 触发侧帧——信任域合并发生在一个不像安全决策的合并决策里（F8 族 + 08-11 授权帧滴均无先例）；三从句为继承件：`deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 供 reader 轴与修法半边 / `network-cannot-cut-what-shares-tuple`(05-19) 供粒度刀半边 / `security-claim-as-physical-fact-not-injectable-grant`(05-19) 供凭据形态半边。锚 = monster keith-mcp mailbox 案：README「两件事一起干」+「手写一块同样生效」、parseMessages 全文件 matchAll（mailbox.mjs:234〔evaluator git 亲核〕）、Bash 目录内 exit=0 实证段级/工具级防御全失效；实际修复 = 投递挂点迁服务端私有 outbox.jsonl、通道写权归零〔evaluator 亲核〕。档 reflections/2026-08-14_keith-mcp-mailbox-authority-store.md，验证关 PASSED-WITH-EDITS 三修采纳。）
