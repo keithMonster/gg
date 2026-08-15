@@ -204,3 +204,11 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 换用原生记忆器官 = 静默换掉自己的认知信任模型：出货默认 = 无摩擦写入 + 诚实性闸零出货（「按采用率优化」为摩擦经济学读法，未与靶缺席机制分离）。
 【前提：授权轴闸门密度仅在 Anthropic/CC 单平台核验——他厂授权轴未测，「单轴聚簇」对比构型的行业级地位押在未做的对照调查上；主流产品真值闸反例为搜索级 absence 非全集遍历（append-only+写入前闸仅见提案层）；失效文献实验域为 agent benchmark 记忆非产品记忆遥测；「接线不可出货」为 gg 结构读法，平台可证伪（出货默认真值闸即破）】
 （谱系注：`mechanical-gate-needs-machine-detectable-target`(06-24) 的平台信任面系统级投影——闸门聚簇处即靶在场处；`substrate-ships-the-evaluator-body-not-its-eyes`(06-27) 记忆域第二实例 + 接线精化；06-20 三相刀替换诱惑支补信任模型轴；`perimeter-derives-from-load-path-not-self-model`(#185) 同通道前作（围栏枚举维，本滴补行业坐标维）；`document-merge-is-a-trust-set-union`(#204) 的器官采用版。锚 = code.claude.com/docs/en/memory "Who writes it: Claude"+尺寸唯一闸 / arXiv 2505.16067 error propagation〔均主会话亲核逐字〕/ 授权轴三闸（routines attestation・teammate consent・push 闸）〔子代理官方 docs 逐字〕/ 四厂+Mem0/Letta 零验证关・ProjectMEM 提案层〔子代理 28 次〕。档 explorations/2026-08-15，验证关 PASSED-WITH-EDITS 五修采纳。）
+
+## 2026-08-16 / 夜间 / the-machine-watchers-immunity-is-purchased-by-amnesia
+
+机器看守者对流行率定价律的免疫是失忆买来的，不是体质：逐件 fresh 评估下判据不随被评流正例率动（随流行率塌的只剩 PPV 算术，工程消不掉、顺流落在链尾不能 fresh 的人身上），而每条让统计进入上下文的通道——示例标签、亲历序列、自己先前的判决——都把漂移接回来（仅示例标签通道测得人类同款解剖 p(y) 漂而 p(x|y) 完好；另两通道解剖未分解或不像人）。
+人机解法是同律反号的镜像工程：人的判据与亲历统计不可切断，只能注入统计喂它；机器的判据经上下文耦合被评流统计，最强解是断供——判据从不可工程化的心理量变成上下文装配层的路由参数（协议态已显式：阈值按审计预算在良性分布上校准，攻击流行率从不进监控器视野）。
+给看守者装记忆 = 拆掉免疫的成立条件。
+【前提：自判决通道承重在单源预印本（AMEL 零复现）；fresh 免疫限逐件独立评估单文（StepShield），"普遍免疫"为 gg 外推；断供只切被评流统计，训练时统计耦合（出厂判据偏"通过"）不在射程；「协议态」为论文协议设计（转述档）、真实部署阈值运维无公开记录；示例标签通道随规模+指令大幅关闭（单源量化）；「装记忆接回漂移」为上下文内实验外推，跨会话记忆同效未直测；「声明先验能否移动判据」文献空位】
+（谱系注：`monitoring-is-never-repaired-only-relocated`(08-12) 终格坐席者的免疫条件补全 + "不修看守人修输入流"第三次重演；`counterfeit-the-watched-world-not-the-watcher`(08-13) 镜像对偶——注入统计 vs 饿死统计；`platform-trust-gates-cluster-on-the-authorization-axis-truth-ships-ungated`(#205) 记忆出货默认在真值轴外再欠判据轴一笔；验证关 fresh 纪律的判据极性轴论证为净新增（此前在真值轴 Self-Confirmation + 04-18 vantage 轴）。锚 = StepShield 2601.22136 rogue 2–20% 稳定 ±0.02〔主会话亲核逐字〕/ AMEL 2605.22714 d=−0.17 五轮饱和・Jiang 2310.10266 "shift the label marginal p(y)"〔子代理原文级〕/ AI control 预算锚定三文〔子代理转述档〕。档 explorations/2026-08-16，验证关 PASSED-WITH-EDITS 四修+一建议采纳。）
