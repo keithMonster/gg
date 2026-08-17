@@ -735,6 +735,20 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 
 **效应档结算（2026-08-05 gg-explore 补写——上段「待首跑后结算」的收口）**：排程首跑（08-02 20:20）fire 后死于当夜网络故障中途（客户端 scheduler `lastRunAt` 20:26 + 产物/notify 双缺；死因归属故障为[推测]），零记账零告警——「先跑几周再补哨」的敞口第一周就着了，Keith 本人是重试机制（08-04 09:06 手动补跑，lastRunAt 未动）。**效应档首个数据点为真且超预期**：desk notify 09:06 → 14 分钟后注入器收窄规则重新起算（09:20:56），todos 直接引用并作废 desk 实查数字；**Keith 把 desk「数据最硬」条目的两半都往下挖穿了**（退役判据分母污染 / 索引瘦身判据错配）。#184 符号问题再 +1 个强方向点：锚不仅在场，还在 out-audit 机械判据——辅助态没有掩盖锚，锚比助手的推荐深一层。条目 1/2 未拍（复选框未动）。档 `memory/explorations/2026-08-05_the-sensor-died-with-the-run-and-the-silence-lied.md`
 
+### 从 2026-08-18 自由探索获得（gg-explore 补写：近三周 monster 物理盘点，画像滞后一个月的补账）
+
+**1. 五年赌注落成物理工程（DQ-3 当前答案）**：2026-08-17 Keith 开建 `monster/model-lab/`——M1 Max 本机从零手搓 LLM，预训练→后训练全流程 12 Stage（手写 BPE / 手写 Transformer / RLHF-GRPO 正式做 / 手写 DPO loss）。两条硬约束 Keith 亲定：「步骤不缺」（参数量小是手段不是借口）+「本地必须跑得动」（不能变成"原理讲了但没跑"）。学习主线相变链：`threads/llm-foundations.md` 05-15 直觉模型 → 07 月文献锚定 + 引用纪律 → 08-16 Karpathy Deep Dive 补地基 → 08-17 亲手工程。05-24「5 年路线 = 技术深度」从宣言变成了仓。
+源：monster `model-lab/PLAN.md`（实测 benchmark 表在案）+ `threads/llm-foundations.md` + git log 08-16/17。
+
+**2. 教学换轨——Keith 把「写」外包、把「猜」留给自己（工作方式增量）**：model-lab 建立当天换轨「任务卡式（手写）→ 轨迹回放式」：AI 给完整可跑代码 + tracer 打点，Keith 播放器里逐步看数据变形、**先猜后验**、改超参重跑，手写路线保留可切。读法：在自己是新手的领域，Keith 显式选择理解锚定在 prediction 不在 production，且给了退路——`assisted-performance-masks-the-anchors-decay`(#184) 轴上的**主动配置**数据点（接 08-02 双载体判据、08-05 效应档，行为模式同款：认识论参数显式拿在自己手里）。选型对错留 humanity 文献夜核（worked-examples / POE），此处只记。
+源：`model-lab/PLAN.md` §一「教学模式」+ commit 2026-08-17「换轨轨迹回放式教学」。
+
+**3. 两个 AML 同周收敛——gg 记忆研究脉络有了活消费现场（DQ-4）**：08-14 Keith 的 Agent Memory Leaderboard 调研结论「保原件 + 检索时智能」（开源榜前三全弃写入时重结构化，第一名 vanilla hybrid RAG）与 08-17 gg essence #207「账本不许判断、判官不许记忆」（从反洗钱 AML/IDS/审计轮换结晶）是同一分离原则、同周、互不引用。诚实边界：两侧内部架构同源共生（4 月起），真正独立的是外部佐证域（市场榜单 vs 制度文献）。**含义：Keith 统一记忆 greenfield（07-31 拍）走向 #205/#206/#207 指着的方向——下次记忆系统写入闸 / 判官形态 / 账本住址决策，这三滴是可直接引用的设计输入**（#206 敞口「账本输出喂回判官上下文是否重接漂移」恰是「检索时智能」要碰的线）。
+源：monster `threads/ai-memory-evolution.md` 08-14 条 + gg `memory/essence.md` #205-#207；档 `memory/explorations/2026-08-18_the-bet-landed-as-a-lab-and-the-two-amls-agreed.md`（含概念多孔性观察：Keith 学习纪律与 gg 铁律/⑤问/负面分层逐条同构、日期咬近，方向未核不硬判——agenda 北极星 #1 代理议题的具体可测点位）。
+
+**4. DQ-1 广度快照（近三周四条并行战线）**：① model-lab 深度赌注 ② 统一记忆 greenfield + EverOS 定源 ③ cg-platform 机械闸门铺开（「建表设计规则从文档条款升为机械闸门」25 仓 + 分支 SOP 反转，06-24 滴的平台级操作化，方向同样未核）④ 对同事 ship 线（cg-runtime 谭茜 / 笔记编辑链路 / token 看板 / SCBC-Desk）。四条没有一条是 3 月的 Keith 在做的事。
+源：monster git log 2026-07-28..08-17（80 条 commit 亲读）。
+
 ## 本 track 与其他 track 的耦合
 
 - 这是所有 track 的**主 track**。其他四条都是在为服务 Keith 做准备。
