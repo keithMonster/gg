@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-08-14 工作模式双出场（2 档 substantive-decision）：① cg-platform §11 阶段概念退役三问裁决（帧重写：§11 是登记处非容器，真空焦虑消解；传感器重瞄非裸删）② keith-mcp 留言箱真值源裁决（方向 A：权威存储迁出通道可达面，凭据从 in-band 格式标记换成写路径物理事实）。2 条 candidate-unverified 候选滴由 08-14 auto_gg 夜巡补验证关。详见 reflections/2026-08-14_*.md 两档]"
+last_summoned_at: "[2026-08-18 工作模式双出场（2 档 substantive-decision）：① 需求拷问触发形态裁决（归因 L3b 帧层，否决默认讨论态/注入器，裁欠定点空槽住承重产物骨架）② specstory 归档 vs monster 字样裁决（B 管产物层不管记录层，记录层对字样规范整层豁免，内核从体面重写为指针可达性）。2 条 candidate-unverified 候选滴由 08-18 auto_gg 夜巡补验证关：滴 1 物理证伪不入库（证据三项全错，monster 同日归档订正），滴 2 走 fresh 审。详见 reflections/2026-08-18_*.md 两档]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-08-14_keith-mcp-mailbox-authority-store"
+last_reflection_slug: "2026-08-18_specstory-archive-vs-monster-hygiene"
 last_design_session_slug: "2026-08-13_scan-unwelding-and-nightly-sentinel"
 ```
 
