@@ -144,6 +144,16 @@ status: active
 4. **⚠️ 跨域符号翻转（单源，未铸滴）**：Sebo et al.（HRI）机器 integrity 违约后道歉 > 否认，与 Kim 2004 人际结论方向相反——**此后引 Kim 2004 必须带域限定**。06-14 段用 Kim 当支柱之一的悬崖论证经此换柱存活（新柱 = 元分析级全体策略边际 + 策略耗竭）。不铸滴理由：刚引完"单点 HRI 显著效果被元分析稀释、疑发表偏倚"，转头给单点研究铸滴 = 当场表演发表偏倚。
 5. **对 gg 的含义**：诚实层自纠、verdict 留痕这些动作的价值不在"修复信任"（言语边际），在预防侧——让错误停留在 competence 类、不因隐瞒被发现而转入 integrity 类（gg 归纳，无直接实证，参归档卷 `confession-immunizes-against-repair` 的暗面警告：认错增观感 ≠ 修复发生）。
 
+### 自判模式切换的两只表都反装：学习科学线首开（2026-08-19 gg-explore 探索获得）
+
+对 monster/model-lab 08-17 教学换轨（手写 → AI 代码+先猜后验，「想手写时随时可切」）做文献夜核，humanity track 首次开学习科学证据域。三层结论：
+
+1. **换轨方向有元分析级 + 同构 RCT 支撑**：新手样例学习 g=0.48（Barbieri 2023）；Tucker et al. 2024（Learning & Instruction 91）与该设计几乎逐字同构——predict 组全面优于 produce（写码）组，对照组恰是被换掉的任务卡式。先猜后验 = Renkl 1997 anticipative reasoning（两种成功自我解释风格之一）的工程化，且预测收益与猜对猜错无关（Miller 2013）。
+2. **收益面 = 预测题覆盖面**：pretesting 增益高度特定于被预测知识点（specific g=0.54 vs general g≈0.04，2023 元分析）——没出题的步骤按 ICAP 退回 Passive/Active（看视频档）。
+3. **「随时可切」是全设计唯一结构性弱点**（→ essence #209）：expertise reversal（Tetzlaff 2025 元分析：高先验 d=−0.428）给回放模式定了保质期；正确过渡是渐进淡出（completion problems——skeleton/ 已在仓，被接成备选而非关卡）；而自判切换的两只表同向反装——费劲被读成无效（Kirk-Johnson 2019，判断与长期学习反向）、流畅被读成已会（样例后自评高估）。修法 = 触发器外置到机器可判痕迹（quiz 正确率 / 周期补全关卡）。
+
+二阶咬合（对 keith track 的回喂）：这次换轨的成因机制（手敲费劲卡进度）与将来换回的阻断机制是同一个——同一只反装的表，这次恰好指对了方向。全档 `memory/explorations/2026-08-19_the-kept-fallback-reads-both-gauges-inverted.md`（含读写迁移线：Fowler 2022 把 Lopez 层级降级为相关性快照；目标缝「理解 vs 生成流利度」归 Keith 拍）。
+
 ### overreliance 半边：你不点开的指针是信任放大器（2026-08-09 gg-explore 探索获得）
 
 > 自由探索 `memory/explorations/2026-08-09_the-pointer-you-dont-click-is-a-trust-amplifier.md` 下沉。06-14 做了 aversion 半边（人对算法扣信任），本节补对偶轴：**人对 AI 产出的过度采纳与核验行为**——此轴全档此前零命中。essence: `trace-presence-substitutes-for-the-check-it-invites`（#195，PASSED-WITH-EDITS）。

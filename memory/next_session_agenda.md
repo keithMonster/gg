@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-08-03
+last_updated: 2026-08-19
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -42,6 +42,7 @@ last_updated: 2026-08-03
 - **NW 队列已退役（07-09 缩编）**：原 pending/blocked 追踪失效——终局曝光清单（16 条：pending 4 / blocked 7 / deferred 5）在 `monster/threads/night-watch.md` 2026-07-09 缩编执行条，愿捡人工捡不再跟踪。队列外实物提醒保留：**app-context-kit WIP untracked 防丢**（原 07-01-G2 附注）；06-25-G1 后缀键补记若捡起需订正（已被 supersede）
 - ~~**舰队画像层裸奔**（07-09 转记）：kebao-cc / ricky_cc 的 `@data/profile.md` 画像同构暴露~~ **已关闭 2026-07-28**（Keith 明示关注范围收窄至 gg + monster 两个工作区，`working_context.md` 关注范围节）。gg 侧「源：」出处门保留自用，不再作为待移植项跟踪
 - **06-08 follow-through**：codex-ops 4 点安全前置（两段式 mission / 安全注入 L3 机械锚 / AGENTS.md ops-brief / 修 brief L22 误述）+ baseline 3 thread 补（定版权独立性 / contractible 可 gate / golden 与 prompt 分开提交）
+- **model-lab 教学换轨文献夜核四条可用输出**（08-19 gg-explore，档 `explorations/2026-08-19_the-kept-fallback-reads-both-gauges-inverted.md`，essence #209）：① 换轨方向背书成立（元分析 + Tucker 2024 同构 RCT，对照组=原任务卡式），无需回退；② 预测题覆盖率是杠杆——pretesting 收益特定于被出题知识点（specific g=0.54 vs general 0.04），没出题的步骤退回看视频档；③ 「想手写时随时可切」建议改机器可判触发的周期关卡（每 Stage 收尾补全 skeleton 1-2 个核心函数，或 quiz 正确率过阈触发淡出）——自判切换两表反装（费劲读成无效/流畅读成已会），expertise reversal 给回放模式定了保质期（高先验 d=−0.428）；④ PLAN「亲手走完每一步」与契约「产出物是理解」之间的目标缝（理解型 vs 生成流利度）显式拍一次，决定写码成分要不要进课程——读/追踪+预测对理解型目标充分（purpose-first 谱系），对生成流利度不充分（Xie 2019 四技能分解，写成分现设计刻意不练）。gg 不代办，修不修归 monster owner
 - **inbox-desk 08-02 首跑死亡零记账 + 哨语义首点证伪**（08-05 gg-explore 物理核，档 `explorations/2026-08-05_the-sensor-died-with-the-run-and-the-silence-lied.md`）：排程首跑 fire 了（客户端 scheduler `lastRunAt 2026-08-02T12:26Z`）死于当夜网络故障中途，产物/notify 双缺——monster 全仓对此零记账（08-03 伤亡名单只收了有 trace 的 launchd 侧）。harness-map §二登记的哨语义「某周没收到飞书摘要 = 没跑」首个数据点即错（实际 = fire 后中途死；prompt 内 notify 排在 run 尾部，杀死 run 的失效同时杀死哨）。**最便宜订正**：① harness-map 该句改「= 没跑或跑挂中途（客户端 scheduler json `lastRunAt` 可分辨）」② 补哨时机 Keith 原拍「先跑几周看价值」——价值与敞口两问首周已同时有答案（产出被消费且被超越 / 敞口着了一次），现成锚点仍是他自己点的产物心跳（`check_client_fleet()` 挂回）。gg 不代办，修不修归 monster owner
 
 ### 设计模式待办

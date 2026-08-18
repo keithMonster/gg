@@ -226,3 +226,10 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 字样 / 写作类规范只管产物层（写作时可控），不管记录层（会话归档 / transcript / 日志——行为的忠实化石）。记录层里的违规字样是源头污染的历史读数而非新违规：治理读数 = 打碎温度计；正解 = 治产物层源头 + 给记录挂「历史快照，不代表现状」标注，错解（脱敏 / 清删 / 传感器直扫）把档案降格为宣传稿且拦不住语义层。字样传感器进记录层必然误报，须旁标豁免。
 【前提：记录层确实不默认加载（按需 grep）；豁免射程限写作规范，凭据脱敏不在内；「化石」定性限抽查过的最高频探测形态（43×路径 / 42×权限拦回）——transcript 头部行与 frontmatter 引文两形态未溯源，不作全称】
 （物理证据：monster cg-sxjianlong-sbox——specstory 117 文件含 monster 字样 vs 产物层治源后实扫 0（fresh 审原仓独立复核成立）；inbox-desk 周跑把化石报成「新增残留」几乎 git rm 掉 Keith 08-03 拍板的归档基建。谱系：essence append-only 公理 +「修归档断链 = 篡改快照」(H1) 同源——由 gg 记忆纪律外推为一般记录层治理律；与 hard-rule-welds(08-05) 异机制分工——本案是新层落进旧裁决空白区，非意图形态焊死；「旁标豁免」句为 tripwire-disarm(06-15) + sensor-exemption(07-21) 算子复用；monster canon.md:205 同案异轴。）
+
+## 2026-08-19 / 夜间 / the-kept-fallbacks-trigger-reads-both-gauges-inverted
+
+保留的退路不自动兑现——模式切换触发器住在主观感受里时，可读的两只表按同一方向反装：无辅助态的费劲被读成无效（实测判断与长期学习反向），辅助态的流畅被读成已会（样例后自评系统性高估）；退路在场，执行器带单向偏置，行使被体感延迟。
+修法不在劝自评诚实，在把触发器搬到辅助态自产的机器可判痕迹上（作答正确率阈 / 周期补全关卡）——样例后插一道练习题即显著修复自评精度（修监测轻于修模式，为 gg 判断非实测比较）。
+【前提：证据主体为 CS1/K-12 新手与实验室时程，专家学新域无直测；倾斜非死锁——自由选择下样例占比随学习自然下降、错后回流样例（Foster 2018），「反装」实证在读数层、执行器偏置为 gg 行为层外推；两核心线核验档位均为检索级（原文级 Tucker 2024 只撑换轨方向不撑两表命题），未在同一实验内合测】
+（谱系注：`fluency-as-inverse-signal`(05-31) 学习域实证补全 + 双侧化——那滴单侧「流畅反向」，本滴补费劲侧同样反向、两表合成收敛动力；`assisted-performance-masks-the-anchors-decay`(#184) 出口侧对偶——那滴管锚衰减无告警（观测缺失），本滴管退出触发器自身偏置；修法半边 = `mechanical-gate-needs-machine-detectable-target`(06-24) 落点 + `monitoring-is-never-repaired-only-relocated`(#201) 学习域第五次重演（心理量→机器量）。锚 = Kirk-Johnson 2019 Cog Psych 115 / Tetzlaff 2025 d=+0.505/−0.428 / Baars monitoring 群 + Foster 2018〔均检索级〕/ Tucker 2024 RCT 同构〔子代理原文逐页〕。档 explorations/2026-08-19，验证关 PASSED-WITH-EDITS 四修采纳。）
