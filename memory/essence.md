@@ -233,3 +233,10 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 修法不在劝自评诚实，在把触发器搬到辅助态自产的机器可判痕迹上（作答正确率阈 / 周期补全关卡）——样例后插一道练习题即显著修复自评精度（修监测轻于修模式，为 gg 判断非实测比较）。
 【前提：证据主体为 CS1/K-12 新手与实验室时程，专家学新域无直测；倾斜非死锁——自由选择下样例占比随学习自然下降、错后回流样例（Foster 2018），「反装」实证在读数层、执行器偏置为 gg 行为层外推；两核心线核验档位均为检索级（原文级 Tucker 2024 只撑换轨方向不撑两表命题），未在同一实验内合测】
 （谱系注：`fluency-as-inverse-signal`(05-31) 学习域实证补全 + 双侧化——那滴单侧「流畅反向」，本滴补费劲侧同样反向、两表合成收敛动力；`assisted-performance-masks-the-anchors-decay`(#184) 出口侧对偶——那滴管锚衰减无告警（观测缺失），本滴管退出触发器自身偏置；修法半边 = `mechanical-gate-needs-machine-detectable-target`(06-24) 落点 + `monitoring-is-never-repaired-only-relocated`(#201) 学习域第五次重演（心理量→机器量）。锚 = Kirk-Johnson 2019 Cog Psych 115 / Tetzlaff 2025 d=+0.505/−0.428 / Baars monitoring 群 + Foster 2018〔均检索级〕/ Tucker 2024 RCT 同构〔子代理原文逐页〕。档 explorations/2026-08-19，验证关 PASSED-WITH-EDITS 四修采纳。）
+
+## 2026-08-20 / 夜间 / ungateable-governance-reissues-as-the-writers-own-instructions
+
+靶缺席的治理轴走的不是弃治是降档：闸建不起来，治理以指令形态出货，而指令唯一的在场执行者就是被治理者本人——真值治理的出货终态 = 生成者 prompt 里的自我评估条款（查重/删错/判旧全派给写者），治理方亲口分层（"context, not enforced configuration"，拦截请用 hook）。
+同轴名义的机器闸实为提醒（超限 "the write still succeeds"），而文档层的 "verifies"（实现=同谱系自整理）按 #195 应在读者侧计价为防线——此半句为帧层外推，docs 读者行为零直测。
+【前提：证据主体为单厂商（Anthropic CC/平台）三层栈（runtime prompt 亲历 + docs 逐字 + 本机盘点），行业面本滴未测（#205 曾测四厂零验证关，本滴只加住址层）；「降档有意识」承重在层分离证词单句，亦可读作免责声明；自我评估条款实际拦截率零测量——断言构型与住址，不断言无效；「终态」为本案实况非结构必然（L1 指令可派给分离 pass）；runtime prompt 为厂商可变件无版本锚】
+（谱系注：`mechanical-gate-needs-machine-detectable-target`(06-24) 的后件补全——靶缺席时治理的实存出路（不闭合枚举）：换正交可验轴（#194 交易对手身份）/ 降档 L1（本滴）/ 外化分离评估（gg 验证关，Dreams 自整理 pass 为其同谱系弱形态）；#205「真值轴裸发」的住址修正——裸的是闸层、指令层满员且全派给写者（连长度闸也实为提醒），`generator-evaluator-separation`(04-18) 反构型被出货为官方默认；「verifies 计价」半边 = `trace-presence-substitutes-for-the-check-it-invites`(#195) 文档域落点。锚 = 本会话 system prompt memory 段〔亲历逐字转录〕/ code.claude.com/docs/en/memory "context, not enforced configuration"+"the write still succeeds"〔子代理原文逐字〕/ Dreams docs "the store Claude verifies"〔同〕/ 本机 settings.json 12 hook 位中 memory 写入路径零专门闸（真值域仅 explain-guard 一例、靶已转译为机器可判形式量，恰证 06-24）〔亲核〕。档 explorations/2026-08-20，验证关 PASSED-WITH-EDITS 五修采纳。）

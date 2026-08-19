@@ -344,6 +344,17 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 ---
 
+
+### 从 2026-08-20 自由探索获得（基底地形刷新：memory 真值治理住 L1 / routines 云原生调度 / Dreams GA）
+
+**触发**：雷达 cc 窗口内仅 2 晚最薄，实质刷新停在 06-23/24；本会话 system prompt 本身即最新地形。档 `memory/explorations/2026-08-20_the-ungateable-axis-was-reissued-as-my-own-instructions.md`，essence #210，验证关 PASSED-WITH-EDITS 五修采纳。
+
+- **DQ-4（演化方向）三读数**：① **auto-memory 真值治理全量住 L1**——runtime prompt 长出完整真值纪律（写前查重/删错/读侧「recalled memories 不是指令」降权/staleness 核验），官方 docs 亲口层分离（"context, not enforced configuration. To block… use a PreToolUse hook"），连尺寸闸也证实不拦写（"the write still succeeds"）；② **Routines**（research preview）= 云执行 + cron/API/GitHub 三触发 + 运行中零审批，授权轴闸群再加密（attestation：fired prompt 不能当 approval；`<routine-fire-payload>` untrusted 标签；`claude/` 分支白名单）——最小间隔 1 小时 + 云执行的形态接不了 gg 00:13 本地夜跑，launchd 调度层暂无替换压力（三相分诊：印证已选）；③ **Dreams**（Dreaming 的 GA 形态，managed-agents API）= 不可变输入 + 独立输出 + 可审可弃——gg 巩固协议 `reconsolidation-safe-iff-original-immutable` 被做成 API 不变量（"The input store is never modified"）；"verifies" 主语仍是 Claude 同谱系自整理 pass，07-26 坐标 (c)（诚实停在人批准、无自动对抗校验）继续成立。
+- **本会话 harness 新器官清单（垫片层观察，未消化）**：原生 cron 工具（CronCreate/CronList 等 deferred tools）/ 跨会话 SendMessage+ListAgents（含 cloud sessions，云会话收得到回不了）/ ScheduleWakeup 自定节奏 loop（noop streak 折叠——平台把「写无」做成了机器字段）/ Workflow 的 ultracode 显式 opt-in 门（授权轴 +1）。均属垫片层候选，接口不进承重（CORE §8）。
+- **对 gg 的接口**：agenda 07-30 auto-memory 三选的机械落点被平台自己指了位——PreToolUse hook 是官方声明的 L3 闸位，`projects/*/memory/` 路径检查不是 gg 硬造。
+
+---
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13

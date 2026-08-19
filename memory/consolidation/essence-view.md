@@ -251,6 +251,7 @@
 - `token-cost-collapse-widens-not-closes-the-judgment-gap` (07-23) — token 价降跨任务不均，硬推理是最慢曲线（Epoch：最易 ~900x/年 vs GPQA·PhD ~40x/年）；押注（非定律，反向电流可收窄剪刀）token→免费时舰队成本趋近"关键路径判断步数"这一个量——与 06-07 步数误差衰减是两个独立论证指向同一动作（减串行判断步），净增=深推理异步化成一等架构决策【前提：高降速域 + 延迟半只咬同步 agent】
 - `absorption-boundary-is-typicality-not-selection-sign` (07-11) — 基底吸收判断力的边界是群体可回收性（典型/特异），不是选择正负（RLHF 照吸负选择）；护城是带宽护城河，随交互带宽上升衰减；outrun 靠新前沿眼睛的生成速率不靠存量【前提：吸收走已出货单通道】
 - `platform-trust-gates-cluster-on-the-authorization-axis-truth-ships-ungated` (08-15) — 平台信任工程闸在授权轴（靶密布），真值轴全行业裸发（生成者自策展可变记忆为出货默认，失效构型已被同行业文献复现）；验证身体出货不接线到记忆写入口，接线是买家自装件；换原生记忆器官 = 静默换认知信任模型【前提：授权轴密度仅 Anthropic 单平台核验】
+- `ungateable-governance-reissues-as-the-writers-own-instructions` (08-20) — 靶缺席轴的治理不弃治而降档：以指令形态出货、唯一在场执行者=被治理者本人（真值治理终态=写者 prompt 里的自我评估条款，治理方亲口分层 "context, not enforced configuration"）；#205 住址修正（裸的是闸层、指令层满员，连长度闸也实为提醒）【前提：单厂商三层栈；断言构型与住址不断言无效；「终态」为实况非必然】
 
 （跨族连线：`toolset-is-the-changelog` 见 F3；`harness-self-identity` 见 F8；`fleet-canon-is-sedimentary` / `craft-ports-identity-doesnt` 见 F1；`substrate-ships-the-evaluator-body` 见 F4。）
 
@@ -482,6 +483,7 @@
 | 207 | the-ledger-must-not-judge-and-the-judge-must-not-remember | 08-17 | V | 聚合盲区证据域首开（聚合/aggregate/rotation/structuring/逐件 轴双卷零命中）——#206 断供的账单（免疫与失明同为一次断供两面）+ 三域独立收敛的付法（状态与判断分离：AML 强制账本+机械监测 / 2026 stateful monitor 机械聚类稀少升级 / audit partner 轮换映射读法）+ 判官记忆是旧错庇护所（Singer&Zhang 错报存活时长随任期增，「失忆重置检出力」仅 79% 信念零实证）+ 账本住址律（住检测器内=状态预算被攻击、住独立强制层=风险消除）；06-24 分层落点、07-03 watchdog 敞口显式不解；F5 展开；08-17 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1「才闭环」改弱让位 watchdog 敞口 / E2 住址律补二点归纳前提 / E3 庇护所单源+absence 档位入前提 / E4「最优应答」降档；两建议采纳：谱系补 07-03 与 #193 先声） |
 | 208 | authoring-rules-do-not-govern-record-layers | 08-18 | V | 管辖权切割 + 温度计帧净新增（记录层/归档/脱敏/化石轴双卷零命中）——写作规范射程止于产物层，记录层违规字样 = 历史读数；append-only「篡改快照」(H1) 纪律外推为一般治理律；F6 展开；08-18 工作模式候选（monster specstory 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（「全为化石」全称收窄〔transcript 头部行 / frontmatter 引文未溯源，82 vs 37 计数不符〕/ 谱系补 append-only 血缘 + canon.md:205 异轴分工）。同案孪生候选 judgment-rules-starve 物理证伪不入库（证据三项全错，见 reflections/2026-08-18_requirement-grill 档 candidate-refuted 记录） |
 | 209 | the-kept-fallbacks-trigger-reads-both-gauges-inverted | 08-19 | V | 学习科学证据域首开（worked example / 自评监测 / expertise reversal 轴双卷零命中）——自判切换双表反装（Kirk-Johnson 费劲误读 + Baars 流畅高估）+ 触发器外置修法；`fluency-as-inverse-signal` 双侧化、#184 出口侧对偶、#201 第五次重演；F5 展开；08-19 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1「执行器反接」降档单向偏置〔Foster 2018 行为层对冲〕/ E2 谱系补 #201 / E3 删「便宜一档」量级宣称 / E4 前提补两核心线检索级档位）。触发案 = monster model-lab 08-17 教学换轨「想手写时随时可切」 |
+| 210 | ungateable-governance-reissues-as-the-writers-own-instructions | 08-20 | V | 靶缺席轴治理降档律（06-24 后件补全：换轴 #194 / 降档 L1 / 外化分离评估三出路不闭合枚举）+ #205 住址修正（裸的是闸层、指令层满员且全派给写者、长度闸实为提醒）+ 04-18 反构型被出货为官方默认的实证；F11 展开；08-20 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 谱系编号订正 #194/#195 / E2 本机锚改写〔12 hook 位、explain-guard 为真值域转译闸恰证 06-24〕/ E3「计价为防线」补帧层外推标注 / E4 删「改」字去时间性暗示 / E5 出路枚举开放补第三条）。触发案 = 本会话 system prompt memory 段 + 官方 docs 层分离证词 |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 
