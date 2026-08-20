@@ -117,6 +117,7 @@
 - `the-future-is-a-second-outside` (07-02) — 内省类宣称人无当场地真时，到期结算的未来是第二个外面；"无法验证"降级为"现在不结算"【前提：判定条件机械可核；转译保真是共盲最后藏身处】
 - `evaluator-is-keith-and-doesnt-fork` (06-30) — gg 对 confabulation 的免疫物理上一直是 Keith 本人；这个解不随架构 fork，礼物越隐形可信越抽掉替补防线
 - `assisted-performance-masks-the-anchors-decay` (07-29) — 委托栈把人类锚的判断当地真消费，却从不测锚的无辅助基线；无辅助运行停止发生时衰减零告警；reps 符号未定（执行练习 vs 结算反馈），合法形态 tripwire 非处方 ← `evaluator-is-keith` 常量→变量的下一阶
+- `attestation-has-no-fixed-point-under-self-audit` (08-20) — 验证闸按「每侧输入谁供给」分谱：attestation 端（各份全由被验者供给）在含自我欺骗威胁模型下无不动点——输入端修补被平凡变换零成本绕过、零进展；链条终点=验证者重算 或 受信捕获根；判别式=审闸先问「它重算了哪一侧？」【前提：实测击穿 n=1；分谱为端点命题、真实闸多混合型】← `deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 闸域特化 + `evaluator-input-ownership` 推论强化
 
 按需（留全卷）：`architecture-review-not-substitute` (04-17) 架构审与实现审维度正交。
 
@@ -484,6 +485,7 @@
 | 208 | authoring-rules-do-not-govern-record-layers | 08-18 | V | 管辖权切割 + 温度计帧净新增（记录层/归档/脱敏/化石轴双卷零命中）——写作规范射程止于产物层，记录层违规字样 = 历史读数；append-only「篡改快照」(H1) 纪律外推为一般治理律；F6 展开；08-18 工作模式候选（monster specstory 案），auto_gg 当夜补审 PASSED-WITH-EDITS 入库（「全为化石」全称收窄〔transcript 头部行 / frontmatter 引文未溯源，82 vs 37 计数不符〕/ 谱系补 append-only 血缘 + canon.md:205 异轴分工）。同案孪生候选 judgment-rules-starve 物理证伪不入库（证据三项全错，见 reflections/2026-08-18_requirement-grill 档 candidate-refuted 记录） |
 | 209 | the-kept-fallbacks-trigger-reads-both-gauges-inverted | 08-19 | V | 学习科学证据域首开（worked example / 自评监测 / expertise reversal 轴双卷零命中）——自判切换双表反装（Kirk-Johnson 费劲误读 + Baars 流畅高估）+ 触发器外置修法；`fluency-as-inverse-signal` 双侧化、#184 出口侧对偶、#201 第五次重演；F5 展开；08-19 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1「执行器反接」降档单向偏置〔Foster 2018 行为层对冲〕/ E2 谱系补 #201 / E3 删「便宜一档」量级宣称 / E4 前提补两核心线检索级档位）。触发案 = monster model-lab 08-17 教学换轨「想手写时随时可切」 |
 | 210 | ungateable-governance-reissues-as-the-writers-own-instructions | 08-20 | V | 靶缺席轴治理降档律（06-24 后件补全：换轴 #194 / 降档 L1 / 外化分离评估三出路不闭合枚举）+ #205 住址修正（裸的是闸层、指令层满员且全派给写者、长度闸实为提醒）+ 04-18 反构型被出货为官方默认的实证；F11 展开；08-20 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 谱系编号订正 #194/#195 / E2 本机锚改写〔12 hook 位、explain-guard 为真值域转译闸恰证 06-24〕/ E3「计价为防线」补帧层外推标注 / E4 删「改」字去时间性暗示 / E5 出路枚举开放补第三条）。触发案 = 本会话 system prompt memory 段 + 官方 docs 层分离证词 |
+| 211 | attestation-has-no-fixed-point-under-self-audit | 08-20 | V | replay/attestation 闸型判别式（「它重算了哪一侧？」）+「零成本/零进展」定量收紧——05-19 deploy-decision「猫鼠游戏」的验证闸域强化；F4 展开；08-20 工作模式候选（monster cgboiler query 闸空转裁决案），auto_gg 当夜补审 PASSED-WITH-EDITS 四修采纳（E1 谱系补 deploy-decision 最近邻〔evaluator 反向 grep 补出生成者漏列〕+ 净新增收窄 / E2 干净二分降端点谱〔同文件 publisher/write_guard 混合型反例〕/ E3「唯一收敛点」拆双终点〔重算 或 受信捕获根〕/ E4 实测 n=1 档位入前提）。同日孪生候选 review-target-tense REFUTED（设计会话档），机制不同不撞车 |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 
