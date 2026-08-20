@@ -118,6 +118,7 @@
 - `evaluator-is-keith-and-doesnt-fork` (06-30) — gg 对 confabulation 的免疫物理上一直是 Keith 本人；这个解不随架构 fork，礼物越隐形可信越抽掉替补防线
 - `assisted-performance-masks-the-anchors-decay` (07-29) — 委托栈把人类锚的判断当地真消费，却从不测锚的无辅助基线；无辅助运行停止发生时衰减零告警；reps 符号未定（执行练习 vs 结算反馈），合法形态 tripwire 非处方 ← `evaluator-is-keith` 常量→变量的下一阶
 - `attestation-has-no-fixed-point-under-self-audit` (08-20) — 验证闸按「每侧输入谁供给」分谱：attestation 端（各份全由被验者供给）在含自我欺骗威胁模型下无不动点——输入端修补被平凡变换零成本绕过、零进展；链条终点=验证者重算 或 受信捕获根；判别式=审闸先问「它重算了哪一侧？」【前提：实测击穿 n=1；分谱为端点命题、真实闸多混合型】← `deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 闸域特化 + `evaluator-input-ownership` 推论强化
+- `replay-jurisdiction-begins-at-the-declared-input` (08-21) — 重算的管辖权始于被声明的输入：「什么算输入」的定义权留在被验者手里时两端同归于尽（完美 provenance 给带毒起点如实盖章、可复现生态逐字节复现后门）；修法=把链条起点搬进写入即公开留痕、可从权威源重算比对的对象（非写权排除）；判别式递归化——问完「重算了哪一侧」再问「从哪起算、起点谁供给」【前提：起点与权威源可分离；「同归于尽」分档（replay 半边实证 / attestation 半边反事实推演）；工业证据子代理核】← #211 递归补全（重算端点降为条件安全）+ `evaluator-input-ownership` 起点层实例
 
 按需（留全卷）：`architecture-review-not-substitute` (04-17) 架构审与实现审维度正交。
 
@@ -486,6 +487,7 @@
 | 209 | the-kept-fallbacks-trigger-reads-both-gauges-inverted | 08-19 | V | 学习科学证据域首开（worked example / 自评监测 / expertise reversal 轴双卷零命中）——自判切换双表反装（Kirk-Johnson 费劲误读 + Baars 流畅高估）+ 触发器外置修法；`fluency-as-inverse-signal` 双侧化、#184 出口侧对偶、#201 第五次重演；F5 展开；08-19 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1「执行器反接」降档单向偏置〔Foster 2018 行为层对冲〕/ E2 谱系补 #201 / E3 删「便宜一档」量级宣称 / E4 前提补两核心线检索级档位）。触发案 = monster model-lab 08-17 教学换轨「想手写时随时可切」 |
 | 210 | ungateable-governance-reissues-as-the-writers-own-instructions | 08-20 | V | 靶缺席轴治理降档律（06-24 后件补全：换轴 #194 / 降档 L1 / 外化分离评估三出路不闭合枚举）+ #205 住址修正（裸的是闸层、指令层满员且全派给写者、长度闸实为提醒）+ 04-18 反构型被出货为官方默认的实证；F11 展开；08-20 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS（E1 谱系编号订正 #194/#195 / E2 本机锚改写〔12 hook 位、explain-guard 为真值域转译闸恰证 06-24〕/ E3「计价为防线」补帧层外推标注 / E4 删「改」字去时间性暗示 / E5 出路枚举开放补第三条）。触发案 = 本会话 system prompt memory 段 + 官方 docs 层分离证词 |
 | 211 | attestation-has-no-fixed-point-under-self-audit | 08-20 | V | replay/attestation 闸型判别式（「它重算了哪一侧？」）+「零成本/零进展」定量收紧——05-19 deploy-decision「猫鼠游戏」的验证闸域强化；F4 展开；08-20 工作模式候选（monster cgboiler query 闸空转裁决案），auto_gg 当夜补审 PASSED-WITH-EDITS 四修采纳（E1 谱系补 deploy-decision 最近邻〔evaluator 反向 grep 补出生成者漏列〕+ 净新增收窄 / E2 干净二分降端点谱〔同文件 publisher/write_guard 混合型反例〕/ E3「唯一收敛点」拆双终点〔重算 或 受信捕获根〕/ E4 实测 n=1 档位入前提）。同日孪生候选 review-target-tense REFUTED（设计会话档），机制不同不撞车 |
+| 212 | replay-jurisdiction-begins-at-the-declared-input | 08-21 | V | #211 递归补全（重算端点降为条件安全：忠实性护不住起点供给权）+ 供应链工业域对照（SLSA L4 defer / xz tarball≠git / NixOS ship 后门 / 行业修法 tarball-git diff）——双终点整体确证 + 起点供给权缺口净新增；F4 展开；08-21 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS 四修采纳（E1「写不到」错位改「写入即公开留痕+可比对」〔Jia Tan 对 git 有完全写权〕/ E2 谱系补 evaluator-input-ownership 最强重复向量 / E3「同归于尽」拆档 / E4 摘要级引文去引号）。同夜孪生候选 replay-industrializes-capacity-not-consumption REFUTED（三滴域实例组合零净新增申报，复提路径〔跨主体轴〕存探索档） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

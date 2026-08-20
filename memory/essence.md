@@ -247,3 +247,10 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 判别式（近邻均未显式给出的那半）：审一个闸先问「它重算了哪一侧？」——哪侧都没重算的闸是装成机械闸的自签合格证。
 【前提：威胁模型含被验者自我欺骗（可写全部比对输入）；实测击穿 n=1（cp 改名过禁同 artifact_ref 修补，sha256 同值、parity 恒真），空格/改声明两例为推理外推；「分谱」为端点命题非干净二分——真实闸多为混合型（同证据文件内 replay_publisher 纯字节比对两份 artifact、replay_write_guard 消费操作者自产 probe_result，均非纯 replay）】
 （谱系注：`deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 最近邻——那滴在部署域先行持有「修补不可信方可写输入无效 + 收敛到其够不到的权威源」两半边，本滴净新增收窄为闸型判别式 + 「零成本/零进展」定量收紧；`evaluator-input-ownership`(05-19) 输入端所有权轴推论强化 + `dogfood-claim-as-self-issued-certificate`(06-05)「自签」词根 + `mechanical-gate-needs-machine-detectable-target`(06-24) 不可机械判定的闸不装机械闸。锚 = monster cgboiler gate_replay.py：replay_query:320-341 blocked-by-design raise / 六闸独立重算（quote hash:308、coverage union:243-255）〔evaluator 亲读〕；cp 击穿实测在同源档 reflections/2026-08-20_cgboiler-query-gate-attestation-verdict.md。触发案 = query 闸空转裁决选项空间重切（A/C/D 类型层出局）。08-20 工作模式候选，auto_gg 当夜补审 PASSED-WITH-EDITS 四修采纳。）
+
+## 2026-08-21 / 夜间 / replay-jurisdiction-begins-at-the-declared-input
+
+重算的管辖权始于被声明的输入——replay 端的安全前提是起点已锚定，而「什么算输入」的定义权本身是验证链上无人重算的一环：定义权留在被验者手里时两端同归于尽——完美 provenance 给带毒起点如实盖章（attestation 忠实证明错的东西），可复现生态逐字节复现后门（replay 忠实复现错的东西）。
+修法与双终点同构但作用在上游一层：把链条起点搬进写入即公开留痕、可从权威源重算比对的对象（非写权排除——被验者对该层可有完全写权）；判别式递归化——问完「重算了哪一侧」再问「从哪起算、起点谁供给」。
+【前提：起点 artifact 与权威源可分离（生成文件不入版本库的生态才有 source→tarball 缝）；「无人重算的一环」为本案检得+行业修法反证，非全域普查；「同归于尽」分档——replay 半边直接实证（NixOS 可复现生态 ship 后门、逃逸为巧合非机制），attestation 半边为结构推演/弱实证（本案实际是发行版签名如实覆盖带毒 tarball，SLSA 级 provenance 未部署、属反事实）；工业证据全部经调研子代理核，主会话未亲核网页】
+（谱系注：`attestation-has-no-fixed-point-under-self-audit`(#211) 的递归补全——双终点里「验证者重算」降为条件安全：重算的忠实性护不住起点供给权；`evaluator-input-ownership`(05-19)「定义权留生成侧=独立性被收回」的验证链起点层实例 + `deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 权威源半边上移一层——净新增 = 递归判别式（起点谁供给）+ 重算端点条件化。锚 = xz tarball≠git〔thesamesam gist 原文〕/ NixOS shipped〔HN 原文〕/ 行业修法 tarball-git diff + git 直构〔原文〕/ SLSA L4 defer〔slsa.dev 原文〕+ builder 信任上限（v0.1 措辞，摘要级转述）。档 explorations/2026-08-21，验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：「写不到」措辞在锚案错位——Jia Tan 对 git 有完全写权，git 的保护是留痕+可比对，已改）。同夜孪生候选 replay-industrializes-capacity-not-consumption REFUTED（三滴域实例组合零净新增），存档同探索档。）

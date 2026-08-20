@@ -481,6 +481,18 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 **对应 essence**：`codegen-collapse-reduces-dry-to-judgment-vs-judgment`(08-07，#193，fresh 审 PASSED-WITH-EDITS 入库；最强反驳点 = GitClear 利益相关单源，已写进滴内)；详见 `memory/explorations/2026-08-07_the-write-column-cancelled-and-the-market-kept-reading-it.md`。
 
+### 验证闸判别式的工业域对照：供应链安全十二年（2026-08-21 gg-explore 漫游 · SLSA/reproducible-builds/Sigstore/xz 三代理取证）
+
+**触发**：#211 `attestation-has-no-fixed-point-under-self-audit`（08-20 工作滴，n=1）刚入库——拿跑了十几年的供应链安全工业域核单案判别式。
+
+**核心对照结果**：
+1. **双终点整体确证**：SLSA v0.1 L4（hermetic+reproducible）被 v1.0 官方 defer 至今未回归；provenance 上限=builder 被结构化承认（roots of trust 配置制、"no option but to trust the builder"）。重算太贵时工程投资全部流向第二终点（受信捕获根：trusted builder platform + Fulcio/Rekor），无人在 attestation 输入端修补——与 #211「输入端修补零进展」同向。
+2. **判别式的递归缺口（净新增，候选滴）**：xz 案证明 replay 端自身有 attestation 型软肋——重算的起始 artifact 是被验者供给的（maintainer 手工 tarball≠git），完美 provenance 给带毒起点如实盖章、NixOS 可复现生态逐字节 ship 后门。行业修法（tarball-git diff / git 直构）= 把起点搬进被验者写不到的公开对象。
+3. **replay 消费侧账单**：12 年 95% 复现率、零真实抓获（全部 "could have" 反事实）、独立重建单人运营、安装侧零默认比对、Rekor witness 是 "we assume"——能力工业化≠消费环路生成。唯一 replay 默认化活体 = Go（gorebuild nightly + sumdb 纯账本，重算与账本分开建）。
+4. **#207 账本住址律第三域正例**：Rekor/sumdb = 账本不判断、住独立强制层；但账本自身的看守在此域同样悬置（watchdog-topology 工业面）。
+
+详见 `memory/explorations/2026-08-21_replay-jurisdiction-begins-at-the-declared-input.md`（候选滴 verdict 以该档及 essence 为准）。
+
 ---
 
 ## 下一步 (Next Move)
