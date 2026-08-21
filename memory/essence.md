@@ -254,3 +254,10 @@ AI control 把不信任工程化到每个不被信任的 AI 节点（蜜罐测�
 修法与双终点同构但作用在上游一层：把链条起点搬进写入即公开留痕、可从权威源重算比对的对象（非写权排除——被验者对该层可有完全写权）；判别式递归化——问完「重算了哪一侧」再问「从哪起算、起点谁供给」。
 【前提：起点 artifact 与权威源可分离（生成文件不入版本库的生态才有 source→tarball 缝）；「无人重算的一环」为本案检得+行业修法反证，非全域普查；「同归于尽」分档——replay 半边直接实证（NixOS 可复现生态 ship 后门、逃逸为巧合非机制），attestation 半边为结构推演/弱实证（本案实际是发行版签名如实覆盖带毒 tarball，SLSA 级 provenance 未部署、属反事实）；工业证据全部经调研子代理核，主会话未亲核网页】
 （谱系注：`attestation-has-no-fixed-point-under-self-audit`(#211) 的递归补全——双终点里「验证者重算」降为条件安全：重算的忠实性护不住起点供给权；`evaluator-input-ownership`(05-19)「定义权留生成侧=独立性被收回」的验证链起点层实例 + `deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 权威源半边上移一层——净新增 = 递归判别式（起点谁供给）+ 重算端点条件化。锚 = xz tarball≠git〔thesamesam gist 原文〕/ NixOS shipped〔HN 原文〕/ 行业修法 tarball-git diff + git 直构〔原文〕/ SLSA L4 defer〔slsa.dev 原文〕+ builder 信任上限（v0.1 措辞，摘要级转述）。档 explorations/2026-08-21，验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：「写不到」措辞在锚案错位——Jia Tan 对 git 有完全写权，git 的保护是留痕+可比对，已改）。同夜孪生候选 replay-industrializes-capacity-not-consumption REFUTED（三滴域实例组合零净新增），存档同探索档。）
+
+## 2026-08-21 / 工作 / replay-gate-collapses-to-attestation-when-inputs-expire
+
+replay 闸的类型不由它自己的代码决定，由它输入的保留契约决定：输入可被清理（无保留契约/有限窗口/仓外无主目录）的 replay 闸在时间轴上塌缩为 attestation——重算无对象时，receipt 只剩操作者当年的声明；且退化不需要对手，一条 .gitignore / 一次换机清理即静默完成。
+故 retention policy 不是运维参数而是闸型参数：问「证据保留多久」= 问「验证闸允许多久后降级为自签」；判别式补时间轴一问——「它重算的那一侧，十年后还在吗、谁守着？」
+【前提：闸语义 = receipt 为可重放计算的索引、每验现场重放（一次性验完即弃的闸不在射程）；「必然塌缩」为类型推演，实证 n=1（cgboiler 七闸；snapshot 绝对路径断裂例已修 90d045ef，作历史实弹引）】
+（谱系注：#211 的时间轴补全——在 #212 供给轴（对抗）之外加存续轴（非对抗，无攻击者也塌）；「谁守着」接 `watchdog-topology-lacks-a-top`(07-03)/#207「账本层看守不在射程」敞口首块实地。锚 = cgboiler world_model/contracts.py:565-568 每验现场重放 + DATA_RUNBOOK §1.5 保留契约同日按「类型层非参数权衡」落地〔evaluator 亲核〕。档 reflections/2026-08-21，验证关 PASSED-WITH-EDITS 采纳。）
