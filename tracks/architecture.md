@@ -493,6 +493,18 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 详见 `memory/explorations/2026-08-21_replay-jurisdiction-begins-at-the-declared-input.md`（候选滴 verdict 以该档及 essence 为准）。
 
+### DQ-1 续推：#193 前提条款首次保质期现场核——再生体制的门槛是 ABI 不是生成器（2026-08-22 gg-explore 漫游 · 双调研代理取证）
+
+**触发**：08-07 DQ-1 节第③问答案押在「体制归属是先决问题，现行体制（长命维护物）仍是主流」——这是 #193 前提条款的引用，不是核验。本次对该前提做专门现场核（essence 体系首次对某滴前提条款做保质期巡检，而非用滴时顺核）。
+
+**核验结果**：失效条件 2026-08 **未触发**，#193 续有效——「再生取代维护」是营销叙事生产默认、工程体制实验期：旗手 Tessl 的再生引擎 closed beta 九个月 + JS-only + "demonstrably non-deterministic"（主会话亲核逐字）；Spec Kit 实际形态 = 一变更一 spec 分支的一次性瀑布；Kiro 官方走增量 Sync + 人工审批；零生产案例声称代码免审出库；社区头部抱怨 = spec drift（债没消、多一层双维护）。
+
+**结构洞察（#214 入库）**：再生体制的成立条件不是生成质量，是重掷的治理——两条已知路：翻译确定（重掷不发生）或 ABI 式绑定面契约切割（冻结外界可绑之面、其余自由重掷）。编译器体制两者兼备（汇编之死的真实要件里 ABI 与确定性同等承重——编译器同样大量做欠定决策，只是消费者物理绑不到寄存器分配），spec-driven 两者皆未建成。**再生边界由绑定半径画，不由生成能力画**——生成器再变强，重掷未被治理则边界不动。#193 失效传感器由此改锚：看「覆盖绑定全集的 ABI 等价物」出现（机器可判行业事件），不看生成质量曲线。
+
+**档内停泊（不升滴）**：僵尸长命——AI 代码行级存活反而更长（HR=0.842, arXiv 2601.16809）但机制是所有权真空（"没人敢碰"），存活曲线测 ownership 不测 quality；「静默双读法」族维护域候补，第二源出现再议。
+
+**对应 essence**：`regeneration-needs-an-abi-not-a-better-generator`(08-22，#214，fresh 审 PASSED-WITH-EDITS 三修入库)；详见 `memory/explorations/2026-08-22_regeneration-needs-an-abi-not-a-better-generator.md`（含调研代理 Solvita 引文亲核查无此文的弃用记录）。
+
 ---
 
 ## 下一步 (Next Move)

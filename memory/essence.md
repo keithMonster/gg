@@ -261,3 +261,10 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 故 retention policy 不是运维参数而是闸型参数：问「证据保留多久」= 问「验证闸允许多久后降级为自签」；判别式补时间轴一问——「它重算的那一侧，十年后还在吗、谁守着？」
 【前提：闸语义 = receipt 为可重放计算的索引、每验现场重放（一次性验完即弃的闸不在射程）；「必然塌缩」为类型推演，实证 n=1（cgboiler 七闸；snapshot 绝对路径断裂例已修 90d045ef，作历史实弹引）】
 （谱系注：#211 的时间轴补全——在 #212 供给轴（对抗）之外加存续轴（非对抗，无攻击者也塌）；「谁守着」接 `watchdog-topology-lacks-a-top`(07-03)/#207「账本层看守不在射程」敞口首块实地。锚 = cgboiler world_model/contracts.py:565-568 每验现场重放 + DATA_RUNBOOK §1.5 保留契约同日按「类型层非参数权衡」落地〔evaluator 亲核〕。档 reflections/2026-08-21，验证关 PASSED-WITH-EDITS 采纳。）
+
+## 2026-08-22 / 夜间 / regeneration-needs-an-abi-not-a-better-generator
+
+再生取代维护的门槛不在生成质量，在重掷的治理：spec 欠定的语义在每次生成时被现场定夺，重生成即重掷这些决策，外界绑定上次掷点的一切（测试/集成方/存量数据/人的理解）随之断裂。体制成立只有两条已知路：翻译确定（重掷不发生）或绑定面契约切割（ABI 式——冻结外界可绑之面，其余宣布可自由重掷）——编译器体制两者兼备，spec-driven 现状两者皆未建成（spec 内嵌测试/验收是绑定面契约的胚胎，但既非确定翻译、也未冻结绑定全集，非确定性照穿），故再生只在绑定半径≈0 的代码上真实成立（一次性脚本），其余地带塌回双维护（spec drift 为社区头部高频抱怨〔调研代理综合，未见量化排名〕）。
+#193 失效传感器随之精化：触发信号不是生成质量曲线，是 spec→code 出现覆盖绑定全集的 ABI 等价物（非胚胎）。
+【前提：2026-08 工具地形快照（Tessl closed beta 单厂非确定、领域半衰期<1 年）；「两条路」为结构归纳完备性未证；「重掷→绑定断裂」为结构推演（原拟实证锚 Solvita 引文查无此文已弃）；工业证据主体经调研子代理，主会话亲核 Tessl 逐字】
+（谱系注：`codegen-collapse-reduces-dry-to-judgment-vs-judgment`(#193) 前提条款的现场核（2026-08 未触发，该滴续有效）+ 失效条件传感器化——`fermentation-without-detector`(05-15) 在滴前提层的应用，传感器锚在机器可判行业事件（`mechanical-gate-needs-machine-detectable-target`(06-24) 合规）。锚 = Tessl "demonstrably non-deterministic"〔主会话 WebFetch 亲核逐字〕/ Spec Kit 一变更一 spec 分支 / Kiro 增量 Sync / 零生产案例 absence / Thoughtworks Assess〔均子代理〕。档 explorations/2026-08-22，验证关 PASSED-WITH-EDITS 三修采纳（最强反驳：「皆无」被己方证据击穿一半——胚胎冻结面在场，已改「皆未建成」并钉清触发线）。）
