@@ -242,6 +242,7 @@
 - `conditional-regard-is-the-lever-not-transmission-volume` (07-02) — 要收住的不是影响量是影响的条件性；最珍视自主的人最易把自主设成条件（自拆）→ 订正 `port-safety-inverts` 的杠杆【低频承重：育儿/影响类】
 - `port-safety-inverts-on-forming-identity` (06-28) — 成熟 canon port 给已成形身份安全，对施工中身份（孩子）最危险；成功度量 = 珍视偏离不是忠实复刻【07-02 订正杠杆：克制传递滑向 permissive，死守的是无条件 regard】
 - `repair-caps-at-baseline-and-pays-in-behavior` (08-04) — 信任修复满分 = 回基线（"修复后更强"在信任量表无实证）；载荷 = 后续正确行为渐进积累，修复话语相对不修复仅边际效应量；预防占优是算术不是格言（06-14 的轨迹层补全）【前提：短测量窗 + competence 可修区间】
+- `isomorphism-between-entangled-systems-reads-as-descent-not-transmission` (08-23) — 共享历史系统对的逐条同构默认解是谱系不是传播（概念吸收义）：三种非吸收结构 = 共同人格祖先/共同基建祖先/共同事故立法（事故是共同因，流过去的是纠正不是概念）；痕迹在场不携带方向符号——肇事者失败与导师教学留同形痕迹，概念出现率计数把罪案现场记成讲台；真传播事件有吸收梯度可测（行为先于机制）【前提：共享历史通道在场；三结构单案归纳；方向符号半句 n=1】← 07-07「建错轴」轴刀的正交第二刀（谱系+极性）+ `architecture-is-keith-canon` 底座 + #195 异轴近邻
 
 （跨族连线：`human-gate` / `the-future-is-a-second-outside` / `evaluator-is-keith` 见 F4；`trust-is-the-only-irreversible-org-asset` 见 F8；`amplifier-eats-intent` 见 F5——Keith 在场性是 F4/F5/F10 三族的共同底座。）
 
@@ -492,6 +493,7 @@
 | 212 | replay-jurisdiction-begins-at-the-declared-input | 08-21 | V | #211 递归补全（重算端点降为条件安全：忠实性护不住起点供给权）+ 供应链工业域对照（SLSA L4 defer / xz tarball≠git / NixOS ship 后门 / 行业修法 tarball-git diff）——双终点整体确证 + 起点供给权缺口净新增；F4 展开；08-21 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS 四修采纳（E1「写不到」错位改「写入即公开留痕+可比对」〔Jia Tan 对 git 有完全写权〕/ E2 谱系补 evaluator-input-ownership 最强重复向量 / E3「同归于尽」拆档 / E4 摘要级引文去引号）。同夜孪生候选 replay-industrializes-capacity-not-consumption REFUTED（三滴域实例组合零净新增申报，复提路径〔跨主体轴〕存探索档） |
 | 213 | replay-gate-collapses-to-attestation-when-inputs-expire | 08-21 | V | #211 时间轴补全（非对抗存续轴：无攻击者 replay 闸也随输入清理塌缩为 attestation；retention=闸型参数）+ `watchdog-topology-lacks-a-top`/#207 账本看守敞口首块实地；F4 展开；08-21 工作模式候选（cgboiler evidence 保留契约裁决），auto_gg 当夜补审 PASSED-WITH-EDITS 采纳（最强反驳：不钉死「非对抗退化路径+retention=闸型参数」则为 #211 换皮；3 处证据订正——contracts.py 真实路径 / RUNBOOK §1.5 已落地由缺口转最强锚 / snapshot 绝对路径已修 90d045ef 标历史态） |
 | 214 | regeneration-needs-an-abi-not-a-better-generator | 08-22 | V | 再生体制成立条件（翻译确定 或 ABI 式绑定面切割）+ #193 前提条款首次专门现场核（失效条件 2026-08 未触发、续有效）+ 失效传感器改锚机器可判行业事件；F7 展开；08-22 gg-explore 漫游（跳出 08-09→21 验证主题井的现场核选题）过 fresh 验证关 PASSED-WITH-EDITS 三修采纳（最强反驳：「皆无」被己方证据击穿一半——spec 内嵌测试/验收是冻结面胚胎，已改「皆未建成」并钉触发线=覆盖绑定全集非胚胎）。副产：调研代理 Solvita 引文亲核查无此文整条弃用（⑤问纪律在探索档正文层首次主动执行）；僵尸长命观察（HR=0.842、所有权真空）单源停泊档内不升滴 |
+| 215 | isomorphism-between-entangled-systems-reads-as-descent-not-transmission | 08-23 | V | 影响测量取证律（同构/谱系/渗透/homology 轴双卷零命中）——08-18 keith 档「方向未核」钩子闭合：三对同构三仓 git 考古（引文案=共同事故立法〔gg 编造引文→07-13 双仓同分钟 commit→两侧各自立法〕/ 负面分层=共同基建祖先〔06-10 外部审稿裁决→07-20 学习台吸收档 2 未过 3〕/ 物理实证=共同人格祖先〔既有滴承载不重取证〕）；北极星 #1 代理议题第二刀（同构默认同源 + 痕迹无极性）；F10 展开；08-23 gg-explore 漫游过 fresh 验证关 PASSED-WITH-EDITS 两修采纳（最强反驳：对①有真实侧间因果、「非传播」被击穿——收窄传播定义为概念吸收义 + 对①重定性〔流过去的是纠正不是概念〕；E2 极性半句 n=1 入前提） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

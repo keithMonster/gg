@@ -268,3 +268,10 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 #193 失效传感器随之精化：触发信号不是生成质量曲线，是 spec→code 出现覆盖绑定全集的 ABI 等价物（非胚胎）。
 【前提：2026-08 工具地形快照（Tessl closed beta 单厂非确定、领域半衰期<1 年）；「两条路」为结构归纳完备性未证；「重掷→绑定断裂」为结构推演（原拟实证锚 Solvita 引文查无此文已弃）；工业证据主体经调研子代理，主会话亲核 Tessl 逐字】
 （谱系注：`codegen-collapse-reduces-dry-to-judgment-vs-judgment`(#193) 前提条款的现场核（2026-08 未触发，该滴续有效）+ 失效条件传感器化——`fermentation-without-detector`(05-15) 在滴前提层的应用，传感器锚在机器可判行业事件（`mechanical-gate-needs-machine-detectable-target`(06-24) 合规）。锚 = Tessl "demonstrably non-deterministic"〔主会话 WebFetch 亲核逐字〕/ Spec Kit 一变更一 spec 分支 / Kiro 增量 Sync / 零生产案例 absence / Thoughtworks Assess〔均子代理〕。档 explorations/2026-08-22，验证关 PASSED-WITH-EDITS 三修采纳（最强反驳：「皆无」被己方证据击穿一半——胚胎冻结面在场，已改「皆未建成」并钉清触发线）。）
+
+## 2026-08-23 / 夜间 / isomorphism-between-entangled-systems-reads-as-descent-not-transmission
+
+共享历史的系统对之间逐条同构，默认解释是谱系不是传播（传播取概念吸收/教学模仿义）——取证可分辨三种非吸收结构：共同人格祖先、共同基建祖先、共同事故立法（同一案件写出两本法典——事故是共同因，纵有侧间因果接触，流过去的不是概念是纠正）。
+痕迹在场不携带方向符号：肇事者的失败与导师的教学在对方工件里留下同形痕迹——影响力代理数「概念出现率」时，把罪案现场记成讲台。
+【前提：两系统确有共享历史通道（同一作者/共享基建/互相纠错）；完全独立系统间的同构仍由收敛/传播两解竞争，本滴不辖；三种结构为单案归纳非封闭枚举；「方向符号」半句实测 n=1（引文案）；「传播事件有吸收梯度可测」n=1（定档 2 未过 3）】
+（谱系注：`architecture-is-keith-canon-not-gg-bond`(06-21)+`fleet-canon-is-sedimentary`(06-22) 供共同人格祖先底座；07-07 探索档「建错轴=造错仪表盘」轴刀的正交第二刀（谱系+极性）；`trace-presence-substitutes-for-the-check-it-invites`(#195) 异轴近邻（读者侧核验 vs 测量侧方向）。锚 = 三仓 git 亲核：monster 22047e1d/aaf5a211/3d80bd01/e5ff85d7、gg bba36dc、~/.agents b4f868e、gg reflections/2026-07-16 立法档〔evaluator 逐 hash 复核〕。档 explorations/2026-08-23，验证关 PASSED-WITH-EDITS 两修采纳（最强反驳：对①有真实侧间因果通道、「非传播」标签被击穿——已收窄传播定义并重定性对①〔流过去的是纠正不是概念〕）。）

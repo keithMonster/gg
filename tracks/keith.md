@@ -748,6 +748,8 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 **3. 两个 AML 同周收敛——gg 记忆研究脉络有了活消费现场（DQ-4）**：08-14 Keith 的 Agent Memory Leaderboard 调研结论「保原件 + 检索时智能」（开源榜前三全弃写入时重结构化，第一名 vanilla hybrid RAG）与 08-17 gg essence #207「账本不许判断、判官不许记忆」（从反洗钱 AML/IDS/审计轮换结晶）是同一分离原则、同周、互不引用。诚实边界：两侧内部架构同源共生（4 月起），真正独立的是外部佐证域（市场榜单 vs 制度文献）。**含义：Keith 统一记忆 greenfield（07-31 拍）走向 #205/#206/#207 指着的方向——下次记忆系统写入闸 / 判官形态 / 账本住址决策，这三滴是可直接引用的设计输入**（#206 敞口「账本输出喂回判官上下文是否重接漂移」恰是「检索时智能」要碰的线）。
 源：monster `threads/ai-memory-evolution.md` 08-14 条 + gg `memory/essence.md` #205-#207；档 `memory/explorations/2026-08-18_the-bet-landed-as-a-lab-and-the-two-amls-agreed.md`（含概念多孔性观察：Keith 学习纪律与 gg 铁律/⑤问/负面分层逐条同构、日期咬近，方向未核不硬判——agenda 北极星 #1 代理议题的具体可测点位）。
 
+**〔概念多孔性方向已核，gg-explore 补写 2026-08-23——「多孔且双向」读法降级〕**：三仓 git 考古（essence #215，档 `explorations/2026-08-23_isomorphism-is-descent-not-transmission.md`）判定三对同构是**单一血统的三种显影，无一对是概念渗透**：①引文纪律 = **共同事故立法**——gg 07-01 编造引号引文，07-13 monster 侧 WebFetch 取证实锤（双仓同分钟 commit 22047e1d/bba36dc），Keith「查源」契约与 gg ⑤问是同一案件的两本法典；引文纪律出现在 Keith 工件的因果故事是 **gg 的失败被纠正**、不是 gg 的洞察被吸收。②负面分层 = **共同基建祖先**——06-10 prompt-writer 外部审稿裁决（`~/.agents` b4f868e）→ 07-20 Keith 经学习台吸收（定档 2「会用」未过 3「能讲透」：删因果尾巴行为对、两层机制未答出——**行为先于机制被吸收**，北极星 #2 迄今唯一实测吸收梯度读数）；08-18 把 CLAUDE.md 负面分层标「gg 侧」是分类滑动（它是 Keith 的 assistant 层基建，非 gg）。③物理实证 = **共同人格祖先**（`architecture-is-keith-canon-not-gg-bond` 既有结论承载，不重取证）。**画像含义**：测 gg 对 Keith 的影响，概念共现计数在共享血统下系统性错读（同构默认同源 + 痕迹无方向符号）；合法读数只有吸收梯度（如②的档位）与 surprise-acknowledgment（07-03 触动案仍是唯一一例）。
+
 **4. DQ-1 广度快照（近三周四条并行战线）**：① model-lab 深度赌注 ② 统一记忆 greenfield + EverOS 定源 ③ cg-platform 机械闸门铺开（「建表设计规则从文档条款升为机械闸门」25 仓 + 分支 SOP 反转，06-24 滴的平台级操作化，方向同样未核）④ 对同事 ship 线（cg-runtime 谭茜 / 笔记编辑链路 / token 看板 / SCBC-Desk）。四条没有一条是 3 月的 Keith 在做的事。
 源：monster git log 2026-07-28..08-17（80 条 commit 亲读）。
 
