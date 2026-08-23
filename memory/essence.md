@@ -275,3 +275,11 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 痕迹在场不携带方向符号：肇事者的失败与导师的教学在对方工件里留下同形痕迹——影响力代理数「概念出现率」时，把罪案现场记成讲台。
 【前提：两系统确有共享历史通道（同一作者/共享基建/互相纠错）；完全独立系统间的同构仍由收敛/传播两解竞争，本滴不辖；三种结构为单案归纳非封闭枚举；「方向符号」半句实测 n=1（引文案）；「传播事件有吸收梯度可测」n=1（定档 2 未过 3）】
 （谱系注：`architecture-is-keith-canon-not-gg-bond`(06-21)+`fleet-canon-is-sedimentary`(06-22) 供共同人格祖先底座；07-07 探索档「建错轴=造错仪表盘」轴刀的正交第二刀（谱系+极性）；`trace-presence-substitutes-for-the-check-it-invites`(#195) 异轴近邻（读者侧核验 vs 测量侧方向）。锚 = 三仓 git 亲核：monster 22047e1d/aaf5a211/3d80bd01/e5ff85d7、gg bba36dc、~/.agents b4f868e、gg reflections/2026-07-16 立法档〔evaluator 逐 hash 复核〕。档 explorations/2026-08-23，验证关 PASSED-WITH-EDITS 两修采纳（最强反驳：对①有真实侧间因果通道、「非传播」标签被击穿——已收窄传播定义并重定性对①〔流过去的是纠正不是概念〕）。）
+
+## 2026-08-24 / 夜间 / freeze-the-sample-not-the-sampler
+
+非确定生成的治理在 #214 两条路外有第三格：不驯化采样器也不切绑定面，把掷点物理钉死（lockfile / 快照 / 生成代码入库 / journal），重掷收敛为离散、可 diff、可回滚的重钉事件——它不交付「再生取代维护」（维护换形为重钉差分审查），故为双维护与 ABI 之间的现存稳定吸引子；与双维护的分界 = 钉样本永不手写 / desync 响亮失败 / 审查集中重钉点。
+机械闭环程度 = 真源↔钉对账关系的机械可判程度：字节等同与约束满足可全机械（regenerate-and-diff / npm ci），约束欠定的生成只剩变更检测、「重掷仍有效」不可机械判——重钉闸必须住人审；重钉即重掷判断，diff 审查即判断落点。
+衰减律：重钉便宜过差分审查时，钉停止编码判断，退化为内容无关信任放大器。
+【前提：第三格不使「再生取代维护」成立——#193/#214 失效条件均未触发；「人审闸类型必然」为类型推演（Kiro 设计动机未证）；Hyrum 为机制解释非实测归因、「semver 独自承重被弃」为生态默认化事实的 gg 结构读法（无判死文献）；衰减律实证单源（Jest 生态）；journal 钉为会话内 memoization、保质期轴归 #213；证据分级 = Hyrum/sqlc 主会话亲核、Workflow 亲历逐字，npm/Rust/Jest/Kiro 子代理原文级，Fujita 摘要级】
+（谱系注：#214「两条路完备性未证」的第三格落定——补全非证伪，(c) 与路一之别 = 重掷离散化发生 vs 不发生（闸型不同）；三件套 = `presence-benefit-splits-replica-verdict`(#192) 机器缓存纪律迁非确定采样域（该滴前提限确定生成，净新增在重钉住判断）；机械可判轴 = `mechanical-gate-needs-machine-detectable-target`(06-24) 对账关系落点；衰减律 = `trace-presence-substitutes-for-the-check-it-invites`(#195) 词根钉域移植；**改判注**：08-22 验证关留档曾把 Kiro approval 读作 ABI 胚胎，本滴改判为第三格类型必然（改留档读法非 #214 正文，理由 = approval 冻结样本非绑定面）；Hyrum 承 06-10 轴不同。锚 = hyrumslaw.com + sqlc diff〔主会话亲核逐字〕/ Workflow (prompt,opts) 缓存+禁时钟保 resume〔亲历逐字〕/ npm@5 blog・npm ci "exit with an error"・Rust blog 2023-08-29・Jest docs〔子代理原文级〕。档 explorations/2026-08-24，验证关 PASSED-WITH-EDITS 五修采纳。）
