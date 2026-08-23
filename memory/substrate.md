@@ -5,10 +5,10 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.239 (Claude Code)
+cli_version: 2.1.241 (Claude Code)
 model_id: claude-fable-5（日间 2026-07-16 起；**夜间席位 07-28 起同为 claude-fable-5**——opus-4-8[1m] → fable-5，随 Keith 当日迁移 commit 6c11783「auto-gg / gg-explore 换 fable」，预期变更、与日间基底收敛，非哨捕获的静默更替）
-updated: 2026-08-22（auto_gg 夜巡：CLI 2.1.238→2.1.239 单级 patch bump，四相分诊 = 无承重影响的版本演进，快照更新即毕；DIFF 连续第 4 夜（234→239），皆常规节奏。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 08-21 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 8 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5，与快照一致）
-updated_prev: 2026-08-21（auto_gg 夜巡：CLI 2.1.237→2.1.238 单级 patch bump，四相分诊 = 无承重影响的版本演进，快照更新即毕。工具表两轴自核：常驻 11 项与 08-20 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 7 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续。夜间 model_id 自核 claude-fable-5，与快照一致）
+updated: 2026-08-23（auto_gg 夜巡：CLI 2.1.239→2.1.241 双级 patch bump（240 未经本席位），四相分诊 = 无承重影响的版本演进，快照更新即毕；DIFF 连续第 5 夜（234→241），皆常规节奏。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 08-22 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 9 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5，与快照一致）
+updated_prev: 2026-08-22（auto_gg 夜巡：CLI 2.1.238→2.1.239 单级 patch bump，四相分诊 = 无承重影响的版本演进，快照更新即毕；DIFF 连续第 4 夜（234→239），皆常规节奏。工具表两轴自核：常驻 11 项与 08-21 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 8 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续。夜间 model_id 自核 claude-fable-5，与快照一致）
 
 **fable5 窗口批注订正（2026-07-16，替换 07-10 原批注）**：07-09~12"限时窗口、把 Fable 当外部工具、非基底更替"的定性已被 07-16 日间实测推翻。原批注"窗口关闭后随 playbook 归并一起删"作废；playbook（`memory/fable5_window_2026-07-09_playbook.md`）**保留**——4 项窗口任务已全部消费（NW 回审 07-09 / 换基底认证 07-08 run / 北极星轴 07-10 探索档 / 视图蒸馏 07-09），其 Fable prompt 规范段随基底回归转为活参考。
 
