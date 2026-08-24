@@ -505,6 +505,16 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 **对应 essence**：`regeneration-needs-an-abi-not-a-better-generator`(08-22，#214，fresh 审 PASSED-WITH-EDITS 三修入库)；详见 `memory/explorations/2026-08-22_regeneration-needs-an-abi-not-a-better-generator.md`（含调研代理 Solvita 引文亲核查无此文的弃用记录）。
 
+### DQ-1 续推：#214 敞口落定——冻结样本不冻结采样器（2026-08-24 gg-explore 漫游 · #216 入库；auto_gg 补写 2026-08-24）
+
+**触发**：08-22 节结构洞察自带显式敞口——「两条已知路为结构归纳完备性未证」。两夜后拿工业史现成反例群（lockfile / 快照 / 生成代码入库 / Workflow journal）去撞，撞出第三格。
+
+**结构洞察（#216 入库）**：非确定生成治理存在第三格 (c) **掷点钉死**——重掷照常发生，但收敛为离散、可 diff、可回滚的重钉事件；与 (a) 翻译确定、(b) ABI 绑定面切割构成三格。第三格**不交付「再生取代维护」**（维护换形为重钉差分审查），故 #193/#214 均续有效——它是双维护与 ABI 之间的现存稳定吸引子。类型学主刀：**机械闭环程度 = 真源↔钉对账关系的机械可判程度**（字节等同 / 约束满足全机械——sqlc diff、npm ci；约束欠定只剩变更检测，重钉闸必须住人审）+ 衰减律（重钉便宜过差分审查时钉停止编码判断——Jest 盲快照）。机制根 = Hyrum's Law（消费者绑样本非契约面，semver 之上全生态默认加钉；主会话亲核逐字）。
+
+**对本节 08-22 留档的改判**：08-22 验证关曾把 Kiro 的 Sync + 人工 approval 读作「ABI 胚胎 / 传感器按字面部分触发」——本帧下解除：那不是 ABI 等价物在长，是 **lockfile 等价物在长**，人审 approval 是第三格在约束欠定生成器上的类型必然形态（〔类型推演，Kiro 设计动机未证〕）。#193 失效传感器锚点（「覆盖绑定全集的 ABI 等价物」出现）不受影响。
+
+**对应 essence**：`freeze-the-sample-not-the-sampler`(08-24，#216，fresh 审 PASSED-WITH-EDITS 五修入库；最强反驳「第三格 = 路一分时复用 + #192 缓存搬运即零净新增」由闸型之别与 #192 前提限确定生成挡回)；详见 `memory/explorations/2026-08-24_freeze-the-sample-not-the-sampler.md`。
+
 ---
 
 ## 下一步 (Next Move)
