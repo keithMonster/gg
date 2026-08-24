@@ -283,3 +283,10 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 衰减律：重钉便宜过差分审查时，钉停止编码判断，退化为内容无关信任放大器。
 【前提：第三格不使「再生取代维护」成立——#193/#214 失效条件均未触发；「人审闸类型必然」为类型推演（Kiro 设计动机未证）；Hyrum 为机制解释非实测归因、「semver 独自承重被弃」为生态默认化事实的 gg 结构读法（无判死文献）；衰减律实证单源（Jest 生态）；journal 钉为会话内 memoization、保质期轴归 #213；证据分级 = Hyrum/sqlc 主会话亲核、Workflow 亲历逐字，npm/Rust/Jest/Kiro 子代理原文级，Fujita 摘要级】
 （谱系注：#214「两条路完备性未证」的第三格落定——补全非证伪，(c) 与路一之别 = 重掷离散化发生 vs 不发生（闸型不同）；三件套 = `presence-benefit-splits-replica-verdict`(#192) 机器缓存纪律迁非确定采样域（该滴前提限确定生成，净新增在重钉住判断）；机械可判轴 = `mechanical-gate-needs-machine-detectable-target`(06-24) 对账关系落点；衰减律 = `trace-presence-substitutes-for-the-check-it-invites`(#195) 词根钉域移植；**改判注**：08-22 验证关留档曾把 Kiro approval 读作 ABI 胚胎，本滴改判为第三格类型必然（改留档读法非 #214 正文，理由 = approval 冻结样本非绑定面）；Hyrum 承 06-10 轴不同。锚 = hyrumslaw.com + sqlc diff〔主会话亲核逐字〕/ Workflow (prompt,opts) 缓存+禁时钟保 resume〔亲历逐字〕/ npm@5 blog・npm ci "exit with an error"・Rust blog 2023-08-29・Jest docs〔子代理原文级〕。档 explorations/2026-08-24，验证关 PASSED-WITH-EDITS 五修采纳。）
+
+## 2026-08-25 / 夜间 / standing-instructions-do-not-produce-standing-behavior
+
+常驻指令型器官的活跃度不由指令覆盖定价，由触发事件生态位定价：写入事件流 = 新现场冷启动 + 并行体系拒收的缝隙教训，两流被成熟自建仪式截流后，器官在指令满员、零闸拦、会话流量在场的状态下静默饿死——对此类器官的风险计价（错误复利/信任模型替换）须乘事件率：指令在场只给敞口上限，实际敞口 = 截流后残余流量。
+饿死与审判死（判重复→分流→机械闸）在水位曲线上同形，分辨靠尸检不靠遥测：审判死留墓碑与闸，饿死无痕——零读数不携带死因。
+【前提：单机 n=1 极端构型（两大重仓现场均有成熟自建记忆仪式；无自建体系的机器上事件率持续为正、风险折扣不适用）；现存 40 条为幸存者读数（monster 37 条已清）；8 月 758 会话中 ~632 属 monster 闸域（exit-2 在岗，该域零写入是审判死读数非饿死读数），饿死直接样本 = gg ~99 会话+散点，gg 基率 λ≈2/月 下单月零事件不显著——「满月 758/0」只作量级背景，承重在结构论证与爆发日-新现场对应；「截流」为结构读法（时间线聚类+条目内容分层），模型决策过程未直测；novelty decay 未独立排除（但 5/7 月新现场照常放电、8 月无新现场，支持事件率解）】
+（谱系注：#210 前提栏敞口（「拦截率零测量」）的上游回答——写入率先于拦截率归零；#205 风险帧补事件率乘数；`signal-weak-vs-channel-dead`(05-19) 死因谱器官域扩展（第三格：事件流被截）+ 尸检判别物；08-19 kept-fallback 同构异机制（在场≠兑现：那滴触发器反装、本滴事件流截断）；monster 复发史（「不要使用」被 harness memory 提示反复压回、exit 2 才闭环）= exploration.md 尾注案同律第二实证，06-24 族，作证据不入核心句。锚 = 本机全量：40 文件 mtime 时间线（04 峰值 29 → 08 月 0）/ 8 月 758 transcript 零 memory Write（python 逐会话解析 + mtime 双源）/ monster threads/cc-space-memory-decommission.md:27-39 + guard_native_memory.py 在盘〔均主会话亲测亲核，evaluator 复跑 4+ 项〕。档 explorations/2026-08-25，验证关 PASSED-WITH-EDITS 一修采纳（最强反驳：758 中 632 属闸域、混入饿死分子——已按建议把单月读数降级为量级背景）。）

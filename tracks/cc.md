@@ -367,7 +367,7 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 ### 从 2026-04-13 首次真实决策（roadmap-priority）
 
-- 🔜 **CC 原生 AutoDream 的实际水位**（强开放问题）— monster 路线图里 L2 Session Search (#1) 的必要性完全取决于 AutoDream 能否覆盖"回忆上周做了什么"的场景。现状是黑盒。原计划阶段 0 观察 2 周内通过 monster `harness-engineering/analysis/cc-native-watermark.md` 产出 3 个可量化指标（真实触发次数 / 命中率 / 修复成本），该文件未建（路径已废弃）。这是 gg 第一次把"依赖 CC 原生能力"作为显式可证伪的观察项——**是否产生信号 = CC 原生是否值得依赖 = gg v2 sqlite 方案是否需要额外加强"不依赖 CC 原生黑盒"的设计**。观察通道待替代路径承接
+- ✅ **CC 原生 AutoDream 的实际水位**（强开放问题，2026-08-25 自由探索落定）— 本机全量遥测 + 双现场尸检（`memory/explorations/2026-08-25_starved-in-one-house-executed-in-the-other.md`，essence #217）：原生 auto-memory 全机 40 条，写入峰值 04 月（新现场冷启动件为主）、08 月满月零写入；**它从未承载过工作记忆层（31 条目无一条是工作历史），「回忆上周做了什么」100% 由自建体系（threads / reflections / git log）承载**——monster 05 月已显式退役 + exit-2 hook 机械拦（37 文件分流，`monster/threads/cc-space-memory-decommission.md`），gg 侧无闸自然饿死（生态位被 essence/tracks 仪式截流，仅截获 3 条 harness 机械教训缝隙件）。答案：**不依赖，且被两种死法双重证实**；gg v2 sqlite 方案无需为「CC 原生黑盒」设防——它在本机构型下不是竞争者。原观察指标（触发次数/命中率/修复成本）由本次遥测实质交付
 - 📐 **L2 Session Search (monster #1) 与 gg v2 sqlite 记忆层的技术同构**（已记入反思，此处补记到 track）— 两者都是"跨会话检索层"的技术实现，SQLite + FTS5 + 增量索引是同一套技术栈。**但它们的消费者不同**（monster 服务 Keith 所有日常工作 / gg 只服务自己的决策流），因此 First Contact 的硬约束"gg 与 monster 完全隔离"不允许合并。这条同构是"技术实现上可以互相学习"，不是"实现上应该合并"
 
 ### 从 phodal-spec-harness-ingest 设计会话（2026-04-13）
