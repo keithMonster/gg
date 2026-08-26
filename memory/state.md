@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-08-21 cgboiler evidence 保留契约裁决（工作模式，substantive-decision）：「保留多久」判为类型错误——artifact 寿命是 receipt 的类型属性，删 artifact = replay 闸降级 attestation；三裁决（仓内转正显式契约 / 永久保留、退役须过冻结变更闸 / 双传感器落 tripwire）+ snapshot_store 绝对路径实弹。候选滴当夜过验证关入库 essence #213。详见 reflections/2026-08-21_cgboiler-evidence-retention-contract.md]"
+last_summoned_at: "[2026-08-26 cgboiler 会议纪要归属裁决（工作模式，substantive-decision）：纪要判为「归属模态不同」非「缺归属」体裁，判据 = 「转写源文本明示的归属，粒度不变」双向禁令（禁上折伪精度 / 禁下折伪缺失），T1-T4 机械瀑布 + role/模态词表扩展（reject meeting 实体 / caveat 扩权 / 分账本三路）。候选滴 granularity-mismatch-forces-fabrication 标 candidate-unverified 交夜巡补审。详见 reflections/2026-08-26_cgboiler-meeting-minutes-attribution.md]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-08-21_cgboiler-evidence-retention-contract"
+last_reflection_slug: "2026-08-26_cgboiler-meeting-minutes-attribution"
 last_design_session_slug: "2026-08-20_cgboiler-world-model-brief-review"
 ```
 

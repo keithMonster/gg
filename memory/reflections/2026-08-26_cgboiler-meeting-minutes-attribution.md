@@ -65,3 +65,7 @@ status: substantive-decision
 2. 判据总性确认：四档 → 瀑布映射全由机械文本特征决定（占位符字面串 / 人数模式 / 名单在场），无逐条现场判断，RUNBOOK:443 满足。记录人覆盖 100%（normalize 缺 createdBy 即 raise）= 归属永不为零，这是「进」的地板。
 3. 新增机械附则：粒度标记扩为四值 roster_status（present / placeholder_unfilled / count_only / absent）——B 档「生产侧已自标缺失」是审计上有意义的区分，且占位符是字面串、机械可检；C 档基数进 qualifier（roster_size），**禁止**把「3 个未知人」造成匿名实体。
 4. 裁决 4 换靶：roster 普遍性已测毕，剩余最承重未测点 = **A 档 4172 份名单的人名对实体名册解析率**（脚本可全量跑：逐名 resolve，报逐名解析率 + 整单全解析率）；次点 = A 档名单是否混列席/抄送（语义题，抽样人读 ~30 份即可）。解析率若显著低，T2 大量滑向「部分解析 + 完整性标记」，查询价值贴现，但不变量与裁决不动。
+
+### 补审 verdict（auto_gg 2026-08-26 夜巡回写）
+
+候选滴 `granularity-mismatch-forces-fabrication` fresh 证伪审 **PASSED-WITH-EDITS 采纳入库**（essence #219，F6 展开 + 分配表行，反向引力核 MISS 无）。**最强反驳点**：候选骨架（两非法出口 + 扩受控形态集非豁免）系 #171 拆焊结构在归属轴的逐字级转译（本档裁决 1 自认「冲突真身 = #171」），且「只剩两种伪造」的完备性被本档裁决 3 当场反例——blocked 长驻（影子账本）是第三出口（停泊，非伪造）；修订以「被迫终态化」前提 + 「停泊长驻即坍缩为伪缺失」条款挡回。主要修订：① 净新增收窄为「粒度作为保真轴」半根轴（下折 = 伪缺失 = 伪造在双卷零命中，与 `curated-memory` 划界；上折半边 `terminus-walk` 05-02 有确定性轴先例）② 前提条款补齐（转写型证据账本 / 源粒度可判读 / 模态扩张须封顶 / n=1）③ 证据行号 evaluator 亲核订正（extractable 口径 20.3%→18.9% WORLD_MODEL_SCHEMA.md:387；RUNBOOK:443→DATA_RUNBOOK.md:484 行漂）。**诚实注**：原候选降级风险声明引用的 `unknown-not-none` 为幻影 slug（essence 双卷 + 视图零命中）；四档分布（50.2/30.1/8.8/10.9）仅存于本档、未独立复核，作署名锚不作硬事实。evaluator tool_use 12 次（Bash×10 + Read×2）全只读，派单者事后核毕，一行留此。

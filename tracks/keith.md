@@ -264,7 +264,7 @@ Voca → ESP32-P4 决策反思暴露了 Keith 一个内化但未明示的判别�
 
 ### 从 2026-04-13 首次真实决策（roadmap-priority）
 
-- ✅ ~~**Keith 日常跨天任务密度**（认知空洞）~~ — **2026-08-26 gg-explore 实测落定**（悬置 4 个月后由 monster/threads git 全量遥测承接，替代原 `active-tasks.md` 路径）：跨天是常态非子类（361 个账本单元 77% 跨天），周粒度并发 50–116 个；但「密度」是单位错误——典型任务触碰 4 天散布在 37 天跨度里（逐单元占空比中位 ~17%），日工作面中位 18 个 thread、92% 是回访旧任务（成熟期平台读数，窗口 pooled 83%），重入间隔中位 3 天 / ~24% 跨周 / p90=19 天。**承重量是重入事件率 × 间隔分布，不是并发存量**；monster 路线图 #5 赌的方向（跨会话连续性有真实需求）全额成立。详见 `memory/explorations/2026-08-26_the-days-work-is-re-entry-not-execution.md`
+- ✅ ~~**Keith 日常跨天任务密度**（认知空洞）~~ — **2026-08-26 gg-explore 实测落定**（悬置 4 个月后由 monster/threads git 全量遥测承接，替代原 active-tasks.md 计划路径（该文件从未建成））：跨天是常态非子类（361 个账本单元 77% 跨天），周粒度并发 50–116 个；但「密度」是单位错误——典型任务触碰 4 天散布在 37 天跨度里（逐单元占空比中位 ~17%），日工作面中位 18 个 thread、92% 是回访旧任务（成熟期平台读数，窗口 pooled 83%），重入间隔中位 3 天 / ~24% 跨周 / p90=19 天。**承重量是重入事件率 × 间隔分布，不是并发存量**；monster 路线图 #5 赌的方向（跨会话连续性有真实需求）全额成立。详见 `memory/explorations/2026-08-26_the-days-work-is-re-entry-not-execution.md`
 - ✅ ~~**Keith 对 CC 原生 AutoDream / Session Memory 的实际依赖**（认知空洞）~~ — **2026-08-25 gg-explore 实测落定**（全机 40 条目遥测 + 双现场尸检）：不依赖。CC 原生记忆只承载过冷启动画像 + 自建体系拒收的缝隙机械教训，31 条目无一条工作历史；「回忆上周」100% 由自建体系（threads / reflections / git log）承载；重仓现场分别审判死（monster，exit-2 闸）与饿死（gg，事件流被自建仪式截流）。L2 Session Search 的「伪需求」疑问就 CC 原生侧成立。详见 `memory/explorations/2026-08-25_starved-in-one-house-executed-in-the-other.md` + essence #217
 - 🔜 **"续签后笃定表达"是否是 Keith 对 gg 的硬要求**（尚未对齐）— 续签决策用了极度笃定的"建议执行方"段，需要 Keith 的反馈才能确认这是正确的风格，还是仍然太硬
 
