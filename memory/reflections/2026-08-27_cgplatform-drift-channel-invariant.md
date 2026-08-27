@@ -36,5 +36,13 @@ status: substantive-decision
 - `omission-failures-evade-event-driven-sensors`（07-28）：假绿分析的来源。
 - 对齐度：高，无冲突滴。
 
-## essence 候选滴（candidate-unverified，待夜巡/设计模式补跑 fresh 证伪审）
+## essence 候选滴（已补审，REFUTED 不入库）
 `register-the-check-not-the-verdict` — 登记处之争的真轴不是「建不建登记表」，是登记对象：登记裁决（事实快照）在持续写入的世界里必衰减为漂移债，登记检查（可执行判据）的维护机制就是运行本身——每次跑重新接触现实；推论：按需触发是此资产性的承重件，转常驻定时出现「全绿稳态」即相变回快照。【物理证据：cg-platform CLAUDE.md:116 合规清单漂 14 天（08-13 快照两条今不成立）vs drift_audit 5 维 2 个月无漂；相邻滴 `one-shot-invariant-decays`（那滴说宣告须绑维护机制，本滴说把宣告换成程序则维护即运行）】
+
+candidate-refuted: 净新增半句（「检查的维护机制就是运行本身」+ 按需/定时相变推论）被同仓物理记录正面击穿——cg-platform CLAUDE.md:129 明文记载该理由链当天已被 fresh 证伪改写；剩余「快照=漂移债」半句被既有滴完整覆盖，不足一滴（2026-08-27 auto_gg 夜巡补审）。
+
+**verdict 全文（2026-08-27 夜巡 fresh 证伪审，REFUTED）**：
+- 最强反驳点：① drift_audit 自身 `--probe-http` 死引用在可执行判据体内活了 **43 天**（fb1a7393 2026-06-15 引入 → 9611e25b 2026-07-28 移除，diff 自陈「从未实现」），比对照快照的 14 天长两倍——「维护即运行」等价于「维护率=运行率」，而按需工具运行率可连续为 0；② 反向同样顶翻：tripwire_check.py 71 传感器全挂夜跑定时、判据未集体腐烂（撑住的是 selftest 反向 case 集），「转常驻定时即相变」被整仓反例击穿；③ 当日 commit e2891b79「fresh review 抓出 6 处假绿/假红」——暴露判据漂移的不是运行，是独立对撞源。候选宣称的「drift_audit 5 维 2 个月无漂」被反向核实为不成立。
+- 重复/冲突：前半与 `one-shot-invariant-decays-under-live-append`(08-11) / `count-legitimacy-is-tense-not-accuracy`(07-09) 重复；推论与 `omission-failures-evade-event-driven-sensors`(07-28) 周期抽样合法出路极性相抵且无化解论证。
+- 重提名路径（evaluator 建议，留给日间/设计模式）：真净新增在「登记对象之争两侧都不自维护——唯一承重件是不共用同一错前提的独立对撞源，反向 case 与使用现场各守半边」（物理证据现成：43d vs 14d 反差 + 71 传感器反例 + 6 假绿）。复提须按验证关复提规则显式附本 REFUTED 记录。
+- evaluator 输入：候选全文 + 证据清单两条（宣称级）；自 grep 双卷含谱系注层 + agenda + candidate 标记全扫；tool_use 12 次全只读（Read + grep/ls/find/git log/git show），派单者已核，无写操作。
