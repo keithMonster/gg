@@ -347,3 +347,10 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 修复不是提仪式覆盖率，是捕获挂语义事件锚、仪式降为对账（WAL 写事发 / checkpoint 做巩固）——但 WAL 写手自身仍是常驻指令型器官，受 #217 触发生态位定价同律约束：不配机械闸即用细粒度仪式复染粗粒度仪式的病。
 【前提：单机 n=1；「有 diff 侧仪式常跑」无条件覆盖率读数（未测非已证）；蒸发直接样本 n=1（transcript b8aeca26）；52% 总覆盖率分母含 subagent 不承重】
 （谱系注：#217 `standing-instructions-do-not-produce-standing-behavior` × #220 `mutation-self-records-consultation-must-buy-its-trace` 双亲——反相位为二者合成推论，净新增 = 名义/事实触发漂移 + WAL/checkpoint 分工命名 + 仪式角色改派（末端仪式从捕获器降对账器）；修复半承 `omission-failures-evade-event-driven-sensors`(07-28) 三出路重组；2026-H1:141「蒸发 ≠ 没发生」先祖。档 reflections/2026-08-28_done-skill-split-ruling.md。验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：修复半句开出的药方正是诊断半句宣判死刑的那类器官——WAL 写手同受触发生态位定价，monster「纠正即落库」先例伴随机械闸而裸指令版会饿死；由自反限定补入挡回）。）
+
+## 2026-08-29 / 夜间 / the-principals-voice-is-a-default-not-a-credential
+
+多路复用后的控制通道上，归属信号按强度与消费时效反向路由：较强形态（单写者结构化归属声明，至多锚到内核验证 pid）住在实时授权判断点不可见的账本层，判断点收到的恒是最弱形态——多写者、带内、零认证的文本前缀公约；凭据被归档而不是被花费。
+投影内零标记默认继承委托人身份——身份轴 fail-open：归属错误的零成本方向是升格为 principal。
+【前提：单机 n=1 单 harness（Claude Code jsonl 2026-08 形态，信封字段厂商可变无版本锚）；信封层自身是 harness 单写者自报（#211 意义上的 attestation），外部根仅 verifiedPeerPid（64/61530 条 peer）；「isMeta=机器」为近似（含 Keith 源内容的包装条目）；「账本层」已证部分 = 不进模型投影，消费者普查未做（harness 运行时自身消费这些字段）；计数为仪器相对量（独立复核 4098 vs 3055，结构格 (false,true)=0 双仪器复现、计数格不复现）；「默认=principal」为行为公约未直证，「单向坍向」限零成本默认态方向（带错标记的降档错误需主动成本）】
+（谱系注：净新增 = 归属信号的强度×消费时效反向路由律（判断点恒收最弱形态，双卷零命中）+ transcript 归属结构首实测；`attestation-has-no-fixed-point-under-self-audit`(#211) 缺席命题（没人重算）旁的错寄命题——更强信号在系统内、被路由离开判断点；fail-open 半边 = `safe-default-by-whitelist-inversion`(05-19) 身份轴实例 + `harness-self-identity-preempts-injected-persona`(05-19) user turn 语义先例；`perimeter-derives-from-load-path-not-self-model`(#185)「帧才买审视」的归属层机制；#207 账本/判官分离的倒错实例（承重归属信号只住账本不进判官）。锚 = 61530 条 user message keyset 全量 {role,content} / origin.kind 三值 2375 human・528 task-notification・64 peer（verifiedPeerPid 内核根）/ 交叉表 (isMeta=false∧前缀自动)=0 双仪器独立复现 / 零前缀机器文本 3 条〔主会话亲测，evaluator 独立重算全部结构格〕。档 explorations/2026-08-29，验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：isMeta 系单写者自报、「不可伪造二分」降格后或塌 #211+whitelist 组合复读——由路由不对称双卷零命中挡回，二分已降为梯度）。）

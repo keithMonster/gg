@@ -223,6 +223,7 @@
 - `trust-is-the-only-irreversible-org-asset` (06-11) — 组织唯一破坏即永不回滚的资产是成员信任，在可逆性轴最远端；"采集目的未定义"才是真 showstopper
 - `isolation-key-goes-in-the-identity-free-half` (07-31) — 复合 key 维度不等价：新隔离粒度默认编进不进下游身份系统的那半（例外：新粒度即身份边界时反向）；判据 = 选消费闭包最小的轴；翻面 = 最小闭包轴对身份侧消费面不可见须单独结算 ← `network-cannot-cut-what-shares-tuple` 内部精化
 - `document-merge-is-a-trust-set-union` (08-14) — 文档合并决策（DRY/便利帧）同时是静默的信任域合并：权威 reader 实际信任级 = 最弱写者；目录粒度下文件是最小信任量子；修法收敛为让权威凭据成为弱写者铸不出之物（按信任级拆存储 / 服务端持钥签名），in-band 格式标记不在此列【前提：隔离粒度 ≥ 文件 + reader 无密码学验签】← 05-19 三滴各供半边（deploy-decision reader 轴 / network-cannot-cut 粒度刀 / security-claim 凭据形态），净新增 = 触发侧帧（合并决策不像安全决策）
+- `the-principals-voice-is-a-default-not-a-credential` (08-29) — 多路复用控制通道的归属信号按强度×消费时效反向路由：较强形态（单写者信封字段，至多内核 pid 锚）住在实时授权判断点不可见的账本层，判断点恒收最弱形态（多写者零认证文本前缀公约）——凭据被归档不被花费；投影内零标记默认继承委托人身份（身份轴 fail-open，归属错误的零成本方向是升格为 principal）【前提：单机单 harness；信封层自身系 harness 自报、外部根仅 verifiedPeerPid（64/61530）；「默认=principal」为行为公约未直证；计数为仪器相对量】← #211 缺席命题旁的错寄命题（强信号在系统内被路由离开判断点）；`safe-default-by-whitelist-inversion`(05-19) 身份轴实例 + `harness-self-identity-preempts-injected-persona`(05-19) user turn 先例；#185 帧才买审视的归属层机制
 
 ## F9 治理机制工程 —— tripwire、授权、抽取纪律
 
@@ -514,6 +515,7 @@
 | 223 | downstream-gate-is-upstream-sensor | 08-28 | V | 下游兜底闸 = 上游闸的低采样率失活存在性探针（非健康度读数），射程由下游灰度独立决定，双射程差集即新造假绿面积；omission-failures 出路一的衰减律刻画；F6 展开；cg-platform pre-commit 闸拓扑裁决产出，强版本经父会话施工读数证伪（commit 9ea6f72）后收窄，08-28 夜巡补审 PASSED-WITH-EDITS 两修采纳（最强反驳：真阳性半句前提泄漏——环境差异型下游报错击穿「报错必真」；同语义前提补入挡回） |
 | 224 | indirection-normalizes-data-not-behavior | 08-28 | V | 间接层收口止于数据面，行为面只有消费端在场分发物（代码/sidecar）够得到，分界升维为「远端中心门面 vs 消费端在场分发物」；control-flow-vs-fact-supply 同刀异域转译；F7 展开；cg-platform U1 身份间接层裁决产出，08-28 夜巡补审 PASSED-WITH-EDITS 四修采纳（最强反驳：service mesh 熔断正面击穿原「网络 vs 代码」分界——由升维吸收，Envoy 反例翻转为支持证据） |
 | 225 | capture-trigger-anticorrelates-with-irreplaceability | 08-28 | V | 末端仪式名义/事实触发漂移 × 免费留痕同变量供给 ⇒ 捕获覆盖与不可再生度反相（结构断言非统计律）；修复 = 事件锚 + 仪式降对账（WAL/checkpoint 分工），WAL 写手自反限定（#217 同律）；#217×#220 双亲合成；F6 展开；done skill 拆分裁决产出，08-28 夜巡补审 PASSED-WITH-EDITS 四修采纳（最强反驳：修复药方正是诊断宣判死刑的器官——由自反限定补入挡回） |
+| 226 | the-principals-voice-is-a-default-not-a-credential | 08-29 | V | 归属信号强度×消费时效反向路由律（凭据归档不花费、判断点恒收最弱形态）+ 身份轴 fail-open（零标记默认=principal）+ transcript 归属结构首实测（61530 条全量、origin.kind 三值、交叉表零例外）；F8 展开；08-29 gg-explore 漫游（keith track 流量遥测中撞出）过 fresh 验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：isMeta 系单写者自报、「不可伪造二分」降格后或塌 #211+whitelist 组合复读——由路由不对称双卷零命中挡回；「不可伪造凭据」降为梯度表述、「只有事后审计消费」收窄为「模型投影之外」） |
 
 **统计：进视图 V = 147｜留全卷按需 O = 33｜可归档 A = 6｜合计 186（2026-08-01 巩固刷新核定；#176–#186 逐滴补收与统计行漏更校正的注记链下沉 git log）。10 争议滴已由 gg 设计模式 2026-07-09 亲拍（裁决见 §④ + 本表理由列）；唯一归属变更 = #22 transparent-rewrite A→O。**
 

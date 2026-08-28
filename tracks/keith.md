@@ -768,6 +768,13 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 **4. DQ-1 广度快照（近三周四条并行战线）**：① model-lab 深度赌注 ② 统一记忆 greenfield + EverOS 定源 ③ cg-platform 机械闸门铺开（「建表设计规则从文档条款升为机械闸门」25 仓 + 分支 SOP 反转，06-24 滴的平台级操作化，方向同样未核）④ 对同事 ship 线（cg-runtime 谭茜 / 笔记编辑链路 / token 看板 / SCBC-Desk）。四条没有一条是 3 月的 Keith 在做的事。
 源：monster git log 2026-07-28..08-17（80 条 commit 亲读）。
 
+### 从 2026-08-29 自由探索获得（gg-explore 补写：Keith 通道首次流量遥测）
+
+- **通道底数**（30 天窗口，monster+gg transcripts，isMeta 字段仪器）：Keith 键入 **2608 条 ≈ 87 条/天**（会话首条 888 / follow-up 1720 / 物理打断 73 次）；长度中位 **38 字符**、p90 204，follow-up 中 **30% ≤12 字符**（「dd」「ack」「点头」「先不要动手」）。
+- **双峰形态**：短端 = 裁决位（批准/收尾 ~28%，n=60 人工分类粗估）；长端（>200 字符）主体是**世界观/意图教学**非需求规格（班级平均的权重课、治本思维、基金经理比喻）——07-03「认知级全托」的物理显影：规格中段全托，Keith 花长 token 的地方是教 gg 怎么想。纠正·校准类 ~16%（月化 ≈280 条）+ 打断 73 次 = 校准通道首个流量底数。
+- **沉淀侧对照**：同窗口 monster CLAUDE.md 23 commit——抽查 diff 全是带 Keith 原话引文的高质量校准沉淀（08-19 中英掺词偏好整段、08-27「新机只是还没迁移完」拨回、08-20 harness 全权授权引原话）；gg tracks/keith.md 7 commit。**「校准蒸发」假说证伪**：两侧沉淀器官都活着。蒸发的是**趋势可比性**（#220 兑现：6/7 月通道形态已随 transcript 30d 轮转不可测）——本读数是可能存在的最早基线，「通道是否在持续收窄」永久失去 8 月前对照。是否建例行快照 = 新自动化机制，按 CORE §7 留设计会话，夜间不自建。
+- 档：`memory/explorations/2026-08-29_the-principals-voice-is-a-default-not-a-credential.md`（同夜撞出 essence #226——user role 总线归属考古，属 F8 非 keith 域）。
+
 ## 本 track 与其他 track 的耦合
 
 - 这是所有 track 的**主 track**。其他四条都是在为服务 Keith 做准备。
