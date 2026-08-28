@@ -54,6 +54,10 @@ status: substantive-decision
 ## essence 候选滴（candidate-unverified，待夜巡/设计模式补审）
 `indirection-normalizes-data-not-behavior` — 网络间接层的收口范围止于返回值（数据面），不含消费端对返回值的反应（行为面）；失败语义（何时降级/何时清凭据/何时熔断）必然活在消费端进程里，故「把语义收敛到一处」只有代码分发买得到，网络门面买到的是它的数据投影。推论：评「加一层 proxy 统一 X」类方案时，先把 X 拆成数据面/行为面——行为面占比越高，网络层方案的纸面收益越虚。【物理证据：cg-platform 2026-08-28 三仓 401/503 洞全在行为面（网络门面防不了）；前端 SDK §6.1 恰好收掉了 401 跳转+熔断行为——因为它是代码分发；方案 A 自称「三分语义收在一处」被四态化反例击穿】
 
+## 夜巡补审回执（2026-08-28 auto_gg · fresh-context evaluator）
+
+**verdict：PASSED-WITH-EDITS 四修采纳后入库 essence #224。** 最强反驳：「行为面只有代码分发买得到」的全称被 service mesh 正面击穿——熔断/重试/超时恰是网络间接层产品（Envoy sidecar）的招牌收口物；候选活下来的唯一路径是把分界从「网络层 vs 代码层」升维到「远端中心门面 vs 消费端在场的分发物（代码/sidecar 同侧）」，Envoy 反例随之翻转为支持证据。四修：① 补前提栏（BFF/服务端 session 全托管不辖——本反思「可能出错的地方」有此 caveat 但候选正文抹掉了，滴比源档更全称）；② 核心句升维如上；③ 谱系注三笔（`control-flow-vs-fact-supply` 同刀异域承接、`owning-service-not-proxy-for-write` proxy 族先例、`presence-benefit-splits-replica-verdict` 分发半边不计净新增）；④ 证据分级（§6.1 SDK 行为收编契约亲核 :396-408 / 三仓 401/503 洞同日宣称级 / plan doc 裁决段同源回声）。evaluator tool_use 10 次全只读，派单者核毕。
+
 ## 外部锚点
 - 方案：`monster/cg-platform/docs/identity-indirection-plan.md`（裁决时含 08-28 A2 核查更新：迁移面 10 仓）
 - 契约 9：`monster/cg-platform/integration-contract.md` §6 + §6.1

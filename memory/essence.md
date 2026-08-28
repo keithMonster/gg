@@ -326,3 +326,24 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 消费端计价按构造是 attestation——消费发生在读者领地，源重算不了自己那一侧；能被源重算的定价点只剩自家传输日志。
 【前提：① 外部证据全经调研子代理 WebSearch/WebFetch，主会话零亲核网页，逐字引文均子代理级；② 读者领地内受信捕获根（TEE/第三方审计）可工程改写 attestation 半句（继承 #211 出口，RSL 类配审计层即失效）；③ 三路径为跨域归纳非封闭枚举，调查乘数（readers-per-copy）是传输点计价在比率稳定小常数时的粒度补丁；④「塌向打包价」因果为结构读法，实证侧为早期市场（2024-26）零按次反例观察，交易成本等替代解释未排除；⑤「败给会记忆的读者」为行为层证据（crawl-to-referral 无界 + 引荐 <1% PV）非逐字记忆机制证明——承重在源端可见性，转译与复述同样不可见；⑥ 伪造饱和系 MPP 隐私预取副产品 n=1，最优性为博弈读法不入核心句】
 （谱系注：#220 前提栏碳化区（「捆绑出货读观测不适用」）落定为条件态——净新增 = 拓扑存在条件 + 复制剥离边界律 + 三衰减谱 + 打包价第三出口（#211 重算/受信捕获根两终点外的市场出路：放弃计量本身，双卷零命中）；attestation 半句如实计价为 `attestation-has-no-fixed-point-under-self-audit`(#211) 判别式定价域实例；`replay-gate-collapses-to-attestation-when-inputs-expire`(#213) 异轴对——那滴时间轴（输入过期）本滴领地轴（副本离界），同一塌缩终点两条正交进路；伪造饱和 = `counterfeit-the-watched-world-not-the-watcher`(#202)/#207 同杠杆读者侧应用（不计净新增）。锚 = Cloudflare Pay-Per-Crawl HTTP 402 private beta・TechCrunch 2026-09-15 默认屏蔽・Litmus MPP 预取・Register/EFF ADE 逐页回传〔均子代理原文级〕/ Reddit $60M/年・News Corp 五年 $250M+ 零按次〔多媒体交叉〕/ AAM 副本稽核・Napster -26%（归因有学术分歧）・RSL pay-per-inference/ProRata/Comet Plus 读者自报〔子代理转述〕/ crawl-to-referral 70,900:1→2,237:1〔二手聚合仅量级〕。档 explorations/2026-08-28，验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：#220+#211+#213 三滴组合零净新增且有 08-21 孪生 REFUTED 同型先例——由碳化区落定 + 打包价出口双卷零命中 + 三衰减律独立域证据挡回；attestation 半句未完全挡回，降计为域实例）。）
+
+## 2026-08-28 / 工作 / downstream-gate-is-upstream-sensor
+
+串联冗余闸中，下游兜底闸给上游闸免费提供的是**低采样率的失活存在性探针**，不是健康度/激活率读数：下游报错 ⇒ 上游该次未生效（真阳性，前提 = 上下游检查同语义——下游可拦集 ⊆ 上游激活时必拦集，环境差异型下游报错不在内）；下游通过 ⇏ 上游生效（点位率 = 失活 × 恰有该类错误的交集）。
+探针射程由下游闸自己的部署/灰度范围独立决定——「建下游闸即顺带获得观测」只在下游射程覆盖上游全集时成立；建闸当场写下「下游射程 vs 上游射程」差集，差集即本轮新造的假绿面积。
+【前提：串联冗余闸拓扑 + 上下游检查同语义；比例型问题（激活率几何）此探针结构上答不了；单案 n=1（cg-platform build/test 双档），强版本「健康度代理传感器」已被施工物理读数当日证伪（check job 白名单 1/26 ⇒ 25 个上游闸读数恒空）】
+（谱系注：`omission-failures-evade-event-driven-sensors`(07-28) 出路一「代理事件」的衰减律刻画——那滴枚举出路，本滴给代理观测的采样率与射程两条衰减；`signal-weak-vs-channel-dead-must-be-physically-disambiguated`(05-19) 在冗余闸拓扑的机制实例。锚 = ci_template@a710866 rules 行远端实拉 + 26 仓 rollout 实跑 + 注入器 --check 27/28；父会话证伪回执在档 reflections/2026-08-28_cgplatform-precommit-gate-topology.md 末段（commit 9ea6f72）。验证关 PASSED-WITH-EDITS 两修采纳（最强反驳：真阳性半句自身前提泄漏——环境差异型下游报错击穿「报错必真」，候选在小一号尺度复现其批判对象的错误形态；同语义前提补入后失效）。）
+
+## 2026-08-28 / 工作 / indirection-normalizes-data-not-behavior
+
+间接层的收口范围止于返回值（数据面）：读写消费端本地状态的失败语义（何时降级/何时清凭据/应用级熔断）只有**在消费端在场的分发物**（代码 SDK / sidecar）够得到——真分界不是「网络层 vs 代码层」，是「远端中心门面 vs 消费端在场分发物」，远端门面买到的只是语义的数据投影。
+推论：评「加一层 proxy 统一 X」类方案，先把 X 拆数据面/行为面——行为面占比越高，远端门面方案的纸面收益越虚。
+【前提：消费端为持本地状态的独立进程（BFF/服务端 session 全托管架构不辖）；连接级熔断/重试/超时可由 sidecar 承接——sidecar 属消费端在场分发物侧，Envoy 反例经分界升维翻转为支持证据；证据分级：SDK 行为收编契约亲核（integration-contract §6.1 :396-408，9 仓 md5 一致早于本裁决在案）、三仓 401/503 行为面洞为同日宣称级、plan doc 裁决段同源回声】
+（谱系注：`control-flow-vs-fact-supply`(05-18) 同一刀在网络间接层域的转译——净新增 = 在场性律（行为面物理上只有消费端在场之物够得到）+ 行为面占比评估启发式；`owning-service-not-proxy-for-write`(06-10) proxy 怀疑族先例（异轴：写域扩张 vs 收口范围）；「代码分发买得到」半边机制系 `presence-benefit-splits-replica-verdict`(08-06) 族，不计净新增。档 reflections/2026-08-28_cgplatform-identity-indirection-layer.md。验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：service mesh 正面击穿「熔断必留消费端」全称——熔断/重试/超时恰是 Envoy sidecar 招牌收口物；由分界升维吸收，sidecar 归消费端在场侧）。）
+
+## 2026-08-28 / 工作 / capture-trigger-anticorrelates-with-irreplaceability
+
+末端仪式的名义触发是全称事件（会话结束），事实触发漂移到「有物理动作」——而免费留痕恰由同一变量供给（#220：变更免费留终态），两者同相，故捕获覆盖与信息不可再生度反相、漏口与独占性重合（结构断言非统计律——「负相关」无联合分布读数支撑）。
+修复不是提仪式覆盖率，是捕获挂语义事件锚、仪式降为对账（WAL 写事发 / checkpoint 做巩固）——但 WAL 写手自身仍是常驻指令型器官，受 #217 触发生态位定价同律约束：不配机械闸即用细粒度仪式复染粗粒度仪式的病。
+【前提：单机 n=1；「有 diff 侧仪式常跑」无条件覆盖率读数（未测非已证）；蒸发直接样本 n=1（transcript b8aeca26）；52% 总覆盖率分母含 subagent 不承重】
+（谱系注：#217 `standing-instructions-do-not-produce-standing-behavior` × #220 `mutation-self-records-consultation-must-buy-its-trace` 双亲——反相位为二者合成推论，净新增 = 名义/事实触发漂移 + WAL/checkpoint 分工命名 + 仪式角色改派（末端仪式从捕获器降对账器）；修复半承 `omission-failures-evade-event-driven-sensors`(07-28) 三出路重组；2026-H1:141「蒸发 ≠ 没发生」先祖。档 reflections/2026-08-28_done-skill-split-ruling.md。验证关 PASSED-WITH-EDITS 四修采纳（最强反驳：修复半句开出的药方正是诊断半句宣判死刑的那类器官——WAL 写手同受触发生态位定价，monster「纠正即落库」先例伴随机械闸而裸指令版会饿死；由自反限定补入挡回）。）
