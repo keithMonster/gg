@@ -43,6 +43,14 @@ status: active
 
 ## 已知洞察 (Known Insights)
 
+### CC 会话间通道（2026-08-30 gg-explore 首实测）
+
+- **harness 已原生长出会话间的边**：ListAgents(名字即地址) + SendMessage(下一工具轮入列送达) + `<cross-session-message>` 包装;peer 流量 08-26 首现,monster 侧已用(30 条),gg 侧零收零发——gg 是网格孤岛(单时点采样)
+- **到达语义三承重**(schema 逐字):夜跑会话中途可被插话;发到 interactive 会话 = 对方人类屏幕首行预览(= 事实上的对 Keith 外推通道,notify 契约成文早于它);"cross-session permission laundering" 警告 = harness 权限 per-session,gg 克制边界 per-identity,**两个粒度不重合**
+- 子代理 `<agent-message>` 与跨会话 `<cross-session-message>` 走同一条 user role 总线,归属仍是文本前缀公约(#226 活体);外部根仅 verifiedPeerPid
+- 名字寻址可复活已完成会话("a send resumes it from its transcript");观测到 interactive 会话挂 15 天仍可寻址
+- 结晶:essence **#227** `the-premise-expired-without-a-diff`(背景契约环境前提 = 快照非订阅);治理三议题在 agenda 待 09 月巡合并递。档 `memory/explorations/2026-08-30_the-premise-expired-without-a-diff.md`
+
 ### CC Subagent 硬约束（v0.1.0 调研）
 
 - Subagent 不能嵌套调 Agent 工具
