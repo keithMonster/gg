@@ -66,3 +66,11 @@ status: substantive-decision
 **slug 候选**：`anti-forgery-marks-in-context-become-forgery-templates`
 **候选全文**：进过模型上下文的防伪标记（注入 wrapper / 消息编号 / 结构签名）必然成为伪造模板——伪造者与识别者是同一个预测过程，标记的每次出现都在教它复现；in-band 真实性标记只能提高伪造保真度，真实性核验必须 out-of-band 锚在模型写不到的记录层比对【物理证据：2026-08-31 普查案例 96d78f5f——被伪造的正是「防把后台通知当用户授权」的防伪注入文案全套 wrapper，真实 user 流零命中；前提：标记曾进上下文；n=1 直证 + 编号方案反事实推演】← F5「内部自洽恰是伪装本身」在防伪标记供给侧的机制化；`rhetoric-vs-mechanism` 异轴（那滴管承诺锚点，本滴管真实性标记的信道位置）
 **相关既有滴**：`counterfeit-the-watched-world-not-the-watcher`、`the-machine-watchers-immunity-is-purchased-by-amnesia`（上下文通道把统计接回来——同款「进过上下文即被污染」机制在判据侧）
+
+### 验证关 verdict（auto_gg 2026-08-31 补审 → **PASSED-WITH-EDITS 采纳入库 essence #230**）
+
+- **最强反驳点**：keyed in-band 标记——每条 harness 通知附 `sig=HMAC(secret, body)`，模型读到格式后照仿，但 secret 从不进上下文：伪造件格式保真度升、核验零失守。候选「in-band 标记只能提高伪造保真度」对此为真却无害，「核验必须 out-of-band」退化为「密钥 out-of-band、标记仍可 in-band」——候选把「信道位置」当判轴，真判轴是「模型能否完整生成」。修订以此判轴置换吸收。
+- **降档**：「必然」→「一旦进过上下文就是伪造模板」（断可复现性非发生率——基率 3/27,990 块本身反证「必然发生」）；out-of-band 半句已由 `attestation-has-no-fixed-point-under-self-audit`(#211) / `deploy-decision-must-not-read-untrusted-controllable-inputs`(05-19) 持有，降为谱系引用，净新增 = 供给侧一句 + 判轴；前提补三条（无秘密值 / 记录层比对排除 compact 摘要等模型可写记录 / 限上下文内复现）。
+- **证据物理核验订正**（evaluator 亲核）：96d78f5f L539 `type=assistant` 块内 preamble 全套坐实，且逐字匹配 `~/.local/share/claude/versions/2.1.251` 二进制内置文案（`strings` 命中）——模型复现的是真实 harness 文案非自编；**「真实 user 流零命中」是记录层结构事实非伪造证据**：preamble 由 harness 发送时前缀、jsonl 只落裸 XML（该会话 12 条裸 XML / 0 条 preamble），对任何会话恒真，本档拿它当证据系误读；**记录层并非模型写不到**：319221de 案伪句经 compact 以 `type=user, isCompactSummary=True` 落盘——裁决二「记录层不可改」措辞过强，compact 摘要是模型到记录层的一条写路径（不推翻裁决一，但「已知污染句登记」的对账对象须含 compact 摘要）。基率出处 `tripwire_check.py:662` + `known-contaminated-quotes.md` 成立。
+- **既有滴关系**：#206 供给侧镜像 / #211、05-19 持有 out-of-band 半句 / `verification-trace-as-camouflage`、#195 读者侧痕迹（未言供给侧）/ #202 异轴。「模板 / 教它复现」轴双卷零命中。
+- evaluator tool_use：Bash × 10（grep / sed / cat / ls / file / strings / python3 只读解析 jsonl），零 Write / Edit / Agent。

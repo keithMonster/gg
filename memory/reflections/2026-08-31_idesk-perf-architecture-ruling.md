@@ -68,7 +68,15 @@ status: substantive-decision
 - slug: `tiny-system-pathology-is-variance-not-volume`
 - 一句话: 量级算术上不存在负载的系统里，分钟级停摆的病灶必然是单次操作的无上界性 + 不可见排队；容量族解法（扩池/副本/总线）与它正交——选解法族之前先做一次量级除法（峰值并发 × 单次持有时长 vs 资源上限）。
 - 物理证据: cg-weilu 3663 条消息/月 + 28563ms rechunk 实证 + `db.service.ts` 无兜底队列自白 + 08-31 11:24 鉴权出站超时不在 DB 域。
-- 是否已 append 到 essence.md: N（subagent 无 Agent 工具，留待夜巡/设计模式补 fresh 证伪审）
+- 是否已 append 到 essence.md: ~~N（subagent 无 Agent 工具，留待夜巡/设计模式补 fresh 证伪审）~~ → **Y，2026-08-31 auto_gg 夜巡 fresh 证伪审 PASSED-WITH-EDITS 采纳入库 essence #229**
+
+### 验证关 verdict（auto_gg 2026-08-31 补审，evaluator 全文要点）
+
+- **最强反驳点**：11:24 事故（40975ms）若坐实为 MySQL 宿主机 IO 争用（同机其他容器夜跑/备份），病灶既非本系统单次操作无上界、也非本系统排队——外部资源被抽走；此时「量级除法」算出「无负载」恰是对的、系统无病，核心句把一切小系统停摆归因于内生尾部会引导下次排查跳过宿主机层（本档 :45 自己已写出这条反例）。
+- **修订**：「必然」→「首查」（根因未闭合的全称断言被本档诚实层削掉）；「正交」→「不封顶 + 副本放大出站惊群」（本档 (b) 自述副本放大惊群是负相关非正交，且扩池 20→40 正是团队刚做的容量族动作）；「量级除法」补「取哪个分位」——均值算出无负载、max/p99 算出打满，取尾部是判据全部内容；前提栏补 n=1 / 分钟级根因未闭合 / 宿主机外因未排除则不辖。
+- **证据物理核验订正**（evaluator 亲核）：28563ms 注释实在 `server/src/weilu/file.service.ts:3426`（本档写 file.service.ts:3345，路径与行号错）；鉴权出站 3s 在 `common/auth.guard.ts:554` + `config.ts:123`（本档写 :351）；`cg-platform-deploy.sh:735` **文件不存在**（cg-weilu 与 ~/CGProject 4 层内均无）——容器无资源限额一条未核；`db.service.ts:98-100` 明写「不能把相关性写成已定位的因果」，本档「重查询打满池」系将作者自认的相关性升格为因果。
+- **既有滴关系**：`the-portfolio-sleeps-and-work-is-re-entry`(#218) 同构（尾部律运行时域）/ `mixed-queue-funnels-all-to-scarcest-gate`(06-09) 精化 / `gate-as-physical-fuse`(05-07) 异轴互补 / `m2m-vs-h2m-coupling-illusion`(05-09) 异轴。
+- evaluator tool_use：Bash × 5（grep / sed -n / find / ls / git log 全只读），Read × 0，无写操作。
 
 ### 外部锚点
 

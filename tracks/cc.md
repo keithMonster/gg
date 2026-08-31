@@ -361,6 +361,11 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 - **本会话 harness 新器官清单（垫片层观察，未消化）**：原生 cron 工具（CronCreate/CronList 等 deferred tools）/ 跨会话 SendMessage+ListAgents（含 cloud sessions，云会话收得到回不了）/ ScheduleWakeup 自定节奏 loop（noop streak 折叠——平台把「写无」做成了机器字段）/ Workflow 的 ultracode 显式 opt-in 门（授权轴 +1）。均属垫片层候选，接口不进承重（CORE §8）。
 - **对 gg 的接口**：agenda 07-30 auto-memory 三选的机械落点被平台自己指了位——PreToolUse hook 是官方声明的 L3 闸位，`projects/*/memory/` 路径检查不是 gg 硬造。
 
+### 从 2026-08-31 工作模式获得（gg 第四条召唤通道：Codex → `claude --agent gg`；auto_gg 补写 2026-08-31）
+
+- **已知事实**：gg 工作模式可由 Codex CLI 经 `claude --agent gg --model fable` 召唤——08-31 端到端 smoke test 一次即通（反思档 `memory/reflections/2026-08-31_reviewer-unavailable-fail-closed.md`，summoner 字段留痕）；Keith 同日拍板「Codex 的 L3 gg 唯一身份是 Claude Code `--agent gg --model fable`，不使用 Codex 同名 agent」（源：`monster/threads/review-routing.md:33` ✓keith:2026-08-31）。
+- **对 gg 的接口**：召唤方从「Claude Code 主会话」扩到「异谱系 CLI」，gg 本体仍只经 `~/.claude/agents/gg.md` 薄壳 → `cc_agent.md` 加载——身份 SSOT 不因召唤方增多而分叉（本 track「入口分离」既有结论续有效）。该 smoke test 当场产出的裁决恰是「审查器不可用 → fail closed，禁静默降级冒充」——这条通道自己的存活判据（`fallback-detectability` 05-06）。
+
 ---
 
 ## 开放问题 (Open Questions)
