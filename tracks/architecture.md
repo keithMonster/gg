@@ -531,6 +531,16 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ---
 
+### 工作模式获得：immutable receipt 的自失效解是版本链，不是豁免当前重放（2026-09-01 工作模式 · auto_gg 补写 2026-09-01）
+
+**触发**：cgboiler sealed interpretation receipt 遇后续正确 amendment——`replay-gate-collapses-to-attestation-when-inputs-expire`(#213) 诊断的「replay 闸随输入过期塌缩」在此以 status 32→28 实况出现，问题变成「不可改的证明怎么跟上正确的修订」。
+
+**裁决形态（可迁移部分）**：不给旧 receipt 打补丁（overlay），而是对同一 evidence set 在新 ledger state 上重新给出**完整 closure 证明**的 revision——单链、单 parent、每 parent 至多一 child、唯一 leaf 由图推导（不写 `terminal=true`）；每个 revision 自带 parent snapshot ref，此后不再依赖 git 考古；leaf 须逐字节等于当前 live，ancestor 只按自身 snapshot 重放、不参与当前 closure。append-only 的二阶代价是「不可改」会变成「自失效」——解不是削弱 replay，是让证明本身版本化（北极星 #1 二阶效应）。最危险处（反思档自报）：名叫 snapshot 实际仍只存 live path+hash，链退化为一排不可重放声明——这正是 #213 的塌缩形态换了个名字回来。
+
+**对应 essence**：无新滴（反思档对位 `freeze-the-sample-not-the-sampler` / `one-shot-invariant-decays-under-live-append` / #213 / `invariance-allocation` / `granularity-mismatch-forces-fabrication`，与 `abstraction-tax` 有张力：revision chain 新增状态机，例外理由 = 旧 receipt 已真实自失效）；详见 `memory/reflections/2026-09-01_cgboiler-interpretation-receipt-revision-chain.md`。
+
+---
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐
