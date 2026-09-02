@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-09-01 一场工作模式（substantive-decision）：cgboiler sealed interpretation receipt 遇正确 amendment 的演化模型——裁决单链全状态快照 revision（`<batch>/revisions/rNNNN/receipt.json`），拒 overlay；root receipt 字节永不改、唯一 leaf 由图推导、每 revision 自带 parent snapshot ref、leaf 逐字节等于 live；首个 revision 允许一次 git 考古 bootstrap（6dc83b31 hash 已核）。无候选滴。详见 reflections/2026-09-01_cgboiler-interpretation-receipt-revision-chain.md；前一日 08-31 五场见 git log 本文件]"
+last_summoned_at: "[2026-09-02 一场工作模式（substantive-decision）：cgboiler stage3 线 vs world_model 线拓扑定性——A/B/C 三选拒答改 D（stage3 = `legacy_authoritative` 权威读层、写侧冻结，PENDING 4 项按清单结案）+ 传感器 `cgboiler_pipeline_liveness` 改锚 world_model 三目录 git 提交日期；候选滴 `stale-watchdog-fires-true-on-the-wrong-organ` 交夜巡补审（verdict 见 auto_gg/2026-09-02.md）。详见 reflections/2026-09-02_cgboiler-stage3-vs-world-model.md；前一日 09-01 一场见 git log 本文件]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-09-01_cgboiler-interpretation-receipt-revision-chain"
+last_reflection_slug: "2026-09-02_cgboiler-stage3-vs-world-model"
 last_design_session_slug: "2026-09-02_full-architecture-review"
 ```
 
