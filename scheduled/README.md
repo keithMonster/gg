@@ -4,13 +4,13 @@
 
 ## gg 已有任务
 
-> ✅ **现实校准（2026-07-28 迁回）**：Keith 拍「不在客户端跑了，回本地来跑」——`auto-gg` / `daily-word` / `gg-explore` 三条已从 Claude 桌面客户端 routine **迁回本机 launchd**（`launchctl list` 重新可见 `com.gg.*`，`logs/` 恢复写入，三份 plist 从 `plists/_disabled/` 移回并 `install.sh` 重注册，每条第 4 参数钉 `opus`）。**本目录 `plists/` + `bin/` 重新是现役 SSOT，不再是存档回退件**。推翻 2026-07-02 校准块（06-12 迁客户端后写的）。载体史见 monster `threads/scheduled-tasks.md` 07-28 条。
+> ✅ **现实校准（2026-07-28 迁回）**：Keith 拍「不在客户端跑了，回本地来跑」——`auto-gg` / `daily-word` / `gg-explore` 三条已从 Claude 桌面客户端 routine **迁回本机 launchd**（`launchctl list` 重新可见 `com.gg.*`，`logs/` 恢复写入，三份 plist 从 `plists/_disabled/` 移回并 `install.sh` 重注册；第 4 参数 model：`auto-gg` / `gg-explore` 钉 `fable`（07-28 Keith 拍，plist 内注释），`daily-word` 仍 `opus`——2026-09-02 核实三处文档「全钉 opus」为漂移，已改）。**本目录 `plists/` + `bin/` 重新是现役 SSOT，不再是存档回退件**。推翻 2026-07-02 校准块（06-12 迁客户端后写的）。载体史见 monster `threads/scheduled-tasks.md` 07-28 条。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
 |---|---|---|---|
 | `com.gg.auto-gg` | 每天 22:22 | 夜间维护契约（SCAN/FOUND/DID + 月度巩固/差值审计） | `auto_gg.md` |
-| `com.gg.gg-explore` | 每天 0:13 | 自由探索（无任务）；跑完原始输出推 Keith | `exploration.md` |
+| `com.gg.gg-explore` | 每周一 / 三 / 五 0:13（2026-09-02 Keith 拍降频，此前每天） | 自由探索（无任务）；启动链载 essence 视图常驻层不载原卷；跑完原始输出推 Keith | `exploration.md` |
 | `com.gg.daily-word` | 每天 7:30（**launchd**，2026-07-28 迁回） | 「每日一句」——gg 主动对 Keith 说一句真话，推飞书 | ⚠️ **两套 prompt 别混**：launchd 走 plist **内联 prompt** + 外壳 `run-task-and-push.sh` 抓 stdout 推飞书（当前形态）；`DAILY_WORD.md` 是客户端时代的 SSOT，**prompt 内自带 `notify.sh`**（06-17 补），把 plist 指向它会双推 |
 | `com.gg.status-scan` | 已停用（2026-06-16，通用模板误报告警） | 轻量状态扫描 + 异常告警 | `STATUS_SCAN.md`（plist 已 `.disabled`） |
 

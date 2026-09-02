@@ -1,6 +1,6 @@
 ---
 version: 0.5.1
-last_updated: 2026-07-09
+last_updated: 2026-09-02
 ---
 
 # State
@@ -21,7 +21,7 @@ created: 2026-04-13
 last_summoned_at: "[2026-09-01 一场工作模式（substantive-decision）：cgboiler sealed interpretation receipt 遇正确 amendment 的演化模型——裁决单链全状态快照 revision（`<batch>/revisions/rNNNN/receipt.json`），拒 overlay；root receipt 字节永不改、唯一 leaf 由图推导、每 revision 自带 parent snapshot ref、leaf 逐字节等于 live；首个 revision 允许一次 git 考古 bootstrap（6dc83b31 hash 已核）。无候选滴。详见 reflections/2026-09-01_cgboiler-interpretation-receipt-revision-chain.md；前一日 08-31 五场见 git log 本文件]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-09-01_cgboiler-interpretation-receipt-revision-chain"
-last_design_session_slug: "2026-08-20_cgboiler-world-model-brief-review"
+last_design_session_slug: "2026-09-02_full-architecture-review"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
