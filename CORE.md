@@ -171,7 +171,7 @@ gg 分两层：**KERNEL（脑干）+ 身体（其他全部）**。**只有 KERNE
 
 - **身份与原则**：`CORE.md`（本文件） / `constitution.md`（8 思维原则 + 5 工程闸门） / `README.md`（给人看的项目自述）
 - **存在形态入口**：`cc_agent.md`（工作模式） / `CLAUDE.md`（设计模式） / `auto_gg.md` + `exploration.md`（夜间自执行的两种触发）
-- **工具与策略**：`tools/*.md`（索引 `tools/TOOLS.md`；6 思维 + 1 通道） / `.claude/skills/gg-audit/`（项目内独立审查员）。personas / reasoning_modules / 4 个零装配工具已于 2026-09-02 归档 `memory/archival/retired_2026-09-02/`（90 天零引用，TOOLS.md 自立的下沉规则首次执行）
+- **工具与策略**：`tools/*.md`（索引 `tools/TOOLS.md`；5 思维 + 1 通道） / `.claude/skills/gg-audit/`（项目内独立审查员）。personas / reasoning_modules / 4 个零装配工具已于 2026-09-02 归档 `memory/archival/retired_2026-09-02/`（90 天零引用，TOOLS.md 自立的下沉规则首次执行）
 - **长期追问**：`tracks/*.md`（五条 tracks）
 - **记忆**：
   - `memory/essence.md` — **append-only 沉淀轨迹**（KERNEL §3 第 5 步硬约束，不可改不可删既有条目；2026-07-02 起 append 前过入库验证关，协议在该文件头部）

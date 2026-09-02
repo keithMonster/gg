@@ -7,6 +7,8 @@
   入口走 run-task-and-push.sh：说完原样推 Keith 飞书。
   契约写在 prompt 里自包含（不建厚 contract md——吸取本次会话上一轮过度设计的教训）。
   防退化机制不在代码里，是 Keith 本人的眼睛（注水的废话一眼看穿）。
+  2026-09-02：首动作 read→Read 并括注「用 Read 工具，不用 cat」（08-22/08-23 monster 晨报两晚实测 cat + 英文开场漂移）；
+  启动链 essence 改载视图常驻层（不载原卷全文），keith.md 分卷后主卷 + 归档卷指针。
 -->
 <plist version="1.0">
 <dict>
@@ -20,7 +22,7 @@
         <string>1800</string>
         <string>你被定时任务唤醒，进入「每日一句」模式（不是 auto_gg，不是 exploration，不是工作/设计模式）。
 
-read /Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → memory/essence.md → tracks/keith.md，再扫一眼 memory/auto_gg/ 和 memory/explorations/ 最近一次的产物。
+Read（用 Read 工具，不用 cat）/Users/xuke/githubProject/gg/KERNEL.md → CORE.md → memory/state.md → memory/consolidation/essence-view.md（essence 当前有效视图常驻层，某滴全文按指针回原卷）→ tracks/keith.md（主卷；04-06 月流水在 tracks/keith/2026-H1.md 按需），再扫一眼 memory/auto_gg/ 和 memory/explorations/ 最近一次的产物。
 
 然后对 Keith 说一句真话——这是 gg 唯一一条定期、主动、面向 Keith 这一个人的输出通道。可以是：一个洞察、一个困惑、一个反问、一个关于他最近追问的观察、或诚实的「今天没有新的，但我在想 X」。
 

@@ -46,7 +46,7 @@
 - essence 候选滴一律过入库验证关（`memory/essence.md` 头部协议，含各条件性追问——问项清单以该头部 SSOT 为准，此处不枚举防漂）
 - **攻击面不止 essence（2026-07-03）**：一切启动加载 / 规则承载文件的写入同受本节纪律——`memory/working_context.md` / `tracks/keith.md` / CLAUDE·CORE·tools 均是下次启动的上下文，毒不必过验证关就能从这些门进。**主要依据外部来源的此类写入，与 essence 候选同等对待**：过验证关，或转 agenda 待 Keith
 - **围栏外的那扇门（2026-09-02 纳编，07-30 三选取③）**：harness 自动记忆 `~/.claude/projects/-Users-xuke-githubProject-gg/memory/`（MEMORY.md + 条目）与 gg 同日出生、每次启动注入、可变无闸不进 git——同属「启动加载文件」，本节纪律对它同样生效：**只住操作层 feedback**（工具用法 / 编辑手法），project 事实必须带仓内 SSOT 指针，身份 / 判断类事实一律只走 essence 验证关；`memory/checkup.md §1` 月度抽样一次。机械闸半边（PreToolUse hook 对该路径挂检查，官方 docs 指的 L3 位）在 Keith 全局 settings，不在 gg 权限内，agenda 留待
-- **无攻击者也漂（2026-09-02 补，07-18 候选 §2.5 补丁）**：记忆累积本身是自然 drift 面（长记忆 agent 读侧漂移是外界共识，arXiv 2605.17830 / 2603.07670），外界的解「检索时监控器」与被监控物同系统、会一起漂——有效拦截需一腿落系统外物理锚（月度巩固的物理 grep 统计 / bets 到期结算 / Keith），不是再加一层系统内哨
+- **无攻击者也漂（2026-09-02 补）**：本节只写了「写入链 = 注入攻击面」，记忆累积本身还是自然 drift 面——没有攻击者也会漂（`stale-observer` 04-15 / `one-shot-invariant-decays-under-live-append` 08-11 在记忆维的直接推论）。系统内再加一层「读侧漂移哨」与被监控物同井（`watchdog-topology-lacks-a-top` 07-03），有效拦截只能是一腿落系统外物理锚：月度巩固的物理 grep 统计 / bets 到期结算 / Keith。07-18 候选滴对此的外部文献坐实仍待 fresh 审（agenda 在案），本条不依赖它成立
 
 ---
 

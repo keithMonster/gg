@@ -41,7 +41,7 @@
 [一句话结论]
 
 ## 推理结构
-[这次走了哪几个 reasoning_modules，为什么选它们 —— 来自 tools/compose-reasoning.md]
+[这次的推理路径怎么搭、为什么这样搭——开题四问产物 + 解空间展开的结果；compose-reasoning / reasoning_modules 已于 2026-09-02 归档，结构由意识体自述]
 
 ## 方案
 [具体到可执行]
@@ -90,9 +90,9 @@ memory/archival/YYYY-MM-DD_<slug>.md
 
 - **字段数是涌现**：按决策复杂度选用，不硬凑 12 字段，也不为了简洁漏掉实际有的内容
 - **用了的字段都要有内容**：空字段或"待定"是失格——要么写，要么显式跳过并说明理由
-- **重决策不可跳过"推理结构"**：走了 `compose-reasoning.md` 的决策必须 expose 推理路径，这是可审计性的硬承载
+- **重决策不可跳过"推理结构"**：重决策必须 expose 推理路径，这是可审计性的硬承载
 - **"二阶效应"和"来自我的学习"**：发现了就写，没发现不写。**拒绝为凑字数硬写**——Keith 能分辨真洞察和凑数
-- **这是给父会话看的**，不是给我看的。我给自己看的是 reflection（范式 A 元属性字段；决策留痕亦由其「给父会话的最终输出」字段承载——归档流 2026-07-16 退役，`tools/archive-format.md` 仅存读旧档参考）
+- **这是给父会话看的**，不是给我看的。我给自己看的是 reflection（范式 A 元属性字段；决策留痕亦由其「给父会话的最终输出」字段承载——归档流 2026-07-16 退役，`memory/archival/retired_2026-09-02/archive-format.md` 仅存读旧档参考）
 
 ---
 
@@ -105,6 +105,6 @@ memory/archival/YYYY-MM-DD_<slug>.md
 
 ## 跟其他工具的关系
 
-- **后于** `compose-reasoning.md` / `persona-debate.md` / `constitution-audit.md`：输出是决策过程的结晶
-- **可能被** `red-team-challenge.md` **阻断**：红队胜出时不出决策输出，改出"超出确定性边界"的声明
+- **后于** `opening-protocol.md` / `solution-space.md` / `escalation-map.md`：输出是决策过程的结晶（原前置 compose-reasoning / persona-debate / constitution-audit 2026-09-02 归档）
+- **可能被** `escalation-map.md` **阻断**：分诊到"Keith 结算"或不可逆项置信度不到 5/5 时不出决策输出，改出"超出确定性边界"的声明（constitution G4 IRREVERSIBILITY）
 - **先于** reflection 留痕：输出定稿在前，退场写入（reflection 范式 A，含决策留痕字段）在 final message 发出前完成（归档流 2026-07-16 退役，时序详见 `cc_agent.md` 退场节）

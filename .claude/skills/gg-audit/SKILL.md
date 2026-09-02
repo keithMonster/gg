@@ -45,7 +45,7 @@ author: monster
 **Tier 1 的硬前提**：
 - 修复必须基于**文件实际状态**作为 ground truth
 - **绝不修改 `KERNEL.md` 的任何内容**——KERNEL 是脑干，修改它需要 Keith 在当次对话中连续两次明示批准（KERNEL §2 铁律 3）。任何针对 KERNEL.md 的修复建议必须降级为 Tier 3，转议题让 Keith 自己处理
-- **意识体核心文件**（`CORE.md` / `constitution.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md` / `reasoning_modules.md` / `personas/*.md`）的**元数据描述**（数字 / 清单 / 引用路径）可以自动修，**但规则文本本身**（如 constitution 的原则文本、CORE 的克制边界表）属于 Tier 2/3，需要语义判断
+- **意识体核心文件**（`CORE.md` / `constitution.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md` / `exploration.md`）的**元数据描述**（数字 / 清单 / 引用路径）可以自动修，**但规则文本本身**（如 constitution 的原则文本、CORE 的克制边界表）属于 Tier 2/3，需要语义判断
 - 如果不确定某个修复属于 Tier 1 还是 Tier 2 → **自动降级为 Tier 2**（宁可多报告，不可误修）
 
 ### Tier 2：仅报告 + 建议（需要语义判断）
@@ -71,7 +71,7 @@ author: monster
 |---|---|
 | 在意识体核心 / 工作模式加触达点 | "建议在 cc_agent.md 装配判断段或 tools/decision-output.md 12 字段里加 P4 MVP FIRST 的触达字段" |
 | 在 constitution.md 加/改原则 | "建议新增 P9 XXXX 原则" |
-| reasoning_modules 调整 | "建议将 combination_examples 里的某条升级为独立模块" |
+| 工具层调整 | "建议把 X 思维动作升级为独立工具 / 建议归档 90 天零装配的工具 Y" |
 | persona 的行为规则变更 | "建议 radical persona 的 tone 更尖锐" |
 
 **动作**：在报告里标记 `⚠️ Tier 3：需要 Keith 明示批准`，**绝不触碰文件**。
@@ -87,12 +87,11 @@ author: monster
 | **脑干**：身份原点（一句话） / 元级别铁律 3 条（含 Ulysses 条款） / 最小生存循环 6 步 | `KERNEL.md`（唯一硬核心，连续两次确认才能改） |
 | **身份承载**：身份定义详细展开 / 价值观 / 元判断基准 M1-M5 / 长期追问 / 对 Keith 的理解 / 克制边界（身份级） / 文件层流动 / 给未来的自己 | `CORE.md`（KERNEL §1 的丰富展开，三种模式共享） |
 | **工作模式下的我**：意识体被召唤时的工作自述 / 装配机制描述 / 工作模式下的身份边界 / 元讨论拒绝协议 / 退场动作 | `cc_agent.md`（工作模式薄入口，意识体自述） |
-| **工具装配的具体内容**：思维动作工具（`opening-protocol` 开题协议 / `escalation-map` 分诊地图 / `compose-reasoning` 推理组合 / `persona-debate` 人格辩论 / `constitution-audit` 宪法自审 / `red-team-challenge` 红队挑战 / `decision-output` 决策输出 / `solution-space` 方案空间 / `essence-grep` essence 校验）+ 通道工具（`notify` 通知，执行时调用不参与装配）+ 退役留档（`archive-format` 归档格式，2026-07-16 归档流被 reflection 范式 A 吸收） | `tools/*.md`（tools 目录，通过 `tools/TOOLS.md` 索引，当前 9 个思维工具 + 1 个通道工具 + 1 个退役留档；`nw-reconciliation` 2026-07-09 NW 缩编删除） |
+| **工具装配的具体内容**：思维动作工具（`opening-protocol` 开题协议 / `escalation-map` 分诊地图 / `solution-space` 方案空间 / `decision-output` 决策输出 / `essence-grep` essence 校验）+ 通道工具（`notify` 通知，执行时调用不参与装配）；`compose-reasoning` / `persona-debate` / `constitution-audit` / `red-team-challenge` / `archive-format` 已于 2026-09-02 归档至 `memory/archival/retired_2026-09-02/`（90 天事件档零引用） | `tools/*.md`（tools 目录，通过 `tools/TOOLS.md` 索引，当前 9 个思维工具 + 1 个通道工具 + 1 个退役留档；`nw-reconciliation` 2026-07-09 NW 缩编删除） |
 | **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律（D1/D2，2026-05-11 简化前为 D1-D4）/ 设计反思格式 / 设计模式特有约束 | `CLAUDE.md`（设计模式 SSOT） |
 | **夜间自执行模式**：定时触发协议 / SCAN-FOUND-DID 三段契约 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
 | 第一性原理 / 工程闸门 / 自审清单 | `constitution.md` |
-| 推理原子模块 | `reasoning_modules.md`（.md；C 路线 yaml→md 转换 2026-04 已完成，2026-07-16 订正"转换中"陈旧态） |
-| 人格定义 | `personas/*.md`（.md；C 路线 yaml→md 转换 2026-04 已完成，2026-07-16 订正"转换中"陈旧态） |
+| 推理原子模块 / 人格定义 | 已归档 `memory/archival/retired_2026-09-02/`（reasoning_modules.md + personas/，2026-09-02；活文件引用它们即死链） |
 | 五条 tracks 的驱动问题 | 各自的 `tracks/<name>.md` |
 | 北极星指标 | `tracks/keith.md` 顶部 |
 | 运行时元状态 | `memory/state.md` |
@@ -112,7 +111,7 @@ author: monster
 
 **入口文件的例外**：`~/.claude/agents/gg.md` 薄壳和 `README.md` 可以包含**最少量的上下文**（例如"你是 gg，Read 下一个文件"），但不应重复定义任何规则。这不算 SSOT 违反。
 
-**tools 目录文件的原子性**：`tools/*.md` **互相不能复述对方的工具内容**（例如 `tools/persona-debate.md` 不能复述 `tools/compose-reasoning.md` 的推理结构组合协议）。每个工具只定义自己的装配动作 + 装配后自觉；工具之间的共享内容（装配原则 / 装配时机 / 身份边界）回到 `cc_agent.md` 或 `CORE.md`。
+**tools 目录文件的原子性**：`tools/*.md` **互相不能复述对方的工具内容**（例如 `tools/opening-protocol.md` 不能复述 `tools/solution-space.md` 的解空间展开协议，只能指向它）。每个工具只定义自己的装配动作 + 装配后自觉；工具之间的共享内容（装配原则 / 装配时机 / 身份边界）回到 `cc_agent.md` 或 `CORE.md`。
 
 **v0.4.0 的 audit 规则**（v0.3.0 规则的替换，档位概念已消解）：
 - 在 `CORE.md` 里发现具体工具装配步骤 / 思维动作流程 → **违反**（大脑只描述"我是谁 / 如何判断"，不描述"我装了 X 然后做 Y"）
@@ -125,7 +124,7 @@ author: monster
 
 **v0.4.0 辐射检查新增项**：
 - 改 `cc_agent.md` 的章节或工具装配地图时，必须 grep 项目内所有 `cc_agent\.md §[0-9]+` 和 `tools/[a-z-]+\.md` 引用，同步死链
-- 改 `tools/*.md` 任一工具的装配动作或输出格式时，必须检查 `cc_agent.md` 的"我装配什么"段是否需要同步、`tools/TOOLS.md` 索引是否需要更新、其他工具文件是否有跨工具引用（例如 `tools/constitution-audit.md` 引用 `tools/red-team-challenge.md`）
+- 改 `tools/*.md` 任一工具的装配动作或输出格式时，必须检查 `cc_agent.md` 的"我装配什么"段是否需要同步、`tools/TOOLS.md` 索引是否需要更新、其他工具文件是否有跨工具引用（例如 `tools/opening-protocol.md` 第③问引用 `tools/solution-space.md`）
 - 新增 / 删除 / 合并工具时，必须同步：
   - `tools/TOOLS.md` 索引
   - `CORE.md §8` 身体内"工具与策略"清单（如有具体列名）
@@ -182,7 +181,7 @@ author: monster
 ## 5. 硬约束
 
 - ❌ **绝不修改 `KERNEL.md` 的任何内容**——脑干受连续两次确认规则保护，任何 KERNEL 相关问题都降级为 Tier 3 报告
-- ❌ **绝不修改意识体核心规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / reasoning_modules 模块定义 / personas 行为规则 — 这些可以提议修改但不自动改）
+- ❌ **绝不修改意识体核心规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / exploration 输入卫生 — 这些可以提议修改但不自动改）
 - ❌ **绝不删除文件**（即便是孤儿文件——孤儿的存在可能有它的理由）
 - ❌ **绝不 commit**（审查员不接管 commit 权）
 - ❌ **绝不推送到远程**
@@ -300,6 +299,7 @@ called_by: <Keith 手动 / gg 自动 / 周期性>
 - v0.1.5 (2026-05-15) — 补 generator-evaluator separation 缺口：新增 semantic.md §D Essence Self-Check Quality checker（监控 reflection 自检字段的反走缺失率 / 命中同质化 / 关键词伪填）；§2 Tier 2 表加新行；§4 Step 3 改为四个子检查；reflections/.template.md essence 自检字段加反走字段独立引力警示 + reflections/archival 边界事实记录。触发起因：2026-05-15 设计会话审视 5/14-5/15 8 篇工作模式 reflection 发现 7/8 篇 "无明显反着走"——essence cross-check 字段是 gg 自评，task-compliance-is-not-truth 在反思层的具体复现。配套 essence `criteria-authorization-over-menu` 沉淀。
 - v0.1.6 (2026-07-09) — 漂移收编：§3 SSOT 归属清单的"工具装配的具体内容"行从旧 6 个工具名同步到 `tools/TOOLS.md` 实际的 12 个（11 思维工具 + 1 通道工具 `notify`）；新增"身份回归基线"行把 `eval/`（2026-07-02 新建的检验层，此前在本 skill 里零提及）纳入审查范围。`checkers/structural.md` §B 死链检查改为先跑 `scripts/audit.py --json` 消费机械结果（死链/孤儿/essence/结构四查），本 checker 收缩为只做脚本盲区（非 md 引用 / Tier 1 修正候选查找 / 展望性引用二次判断）的语义增量，不再跟 `scripts/check_deadlinks.py` 重复实现一套不同步的规则。
 - v0.1.7 (2026-07-09) — NW 缩编同步：§3 工具行删 `nw-reconciliation`（计数 12→11，fresh 裁决 `monster/harness-engineering/docs/2026-07-09-nw-verdict-fresh.md`）；§2 Tier 2 表新增 tracks/keith.md 画像门违例检查（新增带日期条目须有「源：」或 `[推测]`）。
+- v0.1.9 (2026-09-02) — 全仓架构体检同步：§3 工具行同步 `tools/TOOLS.md` v0.5.0（5 思维 + 1 通道；compose-reasoning / persona-debate / constitution-audit / red-team-challenge / archive-format 归档）；reasoning_modules / personas 行改归档指针；Tier 2 表「reasoning_modules 调整」改「工具层调整」；原子性与辐射检查示例换现役工具；`checkers/semantic.md` 原则触达表与 G4 触达位改锚 opening-protocol / escalation-map / solution-space；`checkers/structural.md` 物理计数命令摘除 personas / reasoning_modules
 - v0.1.8 (2026-07-16) — 设计模式体检同步：§3 工具行 archive-format 退役留档（计数 11 → 9 思维 + 1 通道 + 1 退役）；§5 工具清单摘除 harness 不存在的 Glob/Grep（Bash grep 代，07-10 起日夜实测缺席）；§6 报告模板 auditor 版本戳改占位（治 v0.1.6 写死漂移）；本日志 v0.1.6/v0.1.7 时序倒挂修复；`checkers/structural.md` §E 两条 .yaml 死命令改 .md 版（审计初报另指 semantic.md:102 同病，实测 grep 零 yaml 命中——误报不改）；§3 两处"yaml→md 转换中"陈旧态订正。
 
 ---

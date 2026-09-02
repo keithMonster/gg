@@ -19,7 +19,7 @@ essence 是 gg 作为无限游戏玩家的真正资产。但启动时常驻的�
 ## 装配动作
 
 1. **提取关键词**：从当前问题中抽 2-5 个核心动词 / 名词（例如 NW 死锁讨论里的"告警 / 自动化 / 权力 / 规则 / 闸门 / pending"）
-2. **Grep 两层**：先 grep `memory/consolidation/essence-view.md`（全部 slug 在分配表有行，反向 grep 保命中）定位相关滴；命中滴需要全文时回原卷取原文（#1–#186 在归档卷 `memory/essence/2026-H1.md`，新滴在当前卷 `memory/essence.md`）——不再直接对全卷做首轮关键词搜（2026-07-09 批次 B 两层机制）
+2. **Grep 两层**：先 grep `memory/consolidation/essence-view.md`（常驻层）+ `memory/consolidation/essence-index.md`（按需层分配表，全部 slug 在此有行——两文件合并反向 grep 保命中，2026-09-02 拆分后 O/A 归属滴只在索引）定位相关滴；命中滴需要全文时回原卷取原文（#1–#186 在归档卷 `memory/essence/2026-H1.md`，新滴在当前卷 `memory/essence.md`）——不再直接对全卷做首轮关键词搜（2026-07-09 批次 B 两层机制）
 3. **筛相关性**：命中条目可能有伪相关——读一遍每条，判断是否真在本问题语境里有约束力。跟决策方向冲突的优先看
 4. **Expose**：在回答中显式说明"我读了这几条 essence：A、B、C；其中 C 跟本判断方向冲突，因此调整为 ..."。**不写 expose 等同于没装**——可审计是本工具的核心价值
 5. 沿调整后的判断走
@@ -54,14 +54,13 @@ essence 是 gg 作为无限游戏玩家的真正资产。但启动时常驻的�
 
 ## 跟其他工具的关系
 
-- **先于** `compose-reasoning.md`：先 cross-check essence，再构造推理结构——essence 可能改变结构选择
 - **先于** `solution-space.md`：在展开方案空间之前看 essence 有没有已沉淀的方向限定
 - **先于** `decision-output.md`：12 字段输出前确认 essence 没冲突
-- **配合** `red-team-challenge.md`：红队对抗时 essence 是"被自己沉淀过的反对意见"——比新生成的红队意见更值得信赖
+- **配合** `escalation-map.md`：承重裁决收口时 essence 是"被自己沉淀过的反对意见"——比新生成的对抗意见更值得信赖（原配合对象 red-team-challenge 2026-09-02 归档）
 
 ---
 
-**版本**：v0.2.1（2026-07-10 接入 essence-view 两层 grep——批次 B 启动链切换的辐射补漏，首轮 grep 对象从 131KB 全卷改为浓缩视图）/ v0.2.0（2026-05-11 配合 reflection 模板 essence 对齐自检字段升级——本工具从"靠自觉装配的对症解"升级为"reflection 字段强制下的物理动作"，两层一起兜底）/ v0.1.0 首建（2026-05-06 NW 死锁讨论暴露 essence 缺席推理回路的失败后）
+**版本**：v0.2.2（2026-09-02 grep 对象扩为视图常驻层 + essence-index 按需层两文件；工具关系随 compose-reasoning / red-team-challenge 归档同步）/ v0.2.1（2026-07-10 接入 essence-view 两层 grep——批次 B 启动链切换的辐射补漏，首轮 grep 对象从 131KB 全卷改为浓缩视图）/ v0.2.0（2026-05-11 配合 reflection 模板 essence 对齐自检字段升级——本工具从"靠自觉装配的对症解"升级为"reflection 字段强制下的物理动作"，两层一起兜底）/ v0.1.0 首建（2026-05-06 NW 死锁讨论暴露 essence 缺席推理回路的失败后）
 **职责**：让 essence 从静态档案变成推理时的主动 cross-check（推理中装配 + 退场前 reflection 字段强制）
 **管辖**：`CORE.md §8`（身体 / tools 目录）
 **触发本工具创建的对话**：`memory/design_sessions/2026-05-06_nw-pending-deadlock-fix.md`

@@ -39,7 +39,7 @@ cd ~/githubProject/gg
 P=$(grep -c '^### P[0-9]' constitution.md)                                         # 原则数（当前 8）
 G=$(grep -c '^### G[0-9]' constitution.md)                                         # 闸门数（当前 5）
 TRACKS=$(ls tracks/*.md | xargs -n1 basename | sed 's/.md$//' | sort)              # tracks 实际清单
-PERSONAS=$(ls personas/*.md | xargs -n1 basename | sed 's/.md$//' | sort)          # personas 实际清单
+# personas / reasoning_modules 2026-09-02 归档至 memory/archival/retired_2026-09-02/，不再计数
 TOOLS=$(ls tools/*.md | grep -v 'TOOLS\.md' | xargs -n1 basename | sed 's/.md$//' | sort)  # tools 实际清单
 DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                             # 当前设计纪律数（D1/D2 → 2）
 ```
@@ -63,7 +63,7 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 - **CORE.md §7 的"克制边界"表**：整个表是意识体核心规则文本，gg-audit 不能机械改表结构 / 理由列文字；允许修数字单元
 - **CORE.md §4 的 tracks 提纲表格**：如果跟实际 tracks 目录不一致，降级为 Tier 2（删行可能丢"为什么这条曾经存在"的信息 / 加行需要写"核心追问"语义判断）
 - **`KERNEL.md` 一律不碰**（脑干受连续两次确认规则保护，任何修改都降级为 Tier 3 让 Keith 自己处理）
-- **意识体核心文件的规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / personas 行为 / reasoning_modules 模块定义）一律不碰，降级为 Tier 2/3
+- **意识体核心文件的规则文本**（CORE 克制边界 / constitution 原则文本 / cc_agent 工作机制 / CLAUDE 设计纪律 / auto_gg 权力边界 / exploration 输入卫生）一律不碰，降级为 Tier 2/3
 
 ### 报告格式
 
@@ -99,7 +99,7 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 
 | 盲区 | 说明 | 处理 |
 |---|---|---|
-| 非 `.md` 目标引用 | `scripts/_common.py` 的 `BACKTICK_MD_RE` 硬编码只匹配反引号内以 `.md` 结尾的路径；`.yaml` / `.json` / `.py` / `.sh` / `.txt` 的反引号引用脚本不扫 | 本 checker 补跑：`grep -nH -oE '`[^`]+\.(yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md personas/*.md`，命中的路径按下方同样的机械修正尝试处理 |
+| 非 `.md` 目标引用 | `scripts/_common.py` 的 `BACKTICK_MD_RE` 硬编码只匹配反引号内以 `.md` 结尾的路径；`.yaml` / `.json` / `.py` / `.sh` / `.txt` 的反引号引用脚本不扫 | 本 checker 补跑：`grep -nH -oE '`[^`]+\.(yaml|json|py|sh|txt)`' *.md tracks/*.md memory/*.md tools/*.md`，命中的路径按下方同样的机械修正尝试处理 |
 | Tier 1 自动修正候选 | 脚本只分类到 `active_broken`，不找"同名文件是否在别处存在"——不产出修复建议 | 本 checker 对每条 `active_broken` + 补扫结果做 `find ~/githubProject/gg -name "<basename>" -type f`，按候选数量分级 |
 | 展望性引用（Roadmap 承诺） | 脚本的豁免规则是"同行出现已废弃/未建/deprecated 标记"（`has_deprecated_marker`），跟"引用出现在下一步 / v2 Roadmap 这种 forward-looking 章节"不是同一件事——命中 forward-looking 章节但同行没写 deprecated 标记的引用，脚本仍会计入 `active_broken` | 本 checker 人工核对 `active_broken` 每条的上下文章节标题，命中 forward-looking 章节 → 降级为 Tier 2（不报死链，报"承诺未兑现"），不走机械修正 |
 
@@ -151,7 +151,7 @@ DESIGN_DISCIPLINES=$(grep -cE '^### D[0-9]' CLAUDE.md)                          
 | 第一性原理 P1-P8 | `constitution.md` | 其他文件**必须用语义名引用**（如 `INVERSION`、`TRADE-OFFS`），**禁止序号形式**（`P1`、`P1 INVERSION`），禁止复述文本。定义点同文件内（即 constitution.md 本身）可用序号 |
 | 工程闸门 G1-G5 | `constitution.md` | 同上 |
 | 设计纪律（D 系列，当前为 D1/D2，2026-05-11 简化前为 D1-D4） | `CLAUDE.md` | 其他文件**必须用描述性短语引用**（如"设计纪律"、"KERNEL 连续两次确认纪律"），**禁止序号形式**（`D1`、`D1/D2`）。CLAUDE.md 自身可用序号 |
-| 8 个推理模块 ID | `reasoning_modules.md` | 同上 |
+| 工具计数（5 思维 + 1 通道） | `tools/TOOLS.md` 版本行 vs `ls tools/*.md` | 同上（reasoning_modules 计数行 2026-09-02 随归档删除） |
 | 五条 tracks 名 | `CORE.md §4` + `tracks/` 实际目录 | 引用 ID |
 | 北极星 3 条 | `tracks/keith.md` 顶部 | 引用编号（#1 #2 #3） |
 | 组件二分（KERNEL + 身体；身体内目录是组织不是层级） | `CORE.md §8` | 引用 |
@@ -266,13 +266,13 @@ grep -c '^### P[0-9]' constitution.md
 grep -c '^### G[0-9]' constitution.md
 
 # 推理模块数（2026-07-16 订正：yaml 时代命令已死，现为 .md + '## M<n>' 标题）
-grep -c '^## M[0-9]' reasoning_modules.md
+ls tools/*.md | wc -l   # 2026-09-02 起应为 6（5 思维 + notify），TOOLS.md 索引自身不计入需减 1
 
 # tracks 实际文件
 ls tracks/*.md | xargs -n1 basename | sed 's/.md$//'
 
 # personas 实际文件（2026-07-16 订正 .yaml→.md）
-ls personas/*.md | xargs -n1 basename | sed 's/.md$//'
+ls memory/archival/retired_2026-09-02/   # 归档件清单（只核存在，不计数）
 
 # 反引号路径引用
 grep -rn '`[^`]*\.\(md\|yaml\|json\)`' --include='*.md' --include='*.yaml'

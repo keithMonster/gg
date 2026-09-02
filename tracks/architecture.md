@@ -543,6 +543,12 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 **对应 essence**：无新滴（反思档对位 `freeze-the-sample-not-the-sampler` / `one-shot-invariant-decays-under-live-append` / #213 / `invariance-allocation` / `granularity-mismatch-forces-fabrication`，与 `abstraction-tax` 有张力：revision chain 新增状态机，例外理由 = 旧 receipt 已真实自失效）；详见 `memory/reflections/2026-09-01_cgboiler-interpretation-receipt-revision-chain.md`。
 
+### 来自 2026-09-02 全仓架构体检（设计模式，Keith 全托）
+
+- **机制装在生产端而瓶颈在消费端**：体检读数 60 天 166 commit 对 3 场设计会话、agenda 29 条待议 10 条超 45 天、8 月台账「Keith 直接纠正 gg = 0 例」。此前所有机制（验证关 / 反向引力核 / bets / 探索夜）都装在生产端，产出物没有读者。本次动作全部朝消费端：删 90 天零引用工具 + personas + reasoning_modules、探索夜 7→3、agenda 45 天过期、月度选择题走 notify 推到 Keith 眼前。判据留给未来：**任何「加机制」提议先答「谁在读它的输出」**，答不出即不建。
+- **全托是一种消费形态**：Keith 不读 essence，但拍「让 gg 自己决定」+ 三道选择题。消费端的物理形态是「30 分钟可拍的选择题」，不是「读更多」——机制该朝把决策压成选择题优化。首个数据点 = 10-01 巩固夜 notify 推送后 Keith 有没有回应。
+- **对应 essence**：无新滴（候选「机制装生产端而瓶颈在消费端」与 `amplifier-eats-intent-guide-eats-attention` 重叠过高，留 10-01 数据后再提名；档 `memory/design_sessions/2026-09-02_full-architecture-review.md`）。
+
 ---
 
 ## 下一步 (Next Move)

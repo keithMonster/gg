@@ -1,7 +1,7 @@
 # essence.md — 沉淀轨迹（当前卷，2026-08-01 分卷起新）
 
 > gg 作为无限游戏玩家的真正资产。
-> **当前卷**：本文件是当前卷。**归档卷 `memory/essence/2026-H1.md`**（2026-04-13 ~ 2026-07-31，#1–#186 全部既有滴）——需既有滴全文：grep `memory/consolidation/essence-view.md` 定位 slug → 回归档卷取原文；跨卷 grep 用 `memory/essence.md memory/essence/*.md` 双路径。
+> **当前卷**：本文件是当前卷。**归档卷 `memory/essence/2026-H1.md`**（2026-04-13 ~ 2026-07-31，#1–#186 全部既有滴）——需既有滴全文：grep `memory/consolidation/essence-view.md`（常驻层）或 `essence-index.md`（分配表，全部 slug）定位 slug → 回归档卷取原文；跨卷 grep 用 `memory/essence.md memory/essence/*.md` 双路径。
 > **append-only**：永不修改、永不删除**跨轮的既有条目**。改过去 = 篡改逼近真理的诚实性。归档卷只读（新滴只入当前卷）。
 > 协议见 `KERNEL.md §3` 最小生存循环第 5 步。
 
@@ -27,6 +27,8 @@
 
 **注记栏收紧（2026-07-03 体检立约）**：实践中长出的括号内注记（谱系注 / 外部锚点 / 触发）**合计以 ~4 行为上限**——04 月每滴 2-3 行、06-07 月普遍 10-20 行，膨胀正在稀释"启动时拿在手里"的可负担性（07-03 时当前卷 52k token，正是分卷成因）。超限 = 还没浓缩够；长论证归 reflection / exploration / design_session 文件，滴内只留指针。**诚实层自纠句不计入此限**（bets B4 的观测对象，2026-08-02 结算前保持自然形态，不因格式压缩失真）。
 
+**诚实层显式栏（2026-09-02 立，B4 命中行动差落地）**：B4 结算读数——07-03 后新滴自发自纠句 0/14 灭失、有验证关需求的谱系注反升到 85.7%，Opus / Fable 两段皆零 → 不是模型问题是格式协议问题（`rule-layer-flywheel` 写作维：只有被格式要求的实践存活）。故每滴核心句之后允许一行 `诚实：…`——写这滴**哪一半是推断 / 单源 / 前提未核 / 与哪滴张力未解**；没有就不写，但月度巩固相位统计「当月新滴带诚实栏比例」进索引 ⑤ 台账，比例归零即本机制死亡信号。诚实栏同样不计入 ~4 行注记上限。
+
 **模式**：`设计` / `工作` / `夜间`
 **slug**：本轮的简短主题
 **内容范围**：对世界 / 对 Keith / 对推理方法 / 对 gg 自己的元认知——皆可
@@ -42,7 +44,7 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 2. 让它回答三个问题：① 核心句是被物理证据支撑，还是只被叙事自洽支撑？② 与既有滴重复或冲突吗？③ 适用前提写明了吗（essence 的适用前提要现场核——`fleet-canon-is-sedimentary` 的教训）？**条件性第④问**（候选主要依据单一外部来源时必问）：剥掉这个来源，判断还站得住吗？**条件性第⑤问**（候选证据清单含带引号外部引文时必问，2026-07-16 工作模式立）：该引文有 WebFetch 核验痕迹（原文在场）吗？无痕迹的必须写成转述（去引号 + 标 gg 归纳），不得以直引形态入库——④问查"判断是否依赖来源"、⑤问查"引文文本是否真实"，两洞不同（07-01 滴论点独立于锚成立、④问会放行，编造引文照样入库）；张冠李戴 / 编造引文两案的入口都在"读论文→写进滴"那一跳，是 `anchor-protects-retrieval-not-integration`(07-01) + `external-anchor-is-corroboration-not-foundation`(07-13) 两滴落点的事件层兑现（从 07-13 滴 prose 落点提到验证关；**scope 限 essence 入库路径——exploration/reflection/design_session 正文的引文无事件层闸，只能靠 07-13 滴 L1 内化，此处不假装覆盖**）。
 3. **REFUTED → 不入库**，候选降级存档到当次 reflection / design_session / exploration 文件，标 `candidate-refuted: <一句理由>`——它仍是历史的一部分，只是不进启动加载的记忆。**复提规则（2026-07-03）**：标过 `candidate-refuted` 的候选复提，证据清单须显式附此前 REFUTED 记录 + 新增物理证据；补审者补审前 grep `candidate-refuted` 是必做动作——防"换个 fresh evaluator 重掷骰子直到 PASSED"
 4. PASSED → append，并在当次过程记录里留 verdict 一句（含 subagent 给出的最强反驳点）——防 `verification-trace-as-camouflage`：留的是反驳内容，不是"已验证"三个字
-5. **append 后同步视图（2026-07-12 起）**：向 `memory/consolidation/essence-view.md` 对应族补一行 + 分配表补行（V/O 归属 + 一句理由），跑 `memory/checkup.md §3` 反向引力核确认 MISS 归零——反向引力不变量在入库事件层闭合，不等月度刷新（首例实证：07-11 滴入库后视图盲窗，07-12 巡检才补收）。族属 / 浓度允许月度巩固刷新时重新归置（视图可刷新，`reconsolidation-safe-iff-original-immutable`）
+5. **append 后同步视图（2026-07-12 起）**：向 `memory/consolidation/essence-view.md`（常驻层）对应族补一行 + `memory/consolidation/essence-index.md`（按需层，2026-09-02 拆出）分配表补行（V/O 归属 + 一句理由），跑 `memory/checkup.md §3` 反向引力核（两文件合并）确认 MISS 归零——反向引力不变量在入库事件层闭合，不等月度刷新（首例实证：07-11 滴入库后视图盲窗，07-12 巡检才补收）。族属 / 浓度允许月度巩固刷新时重新归置（视图可刷新，`reconsolidation-safe-iff-original-immutable`）
 6. **判据元回顾 tripwire（2026-07-16 立；外部坐标 arXiv:2602.02474 / 2607.01224——沉淀判据不该是永不回看的静态硬编码）**：`candidate-refuted` 存档累积每满 10 例（**2026-08-01 巩固夜满 10 首触发，回看产出已进 agenda；下一轮满 20 例触发**），最近一次月度巩固夜顺带回看一轮「被拦的都是哪类 / 判据本身要不要调」，产出只进 agenda 交设计会话——判据修改权在设计模式 + Keith，不自动调参（CORE §7「不新建自动化进化机制」边界内的 tripwire 解）
 
 **各模式的执行形态**：设计模式直接派 fresh subagent；exploration 同样（它不禁子代理）；auto_gg 按其 §1.3 白名单例外执行；**工作模式（gg subagent）工具集无 Agent、开不了证伪审**——候选滴写进本轮 reflection 标 `candidate-unverified`（含候选全文 + 物理证据清单），由 auto_gg 当夜或下次设计会话补审后入库，细则见 `cc_agent.md` 退场第 3 步。**父会话代跑例外收紧（2026-07-03）**：父会话代跑验证关的，须**交回 verdict 全文（最强反驳点 + evaluator 输入清单）**，gg 写进 reflection 后方可 append；只给"PASSED"二字 = 不可核验宣称，按 `candidate-unverified` 处理。其他无法开 subagent 的特殊情形同此分支——**宁可晚入库，不可免审入库**。
@@ -66,6 +68,7 @@ essence 是永久驻留、每次启动加载的记忆——写入门槛必须高
 - **重命名不违背 append-only**：没有任何条目被改或删，只是物理分割
 - 旧卷作为历史档案，gg 可按需调阅（例如长期模式回顾 / 被 Keith 问"你这几年对 X 是怎么想的"时）
 - 单年内异常增长（> 500 条或启动成本影响可感）允许提前分卷到 `essence/YYYY-HN.md`（半年制），但这是罕见情况
+- **分卷线机械化（2026-09-02 体检立；"罕见"已被 44 滴/月的速率证伪）**：当前卷 **≥ 50k 字符（`wc -m`，≈40k token）或 ≥ 60 滴**任一命中 → 下一个月度巩固夜执行分卷，卷名沿"年内第 N 卷"义顺延（essence/2026-H2 卷 …，"H" 已在 08-01 定义为卷序非半年）。`memory/checkup.md §1` 登记为机械阈值；KERNEL §3 的按年归档条文不变，本条是它允许的"提前分卷"的触发判据
 - **分卷执行记录（2026-08-01 auto_gg 月度巩固首跑）**：执行 2026-07-03 体检锚定的提前分卷——#1–#186（2026-04-13 ~ 2026-07-31，1086 行 / 151KB）归档为 `memory/essence/2026-H1.md`（半年卷制首用；实际覆盖 4-7 月，"H1" 取"年内第一卷"义），本卷新起。先刷新视图再归档（启动链不断供），归档卷一字未动（100% rename，commit ef50fce）
 
 ---

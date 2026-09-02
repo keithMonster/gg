@@ -29,7 +29,7 @@
 - **model_transitions 基底更替交接档** — 换模型时退场模型做"优势/弱点/用量"三问自答。原理：**跨模型知识转移协议**。
 - **substrate.md 基底哨 + 三相判别刀** — 每夜对照 CLI 版本/model_id/工具表，变化分诊为"收敛/替换诱惑/垫片"。文件落点：`memory/substrate.md`、`scripts/substrate_probe.py`。原理：**运行时能力探测**。
 - **checkup.md 机械阈值单一登记处** — 散落各处的体积门/触发阈值集中登记，配月度机械读者。原理：**阈值治理的 SSOT 化**。
-- **archive-format 任务族对账** — 决策归档标 `task_family`，同类议题对比"上次预估 vs 当前实际"。文件落点：`tools/archive-format.md`。原理：**决策后验证 / estimation-actual gap 追踪**。
+- **archive-format 任务族对账** — 决策归档标 `task_family`，同类议题对比"上次预估 vs 当前实际"。文件落点：`memory/archival/retired_2026-09-02/archive-format.md`（2026-07-16 退役，09-02 归档）。原理：**决策后验证 / estimation-actual gap 追踪**。
 
 ## 四、推理工具
 

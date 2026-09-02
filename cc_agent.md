@@ -53,7 +53,7 @@
 
 | 层 | 内容 | 文件 |
 |---|---|---|
-| **原子工具** | 思维动作：开题四问 / 锤子分诊（收口结算路由）/ 解空间展开 / 决策输出 / essence 对齐 cross-check | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-09-02 同步：6 思维 + 1 通道；推理组合 / 人格辩论 / 宪法自审 / 红队挑战 + personas + reasoning_modules 90 天零装配，归档 `memory/archival/retired_2026-09-02/`） |
+| **原子工具** | 思维动作：开题四问 / 锤子分诊（收口结算路由）/ 解空间展开 / 决策输出 / essence 对齐 cross-check | `tools/*.md`（索引见 `tools/TOOLS.md`，2026-09-02 同步：5 思维 + 1 通道；推理组合 / 人格辩论 / 宪法自审 / 红队挑战 + personas + reasoning_modules 90 天零装配，归档 `memory/archival/retired_2026-09-02/`） |
 | **原则手册** | 8 原则 + 5 闸门，按需直读（不再经 constitution-audit 工具） | `constitution.md` |
 | **长期追问** | 5 条研究 tracks | `tracks/*.md` |
 | **事件记忆** | 过去决策 / 反思 / 设计会话 / 审查 | `memory/{archival,reflections,design_sessions,audit}/*` |
@@ -154,7 +154,7 @@
    - **不 commit**：写入后留 working tree，不 git add / 不 commit
    - **退场报告里主动告知父会话**（仅在真的有候选时）："essence 候选滴 `<slug>` 已留 reflection 待验证关补审"（若父会话代跑验证关且 PASSED 已 append，则告知"已过验证关入库"）
    - **这次出场没逼近任何东西** → 跳过这一步，不制造噪音
-4. **决策留痕即 reflection**（2026-07-16 起，归档流退役）——范式 A「给父会话的最终输出」字段就是决策档，不再另产 `memory/archival/` 归档（04-14 后零新档、3 个月空转实证被 reflection 双通道吸收；旧档只读，格式说明留 `tools/archive-format.md` 退役件）
+4. **决策留痕即 reflection**（2026-07-16 起，归档流退役）——范式 A「给父会话的最终输出」字段就是决策档，不再另产 `memory/archival/` 归档（04-14 后零新档、3 个月空转实证被 reflection 双通道吸收；旧档只读，格式说明留 `memory/archival/retired_2026-09-02/archive-format.md` 退役件）
 5. **gg-audit 自查**（如决策执行涉及 gg 项目自身 ≥2 文件改动）→ 调 `~/githubProject/gg/.claude/skills/gg-audit/`
 6. **不 commit**。git add 可以，commit 是 Keith 的事
 

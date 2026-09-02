@@ -29,7 +29,7 @@ ARCHIVE_PREFIXES = (
 ENTRY_FILES = frozenset({
     "README.md", "KERNEL.md", "CLAUDE.md", "CORE.md",
     "cc_agent.md", "auto_gg.md", "constitution.md",
-    "daily_knowledge.md", "reasoning_modules.md",
+    "daily_knowledge.md",  # reasoning_modules.md 2026-09-02 归档，已从入口清单移除
     "DAILY_WORD.md", "GG_EXPLORE.md",
 })
 

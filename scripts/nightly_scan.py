@@ -165,7 +165,12 @@ def scan_substrate():
 # ── 传感器 3：暗夜哨——近 7 日历日缺哪天日志 ──────────────────────────────
 
 def scan_dark_night():
-    """判据纯物理：文件在 / 不在。缺 = 那夜整个没跑（调度 non-fire）。
+    """判据纯物理：文件在 / 不在。
+
+    缺 ≠ 一定是调度 non-fire：日志由 auto_gg 会话自己在 SCAN 之后写，会话起了但在
+    写日志前塌缩（collapse-before-log）同样缺文件。归因看该夜有无 `auto_gg(YYYY-MM-DD)`
+    前缀 commit——有 commit 无日志 = 塌缩 / 收尾断裂；两者皆无 = 调度 non-fire
+    （2026-09-02 体检订正：此前注解把"缺"单一归因为 non-fire，排查会漏掉塌缩形态）。
 
     不含今日——本夜日志由 auto_gg 自己在 SCAN 之后创建。
     """
@@ -181,7 +186,7 @@ def scan_dark_night():
         return sensor("dark_night", OK, f"近 {DARK_NIGHT_DAYS} 日历日日志 {present}/{DARK_NIGHT_DAYS} 在")
     return sensor("dark_night", ALERT,
                   f"近 {DARK_NIGHT_DAYS} 日日志 {present}/{DARK_NIGHT_DAYS} 在，缺 {len(missing)} 夜",
-                  [f"缺席：{', '.join(sorted(missing))}（调度 non-fire，上报 FOUND + 进 parked）"])
+                  [f"缺席：{', '.join(sorted(missing))}（看该夜有无 auto_gg commit 分诊 non-fire / 塌缩，上报 FOUND + 进 parked）"])
 
 
 # ── 传感器 4：收尾断裂哨——status 停在 in-progress ────────────────────────
@@ -294,11 +299,33 @@ def scan_eval_freshness():
         return sensor("eval_freshness", ERROR, "eval/runs 无带日期的 run 文件（命名判据失配或从未跑过）")
     latest, name = max(dates)
     age = (today() - latest).days
+    # 承重文件改动触发（2026-09-02 体检加）：最新 run 之后 KERNEL / CORE / constitution /
+    # cc_agent 任一有 commit → eval 的被测对象已变、结论失效，不等 90 天线。
+    # ROOT 不是 git 仓（selftest 夹具）或 git 失败 → 跳过本判据，不升 ERROR。
+    changed = _bearing_changes_since(latest)
+    if changed:
+        return sensor("eval_freshness", ALERT,
+                      f"最新 run {latest} 之后承重文件有 {len(changed)} 次 commit，eval 结论已失效",
+                      [f"最新：{name}；承重改动：{' / '.join(changed[:6])}",
+                       "跑一轮 eval（eval/README.md §3），或新建 eval/runs/<日期>_waived.md 写免跑理由（日期即新基线）"])
     if age <= EVAL_STALE_DAYS:
         return sensor("eval_freshness", OK,
-                      f"最新 run {latest} 距今 {age} 天（共 {len(dates)} 份，线 {EVAL_STALE_DAYS} 天）")
+                      f"最新 run {latest} 距今 {age} 天（共 {len(dates)} 份，线 {EVAL_STALE_DAYS} 天；承重文件无改动）")
     return sensor("eval_freshness", ALERT, f"最新 run {latest} 距今 {age} 天，已过 {EVAL_STALE_DAYS} 天线",
                   [f"最新：{name}；substrate 报 model_id 变更后无新 run 亦触发"])
+
+
+EVAL_BEARING_FILES = ["KERNEL.md", "CORE.md", "constitution.md", "cc_agent.md"]
+
+
+def _bearing_changes_since(since_date):
+    """返回 since_date 之后（不含当日）触碰承重文件的 commit 简述列表；非 git 仓 / git 失败 → []"""
+    after = (since_date + datetime.timedelta(days=1)).isoformat()
+    rc, out, _ = _run(["git", "log", f"--since={after}", "--format=%h %ad %s", "--date=short",
+                       "--", *EVAL_BEARING_FILES])
+    if rc != 0:
+        return []
+    return [ln.strip()[:80] for ln in out.splitlines() if ln.strip()]
 
 
 # ── 传感器 7：24h 变化面（gg + monster 双仓） ────────────────────────────

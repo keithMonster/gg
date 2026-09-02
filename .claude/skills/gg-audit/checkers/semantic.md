@@ -33,7 +33,7 @@
 | **设计纪律（D 系列，当前 D1/D2）** | `CLAUDE.md §2` | `cc_agent.md` 元讨论拒绝协议、`README.md` 模式表、`tracks/keith.md`、`.claude/skills/gg-audit/SKILL.md` SSOT 归属表 |
 | **北极星（3 条：二阶效应 / 动态学习 / 决策超越直觉）** | `tracks/keith.md` 顶部 | `CLAUDE.md §1` First Contact、`memory/reflections/.template.md` 必填字段、`cc_agent.md` 退场动作、`~/.claude/agents/gg.md` frontmatter（若存在）、`CORE.md §5` |
 | **First Contact 协议** | `CLAUDE.md §1` | `memory/state.md` `first_contact_done` 字段、`tracks/keith.md` 顶部 |
-| **G4 IRREVERSIBILITY** | `constitution.md` G4 | `tracks/humanity.md`、`tools/red-team-challenge.md`、`tools/decision-output.md`（12 字段含可逆性必填项）、`CORE.md §3 M4` |
+| **G4 IRREVERSIBILITY** | `constitution.md` G4 | `tracks/humanity.md`、`tools/escalation-map.md`（不可逆项分诊到外面结算；原 red-team-challenge 2026-09-02 归档）、`tools/decision-output.md`（12 字段含可逆性必填项）、`CORE.md §3 M4` |
 | **身份 = 非隐喻连续性** | `tracks/ai.md DQ-5 洞察` | `CORE.md §1 / §8`、`tracks/keith.md` |
 | **essence 对齐自检字段（reflection 模板范式 A 必填）** | `memory/reflections/.template.md` | `CLAUDE.md §3` 设计反思模板、`cc_agent.md` 退场动作、`tools/essence-grep.md`、`tools/TOOLS.md` |
 | **三种存在形态（工作 / 设计 / 夜间自执行）** | `CORE.md §6` | `cc_agent.md`、`CLAUDE.md §5`、`auto_gg.md §6`、`README.md` 模式表 |
@@ -104,7 +104,7 @@
 ### 执行步骤
 
 1. Read `constitution.md`，抽出 P1-P8 + G1-G5 的 ID 和名称
-2. 对每一条做 grep 扫描：`cc_agent.md` + `tools/*.md` + `personas/*.md` + `reasoning_modules.md` + `CLAUDE.md` + `auto_gg.md` + `CORE.md`
+2. 对每一条做 grep 扫描：`cc_agent.md` + `tools/*.md` + `CLAUDE.md` + `auto_gg.md` + `exploration.md` + `CORE.md`（personas / reasoning_modules 2026-09-02 归档，不再扫）
 3. 分类：
    - **强触达** → 有具体工具 / 字段 / 协议物理实现该原则
    - **弱触达** → 仅在某文件被语义引用，但没有具体物理实现
@@ -114,18 +114,18 @@
 
 | 原则 | 触达位置 | 状态 |
 |---|---|---|
-| **P1 INVERSION** | `personas/radical.md` 引用 / `reasoning_modules.md` INVERSION_DESIGN 模块 / `tools/red-team-challenge.md` "先想怎么失败"精神物理化 | ✅ 强触达 |
-| **P2 FIRST PRINCIPLES** | `personas/radical.md` 直接引用 / `reasoning_modules.md` 模块 | 🟡 间接触达 |
-| **P3 OCCAM** | `cc_agent.md` "装配数量是涌现，不是预设" / `tools/compose-reasoning.md` "3-5 个模块"约束 / `tools/TOOLS.md` 工具上限提示 ≤20 | ✅ 强触达 |
-| **P4 MVP FIRST** | `reasoning_modules.md` M3 SKETCH_MINIMAL_MVP 模块（名称即原则）/ `tools/opening-protocol.md` 第④问"最便宜一击"（装载点 = CLAUDE.md 启动协议第 8 条 + cc_agent.md 步骤 6，2026-07-02 起） | ✅ 触达（2026-07-03 基线修正：M3 系 05-11 基线漏判，opening-protocol 系 07-02 新增） |
+| **P1 INVERSION** | `tools/opening-protocol.md` 第②问"判据先行 / 错了在哪个物理量现形"（pre-mortem 最短形态）/ `tools/escalation-map.md` 卡住与流畅时的收口分诊 | ✅ 强触达（2026-09-02 改锚：原 personas / reasoning_modules / red-team-challenge 归档） |
+| **P2 FIRST PRINCIPLES** | `tools/opening-protocol.md` 第①问"重写问题" / `tools/solution-space.md` 防先验锁定 | 🟡 间接触达（2026-09-02 改锚） |
+| **P3 OCCAM** | `cc_agent.md` "装配数量是涌现，不是预设" / `tools/TOOLS.md` 装配 3-5 个 + 工具上限提示 ≤20 / `tools/opening-protocol.md` 第④问 | ✅ 强触达 |
+| **P4 MVP FIRST** | `tools/opening-protocol.md` 第④问"最便宜一击"（装载点 = CLAUDE.md 启动协议第 8 条 + cc_agent.md 步骤 6，2026-07-02 起） | ✅ 触达（2026-07-03 基线修正；2026-09-02 原 M3 模块归档，本行只剩 opening-protocol 一锚） |
 | **P5 TRADE-OFFS** | `tools/decision-output.md` 12 字段 "Trade-off" 必填项 / `tools/solution-space.md` 多方案对比 | ✅ 强触达 |
-| **P6 DECOMPOSITION** | `reasoning_modules.md` 自身就是 8 个原子模块的物理体现 / `tools/*.md` 工具原子化策略 | ✅ 强触达 |
+| **P6 DECOMPOSITION** | `tools/*.md` 工具原子化策略（每工具一个装配动作）/ `tools/opening-protocol.md` 四问拆解 | ✅ 强触达（2026-09-02 原 reasoning_modules 锚归档） |
 | **P7 ANTI-ENTROPY** | `auto_gg.md` SCAN/FOUND/DID 三段（"维护对抗熵增"明示） / `.claude/skills/gg-audit/` 整个 skill 是 P7 的物理实现 | ✅ 强触达 |
 | **P8 EVOLUTIONARY** | `CLAUDE.md §6` "每一次设计会话都是无限游戏的一轮" / `cc_agent.md` 退场动作 "tracks 更新 + essence 沉淀" / `KERNEL.md §3` 第 5 步沉淀一滴 | ✅ 强触达 |
 | **G1 RADIATION** | `.claude/skills/gg-audit/checkers/structural.md` A. Radiation 整章 / `cc_agent.md` 退场动作辐射检查 | ✅ 强触达 |
 | **G2 ROOT CAUSE NOT HACK** | `auto_gg.md §5` 异常处理 "连续 2 次夜间同类问题，第二次停手 + RECURRING agenda" / 全局 `~/.claude/CLAUDE.md` Engineering Rules #5 | ✅ 强触达 |
 | **G3 CONTRACT BEFORE CODE** | `CLAUDE.md §2` D1 "改动跨 ≥3 个文件" 重大判据 / 全局 `~/.claude/CLAUDE.md` Workflow #1 "修改上游契约" / Engineering Rules #7 | ✅ 强触达 |
-| **G4 IRREVERSIBILITY** | `CORE.md §7` 可逆性二分（核心决策轴）/ `tools/red-team-challenge.md` 不可逆项红队 / `tools/decision-output.md` 可逆性必填字段 / `CORE.md §3 M4` | ✅ 强触达 |
+| **G4 IRREVERSIBILITY** | `CORE.md §7` 可逆性二分（核心决策轴）/ `tools/escalation-map.md` 不可逆项分诊到 fresh·异谱系审或 Keith / `tools/decision-output.md` 可逆性必填字段 / `CORE.md §3 M4` | ✅ 强触达（2026-09-02 red-team-challenge 归档改锚） |
 | **G5 PHYSICAL PERSISTENCE** | `KERNEL.md §2` 铁律 2（"物理实证，禁止补全"）/ `cc_agent.md` "工具返回 OK 作为证据" / `auto_gg.md` 物理日志 | ✅ 强触达 |
 
 **缺口现状（2026-07-03 基线修正后）**：13/13 全触达，缺口清零。v0.1.0 的 6 条缺口（P4 / P6 / P7 / G1 / G2 / G3）经 v0.4.0 工具层落地 + v0.5.0 KERNEL 坍缩收敛到 1 条（P4），再经 2026-07-03 基线修正（M3 SKETCH_MINIMAL_MVP 系 05-11 漏判 + opening-protocol 系 07-02 新增触达）清零。

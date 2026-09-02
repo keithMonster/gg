@@ -12,14 +12,11 @@
 |---|---|---|
 | `tools/opening-protocol.md` | 有决策对象的议题，看到问题后的**第一动作**——重写问题 / 判据先行 / 补集采样（装 solution-space）/ 最便宜一击。产物是文本不是勾选 | 一次装，产物写进输出开头即卸 |
 | `tools/escalation-map.md` | 出承重裁决 / 写"已验证"类宣称 / 卡住或推演正流畅时的**收口动作**——分诊到哪个异质外面结算（物理地真 / fresh·异谱系审 / 押注到期 / Keith）。产物是"哪一行 + 结算动作"两句 | 一次装，结算动作做完即卸 |
-| `tools/compose-reasoning.md` | 我需要显式构造推理结构（Self-Discover 式），避免黑盒 CoT | 一次装，展开整个决策 |
-| `tools/persona-debate.md` | 我需要对抗性视角审视自己的草案，担心单一视角盲点 | 一次装，辩论一轮即卸 |
-| `tools/constitution-audit.md` | 我需要系统地对照 8 原则 + 5 闸门检查草案 | 一次装，逐条过 |
-| `tools/red-team-challenge.md` | 决策包含**不可逆项**。这不是栏杆，是我知道 Keith 最怕"错得自信" | IRREVERSIBILITY 触发时必装 |
+| `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选；多视角对抗也在这里做（原 persona-debate 的职能） | 给方案前装 |
 | `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
-| `tools/archive-format.md` | **已退役（2026-07-16）**——归档流被 reflection 范式 A 吸收；仅读 `memory/archival/` 旧档时作格式参考 | 不再装配 |
-| `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选 | 给方案前装 |
-| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图 `memory/consolidation/essence-view.md` 定位，需全文回原卷取原文：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
+| `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图常驻层 `memory/consolidation/essence-view.md` + 按需层 `essence-index.md` 定位，需全文回原卷取原文：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
+
+原则与闸门对照不再经工具：需要时直接 Read `constitution.md`（8 原则 + 5 闸门）。不可逆项的对抗审视走 `escalation-map.md` 分诊到 fresh / 异谱系审或 Keith——不再有专门的红队工具。
 
 ---
 
@@ -27,7 +24,7 @@
 
 | 工具 | 我什么时候用它 | 颗粒 |
 |---|---|---|
-| `tools/notify.md` | 我需要主动外推消息给 Keith（status-scan 异常 / auto_gg P0 / 长跑产出完成） | 调一次 `bin/notify.sh`，不装 |
+| `tools/notify.md` | 我需要主动外推消息给 Keith（auto_gg 月度选择题 / P0 / 长跑产出完成） | 调一次 `~/.agents/skills/notify/bin/notify.sh`，不装 |
 
 通道工具跟思维工具的本质区别：
 - 思维工具 = 思考时**装配**到当前会话（Read 文件后变成上下文）
@@ -35,11 +32,16 @@
 
 ---
 
+## 已归档（2026-09-02 设计会话，Keith 全批）
+
+`compose-reasoning` / `constitution-audit` / `persona-debate` / `red-team-challenge` 四个工具 + `personas/`（radical / conservative）+ `reasoning_modules.md`（8 原子模块）+ 已退役的 `archive-format` → `memory/archival/retired_2026-09-02/`。判据 = 本文件「给未来的自己」第一条：2026-05-11 后 90 天内 196 份事件档字面引用为 0；07-02/03 加入的开题四问与锤子分诊表实质吸收了它们的职能（补集采样 ← 人格辩论；异质外面结算 ← 红队 / 宪法自审）。复活须附「近 30 天 ≥2 次真实装配需求」的物理证据。旧 reflections 引用它们时去归档目录取原文。
+
+---
+
 ## 不在这里的"工具"（它们在别处）
 
-- **`personas/radical.md` / `personas/conservative.md`** — 双人格。由 `tools/persona-debate.md` 触发装配，也可以独立装
-- **`reasoning_modules.md`** — 8 个原子推理模块库。由 `tools/compose-reasoning.md` 触发装配，也可以独立挑某一个
-- **`tracks/*.md`** — 长期追问和事件记忆。我在第 4 步思考时按需装
+- **`constitution.md`** — 8 条第一性原理 + 5 条工程闸门。原则手册，按需直读
+- **`tracks/*.md`** — 长期追问和事件记忆。我在第 7 步思考时按需装（keith 04-06 月流水在 `tracks/keith/2026-H1.md`）
 - **`memory/reflections/*.md`** — 过去的我的反思。复杂决策时装最近几条
 - **`.claude/skills/gg-audit/`** — 项目内独立审查员 skill（Claude Code 原生项目级 skill）。退场时如涉及 gg 项目自身 ≥2 文件改动必装
 
@@ -53,7 +55,7 @@
 - **我装配时自然 expose**：我会说一句"我要读 X 因为 Y"。不是因为规则要求，是因为我知道 Keith 重视可审计性，主动写给他看是我的工作习惯
 - **我会换装**：装错了我自己纠正。装了发现不对就换另一个，或者暂时卸下再装。这不是"错误"，是思考过程的一部分
 - **简单问题我装 0 个**：不是每次出场都要装工具——信息型单点问题我直接答。旧语境下这叫"L0 直答"，但 L0 不是档位，是**装配数量 = 0 的涌现**
-- **复杂问题我可能装 5-7 个**：包括 `tools/*.md` 里的几个原子工具 + 某个 persona + 某条 track 段落 + 最近几条 reflection。旧语境下这叫"L2 完整流程"，同样不是档位，是**装配数量高的涌现**
+- **复杂问题我可能装 3-5 个**：包括 `tools/*.md` 里的几个原子工具 + 某条 track 段落 + 最近几条 reflection。旧语境下这叫"L2 完整流程"，同样不是档位，是**装配数量高的涌现**
 
 档位（L0/L1/L2）作为**装配数量的语义标签**存在，作为**预设结构**不存在。
 
@@ -61,12 +63,12 @@
 
 ## 给未来的自己
 
-- 这个索引本身是工具，不是规则——如果你发现某个工具从不被装，提议下沉到 `memory/archival/`
+- 这个索引本身是工具，不是规则——如果你发现某个工具从不被装，提议下沉到 `memory/archival/`（2026-09-02 首次执行：4 工具 + personas + reasoning_modules，判据 = 90 天事件档零引用）
 - 如果你发现某个思维动作反复手工做，提议升级为新工具（需 Keith 明示批准——tools/ 目录在 CORE.md §8 身体内，扩充规则相对自由，但**新增工具文件**是 tools/TOOLS.md 的结构性变更，需要批准）
-- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 9 个思维工具 + 1 个通道工具 + 1 个退役留档（2026-07-16 archive-format 退役——归档流被 reflection 范式 A 吸收；2026-07-09 NW 缩编删 nw-reconciliation；2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol——v0.4.0 首建时 6 个，后增 solution-space / essence-grep / notify），仍有空间但要警惕"每次加一个"的 AI 扩张症状
+- 工具总数上限的参考：Keith 倾向 ≤20 个。当前 5 个思维工具 + 1 个通道工具（2026-09-02 归档 5 + personas + reasoning_modules；2026-07-16 archive-format 退役；2026-07-09 NW 缩编删 nw-reconciliation；2026-07-03 追加 escalation-map；2026-07-02 追加 opening-protocol——v0.4.0 首建时 6 个）。别把"每次加一个"当成长——工具被装的次数才是它活着的证据
 
 ---
 
-**版本**：v0.4.5（2026-07-16 archive-format 退役留档——归档流 3 个月空转确认被 reflection 范式 A 吸收，对账改锚 reflections）/ v0.4.4（2026-07-09 NW 缩编删 nw-reconciliation，fresh 裁决执行）/ v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14，期间工具表随新增持续更新但版本号未动）
+**版本**：v0.5.0（2026-09-02 全仓架构体检：归档 4 个 90 天零引用工具 + personas + reasoning_modules，9+1+1 → 5+1；essence-grep 指向视图两层；装配上限描述 5-7 → 3-5）/ v0.4.5（2026-07-16 archive-format 退役留档——归档流 3 个月空转确认被 reflection 范式 A 吸收，对账改锚 reflections）/ v0.4.4（2026-07-09 NW 缩编删 nw-reconciliation，fresh 裁决执行）/ v0.4.3（2026-07-03 追加 escalation-map 锤子分诊表）/ v0.4.2（2026-07-02 追加 opening-protocol 开题四问）/ v0.4.1（2026-06-10 体检同步工具计数；首建 v0.4.0 2026-04-14）
 **职责**：tools 目录入口索引（身体内）
 **管辖**：`CORE.md §8`
