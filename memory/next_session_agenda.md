@@ -50,6 +50,7 @@ last_updated: 2026-09-02
 - **ricky_cc 机器凭据轮换**（07-28 关注面收窄时独立保留）：永不过期的 `CGBOILER_NOTE_TOKEN`（test/prod 同钥）+ CG 生产库 pm 账号 + 共用 tokenhub token——风险与"关不关注该仓"脱钩，回报已归零而风险仍在计息
 
 ### 设计模式待办
+- **[CORE_RULE·附数据] G4 IRREVERSIBILITY 启发式补时间投入 / 完成度**（2026-09-04 gg-explore，essence #232 `irreversibility-accrues-on-the-clock-past-the-decision-gate`，档 `explorations/2026-09-04`）：`constitution.md:132-137` 五条启发式里唯一对应承诺升级的「沉没成本已高到无法废弃」是元分析里垫底的预测子（Sleesman 2012 ρ=.243；Conlon & Garland 1993 直接实验不显著），时间投入（.432）与完成度（.393）零登记，自 04-13 初建未改。提议两件：① 启发式第 4 条改写为「时间与进度已累积到难以放弃（时间投入 / 完成度 / 沉没成本，前两者预测力更强）」；② G4 触发条件补一句「不可逆随时钟累积、不产生决策事件——G4 只在开闸时测量，累积型不可逆的哨是周期外部复核（TOOLS.md 90 天下沉 / bets 到期结算同构），不是本闸」。夜间不自改承重规则文件（主要依据外部来源，`exploration.md §2.5`），交设计模式；② 是否值得写进 G4 还是留 essence 即可，Keith 拍。附：「预期后悔 -.434 是最强抑制因素」与 RED_TEAM_CHALLENGE 的关系未核，不在本提议内
 
 - **[基底事件·07-16 对象变更] 垫片层重估（现对象 = Fable 5 GA 日间基底）**：eval 认证子项已收口（双基线 fable5 07-05 / opus48 07-08 在案）。剩余：① `cc_agent.md` 垫片系列（final message 结构化字段锚 / reflection 双通道 / 签名行自包含——为 2026-04 模型 boundary awareness 缺陷而建）在 Fable 5 GA 上活体实测——攒 ≥3 次工作模式样本再裁塌缩，单次 PASS 不够；**09-02 读数：07-03 至今工作模式 reflections 仅 1 份，样本未满，且 09-02 新加「裁决对象原文纪律」也挂在 cc_agent 步骤 7，重估时一并看它有没有被执行**。② 出场首句机制质量核——镜像凑数率由 Keith 的眼睛裁；按「罕见+高负载优于每次强制」裁"本次无坐标"使用率是诚实还是稀释
 - **[KERNEL] 下次 KERNEL 级修订捆绑包**（每条单独不值得触发铁律 3 双确认，累积到有人要动 KERNEL 时一次清）：① §3 第 4 步 archival 死分支「如有决策归档 → `memory/archival/`」恒假半句（07-17 Keith 拍：不动等捆绑）；② footer 版本注 v1.0.0 缺 07-09 视图常驻这一跳的「启动最小集」描述更新；③ §3 年度分卷命名「essence/YYYY」与实际半年卷 2026-H1 / 09-02 立的 ≥50k 字符线不一致——改成「按 essence 头部分卷协议」指针而非硬编码命名
