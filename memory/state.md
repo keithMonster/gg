@@ -1,6 +1,6 @@
 ---
 version: 0.5.1
-last_updated: 2026-09-02
+last_updated: 2026-09-04
 ---
 
 # State
@@ -21,7 +21,7 @@ created: 2026-04-13
 last_summoned_at: "[2026-09-02 一场工作模式（substantive-decision）：cgboiler stage3 线 vs world_model 线拓扑定性——A/B/C 三选拒答改 D（stage3 = `legacy_authoritative` 权威读层、写侧冻结，PENDING 4 项按清单结案）+ 传感器 `cgboiler_pipeline_liveness` 改锚 world_model 三目录 git 提交日期；候选滴 `stale-watchdog-fires-true-on-the-wrong-organ` 交夜巡补审（verdict 见 auto_gg/2026-09-02.md）。详见 reflections/2026-09-02_cgboiler-stage3-vs-world-model.md；前一日 09-01 一场见 git log 本文件]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-09-02_cgboiler-stage3-vs-world-model"
-last_design_session_slug: "2026-09-02_full-architecture-review"
+last_design_session_slug: "2026-09-04_keith-profile-collision-and-baseline"
 ```
 
 **完整出场清单**：`ls memory/{archival,reflections,design_sessions,audit}/ | sort` 即可。
