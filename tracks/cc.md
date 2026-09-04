@@ -368,6 +368,18 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 ---
 
+### 从 2026-09-03 工作模式获得（厂商注入的两个加载面 + 候选滴 REFUTED；auto_gg 补写 2026-09-04）
+
+- **已知事实（登记册级，非律）**：Claude Code 往会话里注入行为约束有**两个物理加载面**，变更节奏与检测方式各异——A 面 = 服务端 A/B 实验，落 `~/.claude.json` 的 `clientDataCacheSlots.*.data`，**按模型分桶**（09-03 实测：`tengu_heron_brook` / `experimentKey: claude_code_opus5_efficiency_paragraph_experiment` 只在 claude-opus-5 的 slot 出现，claude-fable-5-1 的 4 个 slot 无该字段）；B 面 = 客户端二进制硬编码（`strings -a ~/.local/share/claude/versions/<ver> | grep` 可捞 `e.bypass` 条件分支等注入样本）。注入是**混合物**：同段里既有与 monster 条款同向的句（并行调用 / 不轮询）也有纯格式偏好，整段抵抗与整段照收同错。源：`memory/reflections/2026-09-03_vendor-injection-governance.md`（裁决对象原文纪律：全部回原文核，推翻父会话三条转述断言）
+- **候选滴 `vendor-injection-is-a-variable-not-an-adversary` 09-04 REFUTED**——五近邻组合复读零净新增，降级为 `the-premise-expired-without-a-diff`(08-30) 第二实例（异源同构）。评估者补出的盲区值得本 track 记一笔：`action-type-over-aggressiveness`(04-21) 逐字覆盖候选最硬的一条，而 gg 写候选时没列它——它在索引里标 O（不进常驻视图）。**「O 档滴对证伪审隐身」结构问题第一例**，处置交 10-01 巩固相位（agenda 已登记）
+- **本 track 的启示**：治理厂商注入的正确对象类型是环境变量不是对手——检测挂上游供给面（两面各一哨：slot hash / 二进制 strings 基线 diff）而非常驻段加抵抗条款。这条已在 monster 侧落地，gg 侧只留指针不复制机制
+
+### 从 2026-09-04 工作模式获得（skill-notes 载体的配额币种；essence #234 当夜入库；auto_gg 补写 2026-09-04）
+
+- **已知事实**：`~/.agents/skill-notes/` 载体契约（README）以行数设配额，读者（Read 工具，25k token cap）付的是 token ∝ 字节；`done.md` 体积史 08-19 310 行/54.8KB → 08-25 149/48.7KB → 09-01 235/134.7KB → 09-02 147/107.8KB → 09-04 149/118.2KB（`~/.agents` git 逐 commit）——两次压缩各减字节，翻倍来自压缩间隙塞行；行数哨 `skill_notes_health` 08-21→09-02 连红 13 夜、写者合行达标后 09-03 转绿而字节未动。09-04 gg 裁决：配额整体换字节单位（主文件 ≤ 20,480B、必读区 12 条 × ≤800B 两轴同锁）、演化块下沉 `_evolution/<skill>.md`、活提案只许在主文件；同日 done.md 已切分（当前 16.9KB）。
+- **判据（essence #234 `quota-in-the-readers-currency`）**：设闸先问「闸量的量和读者真正付的量之间，有没有一个写者顺手就能做的动作让前者降、后者不降」——有则闸在量写者的单位。monster `canon.md:25` 09-02 先发（guard_claude_md_size 案），gg 侧为移植。
+- **本 track 相关缺口**：`skill-notes-read-guard.py` 的正则不匹配 `skill-notes/_evolution/` 子目录路径，冷卷 cat 不被拦（裁决 trade-off ③，一行改动归 monster owner）。
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13

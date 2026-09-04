@@ -18,9 +18,9 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "[2026-09-02 一场工作模式（substantive-decision）：cgboiler stage3 线 vs world_model 线拓扑定性——A/B/C 三选拒答改 D（stage3 = `legacy_authoritative` 权威读层、写侧冻结，PENDING 4 项按清单结案）+ 传感器 `cgboiler_pipeline_liveness` 改锚 world_model 三目录 git 提交日期；候选滴 `stale-watchdog-fires-true-on-the-wrong-organ` 交夜巡补审（verdict 见 auto_gg/2026-09-02.md）。详见 reflections/2026-09-02_cgboiler-stage3-vs-world-model.md；前一日 09-01 一场见 git log 本文件]"
+last_summoned_at: "[2026-09-04 一场工作模式（substantive-decision）：skill-notes 载体配额单位与演化卷下沉——三问由「配额换读者付账单位（字节）」一个上游决定推出；候选滴 `quota-in-the-readers-currency` 交夜巡补审（verdict 见 auto_gg/2026-09-04.md）。同日一场设计会话（keith-profile-collision-and-baseline）。09-03 一场工作模式（厂商注入治理）候选滴已于 09-04 父会话代跑 REFUTED。09-02 一场（cgboiler stage3 vs world_model）候选滴 `stale-watchdog-fires-true-on-the-wrong-organ` 因 09-02 夜塌缩延至 09-04 夜补审。详见各 reflections 档；更早见 git log 本文件]"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
-last_reflection_slug: "2026-09-02_cgboiler-stage3-vs-world-model"
+last_reflection_slug: "2026-09-04_skill-notes-quota-unit-and-evolution-split"
 last_design_session_slug: "2026-09-04_keith-profile-collision-and-baseline"
 ```
 

@@ -403,3 +403,19 @@ replay 闸的类型不由它自己的代码决定，由它输入的保留契约�
 诚实：ρ 为相关非因果亦非「套牢量」，k 悬殊（time k=7 / sunk k=34）未做区间重叠检验，.432 与 .393 先后不承重；解药半句唯一受控证据（Staw 1976 责任 × 负结果交互、继承目标者升级更低）作用的是 ρ=.258 的责任变量，对三个强变量是否有效未被测过——排序逻辑与解药有效性两头不可兼得；LLM 句四个数字全出自 arXiv:2508.01545（o4-mini、两代理），人域「换评估者」处方在 LLM 上未测（不宣称错轴）；Brockner 设限摘要级。
 【前提：有事前闸门的决策体系；G4 缺口 n=1（constitution.md:132-137，自 2026-04-13 未改）；Staw / Conlon 系商业投资实验被试，迁单人 gg 体系为外推；LLM 侧 escalation 操作化与人域是否同一未核】
 （谱系注：`omission-failures-evade-event-driven-sensors`(07-28) 不可逆轴结算——周期外部复核即其出路二落点，非净新增；`rhetoric-vs-mechanism`(04-27) 自设上限实验版；`the-kept-fallbacks-trigger-reads-both-gauges-inverted`(08-19) 「触发器搬出当事人」异域重演；`load-bearing-independence-anchors-attribute-not-instance`(06-13) 邻位异机制（误差相关 vs 承诺动力；与 Study 1 DV 不同不可接续）。净新增 = G4 缺口的外部量化定位（承诺升级族双卷首入）+ LLM 升级放大器在拓扑与身份。锚：Sleesman 2012 / Conlon & Garland 1993 / Staw 1976 / arXiv:2508.01545 v2〔原文级，末者 gg 亲核〕。档 explorations/2026-09-04，验证关 PASSED-WITH-EDITS 六修采纳，最强反驳：解药买的正是第一句嘲笑的弱变量。）
+
+## 2026-09-02 / 工作 / stale-watchdog-fires-true-on-the-wrong-organ
+
+读对象私有心跳的哨，在对象退役后不是失守而是饱和：私有心跳冻结 ⇒ 哨的谓词永久为真 ⇒ 读数从状态量退化为退役以来的挂钟，报警在「退役日 + 阈值」准时开火、此后永不清除，而诊断文案仍是写哨时对旧对象的那句——谓词比诊断活得久，响的是尸体的年龄。
+识别签名：报警起点恰等于某次已知迁移 / 退役 + 阈值、逐夜单调 +1 不回落 → 先核哨的输入是否仍是活对象的心跳，再谈对象；处置走既有算子（06-15 重瞄 / 08-14 安家），退役若是隐式 supersede 无 close 事件，close→传感器规则无处挂钩（07-28）。
+诚实：n=1；原稿「比静默更危险」无对比证据且记录反向（静默期 2 月 173 条违反 vs 本案 6 天归位零误动作）已删；「诱导重启旧线」过强——父会话三选已含正确项 ③；「真阳性」仅对哨谓词成立、对诊断为假阳（#223 同语义前提被迁移击穿）；原稿引号里的「报『stage3 停摆』」不存在于任何物理文本，实际文案是更宽的「cgboiler 管线停摆」。
+【前提：哨读对象私有心跳（PROGRESS.md）而非域级心跳；阈值型「多久没动」判据；被看守物迁移而哨未迁】
+（谱系注：`stale-observer`(04-15) 哨落后于对象的响亮变体；`the-premise-expired-without-a-diff`(08-30) 前提零 diff 失效在哨域的非静默签名——那滴担保模态降格，本滴谓词饱和；`downstream-gate-is-upstream-sensor`(08-28)「报错必真」的同语义前提在此被迁移击穿。锚 = tripwire_check.py@b092b8d5:1159-1203 读 PROGRESS 内容日期（文案 :1201「cgboiler 管线停摆」）/ auto-monster/logs/2026-08-27:20 首响 / world_model ledgers 08-21·26·27 提交（域活）/ inbox/closed/2026-09.md:40 三选一〔evaluator 亲核，派单者管道零落盘复核 :1201 与 stage3 零命中〕。档 reflections/2026-09-02_cgboiler-stage3-vs-world-model.md，09-02 工作模式候选因当夜 429 塌缩延至 09-04 夜补审 PASSED-WITH-EDITS 采纳。）
+
+## 2026-09-04 / 工作 / quota-in-the-readers-currency
+
+配额只在写者被量的量与读者付账的量单调耦合、且写者手里没有便宜的解耦动作时才产生方向反转；耦合一断，写者在自己被量的单位里守约、读者照付全价——哨由红转绿是解耦动作完成的信号，不是成本回落的信号。
+判别一问：这个闸量的量和读者真正付的量之间，有没有一个写者顺手就能做的动作让前者降、后者不降（合行 / 拆条 / 塞进旧行）？有 → 闸在量写者的单位。
+诚实：核心律为 monster `canon.md:25`（09-02，guard_claude_md_size 案）在 essence 域的移植，非首发；原候选「哨恒绿」被记录证伪（`skill_notes_health` 08-21→09-02 连续 13 夜红、09-03 起绿），承重改为「红→绿由写者单位动作兑现」；两次压缩各自减字节（−49% / −20%），翻倍来自压缩间隙的塞行式增量（09-02→09-04 +2 行 / +10.4KB）；1.7 B/token 与 25k cap 截 66 行为同源推算未独立核。
+【前提：读者成本存在机器可读的单调代理（token ∝ 字节）；写者与被闸约束者是同一主体（自设自守）；单轴闸——两轴同锁（总量 + 单条）是本滴处方的最小形态，仍可被第三轴绕过，本滴不断言封闭；「读者付全价」限常驻 / 整读型载体（skill-notes、CLAUDE.md、SKILL.md），按需 grep 的档案读者不付全价，本滴不辖】
+（谱系注：`gate-as-physical-fuse-not-business-metric`(05-07) 单位维精化——那滴要闸量「满了会出事的物理量」，本滴要该量是读者付账那一个并给出错位失效形状；`hard-rule-welds-intent-to-form-breaks-at-first-legal-deviant`(08-05) 同形——量行的闸把意图（token）焊在形态（行）上，合行者即合法偏离者；`metering-attaches-to-transfer-not-consumption`(#222) 异轴姊妹——计量点错位 vs 计量单位错位；`the-portfolio-sleeps-and-work-is-re-entry`(#218)「单位错误」帧的闸域实例。锚 = `~/.agents` git done.md：08-19 310 行/54.8KB → 08-25 149/48.7KB → 09-01 235/134.7KB → 09-02 147/107.8KB → 09-04 149/118.2KB〔evaluator 逐 commit 重算，派单者抽核三点一致〕/ `tripwire_check.py@bccdc5bc` L395·L463 行闸 + `meta_audit_history.jsonl` 08-21~09-02 连红・09-03/04 绿〔evaluator 亲核〕/ `guard_read_context.py:83` R2 豁免〔亲核〕。档 reflections/2026-09-04_skill-notes-quota-unit-and-evolution-split.md，工作模式候选由 09-04 夜巡补审 PASSED-WITH-EDITS 采纳。）

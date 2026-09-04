@@ -56,7 +56,7 @@ world_model 的 publisher 迟迟不能重建卡片（roundtrip / write guard 未
 - slug: `stale-watchdog-fires-true-on-the-wrong-organ`
 - 一句话: 被看守物迁移而哨未迁移时，哨不会静默——它继续真阳性报警但诊断文案指向尸体（本案：报「stage3 停摆」、诱导选项 C 重启旧线），比静默更危险，因为真阳性买来了对错误病灶的处置权；哨登记须绑定被看守物指针并在其退役时翻转。【前提：哨读的是对象私有心跳（PROGRESS.md）而非域级心跳；n=1】← #227 premise-expired 的「非静默」变体：前提失效未静默降格，而是把报警复用到旧诊断上。
 - 物理证据：`tripwire_check.py:1159-1203` docstring 全篇 stage3 语义；`git log` PROGRESS 08-13 vs world_model 四目录 09-01；父会话 prompt 把选项 C 列为候选。
-- 是否已 append: N
+- 是否已 append: **Y——2026-09-04 auto_gg 补审 PASSED-WITH-EDITS 采纳入库 essence #233**（原定 09-02 夜补审，该夜会话 429 塌缩顺延两天）。入库文本以 evaluator 修改稿为准，核心机制改为「私有心跳冻结 ⇒ 谓词饱和 ⇒ 读数退化为退役挂钟、诊断沿用旧文案」。**最强反驳**：① 「真阳性」措辞复犯 #223 被击穿过的前提泄漏——对哨谓词真、对诊断（「cgboiler 管线停摆」）为假阳，world_model ledgers 08-21/26/27 有提交、08-27 首响当天域活着；② 「比静默更危险」零对比证据且记录反向（静默期两月 173 条违反 vs 本案 6 天归位零误动作）；③ 「诱导选项 C」过强——`inbox/closed/2026-09.md:40` 三选一已含正确解 ③；④ 处置句「登记绑指针」已被 06-15 / 08-14 + monster `inbox/README.md:54`(08-26) 含住，且与本档「反着走」段自述「压在 docstring 层不建字段」矛盾；⑤ 证据描述失真——旧 docstring 全文零 `stage3` 字样。真净新增 = 1 律（谓词饱和）+ 1 事实。evaluator 自陈一处偏离：`git show > /tmp/twc_old.py` 落盘读旧版——派单者裁**不作废**（两仓零写入、evaluator 独立性未损），依赖该文件的反驳 ①⑤ 已由派单者管道零落盘复核（`git show b092b8d5:… | sed -n '1159,1203p'`：stage3 0 命中、:1201 文案属实）。派单者重算侧核 transcript：tool_use = Bash×19 + Read×1
 
 ### 外部锚点
 - `~/githubProject/monster/cgboiler/_pipeline/world_model/WORLD_MODEL_SCHEMA.md` §2.1 迁移状态机

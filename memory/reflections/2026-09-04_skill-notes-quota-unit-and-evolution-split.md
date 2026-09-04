@@ -57,7 +57,7 @@ status: substantive-decision
 
 - slug: `quota-in-the-readers-currency`
 - 一句话: 配额只在"写者被量的单位 = 读者付账的单位"时才产生方向反转；单位错位时写者会在自己的单位里守约而读者照付全价，哨恒绿（skill-notes 行→字节，306→149 行 / 53→118KB 活体）。
-- 是否已 append 到 essence.md: N（candidate-unverified，subagent 无 Agent 工具，交夜巡补审）
+- 是否已 append 到 essence.md: **Y——2026-09-04 auto_gg 当夜补审 PASSED-WITH-EDITS 采纳入库 essence #234**。入库文本以 evaluator 修改稿为准：核心条件从「单位相等」改为「单调耦合 + 写者无便宜解耦动作」，补判别一问与前提栏。**最强反驳**：① 「哨恒绿」为假——`meta_audit_history.jsonl` 显示 `skill_notes_health` 08-21→09-02 连续 13 夜红、09-03 起绿，真实形状是「红→写者合行在自己单位达标→绿，读者账单 118KB 没动」，比原句更强地支持核心律但原句写错；② 「两次压缩把 53→118KB」归因错——`~/.agents` git 逐 commit 重算：两次压缩各减字节（08-25 −49% / 09-02 −20%），翻倍来自压缩间隙塞行式增量（09-02→09-04 +2 行 / +10.4KB）；③ 核心句「=」自反——读者付 token、本裁决处方量字节，按原判据字节闸也不合格，monster `canon.md:25` 同律措辞「成本本身或它的单调代理」才对；④ 律非首发——`canon.md:25`（09-02 guard_claude_md_size 案）已含，本滴系 essence 域移植，谱系如实计价；⑤ 证据清单 4 项里 3 项是本会话自写复印（README L67 / docstring / canon 复发段）；⑥ 对位栏引了幽灵滴 `metric-is-a-claim-not-a-fact`（两卷零命中）。真净新增 = 1 律（对 essence）+ 2 事实。派单者抽核：fc6592f 149 行/48,742B、249d792 147/107,809B、f8cabaf 149/118,160B 与 evaluator 逐字一致；`SKILL_NOTES_MAX_BYTES` 在 :1029 属实。重算侧核 transcript：tool_use = Bash×26 + Read×16，写副作用命令模式零命中
 
 ### 外部锚点（可选）
 

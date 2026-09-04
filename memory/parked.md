@@ -9,7 +9,8 @@
 | id | 首报 | 内容 | 状态 / 出口条件 |
 |---|---|---|---|
 
-*（空——2026-08-16 P-0720 结案后暂无在账项）*
+| P-0904-nonfire-recur2 | 09-04 | **09-03 auto_gg 槽 non-fire（API 层）**：launchd 按时 fired（`scheduled/logs/com.gg.auto-gg.2026-09.log:17-20`），会话 3 分钟内 `API Error: 529 Overloaded` 退出 exit=1，零产出。P-0720 结案条款「复发（任一层故障致 non-fire）按原条款重开并转 agenda [RECURRING]」触发——第四种基础设施层（07-30 认证 / 08-02 网络 / 07-15·16 调度 / 本次上游 API 容量）。同日 gg-explore 槽 09-03 00:13 无 start 行（`com.gg.gg-explore.2026-09.log` 09-02→09-04 直跳，调度层 non-fire 形态，与 22:22 的 529 隔 22h、是否同因不可判）。morning-brief 09-04 待接手 4「run-task.sh 加 529 一次重试」gg 侧未动：重试语义对 daily-word（有飞书推送副作用）非幂等、且 run-task.sh 是三槽共用执行壳 = cron 任务变更侧，提议交 Keith（见 agenda） | 在账。出口：① Keith 拍 run-task 重试方案（agenda 选择题）② 或 09-04 起连续 14 个日历日无 non-fire（任一层）→ 结 |
+| P-0702-missing-log（第 3 次重开） | 07-02（重开 07-24 / 09-04） | **09-02 auto_gg 会话中途塌缩，无日志无 commit**（collapse-before-log 形态第 3 例：06-13 / 07-23 / 09-02）：launchd fired、会话跑 9 分钟 exit=1（log:13-16），已改 substrate.md + state.md（被 23:00 auto-commit b0871f0 兜入），差值审计产物 `2026-09_gap.md` 未产出、日志文件未创建。与前两例差别：前两例有 commit 无日志，本例无 commit 有散落改动——共同点 = 日志创建被排在动作之后。塌缩原因本夜物理核：该会话 transcript（`~/.claude/projects/-Users-xuke-githubProject-gg/58e136a7-*.jsonl`）尾部 `"error":"rate_limit","apiErrorStatus":429`——不是 529，是账号配额窗口耗尽（09-02 日间两场大会话 24+25 文件 auto-commit 在前），与 09-03 的 529 是 API 层两种不同子因，`sleep 300` 重试对 429 无效 | 在账。第二次重开即 `[RECURRING]` 升级已在 07-24 发生过，本次为第三例——agenda 重推，附结构建议「日志文件创建移到 SCAN 第一动作」（契约措辞改动，夜间不改 auto_gg.md）。出口：Keith 拍板 或 连续 14 日无缺日志夜 |
 
 ## 已结
 
