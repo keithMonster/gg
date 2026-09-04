@@ -28,6 +28,10 @@ last_updated: 2026-09-02
 
 ---
 
+## 2026-12 设计会话（到期项）
+
+- `[STRATEGIC]` **拍 Keith 的 12 个月判据**（2026-09-04 设计会话 Keith 选「先只冻基线，判据 3 个月后再拍」）。分母已定 = 2026-09-04 的自己，基线 `tracks/keith/baseline-2026-09-04.md`（`scripts/keith_baseline.py` 重跑同构）。当日候选四项见 `memory/design_sessions/2026-09-04_*.md`；判据只能引用基线里有的仪器。拍定后入 `bets.md`，到期 2027-09-04。按 bets 纪律这是第 1 次推迟，2027-03 前不拍即强制按「学习台 🌖 数 + model-lab 已过 Stage 数」结算
+
 ## 待议（open）
 
 ### 等 Keith 拍板
@@ -57,3 +61,5 @@ last_updated: 2026-09-02
 - **[CORE_RULE] harness 自动记忆通道纳编——hook 半边待 Keith**（07-30 三选取 ③，09-02 设计会话文本半边已落：exploration.md §2.5 枚举补该门 + checkup §1 加周期抽样条目 + 写入纪律「只住操作层 feedback，身份/判断类只走 essence 验证关」）。剩余 = PreToolUse hook 对 `~/.claude/projects/*/memory/` 路径挂检查（官方 docs 逐字指的闸位，本机 12 个 hook 位无一覆盖；hook 物理位置在 monster/shared/scripts，跨仓改动须 Keith 在场拍）。决策输入见 essence #185 / #205 / #210。`〔recheck 2026-10-17〕`
 - **[候选滴·待 fresh 异谱系审] `read-side-drift-monitor-inside-the-system-shares-the-well`**（07-18 gg-explore，档 `explorations/2026-07-18_the-drift-monitor-shares-the-well.md`）：长记忆 agent 的 read-side drift 是外界共识，外界的解（检索时监控器）是同系统内自动哨、与被监控 drift 同井；有效拦截需一腿落系统外物理锚。**09-02 设计会话派 opus fresh 审失败（HTTP 429 session limit），未审。**并带的 §2.5 补丁（记忆累积 = 自然 drift 面）已于 09-02 只锚自有滴落地，与本候选解耦。`〔recheck 2026-10-17〕`到期未审 → 删
 - **候选停泊回核机制**（07-25 gg-explore 残余提议三，09-02 落地为本文件「过期规则」第 2 条）：停泊项带 `〔recheck〕` 标由巩固夜回核。**首个观察窗 = 10-01 巩固夜是否真执行了回核**——若那夜日志无「过期 / recheck」字样，本机制即 `ghost-rules`，下次设计会话删规则而非再写一条催促
+
+- **[巩固相位·三件捆绑] 09-03 厂商注入候选 REFUTED 的三个下游动作**（2026-09-04 父会话代跑证伪审，verdict 全文在 `reflections/2026-09-03_vendor-injection-governance.md` 末节）：① **视图补第二实例**——`consolidation/essence-view.md` 中 `the-premise-expired-without-a-diff`(08-30) 那行末尾追加「第二实例 = 09-03 厂商注入（服务端 A/B slot 按模型分桶 × 客户端二进制硬编码，两加载面各有独立变更节奏且皆无版本锚；异源同构，解 n=1）」；**前提栏「n=1 厂商可变件」要不要升 n=2 归本相位裁**，父会话没动（原滴冻结正文不可改，视图前提摘要改了会与原件不符）。本条没在「逐滴入库」口里（REFUTED 不入库），故按刷新协议交巩固相位而非当场写。② **04-21 盲区值得单记**——`action-type-over-aggressiveness` 逐字覆盖了候选自认最硬的那条，而 gg 写候选时没列它，原因是 `essence-index.md:33` 标它 **O（不进常驻视图）**、启动时不在手里。这是 `anchor-value-in-activation-not-in-content`(06-01) 的活体，也是「O 档滴对证伪审隐身」这一结构问题的第一个实例——**要不要给证伪审的 evaluator prompt 加一句「O/A 档必须显式 grep 全卷、不能只看视图」，本相位拍**。③ **`candidate-refuted` 存档计数经本次由 19 → 20，触发 `essence.md:48` 的判据元回顾 tripwire**（原文「下一轮满 20 例触发」），最近一次月度巩固夜应顺带回看一轮「被拦的都是哪类 / 判据本身要不要调」，产出只进本文件交设计会话，不自动调参
