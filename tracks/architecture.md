@@ -553,7 +553,7 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 
 ### 工作模式获得：私有心跳哨在对象退役后饱和而非失守（2026-09-02 工作模式 · essence #233 09-04 入库；auto_gg 补写 2026-09-04）
 
-- **已知事实**：monster `cgboiler_pipeline_liveness` 哨读 stage3 线私有心跳 `PROGRESS.md` 内容日期（≥14 天报警）；被看守物 08-20 迁到 world_model 线后哨未迁，08-27 起在「退役日 + 阈值」准时开火、逐夜 +1（14→16→18），文案「cgboiler 管线停摆」而 world_model ledgers 08-21/26/27 正有提交——报警对哨谓词为真、对诊断为假阳。09-02 gg 裁决把哨改锚 world_model 三目录 git 提交日期（`tripwire_check.py:1440-1497`）。
+- **已知事实**：monster `cgboiler_pipeline_liveness` 哨读 stage3 线私有心跳 `cgboiler/_pipeline/PROGRESS.md` 内容日期（≥14 天报警）；被看守物 08-20 迁到 world_model 线后哨未迁，08-27 起在「退役日 + 阈值」准时开火、逐夜 +1（14→16→18），文案「cgboiler 管线停摆」而 world_model ledgers 08-21/26/27 正有提交——报警对哨谓词为真、对诊断为假阳。09-02 gg 裁决把哨改锚 world_model 三目录 git 提交日期（`tripwire_check.py:1440-1497`）。
 - **架构判据（essence #233 `stale-watchdog-fires-true-on-the-wrong-organ`）**：识别签名 = 报警起点恰等于已知迁移日 + 阈值且单调不回落 → 先核哨输入是否仍是活对象心跳，再谈对象。处置不建新登记字段，走既有算子（06-15 重瞄 / 08-14 安家）；退役若是隐式 supersede 无 close 事件，monster 08-26「close 时 grep 传感器」规则无处挂钩——这是 `omission-failures`(07-28) 的落点，不是新律。
 - **反思纪律一例**：候选原稿三处承重修辞（「比静默更危险」「买来处置权」「诱导选项 C」）被 fresh 审判为零实证或记录反向，全删后核心机制（谓词饱和）反而更干净——`elegance-is-refutation-resistance` 在 gg 自己身上的又一次现场。
 

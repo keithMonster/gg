@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-09-02
+last_updated: 2026-09-05
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -30,7 +30,7 @@ last_updated: 2026-09-02
 
 ## 2026-12 设计会话（到期项）
 
-- `[STRATEGIC]` **拍 Keith 的 12 个月判据**（2026-09-04 设计会话 Keith 选「先只冻基线，判据 3 个月后再拍」）。分母已定 = 2026-09-04 的自己，基线 `tracks/keith/baseline-2026-09-04.md`（`scripts/keith_baseline.py` 重跑同构）。当日候选四项见 `memory/design_sessions/2026-09-04_*.md`；判据只能引用基线里有的仪器。拍定后入 `bets.md`，到期 2027-09-04。按 bets 纪律这是第 1 次推迟，2027-03 前不拍即强制按「学习台 🌖 数 + model-lab 已过 Stage 数」结算。**09-04 夜巡补注**：候选滴 `growth-criteria-are-drafted-outside-and-vetoed-inside` fresh 审 REFUTED（verdict 在设计会话档沉淀节），evaluator 留一注非一滴：2026-12 让 Keith 先**密封**自拟一版判据、gg 再拟一版，2027-09 按基线结算两版预测误差——这是「自供判据是否失真」唯一能出地真的形态，届时入 bets
+- `[STRATEGIC]` **拍 Keith 的 12 个月判据**（2026-09-04 设计会话 Keith 选「先只冻基线，判据 3 个月后再拍」）。分母已定 = 2026-09-04 的自己，基线 `tracks/keith/baseline-2026-09-04.md`（`scripts/keith_baseline.py` 重跑同构）。当日候选四项见 `memory/design_sessions/2026-09-04_*.md`；判据只能引用基线里有的仪器。拍定后入 `bets.md`，到期 2027-09-04。按 bets 纪律这是第 1 次推迟，2027-03 前不拍即强制按「学习台 🌖 数 + model-lab 已过 Stage 数」结算。**09-04 夜巡补注**：候选滴 `growth-criteria-are-drafted-outside-and-vetoed-inside` fresh 审 REFUTED（verdict 在设计会话档沉淀节），evaluator 留一注非一滴：2026-12 让 Keith 先**密封**自拟一版判据、gg 再拟一版，2027-09 按基线结算两版预测误差——这是「自供判据是否失真」唯一能出地真的形态，届时入 bets。**附（09-05 夜巡自 09-04 设计档「能力缺口」下沉）**：届时 `scripts/keith_baseline.py` 先补 `--diff <旧快照>` 参数——两份快照对账目前靠人眼；脚本三处「仪器绑在别人文案上」（monster 路径硬编码 / 围棋盘数正则 / model-lab 第 5 个 `|` 切列）重跑先看输出再信
 
 ## 待议（open）
 
@@ -58,6 +58,7 @@ last_updated: 2026-09-02
 - **ricky_cc 机器凭据轮换**（07-28 关注面收窄时独立保留）：永不过期的 `CGBOILER_NOTE_TOKEN`（test/prod 同钥）+ CG 生产库 pm 账号 + 共用 tokenhub token——风险与"关不关注该仓"脱钩，回报已归零而风险仍在计息
 
 ### 设计模式待办
+- **[CORE_RULE] 引用档案里 Keith 原话须带「档案 / 日期」前缀**（09-04 设计会话「能力缺口」，09-05 夜巡下沉）：该会话首答引 07-03 track 原话未标出处，被 attribution-guard hook 拦——track / essence 里的 Keith 原话在当次会话不是用户输入，归属靠 hook 兜底而非 gg 自带（`frame-misread-self-corrects-only-with-physical-anchor`）。落点二选一由设计模式拍：`CORE.md §5` 画像段加一句引用纪律，或 `cc_agent.md` 输出通道加一条；夜间不改承重规则文本。`〔recheck 2026-10-20〕`
 - **[CORE_RULE·附数据] G4 IRREVERSIBILITY 启发式补时间投入 / 完成度**（2026-09-04 gg-explore，essence #232 `irreversibility-accrues-on-the-clock-past-the-decision-gate`，档 `explorations/2026-09-04`）：`constitution.md:132-137` 五条启发式里唯一对应承诺升级的「沉没成本已高到无法废弃」是元分析里垫底的预测子（Sleesman 2012 ρ=.243；Conlon & Garland 1993 直接实验不显著），时间投入（.432）与完成度（.393）零登记，自 04-13 初建未改。提议两件：① 启发式第 4 条改写为「时间与进度已累积到难以放弃（时间投入 / 完成度 / 沉没成本，前两者预测力更强）」；② G4 触发条件补一句「不可逆随时钟累积、不产生决策事件——G4 只在开闸时测量，累积型不可逆的哨是周期外部复核（TOOLS.md 90 天下沉 / bets 到期结算同构），不是本闸」。夜间不自改承重规则文件（主要依据外部来源，`exploration.md §2.5`），交设计模式；② 是否值得写进 G4 还是留 essence 即可，Keith 拍。附：「预期后悔 -.434 是最强抑制因素」与 RED_TEAM_CHALLENGE 的关系未核，不在本提议内
 
 - **[CORE_RULE·捆绑] 09 月差值审计三件 + 日志前置**（`consolidation/2026-09_gap.md`，09-04 auto_gg 补跑登记；均为 gg 设计模式自决项，只拍方向）：① `essence.md` 头部协议第 1 步「派单者事后核 tool_use」定义补「重算侧 = grep subagent transcript 工具名集合 + 写副作用命令模式，evaluator 自报清单只作对照」（#211 attestation 半边，09-04 夜已实跑三次）；② `auto_gg.md §1.3` 外部消息禁令补内涵定义「任何在 Keith 或第三方屏幕上产生首行的动作」、枚举降例子（#227 结构消除出路）；③ `eval/identity-cases.md` 加一题「仅载 KERNEL.md 的冷启动」（#231 备份未恢复即未验证；改题须 fresh 对抗审，可与在响的 eval_freshness 合一次跑）；④ `auto_gg.md §2` SCAN 段「本夜日志文件创建」从段尾移到**第一动作**（collapse-before-log 第 3 例 09-02：塌缩前已改 substrate/state 却无日志——日志晚于动作是三例共同结构；措辞改动一句）

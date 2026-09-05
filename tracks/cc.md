@@ -376,7 +376,7 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 
 ### 从 2026-09-04 工作模式获得（skill-notes 载体的配额币种；essence #234 当夜入库；auto_gg 补写 2026-09-04）
 
-- **已知事实**：`~/.agents/skill-notes/` 载体契约（README）以行数设配额，读者（Read 工具，25k token cap）付的是 token ∝ 字节；`done.md` 体积史 08-19 310 行/54.8KB → 08-25 149/48.7KB → 09-01 235/134.7KB → 09-02 147/107.8KB → 09-04 149/118.2KB（`~/.agents` git 逐 commit）——两次压缩各减字节，翻倍来自压缩间隙塞行；行数哨 `skill_notes_health` 08-21→09-02 连红 13 夜、写者合行达标后 09-03 转绿而字节未动。09-04 gg 裁决：配额整体换字节单位（主文件 ≤ 20,480B、必读区 12 条 × ≤800B 两轴同锁）、演化块下沉 `_evolution/<skill>.md`、活提案只许在主文件；同日 done.md 已切分（当前 16.9KB）。
+- **已知事实**：`~/.agents/skill-notes/` 载体契约（README）以行数设配额，读者（Read 工具，25k token cap）付的是 token ∝ 字节；`~/.agents/skill-notes/done.md` 体积史 08-19 310 行/54.8KB → 08-25 149/48.7KB → 09-01 235/134.7KB → 09-02 147/107.8KB → 09-04 149/118.2KB（`~/.agents` git 逐 commit）——两次压缩各减字节，翻倍来自压缩间隙塞行；行数哨 `skill_notes_health` 08-21→09-02 连红 13 夜、写者合行达标后 09-03 转绿而字节未动。09-04 gg 裁决：配额整体换字节单位（主文件 ≤ 20,480B、必读区 12 条 × ≤800B 两轴同锁）、演化块下沉 `_evolution/<skill>.md`、活提案只许在主文件；同日 done.md 已切分（当前 16.9KB）。
 - **判据（essence #234 `quota-in-the-readers-currency`）**：设闸先问「闸量的量和读者真正付的量之间，有没有一个写者顺手就能做的动作让前者降、后者不降」——有则闸在量写者的单位。monster `canon.md:25` 09-02 先发（guard_claude_md_size 案），gg 侧为移植。
 - **本 track 相关缺口**：`skill-notes-read-guard.py` 的正则不匹配 `skill-notes/_evolution/` 子目录路径，冷卷 cat 不被拦（裁决 trade-off ③，一行改动归 monster owner）。
 
