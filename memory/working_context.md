@@ -1,6 +1,6 @@
 ---
 version: 0.2.2
-last_updated: 2026-07-05
+last_updated: 2026-09-06
 max_lines: 80
 ---
 
@@ -45,7 +45,7 @@ max_lines: 80
 
 *（每次召唤填这里，结束后移入对应事件文件并清空）*
 
-- *（空。上一任务"判断层独立 evaluator 范式"已结案 2026-06-01，事件档 `design_sessions/2026-06-01_judgment-evaluator-mvp-merge.md`，2026-06-10 体检时按本节约定清空）*
+- **eval 身份基线待跑**（auto_gg 2026-09-06 挂入）：触发 = 09-02 夜间 model_id 换代 claude-fable-5-1 + 07-08 最新 run 后承重文件 7 次 commit，`nightly_scan` `eval_freshness` 已连响 5 夜。下次设计会话按 `eval/README.md §3` 跑一轮，或写 `eval/runs/<日期>_waived.md` 免跑理由；跑完清本行 + agenda 到期驱动条。挂这里的原因：agenda 不在任何启动链（cc_agent / CLAUDE / CORE 均只「按需读」），09-02 后三场日间会话档案 grep `eval` 零命中——告警一直没有活消费者
 
 ---
 

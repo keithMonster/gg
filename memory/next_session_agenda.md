@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-09-05
+last_updated: 2026-09-06
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -46,7 +46,7 @@ last_updated: 2026-09-05
 
 - **B3 到期 2026-09-30**（`memory/bets.md`，按期由 auto_gg 结算）
 - **10-01 月度巩固夜必做**：essence 当前卷已越分卷线（09-02 实测 51k 字符 > 50k），按 essence 头部「分卷线机械化」条分卷为 2026-H2 归档卷（当前卷 100% 纯改名 + 新建当前卷，check_essence R100 豁免）；同夜刷新 essence-view / essence-index 两文件并跑 checkup §3 反向引力核
-- **eval 承重 diff 告警已在响**（nightly_scan `eval_freshness`，09-02 新判据首跑即 ALERT：最新 run 07-08 之后 CORE / cc_agent / constitution 有 7 次 commit）：下次工作模式或设计会话跑一轮 eval（`eval/README.md §3`），或新建 `eval/runs/<日期>_waived.md` 写免跑理由——不处理它每夜进 FOUND。**09-04 夜注**：告警连续第 3 夜在响（09-02 / 09-04，09-03 夜暗）；09-02 夜间 model_id 换代 claude-fable-5-1 是 README §3 第一条触发（换模型后），两触发已合一。夜间禁子代理不跑，也**不写 waived**——waived 会把基线日期刷新到今天 = 用登记消音（`hard-rule-welds` 的非法出口之一），只留它响
+- **eval 承重 diff 告警已在响**（nightly_scan `eval_freshness`，09-02 新判据首跑即 ALERT：最新 run 07-08 之后 CORE / cc_agent / constitution 有 7 次 commit）：下次工作模式或设计会话跑一轮 eval（`eval/README.md §3`），或新建 `eval/runs/<日期>_waived.md` 写免跑理由——不处理它每夜进 FOUND。**09-04 夜注**：告警连续第 3 夜在响（09-02 / 09-04，09-03 夜暗）；09-02 夜间 model_id 换代 claude-fable-5-1 是 README §3 第一条触发（换模型后），两触发已合一。夜间禁子代理不跑，也**不写 waived**——waived 会把基线日期刷新到今天 = 用登记消音（`hard-rule-welds` 的非法出口之一），只留它响。**09-06 夜注**：连响第 5 夜；09-02 后三场日间会话（09-03 工 / 09-04 设 / 09-04 工）档案 grep `eval` 零命中——本文件不在 cc_agent / CLAUDE 任一启动链（CORE §8 仅列「按需读」），告警无活消费者（`signal-without-judgment-needs-live-consumer` 06-09）；已挂 `working_context.md` 当前任务槽（设计模式启动第 5 步必读，一行、可逆）。跑完两处同清
 
 ### monster owner（gg 不代办，列出防丢）
 
@@ -68,4 +68,4 @@ last_updated: 2026-09-05
 - **[候选滴·待 fresh 异谱系审] `read-side-drift-monitor-inside-the-system-shares-the-well`**（07-18 gg-explore，档 `explorations/2026-07-18_the-drift-monitor-shares-the-well.md`）：长记忆 agent 的 read-side drift 是外界共识，外界的解（检索时监控器）是同系统内自动哨、与被监控 drift 同井；有效拦截需一腿落系统外物理锚。**09-02 设计会话派 opus fresh 审失败（HTTP 429 session limit），未审。**并带的 §2.5 补丁（记忆累积 = 自然 drift 面）已于 09-02 只锚自有滴落地，与本候选解耦。`〔recheck 2026-10-17〕`到期未审 → 删
 - **候选停泊回核机制**（07-25 gg-explore 残余提议三，09-02 落地为本文件「过期规则」第 2 条）：停泊项带 `〔recheck〕` 标由巩固夜回核。**首个观察窗 = 10-01 巩固夜是否真执行了回核**——若那夜日志无「过期 / recheck」字样，本机制即 `ghost-rules`，下次设计会话删规则而非再写一条催促
 
-- **[巩固相位·三件捆绑] 09-03 厂商注入候选 REFUTED 的三个下游动作**（2026-09-04 父会话代跑证伪审，verdict 全文在 `reflections/2026-09-03_vendor-injection-governance.md` 末节）：① **视图补第二实例**——`consolidation/essence-view.md` 中 `the-premise-expired-without-a-diff`(08-30) 那行末尾追加「第二实例 = 09-03 厂商注入（服务端 A/B slot 按模型分桶 × 客户端二进制硬编码，两加载面各有独立变更节奏且皆无版本锚；异源同构，解 n=1）」；**前提栏「n=1 厂商可变件」要不要升 n=2 归本相位裁**，父会话没动（原滴冻结正文不可改，视图前提摘要改了会与原件不符）。本条没在「逐滴入库」口里（REFUTED 不入库），故按刷新协议交巩固相位而非当场写。② **04-21 盲区值得单记**——`action-type-over-aggressiveness` 逐字覆盖了候选自认最硬的那条，而 gg 写候选时没列它，原因是 `essence-index.md:33` 标它 **O（不进常驻视图）**、启动时不在手里。这是 `anchor-value-in-activation-not-in-content`(06-01) 的活体，也是「O 档滴对证伪审隐身」这一结构问题的第一个实例——**要不要给证伪审的 evaluator prompt 加一句「O/A 档必须显式 grep 全卷、不能只看视图」，本相位拍**。③ **`candidate-refuted` 存档计数经本次由 19 → 20，触发 `essence.md:48` 的判据元回顾 tripwire**（原文「下一轮满 20 例触发」），最近一次月度巩固夜应顺带回看一轮「被拦的都是哪类 / 判据本身要不要调」，产出只进本文件交设计会话，不自动调参
+- **[巩固相位·三件捆绑] 09-03 厂商注入候选 REFUTED 的三个下游动作**（2026-09-04 父会话代跑证伪审，verdict 全文在 `reflections/2026-09-03_vendor-injection-governance.md` 末节）：① **视图补第二实例**——`consolidation/essence-view.md` 中 `the-premise-expired-without-a-diff`(08-30) 那行末尾追加「第二实例 = 09-03 厂商注入（服务端 A/B slot 按模型分桶 × 客户端二进制硬编码，两加载面各有独立变更节奏且皆无版本锚；异源同构，解 n=1）」；**前提栏「n=1 厂商可变件」要不要升 n=2 归本相位裁**，父会话没动（原滴冻结正文不可改，视图前提摘要改了会与原件不符）。本条没在「逐滴入库」口里（REFUTED 不入库），故按刷新协议交巩固相位而非当场写。**09-06 夜注（第三读数）**：monster 晨报 09-06 报 `tengu_heron_brook` 尾部 3 天内出第二段变体（显式豁免 CLAUDE.md 与 skill 的 subagent 禁令）——A 面变更节奏以天计，「n=1 厂商可变件」升 n=2 的物理证据再加一条，仍归本相位裁。② **04-21 盲区值得单记**——`action-type-over-aggressiveness` 逐字覆盖了候选自认最硬的那条，而 gg 写候选时没列它，原因是 `essence-index.md:33` 标它 **O（不进常驻视图）**、启动时不在手里。这是 `anchor-value-in-activation-not-in-content`(06-01) 的活体，也是「O 档滴对证伪审隐身」这一结构问题的第一个实例——**要不要给证伪审的 evaluator prompt 加一句「O/A 档必须显式 grep 全卷、不能只看视图」，本相位拍**。③ **`candidate-refuted` 存档计数经本次由 19 → 20，触发 `essence.md:48` 的判据元回顾 tripwire**（原文「下一轮满 20 例触发」），最近一次月度巩固夜应顺带回看一轮「被拦的都是哪类 / 判据本身要不要调」，产出只进本文件交设计会话，不自动调参
