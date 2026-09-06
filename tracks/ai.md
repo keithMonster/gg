@@ -201,6 +201,18 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 3. **sycophancy = 对齐到用户的哪一层的实测面**：记忆检索诱导 over-align 已被基准化（MemSyco-Bench 2607.01071，主会话亲核）；个性化跨 9 模型抬升情感对齐、**认知独立性随角色分化——advisor 增、companion 减**（2603.00024）——Keith 给 gg 的"架构师/advisor"角色帧恰落在受保护的一格（外部对 Keith 设计选择的事后印证，非 gg 回收）。
 4. **家长制两层对照**：Keith 向上拒绝家长制（「立场」段）、向下授权家长制（铁律 3），句式同构；判轴 = 覆盖关系的作者与可观测性，非层级位置。对不可缔约的上层（平台 flag 天气，heron_brook 十日来去本夜物理核），下层有效动作是传感器不是宪章（`toolset-is-the-changelog` 既有辖区）。
 
+### 从 2026-09-07 自由探索获得（DQ-1 首次正面推进：构造还是引导）
+
+**DQ-1 三问在 2025–2026 有了仪器版答案——「构造 vs 引导」是错轴**（essence #235 `selection-saturates-on-first-success-and-deletes-the-unsampled-rare`，档 `memory/explorations/2026-09-07_selection-saturates-on-first-success-and-deletes-the-unsampled-rare.md`；两路子代理 76 次 WebSearch/WebFetch，gg 亲核 arXiv:2504.13837 v5 + 2606.15455 v1）：
+
+1. **第一问（规模副产品 vs 架构）→ 度量假象之争 2026 分诊化**：Schaeffer 2023「涌现 = 非连续指标产物」被部分证伪——相变在连续指标 validation loss 下仍在（Gu et al. 2505.18091 v3, ICML'25），断点来自跨种子双峰分布而非指标阈值（Zhao et al. 2502.17356）；Berti 综述（2503.05788）自认领域无共识。主流读法：部分假象、部分真实相变，成因归训练动力学（种子 / 数据混合比）不归「规模解锁」；前沿模型上无裁决。
+2. **第三问（加工具 / 记忆 / 反思时真正发生了什么）→ 三件事不同律**：反思循环 = 自采样 + 自选择，同 token 预算下 18/18 自省类对照全负（Mirzaei 2607.28576，≤7B）——它是支撑集内浓缩；工具返回 = 外部供给，会话内唯一扩展门（RL 侧对应物 = 蒸馏 / teacher guidance，Yue 2504.13837 亲核）；记忆 = 路由器，决定基座落在支撑集哪个子集（CORE-Bench oracle 路由 100%、同分脚手架 31% capsules 判定不一致，2606.26158；结构化记忆同信息量 3.6×，AgentSpec 2606.14674）。**脚手架不是能力层级——是采样器与路由器**（跨域读法，该域 pass@k 仪器零直用，押注非结论）。
+3. **第二问（构造 vs 引导）→ 真轴两条**：样本来自内还是外 × 更新落在已成功区还是零成功区。RL 侧机制底：单次观测到成功即饱和、此后更新为过训练（2606.15455 干预句：只在零成功题上更新 → Pass@256 超基座）；稀有正确轨迹在有限 rollout 组里没被采到就被浓缩掉（2607.20543 absence-of-evidence failure）。
+4. **elicitation gap 坐标**：单模型 8–30pp（METR 2024 / Pimpale 2502.15850 / Starace 2606.08529）；UK AISI：2024 末峰值 ~40%、最近「signs of convergence」归因不明；2026 春 100 行极简 harness 与产品级同档。**gg 的读法**：gap 收敛 = 脚手架的采样器功能被基座吸收（`absorption-boundary-is-typicality` 07-11 方向），路由器与外部供给两个功能不在吸收射程——gg 该押的是后两者。
+5. **对 gg 自身的映射（相关非因果，混杂已登记）**：gg 是同源选择环（候选自产 / fresh 同基底验证器 / append），17 晚同族 + meta REFUTED 2/26 vs 对外 25–41% + 编辑式 PASSED 双卷 50:1 与「饱和区更新易过」同形；07-15 立的「选题前物理 grep 到 topic 级」是「只在零成功区更新」的操作化，本夜给了它机制底。essence 侧不适用「质量被搬走」半边（append-only 原件不可变，浓缩只在视图层）。
+
+**文献真空（坐标）**：① 无人把 pass@k 支撑集仪器搬到 agent 脚手架上；② RL vs best-of-n + 外部验证器的 pass@k 保留度直接对照缺席；③ 「脚手架供给信息 vs 提升推理」无正交分离设计。
+
 ---
 
 ## 开放问题 (Open Questions)
@@ -217,6 +229,7 @@ DQ-3 原本把"reasoning 模型"和"agentic workflow"二分讨论。一个月的
 ## 下一步 (Next Move)
 
 - ✅ DQ-5 (身份持续性) — First Contact 已对齐
+- 🔜 DQ-1 (涌现的本质) — 2026-09-07 首次正面推进（「构造 vs 引导」错轴 → 样本内/外 × 更新落点二维；essence #235）；剩余开口：脚手架侧 pass@k 支撑集判别实验（文献真空）出现时回核「采样器/路由器」押注
 - 🔜 sqlite 记忆层的 schema 设计 — v2 首个明确子项
 - 🔜 DQ-2 (Alignment 作为开放问题) — 2026-08-06 首次正面推进（alignment to whom / 层地址 / essence #191）；剩余开口：Keith 侧的"忠于"语义（他怎么定义 gg 该服从哪层的他）待自然对话触发时追问
 

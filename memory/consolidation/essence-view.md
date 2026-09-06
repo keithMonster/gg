@@ -65,6 +65,7 @@
 - `frame-misread-self-corrects-only-with-physical-anchor` (06-30) — 帧误判是 confabulation 的帧层同构；有物理锚的维可自纠，纯语义维只能靠 Keith
 - `retrieval-narrative-drifts-toward-novelty` (07-15) — 「这题探过吗」从记忆答漏报重复（雷达数 track 不数 topic + 自传检索向新颖性漂，两误差同向）；校正只有 commit 选题前物理 grep 档案到 topic 级，被校正的正是自述本身【前提：限自由漫游选题；`blindspot-steers-its-own-search` 在自传维的实例】
 - `hardening-exemption-covers-thickness-not-existence` (07-27) — 加固豁免（"安全不受 OCCAM 约束"）作用域只在墙的厚度不在墙的存在；豁免句把"该不该有这堵墙"一起罩进豁免圈，神圣目标是抗反驳性最强的豁免载体【`elegance-is-refutation-resistance` 安全域特化；`isolation-is-capability-subtraction`(06-25) 减法刀的失败形状面】
+- `selection-saturates-on-first-success-and-deletes-the-unsampled-rare` (09-07) — 选择环（自采样+选择器+更新）不扩支撑集只搬质量：区域首次观测到成功即饱和、此后更新为过训练，搬走的含预算内从未采到的稀有解；边界只在零成功区移动，另一门是外部供给非更深自省；脚手架侧为跨域读法（自省脚手架同预算 18/18 负、同分脚手架 CORE-Bench 31% 判定不一致、oracle 路由 100%）读作支撑集内采样器/路由器，押注非结论；「构造 vs 引导」错轴，真轴 = 样本内/外 × 更新落已成功区/零成功区【前提：同源环、预算有限、高 k 覆盖率为尺；两门独立性单点承重 2606.15455 干预句（gg 亲核）；essence 侧不适用「质量被搬走」半边】← `thinking-is-conditioning`(07-02) 两端点正交化 + `physical-anchor` 06-18 权重层对应 + `retrieval-narrative-drifts`(07-15) 机制底；`capability-locus-shifts`(06-07) 分辖不互驳；ai DQ-1 首开
 
 按需（留全卷）：`literal-token-blind-to-variant-form` (05-20) 字面 token 保护对变体全盲、`symmetric-form-asymmetric-function` (05-25) 形式对称≠功能对称。
 

@@ -16,8 +16,8 @@ last_updated: 2026-07-17
 | 对象 | 阈值 | 机械核 | 越线动作 |
 |---|---|---|---|
 | `tracks/keith.md`（主卷） | > 800 行 或 > 90KB | `wc -l tracks/keith.md` / `wc -c` | FOUND：按季度 / 半年把逐场流水搬进 `tracks/keith/<卷>.md`（纯搬段 + 主卷留标题索引，稳定画像段与近 2 月流水留主卷）。首越 2026-09-01（93KB），2026-09-02 设计会话执行首次分卷：04-06 月流水 → `tracks/keith/2026-H1.md`，主卷降至 ~29KB |
-| `memory/consolidation/essence-view.md` + `essence-index.md` | 覆盖对账失配（两文件合并 slug 数 ≠ essence `^## 20` 计数 + 异格式滴） | 见 §3 反向引力核 | FOUND：漏 slug = 某滴从启动记忆静默消失，立即补。**常驻层体积**：`wc -m essence-view.md` > 50k 字符 → 提议把族尾「按需」行下沉索引（2026-09-02 拆分时 37.9k） |
-| `memory/essence.md`（当前卷） | **≥ 50k 字符（`wc -m`）或 ≥ 60 滴**（2026-09-02 机械化，essence.md 头部长期归档策略） | `wc -m memory/essence.md` / `grep -c '^## 20'` | 下一个月度巩固夜分卷为 essence/2026-H2 卷（卷序义；文件尚不存在，不写成链接以免死链哨误报）。上次分卷 2026-08-01（#1–#186 → `essence/2026-H1.md`，commit ef50fce）；2026-09-02 读数 51.4k 字符 / 45 滴——**字符线已越，09 月巩固夜（10-01）执行** |
+| `memory/consolidation/essence-view.md` + `essence-index.md` | 覆盖对账失配（两文件合并 slug 数 ≠ essence `^## 20` 计数 + 异格式滴） | 见 §3 反向引力核 | FOUND：漏 slug = 某滴从启动记忆静默消失，立即补。**常驻层体积**：`LC_ALL=en_US.UTF-8 wc -m essence-view.md` > 50k 字符 → 提议把族尾「按需」行下沉索引（2026-09-02 拆分时 37.9k；**09-07 explore 实测：裸 `wc -m` 在非 UTF-8 locale（launchd / 未设 LANG 的 shell）数的是字节，本文件报 76k 而字符实为 39.9k——量字符必须显式带 locale 或用 `python3 -c "print(len(open(p).read()))"`，否则 50k 线在夜跑里假触发**） |
+| `memory/essence.md`（当前卷） | **≥ 50k 字符（`wc -m`）或 ≥ 60 滴**（2026-09-02 机械化，essence.md 头部长期归档策略） | `LC_ALL=en_US.UTF-8 wc -m memory/essence.md`（locale 见上行 09-07 注）/ `grep -c '^## 20'` | 下一个月度巩固夜分卷为 essence/2026-H2 卷（卷序义；文件尚不存在，不写成链接以免死链哨误报）。上次分卷 2026-08-01（#1–#186 → `essence/2026-H1.md`，commit ef50fce）；2026-09-02 读数 51.4k 字符 / 45 滴——**字符线已越，09 月巩固夜（10-01）执行** |
 | harness 自动记忆 `~/.claude/projects/-Users-xuke-githubProject-gg/memory/` | 条目出现 project / 身份 / 判断类事实而无仓内 SSOT 指针 | 月度巩固夜 `ls` + 逐条读（通常 <10 条） | FOUND：越界条目转 essence 验证关或删（exploration.md §2.5 纳编，2026-09-02） |
 
 ## 2. v2 触发阈值（从 v2-roadmap.md 移入，2026-07-09；v2-roadmap 只留话题定义 + 指针）
