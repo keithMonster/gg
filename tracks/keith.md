@@ -248,6 +248,7 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 7. **对偶「我不替他喊停」**（09-04 立）：agent 会话射程内能做完的事默认当场做完，「先挂 todo / 记进 topics」是 Keith 的动作不是 agent 的出口；缺他拍板 / 缺外部授权 / 缺不在场信息才登记。
 8. **凭据入 git 是既定决定**（07-29 立）：私有仓、人少、便捷优先，key / token / 连接串直接 commit + push，**不说「建议加 .gitignore / 换环境变量」**。豁免止于存放与提交，真调用付费 key 仍逐次 ack。与 06-17「威胁模型 = 防手滑非防恶意」同一参数的另一读数；CORE §7 把「凭据相关」列为 gg 自身不可逆动作，管的是 gg 行为不是 Keith 画像，两条不冲突。
 9. **harness 授权边界只有 Claude Code + Codex CLI**，不用 Gemini。执行类子代理默认外放 Codex 省 Claude quota，Claude 侧留 UI / 紧反馈 debug / 写记忆体系 / 判断调度四类。
+   **09-07 订正（auto_gg 补写 2026-09-07）**：后半句「默认外放 Codex 省 quota」已被 Keith 同日推翻——v4：**撤销默认外放，`gpt-5.6-sol` 下线，施工 / 执行类子代理一律留 Claude `opus`**；Codex 只剩 `gpt-6-astra`·xhigh 单档，只做跨模型辅审 / 诊断 / 卡住换维度，`--model --effort` 成对必带。判据换轴：「省 quota」作废（外放天花板本就 <10%，主杠杆在 context 对轮数的积分侧），改按「交回来的是什么」选档。同日另立 **`fable` 不派子代理**（5 个 fable 复核子代理一轮撞 session 上限，原话「后面不要再用 fable 子代理」；他明说要 Fable 才例外）。前半句（授权边界 = CC + Codex）不变。源：monster `threads/codex-ops-delegation.md` 2026-09-07 条（v4，「去掉 gpt5.6 的调用，原本的场景划分给 opus」）+ `~/.claude/CLAUDE.md` Subagent Routing 段「跨模型外放判据（Keith 2026-09-07 拍）」+ monster morning-brief 2026-09-07 关键发现 2。
 
 **三、输入侧生理事实（本 track 此前只记了设备形态）**
 10. **常用语音转文字输入**，术语 / 英文 / 文件名会被转错（cg-proxy→「CG Profile」、CLAUDE.md→「cloud.md」、monster→「master」），按语义纠偏、复述时用回正确术语。08-19 记的高频 ≤12 字符 token 里「dd / 滴滴」= 触发 done skill 复盘，不是语气词。
