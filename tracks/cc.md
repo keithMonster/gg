@@ -48,6 +48,7 @@ status: active
 - **harness 已原生长出会话间的边**：ListAgents(名字即地址) + SendMessage(下一工具轮入列送达) + `<cross-session-message>` 包装;peer 流量 08-26 首现,monster 侧已用(30 条),gg 侧零收零发——gg 是网格孤岛(单时点采样)
 - **到达语义三承重**(schema 逐字):夜跑会话中途可被插话;发到 interactive 会话 = 对方人类屏幕首行预览(= 事实上的对 Keith 外推通道,notify 契约成文早于它);"cross-session permission laundering" 警告 = harness 权限 per-session,gg 克制边界 per-identity,**两个粒度不重合**
 - 子代理 `<agent-message>` 与跨会话 `<cross-session-message>` 走同一条 user role 总线,归属仍是文本前缀公约(#226 活体);外部根仅 verifiedPeerPid
+- **第二条上屏通道：`claude --bg -n "<名字>" "<prompt>"` 可从会话内起一个 Keith FleetView 列表可见、可接管、比派发方活得久的独立会话**（auto_gg 补写 2026-09-08；源：monster `threads/cc-internal-tools.md` 09-08 条，实录 job `~/.claude/jobs/<id>/`、按名字 SendMessage 双向续聊、默认继承派发方模型档位）。bg 会话 vs Agent 子代理的判据 = 可见 / 长活 / 独立对等地址 vs 只有 `fork` 能继承当前对话。对夜跑的意义：它不是「发消息」也不严格是「子代理」，§1.3 两条枚举都未点名，但「在 Keith 屏幕上产生首行」的内涵句覆盖——差值审计 #227 候选预言的「下一个新通道零 diff 失完备」首次兑现（n=2，含 09-02 SendMessage）。同条 monster 侧把 04-29「SendMessage 是内部工具不可调用」定性作废——gg 本节 08-26/08-30 已按可调用记录，方向是 monster 收敛到 gg，非辐射
 - 名字寻址可复活已完成会话("a send resumes it from its transcript");观测到 interactive 会话挂 15 天仍可寻址
 - 结晶:essence **#227** `the-premise-expired-without-a-diff`(背景契约环境前提 = 快照非订阅);治理三议题在 agenda 待 09 月巡合并递。档 `memory/explorations/2026-08-30_the-premise-expired-without-a-diff.md`
 
