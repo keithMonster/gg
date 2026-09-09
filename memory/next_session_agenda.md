@@ -40,6 +40,7 @@ last_updated: 2026-09-06
   - **(a) 推荐**：`run-task.sh` 仅对日志尾含 `529 Overloaded` 且 label ∈ {auto-gg, gg-explore} 时 sleep 300 重试一次（daily-word 排除）。代价：执行壳多一条分支；对 429 无效（429 归 (c)）
   - (b) 不改，接受夜跑对上游容量裸露。代价：月度相位（巩固 / 差值审计）可能再塌——本次差值审计已延两天
   - (c) 附加：auto-gg 22:22 → 02:22 挪出日间 5h 配额窗尾巴（09-02 日间两场重会话 24+25 文件在前）。代价：plist 改动不可逆侧；与 04:55 auto-commit 收尾语义靠近；explore 00:13 也在夜里、两槽会挤同一窗
+  **2026-09-09 Keith 已拍 (c) 的变体，monster 侧会话落地**：不是 02:22，是 **周二/四/六 23:35**——同时吃掉降频（Keith：「统一降频吧，gg 本来就比较稳定和少用」）与挪窗两件事，23:10 让给已占槽的 `com.monster.infinity-reflect`。配套改了 `scripts/nightly_scan.py`：变化面窗口原写死 24h，隔天跑会让两次运行之间的变更永远进不了 SCAN，现改为从 plist Weekday 派生（当前 74h，selftest 加 4+1 组反向验证）。**(a) 529 重试仍待拍**，本次未动。
   `〔recheck 2026-10-19〕`
 
 ### 到期驱动

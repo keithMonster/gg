@@ -328,12 +328,51 @@ def _bearing_changes_since(since_date):
     return [ln.strip()[:80] for ln in out.splitlines() if ln.strip()]
 
 
-# ── 传感器 7：24h 变化面（gg + monster 双仓） ────────────────────────────
+# ── 传感器 7：变化面（gg + monster 双仓，窗口跟 auto-gg 频率走）──────────
 
-def _repo_24h(repo: Path, label: str):
+AUTO_GG_PLIST = ROOT / "scheduled" / "plists" / "com.gg.auto-gg.plist"
+WINDOW_BUFFER_H = 2          # 启动抖动 + 上一夜跑满时长的余量
+WINDOW_FALLBACK_H = 72       # plist 读不到时的保守窗口（宁可重看，不可漏看）
+
+
+def _auto_gg_window_h():
+    """变化面窗口 = auto-gg 两次运行的最大间隔 + 缓冲，从 plist 派生。
+
+    为什么不写死：写死 24h 只在「每天跑」时成立。2026-09-09 降频到周二/四/六后，
+    固定 24h 会让两次运行之间 48h 的仓库变更**永远**进不了 SCAN——观察面被频率
+    架空，而 `check_structure.py` 只查传感器名在不在，查不出这种架空
+    （auto_gg.md §2「观察面不许缩小」是意图硬约束，这里是它的物理保证）。
+    故窗口跟 plist 走：改频率时窗口自动跟上，不靠人肉同步——同一件事的人肉同步
+    2026-09-09 当天已在四处台账上漂过。
+
+    返回 (hours, note, ok)；ok=False 时调用方按哨失灵处理（本脚本铁律：
+    解析不到 = ERROR，永不降级为 OK）。
+    """
+    import plistlib
+    try:
+        with open(AUTO_GG_PLIST, "rb") as f:
+            sci = plistlib.load(f).get("StartCalendarInterval")
+    except Exception as e:
+        return WINDOW_FALLBACK_H, f"plist 读不到（{type(e).__name__}），窗口回落 {WINDOW_FALLBACK_H}h", False
+    if sci is None:
+        return WINDOW_FALLBACK_H, f"plist 无 StartCalendarInterval，窗口回落 {WINDOW_FALLBACK_H}h", False
+    entries = sci if isinstance(sci, list) else [sci]
+    # launchd 的 Weekday：0 与 7 都是周日，先归一
+    wds = sorted({int(e["Weekday"]) % 7 for e in entries if "Weekday" in e})
+    if not wds:                      # 无 Weekday = 每天跑
+        gap_days = 1
+    elif len(wds) == 1:              # 每周一次
+        gap_days = 7
+    else:                            # 环形最大间隔（含跨周那一段）
+        gap_days = max(max((b - a) for a, b in zip(wds, wds[1:])), wds[0] + 7 - wds[-1])
+    h = gap_days * 24 + WINDOW_BUFFER_H
+    return h, f"窗口 {h}h（plist 最大运行间隔 {gap_days}d + {WINDOW_BUFFER_H}h 缓冲）", True
+
+
+def _repo_window(repo: Path, label: str, window_h: int):
     if not (repo / ".git").is_dir():
         return None, [f"{label}: 仓不存在或非 git 仓（{repo}）"]
-    rc1, log, _ = _run(["git", "log", "--since=24 hours ago",
+    rc1, log, _ = _run(["git", "log", f"--since={window_h} hours ago",
                         "--pretty=format:%h %ad %s", "--date=format:%m-%d %H:%M"],
                        cwd=repo, timeout=30)
     rc2, status, _ = _run(["git", "status", "--short"], cwd=repo, timeout=30)
@@ -348,16 +387,21 @@ def _repo_24h(repo: Path, label: str):
 
 
 def scan_git_24h():
-    """不是告警项——把 24h 变化面摆出来供 FOUND 判断。
+    """不是告警项——把两次 auto-gg 之间的变化面摆出来供 FOUND 判断。
 
     双仓：gg 自身 + monster。跨仓辐射（gg 改动打断 monster 侧锚点）在 106 夜里
     至少出现两次（05-20 `CROSS_PROJECT_PREFIXES` 改名、08-03 分卷致 seam#4 失配），
     只看 gg 一侧的 git log 物理上看不见这类事。
+
+    **传感器名保留 `git_24h` 不改**：`check_structure.py` 拿 SENSOR_NAMES 去历史日志里
+    做字符串匹配判「那夜观察面全不全」，改名会让既往每一夜都被判成缺项。
+    名字是与历史日志的兼容锚，实际窗口见 summary。
     """
-    detail, broke = [], []
+    window_h, window_note, window_ok = _auto_gg_window_h()
+    detail, broke = [window_note], []
     counts = {}
     for repo, label in ((ROOT, "gg"), (MONSTER, "monster")):
-        c, lines = _repo_24h(repo, label)
+        c, lines = _repo_window(repo, label, window_h)
         detail += lines
         if c is None:
             broke.append(label)
@@ -366,9 +410,11 @@ def scan_git_24h():
     if "gg" in broke:
         return sensor("git_24h", ERROR, "gg 仓 git 读不到", detail)
     summary = " / ".join(f"{k} {v[0]}c+{v[1]}d" for k, v in counts.items())
+    if not window_ok:
+        return sensor("git_24h", ERROR, f"窗口判据失灵（{window_note}）；变化面：{summary}", detail)
     if broke:
         summary += f"（{', '.join(broke)} 未读到，跨仓辐射面不全）"
-    return sensor("git_24h", OK, f"24h 变化面：{summary}", detail)
+    return sensor("git_24h", OK, f"{window_h}h 变化面：{summary}", detail)
 
 
 SENSORS = [scan_audit, scan_substrate, scan_dark_night, scan_broken_tail,

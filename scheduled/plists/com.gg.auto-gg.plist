@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-  gg 夜间自执行（每天 22:22 触发）。从客户端 Auto_gg routine 迁来 (2026-05-06)。
-  保持原客户端时间 22:22（已是错峰非整点）。
+  gg 夜间自执行（周二 / 四 / 六 23:35 触发）。从客户端 Auto_gg routine 迁来 (2026-05-06)。
+  原为每天 22:22（沿用客户端时间）。
   让 gg 在无人在场时整理软外围、巩固当日记忆、跑结构性自查、推进 1 个自选课题。
   软外围可 commit+push；硬核心可改但不 commit（留 working tree 等 Keith review）。
 
@@ -31,13 +31,43 @@
         <string>fable</string>
     </array>
 
+    <!--
+      2026-09-09（Keith 拍「统一降频，gg 本来就比较稳定和少用」）两处一起改：
+      ① 每天 → 周二/四/六，与 gg-explore 的周一/三/五错开（天天有 gg 在跑，各自隔天）。
+         **前置改动**：`scripts/nightly_scan.py` 的变化面窗口原写死 24h，隔天跑会让
+         两次之间的仓库变更永远进不了 SCAN（观察面被频率架空）；已改为从本 plist
+         的 Weekday 集合派生窗口——改这里的频率，窗口自动跟上，不需要人肉同步。
+      ② 22:22 → 23:35：22:22 贴着额度重置窗口，2026-09-02 就因此撞 session limit
+         整夜空跑（日志 22:31 exit=1 `resets 10:50pm`）。**不取 23:10**——那槽已被
+         `com.monster.infinity-reflect`（fable / 3600s）占着，同起会抢同一个 fable 池。
+    -->
     <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>22</integer>
-        <key>Minute</key>
-        <integer>22</integer>
-    </dict>
+    <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>2</integer>
+            <key>Hour</key>
+            <integer>23</integer>
+            <key>Minute</key>
+            <integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key>
+            <integer>4</integer>
+            <key>Hour</key>
+            <integer>23</integer>
+            <key>Minute</key>
+            <integer>35</integer>
+        </dict>
+        <dict>
+            <key>Weekday</key>
+            <integer>6</integer>
+            <key>Hour</key>
+            <integer>23</integer>
+            <key>Minute</key>
+            <integer>35</integer>
+        </dict>
+    </array>
 
     <key>RunAtLoad</key>
     <false/>

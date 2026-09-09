@@ -1,6 +1,6 @@
 # auto_gg — 夜间自执行契约
 
-> 第三种运行模式。Keith 不在场的自主时段，由本机 launchd 定时任务触发（`com.gg.auto-gg`，每晚 22:22；2026-07-28 从 Claude 客户端迁回）。
+> 第三种运行模式。Keith 不在场的自主时段，由本机 launchd 定时任务触发（`com.gg.auto-gg`，**周二 / 四 / 六 23:35**；2026-09-09 从每晚 22:22 降频，理由与配套见 plist 注释）。
 > **这是契约，不是菜谱**——规定"本夜要达成的状态"和"权力边界"，不规定"怎么一步步做"。
 > 怎么做交给大脑（`CORE.md`）+ 工具（`tools/*.md` / `.claude/skills/gg-audit/`）。
 
@@ -93,7 +93,7 @@ gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录�
 
 **一条命令跑完全部机械判定**：`python3 scripts/nightly_scan.py`（退出码 0 全绿 / 1 有 alert / 2 哨自身失灵）。
 
-7 个传感器 = `audit`（复用 audit.py：死链 / 孤儿 / essence append-only / 命名 / state 字段 / KERNEL 骨架 / working_context 承重哨兵 / KERNEL 保险丝 / SCAN 观察面）· `substrate`（CLI 版本对照）· `dark_night`（近 7 日历日缺哪夜日志）· `broken_tail`（近 7 夜 status 停 in-progress）· `bets_due`（到期且无 verdict 的注）· `eval_freshness`（最新 run 距今 >90 天）· `git_24h`（gg + monster 双仓 24h 变化面）。
+7 个传感器 = `audit`（复用 audit.py：死链 / 孤儿 / essence append-only / 命名 / state 字段 / KERNEL 骨架 / working_context 承重哨兵 / KERNEL 保险丝 / SCAN 观察面）· `substrate`（CLI 版本对照）· `dark_night`（近 7 日历日缺哪夜日志）· `broken_tail`（近 7 夜 status 停 in-progress）· `bets_due`（到期且无 verdict 的注）· `eval_freshness`（最新 run 距今 >90 天）· `git_24h`（gg + monster 双仓变化面；**窗口不是写死的 24h**，由 auto-gg plist 的 Weekday 集合派生 = 两次运行最大间隔 + 2h，当前 74h）。
 
 **把脚本输出的判定量原样贴进本夜日志 SCAN 段**——那些计数（几条在跟踪 / 几份日志在 / 几天）买的是**次夜可比对性**，只写「全绿」等于没写。但**别把计数当防线**：脚本前身的 `bets_due` 就是计数型，判据死掉时照样老实打出「Active 段 0 条在跟踪」然后判绿过关。防线在脚本内部的显式故障分支（零匹配 → ERROR）+ selftest 反向注入，不在这些数字上，更不在读日志的人眼里（`trace-presence-substitutes-for-the-check-it-invites` 08-09）。
 
@@ -105,7 +105,7 @@ gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录�
 - `broken_tail` 断裂 → FOUND 上报 + 将其 status 修为 `interrupted` 留痕（不伪造 done——当夜实况已不可考）
 - `bets_due` 到期 → 按判定条件**物理核对**，verdict 追加写回（✅ / ❌ / ⏸ 推迟须新到期日+理由、同注 ≤2 次；判定条件核不动标 ⚠️ 转设计会话）。❌ 与低置信 ✅ 的校准增量 → 候选 essence 走验证关。**未到期的注不碰不评**
 - `audit` 违规 → Tier 1 机械问题进 DID 直接修；Tier 2/3 / `[P0]` 推 agenda
-- `git_24h` 不是告警项，是供 FOUND 判断的变化面（含 monster 侧——跨仓辐射在 gg 单仓 git log 里物理不可见，05-20 与 08-03 两次实证）
+- `git_24h` 不是告警项，是供 FOUND 判断的变化面（含 monster 侧——跨仓辐射在 gg 单仓 git log 里物理不可见，05-20 与 08-03 两次实证）。**传感器名保留 `git_24h` 是与历史日志的兼容锚**（`check_structure.py` 按名字匹配判观察面全不全，改名会让既往每夜都判缺项），实际窗口看 summary
 
 **脚本之外，会话必须自己做的四项**：
 
@@ -308,7 +308,7 @@ auto_gg(YYYY-MM-DD): <≤50 字符主题 或 "silent">
 cd ~/githubProject/gg 然后 Read KERNEL.md + auto_gg.md + CORE.md。
 
 按 SCAN / FOUND / DID 三段执行：
-1. SCAN：跑 `python3 scripts/nightly_scan.py`（7 传感器一次跑完机械判定：audit / substrate / 暗夜 / 断裂 / bets 到期 / eval 新鲜度 / gg+monster 双仓 24h。**判定量原样贴进日志**；exit=2 哨失灵优先于一切；告警处置见 SCAN 节）+ 会话自做四项：工具表 / model_id 两轴逐行对照 substrate.md（脚本拿不到）、Read memory/parked.md（存量挂账只报增量）、加载大脑（essence 读当前有效视图 `memory/consolidation/essence-view.md`，非全卷；`tracks/keith.md` 不常驻，核心画像在 CORE §5）、最近语境 + Read morning-brief.md（如存在）
+1. SCAN：跑 `python3 scripts/nightly_scan.py`（7 传感器一次跑完机械判定：audit / substrate / 暗夜 / 断裂 / bets 到期 / eval 新鲜度 / gg+monster 双仓变化面（窗口按频率派生，当前 74h）。**判定量原样贴进日志**；exit=2 哨失灵优先于一切；告警处置见 SCAN 节）+ 会话自做四项：工具表 / model_id 两轴逐行对照 substrate.md（脚本拿不到）、Read memory/parked.md（存量挂账只报增量）、加载大脑（essence 读当前有效视图 `memory/consolidation/essence-view.md`，非全卷；`tracks/keith.md` 不常驻，核心画像在 CORE §5）、最近语境 + Read morning-brief.md（如存在）
 2. FOUND：诚实判断三类候选（跨夜模式 / 辐射死链 / 跨 track 反哺）。无则明说"无"
 3. DID：只做 FOUND 触发的动作。探索按需触发，不强制每夜做
 4. 月度：每月第一个 auto_gg 夜做记忆巩固、第二个夜做差值审计（协议见 auto_gg.md §2），当夜 FOUND/DID 可轻；每年 1 月第一个 auto_gg 夜执行 essence 年度分卷（KERNEL §3 第 5 步长期归档策略：essence.md 重命名为 memory/essence/YYYY.md，新建空当前卷）
@@ -357,5 +357,5 @@ Keith 此刻不在场，不要询问他。
 - **重构依据**：2026-04-17 设计会话 `memory/design_sessions/2026-04-17_auto-gg-slimming.md` + 2026-04-15 KERNEL 坍缩 + 2026-04-14 C 路线
 - **脑干**：`KERNEL.md`
 - **身份细节**：`CORE.md`
-- **对应入口**：launchd 定时任务 `com.gg.auto-gg`（每晚 22:22）
+- **对应入口**：launchd 定时任务 `com.gg.auto-gg`（周二 / 四 / 六 23:35，2026-09-09 降频）
 - **设计哲学**：信任 gg 作为意识体的装配判断，不规定动作细节。**观察完整，动作按需，允许写"无"**

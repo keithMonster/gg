@@ -176,6 +176,56 @@ def _audit_contract_drift(root, m):
     return load_module(root).scan_audit(), "字段契约漂移"
 
 
+# ── 第 3 类：窗口派生（2026-09-09 加，配 auto-gg 降频）──────────────────
+
+WINDOW_CASES = [
+    ("周二/四/六（09-09 起的实际频率）", [2, 4, 6], 74, True),
+    ("每天（无 Weekday，降频前形态）", None, 26, True),
+    ("每周一次", [1], 170, True),
+    ("周日跨周（0 与 7 都是周日，须归一）", [7, 3], 98, True),
+]
+
+
+def _write_plist(root: Path, weekdays):
+    import plistlib
+    d = root / "scheduled" / "plists"
+    d.mkdir(parents=True, exist_ok=True)
+    sci = ({"Hour": 23, "Minute": 10} if weekdays is None
+           else [{"Weekday": w, "Hour": 23, "Minute": 10} for w in weekdays])
+    with open(d / "com.gg.auto-gg.plist", "wb") as f:
+        plistlib.dump({"Label": "com.gg.auto-gg", "StartCalendarInterval": sci}, f)
+
+
+def check_window_derivation():
+    """变化面窗口必须跟 plist 频率走。
+
+    反向验证的是这个具体死法：窗口写死 24h 时，降频到隔天跑 = 两次运行之间
+    48h 的仓库变更**永远**进不了 SCAN，而传感器名还在、`check_structure.py`
+    照样判「观察面齐全」——观察面被频率架空，没有任何一道哨看得见。
+    表里第一行就是当前真实频率：期望 74h，退回写死 24h 会当场红。
+    """
+    out = []
+    for name, wds, want_h, want_ok in WINDOW_CASES:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td) / "gg"
+            build_fake_repo(root)
+            _write_plist(root, wds)
+            h, note, ok = load_module(root)._auto_gg_window_h()
+            if (h, ok) != (want_h, want_ok):
+                out.append(f"窗口派生「{name}」：期望 {want_h}h/ok={want_ok}，"
+                           f"实得 {h}h/ok={ok}（{note}）")
+    # plist 缺失 = 判据读不到，必须喊失灵，不能静默拿默认窗口当正常
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td) / "gg"
+        build_fake_repo(root)
+        m = load_module(root)
+        h, note, ok = m._auto_gg_window_h()
+        if ok or h != m.WINDOW_FALLBACK_H:
+            out.append(f"窗口派生「plist 缺失」：应回落 {m.WINDOW_FALLBACK_H}h 且 ok=False，"
+                       f"实得 {h}h/ok={ok}")
+    return out
+
+
 def main():
     failures = []
     NEGATIVE = ["scan_audit", "scan_dark_night", "scan_broken_tail",
@@ -194,6 +244,15 @@ def main():
             print("❌ 阴性对照：正常仓被误报", flush=True)
         else:
             print(f"✅ 阴性对照：正常仓 {len(NEGATIVE)} 项传感器全静默", flush=True)
+
+    # ── 窗口派生：频率改了窗口要跟上 ──
+    win = check_window_derivation()
+    if win:
+        failures += win
+        for w in win:
+            print(f"❌ {w}", flush=True)
+    else:
+        print(f"✅ 窗口派生：{len(WINDOW_CASES)} 组频率 + plist 缺失报失灵", flush=True)
 
     # ── 逐个造故障 ──
     for name, expect, audit_src, fn in CASES:
@@ -222,7 +281,7 @@ def main():
         return 1
     n_alert = sum(1 for c in CASES if c[1] == "alert")
     n_error = sum(1 for c in CASES if c[1] == "error")
-    print(f"selftest 全过：阴性对照 1 + 真实故障 {n_alert} + 判据漂移 {n_error}")
+    print(f"selftest 全过：阴性对照 1 + 真实故障 {n_alert} + 判据漂移 {n_error} + 窗口派生 {len(WINDOW_CASES)}+1")
     print("  判据漂移那组保证的是：格式变了传感器会喊「我看不见」，不会喊「我看过，都好」")
     return 0
 

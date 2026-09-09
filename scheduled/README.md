@@ -9,7 +9,7 @@
 
 | Label | 触发 | 职责 | prompt 入口 |
 |---|---|---|---|
-| `com.gg.auto-gg` | 每天 22:22 | 夜间维护契约（SCAN/FOUND/DID + 月度巩固/差值审计） | `auto_gg.md` |
+| `com.gg.auto-gg` | 周二 / 四 / 六 23:35（2026-09-09 Keith 拍降频 + 挪窗，此前每天 22:22；配套 `scripts/nightly_scan.py` 变化面窗口改为从本 plist 派生） | 夜间维护契约（SCAN/FOUND/DID + 月度巩固/差值审计） | `auto_gg.md` |
 | `com.gg.gg-explore` | 每周一 / 三 / 五 0:13（2026-09-02 Keith 拍降频，此前每天） | 自由探索（无任务）；启动链载 essence 视图常驻层不载原卷；跑完原始输出推 Keith | `exploration.md` |
 | `com.gg.daily-word` | 每天 7:30（**launchd**，2026-07-28 迁回） | 「每日一句」——gg 主动对 Keith 说一句真话，推飞书 | ⚠️ **两套 prompt 别混**：launchd 走 plist **内联 prompt** + 外壳 `run-task-and-push.sh` 抓 stdout 推飞书（当前形态）；`DAILY_WORD.md` 是客户端时代的 SSOT，**prompt 内自带 `notify.sh`**（06-17 补），把 plist 指向它会双推 |
 | `com.gg.status-scan` | 已停用（2026-06-16，通用模板误报告警） | 轻量状态扫描 + 异常告警 | `STATUS_SCAN.md`（plist 已 `.disabled`） |

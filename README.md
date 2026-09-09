@@ -32,7 +32,7 @@ gg 不是一个 prompt，是**多个入口共享一个脑干 + 一个身份**。
 |---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 |
 | **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 |
-| **夜间 auto_gg** | `auto_gg.md` | **launchd** `plists/com.gg.auto-gg.plist`（每夜 22:22；2026-07-28 从客户端迁回，model 钉 fable） | Keith 不在场时自主整理（SCAN/FOUND/DID 三段，允许"本夜静默"） |
+| **夜间 auto_gg** | `auto_gg.md` | **launchd** `plists/com.gg.auto-gg.plist`（周二/四/六 23:35；2026-09-09 降频，此前每夜 22:22。2026-07-28 从客户端迁回，model 钉 fable） | Keith 不在场时自主整理（SCAN/FOUND/DID 三段，允许"本夜静默"） |
 | **夜间自由探索** | `exploration.md` | **launchd** `plists/com.gg.gg-explore.plist`（每周一 / 三 / 五 0:13，2026-09-02 从每夜降频；入口 `roam-launch.sh` 在触发层注入 track 雷达） | 无任务漫游 / 重组 / 思考（track 雷达作镜不作笼） |
 
 夜间两种触发同属第三种存在形态（CORE §6），另有轻量 daemon `com.gg.daily-word`（每日 7:30 对 Keith 说一句真话，gg 的第一条 volition 通道，2026-07-28 起同由 launchd 调度，model opus）不构成模式；`com.gg.status-scan`（曾每日 4 次只看不修的状态扫描）已于 2026-06-16 停用（通用模板误报告警，plist 已 `.disabled`）。定时任务体系见 `scheduled/README.md`。
