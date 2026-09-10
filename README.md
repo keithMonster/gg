@@ -70,7 +70,7 @@ gg/
 │   ├── opening-protocol.md      #   开题四问（有决策对象时的第一动作）
 │   ├── escalation-map.md        #   锤子分诊表（承重裁决收口时的结算路由）
 │   ├── solution-space.md        #   解空间展开（防先验锁定；多视角对抗归此）
-│   ├── decision-output.md       #   决策结构化输出（12 字段）
+│   ├── decision-output.md       #   决策结构化输出（11 字段）
 │   ├── essence-grep.md          #   essence 对齐 cross-check
 │   └── notify.md                #   主动外推通道（全局 notify skill 的 gg 侧约定）
 ├── tracks/                      # 5 条长期研究轨道（keith 为主 track，其余 4 条为它服务）

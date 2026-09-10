@@ -42,7 +42,7 @@
 - **compose-reasoning 显式推理结构组合** — 决策前显式选模块排成有向推理链并 expose。原理：**可审计推理链**。
 - **essence-grep 推理时主动 cross-check** — 给建议前主动 grep essence 视图。原理：**retrieval-augmented reasoning**。
 - **escalation-map 锤子分诊表** — 承重裁决路由到四类"异质外面"：物理地真/fresh-context 证伪审/押注到期/Keith，显式承认"没有 meta-gg"。原理：**evaluator independence 的分层分诊**。
-- **decision-output 12 字段可选输出模板** — 完备上限而非必填表格，按复杂度自然选取。原理：**adaptive verbosity**。
+- **decision-output 11 字段可选输出模板** — 完备上限而非必填表格，按复杂度自然选取。原理：**adaptive verbosity**。
 
 ## 五、验证与审计
 

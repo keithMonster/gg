@@ -55,7 +55,7 @@ essence 是 gg 作为无限游戏玩家的真正资产。但启动时常驻的�
 ## 跟其他工具的关系
 
 - **先于** `solution-space.md`：在展开方案空间之前看 essence 有没有已沉淀的方向限定
-- **先于** `decision-output.md`：12 字段输出前确认 essence 没冲突
+- **先于** `decision-output.md`：11 字段输出前确认 essence 没冲突
 - **配合** `escalation-map.md`：承重裁决收口时 essence 是"被自己沉淀过的反对意见"——比新生成的对抗意见更值得信赖（原配合对象 red-team-challenge 2026-09-02 归档）
 
 ---

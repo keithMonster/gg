@@ -25,6 +25,7 @@ gg 在 Keith 系统的最内决策层，往上没有同质更高层可借——�
 | 事实 / 取证 / "世界现在什么样" | **物理地真**（工具返回） | 有阶梯：wire > 派生日志（`physical-anchor-has-rungs`）；只护取数、不护整合那一跳（`anchor-protects-retrieval-not-integration`） |
 | 承重判断 / 设计的当场审 | **fresh-context 证伪审**（同验证关形态）；跨模型加 **codex 异谱系审** | 清 vantage + 身份层共盲 ~11%；范式层共盲原样幸存（`cross-model-decorrelates-identity-not-paradigm` / `judge-independence-is-a-low-bounded-scalar-even-for-humans`） |
 | 当场无人能判的宣称（自评 / 内省 / 预测） | **转押注 → 到期结算**（`memory/bets.md`） | 转译仍出自共盲系统——结算端机械化必要非充分（`the-future-is-a-second-outside`） |
+| 不可逆项 / 高回滚成本的核心变更（G4 触发，2026-09-10 补行） | **先拆三栏再分诊**：事实缺口 → 第一行物理地真；设计漏洞 → 第二行 fresh / 异谱系审；目标或授权冲突 → 第四行 Keith | 每栏各回「未决项 / 谁负责 / 最小动作 / 哪些部分仍可推进」，不设 5/5 自评分门槛；「继续 / 维持现状」也要成为一份进闸草案，否则升级构型零开火（`adversarial-review-inherits-the-sign-of-its-trigger` 09-09） |
 | 目标函数 / 品味 / 身份 / 存废 / prior 证伪 / 画像 / 威胁模型 | **Keith**（`human-gate-is-where-judge-and-judged-collapse` 七面） | 不 fork、不出货、会缺席（`evaluator-is-keith-and-doesnt-fork`）；缺席窗口只能由上三行兜 |
 | 想得更好（generator 侧，非审错侧） | **条件设计**：开题四问 / fork / 换 persona / 早碰世界 | 劝勉词零杠杆，只有条件动作有杠杆（`thinking-is-conditioning-not-effort`）。本行不是审级，是免召唤的自助锤——"call gg"从机制侧看只是一次大型条件重设 |
 

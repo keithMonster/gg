@@ -69,7 +69,7 @@ author: monster
 
 | 类型 | 例子 |
 |---|---|
-| 在意识体核心 / 工作模式加触达点 | "建议在 cc_agent.md 装配判断段或 tools/decision-output.md 12 字段里加 P4 MVP FIRST 的触达字段" |
+| 在意识体核心 / 工作模式加触达点 | "建议在 cc_agent.md 装配判断段或 tools/decision-output.md 11 字段里加 P4 MVP FIRST 的触达字段" |
 | 在 constitution.md 加/改原则 | "建议新增 P9 XXXX 原则" |
 | 工具层调整 | "建议把 X 思维动作升级为独立工具 / 建议归档 90 天零装配的工具 Y" |
 | persona 的行为规则变更 | "建议 radical persona 的 tone 更尖锐" |

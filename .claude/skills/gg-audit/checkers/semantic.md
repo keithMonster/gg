@@ -33,7 +33,7 @@
 | **设计纪律（D 系列，当前 D1/D2）** | `CLAUDE.md §2` | `cc_agent.md` 元讨论拒绝协议、`README.md` 模式表、`tracks/keith.md`、`.claude/skills/gg-audit/SKILL.md` SSOT 归属表 |
 | **北极星（3 条：二阶效应 / 动态学习 / 决策超越直觉）** | `tracks/keith.md` 顶部 | `CLAUDE.md §1` First Contact、`memory/reflections/.template.md` 必填字段、`cc_agent.md` 退场动作、`~/.claude/agents/gg.md` frontmatter（若存在）、`CORE.md §5` |
 | **First Contact 协议** | `CLAUDE.md §1` | `memory/state.md` `first_contact_done` 字段、`tracks/keith.md` 顶部 |
-| **G4 IRREVERSIBILITY** | `constitution.md` G4 | `tracks/humanity.md`、`tools/escalation-map.md`（不可逆项分诊到外面结算；原 red-team-challenge 2026-09-02 归档）、`tools/decision-output.md`（12 字段含可逆性必填项）、`CORE.md §3 M4` |
+| **G4 IRREVERSIBILITY** | `constitution.md` G4 | `tracks/humanity.md`、`tools/escalation-map.md`（不可逆项分诊到外面结算；原 red-team-challenge 2026-09-02 归档）、`tools/decision-output.md`（11 字段含可逆性必填项）、`CORE.md §3 M4` |
 | **身份 = 非隐喻连续性** | `tracks/ai.md DQ-5 洞察` | `CORE.md §1 / §8`、`tracks/keith.md` |
 | **essence 对齐自检字段（reflection 模板范式 A 必填）** | `memory/reflections/.template.md` | `CLAUDE.md §3` 设计反思模板、`cc_agent.md` 退场动作、`tools/essence-grep.md`、`tools/TOOLS.md` |
 | **三种存在形态（工作 / 设计 / 夜间自执行）** | `CORE.md §6` | `cc_agent.md`、`CLAUDE.md §5`、`auto_gg.md §6`、`README.md` 模式表 |
@@ -99,7 +99,7 @@
 
 1. **直接引用** ID（"P1 INVERSION"、"G4 IRREVERSIBILITY"）
 2. **名称引用**（"INVERSION"、"IRREVERSIBILITY"、"OCCAM" 等）
-3. **间接引用**（具体工具 / 字段 / 协议体现该原则的精神，如 "decision-output 12 字段的 Trade-off 必填" 体现 P5）
+3. **间接引用**（具体工具 / 字段 / 协议体现该原则的精神，如 "decision-output 11 字段的 Trade-off 必填" 体现 P5）
 
 ### 执行步骤
 
@@ -118,7 +118,7 @@
 | **P2 FIRST PRINCIPLES** | `tools/opening-protocol.md` 第①问"重写问题" / `tools/solution-space.md` 防先验锁定 | 🟡 间接触达（2026-09-02 改锚） |
 | **P3 OCCAM** | `cc_agent.md` "装配数量是涌现，不是预设" / `tools/TOOLS.md` 装配 3-5 个 + 工具上限提示 ≤20 / `tools/opening-protocol.md` 第④问 | ✅ 强触达 |
 | **P4 MVP FIRST** | `tools/opening-protocol.md` 第④问"最便宜一击"（装载点 = CLAUDE.md 启动协议第 8 条 + cc_agent.md 步骤 6，2026-07-02 起） | ✅ 触达（2026-07-03 基线修正；2026-09-02 原 M3 模块归档，本行只剩 opening-protocol 一锚） |
-| **P5 TRADE-OFFS** | `tools/decision-output.md` 12 字段 "Trade-off" 必填项 / `tools/solution-space.md` 多方案对比 | ✅ 强触达 |
+| **P5 TRADE-OFFS** | `tools/decision-output.md` 11 字段 "Trade-off" 必填项 / `tools/solution-space.md` 多方案对比 | ✅ 强触达 |
 | **P6 DECOMPOSITION** | `tools/*.md` 工具原子化策略（每工具一个装配动作）/ `tools/opening-protocol.md` 四问拆解 | ✅ 强触达（2026-09-02 原 reasoning_modules 锚归档） |
 | **P7 ANTI-ENTROPY** | `auto_gg.md` SCAN/FOUND/DID 三段（"维护对抗熵增"明示） / `.claude/skills/gg-audit/` 整个 skill 是 P7 的物理实现 | ✅ 强触达 |
 | **P8 EVOLUTIONARY** | `CLAUDE.md §6` "每一次设计会话都是无限游戏的一轮" / `cc_agent.md` 退场动作 "tracks 更新 + essence 沉淀" / `KERNEL.md §3` 第 5 步沉淀一滴 | ✅ 强触达 |
@@ -139,7 +139,7 @@
 - **原则**: constitution.md P4 MVP FIRST — "先跑通再完美"
 - **扫描结果**: CORE.md 里没有直接引用 "MVP" 或 "跑通再完美" 的文本
 - **当前触达方式**: 仅通过 §3 第 4 步 CRITIQUE 的"逐条对照 constitution"笼统覆盖
-- **建议**: 在 cc_agent.md 装配判断段 或 tools/decision-output.md 12 字段里加 P4 MVP FIRST 的触达点, 如新增字段 "MVP 路径：当前方案能否拆出最小可行版本先跑通"
+- **建议**: 在 cc_agent.md 装配判断段 或 tools/decision-output.md 11 字段里加 P4 MVP FIRST 的触达点, 如新增字段 "MVP 路径：当前方案能否拆出最小可行版本先跑通"
 - **Tier**: 3 (触及意识体核心 CORE.md 的规则性修改,需 Keith 明示批准；如果触及 KERNEL.md 还需连续两次确认)
 - **checker**: principle_reach
 ```
@@ -166,12 +166,10 @@ gg 的终极校验是 `tracks/keith.md` 顶部的 3 条北极星：
 
 ### 检查方法
 
-1. Read `memory/archival/*.md` 按日期排序，取最近 N 个（N = min(10, 总数)）
-2. Read `memory/reflections/*.md` 按日期排序，取最近 N 个
-3. 对每次出场：
-   - 解析 archival 里是否有非空的"二阶效应"字段 → 触达 #1
-   - 解析是否有非空的"来自我的学习"字段 → 触达 #2
-   - 解析 reflection 里的"北极星触达度"部分 → 得到自报的触达清单
+1. Read `memory/reflections/*.md` 按日期排序，取最近 N 个（N = min(10, 总数)）——**`memory/archival/` 归档流 2026-07-16 退役，2026-09-10 起本检查只读 reflections**（此前数据源指向空目录，计数恒零）
+2. 对每次出场：
+   - 解析 reflection frontmatter `northstar_reach` + 正文「北极星触达」节 → 自报的触达清单（#1 / #2 / #3 / n/a）
+   - 自报只作分母；抽样 2-3 份回读「给父会话的最终输出」，看自报的 #1/#2 是否对应真实的二阶效应 / 知识增量段（`self-graded-dignity-field-drifts-to-face` 07-02：自报字段漂向体面侧）
 4. 统计：
    - 总出场数 N
    - 触达 #1 的次数 / 率

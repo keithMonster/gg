@@ -13,7 +13,7 @@
 | `tools/opening-protocol.md` | 有决策对象的议题，看到问题后的**第一动作**——重写问题 / 判据先行 / 补集采样（装 solution-space）/ 最便宜一击。产物是文本不是勾选 | 一次装，产物写进输出开头即卸 |
 | `tools/escalation-map.md` | 出承重裁决 / 写"已验证"类宣称 / 卡住或推演正流畅时的**收口动作**——分诊到哪个异质外面结算（物理地真 / fresh·异谱系审 / 押注到期 / Keith）。产物是"哪一行 + 结算动作"两句 | 一次装，结算动作做完即卸 |
 | `tools/solution-space.md` | 我发现自己"已经有答案了"——先验锁定的信号，展开 ≥2 方向再选；多视角对抗也在这里做（原 persona-debate 的职能） | 给方案前装 |
-| `tools/decision-output.md` | 我需要把决策结构化输出给父会话（12 字段模板） | 决策成形时装 |
+| `tools/decision-output.md` | 我需要把决策结构化输出给父会话（11 字段模板） | 决策成形时装 |
 | `tools/essence-grep.md` | 给 Keith 提方案 / 重大判断 / 自审 / 写 reflection essence 对齐自检字段之前——主动 cross-check essence（先 grep 视图常驻层 `memory/consolidation/essence-view.md` + 按需层 `essence-index.md` 定位，需全文回原卷取原文：归档卷 `memory/essence/2026-H1.md` / 当前卷 `memory/essence.md`）避免 essence 静默缺席推理回路（推理中 + 退场时双层兜底） | 一次装，grep + 显式比较即卸 |
 
 原则与闸门对照不再经工具：需要时直接 Read `constitution.md`（8 原则 + 5 闸门）。不可逆项的对抗审视走 `escalation-map.md` 分诊到 fresh / 异谱系审或 Keith——不再有专门的红队工具。
