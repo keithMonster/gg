@@ -557,6 +557,12 @@ Anthropic 把 LLM 系统二分为 **workflow**（predefined paths）和 **agent*
 - **架构判据（essence #233 `stale-watchdog-fires-true-on-the-wrong-organ`）**：识别签名 = 报警起点恰等于已知迁移日 + 阈值且单调不回落 → 先核哨输入是否仍是活对象心跳，再谈对象。处置不建新登记字段，走既有算子（06-15 重瞄 / 08-14 安家）；退役若是隐式 supersede 无 close 事件，monster 08-26「close 时 grep 传感器」规则无处挂钩——这是 `omission-failures`(07-28) 的落点，不是新律。
 - **反思纪律一例**：候选原稿三处承重修辞（「比静默更危险」「买来处置权」「诱导选项 C」）被 fresh 审判为零实证或记录反向，全删后核心机制（谓词饱和）反而更干净——`elegance-is-refutation-resistance` 在 gg 自己身上的又一次现场。
 
+### 工作模式获得：轮界标识不是完成证明（2026-09-12 工作模式 · auto_gg 补写 2026-09-12）
+
+- **裁决记录**：Notes 多轮 source-ingest 可继续用 upper_bound 把 append-only manifest 切成最大连续块，但它只证明轮界，不证明完成。完整性仍由 artifact 内容重放、终态 progress、accounting/resolve 与独立 reconcile 合取；追加新轮后旧 reconcile 应失效。此处仅搬运当日裁决，不宣称实现已通过。
+- **边界两条**：丢失 progress 后合法续跑须接受结束于 manifest 尾部的非空有序后缀（suffix），不能误收任意子序列，也不能强制整轮全等；零行轮在没有绑定 source/bound/cursor 与查询指纹的不可变空轮证明时仍关闭，不把 mutable completed 当证书。
+- **源：** `memory/reflections/2026-09-12_cgboiler-source-ingest-round-proof.md:13-25`（原始代码与数据指针在该档）；无新 essence，既有证明起点 / 重放管辖权已覆盖。
+
 ## 下一步 (Next Move)
 
 - ✅ DQ-3 × DQ-6 (可演化性 vs 涌现) — First Contact 以 "分领域" 方式对齐
