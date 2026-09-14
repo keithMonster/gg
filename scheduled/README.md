@@ -4,7 +4,7 @@
 
 ## gg 已有任务
 
-> ✅ **现实校准（2026-07-28 迁回）**：Keith 拍「不在客户端跑了，回本地来跑」——`auto-gg` / `daily-word` / `gg-explore` 三条已从 Claude 桌面客户端 routine **迁回本机 launchd**（`launchctl list` 重新可见 `com.gg.*`，`logs/` 恢复写入，三份 plist 从 `plists/_disabled/` 移回并 `install.sh` 重注册；第 4 参数 model：`auto-gg` / `gg-explore` 钉 `fable`（07-28 Keith 拍，plist 内注释），`daily-word` 仍 `opus`——2026-09-02 核实三处文档「全钉 opus」为漂移，已改）。**本目录 `plists/` + `bin/` 重新是现役 SSOT，不再是存档回退件**。推翻 2026-07-02 校准块（06-12 迁客户端后写的）。载体史见 monster `threads/scheduled-tasks.md` 07-28 条。
+> **当前入口（2026-09-14）**：三条现役 AI 任务保持原排期，统一 Codex Terminal B、gpt-6-astra；daily-word 为 medium，auto-gg 与 gg-explore 为 high，三条均固定普通速度；第 4、5 个业务参数显式传模型与思考等级。`run-task-and-push.sh` 复用 monster 的 Codex runner，漫游雷达和任务后推送继续保留；旧 Claude runner 留作停用任务/回退参考。完整证据和清单见 `../monster/scheduled/CLI-INVENTORY.md`（从本仓根查相邻 monster 仓）。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
@@ -41,7 +41,7 @@ Keith 这一个人的通道。每日一句 = 主 track 第一次有物理心跳�
   **不泄漏进 gg 探索启动会读的上下文**（KERNEL/CORE/state/working_context/exploration.md/tracks）。
   gg 在探索当下对推送无感——observer 在 token 流之外、事后、无反馈回路。
   这条纪律破坏 = exploration 退化成表演（`caged-freedom` / `tool-eats-its-critique`）
-- 复用到别的任务：把那个任务 plist 的入口换成 `run-task-and-push.sh` 即可（auto-gg/status-scan 当前不推，未显式要求）
+- 复用到别的任务：把那个任务 plist 的入口换成 `run-task-and-push.sh` 即可（当前 auto-gg 也走此推送链；status-scan 保持停用）
 - **track 雷达注入 ≠ 推送镜**（2026-06-04）：`roam-launch.sh` 注入的 track 分布是**朝内**给漫游看的自省事实（故意有感，破盲区——`blindspot-steers-its-own-search`），与上面**朝外**推给 Keith 的存活镜（故意无感，防表演）方向相反、各自正当。机制见 `exploration.md §4`
 
 ## 命名约定

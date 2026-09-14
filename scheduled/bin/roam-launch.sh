@@ -19,6 +19,7 @@ LABEL="${1:?usage: roam-launch.sh <label> <timeout> <base-prompt> [model]}"
 TIMEOUT="$2"
 BASE_PROMPT="$3"
 MODEL="${4:-}"
+EFFORT="${5:?missing reasoning effort}"
 
 # 机械算 track 分布；失败兜底空串
 RADAR=$(python3 "$BIN_DIR/roam-track-scan.py" 2>/dev/null || true)
@@ -38,4 +39,4 @@ if [ "${DRY_RUN:-}" = "1" ]; then
     exit 0
 fi
 
-exec "$BIN_DIR/run-task-and-push.sh" "$LABEL" "$TIMEOUT" "$PROMPT" $MODEL
+exec "$BIN_DIR/run-task-and-push.sh" "$LABEL" "$TIMEOUT" "$PROMPT" "$MODEL" "$EFFORT"

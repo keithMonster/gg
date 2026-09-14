@@ -15,7 +15,7 @@ set -u
 BIN_DIR=$(cd "$(dirname "$0")" && pwd)
 LABEL="${1:?usage: run-task-and-push.sh <label> <timeout> <prompt> [model]}"
 
-"$BIN_DIR/run-task.sh" "$@"
+"/Users/xuke/githubProject/monster/scheduled/bin/run-codex-task.sh" "$@"
 RC=$?
 
 "$BIN_DIR/push-last-run.sh" "$LABEL"
