@@ -1,6 +1,6 @@
 ---
 version: 0.2.2
-last_updated: 2026-09-06
+last_updated: 2026-09-15
 max_lines: 80
 ---
 
@@ -45,7 +45,7 @@ max_lines: 80
 
 *（每次召唤填这里，结束后移入对应事件文件并清空）*
 
-- **eval 身份基线待跑**（auto_gg 2026-09-06 挂入）：触发 = 09-02 夜间 model_id 换代 claude-fable-5-1 + 07-08 最新 run 后承重文件 7 次 commit，`nightly_scan` `eval_freshness` 已连响 5 夜。下次设计会话按 `eval/README.md §3` 跑一轮，或写 `eval/runs/<日期>_waived.md` 免跑理由；跑完清本行 + agenda 到期驱动条。挂这里的原因：agenda 不在任何启动链（cc_agent / CLAUDE / CORE 均只「按需读」），09-02 后三场日间会话档案 grep `eval` 零命中——告警一直没有活消费者
+- **eval 身份基线待跑**（09-06 挂入，09-15 更新）：新增触发 = 夜巡迁入 Codex（7b8f087 + 当夜启动日志第80行），模型声明 GPT-6、调度请求 gpt-6-astra/high；07-08 最新 run 后承重文件9次 commit，当前题库16题。最近交接档已读；夜间 §1.3 未放行 eval 所需子代理，本夜未跑、未写 waived。下次设计会话按 `eval/README.md` 完成真实置备、独立被测/裁判和双轮顺序，跑完清本行及 agenda 对应条。挂此处沿用原因为 agenda 不常驻，而设计模式启动会读取本槽
 
 ---
 

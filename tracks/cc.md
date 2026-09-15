@@ -381,6 +381,12 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 - **判据（essence #234 `quota-in-the-readers-currency`）**：设闸先问「闸量的量和读者真正付的量之间，有没有一个写者顺手就能做的动作让前者降、后者不降」——有则闸在量写者的单位。monster `canon.md:25` 09-02 先发（guard_claude_md_size 案），gg 侧为移植。
 - **本 track 相关缺口**：`skill-notes-read-guard.py` 的正则不匹配 `skill-notes/_evolution/` 子目录路径，冷卷 cat 不被拦（裁决 trade-off ③，一行改动归 monster owner）。
 
+### 2026-09-15 基底迁移订正（auto_gg 补写 2026-09-15）
+
+- **运行事实**：09-14 commit 7b8f087 将定时任务转到 Codex 并补 AGENTS 入口；本夜 auto-gg 启动日志第80行确认 cli=codex、model=gpt-6-astra、effort=high。沿 KERNEL/CORE/constitution 与原 SCAN/FOUND/DID 契约执行，工具映射见 `memory/substrate.md`。
+- **旧通道当前状态**：08-31 本 track「Codex → Claude gg」是历史验收；本轮用户明确禁 Claude Code/call-gg/agent-interop，Codex 适配已要求原生执行与审查。旧验收不代表当前调用授权。源：`~/.agents/adapters/codex.md`、monster `threads/monster-on-codex.md`「Codex 执行与审查使用原生能力」及本轮任务原文。
+- **观测差值**：运行器已迁，substrate_probe 仍调用旧 CLI，hooksPath 校验只认相对路径；两处源码与实况差异已入 parked/agenda。本夜能扫描和写日志不代表身份基线通过。
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13

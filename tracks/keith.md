@@ -250,6 +250,8 @@ Keith 实查推翻「客户端 routine = 云端沙箱」的默认假设后立判
 9. **harness 授权边界只有 Claude Code + Codex CLI**，不用 Gemini。执行类子代理默认外放 Codex 省 Claude quota，Claude 侧留 UI / 紧反馈 debug / 写记忆体系 / 判断调度四类。
    **09-07 订正（auto_gg 补写 2026-09-07）**：后半句「默认外放 Codex 省 quota」已被 Keith 同日推翻——v4：**撤销默认外放，`gpt-5.6-sol` 下线，施工 / 执行类子代理一律留 Claude `opus`**；Codex 只剩 `gpt-6-astra`·xhigh 单档，只做跨模型辅审 / 诊断 / 卡住换维度，`--model --effort` 成对必带。判据换轴：「省 quota」作废（外放天花板本就 <10%，主杠杆在 context 对轮数的积分侧），改按「交回来的是什么」选档。同日另立 **`fable` 不派子代理**（5 个 fable 复核子代理一轮撞 session 上限，原话「后面不要再用 fable 子代理」；他明说要 Fable 才例外）。前半句（授权边界 = CC + Codex）不变。源：monster `threads/codex-ops-delegation.md` 2026-09-07 条（v4，「去掉 gpt5.6 的调用，原本的场景划分给 opus」）+ `~/.claude/CLAUDE.md` Subagent Routing 段「跨模型外放判据（Keith 2026-09-07 拍）」+ monster morning-brief 2026-09-07 关键发现 2。
 
+   **09-15 路由订正（auto_gg 补写 2026-09-15）**：上方09-07条保留为当时规则；当前 Codex 的执行、审查和诊断均走本环境原生能力，旧 Claude 外放与固定档位表不再作为当前配置。源：`~/.agents/adapters/codex.md`「子代理与审查」、monster `threads/monster-on-codex.md`「Codex 执行与审查使用原生能力」（✓keith:2026-09-11）及「原生子代理模型选择」；本轮任务明确禁 Claude Code/call-gg/agent-interop。夜间调用范围仍按 auto_gg §1.3，不因工具可用而扩大。
+
 **三、输入侧生理事实（本 track 此前只记了设备形态）**
 10. **常用语音转文字输入**，术语 / 英文 / 文件名会被转错（cg-proxy→「CG Profile」、CLAUDE.md→「cloud.md」、monster→「master」），按语义纠偏、复述时用回正确术语。08-19 记的高频 ≤12 字符 token 里「dd / 滴滴」= 触发 done skill 复盘，不是语气词。
 11. **英语中等**：用英语对话时是练口语，语法用词错误主动指正放回复末尾；主线中文偶尔贴英文术语，硬判据 = 中文先说完整、删掉英文词零损失，每条至多 1-2 处。

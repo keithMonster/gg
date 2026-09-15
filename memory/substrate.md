@@ -5,9 +5,11 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.268 (Claude Code)
-model_id: claude-fable-5[1M]（2026-09-12 本会话环境声明；前快照 claude-fable-5-1。仅确认声明轴不同，不由别名推断实际权重降级；启动参数仍为 fable。最近交接档 2026-07-16_fable5-return.md 已读；身份 eval 仍交设计会话，不以旧同 ID run 豁免当前承重改动。）
-updated: 2026-09-12（CLI 2.1.263→2.1.268；会话工具展开形态变化，详见下方当夜快照。只更新适配事实，不据版本号宣称承重行为已验证；旧记录保留为有日期历史。）
+cli_version: 2.1.272 (Claude Code)
+model_id: GPT-6（2026-09-15 本会话开发者声明；launchd 请求 gpt-6-astra/high，配置请求值不冒充服务端实际 model_id；旧会话声明 claude-fable-5[1M]。最近交接档 2026-07-16_fable5-return.md 已读；身份 eval 未跑。）
+updated: 2026-09-15（当前运行器 Codex，codex --version = codex-cli 0.154.0-alpha.6.2；上方 cli_version 暂仅保留旧探针实际读取的 Claude 安装版本，不表示当前运行器。迁移 commit 7b8f087、当夜 launchd 日志第80行与本会话工具表相互印证。）
+
+**09-15 观测边界**：`scripts/substrate_probe.py:22` 仍执行 `claude --version`，未随运行器迁移；本夜首次按原任务跑聚合扫描时已间接调用一次该版本命令，随后停止复跑聚合入口。未发起 Claude 模型会话。当前 Codex CLI 的机械监控尚未接线，不能把旧探针的 OK 当成 Codex 健康；接手在 parked P-0915-substrate-target 与 agenda。
 updated_prev3: 2026-09-06（auto_gg 夜巡：CLI 2.1.261→2.1.263 两级 patch 跳（四相分诊 = 无承重影响的版本演进，快照更新即毕；monster 晨报同日报 A 面 `tengu_heron_brook` 尾部第二段变体，属服务端 slot 非 CLI 版本、gg 承重层零引用）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-05 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 22 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
 updated_prev2: 2026-09-05（auto_gg 夜巡：CLI 2.1.260→2.1.261 单级 patch bump（四相分诊 = 无承重影响的版本演进，快照更新即毕；monster 日报同版本见厂商注入片段 `Always include a "reason" field.` + `thinkingConfig disabled`，属 monster `vendor_binary_injection_drift` 哨面、gg 承重层零引用）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-04 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 21 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
 updated_prev: 2026-09-02（auto_gg 夜巡·差值审计夜：CLI 2.1.252→2.1.258 六级 patch 跳（四相分诊 = 无承重影响的版本演进）+ **model_id 轴 claude-fable-5 → claude-fable-5-1**（同谱系 minor 升级；分诊 = 收敛——承重层零模型特性依赖，`capability-inverts-abstention-safety` 弃答闸不随升级放松；快照两轴同更）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-01 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 19 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现））
@@ -15,6 +17,12 @@ updated_prev: 2026-09-02（auto_gg 夜巡·差值审计夜：CLI 2.1.252→2.1.2
 **fable5 窗口批注订正（2026-07-16，替换 07-10 原批注）**：07-09~12"限时窗口、把 Fable 当外部工具、非基底更替"的定性已被 07-16 日间实测推翻。原批注"窗口关闭后随 playbook 归并一起删"作废；playbook（`memory/fable5_window_2026-07-09_playbook.md`）**保留**——4 项窗口任务已全部消费（NW 回审 07-09 / 换基底认证 07-08 run / 北极星轴 07-10 探索档 / 视图蒸馏 07-09），其 Fable prompt 规范段随基底回归转为活参考。
 
 ## 工具表（会话自报轴——只有会话看得见自己的工具表）
+
+**2026-09-15 Codex 当夜快照（下方 Claude 条目均为历史）**：
+- 直接工具：functions.{exec,wait,request_user_input,request_user_input_async}；clock.sleep；collaboration.{spawn_agent,followup_task,send_message,interrupt_agent,list_agents,wait_agent}。request_user_input 受 Plan 模式限制，本夜 Default 不可使用。
+- exec 内已声明核心工具：exec_command / write_stdin / apply_patch / view_image / create_goal / get_goal / update_goal / list_mcp_resources / list_mcp_resource_templates / read_mcp_resource / request_plugin_install / clock__curr_time / image_gen__imagegen / web__run。ALL_TOOLS 另枚举 MCP：codex_document_control、codex_native2、hotline、plugin_management、safety_settings、sites、node_repl、openaiDeveloperDocs；仅观察可见性，未调用这些 MCP。
+- 对照09-12的18项逐项：Bash/Read→exec_command、Write/Edit→apply_patch、Agent→collaboration.spawn_agent、ListAgents→collaboration.list_agents、SendMessage→collaboration.send_message（仅原生代理寻址，不等价于旧跨会话通道）、TaskOutput/TaskStop→原生代理状态与中断工具（语义不作等价保证）、WebFetch/WebSearch→web__run。CronCreate/CronDelete/Monitor/ReportFindings/ScheduleWakeup/Skill/Workflow 无同名入口；multi_tool_use.parallel 改为 exec 内 Promise 并发。旧 deferred 布局不继承。
+- 分诊：运行器与文件/检索/编排接口更替属垫片；旧入口缺席属撤除观察。工具在场不扩大夜间外推、子代理或外部执行授权；沿 Codex 适配运行，不改承重契约，身份基线待在场会话另跑。
 
 **2026-09-12 当夜快照（以下旧夜条目仅作历史）**：
 - 当前直接暴露 18 个 functions 工具：Agent / Bash / CronCreate / CronDelete / Edit / ListAgents / Monitor / Read / ReportFindings / ScheduleWakeup / SendMessage / Skill / TaskOutput / TaskStop / WebFetch / WebSearch / Workflow / Write；另有 multi_tool_use.parallel 包装器。

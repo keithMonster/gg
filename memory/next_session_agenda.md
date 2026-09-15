@@ -1,6 +1,6 @@
 ---
 type: next-session-agenda
-last_updated: 2026-09-06
+last_updated: 2026-09-15
 ---
 
 # Next Session Agenda — 给下次设计会话 / 下次 Keith 的议题清单
@@ -60,6 +60,8 @@ last_updated: 2026-09-06
 - **ricky_cc 机器凭据轮换**（07-28 关注面收窄时独立保留）：永不过期的 `CGBOILER_NOTE_TOKEN`（test/prod 同钥）+ CG 生产库 pm 账号 + 共用 tokenhub token——风险与"关不关注该仓"脱钩，回报已归零而风险仍在计息
 
 ### 设计模式待办
+- **[TIER2·迁移增量] Codex 夜巡观测对象与钩子路径核对**（09-15，parked P-0915-substrate-target / P-0915-hook-path）：7b8f087 与本夜启动日志第80行确认 Codex；旧 substrate_probe 仍执行 Claude 版本命令，首轮已间接调用一次，之后未复跑。接手：按实际运行器选探针并核调用闭包、快照字段与 selftest，保留不可用/解析失败的 ERROR。同时 check_structure:128 应解析 hooksPath 后比较：当前绝对路径解析为仓内同一目录、两 hook 可执行，字符串告警为假阳性；错误目标/失执行位仍须报警。本夜未改哨、hook 或配置。
+- **[到期驱动·09-15 增量] 身份 eval 追加 Codex 迁移触发**：模型声明 GPT-6、调度请求 gpt-6-astra/high；最近交接档已读，07-08 run 后承重改动仍9次。按 `eval/README.md` 的真实置备、独立被测/裁判与双轮顺序跑当前16题；auto_gg §1.3 子代理例外仅限 essence 单滴审，本夜未跑、未写 waived。已有 working_context 任务槽同步触发事实。
 - **[TIER2·观察] 第二轴自报覆盖**（09-12 审计）：最近10份工作模式反思自报 #1=7、#2=0、#3=9；这是按文件名取样的工作模式分布，不代表夜巡没有反哺，也未测 Keith 行为。下次审北极星时分模式判读，不由此新增行为闸。抽样与边界见 `memory/audit/2026-09-12_nightly-schedule-drift.md`。
 - **[TIER2] dark_night 降频辐射未同步**（09-12 夜巡首报，parked P-0912-dark-calendar）：`scripts/nightly_scan.py:180-183` 仍按 7 个日历日逐日索日志；09-09 commit e80dba0 只把 git_24h 窗口派生到 plist。raw 缺 09-09/10/11，09-09/11 为周三/五休息日，09-10 为真 401 失败；本夜 launchctl 的 Weekday=2/4/6 与仓内 plist 一致。接手：从有生效日的排程判应跑夜，selftest 覆盖变更日前后混合窗口、休息日不报、应跑缺失仍报、错误排程不假绿；不要套当前周表抹掉降频前应跑日期。夜间哨源码写权封顶，留原告警不消音。
 - **[TIER2] architecture 下一步仍指已退役归档流**（09-12 抽样）：`tracks/architecture.md`「下一步」末条仍要求写 archival 与 learned，前者 07-16 停流、后者 09-02 删除；机械 md 死链哨不扫目录语义。设计模式按现役 reflections + track 消费路径改这一条；本夜仅标记记录，不另造 learned。
