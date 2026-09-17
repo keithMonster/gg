@@ -1,13 +1,15 @@
 #!/bin/sh
 # gg 定时任务 runner（由 launchd plist 调用，非用户直跑）
 #
-# Usage: run-task.sh <label> <timeout-seconds> <prompt> [model]
+# Usage: run-task.sh <label> <timeout-seconds> <prompt> [model] [effort]
 #
 # 参数：
 #   <label>           任务标签
 #   <timeout-seconds> 硬超时（perl alarm 触发 SIGALRM kill，作兜底）
 #   <prompt>          claude -p 的 prompt 文本
-#   [model]           可选，传给 --model（如 'opus' / 'sonnet'）；空 = CC 默认路由
+#   [model]           可选，传给 --model（如 'opus' / 'fable'）；空 = CC 默认路由
+#   [effort]          可选，传给 --effort（2026-09-17 Codex 回迁 CC 时加；
+#                     gg 3 条任务统一 low，Keith 09-16 意图延续）
 #
 # 行为：
 #   1. perl alarm 给 claude -p 加硬超时（macOS 无 timeout 命令）
@@ -30,6 +32,7 @@ LABEL="$1"
 TIMEOUT="$2"
 PROMPT="$3"
 MODEL="${4:-}"
+EFFORT="${5:-}"
 
 SCHEDULED_DIR="/Users/xuke/githubProject/gg/scheduled"
 LOG_DIR="$SCHEDULED_DIR/logs"
@@ -51,13 +54,21 @@ else
     MODEL_FLAG=""
 fi
 
+# effort 同理（2026-09-17 加）：非空 → --effort <level>
+if [ -n "$EFFORT" ]; then
+    EFFORT_FLAG="--effort $EFFORT"
+else
+    EFFORT_FLAG=""
+fi
+
 {
     START_TS=$(date +%s)
-    echo "===== $(date -Iseconds) [$LABEL] start (timeout=${TIMEOUT}s, model=${MODEL:-default}) ====="
+    echo "===== $(date -Iseconds) [$LABEL] start (timeout=${TIMEOUT}s, model=${MODEL:-default}, effort=${EFFORT:-default}) ====="
 
+    # $MODEL_FLAG / $EFFORT_FLAG 故意不加引号，让 sh 按空白拆 token；空字符串 sh 会跳过
     perl -e '$t=shift; alarm $t; exec @ARGV; die "exec failed: $!"' \
          "$TIMEOUT" \
-         "$CLAUDE_BIN" -p $MODEL_FLAG --permission-mode bypassPermissions "$PROMPT" &
+         "$CLAUDE_BIN" -p $MODEL_FLAG $EFFORT_FLAG --permission-mode bypassPermissions "$PROMPT" &
     CLAUDE_PID=$!
 
     # ── watchdog 后台进程：监控本进程 session jsonl mtime，hang 则 SIGTERM ──
