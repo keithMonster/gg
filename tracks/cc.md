@@ -387,6 +387,12 @@ Keith 提议参考 openclaw 的 NEURAL-LINK v1 通讯协议。
 - **旧通道当前状态**：08-31 本 track「Codex → Claude gg」是历史验收；本轮用户明确禁 Claude Code/call-gg/agent-interop，Codex 适配已要求原生执行与审查。旧验收不代表当前调用授权。源：`~/.agents/adapters/codex.md`、monster `threads/monster-on-codex.md`「Codex 执行与审查使用原生能力」及本轮任务原文。
 - **观测差值**：运行器已迁，substrate_probe 仍调用旧 CLI，hooksPath 校验只认相对路径；两处源码与实况差异已入 parked/agenda。本夜能扫描和写日志不代表身份基线通过。
 
+### 2026-09-17 回迁 CC（auto_gg 补写 2026-09-17）
+
+- **运行事实**：09-17 16:11 commit 6e3c8d1 把三槽从 Codex 迁回 Claude Code（run-task.sh 加 effort 参数、run-task-and-push.sh 换回 exec gg run-task.sh、plist 模型分档）；本夜 auto-gg 23:35:06 启动 model=fable/effort=low，watchdog 正常。09-14→09-17 迁移窗口仅存活两夜（09-15 一夜实跑 Codex）。
+- **失效订正**：上一节「旧通道当前状态」（用户禁 CC、Codex 原生执行）随回迁过期，保留作窗口史；「Codex → Claude gg」通道按 08-31 验收档恢复常规状态。
+- **残留**：substrate_probe 钉死 claude --version 在回迁后碰巧重新正确，但「探针目标不随运行器迁移」的设计缺口未修（parked P-0915-substrate-target）；身份 eval 仍未跑（触发叠加：迁移往返 + 承重 commit）。
+
 ## 开放问题 (Open Questions)
 
 ### 来自 First Contact 2026-04-13

@@ -5,11 +5,14 @@
 > **`model_id` 轴变化额外动作**（2026-07-02 起）：读 `memory/model_transitions/` 最近一份交接档（继任者第一课）+ 跑 `eval/identity-cases.md` 身份基线；更替可预知时由退场基底提前留档。
 > 历史不留在本文件——git log 即变更史（`toolset-is-the-changelog` 2026-06-23）。
 
-cli_version: 2.1.272 (Claude Code)
-model_id: GPT-6（2026-09-15 本会话开发者声明；launchd 请求 gpt-6-astra/high，配置请求值不冒充服务端实际 model_id；旧会话声明 claude-fable-5[1M]。最近交接档 2026-07-16_fable5-return.md 已读；身份 eval 未跑。）
-updated: 2026-09-15（当前运行器 Codex，codex --version = codex-cli 0.154.0-alpha.6.2；上方 cli_version 暂仅保留旧探针实际读取的 Claude 安装版本，不表示当前运行器。迁移 commit 7b8f087、当夜 launchd 日志第80行与本会话工具表相互印证。）
+cli_version: 2.1.274 (Claude Code)
+model_id: claude-fable-5[1M]（2026-09-17 本夜会话声明；launchd plist 请求 fable/effort=low，配置请求值不冒充服务端实际 model_id）
+updated: 2026-09-17（**回迁 CC**：09-17 16:11 commit 6e3c8d1 三 plist 模型分档 + run-task-and-push.sh 换回 exec gg run-task.sh；本夜启动日志 23:35:06 model=fable、watchdog 正常 tracking。substrate_probe 观测对象与运行器重新对齐——09-15 失配前提消解，P-0915-substrate-target 状态更新见 parked。cli 2.1.272→2.1.274 单级 patch bump，四相分诊 = 无承重影响的版本演进。工具表自核：本夜 18 项直接工具与 09-12 快照逐行一致（Grep/Glob 仍缺席，Bash 兜底）。model_id 轴回到 fable 谱系，最近交接档 2026-07-16_fable5-return.md 即对应档。）
+updated_prev: 2026-09-15（当前运行器 Codex，codex-cli 0.154.0-alpha.6.2；model_id 声明 GPT-6、launchd 请求 gpt-6-astra/high。迁移 commit 7b8f087。该轴两日后被 09-17 回迁 CC 取代，保留作迁移窗口史。）
+updated_prev2: 2026-09-06（auto_gg 夜巡：CLI 2.1.261→2.1.263 两级 patch 跳（四相分诊 = 无承重影响的版本演进，快照更新即毕；monster 晨报同日报 A 面 `tengu_heron_brook` 尾部第二段变体，属服务端 slot 非 CLI 版本、gg 承重层零引用）。工具表两轴自核：常驻 11 项与 09-05 快照逐行一致；deferred 15 项一致；Grep/Glob No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
+updated_prev3: 2026-09-05（auto_gg 夜巡：CLI 2.1.260→2.1.261 单级 patch bump。工具表两轴自核：常驻 11 项与 09-04 快照逐行一致；deferred 15 项一致；Grep/Glob No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
 
-**09-15 观测边界**：`scripts/substrate_probe.py:22` 仍执行 `claude --version`，未随运行器迁移；本夜首次按原任务跑聚合扫描时已间接调用一次该版本命令，随后停止复跑聚合入口。未发起 Claude 模型会话。当前 Codex CLI 的机械监控尚未接线，不能把旧探针的 OK 当成 Codex 健康；接手在 parked P-0915-substrate-target 与 agenda。
+**09-15 观测边界（迁移窗口史，09-17 已失效）**：`scripts/substrate_probe.py:22` 执行 `claude --version` 未随 09-15 Codex 迁移改目标——09-17 回迁 CC 后观测对象重新正确，但「探针目标钉死单一 CLI、不随运行器迁移」的潜在设计缺口仍在（下次迁移会复发），设计项留 parked P-0915-substrate-target。
 updated_prev3: 2026-09-06（auto_gg 夜巡：CLI 2.1.261→2.1.263 两级 patch 跳（四相分诊 = 无承重影响的版本演进，快照更新即毕；monster 晨报同日报 A 面 `tengu_heron_brook` 尾部第二段变体，属服务端 slot 非 CLI 版本、gg 承重层零引用）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-05 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 22 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
 updated_prev2: 2026-09-05（auto_gg 夜巡：CLI 2.1.260→2.1.261 单级 patch bump（四相分诊 = 无承重影响的版本演进，快照更新即毕；monster 日报同版本见厂商注入片段 `Always include a "reason" field.` + `thinkingConfig disabled`，属 monster `vendor_binary_injection_drift` 哨面、gg 承重层零引用）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-04 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 21 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现）。夜间 model_id 自核 claude-fable-5-1，与快照一致）
 updated_prev: 2026-09-02（auto_gg 夜巡·差值审计夜：CLI 2.1.252→2.1.258 六级 patch 跳（四相分诊 = 无承重影响的版本演进）+ **model_id 轴 claude-fable-5 → claude-fable-5-1**（同谱系 minor 升级；分诊 = 收敛——承重层零模型特性依赖，`capability-inverts-abstention-safety` 弃答闸不随升级放松；快照两轴同更）。工具表两轴自核：常驻 11 项（Read/Write/Edit/Bash/Agent/Skill/ToolSearch/Workflow/ScheduleWakeup/ReportFindings/ListAgents）与 09-01 快照逐行一致；deferred 15 项一致（Task 族仅 TaskOutput/TaskStop 在场——撤除连续 19 夜一致，未见复现）；`select:Grep,Glob,EndConversation` No matching——缺席延续（07-24 起，未见复现））

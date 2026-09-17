@@ -18,7 +18,7 @@ current_version: 0.5.1
 created: 2026-04-13
 
 # 最近一次出场（auto_gg 可改）。**单行摘要——值不被任何启动分支消费**（分支只读 first_contact_done，2026-07-09 全仓核实：其余 last_* 全是写方 / audit 存在性检查，无读值方），故只留可读指针 + git log 溯史。**禁套娃**（曾嵌 8 场原文、单次 30KB diff，2026-07-03 立约；2026-07-09 从 ~2.5KB 单行 blob 压成本行）。更早各场：git log -- memory/state.md
-last_summoned_at: "2026-09-15 auto_gg：Codex 夜巡，基底探针错位与钩子路径假警留接手，更新快照和迁移记录；身份 eval 未跑。最近工作模式仍为09-12 cgboiler-source-ingest-round-proof；详见对应日志，更早各场见 git log 本文件。"
+last_summoned_at: "2026-09-17 auto_gg：回迁 CC 后首夜（6e3c8d1，model=fable/effort=low）；substrate 三轴回写、P-0915-substrate-target 失配消解、cc track 补回迁节；eval 仍未跑。最近工作模式仍为09-12 cgboiler-source-ingest-round-proof；详见对应日志，更早各场见 git log 本文件。"
 last_decision_slug: "2026-04-22_threads-v1-architecture-review"
 last_reflection_slug: "2026-09-12_cgboiler-source-ingest-round-proof"
 last_design_session_slug: "2026-09-10_external-role-proposal-triage"
