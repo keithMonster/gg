@@ -4,7 +4,7 @@
 
 ## gg 已有任务
 
-> **当前入口（2026-09-17）**：三条现役 AI 任务保持原排期，执行器从 Codex Terminal B 迁回 Claude Code（`claude -p` headless）；思考等级统一为 low；第 4、5 个业务参数显式传模型与 `--effort`（auto-gg / gg-explore = fable，daily-word = opus）。`run-task-and-push.sh` 内部 exec 换回 gg 的 `run-task.sh`，漫游雷达和任务后推送继续保留；Codex runner 留在 monster 仓作回退参考。完整证据和清单见 `../monster/scheduled/CLI-INVENTORY.md`（从本仓根查相邻 monster 仓）。
+> **当前入口（2026-09-18）**：三条现役 AI 任务保持原排期，执行器为 Claude Code（`claude -p` headless）；auto-gg / gg-explore 使用 xhigh，daily-word 使用 medium（09-18按Keith指示整体提升一档）；第 4、5 个业务参数显式传模型与 `--effort`（auto-gg / gg-explore = fable，daily-word = opus）。`run-task-and-push.sh` 转发 gg 的 `run-task.sh`，漫游雷达和任务后推送继续保留；Codex runner 留在 monster 仓作回退参考。按职责分档的理由与验收见 `../monster/scheduled/EFFORT-20260918.md`（从本仓根查相邻 monster 仓）。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |

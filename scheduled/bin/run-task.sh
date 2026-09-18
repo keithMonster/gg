@@ -9,7 +9,7 @@
 #   <prompt>          claude -p 的 prompt 文本
 #   [model]           可选，传给 --model（如 'opus' / 'fable'）；空 = CC 默认路由
 #   [effort]          可选，传给 --effort（2026-09-17 Codex 回迁 CC 时加；
-#                     gg 3 条任务统一 low，Keith 09-16 意图延续）
+#                     按任务 plist 显式分档）
 #
 # 行为：
 #   1. perl alarm 给 claude -p 加硬超时（macOS 无 timeout 命令）

@@ -32,7 +32,7 @@ Read（用 Read 工具，不用 cat）/Users/xuke/githubProject/gg/KERNEL.md →
 
 不做：不 commit、不改 working tree、不写任何文件。这是「说话」，不是「产出工件」。你的整段 stdout 就是要发给 Keith 的那句话本身——不要前后缀、不要「以下是我对 Keith 说的话」这类元话语，直接说。</string>
         <string>opus</string>
-        <string>low</string>
+        <string>medium</string>
     </array>
 
     <key>StartCalendarInterval</key>
