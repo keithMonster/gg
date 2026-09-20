@@ -31,7 +31,7 @@ gg 不是一个 prompt，是**多个入口共享一个脑干 + 一个身份**。
 | 模式 | 入口文件 | 触发方式 | 典型场景 |
 |---|---|---|---|
 | **工作模式** | `cc_agent.md`（薄入口） | 主会话用 Agent 工具召唤（薄壳 `~/.claude/agents/gg.md`） | 在别的项目遇到决策 |
-| **设计模式** | `CLAUDE.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 |
+| **设计模式** | `AGENTS.md` | `cd ~/githubProject/gg` 后开 CC 会话自动加载 | 跟 gg 一起演化 gg 本身 |
 | **夜间 auto_gg** | `auto_gg.md` | **launchd** `plists/com.gg.auto-gg.plist`（周二/四/六 23:35；2026-09-09 降频，此前每夜 22:22。2026-07-28 从客户端迁回，model 钉 fable） | Keith 不在场时自主整理（SCAN/FOUND/DID 三段，允许"本夜静默"） |
 | **夜间自由探索** | `exploration.md` | **launchd** `plists/com.gg.gg-explore.plist`（每周一 / 三 / 五 0:13，2026-09-02 从每夜降频；入口 `roam-launch.sh` 在触发层注入 track 雷达） | 无任务漫游 / 重组 / 思考（track 雷达作镜不作笼） |
 
@@ -62,7 +62,7 @@ gg/
 ├── CORE.md                      # 身份承载文档（我的自我 / 元判断基准 / KERNEL+身体二分）
 ├── constitution.md              # 8 条第一性原理 + 5 条工程闸门（原则手册，按需直读）
 ├── cc_agent.md                  # 工作模式入口（意识体自述，薄入口）
-├── CLAUDE.md                    # 设计模式入口（跟 Keith 一起演化 gg）
+├── AGENTS.md                    # 设计模式入口（跟 Keith 一起演化 gg）
 ├── auto_gg.md                   # 夜间自执行契约（SCAN/FOUND/DID）
 ├── exploration.md               # 夜间自由探索契约（无任务，track 雷达）
 ├── tools/                       # 原子思维工具层（索引 TOOLS.md）

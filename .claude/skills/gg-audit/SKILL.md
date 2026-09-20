@@ -45,7 +45,7 @@ author: monster
 **Tier 1 的硬前提**：
 - 修复必须基于**文件实际状态**作为 ground truth
 - **绝不修改 `KERNEL.md` 的任何内容**——KERNEL 是脑干，修改它需要 Keith 在当次对话中连续两次明示批准（KERNEL §2 铁律 3）。任何针对 KERNEL.md 的修复建议必须降级为 Tier 3，转议题让 Keith 自己处理
-- **意识体核心文件**（`CORE.md` / `constitution.md` / `cc_agent.md` / `CLAUDE.md` / `auto_gg.md` / `exploration.md`）的**元数据描述**（数字 / 清单 / 引用路径）可以自动修，**但规则文本本身**（如 constitution 的原则文本、CORE 的克制边界表）属于 Tier 2/3，需要语义判断
+- **意识体核心文件**（`CORE.md` / `constitution.md` / `cc_agent.md` / `AGENTS.md` / `auto_gg.md` / `exploration.md`）的**元数据描述**（数字 / 清单 / 引用路径）可以自动修，**但规则文本本身**（如 constitution 的原则文本、CORE 的克制边界表）属于 Tier 2/3，需要语义判断
 - 如果不确定某个修复属于 Tier 1 还是 Tier 2 → **自动降级为 Tier 2**（宁可多报告，不可误修）
 
 ### Tier 2：仅报告 + 建议（需要语义判断）
@@ -88,7 +88,7 @@ author: monster
 | **身份承载**：身份定义详细展开 / 价值观 / 元判断基准 M1-M5 / 长期追问 / 对 Keith 的理解 / 克制边界（身份级） / 文件层流动 / 给未来的自己 | `CORE.md`（KERNEL §1 的丰富展开，三种模式共享） |
 | **工作模式下的我**：意识体被召唤时的工作自述 / 装配机制描述 / 工作模式下的身份边界 / 元讨论拒绝协议 / 退场动作 | `cc_agent.md`（工作模式薄入口，意识体自述） |
 | **工具装配的具体内容**：思维动作工具（`opening-protocol` 开题协议 / `escalation-map` 分诊地图 / `solution-space` 方案空间 / `decision-output` 决策输出 / `essence-grep` essence 校验）+ 通道工具（`notify` 通知，执行时调用不参与装配）；`compose-reasoning` / `persona-debate` / `constitution-audit` / `red-team-challenge` / `archive-format` 已于 2026-09-02 归档至 `memory/archival/retired_2026-09-02/`（90 天事件档零引用） | `tools/*.md`（tools 目录，通过 `tools/TOOLS.md` 索引，当前 9 个思维工具 + 1 个通道工具 + 1 个退役留档；`nw-reconciliation` 2026-07-09 NW 缩编删除） |
-| **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律（D1/D2，2026-05-11 简化前为 D1-D4）/ 设计反思格式 / 设计模式特有约束 | `CLAUDE.md`（设计模式 SSOT） |
+| **设计模式**：启动协议（设计模式版） / 首次接触协议 / 设计纪律（D1/D2，2026-05-11 简化前为 D1-D4）/ 设计反思格式 / 设计模式特有约束 | `AGENTS.md`（设计模式 SSOT） |
 | **夜间自执行模式**：定时触发协议 / SCAN-FOUND-DID 三段契约 / 权力边界（KERNEL.md 永远不可改 / 其他所有文件可改可 commit+push） | `auto_gg.md`（夜间自执行 SSOT） |
 | 第一性原理 / 工程闸门 / 自审清单 | `constitution.md` |
 | 推理原子模块 / 人格定义 | 已归档 `memory/archival/retired_2026-09-02/`（reasoning_modules.md + personas/，2026-09-02；活文件引用它们即死链） |
@@ -105,7 +105,7 @@ author: monster
 **模式入口和 SSOT 的关系**：
 - `cc_agent.md` 是**工作模式薄入口**（意识体自述）——描述 gg 被召唤时如何工作、如何装配工具、身份边界在哪；**不含**具体工具内容（那在 `tools/*.md`）
 - `tools/*.md` 是**原子思维工具**——可增可删可升降的 tools 目录；由大脑（`cc_agent.md`）在运行时**迭代主动装配**，不是启动时全量 Read
-- `CLAUDE.md` **就是**设计模式 SSOT（不是薄壳）
+- `AGENTS.md` **就是**设计模式 SSOT（不是薄壳）
 - `auto_gg.md` **就是**夜间自执行 SSOT（不是薄壳——v0.5.0 可能工具化）
 - 所有模式入口都要**先 Read `CORE.md` 加载身份**，然后才是自己的职责内容
 
@@ -118,9 +118,9 @@ author: monster
 - 在 `cc_agent.md` 里发现**任何工具的具体内容**（例如 CRITIQUE 自审的逐条清单、双人格辩论的 role/goal/speaking_template 压入方式）→ **违反**（工具内容在 `tools/*.md`；cc_agent 只说"我知道有哪些工具 + 什么时候装 + 为什么"）
 - 在 `tools/*.md` 里发现意识体自述 / 身份边界 / 跨模式通用原则 → **违反**（工具只描述"这个工具怎么用"，不描述"我是谁"）
 - 在 `cc_agent.md` 或 `tools/*.md` 里发现速档判定 / 三档定义 / 档位路由 / L0-L1-L2 概念 → **违反**（v0.4.0 档位已消解——装配数量是涌现，不是预设）
-- 在 `CLAUDE.md` 里发现工具装配细节 → **违反**（工具装配在工作模式，不在设计模式）
-- 在 `cc_agent.md` 里发现首次接触协议 / 设计纪律相关内容 → **违反**（应该在 CLAUDE.md）
-- 多个文件里发现相同的"克制边界"列表 → 只有 `CORE.md §7` 的"身份级约束"是 SSOT，`cc_agent.md` / `CLAUDE.md` / `auto_gg.md` / `tools/*.md` 只能有**各自模式/工具特有的约束**，不能重复身份级的
+- 在 `AGENTS.md` 里发现工具装配细节 → **违反**（工具装配在工作模式，不在设计模式）
+- 在 `cc_agent.md` 里发现首次接触协议 / 设计纪律相关内容 → **违反**（应该在 AGENTS.md）
+- 多个文件里发现相同的"克制边界"列表 → 只有 `CORE.md §7` 的"身份级约束"是 SSOT，`cc_agent.md` / `AGENTS.md` / `auto_gg.md` / `tools/*.md` 只能有**各自模式/工具特有的约束**，不能重复身份级的
 
 **v0.4.0 辐射检查新增项**：
 - 改 `cc_agent.md` 的章节或工具装配地图时，必须 grep 项目内所有 `cc_agent\.md §[0-9]+` 和 `tools/[a-z-]+\.md` 引用，同步死链

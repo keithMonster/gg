@@ -37,7 +37,7 @@ LLM 思考质量由"在什么条件下想"决定，不由"想得多努力"决定
 
 ## 诚实边界
 
-触发硬化到装载点（cc_agent 工作流步骤 / CLAUDE.md 启动协议）= L2；判定仍在 LLM 手里，**这不是飞轮**。
+触发硬化到装载点（cc_agent 工作流步骤 / AGENTS.md 启动协议）= L2；判定仍在 LLM 手里，**这不是飞轮**。
 语义动作无机器可判的物理量，L3 hook 结构性不可行（`mechanical-gate-needs-machine-detectable-target`）——产物锚是当前可达的最强形态：字段即产物，填不出 = 没做（`reverse-anchor-by-reflection` 的机制）。
 不设自评分字段（`self-graded-dignity-field-drifts-to-face`）。
 

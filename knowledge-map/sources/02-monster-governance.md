@@ -1,6 +1,6 @@
 # monster 治理体系机制清单（侦察原件 · 2026-07-10）
 
-> subagent 通读 ~/.claude/CLAUDE.md、monster/CLAUDE.md、CLAUDE.d/、threads/llm-foundations.md、review-routing SKILL.md 后产出。
+> subagent 通读 ~/.claude/CLAUDE.md、monster/AGENTS.md、CLAUDE.d/、threads/llm-foundations.md、review-routing SKILL.md 后产出。
 
 ## 一、全局治理规则
 
@@ -18,12 +18,12 @@
 
 | 机制名 | 是什么 | 文件落点 | 原理 |
 |---|---|---|---|
-| Decision Authority 三层 | 目标层 Keith / 实现层 Claude / 架构层 gg | `monster/CLAUDE.md` | 分层自主权（human-on-the-loop） |
-| 抛回三类合法 trigger + 强制语法 | 只有目标范围/偏好/不可逆参数才抛回，形态="我用 X 理由 Y，想换 Z 告诉我" | `monster/CLAUDE.md` | 反"决策外包伪装成谦逊" |
-| gg 主动召唤判定 | 架构级难回退 + 当前层信息内无解，两条同时成立才升 | `monster/CLAUDE.md` | 逃逸阈值显式化 |
+| Decision Authority 三层 | 目标层 Keith / 实现层 Claude / 架构层 gg | `monster/AGENTS.md` | 分层自主权（human-on-the-loop） |
+| 抛回三类合法 trigger + 强制语法 | 只有目标范围/偏好/不可逆参数才抛回，形态="我用 X 理由 Y，想换 Z 告诉我" | `monster/AGENTS.md` | 反"决策外包伪装成谦逊" |
+| gg 主动召唤判定 | 架构级难回退 + 当前层信息内无解，两条同时成立才升 | `monster/AGENTS.md` | 逃逸阈值显式化 |
 | 核对不抛回 | 承重产出先派 fresh subagent 独立核验，不拿用户当 verifier | `~/.claude/CLAUDE.md` Review 段 | generator-evaluator 分离 |
-| 纠正即落库 | 用户事实性纠正当场 grep 全仓改正 + 时间线记事件 | `monster/CLAUDE.md` | 在线增量学习 |
-| Context Asymmetry + 意图回显 | 承重任务出方案须回显"目标 X + 可证伪假设 Z" | `monster/CLAUDE.md` | 显式目标状态确认 |
+| 纠正即落库 | 用户事实性纠正当场 grep 全仓改正 + 时间线记事件 | `monster/AGENTS.md` | 在线增量学习 |
+| Context Asymmetry + 意图回显 | 承重任务出方案须回显"目标 X + 可证伪假设 Z" | `monster/AGENTS.md` | 显式目标状态确认 |
 | 锚点四分类退役判据 | 信息/能力补丁/架构补丁/结构锚点，退役靠传感器数据 | `monster/CLAUDE.d/harness-map.md` | 防护机制的生命周期治理 |
 
 ## 三、review 与验证分层

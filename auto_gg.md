@@ -27,7 +27,7 @@
 
 **身体 = KERNEL 之外的所有 gg 项目文件**（可读可改 / 可 commit / 可 push，目录组织但目录不是层级）：
 - 身份与原则：`CORE.md` / `constitution.md` / `README.md`
-- 存在形态入口：`cc_agent.md` / `CLAUDE.md` / `auto_gg.md`（本文件）/ `exploration.md`
+- 存在形态入口：`cc_agent.md` / `AGENTS.md` / `auto_gg.md`（本文件）/ `exploration.md`
 - 工具与策略：`tools/*.md` / `.claude/skills/gg-audit/`（personas / reasoning_modules / 4 个零装配工具 2026-09-02 归档 `memory/archival/retired_2026-09-02/`）
 - 长期追问：`tracks/*.md`（含 `tracks/keith/` 流水归档卷）
 - 记忆：`memory/*`
@@ -79,7 +79,7 @@ gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录�
 | 类别 | 夜间允许的跨目录操作 | 处置 |
 |---|---|---|
 | **可逆（自主 + 记录）** | monster 代码文件改动 / `~/.agents/skills/<name>/SKILL.md` 合并段 / 删 `~/.claude/skill-notes/<name>.md` 已合并条目 | 自主执行，记 DID |
-| **不可逆（提议不动手）** | `~/.claude/CLAUDE.md` / `monster/CLAUDE.md` / hooks / settings.json / 新建或删除 skill 本体 / push monster 改动 / 删除任何目录或文件 | 只提议到 FOUND，Keith 早上拍板。auto_gg push 权只在 gg 仓库 |
+| **不可逆（提议不动手）** | `~/.claude/CLAUDE.md` / `monster/AGENTS.md` / hooks / settings.json / 新建或删除 skill 本体 / push monster 改动 / 删除任何目录或文件 | 只提议到 FOUND，Keith 早上拍板。auto_gg push 权只在 gg 仓库 |
 
 歧义一律退到不可逆侧标 blocked——§1.4 "宁可漏不可错"在跨目录场景的延伸。（NW 账本结算已于 2026-07-09 退役——fresh 裁决缩编，轨1 机械落地移回 monster nw-daily 自持，轨3 仲裁队列取消；史见 git log -- tools/nw-reconciliation.md。）
 
@@ -199,7 +199,7 @@ gg 是全系统管理员（Keith 明示 2026-05-06）。auto_gg 夜间跨目录�
 ### 跨三段共享的纪律
 
 - **日志硬上限 ≤ 50 行**——超过就是仪式多了，自我裁剪
-- **不做元反思**：不写"今晚最重要的 1 条事 / 没做但本可以做的事 / 触达的 track / 北极星触达自问 / 我哪里做得好"——这些属于**设计反思**的领域（设计模式 `CLAUDE.md §3`），auto_gg 不重做。auto_gg 的"评估"由 Keith 早上 Read 日志完成
+- **不做元反思**：不写"今晚最重要的 1 条事 / 没做但本可以做的事 / 触达的 track / 北极星触达自问 / 我哪里做得好"——这些属于**设计反思**的领域（设计模式 `AGENTS.md §3`），auto_gg 不重做。auto_gg 的"评估"由 Keith 早上 Read 日志完成
 - **不装完整工具协议**：探索需要对抗视角时自己扮激进 / 保守各发言一段即可（"双视角轻量推演"；personas 文件已于 2026-09-02 归档，不再 Read）
 - **保守是"维护"时的防线，大胆是"探索"时的特权**
 

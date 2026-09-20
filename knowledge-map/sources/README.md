@@ -7,7 +7,7 @@
 | 文件 | 内容 | 方法 |
 |---|---|---|
 | `01-gg-mechanisms.md` | gg 仓库机制清单（37 条） | subagent 通读仓库 |
-| `02-monster-governance.md` | monster 治理机制清单 | subagent 通读 CLAUDE.md 族 |
+| `02-monster-governance.md` | monster 治理机制清单 | subagent 通读 AGENTS.md 族 |
 | `03-skills-infra.md` | skills 体系 + 基础设施清单 | subagent 通读 skills/ 等 |
 | `04-papers-agent-theory.md` | Agent 理论层论文考证 | 强制 WebSearch 逐条验证 |
 | `05-papers-prompt-llm.md` | Prompt + LLM 理论层论文考证 | 强制 WebSearch 逐条验证 |
