@@ -28,8 +28,8 @@
         <string>com.gg.auto-gg</string>
         <string>7200</string>
         <string>Read /Users/xuke/githubProject/gg/auto_gg.md，按其中流程逐步执行</string>
-        <string>fable</string>
-        <string>xhigh</string>
+        <string>gpt-6-astra</string>
+        <string>high</string>
     </array>
 
     <!--

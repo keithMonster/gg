@@ -4,7 +4,7 @@
 
 ## gg 已有任务
 
-> **当前入口（2026-09-18）**：三条现役 AI 任务保持原排期，执行器为 Claude Code（`claude -p` headless）；auto-gg / gg-explore 使用 xhigh，daily-word 使用 medium（09-18按Keith指示整体提升一档）；第 4、5 个业务参数显式传模型与 `--effort`（auto-gg / gg-explore = fable，daily-word = opus）。`run-task-and-push.sh` 转发 gg 的 `run-task.sh`，漫游雷达和任务后推送继续保留；Codex runner 留在 monster 仓作回退参考。按职责分档的理由与验收见 `../monster/scheduled/EFFORT-20260918.md`（从本仓根查相邻 monster 仓）。
+> **当前入口（2026-09-21）**：三条现役任务保留原排期、硬超时和内联 prompt，使用原生 Codex Terminal B / gpt-6-astra / Standard；auto-gg、gg-explore 为 high，daily-word 为 low。`run-task-and-push.sh` 复用 monster 的 `run-codex-task.sh`；漫游雷达与外层推送继续保留。空闲超时从旧 600 秒变为公共 runner 的 1800 秒。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
@@ -33,7 +33,7 @@ Keith 这一个人的通道。每日一句 = 主 track 第一次有物理心跳�
 本机 cron 下 gg-explore 的会话输出不可见（客户端时代 Keith 能直接看到，迁本地后失明）。
 解法是一条**纯下游传输层**，不碰提示词、不碰 `run-task.sh`：
 
-- `com.gg.gg-explore` 的 plist 入口指向 `bin/roam-launch.sh`（先注入 track 雷达，再转 `bin/run-task-and-push.sh` → 薄包装：跑 `run-task.sh` → 跑 `bin/push-last-run.sh`）；推送传输层本身仍不碰提示词
+- `com.gg.gg-explore` 的 plist 入口指向 `bin/roam-launch.sh`（先注入 track 雷达，再转 `bin/run-task-and-push.sh` → 薄包装：跑 monster `run-codex-task.sh` → 跑 `bin/push-last-run.sh`）；推送传输层本身仍不碰提示词
 - `push-last-run.sh` 取日志里最后一个 start→end 块，剥 launchd 记账噪音（start/end/watchdog 行），
   gg 自己的 stdout 逐字 + 末尾一行存活状态（`exit=N · 时间`），经**全局 notify**（`~/.agents/skills/notify`）推给 Keith
 - 空输出照样推（"本次静默"也是存活信号）；`exit≠0` → severity 升 `warning`
@@ -48,7 +48,7 @@ Keith 这一个人的通道。每日一句 = 主 track 第一次有物理心跳�
 
 - Label：`com.gg.<task>`
 - 文件：`plists/<label>.plist`
-- 日志：`logs/<label>.YYYY-MM.log`（月度滚动，run-task.sh 自动产出）
+- 日志：`logs/<label>.YYYY-MM.log`（月度滚动，公共 Codex runner 自动产出）
 - 告警：`alerts/YYYY-MM-DD-HHmm.md`（status-scan 异常时写入）
 
 ## 跟 monster 的分工
