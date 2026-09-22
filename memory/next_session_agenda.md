@@ -46,6 +46,8 @@ last_updated: 2026-09-15
 
 ### 到期驱动
 
+- **[P0][RECURRING·09-22] Codex 夜巡基底探针失配已阻断 SCAN**：P-0915-substrate-target 再现；启动日志第98行确认 cli=codex，codex-cli 0.155.0-alpha.2.6；nightly_scan exit=2，substrate_probe 仍调用 claude --version 并报不可用。原始错误未区分 PATH/超时/其他，具体原因未核；本夜 interrupted、无 commit/push。接手按实际运行器修探针及快照消费闭包，保留不可用/解析失败 ERROR，核 selftest 后重跑完整夜巡。另有6条 CLAUDE.md 残留引用（P-0922-entry-deadlinks），按当前入口/历史档案分流修复；身份 eval 的 Codex 触发再次成立，旧07-08基线后承重改动10次，仍未跑。完整证据见 `memory/auto_gg/2026-09-22.md`。
+
 - **B3 到期 2026-09-30**（`memory/bets.md`，按期由 auto_gg 结算）
 - **10-01 月度巩固夜必做**：essence 当前卷已越分卷线（09-02 实测 51k 字符 > 50k），按 essence 头部「分卷线机械化」条分卷为 2026-H2 归档卷（当前卷 100% 纯改名 + 新建当前卷，check_essence R100 豁免）；同夜刷新 essence-view / essence-index 两文件并跑 checkup §3 反向引力核
 - **eval 承重 diff 告警已在响**（nightly_scan `eval_freshness`，09-02 新判据首跑即 ALERT：最新 run 07-08 之后 CORE / cc_agent / constitution 有 7 次 commit）：下次工作模式或设计会话跑一轮 eval（`eval/README.md §3`），或新建 `eval/runs/<日期>_waived.md` 写免跑理由——不处理它每夜进 FOUND。**09-04 夜注**：告警连续第 3 夜在响（09-02 / 09-04，09-03 夜暗）；09-02 夜间 model_id 换代 claude-fable-5-1 是 README §3 第一条触发（换模型后），两触发已合一。夜间禁子代理不跑，也**不写 waived**——waived 会把基线日期刷新到今天 = 用登记消音（`hard-rule-welds` 的非法出口之一），只留它响。**09-06 夜注**：连响第 5 夜；09-02 后三场日间会话（09-03 工 / 09-04 设 / 09-04 工）档案 grep `eval` 零命中——本文件不在 cc_agent / CLAUDE 任一启动链（CORE §8 仅列「按需读」），告警无活消费者（`signal-without-judgment-needs-live-consumer` 06-09）；已挂 `working_context.md` 当前任务槽（设计模式启动第 5 步必读，一行、可逆）。跑完两处同清
