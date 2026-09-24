@@ -4,7 +4,7 @@
 
 ## gg 已有任务
 
-> **当前入口（2026-09-21）**：三条现役任务保留原排期、硬超时和内联 prompt，使用原生 Codex Terminal B / gpt-6-astra / Standard；auto-gg、gg-explore 为 high，daily-word 为 low。`run-task-and-push.sh` 复用 monster 的 `run-codex-task.sh`；漫游雷达与外层推送继续保留。空闲超时从旧 600 秒变为公共 runner 的 1800 秒。
+> **配置入口（2026-09-21）**：三条任务保留原排期、硬超时和内联 prompt，使用原生 Codex Terminal B / gpt-6-astra / Standard；auto-gg、gg-explore 为 high，daily-word 为 low。**2026-09-24 按 Keith 要求全部暂停**：launchctl 禁用并卸载，monster 每小时巡检同步移出监控；恢复步骤见 `monster/threads/scheduled-tasks.md`。`run-task-and-push.sh` 复用 monster 的 `run-codex-task.sh`；漫游雷达与外层推送继续保留。空闲超时从旧 600 秒变为公共 runner 的 1800 秒。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
@@ -59,7 +59,7 @@ Keith 这一个人的通道。每日一句 = 主 track 第一次有物理心跳�
 
 ## 工作流速查
 
-> ✅ 本节命令**当前完全有效**——2026-07-28 已迁回 launchd 调度（见顶部校准块），`launchctl list` 应能看到三条 `com.gg.*`；看不到 = 真出问题了。
+> ✅ 本节命令**当前完全有效**——2026-07-28 已迁回 launchd 调度（见顶部校准块），2026-09-24 暂停期间 `launchctl list` 不应看到三条 `com.gg.*`，禁用状态以 `launchctl print-disabled gui/$UID` 核对；恢复后才按原判据核注册。
 
 详见 `~/.agents/skills/scheduled/SKILL.md`。常用命令：
 
