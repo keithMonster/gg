@@ -4,7 +4,7 @@
 
 ## gg 已有任务
 
-> **配置入口（2026-09-21）**：三条任务保留原排期、硬超时和内联 prompt，使用原生 Codex Terminal B / gpt-6-astra / Standard；auto-gg、gg-explore 为 high，daily-word 为 low。**2026-09-24 按 Keith 要求全部暂停**：launchctl 禁用并卸载，monster 每小时巡检同步移出监控；恢复步骤见 `monster/threads/scheduled-tasks.md`。`run-task-and-push.sh` 复用 monster 的 `run-codex-task.sh`；漫游雷达与外层推送继续保留。空闲超时从旧 600 秒变为公共 runner 的 1800 秒。
+> **配置入口（2026-09-21）**：三条任务保留原排期、硬超时和内联 prompt，使用原生 Codex Terminal B / gpt-6-astra / Standard；auto-gg、gg-explore 为 high，daily-word 为 low。**2026-09-24 按 Keith 要求全部暂停**（launchctl 禁用并卸载，monster 每小时巡检同步移出监控）；**2026-11-24 三份 plist 归档移入 `plists/_disabled/`** 防重启 `bootstrap-all.sh` 报错；恢复步骤见 `monster/threads/scheduled-tasks.md`。`run-task-and-push.sh` 复用 monster 的 `run-codex-task.sh`；漫游雷达与外层推送继续保留。空闲超时从旧 600 秒变为公共 runner 的 1800 秒。
 > **plist 停用惯例**：两种写法并存且等价——`plists/_disabled/` 子目录与 `.disabled` 后缀（status-scan，2026-06-16 停用）。两种形态 `plists/*.plist` glob 都扫不到，恢复时移回 `plists/` 或去后缀再 install。（三份迁客户端的 plist 曾于 2026-07-15 归档进 `_disabled/` 防重启双跑，07-28 已全部移出。）
 
 | Label | 触发 | 职责 | prompt 入口 |
